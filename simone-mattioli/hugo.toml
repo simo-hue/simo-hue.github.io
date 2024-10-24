@@ -1,4 +1,7 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://simo-hue.github.io/Simone-Mattioli/'
 languageCode = 'en-us'
 title = 'Simone Mattioli'
 theme = "Stack"
+publishDir = "public"
+defaultContentLanguage = "en"
+enableRobotsTXT = true
