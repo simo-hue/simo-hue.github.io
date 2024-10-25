@@ -58,7 +58,7 @@
 	srcset=&#34;http://localhost:1313/p/test-chinese/verona_hu15599915847678307440.jpg 480w, http://localhost:1313/p/test-chinese/verona_hu8275353217975971706.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;University Of Verona Logo&#34;
+		alt=&#34;University Of Verona&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -99,21 +99,25 @@ Welcome to my personal blog! I’m Simone, born on July 28, 2003, in the town of
 	
 &gt;
 Growing up surrounded by the natural beauty and rich culture of Northern Italy, I found myself drawn to the mechanics of how things work, from engines to computers. My passion for technology started young and has only grown over the years, inspiring me to learn and explore more every day.
-&lt;img src=&#34;http://localhost:1313/defender.jpg&#34;
-	
-	
-	
+&lt;img src=&#34;http://localhost:1313/p/test-chinese/defender.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;http://localhost:1313/p/test-chinese/defender_hu13622069233925902855.jpg 480w, http://localhost:1313/p/test-chinese/defender_hu16043946494773658869.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Me driving Land Rover Defender in Off-Road&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
 &gt;
 Vehicles whether cars, bikes, or anything that moves—have always captivated me, not only for their speed and design but for the engineering marvels they represent.
-&lt;img src=&#34;http://localhost:1313/p/test-chinese/alba-2.jpg&#34;
+&lt;img src=&#34;http://localhost:1313/p/test-chinese/alba.jpg&#34;
 	width=&#34;1024&#34;
 	height=&#34;768&#34;
-	srcset=&#34;http://localhost:1313/p/test-chinese/alba-2_hu17061690086947590000.jpg 480w, http://localhost:1313/p/test-chinese/alba-2_hu12920967430252277112.jpg 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/test-chinese/alba_hu17061690086947590000.jpg 480w, http://localhost:1313/p/test-chinese/alba_hu12920967430252277112.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -124,21 +128,7 @@ Vehicles whether cars, bikes, or anything that moves—have always captivated me
 		data-flex-basis=&#34;320px&#34;
 	
 &gt;
-Sports have been another constant in my life, teaching me about discipline, teamwork, and perseverance, qualities I strive to bring into everything I do. This blog is a space where I share insights, stories, and ideas inspired by my interests and life experiences. Thanks for joining me on this journey!
-&lt;img src=&#34;http://localhost:1313/p/test-chinese/alba.jpg&#34;
-	width=&#34;1024&#34;
-	height=&#34;768&#34;
-	srcset=&#34;http://localhost:1313/p/test-chinese/alba_hu17061690086947590000.jpg 480w, http://localhost:1313/p/test-chinese/alba_hu12920967430252277112.jpg 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;Me a little bit older&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;133&#34;
-		data-flex-basis=&#34;320px&#34;
-	
-&gt;&lt;/p&gt;
+Sports have been another constant in my life, teaching me about discipline, teamwork, and perseverance, qualities I strive to bring into everything I do. This blog is a space where I share insights, stories, and ideas inspired by my interests and life experiences. Thanks for joining me on this journey!&lt;/p&gt;
 </description>
         </item>
         <item>
