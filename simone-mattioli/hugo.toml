@@ -1,9 +1,0 @@
-baseURL = 'https://simo-hue.github.io/Simone-Mattioli/'
-languageCode = 'it'
-title = 'Simone Mattioli'
-theme = "Stack"
-publishDir = "public"
-defaultContentLanguage = "en"
-enableRobotsTXT = true
- [params.contact]
-    email = 'mattioli.simone.10@gmail.com'
