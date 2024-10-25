@@ -2,3 +2,13 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'Mattioli Simone'
 theme = "hugo-theme-stack"
+avatar = "simo/resources/_gen/images/img/logo.jpeg"
+
+[params.sidebar]
+  avatar = { enabled = true, src = "simo/resources/_gen/images/img/avatar_hu13739649187745961479.jpeg", local = true }
+  emoji = "👋"
+  social = [
+    { name = "LinkedIn", url = "https://www.linkedin.com/in/simone-mattioli-581633212/" },
+    { name = "Personal YouTube", url = "https://www.youtube.com/@SimosDiary2003" },
+    { name = "Instagram", url = "https://www.instagram.com/simo___one" }
+  ]

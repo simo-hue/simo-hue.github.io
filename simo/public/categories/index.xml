@@ -5,15 +5,6 @@
         <link>http://localhost:1313/categories/</link>
         <description>Recent content in Categories on Mattioli Simone</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
-        <lastBuildDate>Fri, 25 Oct 2024 12:04:31 +0200</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Content Creation</title>
-        <link>http://localhost:1313/categories/content-creation/</link>
-        <pubDate>Fri, 25 Oct 2024 12:04:31 +0200</pubDate>
-        
-        <guid>http://localhost:1313/categories/content-creation/</guid>
-        <description></description>
-        </item>
-        
+        <language>en-us</language><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>
