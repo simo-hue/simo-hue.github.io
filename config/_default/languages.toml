@@ -1,7 +1,7 @@
 # Uncomment this file to enable multilanguage site support
 
-[en]
-languageName = "English"
+[it]
+languageName = "Italian"
 languagedirection = "ltr"
 title = "Simone Mattioli"
 weight = 1

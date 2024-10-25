@@ -3,55 +3,67 @@ homepage = "whoami"
 # Change baseurl before deploy
 baseurl = "https://simo-hue.github.io"
 languageCode = "en-us"
+theme = "stack"
 paginate = 5
 title = "Simone Mattioli"
 
-# Theme i18n support
-# Available values: en, fr, id, ja, ko, pt-br, zh-cn, zh-tw, es, de, nl, it, th, el, uk, ar
-DefaultContentLanguage = "en"
-
-# Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
-# This will make .Summary and .WordCount behave correctly for CJK languages.
 hasCJKLanguage = false
-
-# Change it to your Disqus shortname before using
 disqusShortname = "simonemattioli"
-
-
-[deployment]
-# By default, files are uploaded in an arbitrary order.
-# Files that match the regular expressions in the "Order" list
-# will be uploaded first, in the listed order.
-order = [".jpg$", ".gif$"]
-
-[[deployment.targets]]
-# An arbitrary name for this target.
-name = "aws-website"
-# The Go Cloud Development Kit URL to deploy to. Examples:
-# GCS; see https://gocloud.dev/howto/blob/#gcs
-# URL = "gs://<Bucket Name>"
-
-# S3; see https://gocloud.dev/howto/blob/#s3
-# For S3-compatible endpoints, see https://gocloud.dev/howto/blob/#s3-compatible
-URL = "s3://sebastiancavadadev?region=eu-north-1"
-
-# If you are using a CloudFront CDN, deploy will invalidate the cache as needed.
-# cloudFrontDistributionID = <ID>
-
-# Optionally, you can include or exclude specific files.
-# See https://godoc.org/github.com/gobwas/glob#Glob for the glob pattern syntax.
-# If non-empty, the pattern is matched against the local path.
-# All paths are matched against in their filepath.ToSlash form.
-# If exclude is non-empty, and a local or remote file's path matches it, that file is not synced.
-# If include is non-empty, and a local or remote file's path does not match it, that file is not synced.
-# As a result, local files that don't pass the include/exclude filters are not uploaded to remote,
-# and remote files that don't pass the include/exclude filters are not deleted.
-# include = "**.html" # would only include files with ".html" suffix
-# exclude = "**.{jpg, png}" # would exclude files with ".jpg" or ".png" suffix
-
-
-# [[deployment.matchers]] configure behavior for files that match the Pattern.
-# See https://golang.org/pkg/regexp/syntax/ for pattern syntax.
-# Pattern searching is stopped on first match.
-
 uglyURLs = true
+
+# ---------------------
+# Configurazione Generale del Tema Stack
+# ---------------------
+
+[params]
+  author = "Simone Mattioli"
+  description = "Web Developer, appassionato di montagna e bio-segnali"
+  homepage = "whoami"  # Collegamento alla pagina "Chi Sono"
+  profilePicture = "/images/profile.jpg"  # Aggiorna con il percorso della tua immagine profilo
+  
+  # Configurazione Sidebar
+  sidebarLogo = true     # Visualizza il logo o immagine nella sidebar
+  enableLightbox = true  # Attiva la lightbox per le immagini
+  showReadingTime = true # Mostra il tempo di lettura dei post
+  showDate = true        # Mostra la data di pubblicazione
+  
+  # Social Media Integration
+  showSocial = true      # Mostra le icone social nella sidebar
+
+  # Impostazioni aggiuntive per i Post
+  enableComments = true  # Abilita i commenti
+  showTableOfContents = true # Abilita la visualizzazione dell'indice dei contenuti nei post
+
+  # SEO e OpenGraph
+  keywords = ["Simone Mattioli", "Web Developer", "Biomedico", "Montagna"]
+  showCanonicalURL = true  # Mostra l'URL canonico per ogni pagina
+
+  # Configurazione del Menu
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 3
+
+[social]
+  github = "https://github.com/simo-hue"
+  youtube_simosdiary = "https://www.youtube.com/@SimosDiary"
+  youtube_mountainfaunalover = "https://www.youtube.com/@mountainfaunalover"
+
+[markup]
+  [markup.highlight]
+    codeFences = true       # Evidenziazione della sintassi nel codice
+    guessSyntax = true      # Rilevamento automatico della sintassi
+  [markup.tableOfContents]
+    startLevel = 2          # Livello di intestazione per l'indice dei contenuti
+    endLevel = 3
+    ordered = false
