@@ -1,8 +1,8 @@
 +++
-author = "Hugo Authors"
+author = "Simone Mattioli"
 title = "Placeholder Text"
 date = "2019-03-09"
-description = "Lorem Ipsum Dolor Si Amet"
+description = "Never Stop Improving Yourself ..."
 categories = [
     "Test",
     "Test with whitespaces"

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Personal Life on Simone Mattioli Portfolio</title>
+        <link>http://localhost:1313/categories/personal-life/</link>
+        <description>Recent content in Personal Life on Simone Mattioli Portfolio</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>Simone Mattioli</copyright>
+        <lastBuildDate>Wed, 09 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/personal-life/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Who Am I</title>
+        <link>http://localhost:1313/p/test-chinese/</link>
+        <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/p/test-chinese/</guid>
+        <description>&lt;img src="http://localhost:1313/p/test-chinese/simo.jpg" alt="Featured image of post Who Am I" /&gt;&lt;h2 id=&#34;education&#34;&gt;Education:
+&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;- ITT Marconi Rovereto: High School
+- University Of Verona: 3rd Year Of Bachelor Degree in Computer Science
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;personal-life&#34;&gt;Personal Life:
+&lt;/h2&gt;&lt;p&gt;I&amp;rsquo;m Simone Mattioli, born in 28 of July 2003, since I was Young I always had the passion for technology, veichles and sports&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

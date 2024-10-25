@@ -2,10 +2,10 @@
 title: Links
 links:
   - title: GitHub
-    description: GitHub is the world's largest software development platform.
+    description: GitHub is the world's largest software development platform, and here is my account.
     website: https://github.com
     image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-  - title: TypeScript
+  - title: Personal Instagram
     description: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
     website: https://www.typescriptlang.org
     image: ts-logo-128.jpg
