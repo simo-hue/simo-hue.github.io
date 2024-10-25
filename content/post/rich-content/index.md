@@ -1,8 +1,8 @@
 +++
-author = "Hugo Authors"
-title = "Rich Content"
-date = "2019-03-10"
-description = "A brief description of Hugo Shortcodes"
+author = "Simone Mattioli"
+title = "Mountain Fauna Lover Project"
+date = "2023-07-28"
+description = "A brief description of Mountain Fauna Lover presence on Social media Platforms"
 tags = [
     "shortcodes",
     "privacy",

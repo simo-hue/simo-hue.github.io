@@ -7,34 +7,12 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>Simone Mattioli</copyright>
-        <lastBuildDate>Fri, 09 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Who Am I</title>
-        <link>http://localhost:1313/p/test-chinese/</link>
-        <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
+        <lastBuildDate>Wed, 09 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Mountain Fauna Lover Project</title>
+        <link>http://localhost:1313/p/mountain-fauna-lover-project/</link>
+        <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/p/test-chinese/</guid>
-        <description>&lt;img src="http://localhost:1313/p/test-chinese/simo.jpg" alt="Featured image of post Who Am I" /&gt;&lt;h2 id=&#34;education&#34;&gt;Education:
-&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;- ITT Marconi Rovereto: High School
-- University Of Verona: 3rd Year Of Bachelor Degree in Computer Science
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;personal-life&#34;&gt;Personal Life:
-&lt;/h2&gt;&lt;p&gt;I&amp;rsquo;m Simone Mattioli, born in 28 of July 2003, since I was Young I always had the passion for technology, veichles and sports&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>Archives</title>
-        <link>http://localhost:1313/archives/</link>
-        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/archives/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Rich Content</title>
-        <link>http://localhost:1313/p/rich-content/</link>
-        <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/p/rich-content/</guid>
+        <guid>http://localhost:1313/p/mountain-fauna-lover-project/</guid>
         <description>&lt;p&gt;Hugo ships with several &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Built-in Shortcodes&lt;/a&gt; for rich content, along with a &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;
@@ -130,6 +108,28 @@
     &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;&lt;span class=&#34;cite&#34;&gt;&lt;span&gt;― &lt;/span&gt;&lt;span&gt;Somebody&lt;/span&gt;&lt;cite&gt;&lt;/cite&gt;&lt;/span&gt;&lt;/blockquote&gt;</description>
         </item>
         <item>
+        <title>Who Am I</title>
+        <link>http://localhost:1313/p/test-chinese/</link>
+        <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/p/test-chinese/</guid>
+        <description>&lt;img src="http://localhost:1313/p/test-chinese/simo.jpg" alt="Featured image of post Who Am I" /&gt;&lt;h2 id=&#34;education&#34;&gt;Education:
+&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;- ITT Marconi Rovereto: High School
+- University Of Verona: 3rd Year Of Bachelor Degree in Computer Science
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;personal-life&#34;&gt;Personal Life:
+&lt;/h2&gt;&lt;p&gt;I&amp;rsquo;m Simone Mattioli, born in 28 of July 2003, since I was Young I always had the passion for technology, veichles and sports&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Archives</title>
+        <link>http://localhost:1313/archives/</link>
+        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/archives/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Placeholder Text</title>
         <link>http://localhost:1313/p/placeholder-text/</link>
         <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
@@ -192,31 +192,12 @@
 &lt;/div&gt;</description>
         </item>
         <item>
-        <title>About Me</title>
-        <link>http://localhost:1313/about-me/</link>
+        <title>Projects</title>
+        <link>http://localhost:1313/projects/</link>
         <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/about-me/</guid>
-        <description>&lt;p&gt;Written in Go, Hugo is an open source static site generator available under the &lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo/blob/master/LICENSE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Apache License 2.0.&lt;/a&gt; Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.&lt;/p&gt;
-&lt;p&gt;Hugo makes use of a variety of open source projects including:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/yuin/goldmark&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/yuin/goldmark&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/alecthomas/chroma&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/alecthomas/chroma&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/muesli/smartcrop&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/muesli/smartcrop&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/spf13/cobra&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/spf13/cobra&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/spf13/viper&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/spf13/viper&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.&lt;/p&gt;
-&lt;p&gt;Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.&lt;/p&gt;
-&lt;p&gt;Websites built with Hugo are extremely fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.&lt;/p&gt;
-&lt;p&gt;Learn more and contribute on &lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+        <guid>http://localhost:1313/projects/</guid>
+        <description>&lt;p&gt;As you can read in my personal life description I have a lot of interest so my projects are in various field&lt;/p&gt;
 </description>
         </item>
         <item>

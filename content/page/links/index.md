@@ -17,6 +17,14 @@ links:
     description: This is where I share my passion for the mountains and Wildlife, I mostly record wild animals in their habitat, cycling tours and so much more...
     website: https://youtube.com/@mountainfaunalover
     image: youtube.png
+  - title: Mountain Fauna Lover Instagram
+    description: This is where I share my passion for the mountains and Wildlife, I mostly record wild animals in their habitat, cycling tours and so much more...
+    website: https://instagram.com/mountainfaunalover
+    image: instagram.png
+  - title: Linkedin
+    description: This is where I share my skills, my Job Experiences and CV
+    website: https://www.linkedin.com/in/simone-mattioli-581633212/
+    image: linkedin.png
 menu:
     main: 
         weight: -50

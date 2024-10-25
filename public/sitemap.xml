@@ -8,6 +8,21 @@
     <loc>http://localhost:1313/passions/</loc>
     <lastmod>2024-10-25T16:26:43+02:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/p/mountain-fauna-lover-project/</loc>
+    <lastmod>2023-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/</loc>
+    <lastmod>2023-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/privacy/</loc>
+    <lastmod>2023-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/shortcodes/</loc>
+    <lastmod>2023-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2023-07-28T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/categories/</loc>
     <lastmod>2020-09-09T00:00:00+00:00</lastmod>
   </url><url>
@@ -17,9 +32,6 @@
     <loc>http://localhost:1313/categories/personal-life/</loc>
     <lastmod>2020-09-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/</loc>
-    <lastmod>2020-09-09T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/p/test-chinese/</loc>
     <lastmod>2020-09-09T00:00:00+00:00</lastmod>
   </url><url>
@@ -27,19 +39,7 @@
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/page/</loc>
-    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/privacy/</loc>
-    <lastmod>2019-03-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/p/rich-content/</loc>
-    <lastmod>2019-03-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/shortcodes/</loc>
-    <lastmod>2019-03-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2019-03-10T00:00:00+00:00</lastmod>
+    <lastmod>2024-10-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/markdown/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
@@ -65,8 +65,8 @@
     <loc>http://localhost:1313/p/emoji-support/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about-me/</loc>
-    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/projects/</loc>
+    <lastmod>2024-10-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/links/</loc>
   </url><url>

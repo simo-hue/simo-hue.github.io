@@ -7,26 +7,12 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>Simone Mattioli</copyright>
-        <lastBuildDate>Wed, 09 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Who Am I</title>
-        <link>http://localhost:1313/p/test-chinese/</link>
-        <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
+        <lastBuildDate>Fri, 28 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Mountain Fauna Lover Project</title>
+        <link>http://localhost:1313/p/mountain-fauna-lover-project/</link>
+        <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/p/test-chinese/</guid>
-        <description>&lt;img src="http://localhost:1313/p/test-chinese/simo.jpg" alt="Featured image of post Who Am I" /&gt;&lt;h2 id=&#34;education&#34;&gt;Education:
-&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;- ITT Marconi Rovereto: High School
-- University Of Verona: 3rd Year Of Bachelor Degree in Computer Science
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;personal-life&#34;&gt;Personal Life:
-&lt;/h2&gt;&lt;p&gt;I&amp;rsquo;m Simone Mattioli, born in 28 of July 2003, since I was Young I always had the passion for technology, veichles and sports&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>Rich Content</title>
-        <link>http://localhost:1313/p/rich-content/</link>
-        <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/p/rich-content/</guid>
+        <guid>http://localhost:1313/p/mountain-fauna-lover-project/</guid>
         <description>&lt;p&gt;Hugo ships with several &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Built-in Shortcodes&lt;/a&gt; for rich content, along with a &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;
@@ -120,6 +106,20 @@
     &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;&lt;span class=&#34;cite&#34;&gt;&lt;span&gt;― &lt;/span&gt;&lt;cite&gt;Some book&lt;/cite&gt;&lt;/span&gt;&lt;/blockquote&gt;
 &lt;blockquote&gt;
     &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;&lt;span class=&#34;cite&#34;&gt;&lt;span&gt;― &lt;/span&gt;&lt;span&gt;Somebody&lt;/span&gt;&lt;cite&gt;&lt;/cite&gt;&lt;/span&gt;&lt;/blockquote&gt;</description>
+        </item>
+        <item>
+        <title>Who Am I</title>
+        <link>http://localhost:1313/p/test-chinese/</link>
+        <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/p/test-chinese/</guid>
+        <description>&lt;img src="http://localhost:1313/p/test-chinese/simo.jpg" alt="Featured image of post Who Am I" /&gt;&lt;h2 id=&#34;education&#34;&gt;Education:
+&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;- ITT Marconi Rovereto: High School
+- University Of Verona: 3rd Year Of Bachelor Degree in Computer Science
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;personal-life&#34;&gt;Personal Life:
+&lt;/h2&gt;&lt;p&gt;I&amp;rsquo;m Simone Mattioli, born in 28 of July 2003, since I was Young I always had the passion for technology, veichles and sports&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>Placeholder Text</title>
