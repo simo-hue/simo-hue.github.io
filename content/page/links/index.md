@@ -3,35 +3,24 @@ title: Links
 links:
   - title: GitHub
     description: GitHub is the world's largest software development platform, and here is my account.
-    website: https://github.com
+    website: https://github.com/simo-hue
     image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
   - title: Personal Instagram
-    description: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
-    website: https://www.typescriptlang.org
-    image: ts-logo-128.jpg
+    description: This is where I share my personal thought about life and some of my experiences.
+    website: https://instagram.com/simo___one
+    image: Instagram.png
+  - title: Personal YouTube
+    description: This is where I share my personal thought about life and the majority of my experiences, such as travels/Volounteering Activity and more...
+    website: https://youtube.com/@SimosDiary2003
+    image: youtube.png
+  - title: Mountain Fauna Lover YouTube
+    description: This is where I share my passion for the mountains and Wildlife, I mostly record wild animals in their habitat, cycling tours and so much more...
+    website: https://youtube.com/@mountainfaunalover
+    image: youtube.png
 menu:
     main: 
         weight: -50
         params:
             icon: link
-
 comments: false
 ---
-
-To use this feature, add `links` section to frontmatter.
-
-This page's frontmatter:
-
-```yaml
-links:
-  - title: GitHub
-    description: GitHub is the world's largest software development platform.
-    website: https://github.com
-    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-  - title: TypeScript
-    description: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
-    website: https://www.typescriptlang.org
-    image: ts-logo-128.jpg
-```
-
-`image` field accepts both local and external images.
