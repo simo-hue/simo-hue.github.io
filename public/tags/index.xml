@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Tags on Simone Mattioli Portfolio</title>
+        <title>Tags on Simone Mattioli</title>
         <link>http://localhost:1313/tags/</link>
-        <description>Recent content in Tags on Simone Mattioli Portfolio</description>
+        <description>Recent content in Tags on Simone Mattioli</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>Simone Mattioli</copyright>
@@ -53,30 +53,6 @@
         <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/tags/emoji/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Css</title>
-        <link>http://localhost:1313/tags/css/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/tags/css/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Html</title>
-        <link>http://localhost:1313/tags/html/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/tags/html/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Themes</title>
-        <link>http://localhost:1313/tags/themes/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/tags/themes/</guid>
         <description></description>
         </item>
         

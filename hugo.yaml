@@ -1,7 +1,7 @@
 baseurl: https://example.com/
 languageCode: en-us
 theme: hugo-theme-stack
-title: Simone Mattioli Portfolio
+title: Simone Mattioli
 copyright: Simone Mattioli
 
 # Theme i18n support
@@ -21,7 +21,7 @@ services:
         id:
 
 pagination:
-    pagerSize: 3
+    pagerSize: 10
 
 permalinks:
     post: /p/:slug/
@@ -43,8 +43,8 @@ params:
         lastUpdated: Jan 02, 2006 15:04 MST
 
     sidebar:
-        emoji: 🍥
-        subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        emoji: 🔥
+        subtitle: Never Stop Improving YourSelf...
         avatar:
             enabled: true
             local: true
@@ -193,16 +193,27 @@ menu:
     social:
         - identifier: github
           name: GitHub
-          url: https://github.com/CaiJimmy/hugo-theme-stack
+          url: https://github.com/simo-hue
           params:
               icon: brand-github
 
-        - identifier: twitter
-          name: Twitter
-          url: https://twitter.com
+        - identifier: instagram
+          name: Instagram
+          url: https://instagram.com/simo___one
           params:
-              icon: brand-twitter
+              icon: brand-instagram
 
+        - identifier: youtube
+          name: YouTube
+          url: https://youtube.com
+          params:
+              icon: brand-youtube
+              
+        - identifier: linkedin
+          name: LinkedIn
+          url: https://linkedin.com
+          params:
+              icon: brand-linkedin
 related:
     includeNewer: true
     threshold: 60
