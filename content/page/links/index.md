@@ -36,3 +36,4 @@ menu:
             icon: link
 comments: false
 ---
+Here You Can Find all the shortcut to reach me on My Social Platforms
