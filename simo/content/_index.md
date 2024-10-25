@@ -1,6 +1,7 @@
 ---
 title: Whoami
-description: 
+image: "images/brasil.jpeg"
+description: Chi sono io
 comments: false
 readingTime: false
 license: false
@@ -19,7 +20,7 @@ links:
     alt: youtube link to my WildLife Shooting and Mountain Experience
   - title: Curriculum
     description: Click on the link to download my curriculum
-    website: # il path
+    website: ./CV_2024.pdf
     image: 
     alt: my photo
 ---
