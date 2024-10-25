@@ -1,2 +1,1 @@
-# Simone-Mattioli
-Personal Portfolio
+Simone Mattioli Portfolio
