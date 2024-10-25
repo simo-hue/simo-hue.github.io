@@ -4,10 +4,13 @@ title = 'Mattioli Simone'
 theme = "hugo-theme-stack"
 
 [params.sidebar]
-  
+  avatar = { enabled = true, src = "/images/logo.jpeg", local = true }
   emoji = "👨🏽‍💻"
   social = [
     { name = "LinkedIn", url = "https://www.linkedin.com/in/simone-mattioli-581633212/" },
     { name = "Personal YouTube", url = "https://www.youtube.com/@SimosDiary2003" },
     { name = "Instagram", url = "https://www.instagram.com/simo___one" }
   ]
+
+[pagination]
+  pagerSize = 10  # Sostituisci 10 con il numero di elementi per pagina che desideri
