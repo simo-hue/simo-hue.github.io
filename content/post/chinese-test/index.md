@@ -25,9 +25,12 @@ I’m currently pursuing a Bachelor’s degree in Computer Science at the Univer
 Studying in Verona, a city rich in history and culture, adds a unique layer to my academic experience. Here, I’m part of a vibrant student community, collaborating on projects, learning from experienced professors, and gaining insights into how technology impacts various fields. This degree is more than just a pathway to a career—it’s a journey that’s shaping my skills, thinking, and goals. Each course and project brings me closer to building a future where I can apply my knowledge to make a difference in the tech world.
 
 ## Personal Life
+![Me when I was a child in Val di Rabbi](rabbi.jpg)
 Welcome to my personal blog! I’m Simone, born on July 28, 2003, in the town of Rovereto, nestled in Trentino-Alto Adige, Italy. Since my earliest years, I’ve been passionate about technology, vehicles, and sports—three worlds that fuel my curiosity, drive, and creativity.
-
-Growing up surrounded by the natural beauty and rich culture of Northern Italy, I found myself drawn to the mechanics of how things work, from engines to computers. My passion for technology started young and has only grown over the years, inspiring me to learn and explore more every day. Vehicles whether cars, bikes, or anything that moves—have always captivated me, not only for their speed and design but for the engineering marvels they represent.
-
+![Me happy with my first mountain bike](biking.JPG)
+Growing up surrounded by the natural beauty and rich culture of Northern Italy, I found myself drawn to the mechanics of how things work, from engines to computers. My passion for technology started young and has only grown over the years, inspiring me to learn and explore more every day. 
+![Me driving Land Rover Defender in Off-Road](defender.jpg)
+Vehicles whether cars, bikes, or anything that moves—have always captivated me, not only for their speed and design but for the engineering marvels they represent.
+![alt text](alba-2.jpg)
 Sports have been another constant in my life, teaching me about discipline, teamwork, and perseverance, qualities I strive to bring into everything I do. This blog is a space where I share insights, stories, and ideas inspired by my interests and life experiences. Thanks for joining me on this journey!
-
+![Me a little bit older](alba.jpg)

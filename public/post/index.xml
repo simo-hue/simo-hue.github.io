@@ -13,11 +13,9 @@
         <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/p/mountain-fauna-lover-project/</guid>
-        <description>&lt;p&gt;Hugo ships with several &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Built-in Shortcodes&lt;/a&gt; for rich content, along with a &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;youtube-privacy-enhanced-shortcode&#34;&gt;YouTube Privacy Enhanced Shortcode
+        <description>&lt;p&gt;Welcome to MountainFaunaLover! Here, I share my passion for nature, wildlife, and the captivating landscapes of mountain regions. On Instagram, you’ll find a curated collection of my favorite moments in the wilderness, from up-close shots of unique wildlife to breathtaking mountain vistas. Each post is a window into my adventures, capturing the serenity, beauty, and diversity of the natural world that inspires me daily.&lt;/p&gt;
+&lt;p&gt;On YouTube, I dive even deeper. My channel is a space for storytelling, featuring video journeys, wildlife encounters, and conservation insights, bringing viewers along on my explorations. Whether you’re a fellow nature enthusiast or just stopping by for some visual serenity, my content on MountainFaunaLover is dedicated to sharing the awe and importance of our wild places. Join me in celebrating the mountains, fauna, and the fascinating stories they hold!&lt;/p&gt;
+&lt;h2 id=&#34;youtube-spoiler&#34;&gt;YouTube Spoiler
 &lt;/h2&gt;&lt;div class=&#34;video-wrapper&#34;&gt;
     &lt;iframe loading=&#34;lazy&#34; 
             src=&#34;https://www.youtube.com/embed/ZJthWmvUzzc&#34; 
@@ -27,98 +25,120 @@
     &lt;/iframe&gt;
 &lt;/div&gt;
 
-&lt;br&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;twitter-simple-shortcode&#34;&gt;Twitter Simple Shortcode
-&lt;/h2&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;“In addition to being more logical, asymmetry has the advantage that its complete appearance is far more optically effective than symmetry.”&lt;br&gt;— Jan Tschichold &lt;a href=&#34;https://t.co/gcv7SrhvJb&#34;&gt;pic.twitter.com/gcv7SrhvJb&lt;/a&gt;&lt;/p&gt;&amp;mdash; Design Reviewed | Graphic Design History (@DesignReviewed) &lt;a href=&#34;https://twitter.com/DesignReviewed/status/1085870671291310081?ref_src=twsrc%5Etfw&#34;&gt;January 17, 2019&lt;/a&gt;&lt;/blockquote&gt;
-
-
-&lt;br&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;vimeo-simple-shortcode&#34;&gt;Vimeo Simple Shortcode
-&lt;/h2&gt;&lt;style&gt;
-.__h_video {
-   position: relative;
-   padding-bottom: 56.23%;
-   height: 0;
-   overflow: hidden;
-   width: 100%;
-   background: #000;
-}
-.__h_video img {
-   width: 100%;
-   height: auto;
-   color: #000;
-}
-.__h_video .play {
-   height: 72px;
-   width: 72px;
-   left: 50%;
-   top: 50%;
-   margin-left: -36px;
-   margin-top: -36px;
-   position: absolute;
-   cursor: pointer;
-}
-&lt;/style&gt;&lt;div class=&#34;s_video_simple __h_video&#34;&gt;
-          &lt;a href=&#34;https://vimeo.com/4.8912912e&amp;#43;07&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;
-            &lt;img src=&#34;https://i.vimeocdn.com/video/337401969-979f0cc9f55fdf305fb8984e90d92639ec9d7ecc4c9dfbc6536e28edb43784ce-d_640&#34; srcset=&#34;https://i.vimeocdn.com/video/337401969-979f0cc9f55fdf305fb8984e90d92639ec9d7ecc4c9dfbc6536e28edb43784ce-d_640 1x, https://i.vimeocdn.com/video/337401969-979f0cc9f55fdf305fb8984e90d92639ec9d7ecc4c9dfbc6536e28edb43784ce-d_640 2x&#34; alt=&#34;Sing Jan Swing - Kinetic Type&#34;&gt;
-            &lt;div class=&#34;play&#34;&gt;
-              &lt;svg version=&#34;1&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 61 61&#34;&gt;&lt;circle cx=&#34;30.5&#34; cy=&#34;30.5&#34; r=&#34;30.5&#34; opacity=&#34;.8&#34; fill=&#34;#000&#34;&gt;&lt;/circle&gt;&lt;path d=&#34;M25.3 19.2c-2.1-1.2-3.8-.2-3.8 2.2v18.1c0 2.4 1.7 3.4 3.8 2.2l16.6-9.1c2.1-1.2 2.1-3.2 0-4.4l-16.6-9z&#34; fill=&#34;#fff&#34;&gt;&lt;/path&gt;&lt;/svg&gt;
-            &lt;/div&gt;
-          &lt;/a&gt;
-        &lt;/div&gt;
-&lt;h2 id=&#34;bilibilibi-shortcode&#34;&gt;bilibilibi Shortcode
-&lt;/h2&gt;
-
-
-
-
-
-    
-
-
-&lt;div class=&#34;video-wrapper&#34;&gt;
-    &lt;iframe src=&#34;https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;aid=498363026&#34;
-            scrolling=&#34;no&#34;
-            frameborder=&#34;no&#34;
-            framespacing=&#34;0&#34;
-            allowfullscreen=&#34;true&#34;
-    &gt;
-    &lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&#34;gist-shortcode&#34;&gt;Gist Shortcode
-&lt;/h2&gt;&lt;script src=&#34;https://gist.github.com/spf13/7896402.js&#34;&gt;&lt;/script&gt;
-
-&lt;h2 id=&#34;gitlab-snippets-shortcode&#34;&gt;Gitlab Snippets Shortcode
-&lt;/h2&gt;&lt;script
-    type=&#34;application/javascript&#34;
-    src=&#34;https://gitlab.com/-/snippets/2349278.js&#34;
-&gt;&lt;/script&gt;
-&lt;h2 id=&#34;quote-shortcode&#34;&gt;Quote Shortcode
-&lt;/h2&gt;&lt;p&gt;Stack adds a &lt;code&gt;quote&lt;/code&gt; shortcode.  For example:&lt;/p&gt;
-&lt;blockquote&gt;
-    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;&lt;span class=&#34;cite&#34;&gt;&lt;span&gt;― &lt;/span&gt;&lt;span&gt;A famous person, &lt;/span&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Book&#34;&gt;&lt;cite&gt;The book they wrote&lt;/cite&gt;&lt;/a&gt;&lt;/span&gt;&lt;/blockquote&gt;
-&lt;blockquote&gt;
-    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;&lt;span class=&#34;cite&#34;&gt;&lt;span&gt;― &lt;/span&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Book&#34;&gt;&lt;cite&gt;Anonymous book&lt;/cite&gt;&lt;/a&gt;&lt;/span&gt;&lt;/blockquote&gt;
-&lt;blockquote&gt;
-    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;&lt;span class=&#34;cite&#34;&gt;&lt;span&gt;― &lt;/span&gt;&lt;cite&gt;Some book&lt;/cite&gt;&lt;/span&gt;&lt;/blockquote&gt;
-&lt;blockquote&gt;
-    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;&lt;span class=&#34;cite&#34;&gt;&lt;span&gt;― &lt;/span&gt;&lt;span&gt;Somebody&lt;/span&gt;&lt;cite&gt;&lt;/cite&gt;&lt;/span&gt;&lt;/blockquote&gt;</description>
+</description>
         </item>
         <item>
-        <title>Who Am I</title>
+        <title>You already know Who I am?</title>
         <link>http://localhost:1313/p/test-chinese/</link>
         <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/p/test-chinese/</guid>
-        <description>&lt;img src="http://localhost:1313/p/test-chinese/simo.jpg" alt="Featured image of post Who Am I" /&gt;&lt;h2 id=&#34;education&#34;&gt;Education:
-&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;- ITT Marconi Rovereto: High School
-- University Of Verona: 3rd Year Of Bachelor Degree in Computer Science
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;personal-life&#34;&gt;Personal Life:
-&lt;/h2&gt;&lt;p&gt;I&amp;rsquo;m Simone Mattioli, born in 28 of July 2003, since I was Young I always had the passion for technology, veichles and sports&lt;/p&gt;
+        <description>&lt;img src="http://localhost:1313/p/test-chinese/simo.jpg" alt="Featured image of post You already know Who I am?" /&gt;&lt;h2 id=&#34;itt-marconi-rovereto&#34;&gt;ITT Marconi Rovereto
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/test-chinese/marconi.JPG&#34;
+	width=&#34;1024&#34;
+	height=&#34;768&#34;
+	srcset=&#34;http://localhost:1313/p/test-chinese/marconi_hu9519866755300478972.JPG 480w, http://localhost:1313/p/test-chinese/marconi_hu1079026344971469281.JPG 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;My Last Day of High School&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;My educational journey began at ITT Marconi in Rovereto, where I discovered my passion for computer science and technology. This prestigious institution provided a strong foundation in technical subjects, enabling me to explore various aspects of computing while honing my analytical and problem-solving skills.&lt;/p&gt;
+&lt;p&gt;At ITT Marconi, I was immersed in a curriculum that balanced theory with practical application. Courses in programming, computer networks, and electronics sparked my interest and challenged me to think critically about how technology influences our daily lives. The hands-on projects and collaborative environment encouraged me to work alongside my peers, fostering teamwork and communication skills that are essential in today’s tech landscape.&lt;/p&gt;
+&lt;p&gt;Beyond the classroom, ITT Marconi offered a variety of extracurricular activities, including coding clubs and competitions, which further fueled my enthusiasm for technology. These experiences solidified my decision to pursue a Bachelor’s degree in Computer Science and laid the groundwork for my future studies at the University of Verona. I am grateful for the education I received at ITT Marconi, as it played a pivotal role in shaping my academic and professional aspirations.&lt;/p&gt;
+&lt;h2 id=&#34;bachelor-degree-in-computer-science&#34;&gt;Bachelor Degree in Computer Science
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/test-chinese/verona.jpg&#34;
+	width=&#34;848&#34;
+	height=&#34;240&#34;
+	srcset=&#34;http://localhost:1313/p/test-chinese/verona_hu15599915847678307440.jpg 480w, http://localhost:1313/p/test-chinese/verona_hu8275353217975971706.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;University Of Verona Logo&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;353&#34;
+		data-flex-basis=&#34;848px&#34;
+	
+&gt;
+I’m currently pursuing a Bachelor’s degree in Computer Science at the University of Verona, an exciting chapter in my life that combines my long-standing passion for technology with hands-on learning and problem-solving. The program challenges me to deepen my understanding of computing principles, from algorithms and data structures to artificial intelligence and software development, while also encouraging a mindset for innovation.&lt;/p&gt;
+&lt;p&gt;Studying in Verona, a city rich in history and culture, adds a unique layer to my academic experience. Here, I’m part of a vibrant student community, collaborating on projects, learning from experienced professors, and gaining insights into how technology impacts various fields. This degree is more than just a pathway to a career—it’s a journey that’s shaping my skills, thinking, and goals. Each course and project brings me closer to building a future where I can apply my knowledge to make a difference in the tech world.&lt;/p&gt;
+&lt;h2 id=&#34;personal-life&#34;&gt;Personal Life
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/test-chinese/rabbi.JPG&#34;
+	width=&#34;2272&#34;
+	height=&#34;1704&#34;
+	srcset=&#34;http://localhost:1313/p/test-chinese/rabbi_hu14685709377490570549.JPG 480w, http://localhost:1313/p/test-chinese/rabbi_hu17811461578758323397.JPG 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Me when I was a child in Val di Rabbi&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;
+Welcome to my personal blog! I’m Simone, born on July 28, 2003, in the town of Rovereto, nestled in Trentino-Alto Adige, Italy. Since my earliest years, I’ve been passionate about technology, vehicles, and sports—three worlds that fuel my curiosity, drive, and creativity.
+&lt;img src=&#34;http://localhost:1313/p/test-chinese/biking.JPG&#34;
+	width=&#34;3872&#34;
+	height=&#34;2592&#34;
+	srcset=&#34;http://localhost:1313/p/test-chinese/biking_hu2896599252437205521.JPG 480w, http://localhost:1313/p/test-chinese/biking_hu157065150373252668.JPG 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Me happy with my first mountain bike&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;358px&#34;
+	
+&gt;
+Growing up surrounded by the natural beauty and rich culture of Northern Italy, I found myself drawn to the mechanics of how things work, from engines to computers. My passion for technology started young and has only grown over the years, inspiring me to learn and explore more every day.
+&lt;img src=&#34;http://localhost:1313/defender.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Me driving Land Rover Defender in Off-Road&#34;
+	
+	
+&gt;
+Vehicles whether cars, bikes, or anything that moves—have always captivated me, not only for their speed and design but for the engineering marvels they represent.
+&lt;img src=&#34;http://localhost:1313/p/test-chinese/alba-2.jpg&#34;
+	width=&#34;1024&#34;
+	height=&#34;768&#34;
+	srcset=&#34;http://localhost:1313/p/test-chinese/alba-2_hu17061690086947590000.jpg 480w, http://localhost:1313/p/test-chinese/alba-2_hu12920967430252277112.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;
+Sports have been another constant in my life, teaching me about discipline, teamwork, and perseverance, qualities I strive to bring into everything I do. This blog is a space where I share insights, stories, and ideas inspired by my interests and life experiences. Thanks for joining me on this journey!
+&lt;img src=&#34;http://localhost:1313/p/test-chinese/alba.jpg&#34;
+	width=&#34;1024&#34;
+	height=&#34;768&#34;
+	srcset=&#34;http://localhost:1313/p/test-chinese/alba_hu17061690086947590000.jpg 480w, http://localhost:1313/p/test-chinese/alba_hu12920967430252277112.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Me a little bit older&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
