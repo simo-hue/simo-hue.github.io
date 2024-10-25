@@ -25,6 +25,10 @@ links:
     description: This is where I share my skills, my Job Experiences and CV
     website: https://www.linkedin.com/in/simone-mattioli-581633212/
     image: linkedin.png
+  - title: My Personal CV
+    description: Clicking Here You Can Download my Personal Resume
+    website: CV_2024.pdf
+    image: resume.png
 menu:
     main: 
         weight: -50

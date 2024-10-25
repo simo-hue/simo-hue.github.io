@@ -4,64 +4,14 @@ title = "Mountain Fauna Lover Project"
 date = "2023-07-28"
 description = "A brief description of Mountain Fauna Lover presence on Social media Platforms"
 tags = [
-    "shortcodes",
-    "privacy",
+    "MountainFaunaLover"
 ]
 +++
 
-Hugo ships with several [Built-in Shortcodes](https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes) for rich content, along with a [Privacy Config](https://gohugo.io/about/hugo-and-gdpr/) and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.
-<!--more-->
----
+Welcome to MountainFaunaLover! Here, I share my passion for nature, wildlife, and the captivating landscapes of mountain regions. On Instagram, you’ll find a curated collection of my favorite moments in the wilderness, from up-close shots of unique wildlife to breathtaking mountain vistas. Each post is a window into my adventures, capturing the serenity, beauty, and diversity of the natural world that inspires me daily.
 
-## YouTube Privacy Enhanced Shortcode
+On YouTube, I dive even deeper. My channel is a space for storytelling, featuring video journeys, wildlife encounters, and conservation insights, bringing viewers along on my explorations. Whether you’re a fellow nature enthusiast or just stopping by for some visual serenity, my content on MountainFaunaLover is dedicated to sharing the awe and importance of our wild places. Join me in celebrating the mountains, fauna, and the fascinating stories they hold!
+
+## YouTube Spoiler
 
 {{< youtube ZJthWmvUzzc >}}
-
-<br>
-
----
-
-## Twitter Simple Shortcode
-
-{{< twitter_simple user="DesignReviewed" id="1085870671291310081" >}}
-
-<br>
-
----
-
-## Vimeo Simple Shortcode
-
-{{< vimeo_simple 48912912 >}}
-
-## bilibilibi Shortcode
-
-{{< bilibili av498363026 >}}
-
-## Gist Shortcode
-
-{{< gist spf13 7896402 >}}
-
-## Gitlab Snippets Shortcode
-
-{{< gitlab 2349278 >}}
-
-## Quote Shortcode
-
-Stack adds a `quote` shortcode.  For example:
-
-{{< quote author="A famous person" source="The book they wrote" url="https://en.wikipedia.org/wiki/Book">}}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-{{< /quote >}}
-
-{{< quote source="Anonymous book" url="https://en.wikipedia.org/wiki/Book">}}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-{{< /quote >}}
-
-{{< quote source="Some book">}}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-{{< /quote >}}
-
-{{< quote author="Somebody">}}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-{{< /quote >}}
-
