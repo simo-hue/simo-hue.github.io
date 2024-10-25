@@ -1,0 +1,9 @@
+baseURL = 'https://simo-hue.github.io/Simone-Mattioli/'  # Sostituisci con il tuo dominio
+languageCode = 'it'
+title = 'Simone Mattioli'
+theme = 'stack'
+defaultContentLanguage = 'it'
+
+# Aggiungi altre configurazioni qui
+[permalinks]
+  posts = "/:year/:month/:title/"
