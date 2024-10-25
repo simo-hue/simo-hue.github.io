@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on Mattioli Simone</title>
+        <link>http://localhost:1313/post/</link>
+        <description>Recent content in Posts on Mattioli Simone</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Fri, 25 Oct 2024 11:56:53 +0200</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>WhoAmI</title>
+        <link>http://localhost:1313/post/whoami/</link>
+        <pubDate>Fri, 25 Oct 2024 11:56:53 +0200</pubDate>
+        
+        <guid>http://localhost:1313/post/whoami/</guid>
+        <description>&lt;p&gt;Simone Mattioli, nato nel 2003&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
