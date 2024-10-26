@@ -146,6 +146,7 @@ params:
         homepage:
             - type: search
             - type: archives
+            - type: books
               params:
                   limit: 5
             - type: categories
@@ -188,8 +189,13 @@ params:
 ### See https://stack.jimmycai.com/config/menu
 ### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
 menu:
-    main: []
-
+    main:
+    - identifier: books
+      name: "Books"
+      url: "/books/"
+      weight: 5
+      ###params:
+          ###icon: ""
     social:
         - identifier: github
           name: GitHub

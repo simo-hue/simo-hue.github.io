@@ -2,43 +2,43 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Pages on Simone Mattioli</title>
-        <link>http://localhost:1313/page/</link>
+        <link>http://localhost:1313/Simone-Mattioli/page/</link>
         <description>Recent content in Pages on Simone Mattioli</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>Simone Mattioli</copyright>
-        <lastBuildDate>Wed, 09 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 09 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Simone-Mattioli/page/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Archives</title>
-        <link>http://localhost:1313/archives/</link>
+        <link>http://localhost:1313/Simone-Mattioli/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/archives/</guid>
+        <guid>http://localhost:1313/Simone-Mattioli/archives/</guid>
         <description></description>
         </item>
         <item>
         <title>Projects</title>
-        <link>http://localhost:1313/projects/</link>
+        <link>http://localhost:1313/Simone-Mattioli/projects/</link>
         <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/projects/</guid>
+        <guid>http://localhost:1313/Simone-Mattioli/projects/</guid>
         <description>&lt;p&gt;As you can read in my personal life description I have a lot of interest so my projects are in various field&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>Links</title>
-        <link>http://localhost:1313/links/</link>
+        <link>http://localhost:1313/Simone-Mattioli/links/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/links/</guid>
+        <guid>http://localhost:1313/Simone-Mattioli/links/</guid>
         <description>&lt;p&gt;Here You Can Find all the shortcut to reach me on My Social Platforms&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>Search</title>
-        <link>http://localhost:1313/search/</link>
+        <link>http://localhost:1313/Simone-Mattioli/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/search/</guid>
+        <guid>http://localhost:1313/Simone-Mattioli/search/</guid>
         <description></description>
         </item>
         
