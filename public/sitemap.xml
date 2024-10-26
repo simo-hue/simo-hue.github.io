@@ -3,18 +3,15 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/Simone-Mattioli/</loc>
-    <lastmod>2024-10-26T20:47:25+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/Simone-Mattioli/post/</loc>
-    <lastmod>2024-10-26T20:47:25+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/Simone-Mattioli/books/</loc>
-    <lastmod>2024-10-26T10:04:33+02:00</lastmod>
+    <lastmod>2024-10-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/Simone-Mattioli/p/mountain-fauna-lover-project/</loc>
     <lastmod>2023-07-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/Simone-Mattioli/tags/mountainfaunalover/</loc>
+    <lastmod>2023-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/Simone-Mattioli/post/</loc>
     <lastmod>2023-07-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/Simone-Mattioli/tags/</loc>
@@ -57,6 +54,9 @@
     <lastmod>2020-09-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/Simone-Mattioli/archives/</loc>
+    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/Simone-Mattioli/books/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/Simone-Mattioli/page/</loc>
