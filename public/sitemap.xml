@@ -56,7 +56,13 @@
     <loc>http://localhost:1313/Simone-Mattioli/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/Simone-Mattioli/blog/</loc>
+    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/Simone-Mattioli/books/</loc>
+    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/Simone-Mattioli/experiences/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/Simone-Mattioli/page/</loc>

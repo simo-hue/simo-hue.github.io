@@ -212,12 +212,29 @@ Sports have been another constant in my life, teaching me about discipline, team
         <description></description>
         </item>
         <item>
+        <title>Blog</title>
+        <link>http://localhost:1313/Simone-Mattioli/blog/</link>
+        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/Simone-Mattioli/blog/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Books</title>
         <link>http://localhost:1313/Simone-Mattioli/books/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/Simone-Mattioli/books/</guid>
         <description>&lt;p&gt;eccco la mia sezione dei libri&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Experience</title>
+        <link>http://localhost:1313/Simone-Mattioli/experiences/</link>
+        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/Simone-Mattioli/experiences/</guid>
+        <description>&lt;p&gt;le mie esperienze&lt;/p&gt;
 </description>
         </item>
         <item>

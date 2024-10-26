@@ -7,7 +7,7 @@ menu:
     main:
         weight: -70
         params: 
-            icon: archives
+            icon: book
 ---
 
 
