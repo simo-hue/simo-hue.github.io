@@ -7,7 +7,47 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>Simone Mattioli</copyright>
-        <lastBuildDate>Wed, 09 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 09 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Biking</title>
+        <link>http://localhost:1313/categories/biking/</link>
+        <pubDate>Thu, 09 Mar 2023 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/categories/biking/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Car</title>
+        <link>http://localhost:1313/categories/car/</link>
+        <pubDate>Thu, 09 Mar 2023 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/categories/car/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Personal Growth</title>
+        <link>http://localhost:1313/categories/personal-growth/</link>
+        <pubDate>Thu, 09 Mar 2023 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/categories/personal-growth/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Sports</title>
+        <link>http://localhost:1313/categories/sports/</link>
+        <pubDate>Thu, 09 Mar 2023 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/categories/sports/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Technology</title>
+        <link>http://localhost:1313/categories/technology/</link>
+        <pubDate>Thu, 09 Mar 2023 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/categories/technology/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Education</title>
         <link>http://localhost:1313/categories/education/</link>
         <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
@@ -34,18 +74,10 @@
         <item>
         <title>Test</title>
         <link>http://localhost:1313/categories/test/</link>
-        <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+        <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/categories/test/</guid>
         <description>&lt;img src="http://localhost:1313/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post Test" /&gt;</description>
-        </item>
-        <item>
-        <title>Test With Whitespaces</title>
-        <link>http://localhost:1313/categories/test-with-whitespaces/</link>
-        <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/categories/test-with-whitespaces/</guid>
-        <description></description>
         </item>
         
     </channel>

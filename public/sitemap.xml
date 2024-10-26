@@ -20,8 +20,29 @@
     <loc>http://localhost:1313/tags/</loc>
     <lastmod>2023-07-28T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/categories/biking/</loc>
+    <lastmod>2023-03-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/car/</loc>
+    <lastmod>2023-03-09T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2020-09-09T00:00:00+00:00</lastmod>
+    <lastmod>2023-03-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/passions/</loc>
+    <lastmod>2023-03-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/p/passions/</loc>
+    <lastmod>2023-03-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/personal-growth/</loc>
+    <lastmod>2023-03-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/sports/</loc>
+    <lastmod>2023-03-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/technology/</loc>
+    <lastmod>2023-03-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/education/</loc>
     <lastmod>2020-09-09T00:00:00+00:00</lastmod>
@@ -41,28 +62,13 @@
     <loc>http://localhost:1313/page/</loc>
     <lastmod>2024-10-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/markdown/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/p/placeholder-text/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/tag-with-whitespaces/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/test/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/test-with-whitespaces/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/text/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/emoji/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/p/emoji-support/</loc>
+    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/test/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/projects/</loc>
