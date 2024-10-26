@@ -2,7 +2,7 @@
 title: You already know Who I am?
 description: The Educational Milestones reached and Personal Interest & Life
 date: 2020-09-09
-slug: test-chinese
+slug: life
 image: simo.jpg
 categories:
     - Personal Life
