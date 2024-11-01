@@ -33,7 +33,6 @@ The **EPICURE Hackathon**, held from October 28-31, 2024, brought together devel
 The hackathon was meticulously structured, featuring both hands-on labs and theoretical sessions, designed to empower participants with the latest skills in **CUDA programming**, **OpenACC**, and **GPU optimization techniques**.
 
 ## Day 1: Getting Started with GPU Computing
-
 The first day served as an introduction to GPU computing, aimed at setting a strong foundation. Topics included:
 - **Introduction to GPU Computing:** A look into the architecture and advantages of using GPUs for high-performance tasks.
 - **CUDA Basics:** Practical insights into CUDA, NVIDIA's parallel computing platform, providing a gateway to harnessing the power of GPU cores.
@@ -108,4 +107,4 @@ Interested in learning more? Check out the links below to access more details on
 ---
 
 This hackathon has certainly sparked a deeper interest in exploring the potential of GPUs for high-performance tasks. I’m looking forward to applying these skills in future projects and sharing my insights with the community.
-![Presenting our results](3.png)
+![Presenting our results](3.jpeg)
