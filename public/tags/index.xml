@@ -57,5 +57,26 @@
       <guid>http://localhost:1313/tags/mountainfaunalover.html</guid>
       <description></description>
     </item>
+    <item>
+      <title>Photography</title>
+      <link>http://localhost:1313/tags/photography.html</link>
+      <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/photography.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Video Making</title>
+      <link>http://localhost:1313/tags/video-making.html</link>
+      <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/video-making.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>WildLife</title>
+      <link>http://localhost:1313/tags/wildlife.html</link>
+      <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/wildlife.html</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
