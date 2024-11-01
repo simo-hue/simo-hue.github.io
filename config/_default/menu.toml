@@ -1,0 +1,43 @@
+# Configure main menu and social menu
+#[[main]]
+#identifier = "home"
+#name = "Home"
+#url = "/"
+#[main.params]
+#icon = "home"
+#newtab = true
+
+[[social]]
+identifier = "github"
+name = "GitHub"
+url = "https://github.com/simo-hue"
+
+[social.params]
+icon = "brand-github"
+
+[[social]]
+identifier = "linkedin"
+name = "Linkedin"
+url = "https://www.linkedin.com/in/davidcavada/"
+
+[social.params]
+icon = "brand-linkedin"
+
+
+[[social]]
+identifier = "twitter"
+name = "Twitter"
+url = "https://x.com/david_cavada"
+
+[social.params]
+icon = "brand-twitter"
+
+[[social]]
+identifier = "youtube"
+name = "Youtube"
+url = "https://www.youtube.com/channel/@davidcavada"
+
+[social.params]
+icon = "brand-youtube"
+
+
