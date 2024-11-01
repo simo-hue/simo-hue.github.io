@@ -41,6 +41,9 @@ links:
     image: resume.png
 ---
 
+Hello! My name is Simone Mattioli, and I was born on July 28, 2003, in Italy. 
+Down Below there is an overview of my journey.
+
 ## ITT Marconi Rovereto
 ![My Last Day of High School](marconi.JPG)
 
