@@ -22,7 +22,7 @@ links:
     website: https://epicure-hpc.eu
   - title: Event Recap Video
     description: Watch the highlights from the EPICURE Hackathon
-    website: https://www.youtube.com/watch?v=EPICURE_hackathon2024
+    website: https://studio.youtube.com/playlist/PLK8EFKQQE4giKzxWYMXTO5niRR4t380hR/videos
   - title: GitHub Repository of Sample Codes
     description: Access the GitHub repository with example codes used during the hackathon
     website: https://github.com/EPICURE-hackathon-2024/sample-codes
@@ -54,7 +54,7 @@ The agenda for Day 1 was as follows:
 
 **Images from Day 1:**
 
-![](1.jpg)
+![Theory Part](1.jpg)
 
 ## Day 2: Advanced GPU Optimization and Profiling
 
@@ -108,5 +108,4 @@ Interested in learning more? Check out the links below to access more details on
 ---
 
 This hackathon has certainly sparked a deeper interest in exploring the potential of GPUs for high-performance tasks. I’m looking forward to applying these skills in future projects and sharing my insights with the community.
-
-![](3.jpg)
+![Presenting our results](3.png)
