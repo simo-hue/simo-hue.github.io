@@ -1,5 +1,5 @@
 ---
-title: WhoAmI
+title: Who's Simone Mattioli?
 description: 
 comments: false
 readingTime: false
@@ -10,7 +10,6 @@ menu:
         weight: 1
         params:
             icon: user
-
 links:
   - title: GitHub
     description: GitHub is the world's largest software development platform, and here is my account.
@@ -66,3 +65,5 @@ Growing up surrounded by the natural beauty and rich culture of Northern Italy, 
 Vehicles whether cars, bikes, or anything that moves—have always captivated me, not only for their speed and design but for the engineering marvels they represent.
 ![alt text](alba.jpg)
 Sports have been another constant in my life, teaching me about discipline, teamwork, and perseverance, qualities I strive to bring into everything I do. This blog is a space where I share insights, stories, and ideas inspired by my interests and life experiences. Thanks for joining me on this journey!
+
+## Keep in touch with Me
