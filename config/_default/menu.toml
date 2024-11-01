@@ -18,24 +18,24 @@ icon = "brand-github"
 [[social]]
 identifier = "linkedin"
 name = "Linkedin"
-url = "https://www.linkedin.com/in/davidcavada/"
+url = "https://www.linkedin.com/in/simone-mattioli-581633212/"
 
 [social.params]
 icon = "brand-linkedin"
 
 
 [[social]]
-identifier = "twitter"
-name = "Twitter"
-url = "https://x.com/david_cavada"
+identifier = "instagram"
+name = "Instagram"
+url = "https://instagram.com/simo___one"
 
 [social.params]
-icon = "brand-twitter"
+icon = "brand-instagram"
 
 [[social]]
 identifier = "youtube"
 name = "Youtube"
-url = "https://www.youtube.com/channel/@davidcavada"
+url = "https://youtube.com/@SimosDiary2003"
 
 [social.params]
 icon = "brand-youtube"
