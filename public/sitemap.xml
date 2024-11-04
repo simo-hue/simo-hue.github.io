@@ -5,12 +5,6 @@
     <loc>http://localhost:1313/categories.html</loc>
     <lastmod>2024-11-04T19:31:32+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/04_experiences.html</loc>
-    <lastmod>2024-11-04T19:31:32+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/experiences.html</loc>
-    <lastmod>2024-11-04T19:31:32+01:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/02_thought/gratitude/gratitude.html</loc>
     <lastmod>2024-11-04T19:31:32+01:00</lastmod>
   </url><url>
@@ -32,20 +26,23 @@
     <loc>http://localhost:1313/05_passions/ski.html</loc>
     <lastmod>2024-11-04T19:31:32+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/04_experiences/swarovski-optik-le-ali-del-frassino.html</loc>
-    <lastmod>2024-11-04T19:31:32+01:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/categories/thought.html</loc>
-    <lastmod>2024-11-04T19:31:32+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/volounteering-activity.html</loc>
-    <lastmod>2024-11-04T19:31:32+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/04_experiences/volounteering-activity-in-brazil.html</loc>
     <lastmod>2024-11-04T19:31:32+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
     <lastmod>2024-11-04T19:31:32+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/04_experiences.html</loc>
+    <lastmod>2024-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/experiences.html</loc>
+    <lastmod>2024-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/04_experiences/swarovski-optik-le-ali-del-frassino.html</loc>
+    <lastmod>2024-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/volounteering-activity.html</loc>
+    <lastmod>2024-11-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/cineca.html</loc>
     <lastmod>2024-10-28T20:21:13+02:00</lastmod>
@@ -71,6 +68,9 @@
     <loc>http://localhost:1313/tags.html</loc>
     <lastmod>2024-10-28T20:21:13+02:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/04_experiences/volounteering-activity-in-brazil.html</loc>
+    <lastmod>2024-08-10T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/03_projects/mountainfaunalover.html</loc>
     <lastmod>2023-07-28T00:00:00+00:00</lastmod>
   </url><url>
@@ -86,12 +86,6 @@
     <loc>http://localhost:1313/tags/wildlife.html</loc>
     <lastmod>2023-07-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/archives.html</loc>
-    <lastmod>2022-03-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/page.html</loc>
-    <lastmod>2022-03-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/03_projects.html</loc>
     <lastmod>2022-03-06T00:00:00+00:00</lastmod>
   </url><url>
@@ -99,6 +93,8 @@
     <lastmod>2022-03-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/hackathon.html</loc>
+  </url><url>
+    <loc>http://localhost:1313/page.html</loc>
   </url><url>
     <loc>http://localhost:1313/categories/passions.html</loc>
   </url><url>
