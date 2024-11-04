@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Categories on Simone Mattioli</title>
+        <link>http://localhost:49769/categories.html</link>
+        <description>Recent content in Categories on Simone Mattioli</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language><atom:link href="http://localhost:49769/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Experiences</title>
+        <link>http://localhost:49769/categories/experiences.html</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:49769/categories/experiences.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Hackathon</title>
+        <link>http://localhost:49769/categories/hackathon.html</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:49769/categories/hackathon.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Passions</title>
+        <link>http://localhost:49769/categories/passions.html</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:49769/categories/passions.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Projects</title>
+        <link>http://localhost:49769/categories/projects.html</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:49769/categories/projects.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Thought</title>
+        <link>http://localhost:49769/categories/thought.html</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:49769/categories/thought.html</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,8 +1,8 @@
 ---
-title: "Publications"
+title: "Thought"
 date: 2022-03-06
 slug: "publications"
-description: "My publications"
+description: "My Thoughts about everything"
 menu:
     main:
     

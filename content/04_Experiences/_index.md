@@ -1,5 +1,5 @@
 ---
-title: "Notebook"
+title: "Experiences"
 slug: "notes"
 description: "These are some notes taken during my studies Might they be a good resources for students"
 draft: false

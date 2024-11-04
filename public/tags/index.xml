@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tags on Simone Mattioli</title>
+        <link>http://localhost:49769/tags.html</link>
+        <description>Recent content in Tags on Simone Mattioli</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Mon, 28 Oct 2024 20:21:13 +0200</lastBuildDate><atom:link href="http://localhost:49769/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>CINECA</title>
+        <link>http://localhost:49769/tags/cineca.html</link>
+        <pubDate>Mon, 28 Oct 2024 20:21:13 +0200</pubDate>
+        
+        <guid>http://localhost:49769/tags/cineca.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>CUDA</title>
+        <link>http://localhost:49769/tags/cuda.html</link>
+        <pubDate>Mon, 28 Oct 2024 20:21:13 +0200</pubDate>
+        
+        <guid>http://localhost:49769/tags/cuda.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>EPICURE</title>
+        <link>http://localhost:49769/tags/epicure.html</link>
+        <pubDate>Mon, 28 Oct 2024 20:21:13 +0200</pubDate>
+        
+        <guid>http://localhost:49769/tags/epicure.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>GPU Computing</title>
+        <link>http://localhost:49769/tags/gpu-computing.html</link>
+        <pubDate>Mon, 28 Oct 2024 20:21:13 +0200</pubDate>
+        
+        <guid>http://localhost:49769/tags/gpu-computing.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Hackathon</title>
+        <link>http://localhost:49769/tags/hackathon.html</link>
+        <pubDate>Mon, 28 Oct 2024 20:21:13 +0200</pubDate>
+        
+        <guid>http://localhost:49769/tags/hackathon.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>High-Performance Computing</title>
+        <link>http://localhost:49769/tags/high-performance-computing.html</link>
+        <pubDate>Mon, 28 Oct 2024 20:21:13 +0200</pubDate>
+        
+        <guid>http://localhost:49769/tags/high-performance-computing.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>MountainFaunaLover</title>
+        <link>http://localhost:49769/tags/mountainfaunalover.html</link>
+        <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:49769/tags/mountainfaunalover.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Photography</title>
+        <link>http://localhost:49769/tags/photography.html</link>
+        <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:49769/tags/photography.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Video Making</title>
+        <link>http://localhost:49769/tags/video-making.html</link>
+        <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:49769/tags/video-making.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>WildLife</title>
+        <link>http://localhost:49769/tags/wildlife.html</link>
+        <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:49769/tags/wildlife.html</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

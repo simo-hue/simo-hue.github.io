@@ -1,6 +1,6 @@
 ---
 title: Experiences
-description: The Experiences that I've made
+description: The Experiences that I've made that teached me a lot
 image:
 
 # Badge style

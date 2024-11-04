@@ -1,5 +1,5 @@
 ---
-title: Mountain Fauna Lover Project
+title: Mountain Fauna Lover
 date: 2023-07-28
 description: A brief description of Mountain Fauna Lover presence on Social media Platforms
 tags:
