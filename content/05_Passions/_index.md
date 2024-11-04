@@ -7,7 +7,7 @@ menu:
     main:
         weight: 4
         params: 
-            icon: uni
+            icon: passion
 ---
 
 ## Mountain Bike
