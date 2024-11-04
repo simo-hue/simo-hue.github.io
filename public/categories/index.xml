@@ -31,9 +31,17 @@
         <description></description>
         </item>
         <item>
+        <title>Volunteering Activity</title>
+        <link>http://localhost:1313/categories/volunteering-activity.html</link>
+        <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/categories/volunteering-activity.html</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Volounteering Activity</title>
         <link>http://localhost:1313/categories/volounteering-activity.html</link>
-        <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
+        <pubDate>Sat, 10 Aug 2024 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/categories/volounteering-activity.html</guid>
         <description></description>

@@ -8,4 +8,4 @@ draft: false
 ---
 
 # PROVA
-![asd]("image.jpeg")
+![asd](content/02_thought/gratitude/image.jpeg)
