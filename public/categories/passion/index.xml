@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Passion on Simone Mattioli</title>
+        <link>http://localhost:49769/categories/passion.html</link>
+        <description>Recent content in Passion on Simone Mattioli</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Mon, 04 Nov 2024 19:31:32 +0100</lastBuildDate><atom:link href="http://localhost:49769/categories/passion/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Motorbikes</title>
+        <link>http://localhost:49769/04_experiences/motorbike.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:49769/04_experiences/motorbike.html</guid>
+        <description>&lt;img src="http://localhost:49769/04_experiences/motorbike/fantic.jpeg" alt="Featured image of post Motorbikes" /&gt;&lt;h1 id=&#34;prova&#34;&gt;PROVA
+&lt;/h1&gt;</description>
+        </item>
+        <item>
+        <title>Mountain bike</title>
+        <link>http://localhost:49769/04_experiences/mountain-bike.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:49769/04_experiences/mountain-bike.html</guid>
+        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
+&lt;/h1&gt;</description>
+        </item>
+        <item>
+        <title>Mountain bike</title>
+        <link>http://localhost:49769/04_experiences/mountain-hiking.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:49769/04_experiences/mountain-hiking.html</guid>
+        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
+&lt;/h1&gt;</description>
+        </item>
+        <item>
+        <title>Ski</title>
+        <link>http://localhost:49769/04_experiences/ski.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:49769/04_experiences/ski.html</guid>
+        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
+&lt;/h1&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

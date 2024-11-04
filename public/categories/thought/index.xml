@@ -5,6 +5,16 @@
         <link>http://localhost:49769/categories/thought.html</link>
         <description>Recent content in Thought on Simone Mattioli</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en</language><atom:link href="http://localhost:49769/categories/thought/index.xml" rel="self" type="application/rss+xml" />
+        <language>en</language>
+        <lastBuildDate>Mon, 04 Nov 2024 19:31:32 +0100</lastBuildDate><atom:link href="http://localhost:49769/categories/thought/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Life Appreciation</title>
+        <link>http://localhost:49769/02_thought/gratitude/gratitude.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:49769/02_thought/gratitude/gratitude.html</guid>
+        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
+&lt;/h1&gt;</description>
+        </item>
+        
     </channel>
 </rss>

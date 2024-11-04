@@ -5,6 +5,43 @@
         <link>http://localhost:49769/04_experiences.html</link>
         <description>Recent content in Experiences on Simone Mattioli</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en</language><atom:link href="http://localhost:49769/04_experiences/index.xml" rel="self" type="application/rss+xml" />
+        <language>en</language>
+        <lastBuildDate>Mon, 04 Nov 2024 19:31:32 +0100</lastBuildDate><atom:link href="http://localhost:49769/04_experiences/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Motorbikes</title>
+        <link>http://localhost:49769/04_experiences/motorbike.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:49769/04_experiences/motorbike.html</guid>
+        <description>&lt;img src="http://localhost:49769/04_experiences/motorbike/fantic.jpeg" alt="Featured image of post Motorbikes" /&gt;&lt;h1 id=&#34;prova&#34;&gt;PROVA
+&lt;/h1&gt;</description>
+        </item>
+        <item>
+        <title>Mountain bike</title>
+        <link>http://localhost:49769/04_experiences/mountain-bike.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:49769/04_experiences/mountain-bike.html</guid>
+        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
+&lt;/h1&gt;</description>
+        </item>
+        <item>
+        <title>Mountain bike</title>
+        <link>http://localhost:49769/04_experiences/mountain-hiking.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:49769/04_experiences/mountain-hiking.html</guid>
+        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
+&lt;/h1&gt;</description>
+        </item>
+        <item>
+        <title>Ski</title>
+        <link>http://localhost:49769/04_experiences/ski.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:49769/04_experiences/ski.html</guid>
+        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
+&lt;/h1&gt;</description>
+        </item>
+        
     </channel>
 </rss>
