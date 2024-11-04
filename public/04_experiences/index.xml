@@ -2,43 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Experiences on Simone Mattioli</title>
-        <link>http://localhost:49769/04_experiences.html</link>
+        <link>http://localhost:1313/04_experiences.html</link>
         <description>Recent content in Experiences on Simone Mattioli</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <lastBuildDate>Mon, 04 Nov 2024 19:31:32 +0100</lastBuildDate><atom:link href="http://localhost:49769/04_experiences/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Motorbikes</title>
-        <link>http://localhost:49769/04_experiences/motorbike.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        <lastBuildDate>Sat, 02 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/04_experiences/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Swarovski Optik &amp; Le ali del Frassino Residence</title>
+        <link>http://localhost:1313/04_experiences/swarovski-optik-le-ali-del-frassino.html</link>
+        <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:49769/04_experiences/motorbike.html</guid>
-        <description>&lt;img src="http://localhost:49769/04_experiences/motorbike/fantic.jpeg" alt="Featured image of post Motorbikes" /&gt;&lt;h1 id=&#34;prova&#34;&gt;PROVA
+        <guid>http://localhost:1313/04_experiences/swarovski-optik-le-ali-del-frassino.html</guid>
+        <description>&lt;img src="http://localhost:1313/04_experiences/swarovski-optik-le-ali-del-frassino/invito.png" alt="Featured image of post Swarovski Optik &amp; Le ali del Frassino Residence" /&gt;&lt;h1 id=&#34;prova&#34;&gt;PROVA
 &lt;/h1&gt;</description>
         </item>
         <item>
-        <title>Mountain bike</title>
-        <link>http://localhost:49769/04_experiences/mountain-bike.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        <title>Volounteering Activity in Brazil</title>
+        <link>http://localhost:1313/04_experiences/volounteering-activity-in-brazil.html</link>
+        <pubDate>Sat, 10 Aug 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:49769/04_experiences/mountain-bike.html</guid>
-        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
-&lt;/h1&gt;</description>
-        </item>
-        <item>
-        <title>Mountain bike</title>
-        <link>http://localhost:49769/04_experiences/mountain-hiking.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
-        
-        <guid>http://localhost:49769/04_experiences/mountain-hiking.html</guid>
-        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
-&lt;/h1&gt;</description>
-        </item>
-        <item>
-        <title>Ski</title>
-        <link>http://localhost:49769/04_experiences/ski.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
-        
-        <guid>http://localhost:49769/04_experiences/ski.html</guid>
+        <guid>http://localhost:1313/04_experiences/volounteering-activity-in-brazil.html</guid>
         <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
 &lt;/h1&gt;</description>
         </item>
