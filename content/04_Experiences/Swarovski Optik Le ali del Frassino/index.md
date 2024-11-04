@@ -2,10 +2,12 @@
 title: "Birdwatching Experience with SWAROVSKI OPTIK at Le Ali del Frassino Residence (Lake Frassino)"
 description: "An awesome private event I was invited to, thanks to my long-standing collaboration with SWAROVSKI OPTIK through the Mountain Fauna Lover project."
 date: 2024-11-02
-image: "invito.png"
+image: invito.png
 categories: ["Mountain Fauna Lover", "Experiences"]
 draft: false
 ---
+![](swarovski.jpeg)
+
 Recently, thanks to my project *Mountain Fauna Lover*, I had the chance to participate in an exclusive event organized by SWAROVSKI OPTIK Italy at the stunning Frassino Oasis in Peschiera del Garda. 
 
 *Mountain Fauna Lover* began almost as a joke, born from my love for mountains and wildlife. I never imagined it would open doors to such exciting collaborations. Through this project, I’ve been able to experience nature up close, often alongside experts and using top-tier equipment, making each adventure more unforgettable than the last.
