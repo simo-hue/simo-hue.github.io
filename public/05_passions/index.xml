@@ -7,13 +7,50 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <lastBuildDate>Mon, 04 Nov 2024 19:31:32 +0100</lastBuildDate><atom:link href="http://localhost:1313/05_passions/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Cars</title>
+        <link>http://localhost:1313/05_passions/car.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:1313/05_passions/car.html</guid>
+        <description>&lt;img src="http://localhost:1313/05_passions/car/audi.jpg" alt="Featured image of post Cars" /&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/05_passions/car/audi.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;http://localhost:1313/05_passions/car/audi_hu9657430657379835821.jpg 480w, http://localhost:1313/05_passions/car/audi_hu3100150901344475263.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Driving around the Audi&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;
+Fueled by passion and the unforgettable roar of petrol engines, this blog is a tribute to the timeless allure of cars. From a young age, I was mesmerized by the hum of engines, the thrill of watching cars fly by on the road, and the unmistakable connection I felt with each machine. Here, I dive into everything that makes cars more than just vehicles—from the technical finesse of engineering to the pure adrenaline sparked by the sound of a finely-tuned engine. Join me as I explore the art, performance, and culture of cars, where every drive feels like a shared heartbeat between driver and machine.&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Motorbikes</title>
         <link>http://localhost:1313/05_passions/motorbike.html</link>
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
         <guid>http://localhost:1313/05_passions/motorbike.html</guid>
-        <description>&lt;img src="http://localhost:1313/05_passions/motorbike/fantic.jpeg" alt="Featured image of post Motorbikes" /&gt;&lt;h1 id=&#34;prova&#34;&gt;PROVA
-&lt;/h1&gt;</description>
+        <description>&lt;img src="http://localhost:1313/05_passions/motorbike/fantic.jpeg" alt="Featured image of post Motorbikes" /&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/05_passions/motorbike/fantic.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;http://localhost:1313/05_passions/motorbike/fantic_hu10077127944113824026.jpg 480w, http://localhost:1313/05_passions/motorbike/fantic_hu10277045893864623639.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;My Fantic 50 Motard&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;
+Born from a lifelong craving for the thrill of two wheels, this blog captures the essence of my journey into the world of motorbikes. Ever since I was young, I dreamt of owning my own bike, and when I finally got my Fantic 50 2-stroke, it was everything I’d imagined—and more. From personalizing it to make it uniquely mine, to mastering the art of riding on one wheel, every ride brought a rush of freedom and exhilaration. Here, I’ll share stories, tips, and insights into the motorbike lifestyle, celebrating the pure adrenaline, skill, and connection that only bikers understand. Whether you’re a seasoned rider or just curious, join me on the ride!&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>Mountain bike</title>
@@ -21,8 +58,23 @@
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
         <guid>http://localhost:1313/05_passions/mountain-bike.html</guid>
-        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
-&lt;/h1&gt;</description>
+        <description>&lt;img src="http://localhost:1313/05_passions/mountain-bike/bike.JPG" alt="Featured image of post Mountain bike" /&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/05_passions/mountain-bike/mountainbike.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;http://localhost:1313/05_passions/mountain-bike/mountainbike_hu4849987664021280301.jpg 480w, http://localhost:1313/05_passions/mountain-bike/mountainbike_hu8333773938812547352.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Me exploring the beauty of Rabbi Valley&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;
+This blog is all about the adrenaline, freedom, and connection with nature that mountain biking has brought into my life. Ever since my first ride, I was hooked—there’s nothing like the thrill of hitting rugged trails, mastering new terrain, and feeling the rush of carving through mountainsides.
+From discovering the best gear and customizing my setup to push my limits, to the pure satisfaction of conquering new trails, mountain biking has become more than a sport—it’s a passion. Here, I’ll share tips, personal stories, trail reviews, and everything that makes mountain biking an adventure worth chasing. Whether you’re a seasoned rider or a curious beginner, join me in exploring the world on two wheels!&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>Mountain bike</title>
@@ -34,12 +86,35 @@
 &lt;/h1&gt;</description>
         </item>
         <item>
+        <title>Personal Growth</title>
+        <link>http://localhost:1313/05_passions/personal-growth.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:1313/05_passions/personal-growth.html</guid>
+        <description>&lt;img src="http://localhost:1313/personalgrowth.jpeg" alt="Featured image of post Personal Growth" /&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/05_passions/personal-growth/personalgrowth.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;http://localhost:1313/05_passions/personal-growth/personalgrowth_hu15341732370339065581.jpg 480w, http://localhost:1313/05_passions/personal-growth/personalgrowth_hu11143947620885413600.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;as&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;
+Embark on a journey of &lt;strong&gt;personal growth&lt;/strong&gt; and self-discovery! This blog is all about transforming life, one article, one book, and one action at a time. Starting with a simple curiosity, I dove into the world of personal development, reading about habits, resilience, mindfulness, and purpose. Each insight led to real changes in how I see myself, set goals, and make decisions. Here, I’ll share lessons from books and articles that have had the biggest impact on my life, along with actionable tips and reflections on the changes I’ve experienced. Join me in exploring the power of intentional self-improvement and see how small shifts can lead to profound personal transformation&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Ski</title>
         <link>http://localhost:1313/05_passions/ski.html</link>
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
         <guid>http://localhost:1313/05_passions/ski.html</guid>
-        <description>&lt;img src="http://localhost:1313/logo.png" alt="Featured image of post Ski" /&gt;&lt;h1 id=&#34;prova&#34;&gt;PROVA
+        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
 &lt;/h1&gt;</description>
         </item>
         

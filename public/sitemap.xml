@@ -26,7 +26,7 @@
     <loc>http://localhost:1313/05_passions/ski.html</loc>
     <lastmod>2024-11-04T19:31:32+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/02_thought/social-trap/gratitude.html</loc>
+    <loc>http://localhost:1313/02_thought/social-trap/trap.html</loc>
     <lastmod>2024-11-04T19:31:32+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/thought.html</loc>
@@ -71,14 +71,14 @@
     <loc>http://localhost:1313/tags.html</loc>
     <lastmod>2024-10-28T20:21:13+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/04_experiences/21th-birthday.html</loc>
-    <lastmod>2024-08-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/categories/volounteering-activity.html</loc>
     <lastmod>2024-08-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/04_experiences/volounteering-activity-in-brazil.html</loc>
     <lastmod>2024-08-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/04_experiences/21th-birthday.html</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/03_projects/mountainfaunalover.html</loc>
     <lastmod>2023-07-28T00:00:00+00:00</lastmod>
