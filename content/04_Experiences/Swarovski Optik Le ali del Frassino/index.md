@@ -20,7 +20,7 @@ This time, we were immersed in an extraordinary birdwatching experience with exp
 ![Avvistamenti](binocolo.JPG)
 During my meeting with Franco Cernigliaro, the Country Manager of Swarovski Optik Italy, we exchanged inspiring ideas and perspectives on biodiversity and sustainability. It was a remarkable experience to engage with someone equally dedicated to nature and innovation. Our discussion centered on how these themes are fundamental to Swarovski’s mission—not just as marketing strategies but as true core values. 
 Swarovski Optik actively encourages deeper connections with nature and is committed to supporting sustainable practices and environmentally responsible technologies in their high-precision optics products
-
+![Avvistamenti](pool.JPG)
 The observation was incredible—Red-crested Pochards, Tufted Ducks, Teals, and, with a bit of luck, a Marsh Harrier—all appeared in their full beauty, enhanced by the sharpness and clarity of SWAROVSKI’s optics.
 
 This project has allowed me to build connections with companies like SWAROVSKI OPTIK and explore the world of wildlife in inspiring ways. Who knows what the future holds for *Mountain Fauna Lover*… perhaps it will grow from a simple passion into something even greater. Stay tuned for more adventures!
