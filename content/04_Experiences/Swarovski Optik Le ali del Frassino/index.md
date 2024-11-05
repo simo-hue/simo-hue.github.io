@@ -17,7 +17,7 @@ Through this project, I’ve been able to experience nature up close, often alon
 
 ![Avvistamenti](papera.jpg)
 This time, we were immersed in an extraordinary birdwatching experience with expert guidance and SWAROVSKI OPTIK’s impressive tools, including the NL X52 binoculars and the BTX spotting scope. The day began with a presentation by SWAROVSKI OPTIK Italy’s manager, Franco Cernigliaro, and ornithologist Alessandro Sartori, who introduced us to the bird species we’d encounter.
-
+![Avvistamenti](binocolo.JPG)
 During my meeting with Franco Cernigliaro, the Country Manager of Swarovski Optik Italy, we exchanged inspiring ideas and perspectives on biodiversity and sustainability. It was a remarkable experience to engage with someone equally dedicated to nature and innovation. Our discussion centered on how these themes are fundamental to Swarovski’s mission—not just as marketing strategies but as true core values. 
 Swarovski Optik actively encourages deeper connections with nature and is committed to supporting sustainable practices and environmentally responsible technologies in their high-precision optics products
 
