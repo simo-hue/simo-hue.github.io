@@ -2,6 +2,7 @@
 title: Who's Simone Mattioli?
 description: 
 comments: false
+image: home.jpeg
 readingTime: false
 license: false
 
