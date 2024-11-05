@@ -26,6 +26,9 @@ links:
   - title: GitHub Repository of Sample Codes
     description: Access the GitHub repository with example codes used during the hackathon
     website: https://github.com/EPICURE-hackathon-2024/sample-codes
+  - title: Personal GitHub Repository used during the hackathon
+    description: Access the GitHub repository used during the hackathon
+    website: 
 ---
 
 The **EPICURE Hackathon**, held from October 28-31, 2024, brought together developers, researchers, and enthusiasts from across Europe to dive deep into the world of **GPU programming and high-performance computing (HPC)**. This event was hosted in collaboration with **CINECA**, one of the leading HPC centers in Europe, renowned for its contributions to scientific computing and advanced research.
