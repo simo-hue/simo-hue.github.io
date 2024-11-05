@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Passions on Simone Mattioli</title>
-        <link>http://localhost:1313/categories/passions.html</link>
+        <link>https://simo-hue.github.io/categories/passions.html</link>
         <description>Recent content in Passions on Simone Mattioli</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en</language><atom:link href="http://localhost:1313/categories/passions/index.xml" rel="self" type="application/rss+xml" />
+        <language>en</language><atom:link href="https://simo-hue.github.io/categories/passions/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>
