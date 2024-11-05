@@ -784,8 +784,56 @@ Swarovski Optik actively encourages deeper connections with nature and is commit
         <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/04_experiences/21th-birthday.html</guid>
-        <description>&lt;img src="http://localhost:1313/IMG_2459.JPG" alt="Featured image of post 21th birth Day in Brazil" /&gt;&lt;h1 id=&#34;bando-prova&#34;&gt;BANDO PROVA
-&lt;/h1&gt;</description>
+        <description>&lt;img src="http://localhost:1313/04_experiences/21th-birthday/olilnda.JPG" alt="Featured image of post 21th birth Day in Brazil" /&gt;&lt;h1 id=&#34;bando-prova&#34;&gt;BANDO PROVA
+&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/21th-birthday/beihra.JPG&#34;
+	width=&#34;4032&#34;
+	height=&#34;3024&#34;
+	srcset=&#34;http://localhost:1313/04_experiences/21th-birthday/beihra_hu7466839578328914173.JPG 480w, http://localhost:1313/04_experiences/21th-birthday/beihra_hu1391642998245033048.JPG 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;
+&lt;img src=&#34;http://localhost:1313/04_experiences/21th-birthday/dinner.JPG&#34;
+	width=&#34;1600&#34;
+	height=&#34;900&#34;
+	srcset=&#34;http://localhost:1313/04_experiences/21th-birthday/dinner_hu13942985537764711094.JPG 480w, http://localhost:1313/04_experiences/21th-birthday/dinner_hu14569323355368024075.JPG 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;
+&lt;img src=&#34;http://localhost:1313/04_experiences/21th-birthday/spiaggia.jpeg&#34;
+	width=&#34;4032&#34;
+	height=&#34;3024&#34;
+	srcset=&#34;http://localhost:1313/04_experiences/21th-birthday/spiaggia_hu5050441902375488098.jpeg 480w, http://localhost:1313/04_experiences/21th-birthday/spiaggia_hu4321329240505320243.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;
+&lt;img src=&#34;http://localhost:1313/04_experiences/21th-birthday/us.jpeg&#34;
+	width=&#34;4032&#34;
+	height=&#34;3024&#34;
+	srcset=&#34;http://localhost:1313/04_experiences/21th-birthday/us_hu4215217406518649380.jpeg 480w, http://localhost:1313/04_experiences/21th-birthday/us_hu9819814949424916994.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>Mountain Fauna Lover</title>
