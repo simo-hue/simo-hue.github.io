@@ -9,6 +9,20 @@ tags:
     - Video Making
 
 image: logo.jpg
+
+links:
+  - title: Instagram Account
+    description: You can find there all my wildlife video and also the backstage of it
+    website: https://instagram.com/mountainfaunalover
+    image: instagram.png
+  - title: Youtube Account
+    description: Watch the highlights from the EPICURE Hackathon
+    website: https://youtube.com/@mountainfaunalover
+    image: youtube.png
+  - title: TikTok Account
+    description: All my shorts and Vertical Content
+    website: https://www.tiktok.com/@mountainfaunalove
+    image: tik.webp
 ---
 
 Welcome to MountainFaunaLover! Here, I share my passion for nature, wildlife, and the captivating landscapes of mountain regions. On Instagram, you’ll find a curated collection of my favorite moments in the wilderness, from up-close shots of unique wildlife to breathtaking mountain vistas. Each post is a window into my adventures, capturing the serenity, beauty, and diversity of the natural world that inspires me daily.

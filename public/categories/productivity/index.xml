@@ -2,47 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Productivity on Simone Mattioli</title>
-        <link>https://simo-hue.github.io/categories/productivity.html</link>
+        <link>http://localhost:1313/categories/productivity.html</link>
         <description>Recent content in Productivity on Simone Mattioli</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <lastBuildDate>Mon, 04 Nov 2024 19:31:32 +0100</lastBuildDate><atom:link href="https://simo-hue.github.io/categories/productivity/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 04 Nov 2024 19:31:32 +0100</lastBuildDate><atom:link href="http://localhost:1313/categories/productivity/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>The 20th century Trap</title>
-        <link>https://simo-hue.github.io/02_thought/social-traps.html</link>
+        <link>http://localhost:1313/02_thought/social-traps.html</link>
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
-        <guid>https://simo-hue.github.io/02_thought/social-traps.html</guid>
-        <description>&lt;img src="https://simo-hue.github.io/02_thought/social-traps/traps.jpg" alt="Featured image of post The 20th century Trap" /&gt;&lt;p&gt;We often live in a rush, projected towards new goals and expectations. In this vortex, we can take for granted what we have: our health, our family, the people who love us, or even the simple warmth of the sun on our skin. Yet, when we learn to stop and really “see” these things, we discover a source of serenity and strength that can change our way of living.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;The Beauty of Everyday Life&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Being grateful does not only mean recognizing great achievements or resounding successes, but also stopping to observe what surrounds us. It may seem trivial, but appreciating a morning coffee, a sincere smile, or the hug of a dear friend has immense value. These moments remind us that happiness does not lie in great events, but in the sum of many small moments lived with awareness.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“The simplest things, often the quietest, are those that resonate most within us.”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;&lt;strong&gt;Gratitude for Health and Relationships&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Health is one of the most precious gifts we possess and that we usually tend to notice only when it is lacking. Practicing gratitude for our body and its ability to allow us to live and experience is a first step towards a deeper appreciation of ourselves and life. Relationships, whether they are family or friends, give us the opportunity to feel understood, supported and loved. And this too is never a given.&lt;/p&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;&lt;strong&gt;The Power of Nature: Sunsets, the Sun and the Cycle of the Seasons&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;The natural world is full of beauty and wonder, and just taking a few minutes to observe it can instantly make you feel more serene and grounded. Watching a sunset, feeling the wind on your skin, or perceiving the warmth of the sun helps us reconnect to the present and appreciate the simplicity of life. These moments do not require money or status; they are there, every day, for anyone who wants to stop and experience them.&lt;/p&gt;
-&lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;&lt;strong&gt;The Journey of Gratitude: A Growth Path&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;I came to these thoughts thanks to some personal growth courses that I took. In particular, one of the courses that had a significant impact on me was &lt;em&gt;Optimism and Resilience&lt;/em&gt; by Nicoletta Stella, which I attended during my time at the Collegio di Merito Don Mazza in Verona. This course helped me develop a more open and resilient mindset, making me understand how important it is to appreciate every aspect of life, even in difficult moments.&lt;/p&gt;
-&lt;ol start=&#34;5&#34;&gt;
-&lt;li&gt;&lt;strong&gt;Gratitude Practices in Daily Life&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;For anyone who wants to start practicing gratitude, here are some practical tips:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Write a gratitude journal&lt;/strong&gt;: Every day, write down three things you are grateful for. They can be simple, like the food you ate or a pleasant conversation.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Stop and reflect&lt;/strong&gt;: Every time you feel a positive emotion, try to stop and live it fully, without thinking about what comes after.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Expressing Gratitude to Others&lt;/strong&gt;: Saying “thank you” to someone or letting them know how much they mean to you can improve not only your mood, but also the bond between you.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;conclusion-life-as-a-gift&#34;&gt;Conclusion: Life as a Gift
-&lt;/h3&gt;&lt;p&gt;Living appreciating what you have doesn’t mean not trying to improve yourself or reach new goals. It means remembering that every moment has a value and that we are part of a unique and unrepeatable experience. Being grateful for everyday things – from the bonds with those we love to the simple pleasures of nature – helps us cultivate a fuller and more satisfying life.&lt;/p&gt;
+        <guid>http://localhost:1313/02_thought/social-traps.html</guid>
+        <description>&lt;img src="http://localhost:1313/02_thought/social-traps/traps.jpg" alt="Featured image of post The 20th century Trap" /&gt;&lt;h1 id=&#34;detached-from-stimuli&#34;&gt;Detached from stimuli
+&lt;/h1&gt;&lt;p&gt;We live in an age of constant stimulation, a constant flow of notifications, updates and digital content that keep us constantly &amp;ldquo;connected&amp;rdquo; but, at the same time, drastically reduce our ability to concentrate. Every day, we are bombarded with visual and auditory stimuli through social media, messaging apps, entertainment platforms, which now guide our lives both online and offline.&lt;/p&gt;
+&lt;h2 id=&#34;the-loss-of-attention-span&#34;&gt;The Loss of Attention Span
+&lt;/h2&gt;&lt;p&gt;This situation scares me. I have noticed, especially during the pandemic, how much social media has taken on the role of &amp;ldquo;directors&amp;rdquo; of our lives. People talk about news, trends, and aspects of other people&amp;rsquo;s lives that they have learned on social media, as if these have replaced real experiences. Our attention span has reduced to almost absurd levels: we are incapable of standing in line or waiting without taking out our phones in search of new stimuli. This constant search for instant gratification through digital devices deprives us of the ability to fully live in the moment.&lt;/p&gt;
+&lt;h2 id=&#34;an-incredibly-addicted-generation&#34;&gt;An Incredibly Addicted Generation
+&lt;/h2&gt;&lt;p&gt;There is a big difference compared to when I was a child. I remember with nostalgia the time spent playing outside, running in the parks and socializing with friends. Now I see parents who have to force their children to go out because, as soon as they can, young people prefer to stay sunk on the couch, immersed in devices. This cultural change is fueled by social media, which offers continuous doses of dopamine pleasure, generating an addiction similar to that of chemical substances.&lt;/p&gt;
+&lt;h2 id=&#34;first-step-awareness&#34;&gt;First Step: Awareness
+&lt;/h2&gt;&lt;p&gt;The first step to free ourselves from this trap is to gain awareness. It is essential to understand how much social media and digital devices can suck us into their network, distancing us from real life and its most natural and authentic stimuli. If not managed with awareness, these tools can make us slaves to a virtual reality, making us lose connection with ourselves and with others in real life.&lt;/p&gt;
+&lt;h2 id=&#34;the-importance-of-being-bored&#34;&gt;The Importance of Being Bored
+&lt;/h2&gt;&lt;p&gt;Being bored has become almost a taboo in modern society, but it is a practice that brings incredible benefits. Being bored is an opportunity to reflect, to let your mind wander and to reconnect with your creativity. It is a state that can bring out deep thoughts and new ideas, a precious space in which the mind frees itself from incessant stimuli and learns to regenerate itself. Learning to enjoy the absence of stimuli is essential to regaining our attention and living a more balanced life.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;So, the next time you feel the temptation to grab your phone during a break, try to resist. Let your mind free itself from the need for constant stimuli, embrace boredom and allow yourself to return to a more natural rhythm. This is the only way we can escape the &amp;ldquo;Social Trap&amp;rdquo; and regain our mental freedom.&lt;/p&gt;
 </description>
         </item>
         

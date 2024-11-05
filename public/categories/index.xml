@@ -2,88 +2,104 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Categories on Simone Mattioli</title>
-        <link>https://simo-hue.github.io/categories.html</link>
+        <link>http://localhost:1313/categories.html</link>
         <description>Recent content in Categories on Simone Mattioli</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <lastBuildDate>Mon, 04 Nov 2024 19:31:32 +0100</lastBuildDate><atom:link href="https://simo-hue.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 04 Nov 2024 19:31:32 +0100</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Distraction</title>
-        <link>https://simo-hue.github.io/categories/distraction.html</link>
+        <link>http://localhost:1313/categories/distraction.html</link>
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
-        <guid>https://simo-hue.github.io/categories/distraction.html</guid>
+        <guid>http://localhost:1313/categories/distraction.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Gratitude</title>
+        <link>http://localhost:1313/categories/gratitude.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:1313/categories/gratitude.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Life</title>
+        <link>http://localhost:1313/categories/life.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:1313/categories/life.html</guid>
         <description></description>
         </item>
         <item>
         <title>Passion</title>
-        <link>https://simo-hue.github.io/categories/passion.html</link>
+        <link>http://localhost:1313/categories/passion.html</link>
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
-        <guid>https://simo-hue.github.io/categories/passion.html</guid>
+        <guid>http://localhost:1313/categories/passion.html</guid>
         <description></description>
         </item>
         <item>
         <title>Productivity</title>
-        <link>https://simo-hue.github.io/categories/productivity.html</link>
+        <link>http://localhost:1313/categories/productivity.html</link>
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
-        <guid>https://simo-hue.github.io/categories/productivity.html</guid>
+        <guid>http://localhost:1313/categories/productivity.html</guid>
         <description></description>
         </item>
         <item>
         <title>Thought</title>
-        <link>https://simo-hue.github.io/categories/thought.html</link>
+        <link>http://localhost:1313/categories/thought.html</link>
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
-        <guid>https://simo-hue.github.io/categories/thought.html</guid>
+        <guid>http://localhost:1313/categories/thought.html</guid>
         <description></description>
         </item>
         <item>
         <title>Experiences</title>
-        <link>https://simo-hue.github.io/categories/experiences.html</link>
+        <link>http://localhost:1313/categories/experiences.html</link>
         <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://simo-hue.github.io/categories/experiences.html</guid>
+        <guid>http://localhost:1313/categories/experiences.html</guid>
         <description></description>
         </item>
         <item>
         <title>Mountain Fauna Lover</title>
-        <link>https://simo-hue.github.io/categories/mountain-fauna-lover.html</link>
+        <link>http://localhost:1313/categories/mountain-fauna-lover.html</link>
         <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://simo-hue.github.io/categories/mountain-fauna-lover.html</guid>
+        <guid>http://localhost:1313/categories/mountain-fauna-lover.html</guid>
         <description></description>
         </item>
         <item>
         <title>Volounteering Activity</title>
-        <link>https://simo-hue.github.io/categories/volounteering-activity.html</link>
+        <link>http://localhost:1313/categories/volounteering-activity.html</link>
         <pubDate>Sat, 10 Aug 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://simo-hue.github.io/categories/volounteering-activity.html</guid>
+        <guid>http://localhost:1313/categories/volounteering-activity.html</guid>
         <description></description>
         </item>
         <item>
         <title>Hackathon</title>
-        <link>https://simo-hue.github.io/categories/hackathon.html</link>
+        <link>http://localhost:1313/categories/hackathon.html</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://simo-hue.github.io/categories/hackathon.html</guid>
+        <guid>http://localhost:1313/categories/hackathon.html</guid>
         <description></description>
         </item>
         <item>
         <title>Passions</title>
-        <link>https://simo-hue.github.io/categories/passions.html</link>
+        <link>http://localhost:1313/categories/passions.html</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://simo-hue.github.io/categories/passions.html</guid>
+        <guid>http://localhost:1313/categories/passions.html</guid>
         <description></description>
         </item>
         <item>
         <title>Projects</title>
-        <link>https://simo-hue.github.io/categories/projects.html</link>
+        <link>http://localhost:1313/categories/projects.html</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://simo-hue.github.io/categories/projects.html</guid>
+        <guid>http://localhost:1313/categories/projects.html</guid>
         <description></description>
         </item>
         

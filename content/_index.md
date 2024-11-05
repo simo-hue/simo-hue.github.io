@@ -12,26 +12,30 @@ menu:
         params:
             icon: user
 links:
-  - title: GitHub
+  - title: GitHub Account
     description: GitHub is the world's largest software development platform, and here is my account.
     website: https://github.com/simo-hue
     image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-  - title: Personal Instagram
+  - title: Personal Instagram Account
     description: This is where I share my personal thought about life and some of my experiences.
     website: https://instagram.com/simo___one
     image: Instagram.png
-  - title: Personal YouTube
+  - title: Personal YouTube Account
     description: This is where I share my personal thought about life and the majority of my experiences, such as travels/Volounteering Activity and more...
     website: https://youtube.com/@SimosDiary2003
     image: youtube.png
-  - title: Mountain Fauna Lover YouTube
+  - title: Mountain Fauna Lover YouTube Account
     description: This is where I share my passion for the mountains and Wildlife, I mostly record wild animals in their habitat, cycling tours and so much more...
     website: https://youtube.com/@mountainfaunalover
     image: youtube.png
-  - title: Mountain Fauna Lover Instagram
+  - title: Mountain Fauna Lover Instagram Account
     description: This is where I share my passion for the mountains and Wildlife, I mostly record wild animals in their habitat, cycling tours and so much more...
     website: https://instagram.com/mountainfaunalover
     image: instagram.png
+  - title: Mountain fauna lover TikTok Account
+    description: All my shorts and Vertical Content
+    website: https://www.tiktok.com/@mountainfaunalove
+    image: tik.webp
   - title: Linkedin
     description: This is where I share my skills, my Job Experiences and CV
     website: https://www.linkedin.com/in/simone-mattioli-581633212/
