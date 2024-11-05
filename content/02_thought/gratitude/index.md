@@ -7,5 +7,4 @@ categories: ["thought", gratitude, life]
 draft: false
 ---
 
-# PROVA
-![logo](grateful.jpeg)
+yes yes, it's comming soon
