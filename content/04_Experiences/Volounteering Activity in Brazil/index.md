@@ -44,44 +44,59 @@ We also visited the communities of **Olinda** and **Alto do Mateus**, where we s
 In Itapororoca, we were hosted by an extraordinary family who dedicated their lives to creating a school and providing aid to the local community. 
 
 ![Preparation for the Carneval at Itapororoca ( second day )](itapororoca.jpeg)
+
 We had the opportunity to meet each member of their family, wonderful people who welcomed us with unprecedented openness and hospitality, which deeply touched me. 
 
 
-![itapororoca](itapororoca.JPG)
+![itapororoca host large Family](itapororoca.JPG)
+
 The moment of saying goodbye was extremely difficult, as the bond that had been created was sincere and deep. 
 
-![itapororoca](itapororocaFamily.jpeg)
+![itapororoca host family party](itapororocaFamily.jpeg)
+
 Fortunately, thanks to technology, we are still able to stay in touch, sharing moments and memories that unite us despite the distance.
-![itapororoca](triglia.JPG)
+
+![itapororoca nature walk](triglia.JPG)
 
 ## Beira da Linha Project
+
 ![Beira da Linha Project with child](beiraTogether.jpeg)
+
 Without a doubt, my favorite project was **Beira da Linha**. Here we assisted teachers in their lessons and I had the opportunity to interact with children and young people who attended after-school activities. 
 
 ![Beira da Linha Project timeout](beihra.jpeg)
+
 These young people, coming from difficult backgrounds, aspired to a better future, and my bond with them was extraordinary. The possibility of contributing to their educational journey was one of the most rewarding experiences of my life.
 
 ![Beira da Linha Project with organizers](organizers.jpeg)
+
 And my greatest respect goes to these educators who dedicate their lives to improving that of the new generations
 
-![Beira da Linha Project football](Football.JPG)
+![Beira da Linha Project bare foot football](Football.JPG)
+
 During our stay there, as a tradition in Brazil, we played football a lot...but the difference was that we were all playing barefoot on the concrete since they only had one pair of shoes, or sometimes not even those and therefore they couldn't/didn't want to ruin them
-![itapororoca](boys.jpeg)
+
+![Last photo with my favourite Beira da Linha Project kids](boys.jpeg)
 
 ## A Unique Group
-![Group](all.jpeg)
+
+![Group at Beira da Linha Project ](all.jpeg)
+
 The group with which I shared this adventure was also fantastic. 
 
-![itapororoca home](house.jpeg)
+![itapororoca host familiy home](house.jpeg)
+
 We hit it off right away, creating bonds that made the experience even more unique and I really have to thank you Noemi, Federica, Maristella, Andrea, Rachid for the amazing experience that we've made. 
 
-![jacarè](praia.JPG)
+![Beach of jacarè sunset with Alberto](praia.JPG)
+
 Back home, I can finally reflect on what I experienced and assimilate the messages and lessons learned. 
 
 Three months have passed since I returned, but the emotions and experiences I lived in Brazil continue to influence my daily life.
 
 We shared so much in only three weeks and when it comes to my mind it seems like a film...too good to be true
-![itapororoca](canyon.jpeg)
+
+![Exploring the canyon with Alberto](canyon.jpeg)
 
 
 ## Contribution to Projects / Mazzian Ideals

@@ -2,440 +2,456 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Tags on Simone Mattioli</title>
-        <link>http://localhost:1313/tags.html</link>
+        <link>http://localhost:58816/tags.html</link>
         <description>Recent content in Tags on Simone Mattioli</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <lastBuildDate>Wed, 06 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 06 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:58816/tags/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Altruism</title>
-        <link>http://localhost:1313/tags/altruism.html</link>
+        <link>http://localhost:58816/tags/altruism.html</link>
         <pubDate>Wed, 06 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/tags/altruism.html</guid>
+        <guid>http://localhost:58816/tags/altruism.html</guid>
         <description></description>
         </item>
         <item>
-        <title>Lonelyness</title>
-        <link>http://localhost:1313/tags/lonelyness.html</link>
+        <title>Educational</title>
+        <link>http://localhost:58816/tags/educational.html</link>
         <pubDate>Wed, 06 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/tags/lonelyness.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Love</title>
-        <link>http://localhost:1313/tags/love.html</link>
-        <pubDate>Wed, 06 Nov 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/tags/love.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Personal Growth</title>
-        <link>http://localhost:1313/tags/personal-growth.html</link>
-        <pubDate>Wed, 06 Nov 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/tags/personal-growth.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Strength</title>
-        <link>http://localhost:1313/tags/strength.html</link>
-        <pubDate>Wed, 06 Nov 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/tags/strength.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Humble</title>
-        <link>http://localhost:1313/tags/humble.html</link>
-        <pubDate>Tue, 05 Nov 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/tags/humble.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Intelligence</title>
-        <link>http://localhost:1313/tags/intelligence.html</link>
-        <pubDate>Tue, 05 Nov 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/tags/intelligence.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Success</title>
-        <link>http://localhost:1313/tags/success.html</link>
-        <pubDate>Tue, 05 Nov 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/tags/success.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Adrenaline</title>
-        <link>http://localhost:1313/tags/adrenaline.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
-        
-        <guid>http://localhost:1313/tags/adrenaline.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Audi</title>
-        <link>http://localhost:1313/tags/audi.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
-        
-        <guid>http://localhost:1313/tags/audi.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Car</title>
-        <link>http://localhost:1313/tags/car.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
-        
-        <guid>http://localhost:1313/tags/car.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Challenge</title>
-        <link>http://localhost:1313/tags/challenge.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
-        
-        <guid>http://localhost:1313/tags/challenge.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Digiscoping</title>
-        <link>http://localhost:1313/tags/digiscoping.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
-        
-        <guid>http://localhost:1313/tags/digiscoping.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Distraction</title>
-        <link>http://localhost:1313/tags/distraction.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
-        
-        <guid>http://localhost:1313/tags/distraction.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Freedom</title>
-        <link>http://localhost:1313/tags/freedom.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
-        
-        <guid>http://localhost:1313/tags/freedom.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Fun</title>
-        <link>http://localhost:1313/tags/fun.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
-        
-        <guid>http://localhost:1313/tags/fun.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Future</title>
-        <link>http://localhost:1313/tags/future.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
-        
-        <guid>http://localhost:1313/tags/future.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Goals</title>
-        <link>http://localhost:1313/tags/goals.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
-        
-        <guid>http://localhost:1313/tags/goals.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Gratitude</title>
-        <link>http://localhost:1313/tags/gratitude.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
-        
-        <guid>http://localhost:1313/tags/gratitude.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Life</title>
-        <link>http://localhost:1313/tags/life.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
-        
-        <guid>http://localhost:1313/tags/life.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Motorbike</title>
-        <link>http://localhost:1313/tags/motorbike.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
-        
-        <guid>http://localhost:1313/tags/motorbike.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Mountain</title>
-        <link>http://localhost:1313/tags/mountain.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
-        
-        <guid>http://localhost:1313/tags/mountain.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Mountain Bike</title>
-        <link>http://localhost:1313/tags/mountain-bike.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
-        
-        <guid>http://localhost:1313/tags/mountain-bike.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Mountain Hiking</title>
-        <link>http://localhost:1313/tags/mountain-hiking.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
-        
-        <guid>http://localhost:1313/tags/mountain-hiking.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Nature</title>
-        <link>http://localhost:1313/tags/nature.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
-        
-        <guid>http://localhost:1313/tags/nature.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Outdoor</title>
-        <link>http://localhost:1313/tags/outdoor.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
-        
-        <guid>http://localhost:1313/tags/outdoor.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Productivity</title>
-        <link>http://localhost:1313/tags/productivity.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
-        
-        <guid>http://localhost:1313/tags/productivity.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Rabbi</title>
-        <link>http://localhost:1313/tags/rabbi.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
-        
-        <guid>http://localhost:1313/tags/rabbi.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Ski</title>
-        <link>http://localhost:1313/tags/ski.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
-        
-        <guid>http://localhost:1313/tags/ski.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Social Traps</title>
-        <link>http://localhost:1313/tags/social-traps.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
-        
-        <guid>http://localhost:1313/tags/social-traps.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Speed</title>
-        <link>http://localhost:1313/tags/speed.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
-        
-        <guid>http://localhost:1313/tags/speed.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Sport</title>
-        <link>http://localhost:1313/tags/sport.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
-        
-        <guid>http://localhost:1313/tags/sport.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Summer</title>
-        <link>http://localhost:1313/tags/summer.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
-        
-        <guid>http://localhost:1313/tags/summer.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Vehicle</title>
-        <link>http://localhost:1313/tags/vehicle.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
-        
-        <guid>http://localhost:1313/tags/vehicle.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Garda Lake</title>
-        <link>http://localhost:1313/tags/garda-lake.html</link>
-        <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/tags/garda-lake.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Mountain Fauna Lover</title>
-        <link>http://localhost:1313/tags/mountain-fauna-lover.html</link>
-        <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/tags/mountain-fauna-lover.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Swarovski</title>
-        <link>http://localhost:1313/tags/swarovski.html</link>
-        <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/tags/swarovski.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Video Making</title>
-        <link>http://localhost:1313/tags/video-making.html</link>
-        <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/tags/video-making.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>CINECA</title>
-        <link>http://localhost:1313/tags/cineca.html</link>
-        <pubDate>Mon, 28 Oct 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/tags/cineca.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>CUDA</title>
-        <link>http://localhost:1313/tags/cuda.html</link>
-        <pubDate>Mon, 28 Oct 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/tags/cuda.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>EPICURE</title>
-        <link>http://localhost:1313/tags/epicure.html</link>
-        <pubDate>Mon, 28 Oct 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/tags/epicure.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>GPU Computing</title>
-        <link>http://localhost:1313/tags/gpu-computing.html</link>
-        <pubDate>Mon, 28 Oct 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/tags/gpu-computing.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Hackathon</title>
-        <link>http://localhost:1313/tags/hackathon.html</link>
-        <pubDate>Mon, 28 Oct 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/tags/hackathon.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>High-Performance Computing</title>
-        <link>http://localhost:1313/tags/high-performance-computing.html</link>
-        <pubDate>Mon, 28 Oct 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/tags/high-performance-computing.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Brasil</title>
-        <link>http://localhost:1313/tags/brasil.html</link>
-        <pubDate>Sat, 10 Aug 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/tags/brasil.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Brazil</title>
-        <link>http://localhost:1313/tags/brazil.html</link>
-        <pubDate>Sat, 10 Aug 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/tags/brazil.html</guid>
+        <guid>http://localhost:58816/tags/educational.html</guid>
         <description></description>
         </item>
         <item>
         <title>Emotional</title>
-        <link>http://localhost:1313/tags/emotional.html</link>
+        <link>http://localhost:58816/tags/emotional.html</link>
+        <pubDate>Wed, 06 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:58816/tags/emotional.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Lonelyness</title>
+        <link>http://localhost:58816/tags/lonelyness.html</link>
+        <pubDate>Wed, 06 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:58816/tags/lonelyness.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Love</title>
+        <link>http://localhost:58816/tags/love.html</link>
+        <pubDate>Wed, 06 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:58816/tags/love.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Mafia</title>
+        <link>http://localhost:58816/tags/mafia.html</link>
+        <pubDate>Wed, 06 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:58816/tags/mafia.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Personal Growth</title>
+        <link>http://localhost:58816/tags/personal-growth.html</link>
+        <pubDate>Wed, 06 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:58816/tags/personal-growth.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Sicily</title>
+        <link>http://localhost:58816/tags/sicily.html</link>
+        <pubDate>Wed, 06 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:58816/tags/sicily.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Strength</title>
+        <link>http://localhost:58816/tags/strength.html</link>
+        <pubDate>Wed, 06 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:58816/tags/strength.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Humble</title>
+        <link>http://localhost:58816/tags/humble.html</link>
+        <pubDate>Tue, 05 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:58816/tags/humble.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Intelligence</title>
+        <link>http://localhost:58816/tags/intelligence.html</link>
+        <pubDate>Tue, 05 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:58816/tags/intelligence.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Success</title>
+        <link>http://localhost:58816/tags/success.html</link>
+        <pubDate>Tue, 05 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:58816/tags/success.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Adrenaline</title>
+        <link>http://localhost:58816/tags/adrenaline.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:58816/tags/adrenaline.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Audi</title>
+        <link>http://localhost:58816/tags/audi.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:58816/tags/audi.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Car</title>
+        <link>http://localhost:58816/tags/car.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:58816/tags/car.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Challenge</title>
+        <link>http://localhost:58816/tags/challenge.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:58816/tags/challenge.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Digiscoping</title>
+        <link>http://localhost:58816/tags/digiscoping.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:58816/tags/digiscoping.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Distraction</title>
+        <link>http://localhost:58816/tags/distraction.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:58816/tags/distraction.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Freedom</title>
+        <link>http://localhost:58816/tags/freedom.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:58816/tags/freedom.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Fun</title>
+        <link>http://localhost:58816/tags/fun.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:58816/tags/fun.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Future</title>
+        <link>http://localhost:58816/tags/future.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:58816/tags/future.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Goals</title>
+        <link>http://localhost:58816/tags/goals.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:58816/tags/goals.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Gratitude</title>
+        <link>http://localhost:58816/tags/gratitude.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:58816/tags/gratitude.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Life</title>
+        <link>http://localhost:58816/tags/life.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:58816/tags/life.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Motorbike</title>
+        <link>http://localhost:58816/tags/motorbike.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:58816/tags/motorbike.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Mountain</title>
+        <link>http://localhost:58816/tags/mountain.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:58816/tags/mountain.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Mountain Bike</title>
+        <link>http://localhost:58816/tags/mountain-bike.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:58816/tags/mountain-bike.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Mountain Hiking</title>
+        <link>http://localhost:58816/tags/mountain-hiking.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:58816/tags/mountain-hiking.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Nature</title>
+        <link>http://localhost:58816/tags/nature.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:58816/tags/nature.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Outdoor</title>
+        <link>http://localhost:58816/tags/outdoor.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:58816/tags/outdoor.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Productivity</title>
+        <link>http://localhost:58816/tags/productivity.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:58816/tags/productivity.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Rabbi</title>
+        <link>http://localhost:58816/tags/rabbi.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:58816/tags/rabbi.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Ski</title>
+        <link>http://localhost:58816/tags/ski.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:58816/tags/ski.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Social Traps</title>
+        <link>http://localhost:58816/tags/social-traps.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:58816/tags/social-traps.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Speed</title>
+        <link>http://localhost:58816/tags/speed.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:58816/tags/speed.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Sport</title>
+        <link>http://localhost:58816/tags/sport.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:58816/tags/sport.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Summer</title>
+        <link>http://localhost:58816/tags/summer.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:58816/tags/summer.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Vehicle</title>
+        <link>http://localhost:58816/tags/vehicle.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:58816/tags/vehicle.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Garda Lake</title>
+        <link>http://localhost:58816/tags/garda-lake.html</link>
+        <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:58816/tags/garda-lake.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Mountain Fauna Lover</title>
+        <link>http://localhost:58816/tags/mountain-fauna-lover.html</link>
+        <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:58816/tags/mountain-fauna-lover.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Swarovski</title>
+        <link>http://localhost:58816/tags/swarovski.html</link>
+        <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:58816/tags/swarovski.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Video Making</title>
+        <link>http://localhost:58816/tags/video-making.html</link>
+        <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:58816/tags/video-making.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>CINECA</title>
+        <link>http://localhost:58816/tags/cineca.html</link>
+        <pubDate>Mon, 28 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:58816/tags/cineca.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>CUDA</title>
+        <link>http://localhost:58816/tags/cuda.html</link>
+        <pubDate>Mon, 28 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:58816/tags/cuda.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>EPICURE</title>
+        <link>http://localhost:58816/tags/epicure.html</link>
+        <pubDate>Mon, 28 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:58816/tags/epicure.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>GPU Computing</title>
+        <link>http://localhost:58816/tags/gpu-computing.html</link>
+        <pubDate>Mon, 28 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:58816/tags/gpu-computing.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Hackathon</title>
+        <link>http://localhost:58816/tags/hackathon.html</link>
+        <pubDate>Mon, 28 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:58816/tags/hackathon.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>High-Performance Computing</title>
+        <link>http://localhost:58816/tags/high-performance-computing.html</link>
+        <pubDate>Mon, 28 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:58816/tags/high-performance-computing.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Brasil</title>
+        <link>http://localhost:58816/tags/brasil.html</link>
         <pubDate>Sat, 10 Aug 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/tags/emotional.html</guid>
+        <guid>http://localhost:58816/tags/brasil.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Brazil</title>
+        <link>http://localhost:58816/tags/brazil.html</link>
+        <pubDate>Sat, 10 Aug 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:58816/tags/brazil.html</guid>
         <description></description>
         </item>
         <item>
         <title>Volounteering Activity</title>
-        <link>http://localhost:1313/tags/volounteering-activity.html</link>
+        <link>http://localhost:58816/tags/volounteering-activity.html</link>
         <pubDate>Sat, 10 Aug 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/tags/volounteering-activity.html</guid>
+        <guid>http://localhost:58816/tags/volounteering-activity.html</guid>
         <description></description>
         </item>
         <item>
         <title>Summer 2024</title>
-        <link>http://localhost:1313/tags/summer-2024.html</link>
+        <link>http://localhost:58816/tags/summer-2024.html</link>
         <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/tags/summer-2024.html</guid>
+        <guid>http://localhost:58816/tags/summer-2024.html</guid>
         <description></description>
         </item>
         <item>
         <title>Diary</title>
-        <link>http://localhost:1313/tags/diary.html</link>
+        <link>http://localhost:58816/tags/diary.html</link>
         <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/tags/diary.html</guid>
+        <guid>http://localhost:58816/tags/diary.html</guid>
         <description></description>
         </item>
         <item>
         <title>Life Film</title>
-        <link>http://localhost:1313/tags/life-film.html</link>
+        <link>http://localhost:58816/tags/life-film.html</link>
         <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/tags/life-film.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>MountainFaunaLover</title>
-        <link>http://localhost:1313/tags/mountainfaunalover.html</link>
-        <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/tags/mountainfaunalover.html</guid>
+        <guid>http://localhost:58816/tags/life-film.html</guid>
         <description></description>
         </item>
         <item>
         <title>Photography</title>
-        <link>http://localhost:1313/tags/photography.html</link>
+        <link>http://localhost:58816/tags/photography.html</link>
         <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/tags/photography.html</guid>
+        <guid>http://localhost:58816/tags/photography.html</guid>
         <description></description>
         </item>
         <item>
-        <title>WildLife</title>
-        <link>http://localhost:1313/tags/wildlife.html</link>
+        <title>Wild Life</title>
+        <link>http://localhost:58816/tags/wild-life.html</link>
         <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/tags/wildlife.html</guid>
+        <guid>http://localhost:58816/tags/wild-life.html</guid>
         <description></description>
         </item>
         

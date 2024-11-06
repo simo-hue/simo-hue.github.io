@@ -2,20 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Experiences on Simone Mattioli</title>
-        <link>http://localhost:1313/04_experiences.html</link>
+        <link>http://localhost:58816/04_experiences.html</link>
         <description>Recent content in Experiences on Simone Mattioli</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <lastBuildDate>Sat, 02 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/04_experiences/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 06 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:58816/04_experiences/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>NO MAFIA, Sicily Tour with LIA Rovereto</title>
+        <link>http://localhost:58816/04_experiences/sicily.html</link>
+        <pubDate>Wed, 06 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:58816/04_experiences/sicily.html</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Birdwatching Experience with SWAROVSKI OPTIK at Le Ali del Frassino Residence (Lake Frassino)</title>
-        <link>http://localhost:1313/04_experiences/swarovski-optik-le-ali-del-frassino.html</link>
+        <link>http://localhost:58816/04_experiences/swarovski-optik-le-ali-del-frassino.html</link>
         <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/04_experiences/swarovski-optik-le-ali-del-frassino.html</guid>
-        <description>&lt;img src="http://localhost:1313/04_experiences/swarovski-optik-le-ali-del-frassino/invito.png" alt="Featured image of post Birdwatching Experience with SWAROVSKI OPTIK at Le Ali del Frassino Residence (Lake Frassino)" /&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/swarovski-optik-le-ali-del-frassino/swarovski.jpeg&#34;
+        <guid>http://localhost:58816/04_experiences/swarovski-optik-le-ali-del-frassino.html</guid>
+        <description>&lt;img src="http://localhost:58816/04_experiences/swarovski-optik-le-ali-del-frassino/invito.png" alt="Featured image of post Birdwatching Experience with SWAROVSKI OPTIK at Le Ali del Frassino Residence (Lake Frassino)" /&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:58816/04_experiences/swarovski-optik-le-ali-del-frassino/swarovski.jpeg&#34;
 	width=&#34;337&#34;
 	height=&#34;150&#34;
-	srcset=&#34;http://localhost:1313/04_experiences/swarovski-optik-le-ali-del-frassino/swarovski_hu14759465543953173956.jpeg 480w, http://localhost:1313/04_experiences/swarovski-optik-le-ali-del-frassino/swarovski_hu6023009479089032581.jpeg 1024w&#34;
+	srcset=&#34;http://localhost:58816/04_experiences/swarovski-optik-le-ali-del-frassino/swarovski_hu14759465543953173956.jpeg 480w, http://localhost:58816/04_experiences/swarovski-optik-le-ali-del-frassino/swarovski_hu6023009479089032581.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Logo Swarovski Optik&#34;
@@ -28,10 +36,10 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;Recently, thanks to my project &lt;em&gt;Mountain Fauna Lover&lt;/em&gt;, I had the chance to participate in an exclusive event organized by SWAROVSKI OPTIK Italy at the stunning Frassino Oasis in Peschiera del Garda.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Mountain Fauna Lover&lt;/em&gt; began almost as a joke, born from my love for mountains and wildlife. I never imagined it would open doors to such exciting collaborations.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/swarovski-optik-le-ali-del-frassino/migrazione.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:58816/04_experiences/swarovski-optik-le-ali-del-frassino/migrazione.jpg&#34;
 	width=&#34;1200&#34;
 	height=&#34;800&#34;
-	srcset=&#34;http://localhost:1313/04_experiences/swarovski-optik-le-ali-del-frassino/migrazione_hu3415763475070476929.jpg 480w, http://localhost:1313/04_experiences/swarovski-optik-le-ali-del-frassino/migrazione_hu15628709650227752216.jpg 1024w&#34;
+	srcset=&#34;http://localhost:58816/04_experiences/swarovski-optik-le-ali-del-frassino/migrazione_hu3415763475070476929.jpg 480w, http://localhost:58816/04_experiences/swarovski-optik-le-ali-del-frassino/migrazione_hu15628709650227752216.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Bird Migration&#34;
@@ -43,10 +51,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Through this project, I’ve been able to experience nature up close, often alongside experts and using top-tier equipment, making each adventure more unforgettable than the last.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/swarovski-optik-le-ali-del-frassino/papera.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:58816/04_experiences/swarovski-optik-le-ali-del-frassino/papera.jpg&#34;
 	width=&#34;3339&#34;
 	height=&#34;2506&#34;
-	srcset=&#34;http://localhost:1313/04_experiences/swarovski-optik-le-ali-del-frassino/papera_hu12033954271459282994.jpg 480w, http://localhost:1313/04_experiences/swarovski-optik-le-ali-del-frassino/papera_hu12014715791681049840.jpg 1024w&#34;
+	srcset=&#34;http://localhost:58816/04_experiences/swarovski-optik-le-ali-del-frassino/papera_hu12033954271459282994.jpg 480w, http://localhost:58816/04_experiences/swarovski-optik-le-ali-del-frassino/papera_hu12014715791681049840.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Duck Photo&#34;
@@ -58,10 +66,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;This time, we were immersed in an extraordinary birdwatching experience with expert guidance and SWAROVSKI OPTIK’s impressive tools, including the NL X52 binoculars and the BTX spotting scope. The day began with a presentation by SWAROVSKI OPTIK Italy’s manager, Franco Cernigliaro, and ornithologist Alessandro Sartori, who introduced us to the bird species we’d encounter.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/swarovski-optik-le-ali-del-frassino/binocolo.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:58816/04_experiences/swarovski-optik-le-ali-del-frassino/binocolo.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;900&#34;
-	srcset=&#34;http://localhost:1313/04_experiences/swarovski-optik-le-ali-del-frassino/binocolo_hu8836717783631905540.jpg 480w, http://localhost:1313/04_experiences/swarovski-optik-le-ali-del-frassino/binocolo_hu7288733104192064040.jpg 1024w&#34;
+	srcset=&#34;http://localhost:58816/04_experiences/swarovski-optik-le-ali-del-frassino/binocolo_hu8836717783631905540.jpg 480w, http://localhost:58816/04_experiences/swarovski-optik-le-ali-del-frassino/binocolo_hu7288733104192064040.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;New Swarovski Optik NL-Pures Series&#34;
@@ -74,10 +82,10 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;During my meeting with Franco Cernigliaro, the Country Manager of Swarovski Optik Italy, we exchanged inspiring ideas and perspectives on biodiversity and sustainability. It was a remarkable experience to engage with someone equally dedicated to nature and innovation. Our discussion centered on how these themes are fundamental to Swarovski’s mission—not just as marketing strategies but as true core values.
 Swarovski Optik actively encourages deeper connections with nature and is committed to supporting sustainable practices and environmentally responsible technologies in their high-precision optics products&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/swarovski-optik-le-ali-del-frassino/pool.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:58816/04_experiences/swarovski-optik-le-ali-del-frassino/pool.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;http://localhost:1313/04_experiences/swarovski-optik-le-ali-del-frassino/pool_hu480610701872245088.jpg 480w, http://localhost:1313/04_experiences/swarovski-optik-le-ali-del-frassino/pool_hu5052254301236937194.jpg 1024w&#34;
+	srcset=&#34;http://localhost:58816/04_experiences/swarovski-optik-le-ali-del-frassino/pool_hu480610701872245088.jpg 480w, http://localhost:58816/04_experiences/swarovski-optik-le-ali-del-frassino/pool_hu5052254301236937194.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Ali del Frassino Hotel&amp;rsquo;s Pool&#34;
@@ -94,15 +102,15 @@ Swarovski Optik actively encourages deeper connections with nature and is commit
         </item>
         <item>
         <title>Volounteering Activity in Brazil</title>
-        <link>http://localhost:1313/04_experiences/volounteering-activity-in-brazil.html</link>
+        <link>http://localhost:58816/04_experiences/volounteering-activity-in-brazil.html</link>
         <pubDate>Sat, 10 Aug 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/04_experiences/volounteering-activity-in-brazil.html</guid>
-        <description>&lt;img src="http://localhost:1313/04_experiences/volounteering-activity-in-brazil/Happy.jpg" alt="Featured image of post Volounteering Activity in Brazil" /&gt;&lt;h2 id=&#34;introduction&#34;&gt;Introduction
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/don-mazza-pia.jpg&#34;
+        <guid>http://localhost:58816/04_experiences/volounteering-activity-in-brazil.html</guid>
+        <description>&lt;img src="http://localhost:58816/04_experiences/volounteering-activity-in-brazil/Happy.jpg" alt="Featured image of post Volounteering Activity in Brazil" /&gt;&lt;h2 id=&#34;introduction&#34;&gt;Introduction
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/don-mazza-pia.jpg&#34;
 	width=&#34;600&#34;
 	height=&#34;304&#34;
-	srcset=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/don-mazza-pia_hu13757114917089963455.jpg 480w, http://localhost:1313/04_experiences/volounteering-activity-in-brazil/don-mazza-pia_hu7487483930222575544.jpg 1024w&#34;
+	srcset=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/don-mazza-pia_hu13757114917089963455.jpg 480w, http://localhost:58816/04_experiences/volounteering-activity-in-brazil/don-mazza-pia_hu7487483930222575544.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Don Mazza Logo&#34;
@@ -119,10 +127,10 @@ Swarovski Optik actively encourages deeper connections with nature and is commit
 &lt;/h2&gt;&lt;p&gt;During our stay, we had the opportunity to explore different areas of Brazil, focusing mainly on Recife and João Pessoa, the largest cities we visited, before heading inland to Zumbi and Itapororoca. These cities are a vibrant mix of culture, history and traditions, but also of social challenges that have deeply affected us since our arrival.&lt;/p&gt;
 &lt;h2 id=&#34;significant-moments&#34;&gt;Significant Moments
 &lt;/h2&gt;&lt;p&gt;It would be impossible to remember them all since the experience was characterized by moments of joy and just as many of emotional difficulty.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/food.jpeg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/food.jpeg&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/food_hu1004313580069494144.jpeg 480w, http://localhost:1313/04_experiences/volounteering-activity-in-brazil/food_hu7872106298772268378.jpeg 1024w&#34;
+	srcset=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/food_hu1004313580069494144.jpeg 480w, http://localhost:58816/04_experiences/volounteering-activity-in-brazil/food_hu7872106298772268378.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Serving Food in Itapororoca&#34;
@@ -135,10 +143,10 @@ Swarovski Optik actively encourages deeper connections with nature and is commit
 &gt;&lt;/p&gt;
 &lt;p&gt;One of the most touching memories was when we distributed food to people in need, an act that made us realize the critical reality in which many communities lived.&lt;/p&gt;
 &lt;p&gt;We also visited the communities of &lt;strong&gt;Olinda&lt;/strong&gt; and &lt;strong&gt;Alto do Mateus&lt;/strong&gt;, where we saw up close the precarious living conditions of the local people.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/1.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/1_hu1494336940421190946.png 480w, http://localhost:1313/04_experiences/volounteering-activity-in-brazil/1_hu10514475447556642522.png 1024w&#34;
+	srcset=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/1_hu1494336940421190946.png 480w, http://localhost:58816/04_experiences/volounteering-activity-in-brazil/1_hu10514475447556642522.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alto do mateus ( João Pessoa )&#34;
@@ -149,10 +157,10 @@ Swarovski Optik actively encourages deeper connections with nature and is commit
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/2.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/2_hu10684382541712246701.png 480w, http://localhost:1313/04_experiences/volounteering-activity-in-brazil/2_hu6112649909584375486.png 1024w&#34;
+	srcset=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/2_hu10684382541712246701.png 480w, http://localhost:58816/04_experiences/volounteering-activity-in-brazil/2_hu6112649909584375486.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Brazil differences ( poor &amp; rich side )&#34;
@@ -164,10 +172,10 @@ Swarovski Optik actively encourages deeper connections with nature and is commit
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;itapororoca-vibes&#34;&gt;Itapororoca Vibes
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/escola.JPG&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/escola.JPG&#34;
 	width=&#34;2000&#34;
 	height=&#34;900&#34;
-	srcset=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/escola_hu9967466731122662437.JPG 480w, http://localhost:1313/04_experiences/volounteering-activity-in-brazil/escola_hu15638584843371399879.JPG 1024w&#34;
+	srcset=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/escola_hu9967466731122662437.JPG 480w, http://localhost:58816/04_experiences/volounteering-activity-in-brazil/escola_hu15638584843371399879.JPG 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Visiting the project at Itapororoca ( first day )&#34;
@@ -179,10 +187,10 @@ Swarovski Optik actively encourages deeper connections with nature and is commit
 	
 &gt;
 In Itapororoca, we were hosted by an extraordinary family who dedicated their lives to creating a school and providing aid to the local community.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/itapororoca.jpeg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/itapororoca.jpeg&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/itapororoca_hu15076894320659152668.jpeg 480w, http://localhost:1313/04_experiences/volounteering-activity-in-brazil/itapororoca_hu14873090201789822252.jpeg 1024w&#34;
+	srcset=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/itapororoca_hu15076894320659152668.jpeg 480w, http://localhost:58816/04_experiences/volounteering-activity-in-brazil/itapororoca_hu14873090201789822252.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Preparation for the Carneval at Itapororoca ( second day )&#34;
@@ -192,45 +200,45 @@ In Itapororoca, we were hosted by an extraordinary family who dedicated their li
 		data-flex-grow=&#34;133&#34;
 		data-flex-basis=&#34;320px&#34;
 	
-&gt;
-We had the opportunity to meet each member of their family, wonderful people who welcomed us with unprecedented openness and hospitality, which deeply touched me.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/itapororoca.JPG&#34;
+&gt;&lt;/p&gt;
+&lt;p&gt;We had the opportunity to meet each member of their family, wonderful people who welcomed us with unprecedented openness and hospitality, which deeply touched me.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/itapororoca.JPG&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/itapororoca_hu14734203814576052921.JPG 480w, http://localhost:1313/04_experiences/volounteering-activity-in-brazil/itapororoca_hu18434290852694748873.JPG 1024w&#34;
+	srcset=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/itapororoca_hu14734203814576052921.JPG 480w, http://localhost:58816/04_experiences/volounteering-activity-in-brazil/itapororoca_hu18434290852694748873.JPG 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;itapororoca&#34;
+		alt=&#34;itapororoca host large Family&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;133&#34;
 		data-flex-basis=&#34;320px&#34;
 	
-&gt;
-The moment of saying goodbye was extremely difficult, as the bond that had been created was sincere and deep.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/itapororocaFamily.jpeg&#34;
+&gt;&lt;/p&gt;
+&lt;p&gt;The moment of saying goodbye was extremely difficult, as the bond that had been created was sincere and deep.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/itapororocaFamily.jpeg&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/itapororocaFamily_hu5549875887473092507.jpeg 480w, http://localhost:1313/04_experiences/volounteering-activity-in-brazil/itapororocaFamily_hu1982609080503288054.jpeg 1024w&#34;
+	srcset=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/itapororocaFamily_hu5549875887473092507.jpeg 480w, http://localhost:58816/04_experiences/volounteering-activity-in-brazil/itapororocaFamily_hu1982609080503288054.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;itapororoca&#34;
+		alt=&#34;itapororoca host family party&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;133&#34;
 		data-flex-basis=&#34;320px&#34;
 	
-&gt;
-Fortunately, thanks to technology, we are still able to stay in touch, sharing moments and memories that unite us despite the distance.
-&lt;img src=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/triglia.JPG&#34;
+&gt;&lt;/p&gt;
+&lt;p&gt;Fortunately, thanks to technology, we are still able to stay in touch, sharing moments and memories that unite us despite the distance.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/triglia.JPG&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/triglia_hu13112908762323549975.JPG 480w, http://localhost:1313/04_experiences/volounteering-activity-in-brazil/triglia_hu13812376625019430941.JPG 1024w&#34;
+	srcset=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/triglia_hu13112908762323549975.JPG 480w, http://localhost:58816/04_experiences/volounteering-activity-in-brazil/triglia_hu13812376625019430941.JPG 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;itapororoca&#34;
+		alt=&#34;itapororoca nature walk&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -239,10 +247,10 @@ Fortunately, thanks to technology, we are still able to stay in touch, sharing m
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;beira-da-linha-project&#34;&gt;Beira da Linha Project
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/beiraTogether.jpeg&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/beiraTogether.jpeg&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/beiraTogether_hu827412341431818347.jpeg 480w, http://localhost:1313/04_experiences/volounteering-activity-in-brazil/beiraTogether_hu12219629092561136464.jpeg 1024w&#34;
+	srcset=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/beiraTogether_hu827412341431818347.jpeg 480w, http://localhost:58816/04_experiences/volounteering-activity-in-brazil/beiraTogether_hu12219629092561136464.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Beira da Linha Project with child&#34;
@@ -252,12 +260,12 @@ Fortunately, thanks to technology, we are still able to stay in touch, sharing m
 		data-flex-grow=&#34;133&#34;
 		data-flex-basis=&#34;320px&#34;
 	
-&gt;
-Without a doubt, my favorite project was &lt;strong&gt;Beira da Linha&lt;/strong&gt;. Here we assisted teachers in their lessons and I had the opportunity to interact with children and young people who attended after-school activities.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/beihra.jpeg&#34;
+&gt;&lt;/p&gt;
+&lt;p&gt;Without a doubt, my favorite project was &lt;strong&gt;Beira da Linha&lt;/strong&gt;. Here we assisted teachers in their lessons and I had the opportunity to interact with children and young people who attended after-school activities.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/beihra.jpeg&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/beihra_hu7243505683530460084.jpeg 480w, http://localhost:1313/04_experiences/volounteering-activity-in-brazil/beihra_hu7325021660530492723.jpeg 1024w&#34;
+	srcset=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/beihra_hu7243505683530460084.jpeg 480w, http://localhost:58816/04_experiences/volounteering-activity-in-brazil/beihra_hu7325021660530492723.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Beira da Linha Project timeout&#34;
@@ -267,12 +275,12 @@ Without a doubt, my favorite project was &lt;strong&gt;Beira da Linha&lt;/strong
 		data-flex-grow=&#34;133&#34;
 		data-flex-basis=&#34;320px&#34;
 	
-&gt;
-These young people, coming from difficult backgrounds, aspired to a better future, and my bond with them was extraordinary. The possibility of contributing to their educational journey was one of the most rewarding experiences of my life.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/organizers.jpeg&#34;
+&gt;&lt;/p&gt;
+&lt;p&gt;These young people, coming from difficult backgrounds, aspired to a better future, and my bond with them was extraordinary. The possibility of contributing to their educational journey was one of the most rewarding experiences of my life.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/organizers.jpeg&#34;
 	width=&#34;5712&#34;
 	height=&#34;4284&#34;
-	srcset=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/organizers_hu14435325769428591544.jpeg 480w, http://localhost:1313/04_experiences/volounteering-activity-in-brazil/organizers_hu2952270892498039134.jpeg 1024w&#34;
+	srcset=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/organizers_hu14435325769428591544.jpeg 480w, http://localhost:58816/04_experiences/volounteering-activity-in-brazil/organizers_hu2952270892498039134.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Beira da Linha Project with organizers&#34;
@@ -282,30 +290,30 @@ These young people, coming from difficult backgrounds, aspired to a better futur
 		data-flex-grow=&#34;133&#34;
 		data-flex-basis=&#34;320px&#34;
 	
-&gt;
-And my greatest respect goes to these educators who dedicate their lives to improving that of the new generations&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/Football.JPG&#34;
+&gt;&lt;/p&gt;
+&lt;p&gt;And my greatest respect goes to these educators who dedicate their lives to improving that of the new generations&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/Football.JPG&#34;
 	width=&#34;3840&#34;
 	height=&#34;2160&#34;
-	srcset=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/Football_hu5399341690104687459.JPG 480w, http://localhost:1313/04_experiences/volounteering-activity-in-brazil/Football_hu17750036120901041899.JPG 1024w&#34;
+	srcset=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/Football_hu5399341690104687459.JPG 480w, http://localhost:58816/04_experiences/volounteering-activity-in-brazil/Football_hu17750036120901041899.JPG 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;Beira da Linha Project football&#34;
+		alt=&#34;Beira da Linha Project bare foot football&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;177&#34;
 		data-flex-basis=&#34;426px&#34;
 	
-&gt;
-During our stay there, as a tradition in Brazil, we played football a lot&amp;hellip;but the difference was that we were all playing barefoot on the concrete since they only had one pair of shoes, or sometimes not even those and therefore they couldn&amp;rsquo;t/didn&amp;rsquo;t want to ruin them
-&lt;img src=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/boys.jpeg&#34;
+&gt;&lt;/p&gt;
+&lt;p&gt;During our stay there, as a tradition in Brazil, we played football a lot&amp;hellip;but the difference was that we were all playing barefoot on the concrete since they only had one pair of shoes, or sometimes not even those and therefore they couldn&amp;rsquo;t/didn&amp;rsquo;t want to ruin them&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/boys.jpeg&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/boys_hu7284022724489658609.jpeg 480w, http://localhost:1313/04_experiences/volounteering-activity-in-brazil/boys_hu1895651406400082243.jpeg 1024w&#34;
+	srcset=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/boys_hu7284022724489658609.jpeg 480w, http://localhost:58816/04_experiences/volounteering-activity-in-brazil/boys_hu1895651406400082243.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;itapororoca&#34;
+		alt=&#34;Last photo with my favourite Beira da Linha Project kids&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -314,60 +322,60 @@ During our stay there, as a tradition in Brazil, we played football a lot&amp;he
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;a-unique-group&#34;&gt;A Unique Group
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/all.jpeg&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/all.jpeg&#34;
 	width=&#34;5712&#34;
 	height=&#34;4284&#34;
-	srcset=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/all_hu16480586880400215249.jpeg 480w, http://localhost:1313/04_experiences/volounteering-activity-in-brazil/all_hu12161417594992945143.jpeg 1024w&#34;
+	srcset=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/all_hu16480586880400215249.jpeg 480w, http://localhost:58816/04_experiences/volounteering-activity-in-brazil/all_hu12161417594992945143.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;Group&#34;
+		alt=&#34;Group at Beira da Linha Project &#34;
 	
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;133&#34;
 		data-flex-basis=&#34;320px&#34;
 	
-&gt;
-The group with which I shared this adventure was also fantastic.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/house.jpeg&#34;
+&gt;&lt;/p&gt;
+&lt;p&gt;The group with which I shared this adventure was also fantastic.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/house.jpeg&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/house_hu799592298550650950.jpeg 480w, http://localhost:1313/04_experiences/volounteering-activity-in-brazil/house_hu12717877237641760338.jpeg 1024w&#34;
+	srcset=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/house_hu799592298550650950.jpeg 480w, http://localhost:58816/04_experiences/volounteering-activity-in-brazil/house_hu12717877237641760338.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;itapororoca home&#34;
+		alt=&#34;itapororoca host familiy home&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;133&#34;
 		data-flex-basis=&#34;320px&#34;
 	
-&gt;
-We hit it off right away, creating bonds that made the experience even more unique and I really have to thank you Noemi, Federica, Maristella, Andrea, Rachid for the amazing experience that we&amp;rsquo;ve made.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/praia.JPG&#34;
+&gt;&lt;/p&gt;
+&lt;p&gt;We hit it off right away, creating bonds that made the experience even more unique and I really have to thank you Noemi, Federica, Maristella, Andrea, Rachid for the amazing experience that we&amp;rsquo;ve made.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/praia.JPG&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/praia_hu5767675381758232612.JPG 480w, http://localhost:1313/04_experiences/volounteering-activity-in-brazil/praia_hu17250628595730047875.JPG 1024w&#34;
+	srcset=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/praia_hu5767675381758232612.JPG 480w, http://localhost:58816/04_experiences/volounteering-activity-in-brazil/praia_hu17250628595730047875.JPG 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;jacarè&#34;
+		alt=&#34;Beach of jacarè sunset with Alberto&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;133&#34;
 		data-flex-basis=&#34;320px&#34;
 	
-&gt;
-Back home, I can finally reflect on what I experienced and assimilate the messages and lessons learned.&lt;/p&gt;
+&gt;&lt;/p&gt;
+&lt;p&gt;Back home, I can finally reflect on what I experienced and assimilate the messages and lessons learned.&lt;/p&gt;
 &lt;p&gt;Three months have passed since I returned, but the emotions and experiences I lived in Brazil continue to influence my daily life.&lt;/p&gt;
-&lt;p&gt;We shared so much in only three weeks and when it comes to my mind it seems like a film&amp;hellip;too good to be true
-&lt;img src=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/canyon.jpeg&#34;
+&lt;p&gt;We shared so much in only three weeks and when it comes to my mind it seems like a film&amp;hellip;too good to be true&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/canyon.jpeg&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/canyon_hu2684194006454475023.jpeg 480w, http://localhost:1313/04_experiences/volounteering-activity-in-brazil/canyon_hu14008367952669873225.jpeg 1024w&#34;
+	srcset=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/canyon_hu2684194006454475023.jpeg 480w, http://localhost:58816/04_experiences/volounteering-activity-in-brazil/canyon_hu14008367952669873225.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;itapororoca&#34;
+		alt=&#34;Exploring the canyon with Alberto&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -388,10 +396,10 @@ Back home, I can finally reflect on what I experienced and assimilate the messag
 &lt;/blockquote&gt;
 &lt;p&gt;This phrase perfectly encapsulates the essence of my journey and the meaning of the work we have done and the message that I tried to pass on to these young Brazilians. I hope to continue to carry forward the teachings of this experience and to contribute to the improvement of people&amp;rsquo;s lives, wherever I am.&lt;/p&gt;
 &lt;h1 id=&#34;here-are-some-more-photos-about-our-stay&#34;&gt;Here are some more photos about our stay
-&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/visit.jpeg&#34;
+&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/visit.jpeg&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/visit_hu6045549713402706096.jpeg 480w, http://localhost:1313/04_experiences/volounteering-activity-in-brazil/visit_hu15241846057362320093.jpeg 1024w&#34;
+	srcset=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/visit_hu6045549713402706096.jpeg 480w, http://localhost:58816/04_experiences/volounteering-activity-in-brazil/visit_hu15241846057362320093.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;itapororoca&#34;
@@ -402,10 +410,10 @@ Back home, I can finally reflect on what I experienced and assimilate the messag
 		data-flex-basis=&#34;320px&#34;
 	
 &gt;
-&lt;img src=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/wow.jpeg&#34;
+&lt;img src=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/wow.jpeg&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/wow_hu1868642336289139639.jpeg 480w, http://localhost:1313/04_experiences/volounteering-activity-in-brazil/wow_hu7791958914182014879.jpeg 1024w&#34;
+	srcset=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/wow_hu1868642336289139639.jpeg 480w, http://localhost:58816/04_experiences/volounteering-activity-in-brazil/wow_hu7791958914182014879.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;itapororoca&#34;
@@ -416,10 +424,10 @@ Back home, I can finally reflect on what I experienced and assimilate the messag
 		data-flex-basis=&#34;320px&#34;
 	
 &gt;
-&lt;img src=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/asilo.jpeg&#34;
+&lt;img src=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/asilo.jpeg&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/asilo_hu10841011801382672923.jpeg 480w, http://localhost:1313/04_experiences/volounteering-activity-in-brazil/asilo_hu1406425626507380819.jpeg 1024w&#34;
+	srcset=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/asilo_hu10841011801382672923.jpeg 480w, http://localhost:58816/04_experiences/volounteering-activity-in-brazil/asilo_hu1406425626507380819.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;itapororoca&#34;
@@ -430,10 +438,10 @@ Back home, I can finally reflect on what I experienced and assimilate the messag
 		data-flex-basis=&#34;320px&#34;
 	
 &gt;
-&lt;img src=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/1school.jpeg&#34;
+&lt;img src=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/1school.jpeg&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/1school_hu7068086369821003238.jpeg 480w, http://localhost:1313/04_experiences/volounteering-activity-in-brazil/1school_hu12488817350023253121.jpeg 1024w&#34;
+	srcset=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/1school_hu7068086369821003238.jpeg 480w, http://localhost:58816/04_experiences/volounteering-activity-in-brazil/1school_hu12488817350023253121.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Group&#34;
@@ -444,10 +452,10 @@ Back home, I can finally reflect on what I experienced and assimilate the messag
 		data-flex-basis=&#34;320px&#34;
 	
 &gt;
-&lt;img src=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/school.JPG&#34;
+&lt;img src=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/school.JPG&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;http://localhost:1313/04_experiences/volounteering-activity-in-brazil/school_hu13132640188473838177.JPG 480w, http://localhost:1313/04_experiences/volounteering-activity-in-brazil/school_hu3783253742305201514.JPG 1024w&#34;
+	srcset=&#34;http://localhost:58816/04_experiences/volounteering-activity-in-brazil/school_hu13132640188473838177.JPG 480w, http://localhost:58816/04_experiences/volounteering-activity-in-brazil/school_hu3783253742305201514.JPG 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;itapororoca&#34;
@@ -462,15 +470,15 @@ Back home, I can finally reflect on what I experienced and assimilate the messag
         </item>
         <item>
         <title>21th birth Day in Brazil</title>
-        <link>http://localhost:1313/04_experiences/21th-birthday.html</link>
+        <link>http://localhost:58816/04_experiences/21th-birthday.html</link>
         <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/04_experiences/21th-birthday.html</guid>
-        <description>&lt;img src="http://localhost:1313/04_experiences/21th-birthday/olilnda.JPG" alt="Featured image of post 21th birth Day in Brazil" /&gt;&lt;p&gt;My 21st birthday was unique, an experience I will never forget. I spent it in Brazil, during my volunteering period, far from home and all my loved ones. On that occasion, I was not surrounded by the familiar faces of friends and relatives, but by six strangers, who shared with me the experience of volunteering in a country so different from mine.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/21th-birthday/spiaggia.png&#34;
+        <guid>http://localhost:58816/04_experiences/21th-birthday.html</guid>
+        <description>&lt;img src="http://localhost:58816/04_experiences/21th-birthday/olilnda.JPG" alt="Featured image of post 21th birth Day in Brazil" /&gt;&lt;p&gt;My 21st birthday was unique, an experience I will never forget. I spent it in Brazil, during my volunteering period, far from home and all my loved ones. On that occasion, I was not surrounded by the familiar faces of friends and relatives, but by six strangers, who shared with me the experience of volunteering in a country so different from mine.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:58816/04_experiences/21th-birthday/spiaggia.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;http://localhost:1313/04_experiences/21th-birthday/spiaggia_hu671467812281117484.png 480w, http://localhost:1313/04_experiences/21th-birthday/spiaggia_hu8872962511018767721.png 1024w&#34;
+	srcset=&#34;http://localhost:58816/04_experiences/21th-birthday/spiaggia_hu671467812281117484.png 480w, http://localhost:58816/04_experiences/21th-birthday/spiaggia_hu8872962511018767721.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Relaxing morning in Olinda beach&#34;
@@ -483,10 +491,10 @@ Back home, I can finally reflect on what I experienced and assimilate the messag
 &gt;&lt;/p&gt;
 &lt;p&gt;I did not expect anything special. Usually, birthdays have never had a particular meaning for me, but that day turned out to be different, special, unique. Celebrating a birthday far from home and loved ones was a first step out of my comfort zone. It allowed me to live the moment with lightness and curiosity, immersed in a new experience.&lt;/p&gt;
 &lt;h3 id=&#34;an-unexpected-surprise&#34;&gt;An Unexpected Surprise
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/21th-birthday/us.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:58816/04_experiences/21th-birthday/us.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;http://localhost:1313/04_experiences/21th-birthday/us_hu2230500589577567921.png 480w, http://localhost:1313/04_experiences/21th-birthday/us_hu2430990538795517930.png 1024w&#34;
+	srcset=&#34;http://localhost:58816/04_experiences/21th-birthday/us_hu2230500589577567921.png 480w, http://localhost:58816/04_experiences/21th-birthday/us_hu2430990538795517930.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;us waiting for Eltom on the seaside&#34;
@@ -499,10 +507,10 @@ Back home, I can finally reflect on what I experienced and assimilate the messag
 &gt;&lt;/p&gt;
 &lt;p&gt;What made my birthday truly memorable was the surprise that my travel companions organized. They found out only a few days later that I had turned 18, and they decided to surprise me with a surprise that left me speechless. One morning we woke up at 4:30, ready to go and watch the sunrise on the beautiful Brazilian beach of Cabo Branco.&lt;/p&gt;
 &lt;p&gt;I had no idea what to expect. We reached the beach, the sky was starting to turn warm, a prelude to dawn. It was then that they gave me a cake, prepared especially for me. We all shared it together, eating and enjoying the sunrise in one of the most beautiful places I have ever seen and then ending it in style with dinner with Don Eltom and Don Alberto who accompanied us on our volunteer experience in the Northeast of Brazil.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/21th-birthday/dinner.JPG&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:58816/04_experiences/21th-birthday/dinner.JPG&#34;
 	width=&#34;1600&#34;
 	height=&#34;900&#34;
-	srcset=&#34;http://localhost:1313/04_experiences/21th-birthday/dinner_hu13942985537764711094.JPG 480w, http://localhost:1313/04_experiences/21th-birthday/dinner_hu14569323355368024075.JPG 1024w&#34;
+	srcset=&#34;http://localhost:58816/04_experiences/21th-birthday/dinner_hu13942985537764711094.JPG 480w, http://localhost:58816/04_experiences/21th-birthday/dinner_hu14569323355368024075.JPG 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;My Birthday Brazilian Dinner&#34;
@@ -518,10 +526,10 @@ Back home, I can finally reflect on what I experienced and assimilate the messag
 &lt;h3 id=&#34;advice-from-the-heart&#34;&gt;Advice from the Heart
 &lt;/h3&gt;&lt;p&gt;If I can give you advice, it is to accept every experience that happens to you, even those that scare you or that seem difficult or &amp;ldquo;not made for you&amp;rdquo;. Those experiences will change you and make you grow. Getting out of your comfort zone, experiencing the world with openness and curiosity: these are the things that will give you unforgettable moments.&lt;/p&gt;
 &lt;p&gt;That birthday away from home, in Brazil, taught me the value of sharing, friendship and adventure. It was an experience that I will always carry in my heart also with the other part of my journey there in Brazil doing volounteering activity&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/21th-birthday/beihra.JPG&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:58816/04_experiences/21th-birthday/beihra.JPG&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;http://localhost:1313/04_experiences/21th-birthday/beihra_hu7466839578328914173.JPG 480w, http://localhost:1313/04_experiences/21th-birthday/beihra_hu1391642998245033048.JPG 1024w&#34;
+	srcset=&#34;http://localhost:58816/04_experiences/21th-birthday/beihra_hu7466839578328914173.JPG 480w, http://localhost:58816/04_experiences/21th-birthday/beihra_hu1391642998245033048.JPG 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;The last day in the Beihra Da Linha Project&#34;
