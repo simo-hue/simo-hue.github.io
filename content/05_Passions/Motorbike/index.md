@@ -5,6 +5,7 @@ date: 2024-11-04T19:31:32+01:00
 image: "fantic.jpeg"
 categories: ["passion"]
 draft: false
+tags: [motorbike, adrenaline, fun, outdoor, vehicle]
 ---
 
 ![My Fantic 50 Motard](fantic.jpg)

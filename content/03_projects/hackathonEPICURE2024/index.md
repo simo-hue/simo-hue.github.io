@@ -5,7 +5,7 @@ slug: epicure-hackathon-2024
 date: 2024-10-28
 image: cover.jpg
 draft: false
-    
+categories: [projects]
 tags:
     - GPU Computing
     - CUDA
@@ -56,7 +56,7 @@ The agenda for Day 1 was as follows:
 
 **Images from Day 1:**
 
-![Theory Part](1.jpg)
+![Theory Part: Introduction to CUDA and GPU Programming](1.jpg)
 
 ## Day 2: Advanced GPU Optimization and Profiling
 
@@ -84,10 +84,6 @@ The last two days were dedicated to **intensive lab sessions**. Participants wor
 | October 30 | Lab Session             | Lab Session                |
 | October 31 | Lab Session             | Lab Session                |
 
-**Images from Days 3 and 4:**
-
-![](2.jpg)
-
 ## Key Takeaways
 
 This hackathon was more than just a technical event; it was a community-building experience. Here are some of the main takeaways:
@@ -110,4 +106,5 @@ Interested in learning more? Check out the links below to access more details on
 ---
 
 This hackathon has certainly sparked a deeper interest in exploring the potential of GPUs for high-performance tasks. I’m looking forward to applying these skills in future projects and sharing my insights with the community.
-![Presenting our results](3.jpeg)
+![Me Presenting our results of the Lab sessions of the two days before](3.jpeg)
+

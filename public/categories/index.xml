@@ -6,28 +6,12 @@
         <description>Recent content in Categories on Simone Mattioli</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <lastBuildDate>Mon, 04 Nov 2024 19:31:32 +0100</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Distraction</title>
-        <link>http://localhost:1313/categories/distraction.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        <lastBuildDate>Wed, 06 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Thoughts</title>
+        <link>http://localhost:1313/categories/thoughts.html</link>
+        <pubDate>Wed, 06 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/categories/distraction.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Gratitude</title>
-        <link>http://localhost:1313/categories/gratitude.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
-        
-        <guid>http://localhost:1313/categories/gratitude.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Life</title>
-        <link>http://localhost:1313/categories/life.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
-        
-        <guid>http://localhost:1313/categories/life.html</guid>
+        <guid>http://localhost:1313/categories/thoughts.html</guid>
         <description></description>
         </item>
         <item>
@@ -39,19 +23,11 @@
         <description></description>
         </item>
         <item>
-        <title>Productivity</title>
-        <link>http://localhost:1313/categories/productivity.html</link>
+        <title>Passions</title>
+        <link>http://localhost:1313/categories/passions.html</link>
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
-        <guid>http://localhost:1313/categories/productivity.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Thought</title>
-        <link>http://localhost:1313/categories/thought.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
-        
-        <guid>http://localhost:1313/categories/thought.html</guid>
+        <guid>http://localhost:1313/categories/passions.html</guid>
         <description></description>
         </item>
         <item>
@@ -63,19 +39,11 @@
         <description></description>
         </item>
         <item>
-        <title>Mountain Fauna Lover</title>
-        <link>http://localhost:1313/categories/mountain-fauna-lover.html</link>
+        <title>Projects</title>
+        <link>http://localhost:1313/categories/projects.html</link>
         <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/categories/mountain-fauna-lover.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Volounteering Activity</title>
-        <link>http://localhost:1313/categories/volounteering-activity.html</link>
-        <pubDate>Sat, 10 Aug 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/categories/volounteering-activity.html</guid>
+        <guid>http://localhost:1313/categories/projects.html</guid>
         <description></description>
         </item>
         <item>
@@ -87,19 +55,11 @@
         <description></description>
         </item>
         <item>
-        <title>Passions</title>
-        <link>http://localhost:1313/categories/passions.html</link>
+        <title>Thought</title>
+        <link>http://localhost:1313/categories/thought.html</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/categories/passions.html</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Projects</title>
-        <link>http://localhost:1313/categories/projects.html</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/categories/projects.html</guid>
+        <guid>http://localhost:1313/categories/thought.html</guid>
         <description></description>
         </item>
         

@@ -2,8 +2,9 @@
 title: "Personal Growth"
 description: 
 date: 2024-11-04T19:31:32+01:00
-categories: ["passion"]
+categories: ["passions"]
 image: grow.jpeg
+tags: [success, personal growth, goals, future, life, challenge]
 draft: false
 ---
 

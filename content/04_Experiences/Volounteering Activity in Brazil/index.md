@@ -3,9 +3,9 @@ title: "Volounteering Activity in Brazil"
 description: "An awensome experience that changed and teached me a lot"
 date: 2024-08-10
 image: Happy.jpg
-categories: ["Volounteering Activity", "Experiences"]
+categories: ["Experiences"]
 draft: false
-
+tags: [brazil, brasil, volounteering activity, emotional]
 links:
   - title: Attendance Certification
     description: the document of partecipation from Don Mazza Merit College
@@ -28,19 +28,22 @@ During our stay, we had the opportunity to explore different areas of Brazil, fo
 
 It would be impossible to remember them all since the experience was characterized by moments of joy and just as many of emotional difficulty.
 
-![itapororoca](food.jpeg)
+![Serving Food in Itapororoca](food.jpeg)
+
 One of the most touching memories was when we distributed food to people in need, an act that made us realize the critical reality in which many communities lived.
 
 We also visited the communities of **Olinda** and **Alto do Mateus**, where we saw up close the precarious living conditions of the local people.
-![alto do mateus](1.png)
-![difference](2.png)
+
+![alto do mateus ( João Pessoa )](1.png)
+
+![Brazil differences ( poor & rich side )](2.png)
 
 ## Itapororoca Vibes
 
-![itapororoca](escola.JPG)
+![Visiting the project at Itapororoca ( first day )](escola.JPG)
 In Itapororoca, we were hosted by an extraordinary family who dedicated their lives to creating a school and providing aid to the local community. 
 
-![itapororoca](itapororoca.jpeg)
+![Preparation for the Carneval at Itapororoca ( second day )](itapororoca.jpeg)
 We had the opportunity to meet each member of their family, wonderful people who welcomed us with unprecedented openness and hospitality, which deeply touched me. 
 
 
@@ -100,14 +103,11 @@ I would conclude with a phrase that **Nelson Mandela** once said:
 > "Education is the most powerful weapon you can use."
 
 This phrase perfectly encapsulates the essence of my journey and the meaning of the work we have done and the message that I tried to pass on to these young Brazilians. I hope to continue to carry forward the teachings of this experience and to contribute to the improvement of people's lives, wherever I am.
-# PHOTOS DURING THE EXPERIENCE
 
 
-
+# Here are some more photos about our stay
 ![itapororoca](visit.jpeg)
 ![itapororoca](wow.jpeg)
 ![itapororoca](asilo.jpeg)
-
-![itapororoca](jacarè.JPG)
 ![Group](1school.jpeg)
 ![itapororoca](school.JPG)
