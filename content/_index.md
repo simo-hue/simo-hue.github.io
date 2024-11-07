@@ -94,4 +94,17 @@ I’m currently pursuing a Bachelor’s degree in Computer Science at the Univer
 
 Studying in Verona, a city rich in history and culture, adds a unique layer to my academic experience. Here, I’m part of a vibrant student community, collaborating on projects, learning from experienced professors, and gaining insights into how technology impacts various fields. This degree is more than just a pathway to a career—it’s a journey that’s shaping my skills, thinking, and goals. Each course and project brings me closer to building a future where I can apply my knowledge to make a difference in the tech world.
 
+### Continuous Learning
+
+I'm super passionate about learning new stuff, as I know that you can't know enough...
+One argoument that really interest me is **business** and the related topic around this umbrella term as I already know that I don't wanna do the employee in my life but I wanna create something mine & big.
+
+For creating that I need to develop a lots of skills such as:
+- **Marketing** because you can be the best in your fild but if nobody knows you, how can the customer reach your solution?
+- **Economics**, a company need to be in profit
+- **Project & Team Management** as you need to compleate and reach the milestones and if you want to build something big you can't do it by yourself but you have to be sourrounded by very smart people and you need be also smart managin them.
+- **Mindset** as you need to be resilient and ready for everything in this game.
+
+And this are the most things that I study in my leasure time
+
 ## Keep in touch with Me

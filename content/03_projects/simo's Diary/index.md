@@ -26,7 +26,7 @@ Welcome to simo's Diary, a place where I love to share....da completare
 
 # Scopri il Mio Canale YouTube: Simo's Diary
 
-Benvenuti sul mio blog! Oggi voglio parlarvi del mio canale YouTube, **[Simo's Diary](https://www.youtube.com/@SimosDiary2003)**, dove condivido momenti della mia vita, progetti personali e passioni. Questo spazio nasce dal desiderio di documentare le mie esperienze in modo autentico e trasparente, mostrandovi viaggi, avventure e molto altro.
+Oggi voglio parlarvi del mio canale YouTube, **[Simo's Diary](https://www.youtube.com/@SimosDiary2003)**, dove condivido momenti della mia vita, progetti personali e passioni. Questo spazio nasce dal desiderio di documentare le mie esperienze in modo autentico e trasparente, mostrandovi viaggi, avventure e molto altro ancora.
 
 ## Perché Ho Creato Simo's Diary?
 
@@ -39,11 +39,13 @@ Nel mio canale troverai contenuti che raccontano la **vita vera** di un ragazzo 
 ### Temi Principali:
 - **Gratitudine e Consapevolezza:** Ogni esperienza che condivido è un’opportunità per riflettere su ciò che abbiamo e per cui possiamo essere grati.
 - **Ambizione e Determinazione:** Simo's Diary è anche la storia di un ragazzo che vuole tanto dalla vita e non ha paura di lottare per realizzare i suoi sogni.
-- **Autenticità:** Non mi interessa mostrare una vita perfetta, ma piuttosto offrire un'immagine reale della mia esistenza, con le sue sfide e i suoi traguardi.
+- **Autenticità:** Non mi interessa mostrare una vita perfetta, ma piuttosto offrire un'immagine reale della mia esistenza, con le sue sfide, difficoltà e non solo i suoi traguardi.-
+- **Crescita personale** Il mio percorso e pensieri / skills che ho sviluppato durante questo processo
+- **Pensieri** Quando mi viene in mente un pensiero, oppure inizio un ragionamento quando possibile inizio a registrare in modo tale da poter poi riascoltarmi anche in futuro e capire come la pensavo in un determinato momento della mia vita
 
 ## Un Invito a Seguire le Proprie Passioni
 
-Con Simo's Diary, voglio ispirarti a vivere pienamente e a usare le risorse che abbiamo oggi per creare qualcosa di significativo. La mia speranza è che i miei video possano spingerti a inseguire i tuoi obiettivi e a coltivare la gratitudine per le piccole cose della vita.
+Con Simo's Diary, voglio ispirarti a vivere pienamente e a usare le risorse che abbiamo oggi per creare qualcosa di significativo. La mia speranza è che i miei video possano spingerti a inseguire i tuoi obiettivi e a coltivare la gratitudine per le piccole cose della vita senza però dimenticarti la cosa che pià mi sta a cuore ultimamente, il fatto di **godersi la vita**, quindi vivere ogni momento e sfida con il sorriso e gioia perchè il nostro periodo di permanenza su questa terra è molto limitato e non vale la pena scoraggiarsi e viversela male.
 
 Se ti piace l'idea di scoprire avventure, riflessioni autentiche e la vita vera di un ragazzo che insegue i suoi sogni, visita il mio canale e iscriviti!
 
@@ -52,4 +54,5 @@ Grazie per aver letto, e spero di vederti presto tra i miei follower su YouTube!
 
 ---
 
+## Rimani in contatto con me
 *Seguimi su YouTube e sui social per rimanere aggiornato sulle mie avventure e scoprire di più sulla mia vita e i miei progetti!*
