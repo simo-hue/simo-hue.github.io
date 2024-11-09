@@ -2,7 +2,7 @@
 title: "Daniele Cassioli"
 description: 
 date: 2024-11-05
-image: #da aggiungere
+image: home.png
 categories: ["thoughts"]
 tags: [history, personal growth, intelligence]
 draft: false
