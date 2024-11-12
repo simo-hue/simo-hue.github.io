@@ -8,7 +8,7 @@ tags: [history, personal growth, intelligence]
 draft: false
 
 ---
-# The Importance of Knowing History: My Journey from Hater to Curious
+# My Journey from Hater to Curious
 
 I admit that history was my nemesis during my school years. When the professor entered the classroom and started talking about dates, battles and rulers, I felt lost. It all seemed so boring and distant from my reality. I couldn't perceive the value of that knowledge: why on earth would I be interested in what had happened centuries ago?
 

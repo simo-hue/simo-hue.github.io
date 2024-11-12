@@ -7,11 +7,38 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <lastBuildDate>Sun, 06 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/06_books/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Atomic Habits</title>
+        <title>Atomic Habits | James Clear</title>
         <link>http://localhost:1313/06_books/atomic-habits.html</link>
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
         <guid>http://localhost:1313/06_books/atomic-habits.html</guid>
+        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
+&lt;/h1&gt;</description>
+        </item>
+        <item>
+        <title>il grifone | Nicola Gratteri</title>
+        <link>http://localhost:1313/06_books/il-grifone.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:1313/06_books/il-grifone.html</guid>
+        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
+&lt;/h1&gt;</description>
+        </item>
+        <item>
+        <title>il vento contro | Daniele Cassioli</title>
+        <link>http://localhost:1313/06_books/insegna-al-cuore-a-vedere.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:1313/06_books/insegna-al-cuore-a-vedere.html</guid>
+        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
+&lt;/h1&gt;</description>
+        </item>
+        <item>
+        <title>insegna al cuore a vedere | Daniele Cassioli</title>
+        <link>http://localhost:1313/06_books/il-vento-contro.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:1313/06_books/il-vento-contro.html</guid>
         <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
 &lt;/h1&gt;</description>
         </item>
