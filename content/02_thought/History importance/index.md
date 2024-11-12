@@ -4,6 +4,7 @@ description:
 date: 2024-11-05
 image: #da aggiungere
 categories: ["thoughts"]
+slug: history
 tags: [history, personal growth, intelligence]
 draft: false
 

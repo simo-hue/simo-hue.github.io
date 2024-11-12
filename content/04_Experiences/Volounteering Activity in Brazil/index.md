@@ -5,6 +5,7 @@ date: 2024-08-10
 image: Happy.jpg
 categories: ["Experiences"]
 draft: false
+slug: brazil
 tags: [brazil, brasil, volounteering activity, emotional]
 links:
   - title: Attendance Certification

@@ -4,6 +4,7 @@ description:
 date: 2024-11-06
 image: #da aggiungere
 categories: ["thoughts"]
+slug: alone
 tags: [lonelyness, strength, personal growth]
 draft: false
 ---

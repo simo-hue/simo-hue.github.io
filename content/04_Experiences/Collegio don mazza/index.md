@@ -6,6 +6,7 @@ image:
 categories: []
 tags: []
 draft: false
+slug: mazza
 ---
 
 - Spiegare come l'ho trovato

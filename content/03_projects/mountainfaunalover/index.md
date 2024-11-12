@@ -3,6 +3,7 @@ title: Mountain Fauna Lover
 date: 2023-07-28
 description: A brief description of Mountain Fauna Lover presence on Social media Platforms
 categories: [projects]
+slug: mountain-fauna-lover
 tags:
     - mountain fauna lover
     - wild life

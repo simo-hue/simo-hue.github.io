@@ -5,6 +5,7 @@ date: 2024-11-06
 image: #da aggiungere
 categories: ["thoughts"]
 tags: [love, altruism]
+slug: love
 draft: false
 ---
 

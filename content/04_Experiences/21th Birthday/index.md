@@ -5,6 +5,7 @@ date: 2024-07-28
 image: olilnda.JPG
 categories: ["Experiences"]
 draft: false
+slug: 21th-birthday
 tags: [summer 2024, volounteering activity, brazil, emotional]
 ---
 My 21st birthday was unique, an experience I will never forget. I spent it in Brazil, during my volunteering period, far from home and all my loved ones. On that occasion, I was not surrounded by the familiar faces of friends and relatives, but by six strangers, who shared with me the experience of volunteering in a country so different from mine.
