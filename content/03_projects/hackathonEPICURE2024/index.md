@@ -106,5 +106,7 @@ Interested in learning more? Check out the links below to access more details on
 ---
 
 This hackathon has certainly sparked a deeper interest in exploring the potential of GPUs for high-performance tasks. I’m looking forward to applying these skills in future projects and sharing my insights with the community.
+
 ![Me Presenting our results of the Lab sessions of the two days before](3.jpeg)
+
 

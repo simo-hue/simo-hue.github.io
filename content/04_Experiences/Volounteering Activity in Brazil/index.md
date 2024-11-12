@@ -15,6 +15,7 @@ links:
 ---
 
 ## Introduction
+
 ![Don Mazza Logo](don-mazza-pia.jpg)
 
 My volunteer experience in Brazil was an unforgettable journey that led me to discover not only a country rich in culture, but also the daily challenges faced by people in vulnerable situations.
