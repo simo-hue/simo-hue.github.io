@@ -11,7 +11,7 @@ draft: false
 
 Essere grato per essere nel collegio di merito don mazza di verona e per le opportunità che mi venogo fornite da questo collegio
 
-parlare della fonazione
+parlare della fonazione ( https://www.danielecassioli.it )
 
 consapevolezza piu profonda dei normodotati
 

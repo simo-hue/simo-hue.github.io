@@ -8,33 +8,30 @@ tags: [history, personal growth, intelligence]
 draft: false
 
 ---
+# The Importance of Knowing History: My Journey from Hater to Curious
 
-# L'importanza di conoscere la storia: il mio percorso da odiatore a curioso
+I admit that history was my nemesis during my school years. When the professor entered the classroom and started talking about dates, battles and rulers, I felt lost. It all seemed so boring and distant from my reality. I couldn't perceive the value of that knowledge: why on earth would I be interested in what had happened centuries ago?
 
-Ammetto che la storia è stata la mia nemesi durante gli anni di scuola. Quando il professore entrava in classe e iniziava a parlare di date, battaglie e regnanti, mi sentivo perso. Mi sembrava tutto così noioso e distante dalla mia realtà. Non riuscivo a percepire il valore di quelle conoscenze: perché mai avrei dovuto interessarmi a ciò che era successo secoli fa? 
+Over the years, however, something changed. I began to realize my gaps, feeling ashamed of how little I knew about our past (not with others but with myself). I understood that ignoring history was not only an academic shortcoming, but a real limitation in understanding the world around me.
 
-Negli anni, però, qualcosa è cambiato. Ho cominciato a rendermi conto delle mie lacune, vergognandomi di quanto poco sapessi del nostro passato. Ho capito che ignorare la storia non era solo una mancanza accademica, ma un vero e proprio limite nel comprendere il mondo che mi circonda. 
+## Discovering the Value of History
 
-## La scoperta del valore della storia
+What once seemed useless to me, today appears as a precious resource. Why? Because history is cyclical. Events of the past, in different forms, are still repeated today. If we look carefully, we can find surprising analogies between what happened in the past centuries and what is happening in the world today. Economic crises, social tensions, international conflicts: it seems that humanity is condemned to continually relive the same mistakes (and this makes me think a lot).
 
-Quello che un tempo mi sembrava inutile, oggi appare come una risorsa preziosa. Perché? Perché la storia è ciclica. Gli eventi del passato, in forme diverse, si ripetono ancora oggi. Se guardiamo con attenzione, possiamo trovare delle analogie sorprendenti tra ciò che è avvenuto nei secoli scorsi e ciò che sta accadendo nel mondo attuale. Crisi economiche, tensioni sociali, conflitti internazionali: sembra che l'umanità sia condannata a rivivere continuamente gli stessi errori.
+Understanding history has given me an additional tool to interpret the present. The more I study past events, the more I realize that it is not just a matter of memorizing dates and names, but of recognizing patterns, dynamics and cycles that recur.
 
-Capire la storia mi ha dato uno strumento in più per interpretare il presente. Più studio gli eventi passati, più mi rendo conto che non si tratta solo di memorizzare date e nomi, ma di riconoscere modelli, dinamiche e cicli che si ripresentano. 
+## Learning from the mistakes of others
 
-## Imparare dagli errori altrui
+One of the most valuable lessons I have learned is that history is not just a book of past facts, but a practical guide for the present and above all for the future. Observing how leaders of the past have moved, what decisions they have made (and what mistakes they have made), allows me to draw lessons that I can also apply in my life. I am not just talking about political or economic decisions, but also about how to deal with difficult or unexpected situations.
 
-Una delle lezioni più preziose che ho imparato è che la storia non è solo un libro di fatti passati, ma una guida pratica per il presente. Osservare come si sono mossi i leader del passato, quali decisioni hanno preso (e quali errori hanno commesso), mi permette di trarre insegnamenti che posso applicare anche nella mia vita. Non parlo solo di decisioni politiche o economiche, ma anche di come affrontare situazioni difficili o inaspettate.
+In a way, knowing history is like having a map of the territory: it helps you orient yourself, avoid obstacles and not repeat the same mistakes made by those who came before us. Learning from the mistakes of others is a way to save time and pain, taking advantage of the wisdom accumulated over the centuries.
 
-In un certo senso, conoscere la storia è come avere una mappa del territorio: ti aiuta ad orientarti, a evitare gli ostacoli e a non ripetere gli stessi errori commessi da chi è venuto prima di noi. Imparare dagli errori degli altri è un modo per risparmiare tempo e dolore, sfruttando la saggezza accumulata nel corso dei secoli.
+## My commitment to improving
 
-## Il mio impegno per migliorare
+Today, I try to make up for lost time, also because nowadays ignorance is a choice given that you can watch documentaries for free, listen to podcasts that delve into historical events and many other contents are available to everyone. I can't change my school past, but I can certainly enrich my present.
 
-Oggi, cerco di recuperare il tempo perso. Ho iniziato a leggere libri di storia, guardare documentari e ascoltare podcast che approfondiscono eventi storici, da quelli più noti a quelli meno conosciuti. Non posso cambiare il mio passato scolastico, ma posso sicuramente arricchire il mio presente.
+It's not an easy process: there are still times when I feel overwhelmed by all the information I don't know. But I don't let myself get discouraged. Every day that passes, I discover something new that helps me better understand the world I live in.
 
-Non è un processo facile: ci sono ancora momenti in cui mi sento sopraffatto da tutte le informazioni che non conosco. Ma non mi lascio scoraggiare. Ogni giorno che passa, scopro qualcosa di nuovo che mi aiuta a capire meglio il mondo in cui vivo.
+> “Those who don't know history are condemned to repeat it.” – *George Santayana*
 
-> “Chi non conosce la storia è condannato a ripeterla.” – *George Santayana*
-
-E con questa citazione, voglio ricordare a me stesso (e a chi legge) che il passato non è solo una lezione per gli storici, ma un'opportunità per ognuno di noi di crescere e migliorare.
-
-**#ConoscereLaStoria #LezioniDalPassato #CrescitaPersonale #StoriaCiclica #ApprendimentoContinuo #ErroriDaEvitare**
+And with this quote, I want to remind myself (and whoever reads) that the past is not just a lesson for historians, but an opportunity for each of us to grow and improve.
