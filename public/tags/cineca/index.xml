@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>CINECA on Simone Mattioli</title>
-        <link>http://localhost:1313/tags/cineca.html</link>
+        <link>http://localhost:65264/tags/cineca.html</link>
         <description>Recent content in CINECA on Simone Mattioli</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <lastBuildDate>Mon, 28 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/cineca/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 28 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:65264/tags/cineca/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>EPICURE Hackathon GPU - October 2024</title>
-        <link>http://localhost:1313/03_projects/epicure-hackathon-2024.html</link>
+        <link>http://localhost:65264/03_projects/epicure-hackathon-2024.html</link>
         <pubDate>Mon, 28 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/03_projects/epicure-hackathon-2024.html</guid>
-        <description>&lt;img src="http://localhost:1313/03_projects/epicure-hackathon-2024/cover.jpg" alt="Featured image of post EPICURE Hackathon GPU - October 2024" /&gt;&lt;p&gt;The &lt;strong&gt;EPICURE Hackathon&lt;/strong&gt;, held from October 28-31, 2024, brought together developers, researchers, and enthusiasts from across Europe to dive deep into the world of &lt;strong&gt;GPU programming and high-performance computing (HPC)&lt;/strong&gt;. This event was hosted in collaboration with &lt;strong&gt;CINECA&lt;/strong&gt;, one of the leading HPC centers in Europe, renowned for its contributions to scientific computing and advanced research.&lt;/p&gt;
+        <guid>http://localhost:65264/03_projects/epicure-hackathon-2024.html</guid>
+        <description>&lt;img src="http://localhost:65264/03_projects/epicure-hackathon-2024/cover.jpg" alt="Featured image of post EPICURE Hackathon GPU - October 2024" /&gt;&lt;p&gt;The &lt;strong&gt;EPICURE Hackathon&lt;/strong&gt;, held from October 28-31, 2024, brought together developers, researchers, and enthusiasts from across Europe to dive deep into the world of &lt;strong&gt;GPU programming and high-performance computing (HPC)&lt;/strong&gt;. This event was hosted in collaboration with &lt;strong&gt;CINECA&lt;/strong&gt;, one of the leading HPC centers in Europe, renowned for its contributions to scientific computing and advanced research.&lt;/p&gt;
 &lt;p&gt;The hackathon was meticulously structured, featuring both hands-on labs and theoretical sessions, designed to empower participants with the latest skills in &lt;strong&gt;CUDA programming&lt;/strong&gt;, &lt;strong&gt;OpenACC&lt;/strong&gt;, and &lt;strong&gt;GPU optimization techniques&lt;/strong&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;day-1-getting-started-with-gpu-computing&#34;&gt;Day 1: Getting Started with GPU Computing
 &lt;/h2&gt;&lt;p&gt;The first day served as an introduction to GPU computing, aimed at setting a strong foundation. Topics included:&lt;/p&gt;
@@ -68,10 +68,10 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;Images from Day 1:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/03_projects/epicure-hackathon-2024/1.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:65264/03_projects/epicure-hackathon-2024/1.jpg&#34;
 	width=&#34;8064&#34;
 	height=&#34;6048&#34;
-	srcset=&#34;http://localhost:1313/03_projects/epicure-hackathon-2024/1_hu9058614684240352447.jpg 480w, http://localhost:1313/03_projects/epicure-hackathon-2024/1_hu2407595864030796957.jpg 1024w&#34;
+	srcset=&#34;http://localhost:65264/03_projects/epicure-hackathon-2024/1_hu9058614684240352447.jpg 480w, http://localhost:65264/03_projects/epicure-hackathon-2024/1_hu2407595864030796957.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Theory Part: Introduction to CUDA and GPU Programming&#34;
@@ -164,10 +164,10 @@
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;p&gt;This hackathon has certainly sparked a deeper interest in exploring the potential of GPUs for high-performance tasks. I’m looking forward to applying these skills in future projects and sharing my insights with the community.
-&lt;img src=&#34;http://localhost:1313/03_projects/epicure-hackathon-2024/3.jpeg&#34;
+&lt;img src=&#34;http://localhost:65264/03_projects/epicure-hackathon-2024/3.jpeg&#34;
 	width=&#34;2966&#34;
 	height=&#34;1674&#34;
-	srcset=&#34;http://localhost:1313/03_projects/epicure-hackathon-2024/3_hu4568767519802119854.jpeg 480w, http://localhost:1313/03_projects/epicure-hackathon-2024/3_hu7805776666760800763.jpeg 1024w&#34;
+	srcset=&#34;http://localhost:65264/03_projects/epicure-hackathon-2024/3_hu4568767519802119854.jpeg 480w, http://localhost:65264/03_projects/epicure-hackathon-2024/3_hu7805776666760800763.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Me Presenting our results of the Lab sessions of the two days before&#34;

@@ -2,17 +2,90 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Books on Simone Mattioli</title>
-        <link>http://localhost:1313/categories/books.html</link>
+        <link>http://localhost:65264/categories/books.html</link>
         <description>Recent content in Books on Simone Mattioli</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <lastBuildDate>Mon, 04 Nov 2024 19:31:32 +0100</lastBuildDate><atom:link href="http://localhost:1313/categories/books/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Ski</title>
-        <link>http://localhost:1313/06_books/atomic-habits.html</link>
+        <lastBuildDate>Mon, 04 Nov 2024 19:31:32 +0100</lastBuildDate><atom:link href="http://localhost:65264/categories/books/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Atomic Habits | James Clear</title>
+        <link>http://localhost:65264/06_books/atomic-habits.html</link>
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
-        <guid>http://localhost:1313/06_books/atomic-habits.html</guid>
-        <description>&lt;img src="http://localhost:1313/logo.jpg" alt="Featured image of post Ski" /&gt;&lt;h1 id=&#34;prova&#34;&gt;PROVA
+        <guid>http://localhost:65264/06_books/atomic-habits.html</guid>
+        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
+&lt;/h1&gt;</description>
+        </item>
+        <item>
+        <title>Guadagna con la mente | </title>
+        <link>http://localhost:65264/06_books/mente-guadagna.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:65264/06_books/mente-guadagna.html</guid>
+        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
+&lt;/h1&gt;</description>
+        </item>
+        <item>
+        <title>guida ai bias cognitivi</title>
+        <link>http://localhost:65264/06_books/bias-cognitivi.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:65264/06_books/bias-cognitivi.html</guid>
+        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
+&lt;/h1&gt;</description>
+        </item>
+        <item>
+        <title>il grifone | Nicola Gratteri</title>
+        <link>http://localhost:65264/06_books/gratteri.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:65264/06_books/gratteri.html</guid>
+        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
+&lt;/h1&gt;&lt;p&gt;paragone con borsellino, da delle interviste ho sentito che dedica tutta la sua vita al lavoro e ho trovato questa analogia&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>il vento contro | Daniele Cassioli</title>
+        <link>http://localhost:65264/06_books/cassioli-ventro-contro.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:65264/06_books/cassioli-ventro-contro.html</guid>
+        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
+&lt;/h1&gt;</description>
+        </item>
+        <item>
+        <title>insegna al cuore a vedere | Daniele Cassioli</title>
+        <link>http://localhost:65264/06_books/cassioli-cuore-a-vedere.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:65264/06_books/cassioli-cuore-a-vedere.html</guid>
+        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
+&lt;/h1&gt;</description>
+        </item>
+        <item>
+        <title>Pensa ed arrichisci te stesso</title>
+        <link>http://localhost:65264/06_books/grow-rich.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:65264/06_books/grow-rich.html</guid>
+        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
+&lt;/h1&gt;</description>
+        </item>
+        <item>
+        <title>Pensieri lenti pensieri veloci</title>
+        <link>http://localhost:65264/06_books/pensieri-lenti-pensieri-veloci.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:65264/06_books/pensieri-lenti-pensieri-veloci.html</guid>
+        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
+&lt;/h1&gt;</description>
+        </item>
+        <item>
+        <title>Rich and Poor Dad</title>
+        <link>http://localhost:65264/06_books/richpoor-dad.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:65264/06_books/richpoor-dad.html</guid>
+        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
 &lt;/h1&gt;</description>
         </item>
         
