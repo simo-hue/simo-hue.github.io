@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Rabbi on Simone Mattioli</title>
-        <link>http://localhost:65264/tags/rabbi.html</link>
+        <link>http://localhost:1313/tags/rabbi.html</link>
         <description>Recent content in Rabbi on Simone Mattioli</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <lastBuildDate>Mon, 04 Nov 2024 19:31:32 +0100</lastBuildDate><atom:link href="http://localhost:65264/tags/rabbi/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 04 Nov 2024 19:31:32 +0100</lastBuildDate><atom:link href="http://localhost:1313/tags/rabbi/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Mountain bike</title>
-        <link>http://localhost:65264/05_passions/bike.html</link>
+        <link>http://localhost:1313/05_passions/bike.html</link>
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
-        <guid>http://localhost:65264/05_passions/bike.html</guid>
-        <description>&lt;img src="http://localhost:65264/05_passions/bike/bike.JPG" alt="Featured image of post Mountain bike" /&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:65264/05_passions/bike/mountainbike.jpg&#34;
+        <guid>http://localhost:1313/05_passions/bike.html</guid>
+        <description>&lt;img src="http://localhost:1313/05_passions/bike/bike.JPG" alt="Featured image of post Mountain bike" /&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/05_passions/bike/mountainbike.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;http://localhost:65264/05_passions/bike/mountainbike_hu4849987664021280301.jpg 480w, http://localhost:65264/05_passions/bike/mountainbike_hu8333773938812547352.jpg 1024w&#34;
+	srcset=&#34;http://localhost:1313/05_passions/bike/mountainbike_hu4849987664021280301.jpg 480w, http://localhost:1313/05_passions/bike/mountainbike_hu8333773938812547352.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Me exploring the beauty of Rabbi Valley&#34;
@@ -32,15 +32,15 @@ From discovering the best gear and customizing my setup to push my limits, to th
         </item>
         <item>
         <title>Mountain Hiking</title>
-        <link>http://localhost:65264/05_passions/hiking.html</link>
+        <link>http://localhost:1313/05_passions/hiking.html</link>
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
-        <guid>http://localhost:65264/05_passions/hiking.html</guid>
-        <description>&lt;img src="http://localhost:65264/05_passions/hiking/rabbi.JPG" alt="Featured image of post Mountain Hiking" /&gt;&lt;h1 id=&#34;prova&#34;&gt;PROVA
-&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:65264/05_passions/hiking/sfondo.JPG&#34;
+        <guid>http://localhost:1313/05_passions/hiking.html</guid>
+        <description>&lt;img src="http://localhost:1313/05_passions/hiking/rabbi.JPG" alt="Featured image of post Mountain Hiking" /&gt;&lt;h1 id=&#34;prova&#34;&gt;PROVA
+&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/05_passions/hiking/sfondo.JPG&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;http://localhost:65264/05_passions/hiking/sfondo_hu6737264303993248711.JPG 480w, http://localhost:65264/05_passions/hiking/sfondo_hu15090278562224046264.JPG 1024w&#34;
+	srcset=&#34;http://localhost:1313/05_passions/hiking/sfondo_hu6737264303993248711.JPG 480w, http://localhost:1313/05_passions/hiking/sfondo_hu15090278562224046264.JPG 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -49,10 +49,10 @@ From discovering the best gear and customizing my setup to push my limits, to th
 		data-flex-basis=&#34;320px&#34;
 	
 &gt;
-&lt;img src=&#34;http://localhost:65264/05_passions/hiking/alba.JPG&#34;
+&lt;img src=&#34;http://localhost:1313/05_passions/hiking/alba.JPG&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;http://localhost:65264/05_passions/hiking/alba_hu13369600799418941076.JPG 480w, http://localhost:65264/05_passions/hiking/alba_hu10960277893557734281.JPG 1024w&#34;
+	srcset=&#34;http://localhost:1313/05_passions/hiking/alba_hu13369600799418941076.JPG 480w, http://localhost:1313/05_passions/hiking/alba_hu10960277893557734281.JPG 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -61,10 +61,10 @@ From discovering the best gear and customizing my setup to push my limits, to th
 		data-flex-basis=&#34;320px&#34;
 	
 &gt;
-&lt;img src=&#34;http://localhost:65264/05_passions/hiking/rabb.JPG&#34;
+&lt;img src=&#34;http://localhost:1313/05_passions/hiking/rabb.JPG&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;http://localhost:65264/05_passions/hiking/rabb_hu569680403830225041.JPG 480w, http://localhost:65264/05_passions/hiking/rabb_hu263668569943984736.JPG 1024w&#34;
+	srcset=&#34;http://localhost:1313/05_passions/hiking/rabb_hu569680403830225041.JPG 480w, http://localhost:1313/05_passions/hiking/rabb_hu263668569943984736.JPG 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -77,11 +77,11 @@ From discovering the best gear and customizing my setup to push my limits, to th
         </item>
         <item>
         <title>Ski</title>
-        <link>http://localhost:65264/05_passions/ski.html</link>
+        <link>http://localhost:1313/05_passions/ski.html</link>
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
-        <guid>http://localhost:65264/05_passions/ski.html</guid>
-        <description>&lt;img src="http://localhost:65264/05_passions/ski/logo.JPG" alt="Featured image of post Ski" /&gt;&lt;h1 id=&#34;prova&#34;&gt;PROVA
+        <guid>http://localhost:1313/05_passions/ski.html</guid>
+        <description>&lt;img src="http://localhost:1313/05_passions/ski/logo.JPG" alt="Featured image of post Ski" /&gt;&lt;h1 id=&#34;prova&#34;&gt;PROVA
 &lt;/h1&gt;</description>
         </item>
         

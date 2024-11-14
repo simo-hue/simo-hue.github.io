@@ -44,3 +44,5 @@ In conclusion living appreciating what you have doesn’t mean not trying to imp
 ---
 
 > Appreciating life means finding beauty even in simple moments, welcoming every moment as a gift, and recognizing that true happiness comes from gratitude for what we already have.
+
+{{< youtube g-3IHnZm4G8 >}}

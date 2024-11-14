@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Life on Simone Mattioli</title>
-        <link>http://localhost:65264/tags/life.html</link>
+        <link>http://localhost:1313/tags/life.html</link>
         <description>Recent content in Life on Simone Mattioli</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <lastBuildDate>Mon, 04 Nov 2024 19:31:32 +0100</lastBuildDate><atom:link href="http://localhost:65264/tags/life/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 04 Nov 2024 19:31:32 +0100</lastBuildDate><atom:link href="http://localhost:1313/tags/life/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Ignorance in the modern day is a choice</title>
-        <link>http://localhost:65264/02_thought/ignorance-today.html</link>
+        <link>http://localhost:1313/02_thought/ignorance-today.html</link>
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
-        <guid>http://localhost:65264/02_thought/ignorance-today.html</guid>
+        <guid>http://localhost:1313/02_thought/ignorance-today.html</guid>
         <description>&lt;h2 id=&#34;to-do&#34;&gt;to do
 &lt;/h2&gt;</description>
         </item>
         <item>
         <title>Life Appreciation</title>
-        <link>http://localhost:65264/02_thought/gratitude.html</link>
+        <link>http://localhost:1313/02_thought/gratitude.html</link>
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
-        <guid>http://localhost:65264/02_thought/gratitude.html</guid>
-        <description>&lt;img src="http://localhost:65264/02_thought/gratitude/grateful.jpeg" alt="Featured image of post Life Appreciation" /&gt;&lt;p&gt;We often live in a rush, projected towards new goals and expectations. In this vortex, we can take for granted what we have: our health, our family, the people who love us, or even the simple warmth of the sun on our skin. Yet, when we learn to stop and really “see” these things, we discover a source of serenity and strength that can change our way of living.&lt;/p&gt;
+        <guid>http://localhost:1313/02_thought/gratitude.html</guid>
+        <description>&lt;img src="http://localhost:1313/02_thought/gratitude/grateful.jpeg" alt="Featured image of post Life Appreciation" /&gt;&lt;p&gt;We often live in a rush, projected towards new goals and expectations. In this vortex, we can take for granted what we have: our health, our family, the people who love us, or even the simple warmth of the sun on our skin. Yet, when we learn to stop and really “see” these things, we discover a source of serenity and strength that can change our way of living.&lt;/p&gt;
 &lt;h2 id=&#34;the-beauty-of-everyday-life&#34;&gt;&lt;strong&gt;The Beauty of Everyday Life&lt;/strong&gt;
 &lt;/h2&gt;&lt;p&gt;Being grateful does not only mean recognizing great achievements or resounding successes, but also stopping to observe what surrounds us. It may seem trivial, but appreciating a morning coffee, a sincere smile, or the hug of a dear friend has immense value. These moments remind us that happiness does not lie in great events, but in the sum of many small moments lived with awareness.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -46,18 +46,27 @@
 &lt;blockquote&gt;
 &lt;p&gt;Appreciating life means finding beauty even in simple moments, welcoming every moment as a gift, and recognizing that true happiness comes from gratitude for what we already have.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
 </description>
         </item>
         <item>
         <title>Personal Growth</title>
-        <link>http://localhost:65264/05_passions/persona-growth.html</link>
+        <link>http://localhost:1313/05_passions/persona-growth.html</link>
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
-        <guid>http://localhost:65264/05_passions/persona-growth.html</guid>
-        <description>&lt;img src="http://localhost:65264/05_passions/persona-growth/grow.jpeg" alt="Featured image of post Personal Growth" /&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:65264/05_passions/persona-growth/personalgrowth.jpg&#34;
+        <guid>http://localhost:1313/05_passions/persona-growth.html</guid>
+        <description>&lt;img src="http://localhost:1313/05_passions/persona-growth/grow.jpeg" alt="Featured image of post Personal Growth" /&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/05_passions/persona-growth/personalgrowth.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;http://localhost:65264/05_passions/persona-growth/personalgrowth_hu15341732370339065581.jpg 480w, http://localhost:65264/05_passions/persona-growth/personalgrowth_hu11143947620885413600.jpg 1024w&#34;
+	srcset=&#34;http://localhost:1313/05_passions/persona-growth/personalgrowth_hu15341732370339065581.jpg 480w, http://localhost:1313/05_passions/persona-growth/personalgrowth_hu11143947620885413600.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;as&#34;
