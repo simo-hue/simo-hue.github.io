@@ -16,6 +16,10 @@ links:
     description: GitHub is the world's largest software development platform, and here is my account.
     website: https://github.com/simo-hue
     image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+  - title: Personal Gmail Account
+    description: Write me here if you have advices or you wanna schedule a Performance Call
+    website: mailto:mattioli.simone.10@gmail.com?subject=personal%20Website%3A%20
+    image: gmail.png
   - title: Personal Instagram Account
     description: This is where I share my personal thought about life and some of my experiences.
     website: https://instagram.com/simo___one
