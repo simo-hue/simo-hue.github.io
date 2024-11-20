@@ -12,7 +12,7 @@
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
         <guid>http://localhost:1313/06_books/atomic-habits.html</guid>
-        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
+        <description>&lt;img src="http://localhost:1313/06_books/atomic-habits/image.png" alt="Featured image of post Atomic Habits | James Clear" /&gt;&lt;h1 id=&#34;prova&#34;&gt;PROVA
 &lt;/h1&gt;</description>
         </item>
         <item>
@@ -21,7 +21,7 @@
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
         <guid>http://localhost:1313/06_books/mente-guadagna.html</guid>
-        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
+        <description>&lt;img src="http://localhost:1313/06_books/mente-guadagna/image.png" alt="Featured image of post Guadagna con la mente | " /&gt;&lt;h1 id=&#34;prova&#34;&gt;PROVA
 &lt;/h1&gt;</description>
         </item>
         <item>
@@ -30,7 +30,7 @@
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
         <guid>http://localhost:1313/06_books/bias-cognitivi.html</guid>
-        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
+        <description>&lt;img src="http://localhost:1313/06_books/bias-cognitivi/image.png" alt="Featured image of post guida ai bias cognitivi" /&gt;&lt;h1 id=&#34;prova&#34;&gt;PROVA
 &lt;/h1&gt;</description>
         </item>
         <item>
@@ -39,7 +39,7 @@
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
         <guid>http://localhost:1313/06_books/gratteri.html</guid>
-        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
+        <description>&lt;img src="http://localhost:1313/06_books/gratteri/image.png" alt="Featured image of post il grifone | Nicola Gratteri" /&gt;&lt;h1 id=&#34;prova&#34;&gt;PROVA
 &lt;/h1&gt;&lt;p&gt;paragone con borsellino, da delle interviste ho sentito che dedica tutta la sua vita al lavoro e ho trovato questa analogia&lt;/p&gt;
 </description>
         </item>
@@ -49,7 +49,7 @@
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
         <guid>http://localhost:1313/06_books/cassioli-ventro-contro.html</guid>
-        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
+        <description>&lt;img src="http://localhost:1313/06_books/cassioli-ventro-contro/image.png" alt="Featured image of post il vento contro | Daniele Cassioli" /&gt;&lt;h1 id=&#34;prova&#34;&gt;PROVA
 &lt;/h1&gt;</description>
         </item>
         <item>
@@ -58,16 +58,7 @@
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
         <guid>http://localhost:1313/06_books/cassioli-cuore-a-vedere.html</guid>
-        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
-&lt;/h1&gt;</description>
-        </item>
-        <item>
-        <title>Pensa ed arrichisci te stesso</title>
-        <link>http://localhost:1313/06_books/grow-rich.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
-        
-        <guid>http://localhost:1313/06_books/grow-rich.html</guid>
-        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
+        <description>&lt;img src="http://localhost:1313/06_books/cassioli-cuore-a-vedere/image.png" alt="Featured image of post insegna al cuore a vedere | Daniele Cassioli" /&gt;&lt;h1 id=&#34;prova&#34;&gt;PROVA
 &lt;/h1&gt;</description>
         </item>
         <item>
@@ -76,16 +67,25 @@
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
         <guid>http://localhost:1313/06_books/pensieri-lenti-pensieri-veloci.html</guid>
-        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
+        <description>&lt;img src="http://localhost:1313/06_books/pensieri-lenti-pensieri-veloci/image.png" alt="Featured image of post Pensieri lenti pensieri veloci" /&gt;&lt;h1 id=&#34;prova&#34;&gt;PROVA
 &lt;/h1&gt;</description>
         </item>
         <item>
         <title>Rich and Poor Dad</title>
+        <link>http://localhost:1313/06_books/grow-rich.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:1313/06_books/grow-rich.html</guid>
+        <description>&lt;img src="http://localhost:1313/06_books/grow-rich/image.png" alt="Featured image of post Rich and Poor Dad" /&gt;&lt;h1 id=&#34;prova&#34;&gt;PROVA
+&lt;/h1&gt;</description>
+        </item>
+        <item>
+        <title>think and</title>
         <link>http://localhost:1313/06_books/richpoor-dad.html</link>
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
         <guid>http://localhost:1313/06_books/richpoor-dad.html</guid>
-        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
+        <description>&lt;img src="http://localhost:1313/06_books/richpoor-dad/image.png" alt="Featured image of post think and" /&gt;&lt;h1 id=&#34;prova&#34;&gt;PROVA
 &lt;/h1&gt;</description>
         </item>
         

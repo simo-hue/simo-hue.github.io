@@ -2,7 +2,7 @@
 title: "Don Mazza College"
 description: "to do"
 date: 2024-11-02
-image:
+image: max.png
 categories: []
 tags: []
 draft: false

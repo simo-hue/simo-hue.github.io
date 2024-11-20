@@ -12,7 +12,7 @@
         <pubDate>Wed, 06 Nov 2024 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/04_experiences/sicily.html</guid>
-        <description>&lt;p&gt;tour sicilia, da implementare&lt;/p&gt;
+        <description>&lt;img src="http://localhost:1313/04_experiences/sicily/home.png" alt="Featured image of post NO MAFIA, Sicily Tour with LIA Rovereto" /&gt;&lt;p&gt;tour sicilia, da implementare&lt;/p&gt;
 &lt;p&gt;TO DO:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;passarsi tutte le foto orizzontali&lt;/li&gt;
@@ -197,7 +197,7 @@ capire che non + normale sempere essere circondati da persona, soprattutto non s
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
         <guid>http://localhost:1313/06_books/atomic-habits.html</guid>
-        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
+        <description>&lt;img src="http://localhost:1313/06_books/atomic-habits/image.png" alt="Featured image of post Atomic Habits | James Clear" /&gt;&lt;h1 id=&#34;prova&#34;&gt;PROVA
 &lt;/h1&gt;</description>
         </item>
         <item>
@@ -215,7 +215,7 @@ capire che non + normale sempere essere circondati da persona, soprattutto non s
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
         <guid>http://localhost:1313/06_books/mente-guadagna.html</guid>
-        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
+        <description>&lt;img src="http://localhost:1313/06_books/mente-guadagna/image.png" alt="Featured image of post Guadagna con la mente | " /&gt;&lt;h1 id=&#34;prova&#34;&gt;PROVA
 &lt;/h1&gt;</description>
         </item>
         <item>
@@ -224,7 +224,7 @@ capire che non + normale sempere essere circondati da persona, soprattutto non s
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
         <guid>http://localhost:1313/06_books/bias-cognitivi.html</guid>
-        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
+        <description>&lt;img src="http://localhost:1313/06_books/bias-cognitivi/image.png" alt="Featured image of post guida ai bias cognitivi" /&gt;&lt;h1 id=&#34;prova&#34;&gt;PROVA
 &lt;/h1&gt;</description>
         </item>
         <item>
@@ -233,7 +233,7 @@ capire che non + normale sempere essere circondati da persona, soprattutto non s
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
         <guid>http://localhost:1313/02_thought/ignorance-today.html</guid>
-        <description>&lt;h2 id=&#34;to-do&#34;&gt;to do
+        <description>&lt;img src="http://localhost:1313/02_thought/ignorance-today/al.png" alt="Featured image of post Ignorance in the modern day is a choice" /&gt;&lt;h2 id=&#34;to-do&#34;&gt;to do
 &lt;/h2&gt;</description>
         </item>
         <item>
@@ -242,7 +242,7 @@ capire che non + normale sempere essere circondati da persona, soprattutto non s
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
         <guid>http://localhost:1313/06_books/gratteri.html</guid>
-        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
+        <description>&lt;img src="http://localhost:1313/06_books/gratteri/image.png" alt="Featured image of post il grifone | Nicola Gratteri" /&gt;&lt;h1 id=&#34;prova&#34;&gt;PROVA
 &lt;/h1&gt;&lt;p&gt;paragone con borsellino, da delle interviste ho sentito che dedica tutta la sua vita al lavoro e ho trovato questa analogia&lt;/p&gt;
 </description>
         </item>
@@ -252,7 +252,7 @@ capire che non + normale sempere essere circondati da persona, soprattutto non s
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
         <guid>http://localhost:1313/06_books/cassioli-ventro-contro.html</guid>
-        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
+        <description>&lt;img src="http://localhost:1313/06_books/cassioli-ventro-contro/image.png" alt="Featured image of post il vento contro | Daniele Cassioli" /&gt;&lt;h1 id=&#34;prova&#34;&gt;PROVA
 &lt;/h1&gt;</description>
         </item>
         <item>
@@ -261,7 +261,7 @@ capire che non + normale sempere essere circondati da persona, soprattutto non s
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
         <guid>http://localhost:1313/06_books/cassioli-cuore-a-vedere.html</guid>
-        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
+        <description>&lt;img src="http://localhost:1313/06_books/cassioli-cuore-a-vedere/image.png" alt="Featured image of post insegna al cuore a vedere | Daniele Cassioli" /&gt;&lt;h1 id=&#34;prova&#34;&gt;PROVA
 &lt;/h1&gt;</description>
         </item>
         <item>
@@ -399,21 +399,12 @@ From discovering the best gear and customizing my setup to push my limits, to th
 </description>
         </item>
         <item>
-        <title>Pensa ed arrichisci te stesso</title>
-        <link>http://localhost:1313/06_books/grow-rich.html</link>
-        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
-        
-        <guid>http://localhost:1313/06_books/grow-rich.html</guid>
-        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
-&lt;/h1&gt;</description>
-        </item>
-        <item>
         <title>Pensieri lenti pensieri veloci</title>
         <link>http://localhost:1313/06_books/pensieri-lenti-pensieri-veloci.html</link>
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
         <guid>http://localhost:1313/06_books/pensieri-lenti-pensieri-veloci.html</guid>
-        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
+        <description>&lt;img src="http://localhost:1313/06_books/pensieri-lenti-pensieri-veloci/image.png" alt="Featured image of post Pensieri lenti pensieri veloci" /&gt;&lt;h1 id=&#34;prova&#34;&gt;PROVA
 &lt;/h1&gt;</description>
         </item>
         <item>
@@ -441,11 +432,11 @@ Embark on a journey of &lt;strong&gt;personal growth&lt;/strong&gt; and self-dis
         </item>
         <item>
         <title>Rich and Poor Dad</title>
-        <link>http://localhost:1313/06_books/richpoor-dad.html</link>
+        <link>http://localhost:1313/06_books/grow-rich.html</link>
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
-        <guid>http://localhost:1313/06_books/richpoor-dad.html</guid>
-        <description>&lt;h1 id=&#34;prova&#34;&gt;PROVA
+        <guid>http://localhost:1313/06_books/grow-rich.html</guid>
+        <description>&lt;img src="http://localhost:1313/06_books/grow-rich/image.png" alt="Featured image of post Rich and Poor Dad" /&gt;&lt;h1 id=&#34;prova&#34;&gt;PROVA
 &lt;/h1&gt;</description>
         </item>
         <item>
@@ -476,6 +467,15 @@ Embark on a journey of &lt;strong&gt;personal growth&lt;/strong&gt; and self-dis
 &lt;hr&gt;
 &lt;p&gt;So, the next time you feel the temptation to grab your phone during a break, try to resist. Let your mind free itself from the need for constant stimuli, embrace boredom and allow yourself to return to a more natural rhythm. This is the only way we can escape the &amp;ldquo;Social Trap&amp;rdquo; and regain our mental freedom.&lt;/p&gt;
 </description>
+        </item>
+        <item>
+        <title>think and</title>
+        <link>http://localhost:1313/06_books/richpoor-dad.html</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:1313/06_books/richpoor-dad.html</guid>
+        <description>&lt;img src="http://localhost:1313/06_books/richpoor-dad/image.png" alt="Featured image of post think and" /&gt;&lt;h1 id=&#34;prova&#34;&gt;PROVA
+&lt;/h1&gt;</description>
         </item>
         <item>
         <title>Birdwatching Experience with SWAROVSKI OPTIK at Le Ali del Frassino Residence (Lake Frassino)</title>
@@ -569,7 +569,7 @@ Swarovski Optik actively encourages deeper connections with nature and is commit
         <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/04_experiences/mazza.html</guid>
-        <description>&lt;ul&gt;
+        <description>&lt;img src="http://localhost:1313/04_experiences/mazza/max.png" alt="Featured image of post Don Mazza College" /&gt;&lt;ul&gt;
 &lt;li&gt;Spiegare come l&amp;rsquo;ho trovato&lt;/li&gt;
 &lt;li&gt;come mi sono trovato&lt;/li&gt;
 &lt;li&gt;linkare il mio video &amp;ldquo;recensione&amp;rdquo;&lt;/li&gt;
