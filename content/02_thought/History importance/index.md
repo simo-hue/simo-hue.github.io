@@ -2,7 +2,7 @@
 title: "History importance"
 description: 
 date: 2024-11-05
-image: #da aggiungere
+image: history.png
 categories: ["thoughts"]
 slug: history
 tags: [history, personal growth, intelligence]
