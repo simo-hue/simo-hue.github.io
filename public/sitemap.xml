@@ -74,7 +74,7 @@
     <loc>http://localhost:1313/tags/intelligence.html</loc>
     <lastmod>2024-11-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/02_thought/humility.html</loc>
+    <loc>http://localhost:1313/02_thought/repetition.html</loc>
     <lastmod>2024-11-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/success.html</loc>
@@ -182,9 +182,6 @@
     <loc>http://localhost:1313/categories/passions.html</loc>
     <lastmod>2024-11-04T19:31:32+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/06_books/grow-rich.html</loc>
-    <lastmod>2024-11-04T19:31:32+01:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/06_books/pensieri-lenti-pensieri-veloci.html</loc>
     <lastmod>2024-11-04T19:31:32+01:00</lastmod>
   </url><url>
@@ -197,7 +194,7 @@
     <loc>http://localhost:1313/tags/rabbi.html</loc>
     <lastmod>2024-11-04T19:31:32+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/06_books/richpoor-dad.html</loc>
+    <loc>http://localhost:1313/06_books/grow-rich.html</loc>
     <lastmod>2024-11-04T19:31:32+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/ski.html</loc>
@@ -219,6 +216,9 @@
     <lastmod>2024-11-04T19:31:32+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/02_thought/trap.html</loc>
+    <lastmod>2024-11-04T19:31:32+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/06_books/richpoor-dad.html</loc>
     <lastmod>2024-11-04T19:31:32+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/vehicle.html</loc>
