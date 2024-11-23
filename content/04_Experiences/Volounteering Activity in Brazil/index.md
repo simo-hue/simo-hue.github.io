@@ -128,3 +128,7 @@ This phrase perfectly encapsulates the essence of my journey and the meaning of 
 ![itapororoca](asilo.jpeg)
 ![Group](1school.jpeg)
 ![itapororoca](school.JPG)
+
+# Here a short recap video about the experience
+
+{{< youtube ptVTxfSqaCo >}}

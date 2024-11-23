@@ -1214,6 +1214,16 @@ In Itapororoca, we were hosted by an extraordinary family who dedicated their li
 		data-flex-basis=&#34;320px&#34;
 	
 &gt;&lt;/p&gt;
+&lt;h1 id=&#34;here-a-short-recap-video-about-the-experience&#34;&gt;Here a short recap video about the experience
+&lt;/h1&gt;&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/ptVTxfSqaCo&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
 </description>
         </item>
         <item>

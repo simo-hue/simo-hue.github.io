@@ -67,17 +67,9 @@ I was born in the little town of Rovereto, on 28 July 2003 in Italy, nestled in 
 
 Growing up surrounded by the natural beauty and rich culture of Northern Italy, I found myself drawn to the mechanics of how things work, from engines to computers. My passion for technology started young and has only grown over the years, inspiring me to learn and explore more every day. 
 
-### Vehicles Passion
-![Me driving Land Rover Defender in Off-Road](defender.jpg)
+### Conclusion
 
-Vehicles whether cars, bikes, or anything that moves—have always captivated me, not only for their speed and design but for the engineering marvels they represent.
-
-### The importance of sports
-![Me in Rabbi Valley](alba.jpg)
-
-Sports have been another constant in my life, teaching me about discipline, teamwork, and perseverance, qualities I strive to bring into everything I do. 
-
-Thanks for joining me on this journey and I hope you can find something useful here!
+Thanks for joining me on this journey and I suggest you to watch the other pages of this website so maybe you can find something useful there!
 
 
 ## Education
