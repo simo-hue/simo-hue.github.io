@@ -431,11 +431,27 @@
         <description></description>
         </item>
         <item>
+        <title>Consulting</title>
+        <link>http://localhost:1313/tags/consulting.html</link>
+        <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/tags/consulting.html</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Diary</title>
         <link>http://localhost:1313/tags/diary.html</link>
         <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/tags/diary.html</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Helping</title>
+        <link>http://localhost:1313/tags/helping.html</link>
+        <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/tags/helping.html</guid>
         <description></description>
         </item>
         <item>

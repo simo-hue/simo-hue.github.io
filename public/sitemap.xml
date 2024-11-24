@@ -284,7 +284,13 @@
     <loc>http://localhost:1313/tags/summer-2024.html</loc>
     <lastmod>2024-07-28T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/consulting.html</loc>
+    <lastmod>2023-07-28T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/diary.html</loc>
+    <lastmod>2023-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/helping.html</loc>
     <lastmod>2023-07-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/life-film.html</loc>
@@ -294,6 +300,9 @@
     <lastmod>2023-07-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/photography.html</loc>
+    <lastmod>2023-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/03_projects/performance.html</loc>
     <lastmod>2023-07-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/03_projects/home.html</loc>
