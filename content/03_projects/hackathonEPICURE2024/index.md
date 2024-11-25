@@ -112,4 +112,6 @@ This hackathon has certainly sparked a deeper interest in exploring the potentia
 
 ![Me Presenting our results of the Lab sessions of the two days before](3.jpeg)
 
-
+## YouTube Vlogs
+I've made some mini vlogs about my experience in Bologna during this event and this is the first of the playlist
+{{< youtube fnzTTCAioHk >}}

@@ -9,7 +9,7 @@ tags:
     - Consulting
     - Helping
 
-image: logo.jpeg
+image: image.png
 
 links:
   - title: Personal Gmail Account
