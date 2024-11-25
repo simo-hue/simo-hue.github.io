@@ -102,6 +102,9 @@ Interested in learning more? Check out the links below to access more details on
 - [EPICURE HPC Event Page](https://epicure-hpc.eu)
 - [Event Recap Video](https://www.youtube.com/watch?v=EPICURE_hackathon2024)
 - [GitHub Repository of Sample Codes](https://github.com/EPICURE-hackathon-2024/sample-codes)
+- [GitLab GPU Repository](https://gitlab.hpc.cineca.it/training/epicure-gpu-hackathon.git)
+- [HackMD Hackathon Document](https://hackmd.io/@epicurehack/r1qTnKXgyl)
+- [My HackMD Project Document](https://hackmd.io/rEH9zDu1RAK4xhwNrBVpKA?view)
 
 ---
 
