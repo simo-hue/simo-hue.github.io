@@ -56,3 +56,8 @@ Thanks for reading, and I hope to see you soon among my followers on YouTube!
 
 ## Stay in touch with me
 *Follow me on YouTube and social media to stay updated on my adventures and find out more about my life and my projects!*
+
+## Listen to My Story
+If you wanna listen to a deeper introduction, a friend of mine decided to interview me...here down below you can find a lot's of intresting though as well as my story
+
+{{< youtube codiceDelVale >}}

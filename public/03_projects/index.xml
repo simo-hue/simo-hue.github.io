@@ -223,7 +223,7 @@
         <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/03_projects/performance.html</guid>
-        <description>&lt;img src="http://localhost:1313/03_projects/performance/image.png" alt="Featured image of post Simo Performance Coach Consultant" /&gt;&lt;h2 id=&#34;stay-tunedmore-info-are-comming-soon-meanwhile-you-can-contact-me-via-email&#34;&gt;STAY TUNED&amp;hellip;more info are comming soon, meanwhile you can contact me via email
+        <description>&lt;img src="http://localhost:1313/03_projects/performance/image.png" alt="Featured image of post Simo Performance Coach Consultant" /&gt;&lt;h2 id=&#34;stay-tunedmore-info-are-comming-soon-meanwhile-you-can-contact-me-via-email-for-info&#34;&gt;STAY TUNED&amp;hellip;more info are comming soon, meanwhile you can contact me via email for INFO
 &lt;/h2&gt;</description>
         </item>
         <item>
@@ -255,6 +255,17 @@
 &lt;hr&gt;
 &lt;h2 id=&#34;stay-in-touch-with-me&#34;&gt;Stay in touch with me
 &lt;/h2&gt;&lt;p&gt;&lt;em&gt;Follow me on YouTube and social media to stay updated on my adventures and find out more about my life and my projects!&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;listen-to-my-story&#34;&gt;Listen to My Story
+&lt;/h2&gt;&lt;p&gt;If you wanna listen to a deeper introduction, a friend of mine decided to interview me&amp;hellip;here down below you can find a lot&amp;rsquo;s of intresting though as well as my story&lt;/p&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/codiceDelVale&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
 </description>
         </item>
         

@@ -18,4 +18,4 @@ links:
     image: gmail.png
 ---
 
-## STAY TUNED...more info are comming soon, meanwhile you can contact me via email
+## STAY TUNED...more info are comming soon, meanwhile you can contact me via email for INFO
