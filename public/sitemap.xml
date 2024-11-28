@@ -2,10 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tags/altruism.html</loc>
-    <lastmod>2024-11-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/categories.html</loc>
+    <lastmod>2024-11-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/intelligence.html</loc>
+    <lastmod>2024-11-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/relationship.html</loc>
+    <lastmod>2024-11-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/02_thought/relationship.html</loc>
+    <lastmod>2024-11-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/social.html</loc>
+    <lastmod>2024-11-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags.html</loc>
+    <lastmod>2024-11-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/thoughts.html</loc>
+    <lastmod>2024-11-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2024-11-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/altruism.html</loc>
     <lastmod>2024-11-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/educational.html</loc>
@@ -44,16 +65,7 @@
     <loc>http://localhost:1313/tags/strength.html</loc>
     <lastmod>2024-11-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags.html</loc>
-    <lastmod>2024-11-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/02_thought/alone.html</loc>
-    <lastmod>2024-11-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/thoughts.html</loc>
-    <lastmod>2024-11-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
     <lastmod>2024-11-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/02_thought/cassioli.html</loc>
@@ -69,9 +81,6 @@
     <lastmod>2024-11-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/humble.html</loc>
-    <lastmod>2024-11-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/intelligence.html</loc>
     <lastmod>2024-11-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/02_thought/repetition.html</loc>
