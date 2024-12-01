@@ -25,3 +25,6 @@ TO DO:
 - testimonianza del fotografo ( magari nei thought  mettere che siamo una generazione che si smagnetizzerà -> problema del digitale )
 - Come vogliono rappresentare la loro terra ( senso di appartenenza / eliminazione degli stereotipi)
 - La differenza tra una guida "normale" del 99% ed il top 1% ( come in ogni settore si può eccellere e non)
+
+
+{{< youtube RdgWMgmqqHk >}}
