@@ -1,7 +1,7 @@
 ---
 title: "Thought"
 date: 2022-03-06
-description: 
+description: Explore With Me What Comes To My Mind
 menu:
     main:
     

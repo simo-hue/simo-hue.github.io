@@ -28,4 +28,4 @@ name = "aws-website"
 
 # Configurazioni aggiuntive del tema (i18n support)
 # Lingue disponibili: en, fr, id, ja, ko, pt-br, zh-cn, zh-tw, es, de, nl, it, th, el, uk, ar
-DefaultContentLanguage = "en"              # Lingua di default (puoi impostare "it" per italiano)
+DefaultContentLanguage = "en"              

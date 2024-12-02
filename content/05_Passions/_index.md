@@ -1,7 +1,7 @@
 ---
 title: "Passions"
 slug: "notes"
-description: "Don't Be Lazy ... Explore the beauty of the World"
+description: "Non smettere mai di cercare ciò che ti fa battere il cuore. [ Steve Jobs ]"
 draft: false
 menu:
     main:
