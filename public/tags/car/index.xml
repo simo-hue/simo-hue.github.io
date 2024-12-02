@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Car on Simone Mattioli</title>
-        <link>http://localhost:1313/tags/car.html</link>
+        <link>http://localhost:1313/tags/car/</link>
         <description>Recent content in Car on Simone Mattioli</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <lastBuildDate>Mon, 04 Nov 2024 19:31:32 +0100</lastBuildDate><atom:link href="http://localhost:1313/tags/car/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Cars</title>
-        <link>http://localhost:1313/05_passions/car.html</link>
+        <link>http://localhost:1313/05_passions/car/</link>
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
-        <guid>http://localhost:1313/05_passions/car.html</guid>
+        <guid>http://localhost:1313/05_passions/car/</guid>
         <description>&lt;img src="http://localhost:1313/05_passions/car/IMG_8411.jpg" alt="Featured image of post Cars" /&gt;&lt;p&gt;Fueled by passion and the unforgettable roar of petrol engines, this blog is a tribute to the timeless allure of cars. From a young age, I was mesmerized by the hum of engines, the thrill of watching cars fly by on the road, and the unmistakable connection I felt with each machine. Here, I dive into everything that makes cars more than just vehicles—from the technical finesse of engineering to the pure adrenaline sparked by the sound of a finely-tuned engine. Join me as I explore the art, performance, and culture of cars, where every drive feels like a shared heartbeat between driver and machine.&lt;/p&gt;
 </description>
         </item>

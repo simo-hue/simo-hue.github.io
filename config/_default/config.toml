@@ -3,7 +3,8 @@ baseURL = "https://simo-hue.github.io"    # URL del sito su GitHub Pages
 languageCode = "en-us"                    # Codice della lingua
 title = "Simone Mattioli"                 # Titolo del sito
 defaultContentLanguage = "en"             # Lingua predefinita (cambia in "it" per italiano)
-paginate = 5                              # Numero di articoli per pagina
+[pagination]
+pagerSize = 10
 
 # Opzioni per i commenti (usa il nome breve di Disqus per attivare i commenti)
 disqusShortname = "simo-hue"              # Nome breve per l'integrazione con Disqus

@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Hackathon on Simone Mattioli</title>
-        <link>http://localhost:1313/tags/hackathon.html</link>
+        <link>http://localhost:1313/tags/hackathon/</link>
         <description>Recent content in Hackathon on Simone Mattioli</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <lastBuildDate>Mon, 28 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/hackathon/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>EPICURE Hackathon GPU - October 2024</title>
-        <link>http://localhost:1313/03_projects/epicure-hackathon-2024.html</link>
+        <link>http://localhost:1313/03_projects/epicure-hackathon-2024/</link>
         <pubDate>Mon, 28 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/03_projects/epicure-hackathon-2024.html</guid>
+        <guid>http://localhost:1313/03_projects/epicure-hackathon-2024/</guid>
         <description>&lt;img src="http://localhost:1313/03_projects/epicure-hackathon-2024/cover.jpg" alt="Featured image of post EPICURE Hackathon GPU - October 2024" /&gt;&lt;p&gt;The &lt;strong&gt;EPICURE Hackathon&lt;/strong&gt;, held from October 28-31, 2024, brought together developers, researchers, and enthusiasts from across Europe to dive deep into the world of &lt;strong&gt;GPU programming and high-performance computing (HPC)&lt;/strong&gt;. This event was hosted in collaboration with &lt;strong&gt;CINECA&lt;/strong&gt;, one of the leading HPC centers in Europe, renowned for its contributions to scientific computing and advanced research.&lt;/p&gt;
 &lt;p&gt;The hackathon was meticulously structured, featuring both hands-on labs and theoretical sessions, designed to empower participants with the latest skills in &lt;strong&gt;CUDA programming&lt;/strong&gt;, &lt;strong&gt;OpenACC&lt;/strong&gt;, and &lt;strong&gt;GPU optimization techniques&lt;/strong&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;day-1-getting-started-with-gpu-computing&#34;&gt;Day 1: Getting Started with GPU Computing

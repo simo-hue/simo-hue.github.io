@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Rabbi on Simone Mattioli</title>
-        <link>http://localhost:1313/tags/rabbi.html</link>
+        <link>http://localhost:1313/tags/rabbi/</link>
         <description>Recent content in Rabbi on Simone Mattioli</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <lastBuildDate>Mon, 04 Nov 2024 19:31:32 +0100</lastBuildDate><atom:link href="http://localhost:1313/tags/rabbi/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Mountain bike</title>
-        <link>http://localhost:1313/05_passions/bike.html</link>
+        <link>http://localhost:1313/05_passions/bike/</link>
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
-        <guid>http://localhost:1313/05_passions/bike.html</guid>
+        <guid>http://localhost:1313/05_passions/bike/</guid>
         <description>&lt;img src="http://localhost:1313/05_passions/bike/bike.JPG" alt="Featured image of post Mountain bike" /&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/05_passions/bike/mountainbike.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
@@ -32,10 +32,10 @@ From discovering the best gear and customizing my setup to push my limits, to th
         </item>
         <item>
         <title>Mountain Hiking</title>
-        <link>http://localhost:1313/05_passions/hiking.html</link>
+        <link>http://localhost:1313/05_passions/hiking/</link>
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
-        <guid>http://localhost:1313/05_passions/hiking.html</guid>
+        <guid>http://localhost:1313/05_passions/hiking/</guid>
         <description>&lt;img src="http://localhost:1313/05_passions/hiking/rabbi.JPG" alt="Featured image of post Mountain Hiking" /&gt;&lt;h1 id=&#34;-comming-soon&#34;&gt;# comming soon&amp;hellip;
 &lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/05_passions/hiking/sfondo.JPG&#34;
 	width=&#34;4032&#34;
@@ -77,10 +77,10 @@ From discovering the best gear and customizing my setup to push my limits, to th
         </item>
         <item>
         <title>Ski</title>
-        <link>http://localhost:1313/05_passions/ski.html</link>
+        <link>http://localhost:1313/05_passions/ski/</link>
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
-        <guid>http://localhost:1313/05_passions/ski.html</guid>
+        <guid>http://localhost:1313/05_passions/ski/</guid>
         <description>&lt;img src="http://localhost:1313/05_passions/ski/logo.JPG" alt="Featured image of post Ski" /&gt;&lt;h1 id=&#34;comming-soon&#34;&gt;comming soon&amp;hellip;
 &lt;/h1&gt;</description>
         </item>
