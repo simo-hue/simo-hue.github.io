@@ -1,273 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>Projects on Simone Mattioli</title>
-        <link>http://localhost:1313/03_projects/</link>
-        <description>Recent content in Projects on Simone Mattioli</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>en</language>
-        <lastBuildDate>Mon, 28 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/03_projects/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>EPICURE Hackathon GPU - October 2024</title>
-        <link>http://localhost:1313/03_projects/epicure-hackathon-2024/</link>
-        <pubDate>Mon, 28 Oct 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/03_projects/epicure-hackathon-2024/</guid>
-        <description>&lt;img src="http://localhost:1313/03_projects/epicure-hackathon-2024/cover.jpg" alt="Featured image of post EPICURE Hackathon GPU - October 2024" /&gt;&lt;p&gt;The &lt;strong&gt;EPICURE Hackathon&lt;/strong&gt;, held from October 28-31, 2024, brought together developers, researchers, and enthusiasts from across Europe to dive deep into the world of &lt;strong&gt;GPU programming and high-performance computing (HPC)&lt;/strong&gt;. This event was hosted in collaboration with &lt;strong&gt;CINECA&lt;/strong&gt;, one of the leading HPC centers in Europe, renowned for its contributions to scientific computing and advanced research.&lt;/p&gt;
-&lt;p&gt;The hackathon was meticulously structured, featuring both hands-on labs and theoretical sessions, designed to empower participants with the latest skills in &lt;strong&gt;CUDA programming&lt;/strong&gt;, &lt;strong&gt;OpenACC&lt;/strong&gt;, and &lt;strong&gt;GPU optimization techniques&lt;/strong&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;day-1-getting-started-with-gpu-computing&#34;&gt;Day 1: Getting Started with GPU Computing
-&lt;/h2&gt;&lt;p&gt;The first day served as an introduction to GPU computing, aimed at setting a strong foundation. Topics included:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Introduction to GPU Computing:&lt;/strong&gt; A look into the architecture and advantages of using GPUs for high-performance tasks.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;CUDA Basics:&lt;/strong&gt; Practical insights into CUDA, NVIDIA&amp;rsquo;s parallel computing platform, providing a gateway to harnessing the power of GPU cores.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The agenda for Day 1 was as follows:&lt;/p&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;Time&lt;/th&gt;
-          &lt;th&gt;Session&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;9:00 - 9:15&lt;/td&gt;
-          &lt;td&gt;Welcome and Registration&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;9:15 - 9:30&lt;/td&gt;
-          &lt;td&gt;EPICURE HPC Application Support for EuroHPC Users&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;9:30 - 10:30&lt;/td&gt;
-          &lt;td&gt;Introduction to GPU Computing&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;10:30 - 11:00&lt;/td&gt;
-          &lt;td&gt;Coffee Break&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;11:00 - 12:30&lt;/td&gt;
-          &lt;td&gt;Introduction to CUDA&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;12:30 - 14:00&lt;/td&gt;
-          &lt;td&gt;Lunch&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;14:00 - 15:30&lt;/td&gt;
-          &lt;td&gt;OpenACC Programming and Profiling with Nsight&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;15:30 - 16:00&lt;/td&gt;
-          &lt;td&gt;Coffee Break&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;16:00 - 17:30&lt;/td&gt;
-          &lt;td&gt;OpenACC Programming and Profiling with Nsight&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Images from Day 1:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/03_projects/epicure-hackathon-2024/1.jpg&#34;
-	width=&#34;8064&#34;
-	height=&#34;6048&#34;
-	srcset=&#34;http://localhost:1313/03_projects/epicure-hackathon-2024/1_hu9058614684240352447.jpg 480w, http://localhost:1313/03_projects/epicure-hackathon-2024/1_hu2407595864030796957.jpg 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;Theory Part: Introduction to CUDA and GPU Programming&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;133&#34;
-		data-flex-basis=&#34;320px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;h2 id=&#34;day-2-advanced-gpu-optimization-and-profiling&#34;&gt;Day 2: Advanced GPU Optimization and Profiling
-&lt;/h2&gt;&lt;p&gt;Day 2 took things to the next level, focusing on &lt;strong&gt;advanced GPU optimization and profiling techniques&lt;/strong&gt;. Participants were guided through various optimization methods to fine-tune GPU applications, reducing computation time and maximizing efficiency.&lt;/p&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;Time&lt;/th&gt;
-          &lt;th&gt;Session&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;9:00 - 10:30&lt;/td&gt;
-          &lt;td&gt;Advanced GPU Optimization and Profiling&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;10:30 - 11:00&lt;/td&gt;
-          &lt;td&gt;Coffee Break&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;11:00 - 12:30&lt;/td&gt;
-          &lt;td&gt;Advanced GPU Optimization and Profiling (Continued)&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;12:30 - 14:00&lt;/td&gt;
-          &lt;td&gt;Lunch&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;14:00 - 17:30&lt;/td&gt;
-          &lt;td&gt;Lab Session (with your code or a provided code)&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;The hands-on lab in the afternoon provided an opportunity to implement what we learned using real-world examples, supported by the CINECA team.&lt;/p&gt;
-&lt;h2 id=&#34;day-3-4-intensive-lab-sessions&#34;&gt;Day 3-4: Intensive Lab Sessions
-&lt;/h2&gt;&lt;p&gt;The last two days were dedicated to &lt;strong&gt;intensive lab sessions&lt;/strong&gt;. Participants worked on challenging GPU computing projects, with mentors available to provide guidance and feedback. These sessions enabled us to:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Test and debug our code using real-time feedback from experts.&lt;/li&gt;
-&lt;li&gt;Engage in peer-to-peer learning, exchanging ideas and optimizing our implementations.&lt;/li&gt;
-&lt;li&gt;Utilize &lt;strong&gt;Nsight&lt;/strong&gt; and other profiling tools to analyze performance and identify bottlenecks.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;Date&lt;/th&gt;
-          &lt;th&gt;Morning (9:00 - 12:30)&lt;/th&gt;
-          &lt;th&gt;Afternoon (14:00 - 17:30)&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;October 30&lt;/td&gt;
-          &lt;td&gt;Lab Session&lt;/td&gt;
-          &lt;td&gt;Lab Session&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;October 31&lt;/td&gt;
-          &lt;td&gt;Lab Session&lt;/td&gt;
-          &lt;td&gt;Lab Session&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;key-takeaways&#34;&gt;Key Takeaways
-&lt;/h2&gt;&lt;p&gt;This hackathon was more than just a technical event; it was a community-building experience. Here are some of the main takeaways:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Networking:&lt;/strong&gt; I had the opportunity to connect with like-minded individuals passionate about GPU programming and HPC.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Learning New Tools:&lt;/strong&gt; From CUDA basics to advanced profiling with &lt;strong&gt;Nsight&lt;/strong&gt;, I gained hands-on experience with cutting-edge tools.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Real-World Problem Solving:&lt;/strong&gt; The projects and examples we tackled were grounded in real-world applications, highlighting the impact of GPU acceleration in domains like scientific research, machine learning, and data analysis.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;final-thoughts&#34;&gt;Final Thoughts
-&lt;/h2&gt;&lt;p&gt;Reflecting on these four days, I feel a renewed enthusiasm for &lt;strong&gt;GPU computing&lt;/strong&gt; and &lt;strong&gt;HPC&lt;/strong&gt;. The skills I gained, combined with the amazing people I met, made this hackathon an unforgettable experience.&lt;/p&gt;
-&lt;p&gt;Interested in learning more? Check out the links below to access more details on EPICURE events, a recap video, and the GitHub repository with sample codes used during the hackathon.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Links&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://epicure-hpc.eu&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;EPICURE HPC Event Page&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=EPICURE_hackathon2024&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Event Recap Video&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/EPICURE-hackathon-2024/sample-codes&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;GitHub Repository of Sample Codes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://gitlab.hpc.cineca.it/training/epicure-gpu-hackathon.git&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;GitLab GPU Repository&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://hackmd.io/@epicurehack/r1qTnKXgyl&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;HackMD Hackathon Document&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://hackmd.io/rEH9zDu1RAK4xhwNrBVpKA?view&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;My HackMD Project Document&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;p&gt;This hackathon has certainly sparked a deeper interest in exploring the potential of GPUs for high-performance tasks. I’m looking forward to applying these skills in future projects and sharing my insights with the community.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/03_projects/epicure-hackathon-2024/3.jpeg&#34;
-	width=&#34;2966&#34;
-	height=&#34;1674&#34;
-	srcset=&#34;http://localhost:1313/03_projects/epicure-hackathon-2024/3_hu4568767519802119854.jpeg 480w, http://localhost:1313/03_projects/epicure-hackathon-2024/3_hu7805776666760800763.jpeg 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;Me Presenting our results of the Lab sessions of the two days before&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;177&#34;
-		data-flex-basis=&#34;425px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;h2 id=&#34;youtube-vlogs&#34;&gt;YouTube Vlogs
-&lt;/h2&gt;&lt;p&gt;I&amp;rsquo;ve made some mini vlogs about my experience in Bologna during this event and this is the first of the playlist
-&lt;div class=&#34;video-wrapper&#34;&gt;
-    &lt;iframe loading=&#34;lazy&#34; 
-            src=&#34;https://www.youtube.com/embed/fnzTTCAioHk&#34; 
-            allowfullscreen 
-            title=&#34;YouTube Video&#34;
-    &gt;
-    &lt;/iframe&gt;
-&lt;/div&gt;
-&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>Mountain Fauna Lover</title>
-        <link>http://localhost:1313/03_projects/mountain-fauna-lover/</link>
-        <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/03_projects/mountain-fauna-lover/</guid>
-        <description>&lt;img src="http://localhost:1313/03_projects/mountain-fauna-lover/logo.jpg" alt="Featured image of post Mountain Fauna Lover" /&gt;&lt;p&gt;Welcome to MountainFaunaLover! Here, I share my passion for nature, wildlife, and the captivating landscapes of mountain regions. On Instagram, you’ll find a curated collection of my favorite moments in the wilderness, from up-close shots of unique wildlife to breathtaking mountain vistas. Each post is a window into my adventures, capturing the serenity, beauty, and diversity of the natural world that inspires me daily.&lt;/p&gt;
-&lt;p&gt;On YouTube, I dive even deeper. My channel is a space for storytelling, featuring video journeys, wildlife encounters, and conservation insights, bringing viewers along on my explorations. Whether you’re a fellow nature enthusiast or just stopping by for some visual serenity, my content on MountainFaunaLover is dedicated to sharing the awe and importance of our wild places. Join me in celebrating the mountains, fauna, and the fascinating stories they hold!&lt;/p&gt;
-&lt;h2 id=&#34;youtube-spoiler&#34;&gt;YouTube Spoiler
-&lt;/h2&gt;&lt;div class=&#34;video-wrapper&#34;&gt;
-    &lt;iframe loading=&#34;lazy&#34; 
-            src=&#34;https://www.youtube.com/embed/ONGaGgr795k&#34; 
-            allowfullscreen 
-            title=&#34;YouTube Video&#34;
-    &gt;
-    &lt;/iframe&gt;
-&lt;/div&gt;
-
-</description>
-        </item>
-        <item>
-        <title>Simo Performance Coach Consultant</title>
-        <link>http://localhost:1313/03_projects/performance/</link>
-        <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/03_projects/performance/</guid>
-        <description>&lt;img src="http://localhost:1313/03_projects/performance/image.png" alt="Featured image of post Simo Performance Coach Consultant" /&gt;&lt;h2 id=&#34;stay-tunedmore-info-are-comming-soon-meanwhile-you-can-contact-me-via-email-for-info&#34;&gt;STAY TUNED&amp;hellip;more info are comming soon, meanwhile you can contact me via email for INFO
-&lt;/h2&gt;</description>
-        </item>
-        <item>
-        <title>Simo&#39;s Online &amp; Digital Diary</title>
-        <link>http://localhost:1313/03_projects/home/</link>
-        <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/03_projects/home/</guid>
-        <description>&lt;img src="http://localhost:1313/03_projects/home/logo.jpeg" alt="Featured image of post Simo&#39;s Online &amp; Digital Diary" /&gt;&lt;p&gt;Welcome to simo&amp;rsquo;s Diary, a place where I love to share&amp;hellip;.da completare&lt;/p&gt;
-&lt;h1 id=&#34;discover-my-youtube-channel-simos-diary&#34;&gt;Discover My YouTube Channel: Simo&amp;rsquo;s Diary
-&lt;/h1&gt;&lt;p&gt;Today I want to tell you about my YouTube channel, &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/@SimosDiary2003&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Simo&amp;rsquo;s Diary&lt;/a&gt;&lt;/strong&gt;, where I share moments of my life, personal projects and passions. This space was born from the desire to document my experiences in an authentic and transparent way, showing you trips, adventures and much more.&lt;/p&gt;
-&lt;h2 id=&#34;why-did-i-create-simos-diary&#34;&gt;Why Did I Create Simo&amp;rsquo;s Diary?
-&lt;/h2&gt;&lt;p&gt;We live in an era where technology allows us to capture moments in high quality simply with a smartphone. I don&amp;rsquo;t want to waste this opportunity! In fact, I think it&amp;rsquo;s fantastic to be able to record and share pieces of my life that, otherwise, would only remain in memory. With Simo&amp;rsquo;s Diary, not only can I collect these memories for the future, but also share them with anyone who wants to follow them and maybe find inspiration.&lt;/p&gt;
-&lt;h2 id=&#34;what-youll-find-on-simos-diary&#34;&gt;What You&amp;rsquo;ll Find on Simo&amp;rsquo;s Diary
-&lt;/h2&gt;&lt;p&gt;On my channel, you&amp;rsquo;ll find content that tells the &lt;strong&gt;real life&lt;/strong&gt; of an ambitious boy, one who is ready to make sacrifices to achieve his goals. I want to show you the world without filters, far from the perfection we often see online. Through my videos, I will take you with me on journeys, challenges and everyday moments, with the aim of reminding myself and others how important it is to appreciate everything that life offers us.&lt;/p&gt;
-&lt;h3 id=&#34;main-themes&#34;&gt;Main Themes:
-&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Gratitude and Awareness:&lt;/strong&gt; Every experience I share is an opportunity to reflect on what we have and what we can be grateful for.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Ambition and Determination:&lt;/strong&gt; Simo&amp;rsquo;s Diary is also the story of a boy who wants a lot from life and is not afraid to fight to make his dreams come true.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Authenticity:&lt;/strong&gt; I am not interested in showing a perfect life, but rather in offering a real image of my existence, with its challenges, difficulties and not just its goals.-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Personal growth&lt;/strong&gt; My path and thoughts / skills that I have developed during this process&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Thoughts&lt;/strong&gt; When a thought comes to mind, or I start a reasoning when possible I start recording so that I can then listen to myself again in the future and understand how I thought at a certain moment in my life&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;an-invitation-to-follow-your-passions&#34;&gt;An Invitation to Follow Your Passions
-&lt;/h2&gt;&lt;p&gt;With Simo&amp;rsquo;s Diary, I want to inspire you to live fully and use the resources we have today to create something meaningful. My hope is that my videos can push you to pursue your goals and cultivate gratitude for the little things in life without forgetting the thing that is closest to my heart lately, the fact of &lt;strong&gt;enjoying life&lt;/strong&gt;, therefore living every moment and challenge with a smile and joy because our time on this earth is very limited and it is not worth getting discouraged and living it badly.&lt;/p&gt;
-&lt;p&gt;If you like the idea of ​​discovering adventures, authentic reflections and the real life of a boy who chases his dreams, visit my channel and subscribe!&lt;/p&gt;
-&lt;p&gt;Thanks for reading, and I hope to see you soon among my followers on YouTube!&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;stay-in-touch-with-me&#34;&gt;Stay in touch with me
-&lt;/h2&gt;&lt;p&gt;&lt;em&gt;Follow me on YouTube and social media to stay updated on my adventures and find out more about my life and my projects!&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;listen-to-my-story&#34;&gt;Listen to My Story
-&lt;/h2&gt;&lt;p&gt;If you wanna listen to a deeper introduction, a friend of mine decided to interview me&amp;hellip;here down below you can find a lot&amp;rsquo;s of intresting though as well as my story&lt;/p&gt;
-&lt;div class=&#34;video-wrapper&#34;&gt;
-    &lt;iframe loading=&#34;lazy&#34; 
-            src=&#34;https://www.youtube.com/embed/codiceDelVale&#34; 
-            allowfullscreen 
-            title=&#34;YouTube Video&#34;
-    &gt;
-    &lt;/iframe&gt;
-&lt;/div&gt;
-
-</description>
-        </item>
-        
-    </channel>
+  <channel>
+    <title>Projects on Simone Mattioli</title>
+    <link>http://localhost:61202/03_projects/</link>
+    <description>Recent content in Projects on Simone Mattioli</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 28 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:61202/03_projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EPICURE Hackathon GPU - October 2024</title>
+      <link>http://localhost:61202/03_projects/epicure-hackathon-2024/</link>
+      <pubDate>Mon, 28 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:61202/03_projects/epicure-hackathon-2024/</guid>
+      <description>&lt;p&gt;The &lt;strong&gt;EPICURE Hackathon&lt;/strong&gt;, held from October 28-31, 2024, brought together developers, researchers, and enthusiasts from across Europe to dive deep into the world of &lt;strong&gt;GPU programming and high-performance computing (HPC)&lt;/strong&gt;. This event was hosted in collaboration with &lt;strong&gt;CINECA&lt;/strong&gt;, one of the leading HPC centers in Europe, renowned for its contributions to scientific computing and advanced research.&lt;/p&gt;&#xA;&lt;p&gt;The hackathon was meticulously structured, featuring both hands-on labs and theoretical sessions, designed to empower participants with the latest skills in &lt;strong&gt;CUDA programming&lt;/strong&gt;, &lt;strong&gt;OpenACC&lt;/strong&gt;, and &lt;strong&gt;GPU optimization techniques&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mountain Fauna Lover</title>
+      <link>http://localhost:61202/03_projects/mountain-fauna-lover/</link>
+      <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:61202/03_projects/mountain-fauna-lover/</guid>
+      <description>&lt;p&gt;Welcome to MountainFaunaLover! Here, I share my passion for nature, wildlife, and the captivating landscapes of mountain regions. On Instagram, you’ll find a curated collection of my favorite moments in the wilderness, from up-close shots of unique wildlife to breathtaking mountain vistas. Each post is a window into my adventures, capturing the serenity, beauty, and diversity of the natural world that inspires me daily.&lt;/p&gt;&#xA;&lt;p&gt;On YouTube, I dive even deeper. My channel is a space for storytelling, featuring video journeys, wildlife encounters, and conservation insights, bringing viewers along on my explorations. Whether you’re a fellow nature enthusiast or just stopping by for some visual serenity, my content on MountainFaunaLover is dedicated to sharing the awe and importance of our wild places. Join me in celebrating the mountains, fauna, and the fascinating stories they hold!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Simo Performance Coach Consultant</title>
+      <link>http://localhost:61202/03_projects/performance/</link>
+      <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:61202/03_projects/performance/</guid>
+      <description>&lt;h2 id=&#34;stay-tunedmore-info-are-comming-soon-meanwhile-you-can-contact-me-via-email-for-info&#34;&gt;STAY TUNED&amp;hellip;more info are comming soon, meanwhile you can contact me via email for INFO&lt;/h2&gt;</description>
+    </item>
+    <item>
+      <title>Simo&#39;s Online &amp; Digital Diary</title>
+      <link>http://localhost:61202/03_projects/home/</link>
+      <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:61202/03_projects/home/</guid>
+      <description>&lt;p&gt;Welcome to simo&amp;rsquo;s Diary, a place where I love to share&amp;hellip;.da completare&lt;/p&gt;&#xA;&lt;h1 id=&#34;discover-my-youtube-channel-simos-diary&#34;&gt;Discover My YouTube Channel: Simo&amp;rsquo;s Diary&lt;/h1&gt;&#xA;&lt;p&gt;Today I want to tell you about my YouTube channel, &lt;strong&gt;&lt;a href=&#34;https://www.youtube.com/@SimosDiary2003&#34;&gt;Simo&amp;rsquo;s Diary&lt;/a&gt;&lt;/strong&gt;, where I share moments of my life, personal projects and passions. This space was born from the desire to document my experiences in an authentic and transparent way, showing you trips, adventures and much more.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-did-i-create-simos-diary&#34;&gt;Why Did I Create Simo&amp;rsquo;s Diary?&lt;/h2&gt;&#xA;&lt;p&gt;We live in an era where technology allows us to capture moments in high quality simply with a smartphone. I don&amp;rsquo;t want to waste this opportunity! In fact, I think it&amp;rsquo;s fantastic to be able to record and share pieces of my life that, otherwise, would only remain in memory. With Simo&amp;rsquo;s Diary, not only can I collect these memories for the future, but also share them with anyone who wants to follow them and maybe find inspiration.&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

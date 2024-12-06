@@ -1,5 +1,5 @@
 # Configurazione generale di Hugo
-baseURL = "https://simo-hue.github.io"    # URL del sito su GitHub Pages
+baseURL = "https://simo-hue.github.io/"    # URL del sito su GitHub Pages
 languageCode = "en-us"                    # Codice della lingua
 title = "Simone Mattioli"                 # Titolo del sito
 defaultContentLanguage = "en"             # Lingua predefinita (cambia in "it" per italiano)
@@ -13,7 +13,7 @@ disqusShortname = "simo-hue"              # Nome breve per l'integrazione con Di
 hasCJKLanguage = false                    # Lascia "false" per lingue latine
 
 # Opzioni per URL
-uglyURLs = true                           # Genera URL senza suffisso "/"
+uglyURLs = false                           # Genera URL senza suffisso "/"
 
 # Configurazione per il deployment (opzionale)
 [deployment]
