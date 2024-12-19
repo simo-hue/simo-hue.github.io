@@ -2,7 +2,7 @@
 title: "Wheelchair Basketball"
 description: "Con Olympic Basket Verona"
 date: 2024-11-06
-image: home.png
+image: home.jpg
 categories: ["Experiences"]
 draft: false
 tags: [basket, sport, emotional, educational]
@@ -12,6 +12,8 @@ tags: [basket, sport, emotional, educational]
 # An Experience That Changes Your Perspective: Wheelchair Basketball
 
 Thanks to the extraordinary collaboration between **Collegio Don Mazza**, **Residenza Ferrari delle Spade di Verona** and **Olympic Basket Verona**, I had the opportunity to live one of the most significant experiences of my life: trying **wheelchair basketball**.
+
+![This is Me having fun trying this new unbelivable sport](me.jpeg)
 
 ## A unique experience
 
@@ -41,7 +43,7 @@ A special thanks goes to **Olympic Basket Verona**, a reality that represents a 
 
 If you want to immerse yourself in this unique experience, take a look at the video I made:
 
-{{< youtube ID >}}
+{{< youtube T7m9n7ojHzw >}}
 
 ---
 
