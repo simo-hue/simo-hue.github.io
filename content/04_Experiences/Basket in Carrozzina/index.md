@@ -1,7 +1,7 @@
 ---
 title: "Wheelchair Basketball"
 description: "Con Olympic Basket Verona"
-date: 2024-11-06
+date: 2024-12-17
 image: home.jpg
 categories: ["Experiences"]
 draft: false

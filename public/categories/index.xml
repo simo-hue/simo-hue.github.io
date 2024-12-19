@@ -6,20 +6,20 @@
         <description>Recent content in Categories on Simone Mattioli</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <lastBuildDate>Wed, 27 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 17 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Experiences</title>
+        <link>http://localhost:1313/categories/experiences/</link>
+        <pubDate>Tue, 17 Dec 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/categories/experiences/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Thoughts</title>
         <link>http://localhost:1313/categories/thoughts/</link>
         <pubDate>Wed, 27 Nov 2024 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/categories/thoughts/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Experiences</title>
-        <link>http://localhost:1313/categories/experiences/</link>
-        <pubDate>Wed, 06 Nov 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/categories/experiences/</guid>
         <description></description>
         </item>
         <item>
