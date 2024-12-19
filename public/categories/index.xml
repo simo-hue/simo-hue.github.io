@@ -2,72 +2,72 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Categories on Simone Mattioli</title>
-        <link>http://localhost:1313/categories/</link>
+        <link>http://localhost:1313/01_home/simone-mattioli/categories/</link>
         <description>Recent content in Categories on Simone Mattioli</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <lastBuildDate>Tue, 17 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 17 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/01_home/simone-mattioli/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Experiences</title>
-        <link>http://localhost:1313/categories/experiences/</link>
+        <link>http://localhost:1313/01_home/simone-mattioli/categories/experiences/</link>
         <pubDate>Tue, 17 Dec 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/categories/experiences/</guid>
+        <guid>http://localhost:1313/01_home/simone-mattioli/categories/experiences/</guid>
         <description></description>
         </item>
         <item>
         <title>Thoughts</title>
-        <link>http://localhost:1313/categories/thoughts/</link>
+        <link>http://localhost:1313/01_home/simone-mattioli/categories/thoughts/</link>
         <pubDate>Wed, 27 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/categories/thoughts/</guid>
+        <guid>http://localhost:1313/01_home/simone-mattioli/categories/thoughts/</guid>
         <description></description>
         </item>
         <item>
         <title>Books</title>
-        <link>http://localhost:1313/categories/books/</link>
+        <link>http://localhost:1313/01_home/simone-mattioli/categories/books/</link>
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
-        <guid>http://localhost:1313/categories/books/</guid>
+        <guid>http://localhost:1313/01_home/simone-mattioli/categories/books/</guid>
         <description></description>
         </item>
         <item>
         <title>Passion</title>
-        <link>http://localhost:1313/categories/passion/</link>
+        <link>http://localhost:1313/01_home/simone-mattioli/categories/passion/</link>
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
-        <guid>http://localhost:1313/categories/passion/</guid>
+        <guid>http://localhost:1313/01_home/simone-mattioli/categories/passion/</guid>
         <description></description>
         </item>
         <item>
         <title>Passions</title>
-        <link>http://localhost:1313/categories/passions/</link>
+        <link>http://localhost:1313/01_home/simone-mattioli/categories/passions/</link>
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
-        <guid>http://localhost:1313/categories/passions/</guid>
+        <guid>http://localhost:1313/01_home/simone-mattioli/categories/passions/</guid>
         <description></description>
         </item>
         <item>
         <title>Projects</title>
-        <link>http://localhost:1313/categories/projects/</link>
+        <link>http://localhost:1313/01_home/simone-mattioli/categories/projects/</link>
         <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/categories/projects/</guid>
+        <guid>http://localhost:1313/01_home/simone-mattioli/categories/projects/</guid>
         <description></description>
         </item>
         <item>
         <title>Hackathon</title>
-        <link>http://localhost:1313/categories/hackathon/</link>
+        <link>http://localhost:1313/01_home/simone-mattioli/categories/hackathon/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/categories/hackathon/</guid>
+        <guid>http://localhost:1313/01_home/simone-mattioli/categories/hackathon/</guid>
         <description></description>
         </item>
         <item>
         <title>Thought</title>
-        <link>http://localhost:1313/categories/thought/</link>
+        <link>http://localhost:1313/01_home/simone-mattioli/categories/thought/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/categories/thought/</guid>
+        <guid>http://localhost:1313/01_home/simone-mattioli/categories/thought/</guid>
         <description></description>
         </item>
         
