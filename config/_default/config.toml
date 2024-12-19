@@ -1,4 +1,4 @@
-baseURL = "https://simo-hue.github.io/01_home/simone-mattioli/"
+baseURL = "https://simo-hue.github.io/"
 languageCode = "en-us"
 title = "Simone Mattioli"
 defaultContentLanguage = "en"
@@ -16,13 +16,3 @@ order = [".jpg$", ".gif$"]
 
 [[deployment.targets]]
 name = "aws-website"
-
-[outputs]
-home = ["HTML", "RSS", "Redirect"]
-
-[outputFormats]
-[outputFormats.Redirect]
-mediaType = "text/html"
-baseName = "index"
-isPlainText = true
-notAlternative = true
