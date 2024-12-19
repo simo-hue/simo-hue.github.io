@@ -20,6 +20,9 @@
     <loc>http://localhost:1313/categories/experiences/</loc>
     <lastmod>2024-12-17T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2024-12-17T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/sport/</loc>
     <lastmod>2024-12-17T00:00:00+00:00</lastmod>
   </url><url>
@@ -27,9 +30,6 @@
     <lastmod>2024-12-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/04_experiences/basket-in-carrozzina/</loc>
-    <lastmod>2024-12-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
     <lastmod>2024-12-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/intelligence/</loc>
@@ -97,6 +97,9 @@
   </url><url>
     <loc>http://localhost:1313/tags/success/</loc>
     <lastmod>2024-11-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/01_home/</loc>
+    <lastmod>2024-11-04T19:31:32+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/adrenaline/</loc>
     <lastmod>2024-11-04T19:31:32+01:00</lastmod>
@@ -237,6 +240,9 @@
     <lastmod>2024-11-04T19:31:32+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/vehicle/</loc>
+    <lastmod>2024-11-04T19:31:32+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/01_home/simone-mattioli/</loc>
     <lastmod>2024-11-04T19:31:32+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/04_experiences/frassino/</loc>

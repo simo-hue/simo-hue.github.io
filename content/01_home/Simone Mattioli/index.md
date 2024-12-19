@@ -1,17 +1,19 @@
 ---
-title: Who's Simone Mattioli?
+title: "Who's Simone Mattioli ?"
 description: 
+date: 2024-11-04T19:31:32+01:00
 comments: false
 image: home.jpeg
-readingTime: 5
 license: false
 draft: false
-
+description: "Here is a little Brief Of My life"
 menu:
-    main: 
+    main:
+        identifier: home
         weight: 1
-        params:
-            icon: user
+        params: 
+            icon: book
+
 links:
   - title: GitHub Account
     description: GitHub is the world's largest software development platform, and here is my account.
@@ -50,12 +52,6 @@ links:
     website: CV_2024.pdf
     image: resume.png
 ---
-
-Hi! Here is Simone Mattioli and this is a space where I share insights, stories, projects and ideas inspired by my interests and life experiences. 
-
-Down Below you can find an overview of my journey.
-
-
 ## Personal Life
 
 ### Early Days
