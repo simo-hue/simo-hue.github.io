@@ -26,7 +26,3 @@ mediaType = "text/html"
 baseName = "index"
 isPlainText = true
 notAlternative = true
-
-[[redirects]]
-from = "/"
-to = "/01_home/simone-mattioli/"
