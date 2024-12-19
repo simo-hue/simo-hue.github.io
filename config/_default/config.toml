@@ -1,31 +1,18 @@
-# Configurazione generale di Hugo
-baseURL = "https://simo-hue.github.io/"    # URL del sito su GitHub Pages
-languageCode = "en-us"                    # Codice della lingua
-title = "Simone Mattioli"                 # Titolo del sito
-defaultContentLanguage = "en"             # Lingua predefinita (cambia in "it" per italiano)
+baseURL = "https://simo-hue.github.io/"
+languageCode = "en-us"
+title = "Simone Mattioli"
+defaultContentLanguage = "en"
+theme = "hugo-theme-stack"
+
 [pagination]
 pagerSize = 10
 
-# Opzioni per i commenti (usa il nome breve di Disqus per attivare i commenti)
-disqusShortname = "simo-hue"              # Nome breve per l'integrazione con Disqus
+disqusShortname = "simo-hue"
+hasCJKLanguage = false
+uglyURLs = false
 
-# Impostazione per lingue CJK (non necessario per l'italiano o l'inglese)
-hasCJKLanguage = false                    # Lascia "false" per lingue latine
-
-# Opzioni per URL
-uglyURLs = false                           # Genera URL senza suffisso "/"
-
-# Configurazione per il deployment (opzionale)
 [deployment]
-# Imposta l'ordine di caricamento dei file per il deployment
 order = [".jpg$", ".gif$"]
 
 [[deployment.targets]]
-# Nome per il target di deployment
 name = "aws-website"
-# Rimuovi la linea qui sotto se non stai pubblicando su AWS S3
-# URL = "s3://davidcavadadev?region=eu-north-1"
-
-# Configurazioni aggiuntive del tema (i18n support)
-# Lingue disponibili: en, fr, id, ja, ko, pt-br, zh-cn, zh-tw, es, de, nl, it, th, el, uk, ar
-DefaultContentLanguage = "en"              

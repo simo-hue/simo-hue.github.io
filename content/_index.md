@@ -5,6 +5,7 @@ comments: false
 image: home.jpeg
 readingTime: 5
 license: false
+draft: false
 
 menu:
     main: 

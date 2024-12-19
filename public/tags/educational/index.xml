@@ -1,19 +1,91 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Educational on Simone Mattioli</title>
-    <link>http://localhost:61202/tags/educational/</link>
-    <description>Recent content in Educational on Simone Mattioli</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Wed, 06 Nov 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:61202/tags/educational/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>NO MAFIA Sicily Tour</title>
-      <link>http://localhost:61202/04_experiences/sicily/</link>
-      <pubDate>Wed, 06 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:61202/04_experiences/sicily/</guid>
-      <description>&lt;p&gt;tour sicilia, da implementare&lt;/p&gt;&#xA;&lt;p&gt;TO DO:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;passarsi tutte le foto orizzontali&lt;/li&gt;&#xA;&lt;li&gt;fare table di tutte le cose che abbiamo fatto&lt;/li&gt;&#xA;&lt;li&gt;premesse &amp;amp; aspettative&lt;/li&gt;&#xA;&lt;li&gt;Contesto storico&lt;/li&gt;&#xA;&lt;li&gt;Stazione di capaci&lt;/li&gt;&#xA;&lt;li&gt;buncherino&lt;/li&gt;&#xA;&lt;li&gt;palermo&lt;/li&gt;&#xA;&lt;li&gt;Segno della resistenza sulla scrivania di Borsellino -&amp;gt; ( l&amp;rsquo;ho interpretato come ) la resistenza e resilienza che ogni essere umano ( Di successo ) deve avere&lt;/li&gt;&#xA;&lt;li&gt;determinazione che ci vuole per raggiungere grandi cose&lt;/li&gt;&#xA;&lt;li&gt;testimonianza del fotografo ( magari nei thought  mettere che siamo una generazione che si smagnetizzerà -&amp;gt; problema del digitale )&lt;/li&gt;&#xA;&lt;li&gt;Come vogliono rappresentare la loro terra ( senso di appartenenza / eliminazione degli stereotipi)&lt;/li&gt;&#xA;&lt;li&gt;La differenza tra una guida &amp;ldquo;normale&amp;rdquo; del 99% ed il top 1% ( come in ogni settore si può eccellere e non)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&#xA;    &#xA;    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/RdgWMgmqqHk?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&#xA;      &gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;</description>
-    </item>
-  </channel>
+    <channel>
+        <title>Educational on Simone Mattioli</title>
+        <link>http://localhost:1313/tags/educational/</link>
+        <description>Recent content in Educational on Simone Mattioli</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Wed, 06 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/educational/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>NO MAFIA Sicily Tour</title>
+        <link>http://localhost:1313/04_experiences/sicily/</link>
+        <pubDate>Wed, 06 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/04_experiences/sicily/</guid>
+        <description>&lt;img src="http://localhost:1313/04_experiences/sicily/home.png" alt="Featured image of post NO MAFIA Sicily Tour" /&gt;&lt;p&gt;tour sicilia, da implementare&lt;/p&gt;
+&lt;p&gt;TO DO:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;passarsi tutte le foto orizzontali&lt;/li&gt;
+&lt;li&gt;fare table di tutte le cose che abbiamo fatto&lt;/li&gt;
+&lt;li&gt;premesse &amp;amp; aspettative&lt;/li&gt;
+&lt;li&gt;Contesto storico&lt;/li&gt;
+&lt;li&gt;Stazione di capaci&lt;/li&gt;
+&lt;li&gt;buncherino&lt;/li&gt;
+&lt;li&gt;palermo&lt;/li&gt;
+&lt;li&gt;Segno della resistenza sulla scrivania di Borsellino -&amp;gt; ( l&amp;rsquo;ho interpretato come ) la resistenza e resilienza che ogni essere umano ( Di successo ) deve avere&lt;/li&gt;
+&lt;li&gt;determinazione che ci vuole per raggiungere grandi cose&lt;/li&gt;
+&lt;li&gt;testimonianza del fotografo ( magari nei thought  mettere che siamo una generazione che si smagnetizzerà -&amp;gt; problema del digitale )&lt;/li&gt;
+&lt;li&gt;Come vogliono rappresentare la loro terra ( senso di appartenenza / eliminazione degli stereotipi)&lt;/li&gt;
+&lt;li&gt;La differenza tra una guida &amp;ldquo;normale&amp;rdquo; del 99% ed il top 1% ( come in ogni settore si può eccellere e non)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/RdgWMgmqqHk&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
+        </item>
+        <item>
+        <title>Wheelchair Basketball</title>
+        <link>http://localhost:1313/04_experiences/basket-in-carrozzina/</link>
+        <pubDate>Wed, 06 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/04_experiences/basket-in-carrozzina/</guid>
+        <description>&lt;img src="http://localhost:1313/home.png" alt="Featured image of post Wheelchair Basketball" /&gt;&lt;h1 id=&#34;an-experience-that-changes-your-perspective-wheelchair-basketball&#34;&gt;An Experience That Changes Your Perspective: Wheelchair Basketball
+&lt;/h1&gt;&lt;p&gt;Thanks to the extraordinary collaboration between &lt;strong&gt;Collegio Don Mazza&lt;/strong&gt;, &lt;strong&gt;Residenza Ferrari delle Spade di Verona&lt;/strong&gt; and &lt;strong&gt;Olympic Basket Verona&lt;/strong&gt;, I had the opportunity to live one of the most significant experiences of my life: trying &lt;strong&gt;wheelchair basketball&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;a-unique-experience&#34;&gt;A unique experience
+&lt;/h2&gt;&lt;p&gt;This discipline goes far beyond a simple game. It is a real lesson in strength, determination and inclusion. Sitting in a wheelchair, picking up the ball and trying to move, shoot and collaborate with the rest of the team was enlightening.&lt;/p&gt;
+&lt;p&gt;I learned that sport is a universal language, capable of breaking down all types of barriers – physical, mental and cultural. It was an opportunity to see the world from a completely different perspective, to recognize the daily challenges that many athletes face and to appreciate their commitment and resilience.&lt;/p&gt;
+&lt;h2 id=&#34;sport-as-a-driver-of-inspiration&#34;&gt;Sport as a driver of inspiration
+&lt;/h2&gt;&lt;p&gt;As Nelson Mandela said:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;“Sport has the power to change the world. It has the power to inspire. It has the power to unite people like few other things in the world.”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is exactly what I felt during this experience. Sport is a powerful tool to overcome limits and to build authentic bonds with those around us.&lt;/p&gt;
+&lt;p&gt;Another phrase that strongly resonates with this experience is that of John Wooden:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;“Don’t let what you can’t do get in the way of what you can do.”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Wheelchair basketball shows that with passion, determination and team spirit there are no insurmountable obstacles.&lt;/p&gt;
+&lt;h2 id=&#34;olympic-basket-verona-a-reality-to-discover&#34;&gt;Olympic Basket Verona: a reality to discover
+&lt;/h2&gt;&lt;p&gt;A special thanks goes to &lt;strong&gt;Olympic Basket Verona&lt;/strong&gt;, a reality that represents a true example of inclusion and promotion of sport for all. If you want to know more about them, here&amp;rsquo;s where you can find them online:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Facebook&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.facebook.com/OlympicVerona/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Olympic Basket Verona&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Instagram&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.instagram.com/olympic_basket_verona/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@olympic_basket_verona&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;watch-the-video-of-my-experience&#34;&gt;Watch the video of my experience
+&lt;/h2&gt;&lt;p&gt;If you want to immerse yourself in this unique experience, take a look at the video I made:&lt;/p&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/ID&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+&lt;p&gt;💡 &lt;strong&gt;And you? Have you ever had an experience that helped you change your perspective?&lt;/strong&gt; Tell me in the comments or contact me directly, I&amp;rsquo;d love to hear your story!&lt;/p&gt;
+&lt;h3 id=&#34;hashtags-for-sharing&#34;&gt;Hashtags for sharing
+&lt;/h3&gt;&lt;p&gt;#Inclusion #WheelchairBasketball #SportForAll #Determination #Resilience #BreakingBarriers #Teamwork #Inspiration #OlympicBasketVerona&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>
