@@ -1,1 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Who's Simone Mattioli? on Simone Mattioli</title><link>https://simo-hue.github.io/categories/home/</link><description>Recent content in Who's Simone Mattioli? on Simone Mattioli</description><generator>Hugo</generator><language>en</language><atom:link href="https://simo-hue.github.io/categories/home/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Let&#39;s Go on Simone Mattioli</title>
+        <link>http://localhost:1313/categories/home/</link>
+        <description>Recent content in Let&#39;s Go on Simone Mattioli</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language><atom:link href="http://localhost:1313/categories/home/index.xml" rel="self" type="application/rss+xml" />
+    </channel>
+</rss>
