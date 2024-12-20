@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Sport on Simone Mattioli</title>
-        <link>http://localhost:1313/01_home/simone-mattioli/tags/sport/</link>
+        <link>http://localhost:1313/tags/sport/</link>
         <description>Recent content in Sport on Simone Mattioli</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <lastBuildDate>Tue, 17 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/01_home/simone-mattioli/tags/sport/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 17 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/sport/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Wheelchair Basketball</title>
-        <link>http://localhost:1313/01_home/simone-mattioli/04_experiences/basket-in-carrozzina/</link>
+        <link>http://localhost:1313/04_experiences/basket-in-carrozzina/</link>
         <pubDate>Tue, 17 Dec 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/01_home/simone-mattioli/04_experiences/basket-in-carrozzina/</guid>
-        <description>&lt;img src="http://localhost:1313/01_home/simone-mattioli/04_experiences/basket-in-carrozzina/home.jpg" alt="Featured image of post Wheelchair Basketball" /&gt;&lt;h1 id=&#34;an-experience-that-changes-your-perspective-wheelchair-basketball&#34;&gt;An Experience That Changes Your Perspective: Wheelchair Basketball
+        <guid>http://localhost:1313/04_experiences/basket-in-carrozzina/</guid>
+        <description>&lt;img src="http://localhost:1313/04_experiences/basket-in-carrozzina/home.jpg" alt="Featured image of post Wheelchair Basketball" /&gt;&lt;h1 id=&#34;an-experience-that-changes-your-perspective-wheelchair-basketball&#34;&gt;An Experience That Changes Your Perspective: Wheelchair Basketball
 &lt;/h1&gt;&lt;p&gt;Thanks to the extraordinary collaboration between &lt;strong&gt;Collegio Don Mazza&lt;/strong&gt;, &lt;strong&gt;Residenza Ferrari delle Spade di Verona&lt;/strong&gt; and &lt;strong&gt;Olympic Basket Verona&lt;/strong&gt;, I had the opportunity to live one of the most significant experiences of my life: trying &lt;strong&gt;wheelchair basketball&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/01_home/simone-mattioli/01_home/simone-mattioli/04_experiences/basket-in-carrozzina/me.jpeg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/basket-in-carrozzina/me.jpeg&#34;
 	width=&#34;1290&#34;
 	height=&#34;2271&#34;
-	srcset=&#34;http://localhost:1313/01_home/simone-mattioli/01_home/simone-mattioli/04_experiences/basket-in-carrozzina/me_hu7327529814731187994.jpeg 480w, http://localhost:1313/01_home/simone-mattioli/01_home/simone-mattioli/04_experiences/basket-in-carrozzina/me_hu10911303650925941073.jpeg 1024w&#34;
+	srcset=&#34;http://localhost:1313/04_experiences/basket-in-carrozzina/me_hu7327529814731187994.jpeg 480w, http://localhost:1313/04_experiences/basket-in-carrozzina/me_hu10911303650925941073.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;This is Me having fun trying this new unbelivable sport&#34;
@@ -69,14 +69,14 @@
         </item>
         <item>
         <title>Mountain bike</title>
-        <link>http://localhost:1313/01_home/simone-mattioli/05_passions/bike/</link>
+        <link>http://localhost:1313/05_passions/bike/</link>
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
-        <guid>http://localhost:1313/01_home/simone-mattioli/05_passions/bike/</guid>
-        <description>&lt;img src="http://localhost:1313/01_home/simone-mattioli/05_passions/bike/bike.JPG" alt="Featured image of post Mountain bike" /&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/01_home/simone-mattioli/01_home/simone-mattioli/05_passions/bike/mountainbike.jpg&#34;
+        <guid>http://localhost:1313/05_passions/bike/</guid>
+        <description>&lt;img src="http://localhost:1313/05_passions/bike/bike.JPG" alt="Featured image of post Mountain bike" /&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/05_passions/bike/mountainbike.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;http://localhost:1313/01_home/simone-mattioli/01_home/simone-mattioli/05_passions/bike/mountainbike_hu4849987664021280301.jpg 480w, http://localhost:1313/01_home/simone-mattioli/01_home/simone-mattioli/05_passions/bike/mountainbike_hu8333773938812547352.jpg 1024w&#34;
+	srcset=&#34;http://localhost:1313/05_passions/bike/mountainbike_hu4849987664021280301.jpg 480w, http://localhost:1313/05_passions/bike/mountainbike_hu8333773938812547352.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Me exploring the beauty of Rabbi Valley&#34;
@@ -93,15 +93,15 @@ From discovering the best gear and customizing my setup to push my limits, to th
         </item>
         <item>
         <title>Mountain Hiking</title>
-        <link>http://localhost:1313/01_home/simone-mattioli/05_passions/hiking/</link>
+        <link>http://localhost:1313/05_passions/hiking/</link>
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
-        <guid>http://localhost:1313/01_home/simone-mattioli/05_passions/hiking/</guid>
-        <description>&lt;img src="http://localhost:1313/01_home/simone-mattioli/05_passions/hiking/rabbi.JPG" alt="Featured image of post Mountain Hiking" /&gt;&lt;h1 id=&#34;-comming-soon&#34;&gt;# comming soon&amp;hellip;
-&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/01_home/simone-mattioli/01_home/simone-mattioli/05_passions/hiking/sfondo.JPG&#34;
+        <guid>http://localhost:1313/05_passions/hiking/</guid>
+        <description>&lt;img src="http://localhost:1313/05_passions/hiking/rabbi.JPG" alt="Featured image of post Mountain Hiking" /&gt;&lt;h1 id=&#34;-comming-soon&#34;&gt;# comming soon&amp;hellip;
+&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/05_passions/hiking/sfondo.JPG&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;http://localhost:1313/01_home/simone-mattioli/01_home/simone-mattioli/05_passions/hiking/sfondo_hu6737264303993248711.JPG 480w, http://localhost:1313/01_home/simone-mattioli/01_home/simone-mattioli/05_passions/hiking/sfondo_hu15090278562224046264.JPG 1024w&#34;
+	srcset=&#34;http://localhost:1313/05_passions/hiking/sfondo_hu6737264303993248711.JPG 480w, http://localhost:1313/05_passions/hiking/sfondo_hu15090278562224046264.JPG 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -110,10 +110,10 @@ From discovering the best gear and customizing my setup to push my limits, to th
 		data-flex-basis=&#34;320px&#34;
 	
 &gt;
-&lt;img src=&#34;http://localhost:1313/01_home/simone-mattioli/01_home/simone-mattioli/05_passions/hiking/alba.JPG&#34;
+&lt;img src=&#34;http://localhost:1313/05_passions/hiking/alba.JPG&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;http://localhost:1313/01_home/simone-mattioli/01_home/simone-mattioli/05_passions/hiking/alba_hu13369600799418941076.JPG 480w, http://localhost:1313/01_home/simone-mattioli/01_home/simone-mattioli/05_passions/hiking/alba_hu10960277893557734281.JPG 1024w&#34;
+	srcset=&#34;http://localhost:1313/05_passions/hiking/alba_hu13369600799418941076.JPG 480w, http://localhost:1313/05_passions/hiking/alba_hu10960277893557734281.JPG 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -122,10 +122,10 @@ From discovering the best gear and customizing my setup to push my limits, to th
 		data-flex-basis=&#34;320px&#34;
 	
 &gt;
-&lt;img src=&#34;http://localhost:1313/01_home/simone-mattioli/01_home/simone-mattioli/05_passions/hiking/rabb.JPG&#34;
+&lt;img src=&#34;http://localhost:1313/05_passions/hiking/rabb.JPG&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;http://localhost:1313/01_home/simone-mattioli/01_home/simone-mattioli/05_passions/hiking/rabb_hu569680403830225041.JPG 480w, http://localhost:1313/01_home/simone-mattioli/01_home/simone-mattioli/05_passions/hiking/rabb_hu263668569943984736.JPG 1024w&#34;
+	srcset=&#34;http://localhost:1313/05_passions/hiking/rabb_hu569680403830225041.JPG 480w, http://localhost:1313/05_passions/hiking/rabb_hu263668569943984736.JPG 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -138,11 +138,11 @@ From discovering the best gear and customizing my setup to push my limits, to th
         </item>
         <item>
         <title>Ski</title>
-        <link>http://localhost:1313/01_home/simone-mattioli/05_passions/ski/</link>
+        <link>http://localhost:1313/05_passions/ski/</link>
         <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
         
-        <guid>http://localhost:1313/01_home/simone-mattioli/05_passions/ski/</guid>
-        <description>&lt;img src="http://localhost:1313/01_home/simone-mattioli/05_passions/ski/logo.JPG" alt="Featured image of post Ski" /&gt;&lt;h1 id=&#34;comming-soon&#34;&gt;comming soon&amp;hellip;
+        <guid>http://localhost:1313/05_passions/ski/</guid>
+        <description>&lt;img src="http://localhost:1313/05_passions/ski/logo.JPG" alt="Featured image of post Ski" /&gt;&lt;h1 id=&#34;comming-soon&#34;&gt;comming soon&amp;hellip;
 &lt;/h1&gt;</description>
         </item>
         
