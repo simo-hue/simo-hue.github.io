@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Projects on Simone Mattioli</title>
-        <link>https://simo-hue.github.io/categories/projects/</link>
+        <link>http://localhost:1313/categories/projects/</link>
         <description>Recent content in Projects on Simone Mattioli</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <lastBuildDate>Sat, 02 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://simo-hue.github.io/categories/projects/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 02 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/projects/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Birdwatching Experience with SWAROVSKI OPTIK at Le Ali del Frassino Residence (Lake Frassino)</title>
-        <link>https://simo-hue.github.io/04_experiences/frassino/</link>
+        <link>http://localhost:1313/04_experiences/frassino/</link>
         <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://simo-hue.github.io/04_experiences/frassino/</guid>
-        <description>&lt;img src="https://simo-hue.github.io/04_experiences/frassino/invito.png" alt="Featured image of post Birdwatching Experience with SWAROVSKI OPTIK at Le Ali del Frassino Residence (Lake Frassino)" /&gt;&lt;p&gt;&lt;img src=&#34;https://simo-hue.github.io/04_experiences/frassino/swarovski.jpeg&#34;
+        <guid>http://localhost:1313/04_experiences/frassino/</guid>
+        <description>&lt;img src="http://localhost:1313/04_experiences/frassino/invito.png" alt="Featured image of post Birdwatching Experience with SWAROVSKI OPTIK at Le Ali del Frassino Residence (Lake Frassino)" /&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/frassino/swarovski.jpeg&#34;
 	width=&#34;337&#34;
 	height=&#34;150&#34;
-	srcset=&#34;https://simo-hue.github.io/04_experiences/frassino/swarovski_hu14759465543953173956.jpeg 480w, https://simo-hue.github.io/04_experiences/frassino/swarovski_hu6023009479089032581.jpeg 1024w&#34;
+	srcset=&#34;http://localhost:1313/04_experiences/frassino/swarovski_hu14759465543953173956.jpeg 480w, http://localhost:1313/04_experiences/frassino/swarovski_hu6023009479089032581.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Logo Swarovski Optik&#34;
@@ -28,10 +28,10 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;Recently, thanks to my project &lt;em&gt;Mountain Fauna Lover&lt;/em&gt;, I had the chance to participate in an exclusive event organized by SWAROVSKI OPTIK Italy at the stunning Frassino Oasis in Peschiera del Garda.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Mountain Fauna Lover&lt;/em&gt; began almost as a joke, born from my love for mountains and wildlife. I never imagined it would open doors to such exciting collaborations.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://simo-hue.github.io/04_experiences/frassino/migrazione.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/frassino/migrazione.jpg&#34;
 	width=&#34;1200&#34;
 	height=&#34;800&#34;
-	srcset=&#34;https://simo-hue.github.io/04_experiences/frassino/migrazione_hu3415763475070476929.jpg 480w, https://simo-hue.github.io/04_experiences/frassino/migrazione_hu15628709650227752216.jpg 1024w&#34;
+	srcset=&#34;http://localhost:1313/04_experiences/frassino/migrazione_hu3415763475070476929.jpg 480w, http://localhost:1313/04_experiences/frassino/migrazione_hu15628709650227752216.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Bird Migration&#34;
@@ -43,10 +43,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Through this project, I’ve been able to experience nature up close, often alongside experts and using top-tier equipment, making each adventure more unforgettable than the last.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://simo-hue.github.io/04_experiences/frassino/papera.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/frassino/papera.jpg&#34;
 	width=&#34;3339&#34;
 	height=&#34;2506&#34;
-	srcset=&#34;https://simo-hue.github.io/04_experiences/frassino/papera_hu12033954271459282994.jpg 480w, https://simo-hue.github.io/04_experiences/frassino/papera_hu12014715791681049840.jpg 1024w&#34;
+	srcset=&#34;http://localhost:1313/04_experiences/frassino/papera_hu12033954271459282994.jpg 480w, http://localhost:1313/04_experiences/frassino/papera_hu12014715791681049840.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Duck Photo&#34;
@@ -58,10 +58,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;This time, we were immersed in an extraordinary birdwatching experience with expert guidance and SWAROVSKI OPTIK’s impressive tools, including the NL X52 binoculars and the BTX spotting scope. The day began with a presentation by SWAROVSKI OPTIK Italy’s manager, Franco Cernigliaro, and ornithologist Alessandro Sartori, who introduced us to the bird species we’d encounter.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://simo-hue.github.io/04_experiences/frassino/binocolo.JPG&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/frassino/binocolo.JPG&#34;
 	width=&#34;1920&#34;
 	height=&#34;900&#34;
-	srcset=&#34;https://simo-hue.github.io/04_experiences/frassino/binocolo_hu8836717783631905540.JPG 480w, https://simo-hue.github.io/04_experiences/frassino/binocolo_hu7288733104192064040.JPG 1024w&#34;
+	srcset=&#34;http://localhost:1313/04_experiences/frassino/binocolo_hu8836717783631905540.JPG 480w, http://localhost:1313/04_experiences/frassino/binocolo_hu7288733104192064040.JPG 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;New Swarovski Optik NL-Pures Series&#34;
@@ -74,10 +74,10 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;During my meeting with Franco Cernigliaro, the Country Manager of Swarovski Optik Italy, we exchanged inspiring ideas and perspectives on biodiversity and sustainability. It was a remarkable experience to engage with someone equally dedicated to nature and innovation. Our discussion centered on how these themes are fundamental to Swarovski’s mission—not just as marketing strategies but as true core values.
 Swarovski Optik actively encourages deeper connections with nature and is committed to supporting sustainable practices and environmentally responsible technologies in their high-precision optics products&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://simo-hue.github.io/04_experiences/frassino/pool.JPG&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/frassino/pool.JPG&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;https://simo-hue.github.io/04_experiences/frassino/pool_hu480610701872245088.JPG 480w, https://simo-hue.github.io/04_experiences/frassino/pool_hu5052254301236937194.JPG 1024w&#34;
+	srcset=&#34;http://localhost:1313/04_experiences/frassino/pool_hu480610701872245088.JPG 480w, http://localhost:1313/04_experiences/frassino/pool_hu5052254301236937194.JPG 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Ali del Frassino Hotel&amp;rsquo;s Pool&#34;
@@ -94,11 +94,11 @@ Swarovski Optik actively encourages deeper connections with nature and is commit
         </item>
         <item>
         <title>EPICURE Hackathon GPU - October 2024</title>
-        <link>https://simo-hue.github.io/03_projects/epicure-hackathon-2024/</link>
+        <link>http://localhost:1313/03_projects/epicure-hackathon-2024/</link>
         <pubDate>Mon, 28 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://simo-hue.github.io/03_projects/epicure-hackathon-2024/</guid>
-        <description>&lt;img src="https://simo-hue.github.io/03_projects/epicure-hackathon-2024/cover.jpg" alt="Featured image of post EPICURE Hackathon GPU - October 2024" /&gt;&lt;p&gt;The &lt;strong&gt;EPICURE Hackathon&lt;/strong&gt;, held from October 28-31, 2024, brought together developers, researchers, and enthusiasts from across Europe to dive deep into the world of &lt;strong&gt;GPU programming and high-performance computing (HPC)&lt;/strong&gt;. This event was hosted in collaboration with &lt;strong&gt;CINECA&lt;/strong&gt;, one of the leading HPC centers in Europe, renowned for its contributions to scientific computing and advanced research.&lt;/p&gt;
+        <guid>http://localhost:1313/03_projects/epicure-hackathon-2024/</guid>
+        <description>&lt;img src="http://localhost:1313/03_projects/epicure-hackathon-2024/cover.jpg" alt="Featured image of post EPICURE Hackathon GPU - October 2024" /&gt;&lt;p&gt;The &lt;strong&gt;EPICURE Hackathon&lt;/strong&gt;, held from October 28-31, 2024, brought together developers, researchers, and enthusiasts from across Europe to dive deep into the world of &lt;strong&gt;GPU programming and high-performance computing (HPC)&lt;/strong&gt;. This event was hosted in collaboration with &lt;strong&gt;CINECA&lt;/strong&gt;, one of the leading HPC centers in Europe, renowned for its contributions to scientific computing and advanced research.&lt;/p&gt;
 &lt;p&gt;The hackathon was meticulously structured, featuring both hands-on labs and theoretical sessions, designed to empower participants with the latest skills in &lt;strong&gt;CUDA programming&lt;/strong&gt;, &lt;strong&gt;OpenACC&lt;/strong&gt;, and &lt;strong&gt;GPU optimization techniques&lt;/strong&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;day-1-getting-started-with-gpu-computing&#34;&gt;Day 1: Getting Started with GPU Computing
 &lt;/h2&gt;&lt;p&gt;The first day served as an introduction to GPU computing, aimed at setting a strong foundation. Topics included:&lt;/p&gt;
@@ -154,10 +154,10 @@ Swarovski Optik actively encourages deeper connections with nature and is commit
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;Images from Day 1:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://simo-hue.github.io/03_projects/epicure-hackathon-2024/1.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/03_projects/epicure-hackathon-2024/1.jpg&#34;
 	width=&#34;8064&#34;
 	height=&#34;6048&#34;
-	srcset=&#34;https://simo-hue.github.io/03_projects/epicure-hackathon-2024/1_hu9058614684240352447.jpg 480w, https://simo-hue.github.io/03_projects/epicure-hackathon-2024/1_hu2407595864030796957.jpg 1024w&#34;
+	srcset=&#34;http://localhost:1313/03_projects/epicure-hackathon-2024/1_hu9058614684240352447.jpg 480w, http://localhost:1313/03_projects/epicure-hackathon-2024/1_hu2407595864030796957.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Theory Part: Introduction to CUDA and GPU Programming&#34;
@@ -256,10 +256,10 @@ Swarovski Optik actively encourages deeper connections with nature and is commit
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;p&gt;This hackathon has certainly sparked a deeper interest in exploring the potential of GPUs for high-performance tasks. I’m looking forward to applying these skills in future projects and sharing my insights with the community.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://simo-hue.github.io/03_projects/epicure-hackathon-2024/3.jpeg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/03_projects/epicure-hackathon-2024/3.jpeg&#34;
 	width=&#34;2966&#34;
 	height=&#34;1674&#34;
-	srcset=&#34;https://simo-hue.github.io/03_projects/epicure-hackathon-2024/3_hu4568767519802119854.jpeg 480w, https://simo-hue.github.io/03_projects/epicure-hackathon-2024/3_hu7805776666760800763.jpeg 1024w&#34;
+	srcset=&#34;http://localhost:1313/03_projects/epicure-hackathon-2024/3_hu4568767519802119854.jpeg 480w, http://localhost:1313/03_projects/epicure-hackathon-2024/3_hu7805776666760800763.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Me Presenting our results of the Lab sessions of the two days before&#34;
@@ -285,11 +285,11 @@ Swarovski Optik actively encourages deeper connections with nature and is commit
         </item>
         <item>
         <title>Mountain Fauna Lover</title>
-        <link>https://simo-hue.github.io/03_projects/mountain-fauna-lover/</link>
+        <link>http://localhost:1313/03_projects/mountain-fauna-lover/</link>
         <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://simo-hue.github.io/03_projects/mountain-fauna-lover/</guid>
-        <description>&lt;img src="https://simo-hue.github.io/03_projects/mountain-fauna-lover/logo.jpg" alt="Featured image of post Mountain Fauna Lover" /&gt;&lt;p&gt;Welcome to MountainFaunaLover! Here, I share my passion for nature, wildlife, and the captivating landscapes of mountain regions. On Instagram, you’ll find a curated collection of my favorite moments in the wilderness, from up-close shots of unique wildlife to breathtaking mountain vistas. Each post is a window into my adventures, capturing the serenity, beauty, and diversity of the natural world that inspires me daily.&lt;/p&gt;
+        <guid>http://localhost:1313/03_projects/mountain-fauna-lover/</guid>
+        <description>&lt;img src="http://localhost:1313/03_projects/mountain-fauna-lover/logo.jpg" alt="Featured image of post Mountain Fauna Lover" /&gt;&lt;p&gt;Welcome to MountainFaunaLover! Here, I share my passion for nature, wildlife, and the captivating landscapes of mountain regions. On Instagram, you’ll find a curated collection of my favorite moments in the wilderness, from up-close shots of unique wildlife to breathtaking mountain vistas. Each post is a window into my adventures, capturing the serenity, beauty, and diversity of the natural world that inspires me daily.&lt;/p&gt;
 &lt;p&gt;On YouTube, I dive even deeper. My channel is a space for storytelling, featuring video journeys, wildlife encounters, and conservation insights, bringing viewers along on my explorations. Whether you’re a fellow nature enthusiast or just stopping by for some visual serenity, my content on MountainFaunaLover is dedicated to sharing the awe and importance of our wild places. Join me in celebrating the mountains, fauna, and the fascinating stories they hold!&lt;/p&gt;
 &lt;h2 id=&#34;youtube-spoiler&#34;&gt;YouTube Spoiler
 &lt;/h2&gt;&lt;div class=&#34;video-wrapper&#34;&gt;
@@ -305,20 +305,20 @@ Swarovski Optik actively encourages deeper connections with nature and is commit
         </item>
         <item>
         <title>Simo Performance Coach Consultant</title>
-        <link>https://simo-hue.github.io/03_projects/performance/</link>
+        <link>http://localhost:1313/03_projects/performance/</link>
         <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://simo-hue.github.io/03_projects/performance/</guid>
-        <description>&lt;img src="https://simo-hue.github.io/03_projects/performance/image.png" alt="Featured image of post Simo Performance Coach Consultant" /&gt;&lt;h2 id=&#34;stay-tunedmore-info-are-comming-soon-meanwhile-you-can-contact-me-via-email-for-info&#34;&gt;STAY TUNED&amp;hellip;more info are comming soon, meanwhile you can contact me via email for INFO
+        <guid>http://localhost:1313/03_projects/performance/</guid>
+        <description>&lt;img src="http://localhost:1313/03_projects/performance/image.png" alt="Featured image of post Simo Performance Coach Consultant" /&gt;&lt;h2 id=&#34;stay-tunedmore-info-are-comming-soon-meanwhile-you-can-contact-me-via-email-for-info&#34;&gt;STAY TUNED&amp;hellip;more info are comming soon, meanwhile you can contact me via email for INFO
 &lt;/h2&gt;</description>
         </item>
         <item>
         <title>Simo&#39;s Online &amp; Digital Diary</title>
-        <link>https://simo-hue.github.io/03_projects/home/</link>
+        <link>http://localhost:1313/03_projects/home/</link>
         <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://simo-hue.github.io/03_projects/home/</guid>
-        <description>&lt;img src="https://simo-hue.github.io/03_projects/home/logo.jpeg" alt="Featured image of post Simo&#39;s Online &amp; Digital Diary" /&gt;&lt;p&gt;Welcome to simo&amp;rsquo;s Diary, a place where I love to share&amp;hellip;.da completare&lt;/p&gt;
+        <guid>http://localhost:1313/03_projects/home/</guid>
+        <description>&lt;img src="http://localhost:1313/03_projects/home/logo.jpeg" alt="Featured image of post Simo&#39;s Online &amp; Digital Diary" /&gt;&lt;p&gt;Welcome to simo&amp;rsquo;s Diary, a place where I love to share&amp;hellip;.da completare&lt;/p&gt;
 &lt;h1 id=&#34;discover-my-youtube-channel-simos-diary&#34;&gt;Discover My YouTube Channel: Simo&amp;rsquo;s Diary
 &lt;/h1&gt;&lt;p&gt;Today I want to tell you about my YouTube channel, &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/@SimosDiary2003&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Simo&amp;rsquo;s Diary&lt;/a&gt;&lt;/strong&gt;, where I share moments of my life, personal projects and passions. This space was born from the desire to document my experiences in an authentic and transparent way, showing you trips, adventures and much more.&lt;/p&gt;

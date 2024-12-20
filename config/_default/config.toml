@@ -16,17 +16,3 @@ order = [".jpg$", ".gif$"]
 
 [[deployment.targets]]
 name = "aws-website"
-
-[outputs]
-home = ["HTML", "RSS", "Redirect"]
-
-[outputFormats]
-[outputFormats.Redirect]
-mediaType = "text/html"
-baseName = "index"
-isPlainText = true
-notAlternative = true
-
-[[redirects]]
-from = "/"
-to = "/01_home/simone-mattioli/"
