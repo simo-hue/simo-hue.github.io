@@ -2,10 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tags/basket/</loc>
-    <lastmod>2024-12-17T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/categories/books/</loc>
+    <lastmod>2024-12-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2024-12-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2024-12-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/06_books/machina-sapiens/</loc>
+    <lastmod>2024-12-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/basket/</loc>
     <lastmod>2024-12-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/educational/</loc>
@@ -18,9 +27,6 @@
     <lastmod>2024-12-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/experiences/</loc>
-    <lastmod>2024-12-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
     <lastmod>2024-12-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/sport/</loc>
@@ -108,9 +114,6 @@
     <lastmod>2024-11-04T19:31:32+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/audi/</loc>
-    <lastmod>2024-11-04T19:31:32+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/books/</loc>
     <lastmod>2024-11-04T19:31:32+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/car/</loc>
@@ -344,6 +347,10 @@
     <loc>http://localhost:1313/categories/hackathon/</loc>
   </url><url>
     <loc>http://localhost:1313/page/</loc>
+  </url><url>
+    <loc>http://localhost:1313/page/home/</loc>
+  </url><url>
+    <loc>http://localhost:1313/post/</loc>
   </url><url>
     <loc>http://localhost:1313/search/</loc>
   </url><url>
