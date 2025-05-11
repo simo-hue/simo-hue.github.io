@@ -23,7 +23,7 @@ Questo sito è uno spazio dove condivido i miei progetti, passioni, contenuti fo
 
 ## 📷 Anteprima
 
-![Screenshot](./img github/preview.png)
+![IMG PREVIEW](./imgGithub/preview.png)
 
 > Se vuoi vedere il sito in azione:  
 🔗 [https://simo-hue.github.io/01_home/simone-mattioli](https://simo-hue.github.io/01_home/simone-mattioli/)
