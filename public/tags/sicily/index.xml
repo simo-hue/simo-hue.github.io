@@ -1,19 +1,44 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Sicily on Simone Mattioli</title>
-    <link>http://localhost:1313/tags/sicily/</link>
-    <description>Recent content in Sicily on Simone Mattioli</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Wed, 06 Nov 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/sicily/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>NO MAFIA Sicily Tour</title>
-      <link>http://localhost:1313/04_experiences/sicily/</link>
-      <pubDate>Wed, 06 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/04_experiences/sicily/</guid>
-      <description>&lt;p&gt;tour sicilia, da implementare&lt;/p&gt;&#xA;&lt;p&gt;TO DO:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;passarsi tutte le foto orizzontali&lt;/li&gt;&#xA;&lt;li&gt;fare table di tutte le cose che abbiamo fatto&lt;/li&gt;&#xA;&lt;li&gt;premesse &amp;amp; aspettative&lt;/li&gt;&#xA;&lt;li&gt;Contesto storico&lt;/li&gt;&#xA;&lt;li&gt;Stazione di capaci&lt;/li&gt;&#xA;&lt;li&gt;buncherino&lt;/li&gt;&#xA;&lt;li&gt;palermo&lt;/li&gt;&#xA;&lt;li&gt;Segno della resistenza sulla scrivania di Borsellino -&amp;gt; ( l&amp;rsquo;ho interpretato come ) la resistenza e resilienza che ogni essere umano ( Di successo ) deve avere&lt;/li&gt;&#xA;&lt;li&gt;determinazione che ci vuole per raggiungere grandi cose&lt;/li&gt;&#xA;&lt;li&gt;testimonianza del fotografo ( magari nei thought  mettere che siamo una generazione che si smagnetizzerà -&amp;gt; problema del digitale )&lt;/li&gt;&#xA;&lt;li&gt;Come vogliono rappresentare la loro terra ( senso di appartenenza / eliminazione degli stereotipi)&lt;/li&gt;&#xA;&lt;li&gt;La differenza tra una guida &amp;ldquo;normale&amp;rdquo; del 99% ed il top 1% ( come in ogni settore si può eccellere e non)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&#xA;    &#xA;    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/RdgWMgmqqHk?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&#xA;      &gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;</description>
-    </item>
-  </channel>
+    <channel>
+        <title>Sicily on Simone Mattioli</title>
+        <link>http://localhost:1313/tags/sicily/</link>
+        <description>Recent content in Sicily on Simone Mattioli</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Wed, 06 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/sicily/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>NO MAFIA Sicily Tour</title>
+        <link>http://localhost:1313/04_experiences/sicily/</link>
+        <pubDate>Wed, 06 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/04_experiences/sicily/</guid>
+        <description>&lt;img src="http://localhost:1313/04_experiences/sicily/home.png" alt="Featured image of post NO MAFIA Sicily Tour" /&gt;&lt;p&gt;tour sicilia, da implementare&lt;/p&gt;
+&lt;p&gt;TO DO:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;passarsi tutte le foto orizzontali&lt;/li&gt;
+&lt;li&gt;fare table di tutte le cose che abbiamo fatto&lt;/li&gt;
+&lt;li&gt;premesse &amp;amp; aspettative&lt;/li&gt;
+&lt;li&gt;Contesto storico&lt;/li&gt;
+&lt;li&gt;Stazione di capaci&lt;/li&gt;
+&lt;li&gt;buncherino&lt;/li&gt;
+&lt;li&gt;palermo&lt;/li&gt;
+&lt;li&gt;Segno della resistenza sulla scrivania di Borsellino -&amp;gt; ( l&amp;rsquo;ho interpretato come ) la resistenza e resilienza che ogni essere umano ( Di successo ) deve avere&lt;/li&gt;
+&lt;li&gt;determinazione che ci vuole per raggiungere grandi cose&lt;/li&gt;
+&lt;li&gt;testimonianza del fotografo ( magari nei thought  mettere che siamo una generazione che si smagnetizzerà -&amp;gt; problema del digitale )&lt;/li&gt;
+&lt;li&gt;Come vogliono rappresentare la loro terra ( senso di appartenenza / eliminazione degli stereotipi)&lt;/li&gt;
+&lt;li&gt;La differenza tra una guida &amp;ldquo;normale&amp;rdquo; del 99% ed il top 1% ( come in ogni settore si può eccellere e non)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/RdgWMgmqqHk&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
+        </item>
+        
+    </channel>
 </rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>News on Simone Mattioli</title>
+        <link>http://localhost:1313/categories/news/</link>
+        <description>Recent content in News on Simone Mattioli</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Tue, 20 May 2025 14:00:00 +0200</lastBuildDate><atom:link href="http://localhost:1313/categories/news/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Inizio progetto di laurea</title>
+        <link>http://localhost:1313/news/2025-05-20-progetto-tesi/</link>
+        <pubDate>Tue, 20 May 2025 14:00:00 +0200</pubDate>
+        
+        <guid>http://localhost:1313/news/2025-05-20-progetto-tesi/</guid>
+        <description>&lt;p&gt;Qui i dettagli…&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

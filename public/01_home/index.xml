@@ -1,19 +1,111 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>01_homes on Simone Mattioli</title>
-    <link>http://localhost:1313/01_home/</link>
-    <description>Recent content in 01_homes on Simone Mattioli</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 04 Nov 2024 19:31:32 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/01_home/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Who&#39;s Simone Mattioli ?</title>
-      <link>http://localhost:1313/01_home/simone-mattioli/</link>
-      <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
-      <guid>http://localhost:1313/01_home/simone-mattioli/</guid>
-      <description>&lt;h2 id=&#34;personal-life&#34;&gt;Personal Life&lt;/h2&gt;&#xA;&lt;h3 id=&#34;early-days&#34;&gt;Early Days&lt;/h3&gt;&#xA;&lt;p&gt;&lt;img alt=&#34;Me when I was a child in Val di Rabbi&#34; src=&#34;http://localhost:1313/01_home/simone-mattioli/rabbi.JPG&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;I was born in the little town of Rovereto, on 28 July 2003 in Italy, nestled in Trentino-Alto Adige, Italy. Since my earliest years, I’ve been passionate about technology, vehicles, and sports that fuel my curiosity, drive, and creativity.&lt;/p&gt;&#xA;&lt;h3 id=&#34;the-context&#34;&gt;The context&lt;/h3&gt;&#xA;&lt;p&gt;&lt;img alt=&#34;Me super happy with my first mountain bike&#34; src=&#34;http://localhost:1313/01_home/simone-mattioli/biking.JPG&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Growing up surrounded by the natural beauty and rich culture of Northern Italy, I found myself drawn to the mechanics of how things work, from engines to computers. My passion for technology started young and has only grown over the years, inspiring me to learn and explore more every day.&lt;/p&gt;</description>
-    </item>
-  </channel>
+    <channel>
+        <title>01_homes on Simone Mattioli</title>
+        <link>http://localhost:1313/01_home/</link>
+        <description>Recent content in 01_homes on Simone Mattioli</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Mon, 04 Nov 2024 19:31:32 +0100</lastBuildDate><atom:link href="http://localhost:1313/01_home/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Who&#39;s Simone Mattioli ?</title>
+        <link>http://localhost:1313/01_home/simone-mattioli/</link>
+        <pubDate>Mon, 04 Nov 2024 19:31:32 +0100</pubDate>
+        
+        <guid>http://localhost:1313/01_home/simone-mattioli/</guid>
+        <description>&lt;img src="http://localhost:1313/01_home/simone-mattioli/home.jpeg" alt="Featured image of post Who&#39;s Simone Mattioli ?" /&gt;&lt;h2 id=&#34;personal-life&#34;&gt;Personal Life
+&lt;/h2&gt;&lt;h3 id=&#34;early-days&#34;&gt;Early Days
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/01_home/simone-mattioli/rabbi.JPG&#34;
+	width=&#34;2272&#34;
+	height=&#34;1704&#34;
+	srcset=&#34;http://localhost:1313/01_home/simone-mattioli/rabbi_hu14685709377490570549.JPG 480w, http://localhost:1313/01_home/simone-mattioli/rabbi_hu17811461578758323397.JPG 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Me when I was a child in Val di Rabbi&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I was born in the little town of Rovereto, on 28 July 2003 in Italy, nestled in Trentino-Alto Adige, Italy. Since my earliest years, I’ve been passionate about technology, vehicles, and sports that fuel my curiosity, drive, and creativity.&lt;/p&gt;
+&lt;h3 id=&#34;the-context&#34;&gt;The context
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/01_home/simone-mattioli/biking.JPG&#34;
+	width=&#34;3872&#34;
+	height=&#34;2592&#34;
+	srcset=&#34;http://localhost:1313/01_home/simone-mattioli/biking_hu2896599252437205521.JPG 480w, http://localhost:1313/01_home/simone-mattioli/biking_hu157065150373252668.JPG 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Me super happy with my first mountain bike&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;358px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Growing up surrounded by the natural beauty and rich culture of Northern Italy, I found myself drawn to the mechanics of how things work, from engines to computers. My passion for technology started young and has only grown over the years, inspiring me to learn and explore more every day.&lt;/p&gt;
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion
+&lt;/h3&gt;&lt;p&gt;Thanks for joining me on this journey and I suggest you to watch the other pages of this website so maybe you can find something useful there!&lt;/p&gt;
+&lt;h2 id=&#34;education&#34;&gt;Education
+&lt;/h2&gt;&lt;h3 id=&#34;itt-marconi-rovereto&#34;&gt;ITT Marconi Rovereto
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/01_home/simone-mattioli/marconi.JPG&#34;
+	width=&#34;1024&#34;
+	height=&#34;768&#34;
+	srcset=&#34;http://localhost:1313/01_home/simone-mattioli/marconi_hu9519866755300478972.JPG 480w, http://localhost:1313/01_home/simone-mattioli/marconi_hu1079026344971469281.JPG 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;My Last Day of High School&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;My educational journey began at ITT Marconi in Rovereto, where I discovered my passion for computer science and technology. This prestigious institution provided a strong foundation in technical subjects, enabling me to explore various aspects of computing while honing my analytical and problem-solving skills.&lt;/p&gt;
+&lt;p&gt;At ITT Marconi, I was immersed in a curriculum that balanced theory with practical application. Courses in programming, computer networks, and electronics sparked my interest and challenged me to think critically about how technology influences our daily lives. The hands-on projects and collaborative environment encouraged me to work alongside my peers, fostering teamwork and communication skills that are essential in today’s tech landscape.&lt;/p&gt;
+&lt;p&gt;Beyond the classroom, ITT Marconi offered a variety of extracurricular activities, including coding clubs and competitions, which further fueled my enthusiasm for technology. These experiences solidified my decision to pursue a Bachelor’s degree in Computer Science and laid the groundwork for my future studies at the University of Verona. I am grateful for the education I received at ITT Marconi, as it played a pivotal role in shaping my academic and professional aspirations.&lt;/p&gt;
+&lt;h3 id=&#34;bachelor-degree-in-computer-science&#34;&gt;Bachelor Degree in Computer Science
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/01_home/simone-mattioli/verona.jpg&#34;
+	width=&#34;848&#34;
+	height=&#34;240&#34;
+	srcset=&#34;http://localhost:1313/01_home/simone-mattioli/verona_hu15599915847678307440.jpg 480w, http://localhost:1313/01_home/simone-mattioli/verona_hu8275353217975971706.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;University Of Verona&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;353&#34;
+		data-flex-basis=&#34;848px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I’m currently pursuing a Bachelor’s degree in Computer Science at the University of Verona, an exciting chapter in my life that combines my long-standing passion for technology with hands-on learning and problem-solving. The program challenges me to deepen my understanding of computing principles, from algorithms and data structures to artificial intelligence and software development, while also encouraging a mindset for innovation.&lt;/p&gt;
+&lt;p&gt;Studying in Verona, a city rich in history and culture, adds a unique layer to my academic experience. Here, I’m part of a vibrant student community, collaborating on projects, learning from experienced professors, and gaining insights into how technology impacts various fields. This degree is more than just a pathway to a career—it’s a journey that’s shaping my skills, thinking, and goals. Each course and project brings me closer to building a future where I can apply my knowledge to make a difference in the tech world.&lt;/p&gt;
+&lt;h3 id=&#34;continuous-learning&#34;&gt;Continuous Learning
+&lt;/h3&gt;&lt;p&gt;I&amp;rsquo;m super passionate about learning new stuff, as I know that you can&amp;rsquo;t know enough&amp;hellip;
+One argoument that really interest me is &lt;strong&gt;business&lt;/strong&gt; and the related topic around this umbrella term as I already know that I don&amp;rsquo;t wanna do the employee in my life but I wanna create something mine &amp;amp; big.&lt;/p&gt;
+&lt;p&gt;For creating that I need to develop a lots of skills such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Marketing&lt;/strong&gt; because you can be the best in your fild but if nobody knows you, how can the customer reach your solution?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Economics&lt;/strong&gt;, a company need to be in profit&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Project &amp;amp; Team Management&lt;/strong&gt; as you need to compleate and reach the milestones and if you want to build something big you can&amp;rsquo;t do it by yourself but you have to be sourrounded by very smart people and you need be also smart managin them.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mindset&lt;/strong&gt; as you need to be resilient and ready for everything in this game.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And this are the most things that I study in my leasure time&lt;/p&gt;
+&lt;h2 id=&#34;listen-to-valerios-interview-to-know-more-about-me&#34;&gt;Listen to Valerio&amp;rsquo;s Interview to know more about me
+&lt;/h2&gt;&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/U9V8CkewXEY&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
+        </item>
+        
+    </channel>
 </rss>

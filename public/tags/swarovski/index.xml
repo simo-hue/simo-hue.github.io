@@ -1,26 +1,117 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Swarovski on Simone Mattioli</title>
-    <link>http://localhost:1313/tags/swarovski/</link>
-    <description>Recent content in Swarovski on Simone Mattioli</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Sat, 02 Nov 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/swarovski/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Birdwatching Experience with SWAROVSKI OPTIK at Le Ali del Frassino Residence (Lake Frassino)</title>
-      <link>http://localhost:1313/04_experiences/frassino/</link>
-      <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/04_experiences/frassino/</guid>
-      <description>&lt;p&gt;&lt;img alt=&#34;Logo Swarovski Optik&#34; src=&#34;http://localhost:1313/04_experiences/frassino/swarovski.jpeg&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Recently, thanks to my project &lt;em&gt;Mountain Fauna Lover&lt;/em&gt;, I had the chance to participate in an exclusive event organized by SWAROVSKI OPTIK Italy at the stunning Frassino Oasis in Peschiera del Garda.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Mountain Fauna Lover&lt;/em&gt; began almost as a joke, born from my love for mountains and wildlife. I never imagined it would open doors to such exciting collaborations.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img alt=&#34;Bird Migration&#34; src=&#34;http://localhost:1313/04_experiences/frassino/migrazione.jpg&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Through this project, I’ve been able to experience nature up close, often alongside experts and using top-tier equipment, making each adventure more unforgettable than the last.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Mountain Fauna Lover</title>
-      <link>http://localhost:1313/03_projects/mountain-fauna-lover/</link>
-      <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/03_projects/mountain-fauna-lover/</guid>
-      <description>&lt;p&gt;Welcome to MountainFaunaLover! Here, I share my passion for nature, wildlife, and the captivating landscapes of mountain regions. On Instagram, you’ll find a curated collection of my favorite moments in the wilderness, from up-close shots of unique wildlife to breathtaking mountain vistas. Each post is a window into my adventures, capturing the serenity, beauty, and diversity of the natural world that inspires me daily.&lt;/p&gt;&#xA;&lt;p&gt;On YouTube, I dive even deeper. My channel is a space for storytelling, featuring video journeys, wildlife encounters, and conservation insights, bringing viewers along on my explorations. Whether you’re a fellow nature enthusiast or just stopping by for some visual serenity, my content on MountainFaunaLover is dedicated to sharing the awe and importance of our wild places. Join me in celebrating the mountains, fauna, and the fascinating stories they hold!&lt;/p&gt;</description>
-    </item>
-  </channel>
+    <channel>
+        <title>Swarovski on Simone Mattioli</title>
+        <link>http://localhost:1313/tags/swarovski/</link>
+        <description>Recent content in Swarovski on Simone Mattioli</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Sat, 02 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/swarovski/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Birdwatching Experience with SWAROVSKI OPTIK at Le Ali del Frassino Residence (Lake Frassino)</title>
+        <link>http://localhost:1313/04_experiences/frassino/</link>
+        <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/04_experiences/frassino/</guid>
+        <description>&lt;img src="http://localhost:1313/04_experiences/frassino/invito.png" alt="Featured image of post Birdwatching Experience with SWAROVSKI OPTIK at Le Ali del Frassino Residence (Lake Frassino)" /&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/frassino/swarovski.jpeg&#34;
+	width=&#34;337&#34;
+	height=&#34;150&#34;
+	srcset=&#34;http://localhost:1313/04_experiences/frassino/swarovski_hu14759465543953173956.jpeg 480w, http://localhost:1313/04_experiences/frassino/swarovski_hu6023009479089032581.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Logo Swarovski Optik&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;224&#34;
+		data-flex-basis=&#34;539px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Recently, thanks to my project &lt;em&gt;Mountain Fauna Lover&lt;/em&gt;, I had the chance to participate in an exclusive event organized by SWAROVSKI OPTIK Italy at the stunning Frassino Oasis in Peschiera del Garda.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Mountain Fauna Lover&lt;/em&gt; began almost as a joke, born from my love for mountains and wildlife. I never imagined it would open doors to such exciting collaborations.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/frassino/migrazione.jpg&#34;
+	width=&#34;1200&#34;
+	height=&#34;800&#34;
+	srcset=&#34;http://localhost:1313/04_experiences/frassino/migrazione_hu3415763475070476929.jpg 480w, http://localhost:1313/04_experiences/frassino/migrazione_hu15628709650227752216.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Bird Migration&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;150&#34;
+		data-flex-basis=&#34;360px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Through this project, I’ve been able to experience nature up close, often alongside experts and using top-tier equipment, making each adventure more unforgettable than the last.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/frassino/papera.jpg&#34;
+	width=&#34;3339&#34;
+	height=&#34;2506&#34;
+	srcset=&#34;http://localhost:1313/04_experiences/frassino/papera_hu12033954271459282994.jpg 480w, http://localhost:1313/04_experiences/frassino/papera_hu12014715791681049840.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Duck Photo&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;319px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;This time, we were immersed in an extraordinary birdwatching experience with expert guidance and SWAROVSKI OPTIK’s impressive tools, including the NL X52 binoculars and the BTX spotting scope. The day began with a presentation by SWAROVSKI OPTIK Italy’s manager, Franco Cernigliaro, and ornithologist Alessandro Sartori, who introduced us to the bird species we’d encounter.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/frassino/binocolo.JPG&#34;
+	width=&#34;1920&#34;
+	height=&#34;900&#34;
+	srcset=&#34;http://localhost:1313/04_experiences/frassino/binocolo_hu8836717783631905540.JPG 480w, http://localhost:1313/04_experiences/frassino/binocolo_hu7288733104192064040.JPG 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;New Swarovski Optik NL-Pures Series&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;213&#34;
+		data-flex-basis=&#34;512px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;During my meeting with Franco Cernigliaro, the Country Manager of Swarovski Optik Italy, we exchanged inspiring ideas and perspectives on biodiversity and sustainability. It was a remarkable experience to engage with someone equally dedicated to nature and innovation. Our discussion centered on how these themes are fundamental to Swarovski’s mission—not just as marketing strategies but as true core values.
+Swarovski Optik actively encourages deeper connections with nature and is committed to supporting sustainable practices and environmentally responsible technologies in their high-precision optics products&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/04_experiences/frassino/pool.JPG&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;http://localhost:1313/04_experiences/frassino/pool_hu480610701872245088.JPG 480w, http://localhost:1313/04_experiences/frassino/pool_hu5052254301236937194.JPG 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Ali del Frassino Hotel&amp;rsquo;s Pool&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The observation was incredible—Red-crested Pochards, Tufted Ducks, Teals, and, with a bit of luck, a Marsh Harrier—all appeared in their full beauty, enhanced by the sharpness and clarity of SWAROVSKI’s optics.&lt;/p&gt;
+&lt;p&gt;This project has allowed me to build connections with companies like SWAROVSKI OPTIK and explore the world of wildlife in inspiring ways. Who knows what the future holds for &lt;em&gt;Mountain Fauna Lover&lt;/em&gt;… perhaps it will grow from a simple passion into something even greater. Stay tuned for more adventures!&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Mountain Fauna Lover</title>
+        <link>http://localhost:1313/03_projects/mountain-fauna-lover/</link>
+        <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/03_projects/mountain-fauna-lover/</guid>
+        <description>&lt;img src="http://localhost:1313/03_projects/mountain-fauna-lover/logo.jpg" alt="Featured image of post Mountain Fauna Lover" /&gt;&lt;p&gt;Welcome to MountainFaunaLover! Here, I share my passion for nature, wildlife, and the captivating landscapes of mountain regions. On Instagram, you’ll find a curated collection of my favorite moments in the wilderness, from up-close shots of unique wildlife to breathtaking mountain vistas. Each post is a window into my adventures, capturing the serenity, beauty, and diversity of the natural world that inspires me daily.&lt;/p&gt;
+&lt;p&gt;On YouTube, I dive even deeper. My channel is a space for storytelling, featuring video journeys, wildlife encounters, and conservation insights, bringing viewers along on my explorations. Whether you’re a fellow nature enthusiast or just stopping by for some visual serenity, my content on MountainFaunaLover is dedicated to sharing the awe and importance of our wild places. Join me in celebrating the mountains, fauna, and the fascinating stories they hold!&lt;/p&gt;
+&lt;h2 id=&#34;youtube-spoiler&#34;&gt;YouTube Spoiler
+&lt;/h2&gt;&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/ONGaGgr795k&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
+        </item>
+        
+    </channel>
 </rss>
