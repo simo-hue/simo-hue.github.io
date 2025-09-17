@@ -1,11 +1,20 @@
-# 🚀 Mattioli Simone - Personal Website & Portfolio
+# 🚀 Simone Mattioli - Computer Science Student | Web Developer | Personal Portfolio
 
-[![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fsimo-hue.github.io%2Fmio-sito-web)](https://simo-hue.github.io/mio-sito-web)
-[![Hugo](https://img.shields.io/badge/Hugo-0.139.0-blue?logo=hugo)](https://gohugo.io/)
-[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.1.12-blue?logo=tailwindcss)](https://tailwindcss.com/)
-[![GitHub Pages](https://img.shields.io/badge/Deployed%20on-GitHub%20Pages-green?logo=github)](https://simo-hue.github.io/mio-sito-web)
+> **University of Verona Computer Science Student** | **Full-Stack Developer** | **Content Creator** | **Born in Trentino-Alto Adige, Italy**
 
-## 🌐 [**Visit Live Website →**](https://simo-hue.github.io/mio-sito-web)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fsimo-hue.github.io&label=Personal%20Website&style=for-the-badge)](https://simo-hue.github.io)
+[![Hugo](https://img.shields.io/badge/Built%20with-Hugo%200.144.0-FF4088?style=for-the-badge&logo=hugo)](https://gohugo.io/)
+[![TailwindCSS](https://img.shields.io/badge/Styled%20with-TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com/)
+[![GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-24292e?style=for-the-badge&logo=github)](https://pages.github.com/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+
+## 🌐 **[Visit Portfolio Website →](https://simo-hue.github.io)**
+
+### 📱 **Quick Links**
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/simonemattioli2003/)
+[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/@simosdiary2003)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/simo___one/)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mattioli.simone.10@gmail.com)
 
 ---
 ## 👨‍💻 About Simone Mattioli
@@ -37,14 +46,14 @@
 | **📱 Instagram** | [@simo___one](https://www.instagram.com/simo___one/) | Personal life, travels, thoughts |
 | **📺 YouTube** | [@simosdiary2003](https://youtube.com/@simosdiary2003) | Vlogs, experiences, insights |
 | **💻 GitHub** | [@simo-hue](https://github.com/simo-hue) | Code repositories, open source projects |
-| **🌐 Website** | [simo-hue.github.io/mio-sito-web](https://simo-hue.github.io/mio-sito-web) | Complete portfolio and blog |
+| **🌐 Website** | [simo-hue.github.io/](https://simo-hue.github.io/) | Complete portfolio and blog |
 
 ---
 
 ## 🏗️ **Website Architecture & Technology Stack**
 
 ### **Frontend Technologies**
-- ⚡ **Hugo Static Site Generator** (v0.139.0)
+- ⚡ **Hugo Static Site Generator** (v0.144.0)
 - 🎨 **TailwindCSS** (v4.1.12) for modern styling
 - 📱 **Responsive Design** with mobile-first approach
 - 🌙 **Dark Mode Support** with theme switcher
@@ -103,7 +112,7 @@
 ### **Getting Started**
 ```bash
 # Clone the repository
-git clone https://github.com/simo-hue/mio-sito-web.git
+git clone https://github.com/simo-hue/simo-hue.github.io.git
 
 # Install dependencies
 npm install
@@ -134,13 +143,22 @@ This is a personal website, but feedback and suggestions are welcome! Feel free 
 
 ---
 
-## 🎯 **SEO Keywords & Topics**
+## 🎯 **SEO & Keywords**
 
-**Primary Keywords**: Simone Mattioli, Computer Science Student, Web Developer, Personal Website, Hugo Site, TailwindCSS
+### **🔍 Primary Keywords**
+`Simone Mattioli` • `Computer Science Student Italy` • `University of Verona Student` • `Web Developer Trentino` • `Hugo Website Developer` • `TailwindCSS Portfolio` • `Italian Tech Student` • `Programming Portfolio`
 
-**Secondary Keywords**: University of Verona, Italian Developer, Personal Blog, Technology Portfolio, GitHub Projects, Content Creator, Trentino, Programming Student
+### **🎯 Secondary Keywords**
+`Rovereto Developer` • `ITT Marconi Graduate` • `Full-Stack Developer Student` • `Travel Blogger Italy` • `Mountain Adventure Blog` • `Technology Content Creator` • `GitHub Projects Portfolio` • `Student Entrepreneur Italy`
 
-**Content Topics**: Software Development, Web Technologies, Travel Documentation, Personal Growth, Technology Insights, Student Life, Entrepreneurship, Mountain Adventures
+### **📝 Content Categories**
+- **Technical**: `Hugo Static Sites`, `TailwindCSS Design`, `GitHub Actions`, `Web Development`, `JavaScript`, `CSS`, `HTML5`
+- **Academic**: `Computer Science Curriculum`, `University Projects`, `Technical Education`, `Programming Learning`
+- **Personal**: `Travel Documentation`, `Mountain Adventures`, `Personal Growth`, `Life Experiences`
+- **Professional**: `Internship Experiences`, `Project Management`, `Team Collaboration`, `Career Development`
+
+### **🌍 Geographic SEO**
+`Trentino-Alto Adige` • `Rovereto Italy` • `Verona University` • `Northern Italy` • `Italian Alps` • `European Tech Scene`
 
 ---
 
@@ -161,7 +179,7 @@ This is a personal website, but feedback and suggestions are welcome! Feel free 
 - 📧 **Email**: [mattioli.simone.10@gmail.com](mailto:mattioli.simone.10@gmail.com)
 - 🔗 **LinkedIn**: [Professional Profile](https://www.linkedin.com/in/simonemattioli2003/)
 - 💻 **GitHub**: [Code Repositories](https://github.com/simo-hue)
-- 🌐 **Website**: [Complete Portfolio](https://simo-hue.github.io/mio-sito-web)
+- 🌐 **Website**: [Complete Portfolio](https://simo-hue.github.io)
 
 ---
 
@@ -169,10 +187,54 @@ This is a personal website, but feedback and suggestions are welcome! Feel free 
 
 This website is built using the [Hugoplate](https://github.com/zeon-studio/hugoplate) theme under MIT License. Content is personal and copyrighted to Simone Mattioli.
 
-**Website**: https://simo-hue.github.io/mio-sito-web
-**Repository**: https://github.com/simo-hue/mio-sito-web
-**Last Updated**: 2024
+**🌐 Website**: [simo-hue.github.io](https://simo-hue.github.io)
+**📦 Repository**: [github.com/simo-hue/simo-hue.github.io](https://github.com/simo-hue/simo-hue.github.io)
+**📅 Last Updated**: September 2024
+**⭐ Star this repo** if you find it interesting!
 
 ---
 
-*"Don't Be Lazy … Explore the beauty of the World"* - Simone Mattioli
+## 🔧 **Tech Stack & Tools**
+
+![Hugo](https://img.shields.io/badge/Hugo-FF4088?style=flat&logo=hugo&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat&logo=github-actions&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)
+![Markdown](https://img.shields.io/badge/Markdown-000000?style=flat&logo=markdown&logoColor=white)
+
+---
+
+## 📈 **GitHub Stats**
+
+![Simone's GitHub stats](https://github-readme-stats.vercel.app/api?username=simo-hue&show_icons=true&theme=radical&count_private=true)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=simo-hue&layout=compact&theme=radical)
+
+---
+
+## 🏆 **Achievements & Milestones**
+
+- 🎓 **Computer Science Degree** in progress at University of Verona
+- 🏅 **Technical Diploma** from ITT Marconi Rovereto
+- 🌍 **International Volunteer** experience in Brazil
+- 📱 **Content Creator** with growing social media presence
+- 🏗️ **Website Migration** successfully completed with modern tech stack
+- 🔧 **Open Source Contributor** on GitHub
+
+---
+
+*"Don't Be Lazy … Explore the beauty of the World"* ✨
+**— Simone Mattioli, Computer Science Student & Web Developer**
+
+---
+
+<div align="center">
+
+### 🤝 **Let's Connect & Collaborate!**
+
+[💼 LinkedIn](https://www.linkedin.com/in/simonemattioli2003/) • [📺 YouTube](https://youtube.com/@simosdiary2003) • [📷 Instagram](https://www.instagram.com/simo___one/) • [💻 GitHub](https://github.com/simo-hue) • [🌐 Website](https://simo-hue.github.io)
+
+**Made with ❤️ in Trentino-Alto Adige, Italy**
+
+</div>
