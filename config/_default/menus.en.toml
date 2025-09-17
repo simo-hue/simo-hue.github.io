@@ -1,0 +1,59 @@
+############# English navigation ##############
+
+# main menu
+[[main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[main]]
+name = "About"
+url = "/about"
+weight = 2
+
+#[[main]]
+#name = "Elements"
+#url = "/elements"
+#weight = 3
+
+#[[main]]
+#weight = 4
+#name = "Pages"
+
+[[main]]
+name = "Blog"
+url = "/blog"
+
+
+[[main]]
+parent = "Blog"
+name = "Books Readed"
+url = "/categories/books/"
+
+[[main]]
+parent = "Blog"
+name = "Projects"
+url = "/categories/projects/"
+
+[[main]]
+parent = "Blog"
+name = "Thougths"
+url = "/categories/thoughts/"
+
+[[main]]
+parent = "Blog"
+name = "Expriences"
+url = "/categories/experiences/"
+
+#[[main]]
+#name = "Contact"
+#url = "/contact"
+
+#[[main]]
+#name = "Categories"
+#url = "/categories"
+
+
+# footer menu
+[[footer]]
+name = "Mattioli Simone"
