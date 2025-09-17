@@ -1,28 +1,19 @@
-Thumbs.db
-.DS_Store
-.dist
-.tmp
-.lock
-.sass-cache
-npm-debug.log
-node_modules
-builds
-public
-resources
-.hugo_build.lock
-jsconfig.json
-hugo_stats.json
-go.sum
-yarn.lock
-
 # Hugo
 /public/
 /resources/_gen/
-hugo_stats.json
+.hugo_build.lock
 
 # Node
 node_modules/
 npm-debug.log*
+
+# Go
+go.sum
+
+# Build artifacts
+.dist
+.tmp
+builds
 
 # OS
 .DS_Store
@@ -39,4 +30,7 @@ pids
 # IDE
 .vscode/
 .idea/
+
+# Cache
+.sass-cache
 
