@@ -205,14 +205,6 @@ This website is built using the [Hugoplate](https://github.com/zeon-studio/hugop
 
 ---
 
-## 📈 **GitHub Stats**
-
-![Simone's GitHub stats](https://github-readme-stats.vercel.app/api?username=simo-hue&show_icons=true&theme=radical&count_private=true)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=simo-hue&layout=compact&theme=radical)
-
----
-
 ## 🏆 **Achievements & Milestones**
 
 - 🎓 **Computer Science Degree** in progress at University of Verona
@@ -225,7 +217,6 @@ This website is built using the [Hugoplate](https://github.com/zeon-studio/hugop
 ---
 
 *"Don't Be Lazy … Explore the beauty of the World"* ✨
-**— Simone Mattioli, Computer Science Student & Web Developer**
 
 ---
 
@@ -235,6 +226,6 @@ This website is built using the [Hugoplate](https://github.com/zeon-studio/hugop
 
 [💼 LinkedIn](https://www.linkedin.com/in/simonemattioli2003/) • [📺 YouTube](https://youtube.com/@simosdiary2003) • [📷 Instagram](https://www.instagram.com/simo___one/) • [💻 GitHub](https://github.com/simo-hue) • [🌐 Website](https://simo-hue.github.io)
 
-**Made with ❤️ in Trentino-Alto Adige, Italy**
+**Made with ❤️ From Trentino-Alto Adige, Italy**
 
 </div>
