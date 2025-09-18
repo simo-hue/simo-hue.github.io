@@ -47,17 +47,17 @@ url = "/categories/experiences/"
 
 [[main]]
 name = "Tech"
-url = "/tech"
+url = "/categories/tech-projects/"
 
 [[main]]
 parent = "Tech"
 name = "Publications"
-url = "/tech/publications/"
+url = "/categories/publications/"
 
 [[main]]
 parent = "Tech"
-name = "Projects"
-url = "/tech/projects/"
+name = "Tech Projects"
+url = "/categories/tech-projects/"
 
 #[[main]]
 #name = "Contact"

@@ -5,7 +5,7 @@ slug: epicure-hackathon-2024
 date: 2024-10-28
 image: cover.jpg
 draft: false
-categories: [projects]
+categories: ["tech projects"]
 tags:
     - GPU Computing
     - CUDA

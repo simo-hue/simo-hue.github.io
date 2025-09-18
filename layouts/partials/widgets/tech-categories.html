@@ -1,0 +1,31 @@
+<!-- tech categories -->
+{{ if isset site.Taxonomies "categories" }}
+  {{ $techCategories := slice "tech projects" "publications" }}
+  {{ $filteredCategories := slice }}
+  {{ range $name, $items := site.Taxonomies.categories }}
+    {{ if in $techCategories $name }}
+      {{ $filteredCategories = $filteredCategories | append (dict "name" $name "items" $items "page" .Page) }}
+    {{ end }}
+  {{ end }}
+
+  {{ if gt (len $filteredCategories) 0 }}
+    <div class="mb-8">
+      <h5 class="mb-6">Tech Categories</h5>
+      <div class="bg-light dark:bg-darkmode-light rounded p-8">
+        <ul class="space-y-4">
+          {{ range $filteredCategories }}
+            <li>
+              <a
+                class="hover:text-primary dark:hover:text-darkmode-primary {{ if (and (eq $.Page.Kind `term`) (eq $.Page.Type `categories`) (eq $.Page.Title .page.Title)) }}
+                  active
+                {{ end }} flex justify-between"
+                href="{{ .page.RelPermalink }}">
+                {{ .page.Title }} <span>( {{ len .items }} )</span>
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  {{ end }}
+{{ end }}

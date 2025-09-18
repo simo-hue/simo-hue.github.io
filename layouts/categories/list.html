@@ -1,10 +1,10 @@
 {{ define "main" }}
   {{ partial "page-header" . }}
 
-
   <section class="section">
     <div class="container">
       <div class="row gx-5">
+        <!-- posts -->
         <div class="lg:col-8">
           <div class="row">
             {{ $paginator:= .Paginate .RegularPages }}
@@ -19,8 +19,13 @@
         <!-- sidebar -->
         <div class="lg:col-4">
           <!-- widget -->
-          {{ $widget:= site.Params.widgets.sidebar }}
-          {{ partialCached "widgets/widget-wrapper" ( dict "Widgets" $widget "Scope" . ) }}
+          {{ if or (eq .Title "tech projects") (eq .Title "publications") }}
+            {{ partial "widgets/tech-categories" . }}
+            {{ partial "widgets/tech-tags" . }}
+          {{ else }}
+            {{ partial "widgets/blog-categories" . }}
+            {{ partial "widgets/blog-tags" . }}
+          {{ end }}
         </div>
       </div>
     </div>
