@@ -1,0 +1,39 @@
+{{ define "main" }}
+  <section class="section-sm text-center">
+    <div class="container">
+      <div class="row justify-center">
+        <div class="sm:col-10 md:col-8 lg:col-6">
+          <span
+            class="text-[6rem] block font-bold text-primary">
+            🚧
+          </span>
+          <h1 class="h2 mb-4">Coming Soon</h1>
+          <div class="content">
+            <p class="mb-6">
+              We're working hard to bring you something amazing! This page is currently under construction and will be available soon.
+            </p>
+            <p class="text-sm text-text-light dark:text-darkmode-text-light">
+              Stay tuned for updates and exciting new content.
+            </p>
+          </div>
+          <div class="mt-8 space-y-4">
+            <a
+              href="{{ site.BaseURL | relLangURL }}"
+              class="btn btn-primary">
+              Back to home
+            </a>
+            <div class="flex justify-center space-x-4">
+              {{ if site.Params.social.email }}
+              <a
+                href="mailto:{{ site.Params.social.email }}"
+                class="btn btn-outline-primary btn-sm">
+                Get notified
+              </a>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}
