@@ -19,6 +19,11 @@
       "name": "linkedin",
       "icon": "fab fa-linkedin",
       "link": "https://www.linkedin.com/in/simonemattioli2003/"
+    },
+    {
+      "name": "email",
+      "icon": "fas fa-envelope",
+      "link": "mailto:mattioli.simone.10@gmail.com"
     }
   ]
 }
