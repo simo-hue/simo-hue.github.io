@@ -10,6 +10,7 @@ tags: []
 title: Il grifone |Nicola Gratteri
 ---
 
+<!-- hash: 4aa933cb4c8a -->
 ## Introduction
 * Il Grifone *, écrit par Nicola Gratteri, est une œuvre qui va au-delà de la simple narration de la lutte contre le crime organisé.Ce livre représente un véritable manifeste de dévouement à la justice, incarné par l'auteur lui-même.Gratteri, magistrat et symbole de la lutte contre le 'Ndrangheta, consacre chaque instant de sa vie à cette mission, sacrifiant son temps personnel et le confort que sa position pourrait le garantir (une caractéristique qui me fascine beaucoup).
 

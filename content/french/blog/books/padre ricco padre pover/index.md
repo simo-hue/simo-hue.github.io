@@ -10,6 +10,7 @@ tags: []
 title: Papa riche et pauvre |Robert Kiyosaki
 ---
 
+<!-- hash: 7be75d3aa0d3 -->
 # Rich Dad Poor Dad: Finance personnelle pour tout le monde?
 
 ## Introduction
@@ -28,7 +29,7 @@ Le livre est écrit de manière simple et accessible, conçu pour un large publi
 ---
 
 ## ma prise: intéressante, mais surfaite
-Malgré sa popularité, je dois admettre que j'ai trouvé le livre un peu surfait.Pour quelqu'un comme moi qui a grandi dans une famille avec un père entrepreneur, de nombreux concepts expliquent Kiyosaki est trivial ou déjà connu.Depuis que je suis enfant, j'ai entendu des enseignements tels que «investir dans des actifs» ou «créer des sources de revenus passifs».Ce sont des choses que j'ai toujours respirées et qui m'ont été transmises dans le cadre de la mentalité entrepreneuriale.
+Malgré sa popularité, je dois admettre que j'ai trouvé le livre un peu surfait.Pour quelqu'un comme moi qui a grandi dans une famille avec un père entrepreneur, de nombreux concepts explique que Kiyosaki est trivial ou déjà connu.Depuis que je suis enfant, j'ai entendu des enseignements tels que «investir dans des actifs» ou «créer des sources de revenus passifs».Ce sont des choses que j'ai toujours respirées et qui m'ont été transmises dans le cadre de la mentalité entrepreneuriale.
 
 ---
 

@@ -10,6 +10,7 @@ tags: []
 title: Pensa e diventa ricco |Napoleone Hill
 ---
 
+<!-- hash: 1611b15edabd -->
 ## Introduzione alla filosofia del successo di Napoleon Hill
 * Pensa e diventa ricco* di Napoleon Hill è sempreverde nello sviluppo personale e nel successo.Pubblicato per la prima volta nel 1937, è una guida pratica che insegna come il pensiero positivo, la determinazione e una visione chiara degli obiettivi possano trasformare i sogni in realtà.Hill ha studiato la vita di grandi uomini di successo, come Andrew Carnegie, Henry Ford e Thomas Edison, per oltre 25 anni e ha distillato i loro segreti in questo capolavoro senza tempo.
 

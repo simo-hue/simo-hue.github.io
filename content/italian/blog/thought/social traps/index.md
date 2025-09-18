@@ -13,6 +13,7 @@ tags:
 title: La trappola del 20 ° secolo
 ---
 
+<!-- hash: a537416d2923 -->
 # Distaccato dagli stimoli
 
 Viviamo in un'epoca di costante stimolazione, un flusso costante di notifiche, aggiornamenti e contenuti digitali che ci mantengono costantemente "connessi" ma, allo stesso tempo, riducono drasticamente la nostra capacità di concentrarci.Ogni giorno siamo bombardati con stimoli visivi e uditivi attraverso i social media, app di messaggistica, piattaforme di intrattenimento, che ora guidano le nostre vite sia online che offline.

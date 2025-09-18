@@ -25,6 +25,7 @@ tags:
 title: Veciobot - Bot de telegrama en el dietero Trentino
 ---
 
+<!-- hash: 3fc9221f9b85 -->
 **VecioBot** (formerly CiacolaBot) is an innovative project that combines modern artificial intelligence with local cultural tradition. This Telegram bot is designed to converse in authentic **Trentino dialect**, simulating conversations with an elderly Trentino mountain resident.
 
 The project represents a bridge between advanced technology and cultural preservation, using large-scale linguistic models (LLMs) to preserve the richness of the local dialect.

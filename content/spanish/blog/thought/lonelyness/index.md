@@ -13,6 +13,7 @@ tags:
 title: The importance of being able to stay alone
 ---
 
+<!-- hash: 03ede1db4ff1 -->
 Saber estar solo es una habilidad a menudo subestimada, pero es increíblemente importante para nuestro crecimiento personal.En un mundo que parece empujarnos constantemente a buscar la compañía de los demás, tomarse un tiempo para nosotros puede ser un acto revolucionario.No solo nos permite conocernos mejor, sino que puede convertirse en un campo de entrenamiento real para crecer como persona.
 
 ## conoce a ti mismo

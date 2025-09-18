@@ -13,6 +13,7 @@ tags:
 title: Importance de l'histoire
 ---
 
+<!-- hash: 879c68acc3b7 -->
 # Mon voyage du haineux à curieux
 
 J'avoue que l'histoire était mon ennemi juré pendant mes années d'école.Lorsque le professeur est entré dans la salle de classe et a commencé à parler de dates, de batailles et de dirigeants, je me sentais perdu.Tout semblait si ennuyeux et éloigné de ma réalité.Je ne pouvais pas percevoir la valeur de ces connaissances: pourquoi diable serais-je intéressé par ce qui s'était passé il y a des siècles?

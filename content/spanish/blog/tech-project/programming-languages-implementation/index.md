@@ -34,6 +34,7 @@ tags:
 title: MyLang - ImplementAzione completa di un Linguaggio di Programmazione
 ---
 
+<!-- hash: b7808ffbefbb -->
 ## The Genesis of the Project: From Abstraction to Concrete Implementation
 
 The **Programming Languages** course at the University of Verona represents one of the most fascinating moments of the Computer Science curriculum: the moment when one moves from the **use** of languages ​​to their **creation**. When the professor announced the lab project—implementing a programming language from scratch—I saw the perfect opportunity to combine theoretical passion and practical application.

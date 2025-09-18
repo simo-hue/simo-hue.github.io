@@ -13,6 +13,7 @@ tags:
 title: La repetición es la madre de todas las habilidades
 ---
 
+<!-- hash: 3558a2093a3d -->
 Hay una verdad atemporal en el dicho,*"La repetición es la madre de todas las habilidades".*Es algo que he llegado a adoptar completamente ya que integré un método que ha transformado por completo la forma en que aprendo e internalizo los conceptos: ** El método de inmersión **.
 
 ---

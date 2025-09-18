@@ -35,6 +35,7 @@ tags:
 title: Contrat intelligent Ethereum par Sistema Raccolta Punti - Dapp Competa
 ---
 
+<!-- hash: c095c72a6542 -->
 ## The Genesis of the Project: From Web2 to Web3
 
 During my university course on blockchain technologies at the University of Verona, I faced one of the most fascinating challenges in modern computing: understanding and implementing smart contracts on Ethereum. The assigned project—creating a decentralized point collection system—represented the perfect opportunity to explore the potential of blockchain programming.

@@ -13,6 +13,7 @@ tags:
 title: Importance de la relation
 ---
 
+<!-- hash: 26d36a5898e1 -->
 # Amitié et amour
 
 Les relations humaines sont le pilier fondamental de notre existence, ce n'est pas un hasard si on dit que l'homme est un animal social ... les amitiés, les liens familiaux et les relations romantiques contribuent à définir non seulement la qualité de notre vie, mais aussi qui nous sommes et ce que nous pouvons devenir.Nous ne pouvons pas ignorer l'énorme impact que ces connexions ont sur nous, pour le meilleur ou pour le pire, et sur nos vies.
@@ -53,3 +54,4 @@ Prenez le temps de réfléchir à qui vous voulez dans votre cercle.Ce n'est pas
 
 N'oubliez pas: il ne s'agit pas seulement de l'entreprise, c'est une question de qualité.Choisissez le 1% dans tous les domaines de votre vie.
 
+Protégé 20000 protégé

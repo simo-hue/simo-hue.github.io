@@ -12,6 +12,7 @@ tags:
 title: Répandre l'amour partout où tu vas
 ---
 
+<!-- hash: 0a4de6c062f0 -->
 La gentillesse est l'un de ces petits gestes qui rendent les jours plus lumineux, à la fois pour le donneur et le récepteur.J'ai toujours trouvé le réconfort d'être gentil avec les autres, même dans les actions les plus simples.Un sourire, une salutation, un "comment vas-tu?"Peut sembler insignifiant, mais ils ont souvent un impact profond.Ce sont de petits actes qui ne coûtent rien, mais qui apportent d'énormes richesses.
 
 J'aime à penser que chaque petite gentillesse est une graine de bonheur qui se propage autour de nous.De la tenue de la porte ouverte à ceux qui suivent, à une médaille à quelqu'un dans le besoin, à faire un sourire à quelqu'un dans le besoin.Ces gestes font non seulement se sentir mieux, mais ils remplissent également mon cœur de joie.Et le plus souvent, je me rends compte que, sans même le vouloir, j'ai fait un sourire à quelqu'un d'autre.

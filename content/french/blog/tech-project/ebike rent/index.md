@@ -29,6 +29,7 @@ title: Rabbi Système de gestion des vélos électriques - Sistema compléto par
   E-Bike
 ---
 
+<!-- hash: 57fce79c1e03 -->
 ## La genèse du projet: d'une idée spontanée à une solution professionnelle
 
 Tout a commencé très naturellement.Certains amis dirigent une petite boutique de location de vélos électriques et se sont retrouvés quotidiennement à des réservations manuscrites, une gestion des stocks avec des feuilles de calcul Excel et une vue peu claire de leurs bénéfices et de leurs performances commerciales.
