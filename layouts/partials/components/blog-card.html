@@ -32,31 +32,50 @@
   {{ end }}
   <p class="mb-6">{{ .Summary | plainify }}</p>
 
-  <!-- Custom Links Section -->
-  {{ $links := .Params.links }}
-  {{ if $links }}
-    <div class="mb-4">
-      <ul class="text-sm">
-        {{ range $links }}
-          {{ if .website }}
-            <li class="inline-block mr-4">
-              <a
-                href="{{ .website }}"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-text-dark dark:text-darkmode-text-dark hover:text-primary dark:hover:text-darkmode-primary"
-                title="{{ .description }}"
-              >
-                {{ .title }}
-              </a>
-            </li>
-          {{ end }}
-        {{ end }}
-      </ul>
-    </div>
-  {{ end }}
+  <!-- Action Buttons Section -->
+  <div class="flex flex-wrap items-center gap-2">
+    <a class="btn btn-outline-primary btn-sm" href="{{ .RelPermalink }}">
+      {{ T "read_more" }}
+    </a>
 
-  <a class="btn btn-outline-primary btn-sm" href="{{ .RelPermalink }}">
-    {{ T "read_more" }}
-  </a>
+    {{ $links := .Params.links }}
+    {{ if $links }}
+      {{ range $links }}
+        {{ if .website }}
+          <a
+            href="{{ .website }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline-secondary btn-sm inline-flex items-center"
+            title="{{ .description }}"
+          >
+            {{ if or (eq .title "GitHub Repository") (eq .title "EPICURE Repository") }}
+              <i class="fab fa-github mr-1"></i>
+            {{ else if eq .title "Telegram Bot Demo" }}
+              <i class="fab fa-telegram mr-1"></i>
+            {{ else if eq .title "Ollama Documentation" }}
+              <i class="fa-solid fa-book mr-1"></i>
+            {{ else if eq .title "LLaMA 3 Model" }}
+              <i class="fa-solid fa-brain mr-1"></i>
+            {{ else if eq .title "EPICURE HPC Event Page" }}
+              <i class="fa-solid fa-calendar-days mr-1"></i>
+            {{ else if or (eq .title "Event Recap Video") (eq .title "Event Vlogs Playlist") }}
+              <i class="fab fa-youtube mr-1"></i>
+            {{ else if eq .title "Personal GitHub Repository used during the hackathon" }}
+              <i class="fab fa-github mr-1"></i>
+            {{ else if eq .title "Pre-print Paper" }}
+              <i class="fa-solid fa-file-pdf mr-1"></i>
+            {{ else if eq .title "HPC Benchmarks" }}
+              <i class="fa-solid fa-chart-line mr-1"></i>
+            {{ else if eq .title "Dataset Documentation" }}
+              <i class="fa-solid fa-database mr-1"></i>
+            {{ else }}
+              <i class="fa-solid fa-external-link mr-1"></i>
+            {{ end }}
+            {{ .title }}
+          </a>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  </div>
 </div>

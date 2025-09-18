@@ -23,15 +23,6 @@ links:
   - title: GitHub Repository
     description: Accedi al codice sorgente completo e alla documentazione
     website: https://github.com/simo-hue/CiacolaBot_Nonno_Trentino_Virtuale_su_Telegram.git
-  - title: Telegram Bot Demo
-    description: Prova il bot direttamente su Telegram
-    website: #
-  - title: Ollama Documentation
-    description: Documentazione per l'installazione di Ollama
-    website: https://ollama.ai
-  - title: LLaMA 3 Model
-    description: Informazioni sul modello LLaMA 3 utilizzato
-    website: https://ai.meta.com/blog/meta-llama-3/
 ---
 
 **VecioBot** (precedentemente CiacolaBot) è un innovativo progetto che combina intelligenza artificiale moderna con tradizione culturale locale. Questo bot Telegram è progettato per conversare in autentico **dialetto trentino**, simulando le conversazioni con un anziano abitante della montagna trentina.

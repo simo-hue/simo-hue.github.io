@@ -17,14 +17,11 @@ tags:
 comments: false
 
 links:
-  - title: EPICURE HPC Event Page
-    description: Learn more about EPICURE's HPC and GPU programming events
-    website: https://epicure-hpc.eu
-  - title: Event Recap Video
+  - title: Event Vlogs Playlist
     description: Watch the highlights from the EPICURE Hackathon
-    website: https://studio.youtube.com/playlist/PLK8EFKQQE4giKzxWYMXTO5niRR4t380hR/videos
-  - title: GitHub Repository of Sample Codes
-    description: Access the GitHub repository with example codes used during the hackathon
+    website: https://youtube.com/playlist?list=PLK8EFKQQE4giKzxWYMXTO5niRR4t380hR&feature=shared
+  - title: EPICURE Repository
+    description: Accedi al codice sorgente completo e alla documentazione
     website: https://github.com/EPICURE-hackathon-2024/sample-codes
   - title: Personal GitHub Repository used during the hackathon
     description: Access the GitHub repository used during the hackathon
