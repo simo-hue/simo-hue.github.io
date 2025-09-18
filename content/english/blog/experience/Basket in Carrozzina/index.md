@@ -7,6 +7,14 @@ categories: ["Experiences"]
 draft: false
 tags: [basket, sport, emotional, educational]
 
+links:
+  - title: Olympic Basket Verona
+    description: Learn more about the basketball club that organized this experience
+    website: https://www.olympicbasketverona.it
+  - title: Experience Video
+    description: Watch my wheelchair basketball experience
+    website: https://youtu.be/T7m9n7ojHzw?feature=shared
+
 ---
 
 # An Experience That Changes Your Perspective: Wheelchair Basketball

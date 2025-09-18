@@ -2,8 +2,14 @@
 title: CLab UNIRv
 date: 2023-07-28
 description: 
+image: team.JPG
 categories: [projects]
 slug: think
+
+links:
+  - title: CLab Verona Website
+    description: Learn more about Contamination Lab University of Verona
+    website: https://www.univr.it/it/organizzazione/strutture-organizzative/uffici-amministrativi/area-ricerca-trasferimento-tecnologico-e-terza-missione/ufficio-ricerca-e-terza-missione/contamination-lab
 
 ---
 
@@ -37,13 +43,22 @@ Condivido anche una foto di tutti i partecipanti del CLab Verona: ogni persona i
 
 ![Foto di tutti i partecipanti](tutti.JPG)
 
-## 📥 Allegati e Risorse
+## 📥 Documenti del Progetto
 
-Di seguito potete trovare tutto il materiale relativo al nostro progetto e al percorso del CLab, disponibile per chiunque desideri approfondire o trarre ispirazione:
+Di seguito i documenti principali del nostro progetto CLab, disponibili per consultazione e approfondimento:
 
-- Materiale formativo
-- Documentazione del progetto finale
-- Risultati delle nostre analisi
+### 📋 Documenti Principali
+
+- [📄 Business Plan Completo](materiali%20prodotti/DA%20MANDARE%20AL%20COMUNE/Business%20Plan.pdf#view=FitH) - Piano di business dettagliato per la riqualificazione
+- [📊 Financial Plan Dashboard](materiali%20prodotti/DA%20MANDARE%20AL%20COMUNE/Financial%20Plan%20-%20Dashboard.pdf#view=FitH) - Analisi economico-finanziaria del progetto
+- [📈 Financial Plan (Excel)](materiali%20prodotti/Financial%20Plan.xlsx) - Modello finanziario completo
+- [🎯 MisteryRock - Progetto Finale](materiali%20prodotti/DA%20MANDARE%20AL%20COMUNE/MisteryRock.pdf#view=FitH) - Proposta finale per il Comune
+
+### 📚 Materiali di Studio e Ricerca
+
+Tutti i **materiali di studio** utilizzati durante il percorso formativo (kick-off, analisi territoriali, governance, comunicazione ESG, ecc.) sono disponibili per il download in un archivio completo:
+
+- [📦 Download Materiali di Studio (ZIP)](materiali-di-studio.zip) - Oltre 40 file di ricerca e formazione utilizzati per sviluppare le competenze necessarie al progetto
 
 ---
 

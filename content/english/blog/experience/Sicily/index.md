@@ -8,6 +8,11 @@ categories: ["Experiences"]
 draft: false
 tags: [mafia, sicily, emotional, educational]
 
+links:
+  - title: Sicily Experience Playlist
+    description: Watch the complete recap of my Sicily experience
+    website: https://youtube.com/playlist?list=PLK8EFKQQE4gjw2ApuqMmhYzErl2te8iQn&feature=shared
+
 ---
 
 tour sicilia, da implementare

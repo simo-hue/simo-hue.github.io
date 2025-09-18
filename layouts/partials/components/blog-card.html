@@ -46,31 +46,59 @@
             href="{{ .website }}"
             target="_blank"
             rel="noopener noreferrer"
-            class="btn btn-outline-secondary btn-sm inline-flex items-center"
+            class="btn btn-outline-secondary btn-sm inline-flex items-center hover:scale-105 transition-transform duration-200"
             title="{{ .description }}"
           >
             {{ if or (eq .title "GitHub Repository") (eq .title "EPICURE Repository") }}
-              <i class="fab fa-github mr-1"></i>
+              <i class="fab fa-github mr-2 text-base"></i>
             {{ else if eq .title "Telegram Bot Demo" }}
-              <i class="fab fa-telegram mr-1"></i>
+              <i class="fab fa-telegram mr-2 text-base"></i>
             {{ else if eq .title "Ollama Documentation" }}
-              <i class="fa-solid fa-book mr-1"></i>
+              <i class="fa-solid fa-book mr-2 text-base"></i>
             {{ else if eq .title "LLaMA 3 Model" }}
-              <i class="fa-solid fa-brain mr-1"></i>
+              <i class="fa-solid fa-brain mr-2 text-base"></i>
             {{ else if eq .title "EPICURE HPC Event Page" }}
-              <i class="fa-solid fa-calendar-days mr-1"></i>
+              <i class="fa-solid fa-calendar-days mr-2 text-base"></i>
             {{ else if or (eq .title "Event Recap Video") (eq .title "Event Vlogs Playlist") }}
-              <i class="fab fa-youtube mr-1"></i>
+              <i class="fab fa-youtube mr-2 text-base"></i>
+            {{ else if or (eq .title "Youtube Account") (eq .title "YouTube Channel") }}
+              <i class="fab fa-youtube mr-2 text-base"></i>
+            {{ else if or (eq .title "Instagram Account") (eq .title "Instagram Profile") }}
+              <i class="fab fa-instagram mr-2 text-base"></i>
+            {{ else if or (eq .title "TikTok Account") (eq .title "TikTok Profile") }}
+              <i class="fab fa-tiktok mr-2 text-base"></i>
+            {{ else if or (eq .title "CLab Verona Website") (eq .title "University Website") }}
+              <i class="fa-solid fa-graduation-cap mr-2 text-base"></i>
+            {{ else if or (eq .title "Don Mazza College") (eq .title "Don Mazza College Website") }}
+              <i class="fa-solid fa-school mr-2 text-base"></i>
+            {{ else if or (eq .title "SWAROVSKI OPTIK Website") (eq .title "Swarovski Website") }}
+              <i class="fa-solid fa-binoculars mr-2 text-base"></i>
+            {{ else if or (eq .title "Olympic Basket Verona") (eq .title "Basketball Club") }}
+              <i class="fa-solid fa-basketball mr-2 text-base"></i>
+            {{ else if or (eq .title "Mountain Fauna Lover") (eq .title "Wildlife Project") }}
+              <i class="fa-solid fa-mountain mr-2 text-base"></i>
+            {{ else if or (eq .title "Event Vlog") (eq .title "Experience Vlog") (eq .title "Experience Video") }}
+              <i class="fa-solid fa-video mr-2 text-base"></i>
+            {{ else if or (eq .title "Sicily Experience Playlist") (eq .title "Experience Playlist") }}
+              <i class="fab fa-youtube mr-2 text-base"></i>
+            {{ else if or (eq .title "Sicily Tourism") (eq .title "Tourism Website") }}
+              <i class="fa-solid fa-map-location-dot mr-2 text-base"></i>
+            {{ else if or (eq .title "Brazil Volunteer Experience") (eq .title "Volunteer Experience") }}
+              <i class="fa-solid fa-hands-helping mr-2 text-base"></i>
+            {{ else if or (eq .title "College Review Video") (eq .title "Review Video") }}
+              <i class="fa-solid fa-star mr-2 text-base"></i>
+            {{ else if or (eq .title "Attendance Certification") (eq .title "Certificate") }}
+              <i class="fa-solid fa-certificate mr-2 text-base"></i>
             {{ else if eq .title "Personal GitHub Repository used during the hackathon" }}
-              <i class="fab fa-github mr-1"></i>
+              <i class="fab fa-github mr-2 text-base"></i>
             {{ else if eq .title "Pre-print Paper" }}
-              <i class="fa-solid fa-file-pdf mr-1"></i>
+              <i class="fa-solid fa-file-pdf mr-2 text-base"></i>
             {{ else if eq .title "HPC Benchmarks" }}
-              <i class="fa-solid fa-chart-line mr-1"></i>
+              <i class="fa-solid fa-chart-line mr-2 text-base"></i>
             {{ else if eq .title "Dataset Documentation" }}
-              <i class="fa-solid fa-database mr-1"></i>
+              <i class="fa-solid fa-database mr-2 text-base"></i>
             {{ else }}
-              <i class="fa-solid fa-external-link mr-1"></i>
+              <i class="fa-solid fa-external-link mr-2 text-base"></i>
             {{ end }}
             {{ .title }}
           </a>

@@ -4,9 +4,14 @@ description: "An awesome private event I was invited to, thanks to my long-stand
 date: 2024-11-02
 image: invito.png
 slug: frassino
-categories: ["Experiences", projects]
+categories: ["Experiences"]
 tags: [garda lake, Mountain Fauna Lover, swarovski, digiscoping, video making]
 draft: false
+
+links:
+  - title: Event Vlog
+    description: Watch my experience at the Frassino Oasis
+    website: https://youtube.com/watch?v=fnzTTCAioHk
 ---
 ![Logo Swarovski Optik](swarovski.jpeg)
 
