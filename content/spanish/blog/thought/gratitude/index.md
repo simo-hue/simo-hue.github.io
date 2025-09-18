@@ -49,4 +49,3 @@ En conclusión, vivir apreciando lo que tiene no significa no tratar de mejorar 
 
 > Apreciar la vida significa encontrar belleza incluso en momentos simples, dar la bienvenida a cada momento como un regalo y reconocer que la verdadera felicidad proviene de la gratitud por lo que ya tenemos.
 
-Protegido0000 protegido

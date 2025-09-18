@@ -29,7 +29,7 @@ Bienvenue dans Simo's Diary, un endroit où j'aime partager .... Da EXCHETARE
 
 # Découvrez ma chaîne YouTube: le journal de Simo
 
-Aujourd'hui, je veux vous parler de ma chaîne YouTube, ** Protected0001protected **, où je partage des moments de ma vie, des projets personnels et des passions.Cet espace est né du désir de documenter mes expériences d'une manière authentique et transparente, vous montrant des voyages, des aventures et bien plus encore.
+Aujourd'hui, je veux vous parler de ma chaîne YouTube, **  **, où je partage des moments de ma vie, des projets personnels et des passions.Cet espace est né du désir de documenter mes expériences d'une manière authentique et transparente, vous montrant des voyages, des aventures et bien plus encore.
 
 ## Pourquoi ai-je créé le journal de Simo?
 
@@ -62,4 +62,3 @@ Merci d'avoir lu, et j'espère vous voir bientôt parmi mes abonnés sur YouTube
 ## Écoutez mon histoire
 Si vous voulez écouter une introduction plus profonde, un de mes amis a décidé de m'interviewer ... Ici, ci-dessous, vous pouvez trouver beaucoup de compensations, ainsi que mon histoire
 
-Protégé 20000 protégé

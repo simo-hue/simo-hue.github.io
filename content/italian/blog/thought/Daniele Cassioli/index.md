@@ -53,4 +53,3 @@ L'incontro con Daniele Cassioli è stata una delle esperienze più significative
 
 Lascio il vivo dell'evento qui
 
-Protetto0000 protetto

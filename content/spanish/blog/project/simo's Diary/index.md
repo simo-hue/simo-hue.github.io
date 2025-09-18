@@ -62,4 +62,3 @@ Si te gusta la idea de descubrir aventuras, reflexiones auténticas y la vida re
 ## Escucha mi historia
 Si quieres escuchar una introducción más profunda, un amigo mío decidió entrevistarme ... aquí abajo puedes encontrar muchas intereses, así como mi historia.
 
-Protegido0000 protegido

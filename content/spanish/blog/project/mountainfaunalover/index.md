@@ -32,4 +32,3 @@ En YouTube, me sumerjo aún más.Mi canal es un espacio para la narración de hi
 
 ## spoiler de youtube
 
-Protegido0000 protegido

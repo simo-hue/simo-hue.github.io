@@ -49,4 +49,3 @@ En conclusion, vivre apprécier ce que vous avez ne signifie pas essayer de vous
 
 > Apprécier la vie signifie trouver la beauté même dans des moments simples, accueillir chaque instant comme un cadeau, et reconnaître que le vrai bonheur vient de la gratitude pour ce que nous avons déjà.
 
-Protégé 20000 protégé

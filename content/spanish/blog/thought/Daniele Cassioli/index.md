@@ -53,4 +53,3 @@ Conocer a Daniele Cassioli fue una de las experiencias más importantes que he v
 
 Dejo la vida del evento aquí
 
-Protegido0000 protegido

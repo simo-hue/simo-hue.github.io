@@ -53,4 +53,3 @@ Rencontrer Daniele Cassioli a été l'une des expériences les plus importantes 
 
 Je laisse le live de l'événement ici
 
-Protégé 20000 protégé

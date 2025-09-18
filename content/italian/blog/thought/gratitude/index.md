@@ -49,4 +49,3 @@ In conclusione, vivere apprezzando ciò che hai non significa non cercare di mig
 
 > Apprezzare la vita significa trovare la bellezza anche in momenti semplici, accogliere ogni momento come dono e riconoscere che la vera felicità deriva dalla gratitudine per ciò che già abbiamo.
 
-Protetto0000 protetto

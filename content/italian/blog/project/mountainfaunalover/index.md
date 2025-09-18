@@ -32,4 +32,3 @@ Su YouTube, mi immergo ancora più in profondità.Il mio canale è uno spazio pe
 
 ## spoiler YouTube
 
-Protetto0000 protetto
