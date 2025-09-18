@@ -66,7 +66,7 @@ These experiences fuel my creativity and my desire for personal growth.
 
 ---
 
-## Personal Online Presence
+## 📱 Personal Online Presence
 
 Want to get to know me better? Here's where you can find me:
 

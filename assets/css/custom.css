@@ -1,1 +1,74 @@
 /* Add your own custom styles here */
+
+/* Links page styling - integrates with Hugo theme */
+.social-links-container {
+  @apply space-y-8;
+}
+
+.link-card {
+  @apply flex items-start gap-6 p-6 rounded-lg border border-border bg-body
+         transition-all duration-300 hover:shadow-lg hover:-translate-y-1
+         dark:border-darkmode-border dark:bg-darkmode-body;
+}
+
+.link-icon {
+  @apply flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-lg
+         text-2xl transition-all duration-300;
+}
+
+.link-icon.linkedin {
+  @apply bg-[#0077B5] text-white;
+}
+
+.link-icon.github {
+  @apply bg-gray-900 text-white dark:bg-gray-100 dark:text-gray-900;
+}
+
+.link-icon.youtube {
+  @apply bg-[#FF0000] text-white;
+}
+
+.link-icon.instagram {
+  @apply bg-gradient-to-br from-purple-600 via-pink-600 to-yellow-500 text-white;
+}
+
+.link-icon.tiktok {
+  @apply bg-black text-white dark:bg-white dark:text-black;
+}
+
+.link-icon.email {
+  @apply bg-[#EA4335] text-white;
+}
+
+.link-content {
+  @apply flex-1;
+}
+
+.link-content h3 {
+  @apply text-xl font-semibold mb-2 text-text-dark dark:text-darkmode-text-dark;
+}
+
+.link-content p {
+  @apply text-text mb-4 leading-relaxed dark:text-darkmode-text;
+}
+
+/* Override only specific styling for links page, keep theme btn classes intact */
+.social-links-container .btn {
+  @apply no-underline;
+}
+
+.social-links-container .btn-primary {
+  @apply border-primary bg-primary dark:border-darkmode-primary dark:text-text-dark text-white dark:bg-darkmode-primary
+         hover:bg-primary/90 dark:hover:bg-darkmode-primary/90 hover:-translate-y-0.5 hover:shadow-md;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .link-card {
+    @apply flex-col text-center gap-4;
+  }
+
+  .link-icon {
+    @apply self-center;
+  }
+}

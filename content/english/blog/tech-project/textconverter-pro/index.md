@@ -11,7 +11,6 @@ tags:
     - Text Processing
     - Global Hotkeys
     - Native Applications
-    - Developer Tools
     - Content Creation
     - Workflow Optimization
     - System Integration
