@@ -32,7 +32,7 @@ url = "/categories/books/"
 
 [[main]]
 parent = "Blog"
-name = "Projects"
+name = "Personal Projects"
 url = "/categories/projects/"
 
 [[main]]
@@ -44,6 +44,20 @@ url = "/categories/thoughts/"
 parent = "Blog"
 name = "Expriences"
 url = "/categories/experiences/"
+
+[[main]]
+name = "Tech"
+url = "/tech"
+
+[[main]]
+parent = "Tech"
+name = "Publications"
+url = "/tech/publications/"
+
+[[main]]
+parent = "Tech"
+name = "Projects"
+url = "/tech/projects/"
 
 #[[main]]
 #name = "Contact"
