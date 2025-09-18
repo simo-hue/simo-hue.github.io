@@ -1,0 +1,59 @@
+############# Spanish navigation ##############
+
+# main menu
+[[main]]
+name = "Inicio"
+url = "/"
+weight = 1
+
+[[main]]
+name = "Acerca de"
+url = "/about"
+weight = 2
+
+[[main]]
+name = "Enlaces"
+url = "/links"
+weight = 3
+
+[[main]]
+name = "Blog"
+url = "/blog"
+
+[[main]]
+parent = "Blog"
+name = "Libros Leídos"
+url = "/categories/books/"
+
+[[main]]
+parent = "Blog"
+name = "Proyectos"
+url = "/categories/projects/"
+
+[[main]]
+parent = "Blog"
+name = "Pensamientos"
+url = "/categories/thoughts/"
+
+[[main]]
+parent = "Blog"
+name = "Experiencias"
+url = "/categories/experiences/"
+
+[[main]]
+name = "Tech"
+url = "/categories/tech-projects/"
+
+[[main]]
+parent = "Tech"
+name = "Publicaciones"
+url = "/categories/publications/"
+
+[[main]]
+parent = "Tech"
+name = "Proyectos"
+url = "/categories/tech-projects/"
+
+# footer menu
+[[footer]]
+name = "Una visión sin acción es solo un sueño, una acción sin visión es solo actividad"

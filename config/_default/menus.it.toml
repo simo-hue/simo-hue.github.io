@@ -1,0 +1,59 @@
+############# Italian navigation ##############
+
+# main menu
+[[main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[main]]
+name = "Chi Sono"
+url = "/about"
+weight = 2
+
+[[main]]
+name = "Links"
+url = "/links"
+weight = 3
+
+[[main]]
+name = "Blog"
+url = "/blog"
+
+[[main]]
+parent = "Blog"
+name = "Libri Letti"
+url = "/categories/books/"
+
+[[main]]
+parent = "Blog"
+name = "Progetti"
+url = "/categories/projects/"
+
+[[main]]
+parent = "Blog"
+name = "Pensieri"
+url = "/categories/thoughts/"
+
+[[main]]
+parent = "Blog"
+name = "Esperienze"
+url = "/categories/experiences/"
+
+[[main]]
+name = "Tech"
+url = "/categories/tech-projects/"
+
+[[main]]
+parent = "Tech"
+name = "Pubblicazioni"
+url = "/categories/publications/"
+
+[[main]]
+parent = "Tech"
+name = "Progetti"
+url = "/categories/tech-projects/"
+
+# footer menu
+[[footer]]
+name = "Una visione senza azione è solo un sogno, un'azione senza visione è solo attività"

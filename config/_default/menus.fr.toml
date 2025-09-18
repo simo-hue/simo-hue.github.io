@@ -1,0 +1,59 @@
+############# French navigation ##############
+
+# main menu
+[[main]]
+name = "Accueil"
+url = "/"
+weight = 1
+
+[[main]]
+name = "À Propos"
+url = "/about"
+weight = 2
+
+[[main]]
+name = "Liens"
+url = "/links"
+weight = 3
+
+[[main]]
+name = "Blog"
+url = "/blog"
+
+[[main]]
+parent = "Blog"
+name = "Livres Lus"
+url = "/categories/books/"
+
+[[main]]
+parent = "Blog"
+name = "Projets"
+url = "/categories/projects/"
+
+[[main]]
+parent = "Blog"
+name = "Pensées"
+url = "/categories/thoughts/"
+
+[[main]]
+parent = "Blog"
+name = "Expériences"
+url = "/categories/experiences/"
+
+[[main]]
+name = "Tech"
+url = "/categories/tech-projects/"
+
+[[main]]
+parent = "Tech"
+name = "Publications"
+url = "/categories/publications/"
+
+[[main]]
+parent = "Tech"
+name = "Projets"
+url = "/categories/tech-projects/"
+
+# footer menu
+[[footer]]
+name = "Une vision sans action n'est qu'un rêve, une action sans vision n'est qu'une activité"
