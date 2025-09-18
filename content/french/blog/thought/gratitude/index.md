@@ -12,7 +12,6 @@ tags:
 title: Appréciation de la vie
 ---
 
-<!-- hash: f8a2fe79b5cd -->
 Nous vivons souvent dans une ruée, projeté vers de nouveaux objectifs et attentes.Dans ce vortex, nous pouvons tenir pour acquis ce que nous avons: notre santé, notre famille, les gens qui nous aiment, ou même la chaleur simple du soleil sur notre peau.Pourtant, lorsque nous apprenons à nous arrêter et à «voir» ces choses, nous découvrons une source de sérénité et de force qui peut changer notre mode de vie.
 
 ## ** La beauté de la vie quotidienne **
@@ -49,4 +48,3 @@ En conclusion, vivre apprécier ce que vous avez ne signifie pas essayer de vous
 
 > Apprécier la vie signifie trouver la beauté même dans des moments simples, accueillir chaque instant comme un cadeau, et reconnaître que le vrai bonheur vient de la gratitude pour ce que nous avons déjà.
 
-Protégé 20000 protégé

@@ -12,7 +12,6 @@ slug: think
 title: Clab unirv
 ---
 
-<!-- hash: 9ca787013e86 -->
 # 🚀 Reurbanización de la Rocca di Nogarole: Nuestro viaje con Clab Verona
 
 El viaje del ** Laboratorio de contaminación (Clab) ** en la Universidad de Verona fue mucho más que un proyecto simple: fue una aventura, un desafío emocionante que permitió a mi equipo y a mí explorar nuevas habilidades, abordar obstáculos reales y, sobre todo, crear ideas concretas para nuestra comunidad.
@@ -34,7 +33,7 @@ En este artículo, encontrará:
 
 Solo puedo agradecer a mis compañeros de viaje extraordinarios: cada uno contribuyó con sus propias ideas, habilidades y entusiasmo a hacer que este viaje sea único.Fue un verdadero placer trabajar junto a ti.
 
-Protegido0000 protegido
+
 
 ## 🌟 Una gran experiencia compartida
 
@@ -51,13 +50,13 @@ A continuación se presentan los principales documentos de nuestro proyecto CLAB
 - [📄 Plan de negocios completo] (materiali%20Prodotti/DA%20Mandare%20al%20Mune/Business%20Plan.pdf#View = Fith) - Plan de negocios detallado para la reurbanización
 - [📊 Panel de control del plan financiero] (materiali%20Prodotti/Da%20Mandare%20al%20Mune/Financial%20Plan%20-%20DashBoard.pdf#View = Fith) - Análisis económico y financiero del proyecto
 - [📈 Plan financiero (Excel)] (Materiali%20Prodotti/Financial%20plan.xlsx) - Modelo financiero completo
-- Protegido 0001 PROTECTIVE - Propuesta final para el municipio
+-  Propuesta final para el municipio
 
 ### 📚 Materiales de estudio e investigación
 
 Todos ** Materiales de estudio ** utilizados durante el programa de capacitación (inicio, análisis territorial, gobernanza, comunicación de ESG, etc.) están disponibles para descargar en un archivo integral:
 
-- Protected 0002protected - Más de 40 archivos de investigación y capacitación utilizados para desarrollar las habilidades necesarias para el proyecto
+-   - Más de 40 archivos de investigación y capacitación utilizados para desarrollar las habilidades necesarias para el proyecto
 
 ---
 

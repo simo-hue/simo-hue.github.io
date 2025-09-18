@@ -21,4 +21,3 @@ Alimenté par la passion et le rugissement inoubliable des moteurs à essence, c
 
 ## Video YouTube sur
 
-{{< youtube kb6g_65PPoY >}}

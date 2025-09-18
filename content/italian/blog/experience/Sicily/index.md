@@ -30,11 +30,10 @@ FARE:
 - Stazione di Capaci
 - Buncherino
 - Palermo
-- segno della resisthenza silla scrivania di borsellino -> (L'Ho interpretato come) la resistenza e resilienza Che ogni essere umano (di successo) deve avee
+- Segno della resistenza sulla scrivania di Borsellino -> ( l'ho interpretato come ) la resistenza e resilienza che ogni essere umano ( Di successo ) deve avere
 - Determinazio che ci vuole per raggiungere Grandi Cose
 - Testimonianza del Fotografo (Magari Nei pensava Metere Che Siamo Una Generazione Che Si SMAGNEZERZERÀ -> Problema del Digitale)
 - Vieni Vogliono Rapresentalare la Loro Terra (senso di Appartenenza / Eliminazione Degli Stereotipi)
 - La Differenza tra una Guida "Normale" del 99% eD IL Top 1% (vieni in OGNI SEGNATORE SI PUò Eccellere E NON)
 
 
-Protetto0000 protetto

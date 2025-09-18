@@ -23,26 +23,26 @@ title: Esperienza di birdwatching con Swarovski Optik presso Le Ali del Frassino
 ---
 
 <!-- hash: 123b51d0df80 -->
-Protetto0000 protetto
+
 
 Di recente, grazie al mio progetto *amante della fauna di montagna *, ho avuto la possibilità di partecipare a un evento esclusivo organizzato da Swarovski Optik Italia nella splendida Oasis di Frassino a Peschiera del Garda.
 
 * Amante della fauna di montagna* è iniziato quasi come uno scherzo, nato dal mio amore per le montagne e la fauna selvatica.Non avrei mai immaginato che avrebbe aperto le porte a collaborazioni così emozionanti.
 
-Protected0001protected
+
 
 Attraverso questo progetto, sono stato in grado di sperimentare da vicino la natura, spesso insieme agli esperti e a usare attrezzature di alto livello, rendendo ogni avventura più indimenticabile della ultima.
 
-Protected0002protected
 
-Questa volta, siamo rimasti immersi in una straordinaria esperienza di birdwatching con la guida esperta e gli strumenti impressionanti di Swarovski Optik, inclusi i binocoli NL X52 e l'ambito di spotting BTX.La giornata è iniziata con una presentazione del manager di Swarovski Optik Italia, Franco Cernigliaro, e l'ornitologo Alessandro Sartori, che ci ha fatto conoscere le specie di uccelli che avremmo incontrato.
 
-Protected0003protected
+Questa volta, siamo rimasti immersi in una straordinaria esperienza di birdwatching con la guida esperta e gli strumenti impressionanti di Swarovski Optik, inclusi i binocoli NL X52 e l'ambito di spotting BTX.The day began with a presentation by SWAROVSKI OPTIK Italy’s manager, Franco Cernigliaro, and ornithologist Alessandro Sartori, who introduced us to the bird species we’d encounter.
+
+
 
 Durante il mio incontro con Franco Cernigliaro, il country Manager di Swarovski Optik Italia, abbiamo scambiato idee e prospettive stimolanti sulla biodiversità e sulla sostenibilità.È stata un'esperienza straordinaria interagire con qualcuno ugualmente dedicato alla natura e all'innovazione.La nostra discussione è incentrata su come questi temi sono fondamentali per la missione di Swarovski, non come strategie di marketing ma come veri valori fondamentali.
 Swarovski Optik incoraggia attivamente connessioni più profonde con la natura ed è impegnato a supportare pratiche sostenibili e tecnologie ecologiche nei loro prodotti di ottica ad alta precisione
 
-Protected0004protected
+
 
 L'osservazione è stata incredibile-polpacci a crema rossa, anatre trapuntate, Teals e, con un po 'di fortuna, un Harrier Marsh-sono apparsi nella loro piena bellezza, arricchiti dalla nitidezza e dalla chiarezza delle ottiche di Swarovski.
 

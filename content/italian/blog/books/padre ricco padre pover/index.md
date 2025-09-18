@@ -10,7 +10,6 @@ tags: []
 title: Papà ricco e povero |Robert Kiyosaki
 ---
 
-<!-- hash: 7be75d3aa0d3 -->
 # Papà ricco papà povero: finanza personale per tutti?
 
 ## Introduzione

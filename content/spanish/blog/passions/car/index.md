@@ -21,4 +21,3 @@ Impulsado por la pasión y el inolvidable rugido de los motores de gasolina, est
 
 ## Video de YouTube sobre
 
-{{< youtube kb6g_65PPoY >}}

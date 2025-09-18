@@ -10,7 +10,6 @@ tags: []
 title: Habitudes atomiques |James Clear
 ---
 
-<!-- hash: a104b4c6af50 -->
 ## Introduction
 "Atomic Habits" de James Clear est un livre éclairant qui répond à l'importance des habitudes dans notre vie quotidienne.Dans un style clair et accessible, l'auteur nous guide à travers le cycle des habitudes, expliquant comment ils influencent notre comportement et comment nous pouvons les utiliser pour améliorer nos vies.
 

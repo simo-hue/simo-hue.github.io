@@ -24,12 +24,11 @@ tags:
 title: Diario en línea y digital de Simo
 ---
 
-<!-- hash: b7e93e782ace -->
 Bienvenido a Simo's Diary, un lugar donde me encanta compartir .... Da TOTRARE
 
 # Descubre mi canal de YouTube: Diario de Simo
 
-Hoy quiero contarte sobre mi canal de YouTube, ** protegido0001protected **, donde comparto momentos de mi vida, proyectos personales y pasiones.Este espacio nació del deseo de documentar mis experiencias de una manera auténtica y transparente, mostrándole viajes, aventuras y mucho más.
+Hoy quiero contarte sobre mi canal de YouTube, **  **, donde comparto momentos de mi vida, proyectos personales y pasiones.Este espacio nació del deseo de documentar mis experiencias de una manera auténtica y transparente, mostrándole viajes, aventuras y mucho más.
 
 ## ¿Por qué creé el diario de Simo?
 
@@ -62,4 +61,3 @@ Si te gusta la idea de descubrir aventuras, reflexiones auténticas y la vida re
 ## Escucha mi historia
 Si quieres escuchar una introducción más profunda, un amigo mío decidió entrevistarme ... aquí abajo puedes encontrar muchas intereses, así como mi historia.
 
-Protegido0000 protegido

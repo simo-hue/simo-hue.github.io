@@ -10,5 +10,4 @@ tags: []
 title: Guadagna con la mente |Andrea Maurizio Gilardoni
 ---
 
-<!-- hash: c05167b028b9 -->
 # Próximamente, todavía leyendo

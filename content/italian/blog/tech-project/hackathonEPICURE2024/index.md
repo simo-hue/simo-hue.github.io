@@ -25,7 +25,7 @@ tags:
 - EPICURE
 - CINECA
 - Hackathon
-title: Epicure Hackathon GPU - ottobre 2024
+title: Epicure Hackathon GPU - ottobre
 ---
 
 <!-- hash: 5db97d7a7fa4 -->
@@ -54,7 +54,7 @@ L'agenda per il primo giorno era la seguente:
 
 ** Immagini dal 1 ° giorno: **
 
-Protected0001protected
+
 
 ## Day 2: ottimizzazione e profilazione avanzata della GPU
 
@@ -97,19 +97,18 @@ Interessato a saperne di più?Scopri i collegamenti seguenti per accedere a magg
 
 ** link **
 
-- Protected0003Protected
-- Protected0004protected
-- Protected0005protected
-- Protected0006Protected
-- Protected0007protected
-- Protected0008Protected
+- 
+- 
+- 
+- 
+- 
+- 
 
 ---
 
 Questo hackathon ha sicuramente suscitato un interesse più profondo nell'esplorare il potenziale delle GPU per compiti ad alte prestazioni.Non vedo l'ora di applicare queste competenze in progetti futuri e condividere le mie intuizioni con la comunità.
 
-Protected0002protected
+
 
 ## YouTube Vlogs
 Ho fatto dei mini vlog sulla mia esperienza a Bologna durante questo evento e questo è il primo della playlist
-Protetto0000 protetto

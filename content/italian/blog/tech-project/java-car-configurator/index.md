@@ -34,7 +34,6 @@ tags:
 title: Configuratore Auto Java - Pattern di progettazione di Architettura MVC E
 ---
 
-<!-- hash: 77285c37abdb -->
 ## The Genesis of the Project: From Academic Need to Technical Excellence
 
 The **Programming 2** exam at the University of Verona represents a pivotal moment in the Computer Science curriculum: the transition from procedural programming to advanced object-oriented paradigms. When I was assigned the project to develop a modular and extensible product configurator, I saw the perfect opportunity to demonstrate my mastery of fundamental software engineering principles.

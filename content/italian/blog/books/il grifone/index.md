@@ -10,7 +10,6 @@ tags: []
 title: il grifone |Nicola Gratteri
 ---
 
-<!-- hash: 4aa933cb4c8a -->
 ## Introduzione
 *Il Grifone*, scritto da Nicola Gratteri, è un'opera che va oltre la semplice narrazione della lotta contro il crimine organizzato.Questo libro rappresenta un vero manifesto di dedizione alla giustizia, incarnato dallo stesso autore.Gratteri, magistrato e simbolo della lotta contro il 'Ndrangheta, dedica ogni momento della sua vita a questa missione, sacrificando il suo tempo personale e i comfort che la sua posizione potrebbe garantirlo (una caratteristica che mi affascina molto).
 

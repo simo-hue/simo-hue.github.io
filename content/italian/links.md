@@ -1,6 +1,7 @@
 ---
-description: Trova tutti i miei profili, progetti e modi per connettersi con me.Dalla
-  fotografia di Instagram Wildlife a YouTube Storytelling e GitHub Development Projects.
+description: Find all my social media profiles, projects, and ways to connect with
+  me. From Instagram wildlife photography to YouTube storytelling and GitHub development
+  projects.
 draft: false
 subtitle: Connect with me across all platforms
 title: Links

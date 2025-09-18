@@ -10,5 +10,4 @@ tags: []
 title: Penieri lenti Penieri Veloci
 ---
 
-<!-- hash: c05167b028b9 -->
 # À venir bientôt, je lis toujours

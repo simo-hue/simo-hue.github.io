@@ -13,7 +13,6 @@ tags:
 title: La ripetizione è la madre di tutte le abilità
 ---
 
-<!-- hash: 3558a2093a3d -->
 C'è una verità senza tempo nel detto:*"La ripetizione è la madre di tutte le abilità".*È qualcosa che ho avuto ad abbracciare pienamente da quando ho integrato un metodo che ha completamente trasformato il modo in cui imparo e interiorizzare i concetti: ** Il metodo di immersione **.
 
 ---

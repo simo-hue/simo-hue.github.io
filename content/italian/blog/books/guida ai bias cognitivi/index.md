@@ -10,7 +10,6 @@ tags: []
 title: GUIDA AI BIAS COGNITIVI, Capire Le Trappole Della Mente |Raffaele Gaito
 ---
 
-<!-- hash: 7d6c3a1bc7f4 -->
 ## Introduzione
 La * Guida di distorsione cognitiva * è un libro che ci aiuta a scoprire e comprendere i meccanismi che influenzano il nostro pensiero e le nostre decisioni.I pregiudizi cognitivi sono errori sistematici che tutti facciamo nel ragionamento, spesso senza realizzarlo.Questo libro offre esempi e idee pratiche per riconoscere e affrontare queste trappole mentali, permettendoci di migliorare il nostro processo decisionale.
 

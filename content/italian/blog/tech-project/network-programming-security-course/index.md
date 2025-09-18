@@ -35,7 +35,6 @@ tags:
 title: Corso Programmazione e Sicurezza Delle Reti - Materia Didattico Open Source
 ---
 
-<!-- hash: 884a1c22861d -->
 ## The Genesis of the Project: From a Passion for Security to Sharing
 
 Professor Davide Quaglia's **Programming and Network Security** course was much more than a simple university exam for me. It was an opportunity to delve deeper into a field that deeply fascinates me: **cybersecurity** and **network technologies**.

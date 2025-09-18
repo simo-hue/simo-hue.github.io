@@ -13,7 +13,6 @@ tags:
 title: Importanza della storia
 ---
 
-<!-- hash: 879c68acc3b7 -->
 # Il mio viaggio da odiatore a curioso
 
 Ammetto che la storia era la mia nemesi durante i miei anni scolastici.Quando il professore entrò in classe e iniziò a parlare di date, battaglie e sovrani, mi sentivo perso.Sembrava tutto così noioso e distante dalla mia realtà.Non riuscivo a percepire il valore di quella conoscenza: perché mai sarei interessato a ciò che era accaduto secoli fa?

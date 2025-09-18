@@ -10,7 +10,6 @@ tags: []
 title: Hábitos atómicos |James claro
 ---
 
-<!-- hash: a104b4c6af50 -->
 ## Introducción
 "Hábitos atómicos" de James Clear es un libro esclarecedor que aborda la importancia de los hábitos en nuestra vida diaria.En un estilo claro y accesible, el autor nos guía a través del ciclo de los hábitos, explicando cómo influyen en nuestro comportamiento y cómo podemos usarlos para mejorar nuestras vidas.
 

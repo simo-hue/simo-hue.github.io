@@ -28,7 +28,6 @@ tags:
 title: Sistema di gestione dell'e-bike del rabbino-Sistema Completo per Noleggio E-Bike
 ---
 
-<!-- hash: 57fce79c1e03 -->
 ## La genesi del progetto: da un'idea spontanea a una soluzione professionale
 
 Tutto è iniziato in modo molto naturale.Alcuni amici gestiscono un piccolo negozio di noleggio e-bici e si sono trovati a trattare quotidianamente con prenotazioni scritte a mano, gestione dell'inventario con fogli di calcolo Excel e una visione poco chiara dei loro guadagni e delle prestazioni aziendali.

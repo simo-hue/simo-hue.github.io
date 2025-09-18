@@ -14,7 +14,7 @@ links:
   website: /blog/brazil
 slug: 21th-birthday
 tags:
-- summer 2024
+- summer
 - volounteering activity
 - brazil
 - emotional
@@ -24,19 +24,19 @@ title: 21º día de nacimiento en Brasil
 <!-- hash: e5d49152587c -->
 Mi cumpleaños número 21 fue único, una experiencia que nunca olvidaré.Lo gasté en Brasil, durante mi período de voluntariado, lejos de casa y todos mis seres queridos.En esa ocasión, no estaba rodeado por los rostros familiares de amigos y familiares, sino por seis extraños, que compartieron conmigo la experiencia de ser voluntario en un país tan diferente del mío.
 
-Protegido0000 protegido
+
 
 No esperaba nada especial.Por lo general, los cumpleaños nunca han tenido un significado particular para mí, pero ese día resultó ser diferente, especial, único.Celebrar un cumpleaños lejos de casa y seres queridos fue un primer paso fuera de mi zona de confort.Me permitió vivir el momento con ligereza y curiosidad, inmerso en una nueva experiencia.
 
 ### Una sorpresa inesperada
 
-Protegido 0001protected
+
 
 Lo que hizo que mi cumpleaños fuera realmente memorable fue la sorpresa que mis compañeros de viaje organizaron.Descubrieron solo unos días después que había cumplido 18 años, y decidieron sorprenderme con una sorpresa que me dejó sin palabras.Una mañana nos despertamos a las 4:30, listos para ir y ver el amanecer en la hermosa playa brasileña de Cabo Branco.
 
 No tenía idea de qué esperar.Llegamos a la playa, el cielo comenzaba a ponerse caliente, un preludio al amanecer.Fue entonces cuando me dieron un pastel, preparado especialmente para mí.Todos lo compartimos juntos, comiendo y disfrutando del amanecer en uno de los lugares más hermosos que he visto y luego terminamos con estilo con la cena con Don Eltom y Don Alberto que nos acompañaron en nuestra experiencia de voluntariado en el noreste de Brasil.
 
-Protegido 0002 protegido
+
 
 ### Un momento de pura felicidad
 
@@ -48,4 +48,3 @@ Si puedo darte consejos, es aceptar cada experiencia que te sucede, incluso aque
 
 Ese cumpleaños fuera de casa, en Brasil, me enseñó el valor de compartir, amistad y aventura.Fue una experiencia que siempre llevaré en mi corazón también con la otra parte de mi viaje allí en Brasil haciendo actividad voluntad.
 
-Protegido 0003 protegido

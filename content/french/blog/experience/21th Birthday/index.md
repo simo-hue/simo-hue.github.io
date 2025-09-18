@@ -14,7 +14,7 @@ links:
   website: /blog/brazil
 slug: 21th-birthday
 tags:
-- summer 2024
+- summer
 - volounteering activity
 - brazil
 - emotional
@@ -24,19 +24,19 @@ title: 21e jour de naissance au Brésil
 <!-- hash: e5d49152587c -->
 Mon 21e anniversaire était unique, une expérience que je n'oublierai jamais.Je l'ai passé au Brésil, pendant ma période de bénévolat, loin de chez moi et de tous mes proches.À cette occasion, je n'étais pas entouré par les visages familiers des amis et des parents, mais par six étrangers, qui ont partagé avec moi l'expérience du bénévolat dans un pays si différent du mien.
 
-Protégé 20000 protégé
+
 
 Je ne m'attendais à rien de spécial.Habituellement, les anniversaires n'ont jamais eu de sens particulier pour moi, mais ce jour s'est avéré différent, spécial, unique.Célébrer un anniversaire loin de chez lui et des proches a été un premier pas de ma zone de confort.Cela m'a permis de vivre le moment avec la légèreté et la curiosité, immergés dans une nouvelle expérience.
 
 ### Une surprise inattendue
 
-Protégé 0001 protégés
+
 
 Ce qui a rendu mon anniversaire vraiment mémorable, c'est la surprise que mes compagnons de voyage ont organisé.Ils ont découvert que quelques jours plus tard que j'avais 18 ans, et ils ont décidé de me surprendre avec une surprise qui m'a laissé sans voix.Un matin, nous nous sommes réveillés à 4h30, prêts à partir et regarder le lever du soleil sur la belle plage brésilienne de Cabo Branco.
 
 Je ne savais pas à quoi m'attendre.Nous avons atteint la plage, le ciel commençait à se réchauffer, un prélude à l'aube.C'est alors qu'ils m'ont donné un gâteau, préparé spécialement pour moi.Nous l'avons tous partagé ensemble, mangeant et profitant du lever du soleil dans l'un des plus beaux endroits que j'ai jamais vus, puis en terminant avec style avec Don Eltom et Don Alberto qui nous ont accompagnés pour notre expérience de bénévolat dans le nord-est du Brésil.
 
-Protégé 0002
+
 
 ### Un moment de pur bonheur
 
@@ -48,4 +48,3 @@ Si je peux vous donner des conseils, c'est d'accepter chaque expérience qui vou
 
 Cet anniversaire loin de chez moi, au Brésil, m'a appris la valeur du partage, de l'amitié et de l'aventure.Ce fut une expérience que je porterai toujours dans mon cœur aussi avec l'autre partie de mon voyage là-bas au Brésil faisant une activité volondeuse
 
-Protégé 0003 protégés

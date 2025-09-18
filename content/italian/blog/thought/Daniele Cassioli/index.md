@@ -13,7 +13,6 @@ tags:
 title: Daniele Cassioli
 ---
 
-<!-- hash: 6b63213a96f8 -->
 Ho avuto il privilegio di incontrare Daniele Cassioli e posso dire che è stata un'esperienza profondamente arricchente.Per coloro che non lo conoscono, Daniele è un atleta paralimpico cieco, campione del mondo in sci d'acqua, autore e oratore motivazionale.La sua storia è un esempio straordinario di come trasformare le difficoltà in opportunità e il suo stile di vita è una lezione che porta alla riflessione.
 
 ## gratitudine per opportunità
@@ -53,4 +52,3 @@ L'incontro con Daniele Cassioli è stata una delle esperienze più significative
 
 Lascio il vivo dell'evento qui
 
-Protetto0000 protetto

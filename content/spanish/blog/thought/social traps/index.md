@@ -13,7 +13,6 @@ tags:
 title: La trampa del siglo XX
 ---
 
-<!-- hash: a537416d2923 -->
 # Separado de los estímulos
 
 Vivimos en una era de estimulación constante, un flujo constante de notificaciones, actualizaciones y contenido digital que nos mantiene constantemente "conectados" pero, al mismo tiempo, reducen drásticamente nuestra capacidad de concentrarnos.Todos los días, somos bombardeados con estímulos visuales y auditivos a través de las redes sociales, aplicaciones de mensajería, plataformas de entretenimiento, que ahora guían nuestras vidas tanto en línea como fuera de línea.

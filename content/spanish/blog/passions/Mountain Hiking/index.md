@@ -23,6 +23,5 @@ title: Senderismo de montaña
 
 <!-- hash: cff2039ba44d -->
 # # muy pronto...
-Protegido0000 protegido
-Protegido0001 protegido
-Protegido0002 protegido
+
+

@@ -10,7 +10,6 @@ tags: []
 title: Guida Ai Bias Cognivi, Capire Le Trappole della Mente |Raffaele Gaito
 ---
 
-<!-- hash: 7d6c3a1bc7f4 -->
 ## Introduction
 Le * Guide des biais cognitifs * est un livre qui nous aide à découvrir et à comprendre les mécanismes qui influencent notre pensée et nos décisions.Les biais cognitifs sont des erreurs systématiques que nous faisons tous dans le raisonnement, souvent sans s'en rendre compte.Ce livre propose des exemples et des idées pratiques pour reconnaître et aborder ces pièges mentaux, nous permettant d'améliorer notre processus décisionnel.
 

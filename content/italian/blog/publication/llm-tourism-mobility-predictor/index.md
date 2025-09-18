@@ -3,7 +3,7 @@ categories:
 - publications
 comments: false
 date: 2024-12-15
-description: Documento di ricerca su un innovativo framework open source che combina
+description: Documento di ricerca su un quadro innovativo open source che combina
   modelli di grandi dimensioni con calcolo ad alte prestazioni per prevedere i modelli
   di mobilità del turismo utilizzando A100 GPU
 draft: false

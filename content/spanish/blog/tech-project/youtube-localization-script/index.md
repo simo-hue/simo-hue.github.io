@@ -31,7 +31,6 @@ tags:
 title: Automazione traduzione contenuti youtube
 ---
 
-<!-- hash: f6fe08df7145 -->
 ## The Genesis of the Project: From Necessity to Solution
 
 As a content creator managing the channel **Simo's Diary**, I faced a recurring challenge: reaching an international audience. My videos, initially conceived only in Italian, had the potential to appeal to people around the world, but the language barrier was a significant obstacle.

@@ -3,7 +3,7 @@ categories:
 - tech-projects
 date: 2024-09-18
 description: Applicicazione Nativa macos per conversioni testo istantanee con scorciatoia
-  globali.Switch di contesto zero, <100 ms Tempo di risposta, app integrazioner con
+  globali.Switch di contesto zero, <100 ms Tempo di risposta, app Integrazione Con
   500+.Strumento di produttività per sviluppatori e creatori di contenuti.
 image: cover.png
 links:

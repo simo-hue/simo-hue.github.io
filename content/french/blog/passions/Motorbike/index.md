@@ -16,5 +16,5 @@ title: Motos
 ---
 
 <!-- hash: c7c82fc59ec5 -->
-Protégé 20000 protégé
-Né d'une envie de toute la vie pour le frisson de deux roues, ce blog capture l'essence de mon voyage dans le monde des motos.Depuis que je suis jeune, j'ai rêvé de posséder mon propre vélo, et quand j'ai finalement obtenu mon Fanttic 50 2 STROKE, c'était tout ce que j'avais imaginé - et plus encore.De la personnaliser pour le rendre uniquement à la mienne, à la maîtrise de l'art de rouler sur une roue, chaque balade a provoqué une ruée de liberté et de joie de vivre.Ici, je partagerai des histoires, des conseils et des idées sur le style de vie de la moto, célébrant la pure adrénaline, compétence et connexion que seuls les motards comprennent.Que vous soyez un cavalier chevronné ou tout simplement curieux, rejoignez-moi sur le trajet!
+![My Fantic 50 Motard](fantic.jpg)
+Born from a lifelong craving for the thrill of two wheels, this blog captures the essence of my journey into the world of motorbikes. Ever since I was young, I dreamt of owning my own bike, and when I finally got my Fantic 50 2-stroke, it was everything I’d imagined—and more. From personalizing it to make it uniquely mine, to mastering the art of riding on one wheel, every ride brought a rush of freedom and exhilaration. Here, I’ll share stories, tips, and insights into the motorbike lifestyle, celebrating the pure adrenaline, skill, and connection that only bikers understand. Whether you’re a seasoned rider or just curious, join me on the ride!

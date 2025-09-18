@@ -38,4 +38,3 @@ FAIRE:
 - la différenciza tra una Guida "Normale" del 99% ed il top 1% (Come in ogni colon si può eccellel e non)
 
 
-Protégé 20000 protégé

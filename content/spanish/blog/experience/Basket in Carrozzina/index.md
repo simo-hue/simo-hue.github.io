@@ -25,11 +25,11 @@ title: Baloncesto de silla de ruedas
 
 Gracias a la colaboración extraordinaria entre ** Collegio Don Mazza **, ** Residenza Ferrari Delle Spade di Verona ** y ** Basket Olympic Verona **, tuve la oportunidad de vivir una de las experiencias más importantes de mi vida: intentando ** baloncesto de silla de ruedas **.
 
-Protegido 0001protected
+
 
 ## una experiencia única
 
-Esta disciplina va mucho más allá de un juego simple.Es una verdadera lección de fuerza, determinación e inclusión.Sentarse en una silla de ruedas, recoger la pelota e intentar moverse, disparar y colaborar con el resto del equipo fue esclarecedor.
+This discipline goes far beyond a simple game.Es una verdadera lección de fuerza, determinación e inclusión.Sentarse en una silla de ruedas, recoger la pelota e intentar moverse, disparar y colaborar con el resto del equipo fue esclarecedor.
 
 Aprendí que el deporte es un lenguaje universal, capaz de desglosar todo tipo de barreras: físico, mental y cultural.Fue una oportunidad para ver el mundo desde una perspectiva completamente diferente, reconocer los desafíos diarios que enfrentan muchos atletas y apreciar su compromiso y resistencia.
 
@@ -48,14 +48,14 @@ El baloncesto en silla de ruedas muestra que con pasión, determinación y espí
 ## BASTA OLYMPICA Verona: una realidad para descubrir
 
 Un agradecimiento especial es ** Baneta Olímpica Verona **, una realidad que representa un verdadero ejemplo de inclusión y promoción del deporte para todos.Si desea saber más sobre ellos, aquí es donde puede encontrarlos en línea:
-- ** Facebook **: protegido 0002protected
-- ** Instagram **: protegido 0003 protegido
+- ** Facebook **: 
+- ** Instagram **: 
 
 ## Mira el video de mi experiencia
 
 Si quieres sumergirte en esta experiencia única, eche un vistazo al video que hice:
 
-Protegido0000 protegido
+
 
 ---
 

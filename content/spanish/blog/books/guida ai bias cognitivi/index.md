@@ -10,7 +10,6 @@ tags: []
 title: Guida ai Bias Cognitivi, Capire le Trappole della Mente |Raffaele Gaito
 ---
 
-<!-- hash: 7d6c3a1bc7f4 -->
 ## Introducción
 La * Guía de sesgo cognitivo * es un libro que nos ayuda a descubrir y comprender los mecanismos que influyen en nuestro pensamiento y decisiones.Los sesgos cognitivos son errores sistemáticos que todos cometemos en el razonamiento, a menudo sin darnos cuenta.Este libro ofrece ejemplos e ideas prácticas para reconocer y abordar estas trampas mentales, lo que nos permite mejorar nuestro proceso de toma de decisiones.
 

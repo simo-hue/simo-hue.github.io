@@ -13,7 +13,6 @@ tags:
 title: Le piège du 20e siècle
 ---
 
-<!-- hash: a537416d2923 -->
 # Détaché des stimuli
 
 Nous vivons à une époque de stimulation constante, un flux constant de notifications, de mises à jour et de contenu numérique qui nous maintiennent constamment "connectés" mais, en même temps, réduisent considérablement notre capacité à nous concentrer.Chaque jour, nous sommes bombardés de stimuli visuels et auditifs via les médias sociaux, les applications de messagerie, les plateformes de divertissement, qui guident désormais nos vies en ligne et hors ligne.

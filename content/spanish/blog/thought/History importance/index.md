@@ -13,7 +13,6 @@ tags:
 title: Importancia de la historia
 ---
 
-<!-- hash: 879c68acc3b7 -->
 # Mi viaje de Hater a Curious
 
 Admito que la historia fue mi némesis durante mis años escolares.Cuando el profesor entró en el aula y comenzó a hablar sobre fechas, batallas y gobernantes, me sentí perdido.Todo parecía tan aburrido y distante de mi realidad.No podría percibir el valor de ese conocimiento: ¿por qué demonios estaría interesado en lo que había sucedido hace siglos?

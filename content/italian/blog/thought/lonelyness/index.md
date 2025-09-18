@@ -13,7 +13,6 @@ tags:
 title: L'importanza di poter stare da solo
 ---
 
-<!-- hash: 03ede1db4ff1 -->
 Sapere come stare da solo è un'abilità spesso sottovalutata, ma è incredibilmente importante per la nostra crescita personale.In un mondo che sembra spingerci costantemente a cercare la compagnia degli altri, prendere del tempo per noi stessi può essere un atto rivoluzionario.Non solo ci consente di conoscerci meglio, ma può trasformarsi in un vero terreno di allenamento per crescere come persona.
 
 ## Conosci te stesso

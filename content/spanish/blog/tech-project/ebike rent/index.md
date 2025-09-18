@@ -29,7 +29,6 @@ title: Rabino Sistema de gestión de bicicletas electrónicas-Sistema entero por
   E-Bike
 ---
 
-<!-- hash: 57fce79c1e03 -->
 ## La génesis del proyecto: de una idea espontánea a una solución profesional
 
 Todo comenzó de manera muy natural.Algunos amigos dirigen una pequeña tienda de alquiler de bicicletas electrónicas y se encontraron diariamente con reservas escritas a mano, gestión de inventario con hojas de cálculo de Excel y una visión poco clara de sus ganancias y rendimiento comercial.

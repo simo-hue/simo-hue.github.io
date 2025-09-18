@@ -24,12 +24,11 @@ tags:
 title: Diario online e digitale di Simo
 ---
 
-<!-- hash: b7e93e782ace -->
 Benvenuti in Simo's Diary, un posto dove mi piace condividere .... da completare
 
 # Scopri il mio canale YouTube: Simo's Diary
 
-Oggi voglio parlarti del mio canale YouTube, ** Protected0001Protected **, dove condivido momenti della mia vita, progetti personali e passioni.Questo spazio è nato dal desiderio di documentare le mie esperienze in modo autentico e trasparente, mostrandoti viaggi, avventure e molto altro.
+Oggi voglio parlarti del mio canale YouTube, **  **, dove condivido momenti della mia vita, progetti personali e passioni.Questo spazio è nato dal desiderio di documentare le mie esperienze in modo autentico e trasparente, mostrandoti viaggi, avventure e molto altro.
 
 ## Perché ho creato il diario di Simo?
 
@@ -62,4 +61,3 @@ Grazie per la lettura e spero di vedervi presto tra i miei follower su YouTube!
 ## ascolta la mia storia
 Se vuoi ascoltare un'introduzione più profonda, un mio amico ha deciso di intervistarmi ... qui sotto puoi trovare molto di interesse e della mia storia
 
-Protetto0000 protetto

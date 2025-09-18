@@ -13,7 +13,6 @@ tags:
 title: Importancia de la relación
 ---
 
-<!-- hash: 26d36a5898e1 -->
 # Amistad y amor
 
 Las relaciones humanas son el pilar fundamental de nuestra existencia, no es coincidencia que se dice que el hombre es un animal social ... Las amistades, los lazos familiares y las relaciones románticas contribuyen a definir no solo la calidad de nuestra vida, sino también quiénes somos y en qué podemos convertirnos.No podemos ignorar el enorme impacto que estas conexiones tienen en nosotros, para bien o para mal, y en nuestras vidas.
@@ -54,4 +53,3 @@ Tómese el tiempo para pensar en quién desea en su círculo.No es fácil, pero 
 
 Recuerde: no se trata solo de la compañía, se trata de calidad.Elija el 1% en todas las áreas de su vida.
 
-Protegido0000 protegido

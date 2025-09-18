@@ -10,7 +10,6 @@ tags: []
 title: Abitudini atomiche |James Clear
 ---
 
-<!-- hash: a104b4c6af50 -->
 ## Introduzione
 "Atomic Abits" di James Clear è un libro illuminante che affronta l'importanza delle abitudini nella nostra vita quotidiana.In uno stile chiaro e accessibile, l'autore ci guida attraverso il ciclo delle abitudini, spiegando come influenzano il nostro comportamento e come possiamo usarli per migliorare la nostra vita.
 

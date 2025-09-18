@@ -21,4 +21,3 @@ Alimentato dalla passione e dall'indimenticabile ruggito dei motori a benzina, q
 
 ## video di YouTube su
 
-{{< youtube kb6g_65PPoY >}}

@@ -13,7 +13,6 @@ tags:
 title: Importanza delle relazioni
 ---
 
-<!-- hash: 26d36a5898e1 -->
 # Amicizia e amore
 
 Le relazioni umane sono il pilastro fondamentale della nostra esistenza, non è una coincidenza che si dice che l'uomo sia un animale sociale ... amicizie, legami familiari e relazioni romantiche contribuiscono a definire non solo la qualità della nostra vita, ma anche chi siamo e cosa possiamo diventare.Non possiamo ignorare l'enorme impatto che queste connessioni hanno su di noi, nel bene e nel male e sulla nostra vita.
@@ -54,4 +53,3 @@ Prenditi il ​​tempo per pensare a chi vuoi nella tua cerchia.Non è facile, 
 
 Ricorda: non si tratta solo di compagnia, ma di qualità.Scegli l'1% in tutte le aree della tua vita.
 
-Protetto0000 protetto

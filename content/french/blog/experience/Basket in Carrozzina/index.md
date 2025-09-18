@@ -25,7 +25,7 @@ title: Basket-ball en fauteuil roulant
 
 Grâce à l'extraordinaire collaboration entre ** Collegio Don Mazza **, ** Residenza Ferrari delle Spade di Verona ** et ** Panier olympique Vérone **, j'ai eu l'occasion de vivre l'une des expériences les plus importantes de ma vie: essayer ** Basketball en fauteuil roulant **.
 
-Protégé 0001 protégés
+
 
 ## Une expérience unique
 
@@ -48,14 +48,14 @@ Le basket-ball en fauteuil roulant montre qu'avec la passion, la détermination 
 ## Panier olympique Vérone: une réalité à découvrir
 
 Un remerciement spécial va à ** le panier olympique Vérone **, une réalité qui représente un véritable exemple d'inclusion et de promotion du sport pour tous.Si vous voulez en savoir plus à leur sujet, voici où vous pouvez les trouver en ligne:
-- ** Facebook **: protégé 0002
-- ** Instagram **: protégé 0003 Protected
+- ** Facebook **: 
+- ** Instagram **:  0003 
 
 ## Regardez la vidéo de mon expérience
 
 Si vous voulez vous immerger dans cette expérience unique, jetez un œil à la vidéo que j'ai faite:
 
-Protégé 20000 protégé
+
 
 ---
 

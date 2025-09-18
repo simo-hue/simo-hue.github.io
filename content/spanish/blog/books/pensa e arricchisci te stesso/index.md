@@ -10,7 +10,6 @@ tags: []
 title: Piense y se enriquece |Napoleón Hill
 ---
 
-<!-- hash: 1611b15edabd -->
 ## Introducción a la filosofía del éxito de Napoleon Hill
 * Think and Grow Rich* por Napoleon Hill es un hoja perenne en desarrollo personal y éxito.Publicado por primera vez en 1937, es una guía práctica que enseña cómo el pensamiento positivo, la determinación y una visión clara de los objetivos pueden transformar los sueños en realidad.Hill ha estudiado la vida de grandes hombres exitosos, como Andrew Carnegie, Henry Ford y Thomas Edison, durante más de 25 años y ha destilado sus secretos en esta obra maestra atemporal.
 

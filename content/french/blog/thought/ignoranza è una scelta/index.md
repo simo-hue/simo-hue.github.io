@@ -12,7 +12,6 @@ tags:
 title: L'ignorance de nos jours est un choix
 ---
 
-<!-- hash: 3ad878e2bf20 -->
 Dans le passé, l'accès à la connaissance était un privilège.Les livres étaient rares, les universités étaient réservées à l'élite et l'expertise nécessitait souvent un accès à des mentors ou des outils spécialisés.Mais aujourd'hui, l'histoire est complètement différente.Nous vivons à une époque où les obstacles à l'apprentissage ont pratiquement disparu, grâce au pouvoir transformateur de la technologie.
 
 ## Le cadeau d'accès illimité

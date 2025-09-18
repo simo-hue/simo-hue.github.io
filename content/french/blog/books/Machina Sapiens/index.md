@@ -9,7 +9,6 @@ tags: []
 title: Machina Sapiens |Nello Cristianini
 ---
 
-<!-- hash: dd2fa40e021a -->
 # Réflexions sur un livre visionnaire
 
 J'ai récemment fini de lire le livre ** "Machina Sapiens" ** par Nello Cristianini, un auteur que j'admire profondément pour son expertise et sa capacité à rendre des sujets complexes liés à l'intelligence artificielle accessible.Ce livre n'est pas seulement une exploration des technologies émergentes, mais aussi un voyage philosophique qui m'a fasciné et, je dois admettre, un peu effrayé.

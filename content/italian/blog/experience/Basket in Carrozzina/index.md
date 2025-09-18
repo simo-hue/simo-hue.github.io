@@ -25,7 +25,7 @@ title: Basket sedia a rotelle
 
 Grazie alla straordinaria collaborazione tra ** Collegio Don Mazza **, ** Residenza Ferrari Delle Spade Di Verona ** e ** Basket Olimpico Verona **, ho avuto l'opportunità di vivere una delle esperienze più significative della mia vita: provare ** sedia a rotelle a basket **.
 
-Protected0001protected
+
 
 ## un'esperienza unica
 
@@ -48,14 +48,14 @@ Il basket per sedie a rotelle mostra che con passione, determinazione e spirito 
 ## cesto olimpico Verona: una realtà da scoprire
 
 Un ringraziamento speciale va a ** Basket Olympic Verona **, una realtà che rappresenta un vero esempio di inclusione e promozione dello sport per tutti.Se vuoi saperne di più su di loro, ecco dove puoi trovarli online:
-- ** Facebook **: Protected0002Protected
-- ** Instagram **: Protected0003Protected
+- ** Facebook **: 
+- ** Instagram **: 
 
 ## Guarda il video della mia esperienza
 
 Se vuoi immergerti in questa esperienza unica, dai un'occhiata al video che ho realizzato:
 
-Protetto0000 protetto
+
 
 ---
 

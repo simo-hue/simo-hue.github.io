@@ -12,7 +12,6 @@ tags:
 title: Diffondi amore ovunque tu vada
 ---
 
-<!-- hash: 0a4de6c062f0 -->
 La gentilezza è uno di quei piccoli gesti che rendono i giorni più luminosi, sia per il donatore che per il ricevitore.Ho sempre trovato conforto nell'essere gentile con gli altri, anche nelle azioni più semplici.Un sorriso, un saluto, un "come stai?"Può sembrare insignificante, ma spesso hanno un profondo impatto.Sono piccoli atti che non costano nulla, ma che portano un'enorme ricchezza.
 
 Mi piace pensare che ogni piccola gentilezza sia un seme di felicità che si diffonde intorno a noi.Dal tenere una porta aperta per coloro che seguono, a dare una moneta a qualcuno bisognoso, al sorriso a qualcuno nel bisogno.Questi gesti non solo fanno sentire meglio gli altri, ma mi riempiono anche il cuore di gioia.E il più delle volte, mi rendo conto che, senza nemmeno volerlo, ho fatto un sorriso a qualcun altro.

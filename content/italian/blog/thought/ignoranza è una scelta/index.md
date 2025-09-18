@@ -12,7 +12,6 @@ tags:
 title: L'ignoranza al giorno d'oggi è una scelta
 ---
 
-<!-- hash: 3ad878e2bf20 -->
 In passato, l'accesso alla conoscenza era un privilegio.I libri erano scarsi, le università erano riservate all'élite e le competenze spesso richiedevano l'accesso a mentori o strumenti specializzati.Ma oggi la storia è completamente diversa.Viviamo in un'epoca in cui le barriere all'apprendimento sono quasi scomparse, grazie al potere trasformativo della tecnologia.
 
 ## Il dono dell'accesso illimitato
