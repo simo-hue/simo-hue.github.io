@@ -1,0 +1,113 @@
+{{ $context := .Context }}
+{{ $class := .Class }}
+{{ $title := .Title }}
+
+<ul class="{{ $class }} flex items-center">
+  <!-- Instagram -->
+  <li class="ml-2">
+    <a
+      href="https://www.instagram.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="share on instagram"
+      class="flex h-9 w-9 items-center justify-center rounded bg-light text-primary transition duration-300 hover:bg-primary hover:text-white dark:bg-darkmode-light dark:text-darkmode-primary dark:hover:bg-darkmode-primary dark:hover:text-darkmode-body">
+      <i class="fab fa-instagram text-sm"></i>
+    </a>
+  </li>
+
+  <!-- TikTok -->
+  <li class="ml-2">
+    <a
+      href="https://www.tiktok.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="share on tiktok"
+      class="flex h-9 w-9 items-center justify-center rounded bg-light text-primary transition duration-300 hover:bg-primary hover:text-white dark:bg-darkmode-light dark:text-darkmode-primary dark:hover:bg-darkmode-primary dark:hover:text-darkmode-body">
+      <i class="fab fa-tiktok text-sm"></i>
+    </a>
+  </li>
+
+  <!-- Facebook -->
+  <li class="ml-2">
+    <a
+      href="https://www.facebook.com/sharer.php?u={{ $context.Permalink | urlquery }}"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="share on facebook"
+      class="flex h-9 w-9 items-center justify-center rounded bg-light text-primary transition duration-300 hover:bg-primary hover:text-white dark:bg-darkmode-light dark:text-darkmode-primary dark:hover:bg-darkmode-primary dark:hover:text-darkmode-body">
+      <i class="fab fa-facebook text-sm"></i>
+    </a>
+  </li>
+
+  <!-- WhatsApp -->
+  <li class="ml-2">
+    <a
+      href="https://wa.me/?text={{ $title | urlquery }}%20{{ $context.Permalink | urlquery }}"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="share on whatsapp"
+      class="flex h-9 w-9 items-center justify-center rounded bg-light text-primary transition duration-300 hover:bg-primary hover:text-white dark:bg-darkmode-light dark:text-darkmode-primary dark:hover:bg-darkmode-primary dark:hover:text-darkmode-body">
+      <i class="fab fa-whatsapp text-sm"></i>
+    </a>
+  </li>
+
+  <!-- Twitter -->
+  <li class="ml-2">
+    <a
+      href="https://twitter.com/intent/tweet?text={{ $title | urlquery }}&url={{ $context.Permalink | urlquery }}"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="share on twitter"
+      class="flex h-9 w-9 items-center justify-center rounded bg-light text-primary transition duration-300 hover:bg-primary hover:text-white dark:bg-darkmode-light dark:text-darkmode-primary dark:hover:bg-darkmode-primary dark:hover:text-darkmode-body">
+      <i class="fab fa-twitter text-sm"></i>
+    </a>
+  </li>
+
+  <!-- LinkedIn -->
+  <li class="ml-2">
+    <a
+      href="https://www.linkedin.com/sharing/share-offsite/?url={{ $context.Permalink | urlquery }}"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="share on linkedin"
+      class="flex h-9 w-9 items-center justify-center rounded bg-light text-primary transition duration-300 hover:bg-primary hover:text-white dark:bg-darkmode-light dark:text-darkmode-primary dark:hover:bg-darkmode-primary dark:hover:text-darkmode-body">
+      <i class="fab fa-linkedin text-sm"></i>
+    </a>
+  </li>
+
+  <!-- Telegram -->
+  <li class="ml-2">
+    <a
+      href="https://t.me/share/url?url={{ $context.Permalink | urlquery }}&text={{ $title | urlquery }}"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="share on telegram"
+      class="flex h-9 w-9 items-center justify-center rounded bg-light text-primary transition duration-300 hover:bg-primary hover:text-white dark:bg-darkmode-light dark:text-darkmode-primary dark:hover:bg-darkmode-primary dark:hover:text-darkmode-body">
+      <i class="fab fa-telegram text-sm"></i>
+    </a>
+  </li>
+
+  <!-- Pinterest -->
+  <li class="ml-2">
+    <a
+      href="https://pinterest.com/pin/create/button/?url={{ $context.Permalink | urlquery }}&description={{ $title | urlquery }}"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="share on pinterest"
+      class="flex h-9 w-9 items-center justify-center rounded bg-light text-primary transition duration-300 hover:bg-primary hover:text-white dark:bg-darkmode-light dark:text-darkmode-primary dark:hover:bg-darkmode-primary dark:hover:text-darkmode-body">
+      <i class="fab fa-pinterest text-sm"></i>
+    </a>
+  </li>
+
+  <!-- Reddit -->
+  <li class="ml-2">
+    <a
+      href="https://reddit.com/submit?url={{ $context.Permalink | urlquery }}&title={{ $title | urlquery }}"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="share on reddit"
+      class="flex h-9 w-9 items-center justify-center rounded bg-light text-primary transition duration-300 hover:bg-primary hover:text-white dark:bg-darkmode-light dark:text-darkmode-primary dark:hover:bg-darkmode-primary dark:hover:text-darkmode-body">
+      <i class="fab fa-reddit text-sm"></i>
+    </a>
+  </li>
+</ul>
