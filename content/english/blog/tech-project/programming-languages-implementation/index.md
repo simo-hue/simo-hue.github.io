@@ -32,192 +32,190 @@ links:
     image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
 ---
 
-# MyLang - Un Linguaggio di Programmazione Interpretato
+## The Genesis of the Project: From Abstraction to Concrete Implementation
 
-## La Genesi del Progetto: Dall'Astrazione alla Implementazione Concreta
+The **Programming Languages** course at the University of Verona represents one of the most fascinating moments of the Computer Science curriculum: the moment when one moves from the **use** of languages ​​to their **creation**. When the professor announced the lab project—implementing a programming language from scratch—I saw the perfect opportunity to combine theoretical passion and practical application.
 
-Il corso di **Linguaggi di Programmazione** all'Università di Verona rappresenta uno dei momenti più affascinanti del percorso di Computer Science: il momento in cui si passa dall'**utilizzo** dei linguaggi alla loro **creazione**. Quando il professore ha annunciato il progetto di laboratorio - implementare un linguaggio di programmazione da zero - ho visto l'opportunità perfetta per combinare passione teorica e applicazione pratica.
+The challenge was ambitious: not only to understand the internal mechanisms of parsing, interpretation, and execution, but to **concretely implement** them, creating a working language that could also be useful to my colleagues as a study reference.
 
-La sfida era ambiziosa: non solo comprendere i meccanismi interni di parsing, interpretazione e esecuzione, ma **implementarli concretamente** creando un linguaggio funzionante che potesse essere utile anche ai miei colleghi come riferimento di studio.
+## From Concept to Community: Sharing to Grow Together
 
-## Dal Concetto alla Community: Condividere per Crescere Insieme
+As with my previous projects, I immediately thought about how this work could **benefit the entire student community**. Implementing a programming language is a complex task that many students find intimidating, especially when dealing with:
 
-Come per i miei progetti precedenti, ho subito pensato a come questo lavoro potesse **beneficiare l'intera comunità studentesca**. L'implementazione di un linguaggio di programmazione è un compito complesso che molti studenti trovano intimidatorio, soprattutto quando si devono gestire:
+- **Lexical analysis** and syntax
+- **Abstract syntax trees**
+- **Memory management** and scope management
+- **Runtime error handling**
+- **Integrating different paradigms**
 
-- **Analisi lessicale** e sintastica
-- **Alberi di sintassi astratta**
-- **Gestione della memoria** e degli scope
-- **Handling degli errori** runtime
-- **Integrazione di paradigmi** diversi
+I therefore decided to document every aspect of the process, creating a resource that could guide other students through the complexities of implementation.
 
-Ho quindi deciso di documentare ogni aspetto del processo, creando una risorsa che potesse guidare altri studenti attraverso le complessità dell'implementazione.
+## MyLang Architecture and Design
 
-## Architettura e Design di MyLang
+### Core Technology Stack
+- **Java**: Host language for robustness and portability
+- **ANTLR4**: Parser generator for managing complex grammars
+- **Visitor Pattern**: For AST traversal and interpretation
+- **Exception Handling**: For elegant runtime error handling
 
-### Stack Tecnologico Fondamentale
-- **Java**: Linguaggio host per robustezza e portabilità
-- **ANTLR4**: Parser generator per gestione grammatiche complesse
-- **Visitor Pattern**: Per traversal dell'AST e interpretazione
-- **Exception Handling**: Per gestione elegante errori runtime
+### Innovative Language Features
 
-### Caratteristiche Innovative del Linguaggio
+#### 🧠 Dynamic Type System
+- **Multi-type support**: integers, floats, strings, arrays
+- **Intelligent type coercion** for mixed operations
+- **Runtime type checking** with detailed error reporting
+- **Automatic memory management** for data structures
 
-#### 🧠 Sistema di Tipi Dinamico
-- **Supporto multi-type**: integers, floats, strings, arrays
-- **Type coercion** intelligente per operazioni miste
-- **Runtime type checking** con error reporting dettagliato
-- **Memory management** automatico per strutture dati
+#### 🔄 Advanced Scope Management
+- **Dynamic scoping** with call stack management
+- **Lexical scoping** for variable shadowing
+- **Independent environments** for functions
+- **Global variable synchronization** controlled
 
-#### 🔄 Gestione Scope Avanzata
-- **Dynamic scoping** con call stack management
-- **Lexical scoping** per variable shadowing
-- **Independent environments** per funzioni
-- **Global variable synchronization** controllata
-
-#### ⚡ Costrutti di Controllo Estesi
+#### ⚡ Extended Control Constructs
 - **Standard control flow**: if/else, while, for loops
-- **Non-deterministic execution**: costrutto unico per esplorazione algoritmica
-- **Function declaration** senza parametri per semplicità
-- **Return mechanism** via exception handling per controllo flusso
+- **Non-deterministic execution**: unique construct for algorithmic exploration
+- **Function declaration** without parameters for simplicity
+- **Return mechanism** via exception handling for control flow
 
-## Innovazioni Tecniche Distintive
+## Distinctive Technical Innovations
 
-### Integrazione Brainfuck Nativa
-Una delle caratteristiche più interessanti di MyLang è l'**integrazione completa del linguaggio Brainfuck**, permettendo:
-- **Esecuzione nativa** codice Brainfuck dentro MyLang
-- **Interoperabilità** tra i due paradigmi
-- **Educational value** per comprendere linguaggi esoterici
-- **Dimostrazione flessibilità** architettura interpreter
+### Native Brainfuck Integration
+One of the most interesting features of MyLang is the **complete integration of the Brainfuck language**, allowing:
+- **Native execution** of Brainfuck code within MyLang
+- **Interoperability** between the two paradigms
+- **Educational value** for understanding esoteric languages
+- **Demonstration of flexibility** of interpreter architecture
 
-### Parser Generation con ANTLR4
-L'utilizzo di **ANTLR4** per generazione automatica del parser dimostra:
-- **Grammar-driven development** per linguaggi formali
-- **Separation of concerns** tra sintassi e semantica
-- **Maintainable codebase** attraverso dichiarazioni grammaticali
-- **Professional tooling** per language development
+### Parser Generation with ANTLR4
+The use of **ANTLR4** for automatic parser generation demonstrates:
+- **Grammar-driven development** for formal languages
+- **Separation of concerns** between syntax and semantics
+- **Maintainable codebase** through grammatical declarations
+- **Professional tooling** for language development
 
-## Implementazione dei Componenti Core
+## Implementation of Core Components
 
-### Lexer e Parser Automatizzati
+### Automated Lexers and Parsers
 ```java
-// Generazione automatica da grammatica ANTLR4
+// Automatic generation from ANTLR4 grammar
 @Override
 public Value visitProg(MyLangParser.ProgContext ctx) {
-    return visitChildren(ctx);
+return visitChildren(ctx);
 }
 ```
 
 ### Evaluation Visitor Pattern
-- **AST Traversal** sistematico per interpretazione
-- **Type safety** attraverso Value wrapper classes
-- **Error propagation** controllata via exceptions
-- **State management** per execution context
+- Systematic AST Traversal for interpretation
+- Type safety through Value wrapper classes
+- Controlled error propagation via exceptions
+- State management for execution context
 
-### Memory Model Avanzato
-- **Stack-based scoping** per gestione funzioni
-- **Heap allocation** per strutture dati dinamiche
-- **Garbage collection** implicita via Java runtime
-- **Variable lifecycle** management automatico
+### Advanced Memory Model
+- Stack-based scoping for function management
+- Heap allocation for dynamic data structures
+- Implicit garbage collection via Java runtime
+- Automatic variable lifecycle management
 
-## Impatto Educativo e Community Value
+## Educational Impact and Community Value
 
-### Risorse Didattiche Complete
-Il progetto fornisce:
-- **Step-by-step implementation** guide
-- **Code comments** estensivi per ogni componente
-- **Architecture documentation** per design decisions
-- **Test cases** completi per validation
+### Comprehensive Educational Resources
+The project provides:
+- Step-by-step implementation guide
+- Extensive code comments for each component
+- Architecture documentation for design decisions
+- Comprehensive test cases for validation
 
 ### Reference Implementation
-- **Best practices** per language implementation
-- **Design patterns** applicati a compiler construction
-- **Error handling strategies** per production quality
-- **Performance considerations** per interpreter optimization
+- Best practices for language implementation
+- Design patterns applied to compiler construction
+- Error handling strategies for production quality
+- Performance considerations for Interpreter Optimization
 
-## Analisi dei Design Choices
+## Design Choice Analysis
 
-### Scoping Strategy: Dynamic vs Lexical
-La scelta di implementare **dynamic scoping** come default con supporto **lexical** dimostra:
-- **Flessibilità** nell'esplorazione di paradigmi diversi
-- **Educational value** per comprendere trade-offs
-- **Implementation complexity** gestita elegantemente
-- **Runtime behavior** prevedibile e debuggabile
+### Scoping Strategy: Dynamic vs. Lexical
+The choice to implement dynamic scoping as the default with lexical support demonstrates:
+- Flexibility in exploring different paradigms
+- Educational value in understanding trade-offs
+- Elegantly managed implementation complexity
+- Predictable and debuggable runtime behavior
 
-### Exception-Based Return Mechanism
-L'utilizzo delle **Java exceptions** per implementare return statements mostra:
-- **Creative problem solving** per language features
-- **Leveraging host language** capabilities
-- **Clean control flow** management
-- **Performance implications** ben documentate
+### Exception-Based Return Mechanismsm
+The use of Java exceptions to implement return statements demonstrates:
+- Creative problem solving for language features
+- Leveraging host language capabilities
+- Clean control flow management
+- Well-documented performance implications
 
-## Metodologia di Sviluppo e Testing
+## Development and Testing Methodology
 
 ### Incremental Development
-- **Feature-driven** implementation con testing continuo
-- **Modular architecture** per sviluppo parallelo componenti
-- **Version control** per tracking evoluzione linguaggio
-- **Documentation parallel** allo sviluppo codice
+- Feature-driven implementation with continuous testing
+- Modular architecture for parallel component development
+- Version control for tracking language evolution
+- Documentation parallel to code development
 
 ### Comprehensive Testing Strategy
-- **Unit tests** per ogni componente individuale
-- **Integration tests** per workflow completi
-- **Error condition testing** per robustezza
-- **Performance benchmarking** per optimization
+- Unit tests for each individual component
+- Integration tests for complete workflows
+- Error condition testing for robustness
+- Performance benchmarking for optimization
 
-## Contributo alla Computer Science Education
+## Contribution to Computer Science Education
 
-### Democratizzazione Language Implementation
-Il progetto dimostra che l'**implementazione di linguaggi** non è prerogativa esclusiva di computer scientists avanzati, ma può essere:
-- **Accessibile** a studenti undergraduate con approccio sistematico
-- **Educativa** per comprendere principi fondamentali
-- **Pratica** per sviluppare skills implementative
-- **Collaborativa** attraverso condivisione codice e documentazione
+### Democratizing Language Implementation
+The project demonstrates that language implementation is not the exclusive prerogative of advanced computer scientists, but can be:
+- Accessible to Undergraduate students with a systematic approach
+- **Educational** to understand fundamental principles
+- **Practical** to develop implementation skills
+- **Collaborative** through code and documentation sharing
 
 ### Bridge Between Theory and Practice
-MyLang serve come **ponte concreto** tra:
-- **Teoria dei linguaggi formali** e implementazione reale
-- **Concetti astratti** di parsing e esecuzione concreta
-- **Academic knowledge** e industry-relevant skills
-- **Individual learning** e community contribution
+MyLang serves as a **concrete** bridge between:
+- **Formal language theory** and real-world implementation
+- **Abstract concepts** of parsing and concrete execution
+- **Academic knowledge** and industry-relevant skills
+- **Individual learning** and community contribution
 
-## Lessons Learned e Best Practices
+## Lessons Learned and Best Practices
 
 ### Language Design Principles
-- **Semplicità** come fondamento per comprensibilità
-- **Consistenza** sintattica per user experience
-- **Estensibilità** architettonica per future evoluzioni
-- **Error messages** informativi per debugging efficace
+- **Simplicity** as a foundation for understandability
+- **Syntactic consistency** for user experience
+- **Architectural extensibility** for future evolution
+- **Informative error messages** for effective debugging
 
 ### Implementation Strategies
-- **Tool selection** appropriato per complessità problema
-- **Incremental complexity** per gestione sviluppo
-- **Documentation-driven** development per maintainability
-- **Community feedback** integration per miglioramento continuo
+- **Tool selection** appropriate for problem complexity
+- **Incremental complexity** for development management
+- **Documentation-driven** development for maintainability
+- Community feedback integration for continuous improvement
 
-## Roadmap e Future Enhancements
+## Roadmap and Future Enhancements
 
 ### Planned Language Features
-- **Type system** più sofisticato con inference
-- **Module system** per organizzazione codice
-- **Standard library** per funzionalità comuni
-- **JIT compilation** per performance improvements
+- More sophisticated type system with inference
+- Module system for code organization
+- Standard library for common functionality
+- Just-in-Time compilation for performance improvements
 
 ### Educational Expansion
-- **Interactive tutorials** per language features
-- **Visual debugger** per execution tracing
-- **Comparative analysis** con altri linguaggi
-- **Workshop materials** per teaching compiler construction
+- Interactive tutorials for language features
+- Visual debugger for execution tracing
+- Comparative analysis with other languages
+- Workshop materials for teaching compiler construction
 
-## Un Modello per l'Apprendimento Collaborativo
+## A Model for Collaborative Learning
 
-Questo progetto exemplifica come l'**eccellenza accademica individuale** possa trasformarsi in **risorsa collettiva** attraverso:
-- **Open source mindset** fin dall'inception
-- **Documentation excellence** per knowledge transfer
-- **Community engagement** per feedback e miglioramenti
-- **Educational impact** che supera il singolo corso
+This project exemplifies how individual academic excellence can be transformed into a collective resource through:
+- Open source mindset from inception
+- Documentation excellence for knowledge transfer
+- Community engagement for feedback and improvements
+- Educational impact that goes beyond a single course
 
-## Conclusioni: Dall'Implementazione all'Ispirazione
+## Conclusions: From Implementation To Inspiration
 
-MyLang rappresenta più di un semplice progetto universitario: è una **dimostrazione concreta** che la complessità dell'implementazione di linguaggi di programmazione può essere **demistificata** attraverso approccio sistematico, documentazione eccellente e spirito di condivisione.
+MyLang represents more than just a university project: it is a concrete demonstration that the complexity of programming language implementation can be demystified through a systematic approach, excellent documentation, and a spirit of sharing.
 
-Il progetto continua a servire la comunità studentesca di UniVR come **reference implementation** e **learning resource**, dimostrando che l'investimento in qualità e documentazione produce benefici che durano nel tempo per intere generazioni di studenti.
+The project continues to serve the UniVR student community as a reference implementation and learning resource, demonstrating that investing in quality and documentation yields lasting benefits for entire generations of students.

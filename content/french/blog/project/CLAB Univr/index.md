@@ -12,57 +12,57 @@ slug: think
 title: CLAB UNIRV
 ---
 
-<!-- hash: 4b32773eee31 -->
-# 🚀 Riqualificazione della rocca di Nogarole: il nostro viaggio con il clab verona
+<!-- hash: 9ca787013e86 -->
+# 🚀 Redéveloppement du Rocca di Nogarole: Notre voyage avec Clab Verona
 
-Il percorso del ** Contamination Lab (CLAB) ** dell'università di Vérone è stato molto più Che un seme progetto: è stata un'avventura, una sfida appassionante che ha permesso a me e al Mio team diryporare nuovePer La Nostra Comunità.
+Le voyage du ** Contamination Lab (CLAB) ** à l'Université de Vérone était bien plus qu'un simple projet: c'était une aventure, un défi passionnant qui a permis à mon équipe et à moi d'explorer de nouvelles compétences, de s'attaquer à de vrais obstacles et, surtout, de créer des idées concrètes pour notre communauté.
 
-## 🌿 il nostro obiettivo: aire nuova vita alla rocca di nogarole
+## 🌿 Notre objectif: Revitaliser le Rocca di Nogarole
 
-Il cuore della nostra sfida ère proporre idee innovant par riqualificare la splendida e storica rocca di Nogarole.Un Monumento SIMBOLO, Ricco di Storia, Che Meritava di Essere Valorizzato par tornare A vivere come Centro Cultuale, Sociale E Turistico, Portando Benefici Tangibili Alla Comunità Locale.
+Le cœur de notre défi était de proposer des idées innovantes pour réaménager la splendide et historique Rocca di Nogarole.Un monument symbolique, riche en histoire, il méritait d'être amélioré et ravivé en tant que centre culturel, social et touristique, apportant des avantages tangibles à la communauté locale.
 
-## 💡 il Percorso: Crescita, Innovazione e collaborazione
+## 💡 Le parcours: croissance, innovation et collaboration
 
-Durante Questo Percorso Abbiamo Avuto la Possibilità di Seguire atelier Mirati, Sessioni Di Minterstorming Guida Da Mentor Qualificati e Incontreti ConSperti Proventienti Da Diversi.Il clab cia ha insegnato non solo come lavorare en équipe, ma anche come pensare "fuori dagli schemi", affrontando problemi remi con crerività e pragmatismo.
+Au cours de ce voyage, nous avons eu l'occasion d'assister à des ateliers ciblés, des séances de brainstorming menées par des mentors qualifiés et des réunions avec des experts de divers domaines.Le CLAB nous a appris non seulement comment travailler en équipe, mais aussi comment penser «hors des sentiers battus», s'attaquant aux problèmes du monde réel avec la créativité et le pragmatisme.
 
-Dans Questo Articolo Troverete:
+Dans cet article, vous trouverez:
 
-- 📚 il materiale formativo che Ci è stato fornito durante il percorso
-- 🛠️ Tutto il materiale prodotto dal nostro Team Durante il progetto (présentazioni, documenti, analysi, ecc.)
+- 📚 Le matériel de formation qui nous est fourni pendant le projet
+- 🛠️ Tous les documents produits par notre équipe pendant le projet (présentations, documents, analyses, etc.)
 
-## 🎉 un ringrazimento Speciale Al Team
+## 🎉 un merci spécial à l'équipe
 
-Non Posso Che Ringraziare I Miei Straordinari Compagni di Viaggio: Ognuno ha contribuito con le proprie idee, concurrente ed entuasmo un rendere unico quête percorso.È Stato un Vero Piacere lavorare al Vostro Fianco.
+Je ne peux que remercier mes collègues voyageurs extraordinaires: chacun a apporté ses propres idées, compétences et enthousiasme pour rendre ce voyage unique.Ce fut un vrai plaisir de travailler à vos côtés.
 
 Protégé 20000 protégé
 
-## 🌟 Una Grande Esperienza condivisa
+## 🌟 Une grande expérience partagée
 
-Condivido anche una foto di tutti i partietecipanti del Clab Verona: ogni persona in Questa foto porta con sé idee, Sogni e compétitiones che porranno cambiarebretamente il nostro futuro.
+Je partage également une photo de tous les participants à Clab Vérone: chaque personne sur cette photo apporte avec eux des idées, des rêves et des compétences qui peuvent vraiment changer notre avenir.
 
-Protégé 0001 protégés
+[Photos de tous les participants] (all.jpg)
 
-## 📥 document del progetto
+## 📥 Documents du projet
 
-Di Seguito I documentI Principali del Nostro Progetto CLAB, Disonibili par consultation e Approfmento:
+Vous trouverez ci-dessous les principaux documents de notre projet CLAB, disponibles pour consultation et étude plus approfondie:
 
-### 📋 DocumentI Principali
+### 📋 Documents principaux
 
-- Protected0002 Protected - Piano di Business Dettagliato Per La Riqualificazione
-- Protected0003 Protected - Analisi Economico-Finanziaria del Progetto
-- Protected0004 Protected - Modello Finanziario EXCHETO
-- Protected0005 Protected - Finale de la proposta par Il Comune
+- [📄 Plan d'affaires complet] (Materiali% 20Prodotti / da% 20mandare% 20Al% 20mune / Business% 20Plan.pdf # View = Fith) - Plan d'affaires détaillé pour le réaménagement
+- [📊 Plan financier Tableau de tableau de bord] (Materiali% 20Prodotti / da% 20mandare% 20Al% 20Mune / Financial% 20Plan% 20-% 20dashboard.pdf # View = Fith) - Analyse économique et financière du projet
+- [📈 Plan financier (Excel)] (Materiali% 20Prodotti / Financial% 20Plan.xlsx) - Modèle financier complet
+- Protected0001 Protected - proposition finale pour la municipalité
 
-### 📚 Materimeli di Studio E Ricerca
+### 📚 Matériel d'étude et de recherche
 
-Tutti i ** Materiali di Studio ** utilizzati Durante il Percorso Formativo (Kick-Off, Anlisi Territoriali, Governance, Comunicazione ESG, Ecc.) Sono Disponibili pour il téléchargement dans l'ONU Archivio E compléto:
+Tous ** matériel d'étude ** utilisé pendant le programme de formation (coup d'envoi, analyse territoriale, gouvernance, communication ESG, etc.) sont disponibles en téléchargement dans une archive complète:
 
-- Protected0006 Protected - Oltre 40 Fichier Di Ricerca e Formazione Utilizzati par Sviluppare le Competenze Needarie al Progetto
+- Protected0002 Protected - Plus de 40 fichiers de recherche et de formation utilisés pour développer les compétences nécessaires pour le projet
 
 ---
 
-Grazie per aver Visitato Questa Pagina e Per Essenti Interressato al Nostro Viaggio.Speriamo che il nostro lavoro possa esse qui iSpirazione per progetti futuri e per chiunque voglia metsi in gioco per Cambiare le cose concretamete.
+Merci d'avoir visité cette page et de votre intérêt pour notre voyage.Nous espérons que notre travail pourra être une source d'inspiration pour les futurs projets et pour tous ceux qui veulent s'impliquer dans la réelle différence.
 
-✨ ** continuiamo un innovare insime! ** ✨
+✨ ** Continuons à innover ensemble! ** ✨
 
-#CLABVERONA #riqualificazione #roccadinogarole #innovazione #Crescita #Teamwork
+#CLABVERONA #redEvelopment #roccadinogarole #innovation #growth #Teamwork

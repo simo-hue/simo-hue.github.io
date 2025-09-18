@@ -25,192 +25,192 @@ tags:
 title: Veciobot - Telegram Bot in Dialetto Trentino
 ---
 
-<!-- hash: 3d6a8a3ecf2e -->
-**VecioBot** (precedentemente CiacolaBot) è un innovativo progetto che combina intelligenza artificiale moderna con tradizione culturale locale. Questo bot Telegram è progettato per conversare in autentico **dialetto trentino**, simulando le conversazioni con un anziano abitante della montagna trentina.
+<!-- hash: 3fc9221f9b85 -->
+**VecioBot** (formerly CiacolaBot) is an innovative project that combines modern artificial intelligence with local cultural tradition. This Telegram bot is designed to converse in authentic **Trentino dialect**, simulating conversations with an elderly Trentino mountain resident.
 
-Il progetto rappresenta un ponte tra tecnologia avanzata e preservazione culturale, utilizzando modelli linguistici di grandi dimensioni (LLM) per mantenere viva la ricchezza del dialetto locale.
+The project represents a bridge between advanced technology and cultural preservation, using large-scale linguistic models (LLMs) to preserve the richness of the local dialect.
 
-## 🎯 Obiettivo del Progetto
+## 🎯 Project Goal
 
-L'obiettivo principale di VecioBot è quello di:
-- **Preservare il dialetto trentino** attraverso la tecnologia moderna
-- **Creare un'esperienza conversazionale autentica** che rifletta il calore e la saggezza degli anziani trentini
-- **Dimostrare l'applicazione dell'AI locale** per scopi culturali e linguistici
-- **Fornire un esempio di implementazione open-source** per progetti simili
+VecioBot's main goal is to:
+- **Preserve the Trentino dialect** through modern technology
+- **Create an authentic conversational experience** that reflects the warmth and wisdom of Trentino elders
+- **Demonstrate the application of local AI** for cultural and linguistic purposes
+- **Provide an open-source implementation example** for similar projects
 
-## 🛠️ Architettura Tecnica
+## 🛠️ Technical Architecture
 
-### Stack Tecnologico
+### Technology Stack
 
-Il progetto utilizza una combinazione di tecnologie moderne:
+The project uses a combination of modern technologies:
 
-- **Python 3.8+**: Linguaggio di programmazione principale
-- **python-telegram-bot**: Libreria per l'integrazione con Telegram
-- **Ollama**: Piattaforma per eseguire LLM in locale
-- **LLaMA 3**: Modello linguistico di grandi dimensioni di Meta
-- **Docker** (opzionale): Per la containerizzazione
+- **Python 3.8+**: Main programming language
+- **python-telegram-bot**: Library for Telegram integration
+- **Ollama**: Platform for running LLM locally
+- **LLaMA 3**: Meta's large language model
+- **Docker** (optional): For containerization
 
-### Architettura del Sistema
+### Architecture System
 
 ```
-┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
-│   Telegram      │    │   VecioBot       │    │    Ollama       │
-│   (Frontend)    │◄──►│   (Middleware)   │◄──►│   + LLaMA 3     │
-│                 │    │                  │    │   (AI Engine)   │
-└─────────────────┘    └──────────────────┘    └─────────────────┘
+┌─────────────────┐ ┌──────────────────┐ ┌─────────────────┐
+│ Telegram │ │ VecioBot │ │ Ollama │
+│ (Frontend) │◄──►│ (Middleware) │◄──►│ + LLaMA 3 │
+│ │ │ │ │ (AI Engine) │
+└─────────────────┘ └──────────────────┘ └────────────────┘
 ```
 
-1. **Telegram Interface**: Riceve messaggi dagli utenti
-2. **VecioBot Middleware**: Processa i messaggi e gestisce la logica
-3. **Ollama + LLaMA 3**: Genera risposte in dialetto trentino
+1. **Telegram Interface**: Receives messages from users
+2. **VecioBot Middleware**: Processes messages and manages the logic
+3. **Ollama + LLaMA 3**: Generates responses in the Trentino dialect
 
-## 🚀 Funzionalità Principali
+## 🚀 Main Features
 
-### Conversazione Autentica
-Il bot è programmato per rispondere come un anziano trentino, utilizzando:
-- **Espressioni tipiche** del dialetto locale
-- **Riferimenti culturali** alla vita di montagna
-- **Tono caloroso e familiare** tipico delle conversazioni locali
+### Authentic Conversation
+The bot is programmed to respond like an elderly Trentino resident, using:
+- **Typical expressions** of the local dialect
+- **Cultural references** to mountain life
+- **Warm and familiar tone** typical of local conversations
 
-### Esempio di Conversazione
+### Sample Conversation
 
-**Utente**: "Cosa fai oggi?"
+**User**: "What are you doing today?"
 
-**VecioBot**: *"Gnente de che, ho spazzà fora la stala e po' son restà a ciacolar co' la Rita. El tempo l'è proprio bel, no? Te völ vegnir sù a tor un goto de vin?"*
+**VecioBot**: *"No big deal, I swept out the stable and now I'm left to chat with Rita. The weather is really nice, isn't it? Do you want to come up and get a glass of wine?"*
 
-### Personalizzazione
-- **Prompt personalizzabile** per adattare il tono del bot
-- **Dizionario CSV espandibile** per aggiungere nuovi termini dialettali
-- **Configurazione flessibile** per diversi contesti d'uso
+### Customization
+- **Customizable prompt** to adapt the bot's tone
+- **Expandable CSV dictionary** to add new dialect terms
+- **Flexible configuration** for different use cases
 
-## 🔧 Installazione e Setup
+## 🔧 Installation and Setup
 
-### Prerequisiti
+### Prerequisites
 
-1. **Sistema operativo**: Linux, macOS, o Windows
-2. **Python 3.8+** installato
-3. **Git** per clonare il repository
-4. **Telegram Bot Token** (ottenibile da @BotFather)
+1. **Operating System**: Linux, macOS, or Windows
+2. **Python 3.8+** installed
+3. **Git** to clone the repository
+4. **Telegram Bot Token** (obtainable from @BotFather)
 
-### Procedura di Installazione
+### Installation Procedure
 
-#### 1. Clonazione del Repository
+#### 1. Cloning Repository
 ```bash
 git clone https://github.com/simo-hue/CiacolaBot_Nonno_Trentino_Virtuale_su_Telegram.git
 cd CiacolaBot_Nonno_Trentino_Virtuale_su_Telegram
 ```
 
-#### 2. Creazione dell'Ambiente Virtuale
+#### 2. Creating the Virtual Environment
 ```bash
 python -m venv venv
-source venv/bin/activate  # Su Linux/macOS
-# oppure
-venv\Scripts\activate     # Su Windows
+source venv/bin/activate # On Linux/macOS
+# or
+venv\Scripts\activate # On Windows
 ```
 
-#### 3. Installazione delle Dipendenze
+#### 3. Installing Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-#### 4. Configurazione di Ollama
+#### 4. Configuring Ollama
 ```bash
-# Installazione di Ollama
+# Installing Ollama
 curl -fsSL https://ollama.ai/install.sh | sh
 
-# Download del modello LLaMA 3
+# Download the LLaMA 3 template
 ollama pull llama3
 ```
 
-#### 5. Configurazione del Bot
+#### 5. Bot Configuration
 ```bash
-# Crea un file .env con il token del bot
+# Create a .env file with the bot token
 echo "TELEGRAM_BOT_TOKEN=your_bot_token_here" > .env
 ```
 
-#### 6. Avvio del Bot
+#### 6. Starting the Bot
 ```bash
 python bot.py
 ```
 
-## 💡 Caratteristiche Innovative
+## 💡 Innovative Features
 
-### AI Locale e Privacy
-- **Nessun dato inviato a servizi esterni**: Tutto funziona localmente
-- **Privacy garantita**: Le conversazioni rimangono sul dispositivo
-- **Controllo completo**: Possibilità di modificare e personalizzare il comportamento
+### Local AI and Privacy
+- **No data sent to external services**: Everything runs locally
+- **Privacy guaranteed**: Conversations remain on the device
+- **Complete control**: Ability to modify and customize behavior
 
-### Preservazione Culturale
-- **Linguistica computazionale**: Applicazione dell'AI per preservare dialetti
-- **Educazione culturale**: Strumento per imparare e praticare il dialetto
-- **Documentazione vivente**: Raccolta di espressioni e modi di dire
+### Cultural Preservation
+- **Computational linguistics**: Applying AI to preserve dialects
+- **Cultural education**: Tool for learning and practicing dialects
+- **Living Documentation**: Collection of expressions and idioms
 
-### Scalabilità e Estensibilità
-- **Modulare**: Facile da estendere con nuove funzionalità
-- **Adattabile**: Può essere modificato per altri dialetti
-- **Open Source**: Contributi della comunità benvenuti
+### Scalability and Extensibility
+- **Modular**: Easy to extend with new features
+- **Adaptable**: Can be modified for other dialects
+- **Open Source**: Community contributions welcome
 
-## 📊 Performance e Requisiti
+## 📊 Performance and Requirements
 
-### Requisiti Hardware Minimi
-- **RAM**: 8GB (consigliati 16GB per performance ottimali)
-- **Storage**: 10GB di spazio libero per il modello LLaMA 3
-- **CPU**: Processore moderno multi-core
-- **GPU** (opzionale): Per accelerazione hardware
+### Minimum Hardware Requirements
+- **RAM**: 8GB (16GB recommended for optimal performance)
+- **Storage**: 10GB of free space for the LLaMA 3 model
+- **CPU**: Modern multi-core processor
+- **GPU** (optional): For hardware acceleration
 
 ### Performance
-- **Tempo di risposta**: 2-5 secondi per risposta
-- **Throughput**: Gestione di multiple conversazioni simultanee
-- **Efficienza**: Ottimizzato per ambienti con risorse limitate
+- **Response Time**: 2-5 seconds per response
+- **Throughput**: Handles multiple simultaneous conversations
+- **Efficiency**: Optimized for resource-constrained environments
 
-## 🔮 Sviluppi Futuri
+## 🔮 Future Developments
 
-### Funzionalità Pianificate
-1. **Interfaccia Web**: Dashboard per configurazione e monitoraggio
-2. **Modalità Vocale**: Integrazione con speech-to-text e text-to-speech
-3. **Racconto di Storie**: Narrazione di leggende e tradizioni trentine
-4. **Giochi Dialettali**: Mini-giochi per imparare il dialetto
-5. **Integrazione Multimodale**: Supporto per immagini e contenuti multimediali
+### Planned Features
+1. **Web Interface**: Dashboard for configuration and monitoringio
+2. **Voice Mode**: Integration with speech-to-text and text-to-speech
+3. **Storytelling**: Narration of Trentino legends and traditions
+4. **Dialect Games**: Mini-games for learning dialect
+5. **Multimodal Integration**: Support for images and multimedia content
 
-### Miglioramenti Tecnici
-1. **Fine-tuning del Modello**: Training specifico su corpus dialettali
-2. **Ottimizzazione Performance**: Riduzione dei tempi di risposta
-3. **Supporto Multi-dialetto**: Estensione ad altri dialetti italiani
-4. **Analytics**: Metriche di utilizzo e sentiment analysis
+### Technical Improvements
+1. **Model Fine-tuning**: Specific training on dialect corpuses
+2. **Performance Optimization**: Reduction of response times
+3. **Multi-dialect Support**: Extension to other Italian dialects
+4. **Analytics**: Usage metrics and sentiment analysis
 
-## 🌟 Impatto e Riconoscimenti
+## 🌟 Impact and Awards
 
-### Impatto Culturale
-- **Preservazione digitale** del patrimonio linguistico trentino
-- **Ponte generazionale** tra tradizione e innovazione tecnologica
-- **Strumento educativo** per le nuove generazioni
+### Cultural Impact
+- **Digital preservation** of the Trentino linguistic heritage
+- **Generational bridge** between tradition and technological innovation
+- **Educational tool** for new generations
 
-### Riconoscimenti Tecnici
-- **Open Source**: Contributo alla comunità del software libero
-- **Innovazione**: Applicazione creativa dell'AI per scopi culturali
-- **Documentazione**: Esempio di best practices per progetti AI locali
+### Technical Awards
+- **Open Source**: Contribution to the free software community
+- **Innovation**: Creative application of AI for cultural purposes
+- **Documentation**: Example of best practices for local AI projects
 
-## 🤝 Contributi e Community
+## 🤝 Contributions and Community
 
-### Come Contribuire
-1. **Segnalazione Bug**: Utilizza le GitHub Issues
-2. **Nuove Funzionalità**: Proponi miglioramenti tramite Pull Request
-3. **Espansione Dialettale**: Contribuisci con nuovi termini e espressioni
-4. **Documentazione**: Migliora la documentazione esistente
+### How to Contribute
+1. **Bug Report**: Use GitHub Issues
+2. **New Features**: Propose improvements via Pull Request
+3. **Dialect Expansion**: Contribute new terms and expressions
+4. **Documentation**: Improve existing documentation
 
 ### Community
-- **Discord/Telegram**: Gruppo di discussione per sviluppatori
-- **Workshop**: Eventi per condividere conoscenze
-- **Collaborazioni**: Partnership con istituzioni culturali locali
+- **Discord/Telegram**: Discussion group for developers
+- **Workshop**: Events for sharing knowledge
+- **Collaborations**: Partnerships with local cultural institutions
 
-## 📝 Conclusioni
+## 📝 Conclusions
 
-VecioBot rappresenta un esempio eccellente di come la tecnologia moderna possa essere utilizzata per preservare e celebrare la cultura locale. Il progetto dimostra che l'intelligenza artificiale non deve necessariamente essere centralizzata o commerciale, ma può essere un strumento potente per la preservazione culturale e l'innovazione locale.
+VecioBot is an excellent example of how modern technology can be used to preserve and celebrate local culture. The project demonstrates that artificial intelligence doesn't have to be centralized or commercial, but can be a powerful tool for cultural preservation and local innovation.
 
-L'utilizzo di LLM locali come LLaMA 3 attraverso Ollama offre una soluzione privacy-friendly e completamente controllabile, mentre l'implementazione open-source garantisce trasparenza e possibilità di contributi dalla comunità.
+Using local LLMs like LLaMA 3 through Ollama offers a privacy-friendly and fully controllable solution, while the open-source implementation guarantees transparency and the possibility of community contributions.
 
-**VecioBot non è solo un bot: è un custode digitale della tradizione trentina.**
+**VecioBot is not just a bot: it's a digital guardian of Trentino's tradition.**
 
 ---
 
-*Questo progetto è sviluppato con passione per la cultura trentina e l'innovazione tecnologica. Ogni contributo è benvenuto per mantenere viva questa tradizione nel mondo digitale.*
+*This project is developed with a passion for Trentino culture and technological innovation. Every contribution is welcome to keep this tradition alive in the digital world.*

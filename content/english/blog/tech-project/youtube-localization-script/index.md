@@ -29,152 +29,150 @@ links:
     image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
 ---
 
-# YouTube Video Localization Script
+## The Genesis of the Project: From Necessity to Solution
 
-## La Genesi del Progetto: Dalla Necessità alla Soluzione
+As a content creator managing the channel **Simo's Diary**, I faced a recurring challenge: reaching an international audience. My videos, initially conceived only in Italian, had the potential to appeal to people around the world, but the language barrier was a significant obstacle.
 
-Come content creator che gestisce il canale **Simo's Diary**, mi sono trovato di fronte a una sfida ricorrente: raggiungere un pubblico internazionale. I miei video, inizialmente pensati solo in italiano, avevano il potenziale per interessare persone di tutto il mondo, ma la **barriera linguistica** rappresentava un ostacolo significativo.
+Looking at YouTube analytics, I noticed that many international users started watching my content but quickly abandoned it, likely due to the language barrier. It was clear that a solution was needed to make the content globally accessible.
 
-Osservando le analytics di YouTube, notavo che molti utenti internazionali iniziavano a guardare i miei contenuti ma li abbandonavano rapidamente, probabilmente a causa della lingua. Era chiaro che serviva una soluzione per rendere i contenuti **accessibili globalmente**.
+## From Problem to Automated Solution
 
-## Dal Problema alla Soluzione Automatizzata
+Manually translating titles, descriptions, and subtitles for each video into multiple languages ​​would have been an extremely time-consuming and expensive process. I therefore decided to develop an automated solution that could:
 
-Tradurre manualmente titoli, descrizioni e sottotitoli per ogni video in multiple lingue sarebbe stato un processo estremamente **time-consuming** e costoso. Ho quindi deciso di sviluppare una soluzione automatizzata che potesse:
+1. Automatically translate titles and descriptions
+2. Manage subtitles in multiple languages
+3. Optimize workflows for content creators
+4. Drastically reduce localization times
 
-1. **Tradurre automaticamente** titoli e descrizioni
-2. **Gestire sottotitoli** in lingue multiple
-3. **Ottimizzare il workflow** per content creators
-4. **Ridurre drasticamente** i tempi di localizzazione
+## Advanced Technical Features
 
-## Caratteristiche Tecniche Avanzate
+### Core Technology Stack
+- **Python 3.8+** for robustness and compatibility
+- **YouTube Data API v3** for native YouTube integration
+- **Google OAuth 2.0** for secure authentication
+- **Deep Translator** with Google Translate backend
+- **tqdm** for real-time progress tracking
 
-### Stack Tecnologico Core
-- **Python 3.8+** per robustezza e compatibilità
-- **YouTube Data API v3** per integrazione nativa YouTube
-- **Google OAuth 2.0** per autenticazione sicura
-- **Deep Translator** con backend Google Translate
-- **tqdm** per tracking progress real-time
+### Smart Features
 
-### Funzionalità Intelligenti
+#### 🌍 Extensive Multilingual Support
+- **130+ languages ​​supported** for global coverage
+- **Automatic detection** of source language
+- **Intelligent translation** that preserves formatting
+- **Advanced character set management** for languages Complex
 
-#### 🌍 Supporto Multilingue Esteso
-- **130+ lingue supportate** per copertura globale
-- **Rilevamento automatico** lingua originale
-- **Traduzione intelligente** che preserva formatting
-- **Gestione charset** avanzata per lingue complesse
+#### 🔐 Authentication and Security
+- **Full flow OAuth 2.0** with Google APIs
+- **Automatic credential caching** for persistent sessions
+- **Automatic token refresh** for extended use
+- **Robust error handling** for API limits
 
-#### 🔐 Autenticazione e Sicurezza
-- **OAuth 2.0 flow completo** con Google APIs
-- **Credential caching automatico** per sessioni persistenti
-- **Token refresh** automatico per utilizzo prolungato
-- **Error handling robusto** per API limits
+#### 📊 Monitoring and Analytics
+- **Real-time progress tracking** with progress bars
+- **API cost estimation** and quota monitoring
+- **Detailed post-translation reports**
+- **Graceful interruption handling** with recovery
 
-#### 📊 Monitoraggio e Analytics
-- **Progress tracking** real-time con barre di progresso
-- **Stima costi API** e quota monitoring
-- **Report dettagliati** post-traduzione
-- **Gestione interruzioni** graceful con recovery
+## Optimizations for Content Creators
 
-## Ottimizzazioni per Content Creators
-
-### Validazione Input Intelligente
-Lo script supporta **multiple tipologie di URL YouTube**:
-- URL standard: `youtube.com/watch?v=VIDEO_ID`
+### Intelligent Input Validation
+The script supports **multiple YouTube URL types**:
+- Standard URL: `youtube.com/watch?v=VIDEO_ID`
 - Short URL: `youtu.be/VIDEO_ID`
 - Embedded URL: `youtube.com/embed/VIDEO_ID`
-- **Estrazione automatica** Video ID da qualsiasi formato
+- **Automatic extraction** Video ID from any format
 
-### Modalità Traduzione Flessibili
-- **Solo titoli/descrizioni**: per aggiornamenti rapidi metadata
-- **Sottotitoli completi**: per accessibilità totale
-- **Traduzione selettiva**: skip lingue già esistenti
-- **Batch processing**: multiple video simultaneamente
+### Translation Mode Flexible
+- **Titles/Descriptions Only**: for quick metadata updates
+- **Full Subtitles**: for full accessibility
+- **Selective Translation**: skip existing languages
+- **Batch Processing**: multiple videos simultaneously
 
-## Impatto su SEO e Reach Internazionale
+## Impact on SEO and International Reach
 
-### Ottimizzazione YouTube SEO
-- **Titoli localizzati** per algoritmi regionali YouTube
-- **Descrizioni tradotte** per discoverability migliorata
-- **Tag metadata** ottimizzati per mercati locali
-- **Subtitle SEO** per indicizzazione contenuti
+### YouTube SEO Optimization
+- **Localized Titles** for regional YouTube algorithms
+- **Translated Descriptions** for improved discoverability
+- **Metadata Tags** optimized for local markets
+- **Subtitle SEO** for content indexing
 
-### Espansione Audience Globale
-Il progetto permette di:
-1. **Aumentare reach organico** in mercati internazionali
-2. **Migliorare retention rate** con contenuti localizzati
-3. **Ottimizzare CTR** attraverso titoli nativi
-4. **Incrementare engagement** con audience non-anglofone
+### Global Audience Expansion
+The project allows you to:
+1. **Increase organic reach** in international markets
+2. **Improve retention rate** with localized content
+3. **Optimize CTR** through native titles
+4. **Increase engagement** with non-English-speaking audiences
 
-## Architettura e Performance
+## Architecture and Performance
 
-### Design Pattern Avanzati
-- **Modular architecture** per facile estensibilità
-- **Error handling stratificato** per resilienza
-- **Memory management** ottimizzato per video lunghi
-- **Async operations** dove possibile per performance
+### Advanced Design Patterns
+- **Modular architecture** for easy extensibility
+- **Layered Error Handling** for Resilience
+- Memory management optimized for long videos
+- Async operations where possible for performance
 
-### Gestione API Quota
-- **Intelligent quota tracking** per evitare rate limits
-- **Batch optimization** per ridurre chiamate API
-- **Cost estimation** pre-elaborazione
-- **Fallback strategies** per gestione errori
+### Quota API Management
+- Intelligent quota tracking to avoid rate limits
+- Batch optimization to reduce API calls
+- Cost estimation pre-processing
+- Fallback strategies for error management
 
-## Casi d'Uso Reali e ROI
+## Real Use Cases and ROI
 
-### Per Content Creators Individuali
-- **Riduzione 90% tempo** localizzazione contenuti
-- **Espansione automatica** in mercati internazionali
-- **Aumento measurable** views da traffico globale
-- **Monetizzazione migliorata** attraverso reach esteso
+### For Individual Content Creators
+- 90% reduction in content localization time
+- Automatic expansion into international markets
+- Measurable increase in views from global traffic
+- Improved monetization through extended reach
 
-### Per Aziende e Marketing Teams
-- **Scalabilità campagne video** internazionali
-- **Consistency messaging** attraverso automazione
-- **Riduzione costi traduzione** professionale
-- **Time-to-market accelerato** per contenuti globali
+### For Companies and Marketing Teams
+- Scalability of international video campaigns
+- Consistency messaging through automation
+- Reduction in professional translation costs
+- Accelerated time to market for global content
 
-## Innovazioni Tecniche Distintive
+## Distinctive Technical Innovations
 
-### Parsing Intelligente Sottotitoli
-- **Format detection automatico** (SRT, VTT, etc.)
-- **Timestamp preservation** accurato
-- **Formatting maintenance** per styling
-- **Quality validation** post-traduzione
+### Intelligent Subtitle Parsing
+- Format Automatic detection** (SRT, VTT, etc.)
+- Accurate timestamp preservation
+- Formatting maintenance for styling
+- Post-translation quality validation
 
 ### Workflow Optimization
-- **Interruption recovery**: riprende da dove interrotto
-- **Duplicate detection**: evita ri-traduzioni
-- **Progress persistence**: salva stato intermedio
-- **Multi-session support**: workflow distribuiti nel tempo
+- Interruption recovery: resumes where left off
+- Duplicate detection: avoids retranslations
+- Progress persistence: saves intermediate state
+- Multi-session support: workflows distributed over time
 
-## Un Ponte Digitale Tra Culture
+## A Digital Bridge Between Cultures
 
-Questo progetto rappresenta più di un semplice script di traduzione: è uno **strumento democratico** che permette a creators di ogni dimensione di raggiungere audience globali senza investimenti significativi in servizi di traduzione professionale.
+This project is more than just a translation script: it is a democratic tool that allows creators of all sizes to reach global audiences without significant investments in professional translation services.
 
-### Filosofia Open Source
-- **Codice completamente aperto** per trasparenza
-- **Documentazione estensiva** per facilità adozione
+### Open Source Philosophy
+- **Completely open source** for transparency
+- **Extensive documentation** for ease of adoption
 - **Community contributions** welcome
-- **Evoluzione continua** basata su feedback utenti
+- **Continuous evolution** based on user feedback
 
-## Metriche di Successo Measurabili
+## Measurable Success Metrics
 
-Il progetto ha dimostrato impact concreto attraverso:
-- **Riduzione 85% tempo** necessario per localizzazione
-- **Aumento 300% reach** internazionale medio
-- **Miglioramento 40% retention** su audience non-native
-- **ROI positivo** entro prime 10 traduzioni
+The project has demonstrated concrete impact through:
+- **85% reduction** in time required for localization
+- **300% increase in average international reach**
+- **40% improvement in retention** among non-native audiences
+- **Positive ROI** within the first 10 translations
 
-## Roadmap e Evoluzioni Future
+## Roadmap and Future Evolutions
 
-### Funzionalità in Sviluppo
-- **AI-powered context awareness** per traduzioni più naturali
-- **Bulk processing** per canali con centinaia di video
-- **Analytics integration** per tracking performance post-traduzione
-- **Custom terminology** per brand consistency
+### Features in Development
+- **AI-powered context awareness** for more natural translations
+- **Bulk processing** for channels with hundreds of videos
+- **Analytics integration** for post-translation performance tracking
+- **Custom terminology** for brand consistency
 
-## Conclusioni: Tecnologia al Servizio della Creatività
+## Conclusions: Technology at the Service of Creativity
 
-YouTube Video Localization Script dimostra come l'**automazione intelligente** possa amplificare la creatività umana, abbattendo barriere tecniche e linguistiche che limitano la diffusione di contenuti di qualità.
+YouTube Video Localization Script demonstrates how **intelligent automation** can Amplifying human creativity, breaking down technical and linguistic barriers that limit the dissemination of quality content.
 
-Il progetto continua a evolversi, sempre con focus su **usabilità**, **performance** e **accessibilità democratica** agli strumenti di crescita digitale globale.
+The project continues to evolve, always focusing on usability, performance, and democratic accessibility to global digital growth tools.

@@ -27,113 +27,111 @@ links:
     image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
 ---
 
-# Rabbi E-Bike Management System
+## The Genesis of the Project: From a Spontaneous Idea to a Professional Solution
 
-## La Genesi del Progetto: Da Idea Spontanea a Soluzione Professionale
+It all started very naturally. Some friends run a small e-bike rental shop and found themselves dealing daily with handwritten reservations, inventory management with Excel spreadsheets, and an unclear view of their earnings and business performance.
 
-Tutto è iniziato in modo molto naturale. Alcuni amici gestiscono un piccolo negozio di noleggio e-bike e si trovavano quotidianamente a fare i conti con prenotazioni scritte a mano, inventario gestito con fogli Excel e una visione poco chiara dei guadagni e delle performance del business.
+One day, observing their difficulties, I thought, "Why not create something simple yet functional that could really help them?" The idea was to quickly develop a prototype using **Lovable** for the basic structure, something that could be immediately usable.
 
-Un giorno, osservando le loro difficoltà, ho pensato: "Perché non creare qualcosa di semplice ma funzionale che possa aiutarli davvero?" L'idea era quella di sviluppare rapidamente un prototipo utilizzando **Lovable** per la struttura base, qualcosa che potesse essere subito utilizzabile.
+## From Prototype to Refined Solution
 
-## Dal Prototipo alla Soluzione Raffinata
+What was initially intended to be a simple help for friends turned into something much more ambitious. After creating the initial structure with Lovable, I realized the project's potential and decided to **completely refine** it to make it a professional solution that could also be used locally.
 
-Quello che inizialmente doveva essere un semplice aiuto per gli amici si è trasformato in qualcosa di molto più ambizioso. Dopo aver creato la struttura iniziale con Lovable, mi sono reso conto del potenziale del progetto e ho deciso di **raffinarlo completamente** per renderlo una soluzione professionale utilizzabile anche in locale.
+The transition from a web prototype to a local desktop application was motivated by several needs:
+- **Data privacy**: No sensitive data is sent online
+- **Independence**: Works even without an internet connection
+- **Total control**: The shop owner has full control over their data
+- **Zero costs**: No monthly subscriptions or recurring costs
 
-Il passaggio da prototipo web a applicazione desktop locale è stato motivato da diverse esigenze:
-- **Privacy dei dati**: Nessun dato sensibile viene inviato online
-- **Indipendenza**: Funziona anche senza connessione internet
-- **Controllo totale**: Il proprietario del negozio ha pieno controllo sui propri dati
-- **Costi zero**: Nessun abbonamento mensile o costi ricorrenti
+## Main Technical Features
 
-## Caratteristiche Tecniche Principali
-
-### Stack Tecnologico
-- **Frontend**: React 18.3.1 con TypeScript 5.8.3
+### Technology Stack
+- **Frontend**: React 18.3.1 with TypeScript 5.8.3
 - **Backend**: Node.js
-- **Database**: SQLite (locale)
-- **Architettura**: Applicazione desktop completamente offline
+- **Database**: SQLite (local)
+- **Architecture**: Fully offline desktop application
 
-### Funzionalità Core
+### Core Features
 
-#### 🗓️ Sistema di Prenotazioni Avanzato
-- **Calendario interattivo** per visualizzazione prenotazioni
-- **Tracciamento disponibilità** e-bike in tempo reale
-- **Categorie flessibili**: oraria, mezza giornata, giornata intera
-- **Gestione stati**: confermata, in attesa, completata, cancellata
+#### 🗓️ Advanced Booking System
+- **Interactive calendar** for viewing reservations
+- **Real-time e-bike availability tracking**
+- **Flexible categories**: hourly, half-day, full-day
+- **Management Statuses**: confirmed, pending, completed, canceled
 
-#### 🚲 Garage Virtuale e Inventario
-- **Tracciamento completo** di ogni singola bicicletta
-- **Supporto multiple tipologie** e taglie di e-bike
-- **Storico manutenzioni** con costi associati
-- **Analytics performance** per ogni veicolo
+#### 🚲 Virtual Garage and Inventory
+- **Complete tracking** of every single bicycle
+- **Support for multiple e-bike types** and sizes
+- **Maintenance history** with associated costs
+- **Performance analytics** for each vehicle
 
-#### 📊 Business Intelligence Integrata
-- **Dashboard performance** con metriche chiave
-- **Analisi ricavi** e utilizzo
-- **Gestione costi** operativi
-- **Calcoli automatici** break-even e profittabilità
+#### 📊 Integrated Business Intelligence
+- **Performance dashboard** with key metrics
+- **Revenue and usage analysis**
+- **Operating cost management**
+- **Automatic break-even and profitability calculations**
 
-## Ottimizzazioni per SEO e AI
+## SEO and AI optimizations
 
-Questo progetto rappresenta una **soluzione completa per la gestione digitale di attività di noleggio e-bike**, combinando:
+This project represents a **complete solution for the digital management of e-bike rental businesses**, combining:
 
-- **Gestione prenotazioni digitale**
-- **Inventario intelligente biciclette elettriche**
-- **Sistema offline per privacy dati**
-- **Business intelligence per piccole imprese**
-- **Soluzione open source gratuita**
-- **Applicazione desktop multipiattaforma**
-- **Database locale SQLite**
-- **Interface React moderna e intuitiva**
+- **Digital reservation management**
+- **Smart e-bike inventory**
+- **Offline system for data privacy**
+- **Business intelligence for small businesses**
+- **Free open source solution**
+- **Cross-platform desktop application**
+- **Database SQLite Local**
+- **Modern and intuitive React interface**
 
-## Vantaggi Competitivi
+## Competitive Advantages
 
-### ✅ Completamente Offline
-Nessuna dipendenza da connessione internet o servizi cloud esterni
+### ✅ Completely Offline
+No dependency on an internet connection or external cloud services
 
-### ✅ Zero Costi Ricorrenti
-Una volta installato, nessun abbonamento mensile o costi nascosti
+### ✅ Zero Recurring Costs
+Once installed, no monthly subscriptions or hidden costs
 
-### ✅ Privacy Totale
-Tutti i dati rimangono sul dispositivo del proprietario
+### ✅ Total Privacy
+All data remains on the owner's device
 
 ### ✅ Open Source
-Codice completamente aperto e modificabile secondo le esigenze
+Completely open code and modifiable as needed
 
-### ✅ Multipiattaforma
-Funziona su Windows, macOS e Linux
+### ✅ Cross-platform
+Works on Windows, macOS, and Linux
 
-## Impatto sul Business
+## Business Impact
 
-Il sistema è stato progettato per rispondere alle esigenze reali di piccoli imprenditori nel settore del noleggio e-bike:
+The system was designed to meet the real needs of small businesses in the e-bike rental sector:
 
-1. **Riduzione errori manuali** nella gestione prenotazioni
-2. **Visibilità completa** su performance e profittabilità
-3. **Ottimizzazione utilizzo** del parco biciclette
-4. **Tracciamento preciso** costi manutenzione
-5. **Decisioni data-driven** per la crescita del business
+1. **Reduction of manual errors** in booking management
+2. **Complete visibility** of performance and profitability
+3. **Optimization of bicycle fleet utilization**
+4. **Precise tracking** of maintenance costs
+5. **Data-driven decisions** for business growth
 
-## Tecnologie di Sviluppo Moderne
+## Modern Development Technologies
 
-Il progetto sfrutta le più moderne tecnologie di sviluppo per garantire:
-- **Performance ottimali** con React 18
-- **Type safety** con TypeScript
-- **Database relazionale** robusto con SQLite
-- **Architettura scalabile** e manutenibile
-- **UI/UX moderna** e intuitiva
+The project leverages the latest development technologies to ensure:
+- Optimal performance with React 18
+- Type safety with TypeScript
+- Robust relational database with SQLite
+- Scalable and maintainable architecture
+- Modern and intuitive UI/UX
 
-## Un Caso di Studio: Dall'Idea all'Implementazione
+## A Case Study: From Idea to Implementation
 
-Questo progetto dimostra come un'idea nata spontaneamente per aiutare degli amici possa evolversi in una **soluzione software professionale**. Il percorso di sviluppo ha incluso:
+This project demonstrates how a spontaneous idea born to help friends can evolve into a professional software solution. The development process included:
 
-1. **Analisi delle esigenze** reali degli utenti finali
-2. **Prototipazione rapida** con strumenti moderni
-3. **Iterazione e raffinamento** basato su feedback
-4. **Ottimizzazione per deployment locale**
-5. **Documentazione completa** per facilità d'uso
+1. **Analysis of real end-user needs**
+2. **Rapid prototyping** with modern tools
+3. **Iteration and refinement** based on feedback
+4. **Optimization for local deployment**
+5. **Comprehensive documentation** for ease of use
 
-## Conclusioni
+## Conclusions
 
-Rabbi E-Bike Management System rappresenta la **perfetta sintesi tra semplicità d'uso e potenza funzionale**, dimostrando come la tecnologia possa realmente semplificare la gestione di piccole attività imprenditoriali nel settore delle mobilità sostenibile.
+The Rabbi E-Bike Management System represents the **perfect synthesis of ease of use and functional power**, demonstrating how technology can truly simplify the management of small businesses in the sustainable mobility sector.
 
-Il progetto continua a evolversi, sempre mantenendo focus su **usabilità**, **performance** e **indipendenza tecnologica**.
+The project continues to evolve, always maintaining a focus on **usability**, **performance**, and **technological independence**.

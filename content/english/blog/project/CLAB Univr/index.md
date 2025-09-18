@@ -13,57 +13,56 @@ links:
 
 ---
 
+# 🚀 Redevelopment of the Rocca di Nogarole: Our Journey with CLab Verona
 
-# 🚀 Riqualificazione della Rocca di Nogarole: Il nostro viaggio con il CLab Verona
+The journey of the **Contamination Lab (CLab)** at the University of Verona was much more than a simple project: it was an adventure, an exciting challenge that allowed my team and I to explore new skills, tackle real obstacles, and above all, create concrete ideas for our community.
 
-Il percorso del **Contamination Lab (CLab)** dell'Università di Verona è stato molto più che un semplice progetto: è stata un'avventura, una sfida appassionante che ha permesso a me e al mio team di esplorare nuove competenze, affrontare ostacoli reali e soprattutto creare idee concrete per la nostra comunità.
+## 🌿 Our Goal: Revitalize the Rocca di Nogarole
 
-## 🌿 Il nostro obiettivo: Dare nuova vita alla Rocca di Nogarole
+The heart of our challenge was to propose innovative ideas to redevelop the splendid and historic Rocca di Nogarole. A symbolic monument, rich in history, it deserved to be enhanced and revived as a cultural, social, and tourism center, bringing tangible benefits to the local community.
 
-Il cuore della nostra sfida era proporre idee innovative per riqualificare la splendida e storica Rocca di Nogarole. Un monumento simbolo, ricco di storia, che meritava di essere valorizzato per tornare a vivere come centro culturale, sociale e turistico, portando benefici tangibili alla comunità locale.
+## 💡 The Journey: Growth, Innovation, and Collaboration
 
-## 💡 Il percorso: Crescita, Innovazione e Collaborazione
+During this journey, we had the opportunity to attend targeted workshops, brainstorming sessions led by qualified mentors, and meetings with experts from various fields. The CLab taught us not only how to work as a team, but also how to think "outside the box," tackling real-world problems with creativity and pragmatism.
 
-Durante questo percorso abbiamo avuto la possibilità di seguire workshop mirati, sessioni di brainstorming guidate da mentor qualificati e incontri con esperti provenienti da diversi settori. Il CLab ci ha insegnato non solo come lavorare in team, ma anche come pensare "fuori dagli schemi", affrontando problemi reali con creatività e pragmatismo.
+In this article, you will find:
 
-In questo articolo troverete:
+- 📚 The training materials provided to us during the project
+- 🛠️ All the materials produced by our team during the project (presentations, documents, analyses, etc.)
 
-- 📚 Il materiale formativo che ci è stato fornito durante il percorso
-- 🛠️ Tutto il materiale prodotto dal nostro team durante il progetto (presentazioni, documenti, analisi, ecc.)
+## 🎉 A special thank you to the Team
 
-## 🎉 Un ringraziamento speciale al Team
+I can only thank my extraordinary fellow travelers: each contributed their own ideas, skills, and enthusiasm to making this journey unique. It was a true pleasure working alongside you.
 
-Non posso che ringraziare i miei straordinari compagni di viaggio: ognuno ha contribuito con le proprie idee, competenze ed entusiasmo a rendere unico questo percorso. È stato un vero piacere lavorare al vostro fianco.
+![Photo of our Team](team.JPG)
 
-![Foto del nostro Team](team.JPG)
+## 🌟 A great shared experience
 
-## 🌟 Una grande esperienza condivisa
+I also share a photo of all the CLab Verona participants: each person in this photo brings with them ideas, dreams, and skills that can truly change our future.
 
-Condivido anche una foto di tutti i partecipanti del CLab Verona: ogni persona in questa foto porta con sé idee, sogni e competenze che potranno cambiare concretamente il nostro futuro.
+[Photos of all participants] (all.JPG)
 
-![Foto di tutti i partecipanti](tutti.JPG)
+## 📥 Project Documents
 
-## 📥 Documenti del Progetto
+Below are the main documents of our CLab project, available for consultation and further study:
 
-Di seguito i documenti principali del nostro progetto CLab, disponibili per consultazione e approfondimento:
+### 📋 Main Documents
 
-### 📋 Documenti Principali
+- [📄 Complete Business Plan] (materiali%20prodotti/DA%20MANDARE%20AL%20MUNE/Business%20Plan.pdf#view=FitH) - Detailed business plan for the redevelopment
+- [📊 Financial Plan Dashboard] (materiali%20prodotti/DA%20MANDARE%20AL%20MUNE/Financial%20Plan%20-%20Dashboard.pdf#view=FitH) - Economic and financial analysis of the project
+- [📈 Financial Plan (Excel)] (materiali%20prodotti/Financial%20Plan.xlsx) - Complete financial model
+- [🎯 MisteryRock - Final Project](materiali%20prodotti/DA%20MANDARE%20AL%20MUNE/MisteryRock.pdf#view=FitH) - Final proposal for the Municipality
 
-- [📄 Business Plan Completo](materiali%20prodotti/DA%20MANDARE%20AL%20COMUNE/Business%20Plan.pdf#view=FitH) - Piano di business dettagliato per la riqualificazione
-- [📊 Financial Plan Dashboard](materiali%20prodotti/DA%20MANDARE%20AL%20COMUNE/Financial%20Plan%20-%20Dashboard.pdf#view=FitH) - Analisi economico-finanziaria del progetto
-- [📈 Financial Plan (Excel)](materiali%20prodotti/Financial%20Plan.xlsx) - Modello finanziario completo
-- [🎯 MisteryRock - Progetto Finale](materiali%20prodotti/DA%20MANDARE%20AL%20COMUNE/MisteryRock.pdf#view=FitH) - Proposta finale per il Comune
+### 📚 Study and Research Materials
 
-### 📚 Materiali di Studio e Ricerca
+All **study materials** used during the training program (kick-off, territorial analysis, governance, ESG communication, etc.) are available for download in a comprehensive archive:
 
-Tutti i **materiali di studio** utilizzati durante il percorso formativo (kick-off, analisi territoriali, governance, comunicazione ESG, ecc.) sono disponibili per il download in un archivio completo:
-
-- [📦 Download Materiali di Studio (ZIP)](materiali-di-studio.zip) - Oltre 40 file di ricerca e formazione utilizzati per sviluppare le competenze necessarie al progetto
+- [📦 Download Study Materials (ZIP)](materiali-di-study.zip) - Over 40 research and training files used to develop the skills needed for the project
 
 ---
 
-Grazie per aver visitato questa pagina e per esserti interessato al nostro viaggio. Speriamo che il nostro lavoro possa essere fonte d'ispirazione per progetti futuri e per chiunque voglia mettersi in gioco per cambiare le cose concretamente.
+Thank you for visiting this page and for your interest in our journey. We hope our work can be a source of inspiration for future projects and for anyone who wants to get involved in making a real difference.
 
-✨ **Continuiamo a innovare insieme!** ✨
+✨ **Let's continue to innovate together!** ✨
 
-#CLabVerona #Riqualificazione #RoccaDiNogarole #Innovazione #Crescita #Teamwork
+#CLabVerona #Redevelopment #RoccaDiNogarole #Innovation #Growth #Teamwork

@@ -21,14 +21,6 @@ tags:
 title: Don Mazza College
 ---
 
-<!-- hash: 726034e0d1a0 -->
-- Spiegare Come L'Ho Trovato
-- Viens mi sono trovato
-- linkare il mio vidéo "recensione"
-- Esperienze Matte:
-- Conoscenza di Persone (Poche, 1 -> Vale)
-- Condivisione
-- Formatif de minerai
-- Viaggio di Budapest
-- confronto con gli altri coetanei
--
+<!-- hash: cd040ca438f1 -->
+## À venir
+L'endroit où j'ai vécu pendant 3 ans pendant mon baccalauréat en informatique à Vérone

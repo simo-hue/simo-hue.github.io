@@ -21,14 +21,6 @@ tags:
 title: Don Mazza College
 ---
 
-<!-- hash: 726034e0d1a0 -->
-- Spiegare come L'Ho Trovato
-- Vieni mi trovato
-- Linkare il mio video "recensione"
-- Esperienze Fatte:
-- Conoscenza di Persone (Poche, 1 -> Vale)
-- Condivisione
-- Ore Formativo
-- Viaggio di Budapest
-- Confronto con gli altri coetanei
--
+<!-- hash: cd040ca438f1 -->
+## Prossimamente
+Il luogo in cui ho vissuto per 3 anni durante la mia laurea in informatica a Verona

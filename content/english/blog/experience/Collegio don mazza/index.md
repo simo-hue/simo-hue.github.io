@@ -17,13 +17,6 @@ links:
     website: #
 ---
 
-- Spiegare come l'ho trovato
-- come mi sono trovato
-- linkare il mio video "recensione"
-- Esperienze fatte: 
-    - conoscenza di persone ( poche, 1 -> Vale )
-    - Condivisione
-    - Ore formative
-    - Viaggio di Budapest
-    - Confronto con gli altri coetanei
-- 
+## Comming Soon
+
+The place where I lived for 3 years during my bachelor computer science degree in verona
