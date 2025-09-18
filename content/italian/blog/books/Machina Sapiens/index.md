@@ -9,9 +9,10 @@ tags: []
 title: Machina sapiens |Nello Cristianini
 ---
 
+<!-- hash: dd2fa40e021a -->
 # Riflessioni su un libro visionario
 
-Di recente ho finito di leggere il libro ** "Machina sapiens" ** di Nello Cristianini, un autore che ammiro profondamente per la sua competenza e capacità di rendere accessibili argomenti complessi relativi all'intelligenza artificiale.Questo libro non è solo un'esplorazione delle tecnologie emergenti, ma anche un viaggio filosofico che mi ha affascinato e, devo ammettere, un po 'spaventato.
+Di recente ho finito di leggere il libro ** "Machina sapiens" ** di Nello Cristianini, un autore che ammiro profondamente per la sua competenza e la capacità di rendere accessibili argomenti complessi relativi all'intelligenza artificiale.Questo libro non è solo un'esplorazione delle tecnologie emergenti, ma anche un viaggio filosofico che mi ha affascinato e, devo ammettere, un po 'spaventato.
 
 ## un riassunto del libro
 

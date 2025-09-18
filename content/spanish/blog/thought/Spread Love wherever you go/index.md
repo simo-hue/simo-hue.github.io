@@ -12,6 +12,7 @@ tags:
 title: Difundir el amor donde quiera que vayas
 ---
 
+<!-- hash: 0a4de6c062f0 -->
 La bondad es uno de esos pequeños gestos que hacen que los días más brillantes, tanto para el donante como para el receptor.Siempre he encontrado consuelo en ser amable con los demás, incluso en las acciones más simples.Una sonrisa, un saludo, un "¿cómo estás?"Puede parecer insignificante, pero a menudo tienen un impacto profundo.Son pequeños actos que no cuestan nada, pero que traen una enorme riqueza.
 
 Me gusta pensar que cada pequeña amabilidad es una semilla de felicidad que se extiende a nuestro alrededor.Desde sostener una puerta abierta para aquellos que siguen, hasta dar una moneda a alguien necesitada, dar una sonrisa a alguien que lo necesita.Estos gestos no solo hacen que los demás se sientan mejor, sino que también llenan mi corazón de alegría.Y la mayoría de las veces, me doy cuenta de que, sin querer, he dado una sonrisa a otra persona.

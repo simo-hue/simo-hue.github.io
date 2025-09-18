@@ -13,6 +13,7 @@ tags:
 title: La répétition est la mère de toutes les compétences
 ---
 
+<!-- hash: 3558a2093a3d -->
 Il y a une vérité intemporelle dans le dicton, * "La répétition est la mère de toutes les compétences." * C'est quelque chose que j'ai entièrement adopté depuis que j'ai intégré une méthode qui a complètement transformé ma façon d'apprendre et d'internaliser les concepts: ** La méthode d'immersion **.
 
 ---

@@ -10,6 +10,7 @@ tags: []
 title: Pensez et grandissez riche |Colline de Napoléon
 ---
 
+<!-- hash: 1611b15edabd -->
 ## Introduction à la philosophie du succès de Napoleon Hill
 * Pensez et grandissez Rich * par Napoleon Hill est un persistant dans le développement personnel et le succès.Publié pour la première fois en 1937, c'est un guide pratique qui enseigne comment la pensée positive, la détermination et une vision claire des objectifs peuvent transformer les rêves en réalité.Hill a étudié la vie de grands hommes qui réussissent, comme Andrew Carnegie, Henry Ford et Thomas Edison, depuis plus de 25 ans et ont distillé leurs secrets dans ce chef-d'œuvre intemporel.
 

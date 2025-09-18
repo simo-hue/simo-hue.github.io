@@ -12,6 +12,7 @@ tags:
 title: La ignorancia hoy en día es una elección
 ---
 
+<!-- hash: 3ad878e2bf20 -->
 En el pasado, el acceso al conocimiento era un privilegio.Los libros eran escasos, las universidades estaban reservadas para la élite, y la experiencia a menudo requería acceso a mentores o herramientas especializadas.Pero hoy, la historia es completamente diferente.Vivimos en una era en la que las barreras para el aprendizaje han desaparecido, gracias al poder transformador de la tecnología.
 
 ## El regalo de acceso ilimitado

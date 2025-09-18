@@ -10,6 +10,7 @@ tags: []
 title: Guida Ai Bias Cognivi, Capire Le Trappole della Mente |Raffaele Gaito
 ---
 
+<!-- hash: 7d6c3a1bc7f4 -->
 ## Introduction
 Le * Guide des biais cognitifs * est un livre qui nous aide à découvrir et à comprendre les mécanismes qui influencent notre pensée et nos décisions.Les biais cognitifs sont des erreurs systématiques que nous faisons tous dans le raisonnement, souvent sans s'en rendre compte.Ce livre propose des exemples et des idées pratiques pour reconnaître et aborder ces pièges mentaux, nous permettant d'améliorer notre processus décisionnel.
 
@@ -24,7 +25,7 @@ Le * Guide des biais cognitifs * explore comment notre esprit simplifie la réal
 ---
 
 ## Comprendre les biais cognitifs: le point clé du livre
-Le livre nous montre à quel point les biais cognitifs sont le résultat de l'heuristique ou des raccourcis mentaux que le cerveau utilise pour faire face à la complexité du monde.These shortcuts, while on the one hand helping us save time, on the other hand can lead us to incorrect conclusions or suboptimal choices.
+Le livre nous montre à quel point les biais cognitifs sont le résultat de l'heuristique ou des raccourcis mentaux que le cerveau utilise pour faire face à la complexité du monde.Ces raccourcis, alors qu'une part nous aidant à gagner du temps, d'autre part peut nous conduire à des conclusions incorrectes ou des choix sous-optimaux.
 
 ### Exemples de biais cognitifs
 1. ** Biais de confirmation **: Imaginez vouloir acheter un nouveau smartphone et uniquement des critiques qui en parlent positivement, ignorant les critiques négatives.
