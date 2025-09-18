@@ -1,0 +1,70 @@
+{{ define "main" }}
+  {{ partial "page-header" . }}
+
+  <section class="section">
+    <div class="container">
+      <div class="row justify-center">
+        <div class="lg:col-10">
+          {{/* categories */}}
+          {{ if eq .Permalink (`categories/` | absLangURL) }}
+            <h2 class="mb-8 text-center text-2xl font-bold">All Categories</h2>
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {{ range site.Taxonomies.categories.ByCount }}
+                <div class="bg-light dark:bg-darkmode-light rounded-lg p-6 text-center">
+                  <a
+                    href="{{ .Page.Permalink }}"
+                    class="group block">
+                    <h3 class="mb-3 text-xl font-semibold text-text-dark dark:text-darkmode-text-dark group-hover:text-primary dark:group-hover:text-darkmode-primary">
+                      {{ .Page.Title | humanize }}
+                    </h3>
+                    <p class="text-text-light dark:text-darkmode-text-light">
+                      {{ .Count }} {{ if eq .Count 1 }}post{{ else }}posts{{ end }}
+                    </p>
+                  </a>
+                </div>
+              {{ end }}
+            </div>
+          {{ end }}
+
+          {{/* tags */}}
+          {{ if eq .Permalink (`tags/` | absLangURL) }}
+            <h2 class="mb-8 text-center text-2xl font-bold">All Tags</h2>
+            <div class="flex flex-wrap justify-center gap-3">
+              {{ range site.Taxonomies.tags.ByCount }}
+                <a
+                  href="{{ .Page.Permalink }}"
+                  class="bg-light text-text-dark dark:bg-darkmode-light dark:text-darkmode-text-dark hover:bg-primary hover:text-white dark:hover:bg-darkmode-primary inline-flex items-center rounded-full px-4 py-2 text-sm font-medium transition-colors">
+                  {{ .Page.Title }}
+                  <span class="bg-body dark:bg-darkmode-body ml-2 rounded-full px-2 py-1 text-xs">
+                    {{ .Count }}
+                  </span>
+                </a>
+              {{ end }}
+            </div>
+          {{ end }}
+
+          {{/* Fallback for other taxonomy terms */}}
+          {{ if and (ne .Permalink (`categories/` | absLangURL)) (ne .Permalink (`tags/` | absLangURL)) }}
+            <h2 class="mb-8 text-center text-2xl font-bold">{{ .Title | humanize }}</h2>
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {{ range .Data.Terms.ByCount }}
+                <div class="bg-light dark:bg-darkmode-light rounded-lg p-6 text-center">
+                  <a
+                    href="{{ .Page.Permalink }}"
+                    class="group block">
+                    <h3 class="mb-3 text-xl font-semibold text-text-dark dark:text-darkmode-text-dark group-hover:text-primary dark:group-hover:text-darkmode-primary">
+                      {{ .Page.Title | humanize }}
+                    </h3>
+                    <p class="text-text-light dark:text-darkmode-text-light">
+                      {{ .Count }} {{ if eq .Count 1 }}post{{ else }}posts{{ end }}
+                    </p>
+                  </a>
+                </div>
+              {{ end }}
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}
