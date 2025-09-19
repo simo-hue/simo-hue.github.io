@@ -21,8 +21,17 @@ features:
       - "Pubblications"
       - "Social Links"
       - "BIO"
+      - "CLAB Univr Certificate"
     button:
       enable: true
       label: "Go To The BLOG"
       link: "/blog"
+  - title: "CLAB Univr"
+    image: "/images/service-1.png"
+    content: "View my participation certificate for the CLAB project at University of Verona"
+    button:
+      enable: true
+      label: "View Certificate"
+      link: "/blog/project/clab-univr/attestati/Mattioli.pdf"
+      target: "_blank"
 ---

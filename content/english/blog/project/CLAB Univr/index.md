@@ -40,18 +40,21 @@ I can only thank my extraordinary fellow travelers: each contributed their own i
 
 I also share a photo of all the CLab Verona participants: each person in this photo brings with them ideas, dreams, and skills that can truly change our future.
 
-[Photos of all participants] (all.JPG)
-
 ## 📥 Project Documents
 
 Below are the main documents of our CLab project, available for consultation and further study:
 
 ### 📋 Main Documents
 
-- [📄 Complete Business Plan] (materiali%20prodotti/DA%20MANDARE%20AL%20MUNE/Business%20Plan.pdf#view=FitH) - Detailed business plan for the redevelopment
-- [📊 Financial Plan Dashboard] (materiali%20prodotti/DA%20MANDARE%20AL%20MUNE/Financial%20Plan%20-%20Dashboard.pdf#view=FitH) - Economic and financial analysis of the project
-- [📈 Financial Plan (Excel)] (materiali%20prodotti/Financial%20Plan.xlsx) - Complete financial model
-- [🎯 MisteryRock - Final Project](materiali%20prodotti/DA%20MANDARE%20AL%20MUNE/MisteryRock.pdf#view=FitH) - Final proposal for the Municipality
+- [📄 Complete Business Plan](materiali%20prodotti/DA%20MANDARE%20AL%20COMUNE/Business%20Plan.pdf) - Detailed business plan for the redevelopment
+- [📊 Financial Plan Dashboard](materiali%20prodotti/DA%20MANDARE%20AL%20COMUNE/Financial%20Plan%20-%20Dashboard.pdf) - Economic and financial analysis of the project
+- [📈 Financial Plan (Excel)](materiali%20prodotti/Financial%20Plan.xlsx) - Complete financial model
+- [🎯 MisteryRock - Final Project](materiali%20prodotti/DA%20MANDARE%20AL%20COMUNE/MisteryRock.pdf) - Final proposal for the Municipality
+
+### 🏆 Participation Certificates
+
+- [📜 Mattioli Simone - Participation Certificate](attestati/Mattioli.pdf) - Personal participation certificate
+- [📜 General Participation Certificate](attestati/partecipazione.pdf) - General participation documentation
 
 ### 📚 Study and Research Materials
 
