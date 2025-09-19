@@ -12,7 +12,7 @@ slug: think
 title: Clab unirv
 ---
 
-<!-- hash: 9ca787013e86 -->
+<!-- hash: ff4bcbcfcc60 -->
 # 🚀 Reurbanización de la Rocca di Nogarole: Nuestro viaje con Clab Verona
 
 El viaje del ** Laboratorio de contaminación (Clab) ** en la Universidad de Verona fue mucho más que un proyecto simple: fue una aventura, un desafío emocionante que permitió a mi equipo y a mí explorar nuevas habilidades, abordar obstáculos reales y, sobre todo, crear ideas concretas para nuestra comunidad.
@@ -34,13 +34,11 @@ En este artículo, encontrará:
 
 Solo puedo agradecer a mis compañeros de viaje extraordinarios: cada uno contribuyó con sus propias ideas, habilidades y entusiasmo a hacer que este viaje sea único.Fue un verdadero placer trabajar junto a ti.
 
-
+Protegido0000 protegido
 
 ## 🌟 Una gran experiencia compartida
 
 También comparto una foto de todos los participantes de Clab Verona: cada persona en esta foto trae consigo ideas, sueños y habilidades que realmente pueden cambiar nuestro futuro.
-
-[Fotos de todos los participantes] (All.jpg)
 
 ## 📥 Documentos del proyecto
 
@@ -48,16 +46,21 @@ A continuación se presentan los principales documentos de nuestro proyecto CLAB
 
 ### 📋 Documentos principales
 
-- [📄 Plan de negocios completo] (materiali%20Prodotti/DA%20Mandare%20al%20Mune/Business%20Plan.pdf#View = Fith) - Plan de negocios detallado para la reurbanización
-- [📊 Panel de control del plan financiero] (materiali%20Prodotti/Da%20Mandare%20al%20Mune/Financial%20Plan%20-%20DashBoard.pdf#View = Fith) - Análisis económico y financiero del proyecto
-- [📈 Plan financiero (Excel)] (Materiali%20Prodotti/Financial%20plan.xlsx) - Modelo financiero completo
--  Propuesta final para el municipio
+- Protected 0001 PROTECTION - Plan de negocios detallado para la reurbanización
+- Protected 0002 PROTECTIVE - Análisis económico y financiero del proyecto
+- protegido 0003protected - modelo financiero completo
+- Proteged 0004 PROTECTIGO - Propuesta final para el municipio
+
+### 🏆 Certificados de participación
+
+- protegido 0005 protegido - Certificado de participación personal
+- protegido 0006 Propectado - Documentación de participación general
 
 ### 📚 Materiales de estudio e investigación
 
 Todos ** Materiales de estudio ** utilizados durante el programa de capacitación (inicio, análisis territorial, gobernanza, comunicación de ESG, etc.) están disponibles para descargar en un archivo integral:
 
--  - Más de 40 archivos de investigación y capacitación utilizados para desarrollar las habilidades necesarias para el proyecto
+- Protected 0007 PROTECTECT - Más de 40 archivos de investigación y capacitación utilizados para desarrollar las habilidades necesarias para el proyecto
 
 ---
 

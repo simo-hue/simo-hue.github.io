@@ -12,7 +12,7 @@ slug: think
 title: CLAB UNIRV
 ---
 
-<!-- hash: 9ca787013e86 -->
+<!-- hash: ff4bcbcfcc60 -->
 # 🚀 Redéveloppement du Rocca di Nogarole: Notre voyage avec Clab Verona
 
 Le voyage du ** Contamination Lab (CLAB) ** à l'Université de Vérone était bien plus qu'un simple projet: c'était une aventure, un défi passionnant qui a permis à mon équipe et à moi d'explorer de nouvelles compétences, de s'attaquer à de vrais obstacles et, surtout, de créer des idées concrètes pour notre communauté.
@@ -34,13 +34,11 @@ Dans cet article, vous trouverez:
 
 Je ne peux que remercier mes collègues voyageurs extraordinaires: chacun a apporté ses propres idées, compétences et enthousiasme pour rendre ce voyage unique.Ce fut un vrai plaisir de travailler à vos côtés.
 
-
+Protégé 20000 protégé
 
 ## 🌟 Une grande expérience partagée
 
 Je partage également une photo de tous les participants à Clab Vérone: chaque personne sur cette photo apporte avec eux des idées, des rêves et des compétences qui peuvent vraiment changer notre avenir.
-
-[Photos de tous les participants] (all.jpg)
 
 ## 📥 Documents du projet
 
@@ -48,16 +46,21 @@ Vous trouverez ci-dessous les principaux documents de notre projet CLAB, disponi
 
 ### 📋 Documents principaux
 
-- [📄 Plan d'affaires complet] (Materiali% 20Prodotti / da% 20mandare% 20Al% 20mune / Business% 20Plan.pdf # View = Fith) - Plan d'affaires détaillé pour le réaménagement
-- [📊 Plan financier Tableau de tableau de bord] (Materiali% 20Prodotti / da% 20mandare% 20Al% 20Mune / Financial% 20Plan% 20-% 20dashboard.pdf # View = Fith) - Analyse économique et financière du projet
-- [📈 Plan financier (Excel)] (Materiali% 20Prodotti / Financial% 20Plan.xlsx) - Modèle financier complet
--  - proposition finale pour la municipalité
+- Protected0001 Protected - Plan d'affaires détaillé pour le réaménagement
+- Protected 0002 Protégé - Analyse économique et financière du projet
+- Protected0003 Protected - Modèle financier complet
+- Protected0004 Protected - proposition finale pour la municipalité
+
+### 🏆 Certificats de participation
+
+- Protected0005 Protected - Certificat de participation personnelle
+- Protected0006 Protected - Documentation générale de participation
 
 ### 📚 Matériel d'étude et de recherche
 
 Tous ** matériel d'étude ** utilisé pendant le programme de formation (coup d'envoi, analyse territoriale, gouvernance, communication ESG, etc.) sont disponibles en téléchargement dans une archive complète:
 
--  - Plus de 40 fichiers de recherche et de formation utilisés pour développer les compétences nécessaires pour le projet
+- Protected0007 Protected - Plus de 40 fichiers de recherche et de formation utilisés pour développer les compétences nécessaires pour le projet
 
 ---
 

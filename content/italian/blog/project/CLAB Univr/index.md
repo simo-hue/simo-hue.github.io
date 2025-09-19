@@ -12,7 +12,7 @@ slug: think
 title: Clab unirv
 ---
 
-<!-- hash: 9ca787013e86 -->
+<!-- hash: ff4bcbcfcc60 -->
 # 🚀 Ridurrezione del Rocca di Nogarole: il nostro viaggio con Clab Verona
 
 Il viaggio del ** Contamination Lab (CLAB) ** all'Università di Verona è stato molto più di un semplice progetto: è stata un'avventura, una sfida entusiasmante che ha permesso a me e io di esplorare nuove abilità, affrontare veri ostacoli e soprattutto creare idee concrete per la nostra comunità.
@@ -34,13 +34,11 @@ In questo articolo, troverai:
 
 Posso solo ringraziare i miei straordinari compagni di viaggio: ognuno ha contribuito con le proprie idee, abilità ed entusiasmo a rendere unico questo viaggio.È stato un vero piacere lavorare al tuo fianco.
 
-
+Protetto0000 protetto
 
 ## 🌟 Una grande esperienza condivisa
 
 Condivido anche una foto di tutti i partecipanti a Clab Verona: ogni persona in questa foto porta con sé idee, sogni e abilità che possono veramente cambiare il nostro futuro.
-
-[Foto di tutti i partecipanti] (all.jpg)
 
 ## 📥 Documenti del progetto
 
@@ -48,16 +46,21 @@ Di seguito sono riportati i principali documenti del nostro progetto CLAB, dispo
 
 ### 📋 Documenti principali
 
-- [📄 Piano aziendale completo] (Materiale%20Prodotti/DA%20ManDare%20al%20mune/Business%20Plan.pdf#View = FITH) - Piano aziendale dettagliato per la riqualificazione
-- [📊 Dashboard del piano finanziario] (Materiale%20Prodotti/DA%20ManDare%20al%20mune/Financial%20Plan%20-%20Dashboard.pdf#view = fith) - Analisi economica e finanziaria del progetto
-- [📈 Piano finanziario (Excel)] (materiale%20Prodotti/Financial%20Plan.xlsx) - Modello finanziario completo
--  - Proposta finale per il comune
+- Protected0001Protected - Business Plan dettagliato per la riqualificazione
+- Protected0002protected - Analisi economica e finanziaria del progetto
+- Protected0003Protected - Modello finanziario completo
+- Protected0004Protected - Proposta finale per il comune
+
+### 🏆 Certificati di partecipazione
+
+- Protected0005Protected - Certificato di partecipazione personale
+- Protected0006Protected - Documentazione di partecipazione generale
 
 ### 📚 Materiali di studio e ricerca
 
 Tutti ** Materiali di studio ** utilizzati durante il programma di allenamento (calcio d'inizio, analisi territoriale, governance, comunicazione ESG, ecc.) Sono disponibili per il download in un archivio completo:
 
--  - Oltre 40 file di ricerca e formazione utilizzati per sviluppare le competenze necessarie per il progetto
+- Protected0007Protected - Oltre 40 file di ricerca e formazione utilizzati per sviluppare le competenze necessarie per il progetto
 
 ---
 
