@@ -1,8 +1,8 @@
 ---
 # Banner
 banner:
-  title: "Mattioli Simone"
-  content: "28/07/2003"
+  title: "Mattioli Simone - Building Bridges Between Worlds"
+  content: "From Brazil's favelas to Italy's mountains, from code to kindness. A Computer Science student exploring technology, humanity, and personal growth through adventures and meaningful experiences."
   image: "/images/banner.png"
   button:
     enable: true
@@ -12,19 +12,18 @@ banner:
 
 # Features
 features:
-  - title: "What Can You Find"
+  - title: "My Journey Through Life"
     image: "/images/service-1.png"
     bulletpoints:
-      - "Personal Thought"
-      - "Experience"
-      - "Projects Descriptions"
-      - "Pubblications"
-      - "Social Links"
-      - "BIO"
-      - "CLAB Univr Certificate"
+      - "🌟 Volunteer Work: Education projects in Brazil"
+      - "⛰️ Outdoor Passions: Hiking, MTB, Skiing, Motorcycles"
+      - "📖 Continuous Learning: Personal development & finance books"
+      - "🤖 Tech Innovation: AI research & software development"
+      - "❤️ Social Impact: Inclusion initiatives & community building"
+      - "🎓 University Life: Computer Science at Verona"
     button:
       enable: true
-      label: "Go To The BLOG"
+      label: "Explore My Adventures"
       link: "/blog"
   - title: "CLAB Univr"
     image: "/images/service-1.png"

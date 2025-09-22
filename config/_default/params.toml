@@ -61,9 +61,9 @@ content = "You must replace the **baseURL** in **hugo.toml** file when deploying
 # seo meta data for OpenGraph / Twitter Card
 # seo module: https://github.com/gethugothemes/hugo-modules/tree/master/seo-tools/basic-seo
 [metadata]
-keywords = ["Boilerplate", "Hugo"]
-description = "Mattioli Simone Personal WebSite"
-author = "zeon.studio"
+keywords = ["Mattioli Simone", "Brazil volunteer", "computer science Verona", "mountain hiking Italy", "personal growth", "AI student researcher", "social impact technology", "outdoor sports enthusiast", "inclusion advocate", "Italian developer"]
+description = "Mattioli Simone: Computer Science student, Brazil volunteer, mountain enthusiast, and personal growth explorer. Bridging technology and humanity through meaningful experiences and adventures."
+author = "Mattioli Simone"
 image = "images/og-image.png"
 
 
