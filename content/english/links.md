@@ -7,7 +7,7 @@ draft: false
 
 <div class="social-links-container">
 
-## 🏢 Professional Network
+## Professional Network
 
 <div class="link-card">
   <div class="link-icon linkedin">
@@ -22,7 +22,7 @@ draft: false
   </div>
 </div>
 
-## 💻 Code & Projects
+## Code & Projects
 
 <div class="link-card">
   <div class="link-icon github">
@@ -37,7 +37,7 @@ draft: false
   </div>
 </div>
 
-## 🦅 Mountain Fauna Lover Content
+## Mountain Fauna Lover Content
 
 <div class="link-card">
   <div class="link-icon youtube">
@@ -78,7 +78,7 @@ draft: false
   </div>
 </div>
 
-## 📱 Personal Channels
+## Personal Channels
 
 <div class="link-card">
   <div class="link-icon youtube">
@@ -106,7 +106,7 @@ draft: false
   </div>
 </div>
 
-## ✉️ Direct Contact
+## Direct Contact
 
 <div class="link-card">
   <div class="link-icon email">
@@ -125,7 +125,7 @@ draft: false
 
 ---
 
-## 🌟 What You'll Find on My Platforms
+## What You'll Find on My Platforms
 
 ### Photography Enthusiasts
 Follow **Mountain Fauna Lover** on Instagram, YouTube, and TikTok for wildlife photography, mountain landscapes, and conservation content.
