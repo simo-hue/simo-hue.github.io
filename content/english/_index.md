@@ -3,7 +3,7 @@
 banner:
   title: "Mattioli Simone - Building Bridges Between Worlds"
   content: "From Brazil's favelas to Italy's mountains, from code to kindness. A Computer Science student exploring technology, humanity, and personal growth through adventures and meaningful experiences."
-  image: "/images/banner.png"
+  image: "/images/banner_.png"
   button:
     enable: true
     label: "View My CV / Resume"
