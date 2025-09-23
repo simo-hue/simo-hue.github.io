@@ -1,16 +1,15 @@
 ---
-description: Find all my social media profiles, projects, and ways to connect with
-  me. From Instagram wildlife photography to YouTube storytelling and GitHub development
-  projects.
+description: Trova tutti i miei profili, progetti e modi per connettersi con me.Dalla
+  fotografia di Instagram Wildlife a YouTube Storytelling e GitHub Development Projects.
 draft: false
 subtitle: Connect with me across all platforms
 title: Links
 ---
 
-<!-- hash: 65646ae21761 -->
+<!-- hash: 71ebfb692f1e -->
 <div class="social-links-container">
 
-## 🏢 Professional Network
+## Professional Network
 
 <div class="link-card">
   <div class="link-icon linkedin">
@@ -25,7 +24,7 @@ title: Links
   </div>
 </div>
 
-## 💻 Code & Projects
+## Code & Projects
 
 <div class="link-card">
   <div class="link-icon github">
@@ -40,7 +39,7 @@ title: Links
   </div>
 </div>
 
-## 🦅 Mountain Fauna Lover Content
+## Mountain Fauna Lover Content
 
 <div class="link-card">
   <div class="link-icon youtube">
@@ -81,7 +80,7 @@ title: Links
   </div>
 </div>
 
-## 📱 Personal Channels
+## Personal Channels
 
 <div class="link-card">
   <div class="link-icon youtube">
@@ -109,7 +108,7 @@ title: Links
   </div>
 </div>
 
-## ✉️ Direct Contact
+## Direct Contact
 
 <div class="link-card">
   <div class="link-icon email">
@@ -128,7 +127,7 @@ title: Links
 
 ---
 
-## 🌟 What You'll Find on My Platforms
+## What You'll Find on My Platforms
 
 ### Photography Enthusiasts
 Follow **Mountain Fauna Lover** on Instagram, YouTube, and TikTok for wildlife photography, mountain landscapes, and conservation content.
