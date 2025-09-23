@@ -70,9 +70,9 @@ draft: false
     <i class="fab fa-tiktok"></i>
   </div>
   <div class="link-content">
-    <h3>TikTok - @mountainfaunalove</h3>
+    <h3>TikTok - @mountainfaunalover</h3>
     <p>Short-form wildlife content, quick nature insights, and vertical video adventures.</p>
-    <a href="https://www.tiktok.com/@mountainfaunalove" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+    <a href="https://www.tiktok.com/@mountainfaunalover" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
       Follow on TikTok
     </a>
   </div>
