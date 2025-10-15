@@ -1,0 +1,48 @@
+{{- /* Schema.org BlogPosting structured data for blog posts */ -}}
+{{- if and .IsPage (in .Site.Params.mainSections .Section) -}}
+{{- $desc := "" -}}
+{{- with .Description -}}
+  {{- $desc = . -}}
+{{- else -}}
+  {{- $desc = .Summary | plainify | truncate 160 -}}
+{{- end -}}
+{{- $author := site.Params.metadata.author -}}
+{{- with .Params.author -}}
+  {{- $author = . -}}
+{{- end -}}
+{{- $category := "" -}}
+{{- with .Params.categories -}}
+  {{- $category = index . 0 -}}
+{{- end -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ .Title | jsonify }},
+  "description": {{ $desc | jsonify }},
+  "author": {
+    "@type": "Person",
+    "name": {{ $author | jsonify }}
+  },
+  "datePublished": {{ .Date.Format "2006-01-02T15:04:05-07:00" | jsonify }},
+  "dateModified": {{ .Lastmod.Format "2006-01-02T15:04:05-07:00" | jsonify }},
+  "publisher": {
+    "@type": "Person",
+    "name": {{ site.Params.metadata.author | jsonify }},
+    "url": {{ .Site.BaseURL | jsonify }}
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ .Permalink | jsonify }}
+  }{{ if .Params.image }},
+  "image": {
+    "@type": "ImageObject",
+    "url": {{ .Params.image | absURL | jsonify }}
+  }{{ end }}{{ with .Params.tags }},
+  "keywords": {{ delimit . ", " | jsonify }}{{ end }}{{ if $category }},
+  "articleSection": {{ $category | jsonify }}{{ end }},
+  "wordCount": {{ .WordCount }},
+  "inLanguage": "en-US"
+}
+</script>
+{{- end -}}

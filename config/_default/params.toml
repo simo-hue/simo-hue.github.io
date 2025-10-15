@@ -61,16 +61,16 @@ content = "You must replace the **baseURL** in **hugo.toml** file when deploying
 # seo meta data for OpenGraph / Twitter Card
 # seo module: https://github.com/gethugothemes/hugo-modules/tree/master/seo-tools/basic-seo
 [metadata]
-keywords = ["Mattioli Simone", "Brazil volunteer", "computer science Verona", "mountain hiking Italy", "personal growth", "AI student researcher", "social impact technology", "outdoor sports enthusiast", "inclusion advocate", "Italian developer"]
-description = "Mattioli Simone: Computer Science student, Brazil volunteer, mountain enthusiast, and personal growth explorer. Bridging technology and humanity through meaningful experiences and adventures."
-author = "Mattioli Simone"
-image = "images/og-image.png"
+keywords = ["Simone Mattioli", "Computer Science University of Verona", "AI researcher Italy", "LLM tourism mobility prediction", "HPC machine learning", "Brazil volunteer experience", "mountain hiking Alps Italy", "personal development technology", "social impact projects", "Italian tech student", "volunteer teaching Brazil", "outdoor sports Italy", "computer science blog", "AI research portfolio", "technology humanities bridge"]
+description = "Simone Mattioli - Computer Science student at University of Verona specializing in AI and HPC. Brazil volunteer educator, mountain enthusiast, and researcher bridging technology with social impact. Explore my journey through tech projects, volunteering experiences, and personal growth adventures."
+author = "Simone Mattioli"
+image = "/images/og-image.png"
 
 
 # site verifications
 # verification module: https://github.com/gethugothemes/hugo-modules/tree/master/seo-tools/site-verifications
 [site_verification]
-google = ""   # Your verification code
+google = "Nv6NZa4WhRRwbPtHs3BocvE8_gwzaaOxDp7DTvZp1PU"   # Your verification code
 bing = ""     # Your verification code
 baidu = ""    # Your verification code
 facebook = "" # Your verification code

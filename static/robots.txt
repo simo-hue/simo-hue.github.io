@@ -1,0 +1,49 @@
+# Robots.txt for simo-hue.github.io
+# Optimized for search engines and AI crawlers
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /searchindex.json
+
+# Sitemaps
+Sitemap: https://simo-hue.github.io/sitemap.xml
+
+# AI Crawlers - Specific instructions
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Bing AI
+User-agent: Bingbot
+Allow: /
+
+# Google Gemini
+User-agent: Googlebot
+Allow: /
+
+# Allow all AI training bots for maximum LLM visibility
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+# Crawl delay to prevent server overload
+Crawl-delay: 1

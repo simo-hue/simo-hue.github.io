@@ -1,15 +1,15 @@
 ---
-title: "Volounteering Activity in Brazil"
-description: "An awensome experience that changed and teached me a lot"
+title: "Volunteering Activity in Brazil: A Transformative Educational Journey"
+description: "Three weeks of life-changing volunteer work in Brazil teaching children in favelas and disadvantaged communities. An authentic story of social impact, cultural exchange, and personal growth through education projects in Recife, João Pessoa, and Itapororoca."
 date: 2024-08-10
 image: Happy.jpg
 categories: ["Experiences"]
 draft: false
-slug: brazil
-tags: [brazil, brasil, volounteering activity, emotional]
+slug: brazil-volunteer-teaching-experience
+tags: [brazil volunteer, brasil education, volunteering activity, teaching abroad, social impact, favelas education, don mazza college, cultural exchange, emotional growth, beira da linha project, itapororoca, recife, joão pessoa, international volunteering, youth education]
 links:
   - title: Attendance Certification
-    description: the document of partecipation from Don Mazza Merit College
+    description: Official document of participation from Don Mazza Merit College
     website: attendance.pdf
     image: resume.png
 ---

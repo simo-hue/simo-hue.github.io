@@ -1,0 +1,71 @@
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  {{- /* Homepage - Highest priority */ -}}
+  {{- with .Site.Home }}
+  <url>
+    <loc>{{ .Permalink }}</loc>
+    {{- if not .Lastmod.IsZero }}
+    <lastmod>{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" }}</lastmod>
+    {{- end }}
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  {{- end }}
+
+  {{- /* Main pages - Prioritized by content type */ -}}
+  {{ range .Site.Pages }}
+    {{- if and (not .Draft) (ne .Section "") }}
+  <url>
+    <loc>{{ .Permalink }}</loc>
+    {{- if not .Lastmod.IsZero }}
+    <lastmod>{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" }}</lastmod>
+    {{- end }}
+    {{- /* Highest priority: Experiences */ -}}
+    {{- if in .Params.categories "Experiences" }}
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+    {{- /* High priority: Projects (all variants) */ -}}
+    {{- else if or (in .Params.categories "projects") (in .Params.categories "tech projects") (in .Params.categories "tech-projects") }}
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+    {{- /* High priority: Thoughts */ -}}
+    {{- else if in .Params.categories "thoughts" }}
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    {{- /* Medium-high priority: Publications */ -}}
+    {{- else if in .Params.categories "publications" }}
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    {{- /* Medium priority: Passions */ -}}
+    {{- else if or (in .Params.categories "passion") (in .Params.categories "passions") }}
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    {{- /* Medium priority: Books */ -}}
+    {{- else if in .Params.categories "books" }}
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    {{- /* Default blog content */ -}}
+    {{- else if eq .Section "blog" }}
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+    {{- /* Other pages */ -}}
+    {{- else }}
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    {{- end }}
+  </url>
+    {{- end }}
+  {{ end }}
+
+  {{- /* Taxonomy pages */ -}}
+  {{ range .Site.Taxonomies }}
+    {{ range . }}
+  <url>
+    <loc>{{ .Page.Permalink }}</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+    {{ end }}
+  {{ end }}
+</urlset>

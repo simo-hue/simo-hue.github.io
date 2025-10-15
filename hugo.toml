@@ -8,7 +8,7 @@ theme = "hugoplate"
 # Default time zone for time stamps; use any valid tz database name: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
 timeZone = "America/New_York"
 # post excerpt
-summaryLength = 10 # see https://gohugo.io/content-management/excerpts/
+summaryLength = 25 # see https://gohugo.io/content-management/excerpts/ - Increased for better SEO snippets
 # disable language
 disableLanguages = ["it", "fr", "es"] # disable italian, french, spanish languages
 hasCJKLanguage = false #  If hasCJKLanguage true, auto-detect Chinese/Japanese/Korean Languages in the content. see: https://gohugo.io/getting-started/configuration/#hascjklanguage
@@ -20,14 +20,16 @@ defaultContentLanguageInSubdir = false
 ########################### Services #############################
 [services]
 [services.googleAnalytics]
-ID = 'G-MEASUREMENT_ID' # see https://gohugo.io/templates/internal/#configure-google-analytics
-
-[services.disqus]
-shortname = 'themefisher-template' # we use disqus to show comments in blog posts . To install disqus please follow this tutorial https://portfolio.peter-baumgartner.net/2017/09/10/how-to-install-disqus-on-hugo/
+ID = 'G-5TJVJY8EZ2' # see https://gohugo.io/templates/internal/#configure-google-analytics
 
 ########################## Permalinks ############################
 [permalinks.page]
 "pages" = "/:slug/"
+
+########################## Taxonomies ############################
+[taxonomies]
+category = "categories"
+tag = "tags"
 
 
 ########################## Pagination ############################
@@ -59,6 +61,8 @@ target = 'assets/notwatching/hugo_stats.json'
 ############################# Outputs ############################
 [outputs]
 home = ["HTML", "RSS", "WebAppManifest", "SearchIndex"]
+section = ["HTML", "RSS"]
+page = ["HTML"]
 
 ############################# Imaging ############################
 [imaging]

@@ -1,0 +1,30 @@
+{{- /* Schema.org BreadcrumbList structured data */ -}}
+{{- if not .IsHome -}}
+{{- $items := slice -}}
+{{- $items = $items | append (dict "position" 1 "name" "Home" "item" .Site.BaseURL) -}}
+{{- $pos := 2 -}}
+{{- if .Parent -}}
+  {{- if ne .Parent.Title .Site.Title -}}
+    {{- $items = $items | append (dict "position" $pos "name" .Parent.Title "item" .Parent.Permalink) -}}
+    {{- $pos = add $pos 1 -}}
+  {{- end -}}
+{{- end -}}
+{{- $items = $items | append (dict "position" $pos "name" .Title "item" .Permalink) -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {{- range $i, $item := $items -}}
+      {{- if $i }},{{ end }}
+    {
+      "@type": "ListItem",
+      "position": {{ $item.position }},
+      "name": {{ $item.name | jsonify }},
+      "item": {{ $item.item | jsonify }}
+    }
+    {{- end }}
+  ]
+}
+</script>
+{{- end -}}
