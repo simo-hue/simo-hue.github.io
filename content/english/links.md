@@ -121,26 +121,35 @@ draft: false
   </div>
 </div>
 
+## Documents
+
+<div class="link-card">
+  <div class="link-icon document">
+    <i class="fas fa-file-pdf"></i>
+  </div>
+  <div class="link-content">
+    <h3>Curriculum Vitae / Resume</h3>
+    <p>View my professional CV with detailed information about my education, experience, and skills.</p>
+    <a href="/docs/Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+      View CV / Resume
+    </a>
+  </div>
 </div>
 
----
+<div class="link-card">
+  <div class="link-icon diploma">
+    <i class="fas fa-graduation-cap"></i>
+  </div>
+  <div class="link-content">
+    <h3>High School Diploma - ITT Marconi Rovereto</h3>
+    <p>View my high school diploma received from ITT Marconi of Rovereto.</p>
+    <a href="/docs/Diploma.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+      View Diploma
+    </a>
+  </div>
+</div>
 
-## What You'll Find on My Platforms
-
-### Photography Enthusiasts
-Follow **Mountain Fauna Lover** on Instagram, YouTube, and TikTok for wildlife photography, mountain landscapes, and conservation content.
-
-### Content Lovers
-Subscribe to **Simo's Diary** on YouTube for personal vlogs, travel stories, and authentic content about life, growth, and experiences.
-
-### Developers & Students
-Check out my **GitHub** for open-source projects, university assignments, and innovative coding solutions.
-
-### Professional Connections
-Connect on **LinkedIn** for career updates, academic achievements, and professional networking opportunities.
-
-### Direct Communication
-**Email me** for any collaborations, questions, or just to start a conversation!
+</div>
 
 ---
 
