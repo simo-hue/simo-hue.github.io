@@ -40,6 +40,14 @@
   @apply bg-[#EA4335] text-white;
 }
 
+.link-icon.document {
+  @apply bg-gradient-to-br from-blue-600 to-blue-800 text-white;
+}
+
+.link-icon.diploma {
+  @apply bg-gradient-to-br from-amber-500 to-orange-600 text-white;
+}
+
 .link-content {
   @apply flex-1;
 }
