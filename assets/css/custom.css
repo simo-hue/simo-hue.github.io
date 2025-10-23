@@ -47,6 +47,9 @@
 .link-icon.diploma {
   @apply bg-gradient-to-br from-amber-500 to-orange-600 text-white;
 }
+.link-icon.certification {
+  @apply bg-gradient-to-br from-amber-500 to-orange-600 text-white;
+}
 
 .link-content {
   @apply flex-1;
@@ -68,15 +71,4 @@
 .social-links-container .btn-primary {
   @apply border-primary bg-primary dark:border-darkmode-primary dark:text-text-dark text-white dark:bg-darkmode-primary
          hover:bg-primary/90 dark:hover:bg-darkmode-primary/90 hover:-translate-y-0.5 hover:shadow-md;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .link-card {
-    @apply flex-col text-center gap-4;
-  }
-
-  .link-icon {
-    @apply self-center;
-  }
 }
