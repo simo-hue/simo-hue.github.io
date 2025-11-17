@@ -186,15 +186,13 @@ draft: false
 
 
 <div class="link-card">
-  <div class="link-icon document">
+  <div class="link-icon diploma">
     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M14 3v4a1 1 0 0 0 1 1h4" />
-      <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
-      <circle cx="10" cy="11" r="2" />
-      <path d="M10 15c-2.5 0 -4 1.5 -4 3" />
-      <path d="M15 11h2" />
-      <path d="M15 14h2" />
-      <path d="M15 17h2" />
+      <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" />
+      <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" />
+      <circle cx="12" cy="17" r="1.5" />
+      <path d="M12 18.5v2.5" />
+      <path d="M10 21h4" />
     </svg>
   </div>
   <div class="link-content">
