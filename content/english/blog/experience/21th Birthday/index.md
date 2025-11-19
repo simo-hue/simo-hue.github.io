@@ -14,7 +14,7 @@ links:
     website: https://www.collegio-donmazza.it
   - title: Brazil Volunteer Experience
     description: Read more about my complete volunteering experience in Brazil
-    website: /blog/brazil
+    website: /blog/experience/brazil-volunteer-teaching-experience/
 ---
 My 21st birthday was unique, an experience I will never forget. I spent it in Brazil, during my volunteering period, far from home and all my loved ones. On that occasion, I was not surrounded by the familiar faces of friends and relatives, but by six strangers, who shared with me the experience of volunteering in a country so different from mine.
 

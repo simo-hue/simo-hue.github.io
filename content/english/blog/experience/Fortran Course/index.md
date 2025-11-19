@@ -11,7 +11,7 @@ tags: [fortran, cineca]
 links:
   - title: Attendance Certification
     description: Official document of participation from CINECA
-    website: attendance.pdf
+    website: /docs/Certificate_fortran.pdf
     image: resume.png
 ---
 

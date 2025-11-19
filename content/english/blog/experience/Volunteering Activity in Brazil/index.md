@@ -10,7 +10,7 @@ tags: [brazil volunteer, brasil education, volunteering activity, teaching abroa
 links:
   - title: Attendance Certification
     description: Official document of participation from Don Mazza Merit College
-    website: attendance.pdf
+    website: /docs/attendance.pdf
     image: resume.png
 ---
 
