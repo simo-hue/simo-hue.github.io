@@ -2,7 +2,7 @@
 title: "CINECA FORTRAN COURSE"
 description: "An awensome experience that changed and teached me a lot"
 date: 2025-11-11
-image: olilnda.JPG
+image: image.png
 categories: ["Experiences"]
 draft: false
 slug: fortran
