@@ -225,6 +225,25 @@ draft: false
 </div>
 </div>
 
+<div class="link-card">
+  <div class="link-icon diploma">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" />
+      <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" />
+      <circle cx="12" cy="17" r="1.5" />
+      <path d="M12 18.5v2.5" />
+      <path d="M10 21h4" />
+    </svg>
+  </div>
+  <div class="link-content">
+    <h3>High Performance Bioinformatics</h3>
+    <p>Issued By CINENCA.</p>
+    <a href="/docs/certificato_bioinf.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+      View Certification
+    </a>
+  </div>
+</div>
+
 ---
 
 *I believe in authentic connections and meaningful conversations. Whether you're interested in photography, technology, personal growth, or just want to chat, I'd love to hear from you!*
