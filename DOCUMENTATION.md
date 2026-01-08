@@ -14,3 +14,19 @@
     - Background: White (Light Mode) / Dark Gray (Dark Mode).
     - Icons: FontAwesome chevron icons (`fa-chevron-right/left`) instead of default text.
     - Hover Effect: Primary background color with white icon.
+
+### [2026-01-08] Refine Links Page Styling
+- **Objective**: Fix spacing issues and enhance icon styling on the Links page.
+- **Changes**:
+  - Refactored `content/english/links.md` (from Education section downwards):
+    - Fixed HTML nesting and removed extra new lines.
+    - Assigned semantic classes to icons (`icon-diploma`, `icon-bachelor`, `icon-fortran`, `icon-python`, `icon-bioinformatics`, `icon-college`, `icon-english`).
+  - Updated `assets/css/custom.css`:
+    - Defined distinct gradient styles for each new icon class to increase visual appeal and professionalism:
+      - **Diploma**: Amber/Orange.
+      - **Bachelor**: Red/Dark Red.
+      - **Fortran**: Purple/Dark Purple.
+      - **Python**: Blue/Yellow.
+      - **Bioinformatics**: Emerald/Teal.
+      - **College**: Indigo/Blue.
+      - **English**: Blue gradient.
