@@ -1,0 +1,67 @@
+enable: true
+title: "My Recursive Journey"
+description: "From the Italian Alps to the digital world, step by step."
+items:
+  - date: "2022 - 2025"
+    title: "Computer Science Student"
+    organization: "University of Verona"
+    description: "Deepening my knowledge in algorithms, software engineering, and AI. Building the foundations for my future in tech."
+    icon: "fa-solid fa-graduation-cap"
+    tags: ["Education", "Verona"]
+    align: "left"
+
+  - date: "2023 - Present"
+    title: "Open Source Projects Dev"
+    organization: "GitHub"
+    description: "Creating and maintaining open source projects. From 'Mattioli.OS' to web experiments, trying to give back to the community."
+    icon: "fa-brands fa-github"
+    tags: ["Tech", "Code"]
+    align: "right"
+
+  - date: "2023"
+    title: "Simo's Diary"
+    organization: "YouTube"
+    description: "My digital memory box. A channel where I collect life moments, adventures, and personal growth thoughts to inspire others and keeping track of my path."
+    icon: "fa-brands fa-youtube"
+    tags: ["Content Creation", "Vlog"]
+    align: "left"
+    
+  - date: "2023"
+    title: "Mountain Fauna Lover"
+    organization: "Project"
+    description: "A tribute to the alpine wildlife. Exploring and documenting the hidden life of mountain animals to raise awareness and share their beauty."
+    icon: "fa-solid fa-camera-retro"
+    tags: ["Photography", "Nature"]
+    align: "right"
+
+  - date: "Summer 2023"
+    title: "International Volunteer"
+    organization: "Brazil"
+    description: "A life-changing experience helping in education projects. Learned the true value of community and empathy."
+    icon: "fa-solid fa-hand-holding-heart"
+    tags: ["Volunteering", "Growth"]
+    align: "left"
+
+  - date: "2022"
+    title: "Technical Diploma"
+    organization: "ITT Marconi Rovereto"
+    description: "Graduated in Computer Science. Where it all started, writing my first lines of code and discovering my passion."
+    icon: "fa-solid fa-scroll"
+    tags: ["Education", "Rovereto"]
+    align: "right"
+
+  - date: "2021"
+    title: "Downhill World Cup Staff"
+    organization: "Val di Sole"
+    description: "Trackside operations during the UCI World Cup. Managed athlete transponders at the finish line and ensured spectator safety along the race course."
+    icon: "fa-solid fa-person-biking"
+    tags: ["Volunteering", "Sport"]
+    align: "left"
+
+  - date: "Since 2003"
+    title: "Outdoor Explorer"
+    organization: "Trentino-Alto Adige"
+    description: "Born and raised in the mountains. Hiking, skiing, and riding motorcycles are not just hobbies, they are my way to recharge."
+    icon: "fa-solid fa-mountain-sun"
+    tags: ["Life", "Passion"]
+    align: "left"

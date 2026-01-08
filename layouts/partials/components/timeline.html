@@ -1,0 +1,62 @@
+{{ if site.Data.timeline.enable }}
+<section class="section relative overflow-hidden">
+    <div class="container">
+        <div class="row justify-center mb-16">
+            <div class="lg:col-10 text-center">
+                <h2 class="text-h2 mb-4">{{ site.Data.timeline.title }}</h2>
+                <p class="text-lg text-text dark:text-darkmode-text">{{ site.Data.timeline.description }}</p>
+            </div>
+        </div>
+
+        <div class="relative wrap overflow-hidden p-4 h-full">
+            <!-- Vertical Line -->
+            <div class="absolute border-opacity-20 border-gray-700 h-full border dark:border-gray-500 left-10 md:left-1/2"
+                style="border-style: solid; border-width: 0 0 0 2px;"></div>
+
+            {{ range $index, $item := site.Data.timeline.items }}
+            <!-- Timeline Item -->
+            <div
+                class="mb-8 flex justify-between items-center w-full {{ if (modBool $index 2) }}flex-row-reverse md:flex-row-reverse{{ else }}md:flex-row{{ end }}">
+
+                <div class="order-1 w-5/12 hidden md:block"></div>
+
+                <!-- Icon Circle -->
+                <div
+                    class="z-20 flex items-center order-1 bg-primary dark:bg-darkmode-primary shadow-xl w-16 h-16 rounded-full absolute left-2 md:relative md:left-0">
+                    <h1 class="mx-auto text-white dark:text-text-dark font-semibold text-lg">
+                        <i class="{{ .icon }}"></i>
+                    </h1>
+                </div>
+
+                <!-- Content Box -->
+                <div
+                    class="order-1 rounded-lg shadow-xl w-full md:w-5/12 ml-20 md:ml-0 px-6 py-4 bg-white dark:bg-darkmode-light border border-border dark:border-darkmode-border transition-all hover:scale-[1.02] hover:shadow-2xl">
+                    <div class="flex flex-wrap justify-between items-center mb-2">
+                        <span class="font-bold text-gray-800 dark:text-white text-xl">{{ .title }}</span>
+                        <span
+                            class="text-primary dark:text-darkmode-primary font-semibold text-sm bg-primary/10 px-2 py-1 rounded">{{
+                            .date }}</span>
+                    </div>
+
+                    <h4 class="mb-3 font-semibold text-gray-600 dark:text-gray-300 text-sm">{{ .organization }}</h4>
+
+                    <p
+                        class="text-sm leading-snug tracking-wide text-gray-900 dark:text-gray-100 text-opacity-100 mb-4">
+                        {{ .description }}
+                    </p>
+
+                    <div class="flex flex-wrap gap-2">
+                        {{ range .tags }}
+                        <span
+                            class="text-xs font-medium px-2.5 py-0.5 rounded bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300">
+                            #{{ . }}
+                        </span>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}

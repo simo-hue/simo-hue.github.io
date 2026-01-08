@@ -2,6 +2,28 @@
 
 ## Implementation Logs
 
+### [2026-01-08] Interactive Timeline Implementation
+- **Objective**: Replace static features list with a dynamic, responsive vertical timeline.
+- **Changes**:
+  - **New Data File**: Created `data/timeline.yml` to store journey events (Education, Work, Volunteering).
+  - **New Component**: Created `layouts/partials/components/timeline.html` using TailwindCSS.
+    - Features alternating left/right layout on desktop.
+    - Collapses to single column on mobile.
+    - Uses FontAwesome icons and color-coded tags.
+  - **Layout Update**: Modified `layouts/index.html` to replace the "Features" loop with `{{ partial "components/timeline.html" . }}`.
+- **Technical Details**:
+  - Uses Tailwind's `order-1`, `md:flex-row-reverse` for the zigzag effect.
+  - Responsive design with `md:` breakpoints.
+
+### [2026-01-08] Timeline Content Update
+- **Objective**: Add specific content creation milestones to the timeline.
+- **Changes**:
+  - **Added Entries**:
+    - **Simo's Diary (2023)**: YouTube channel for vlogs and memories.
+    - **Mountain Fauna Lover (2023)**: Photography/Nature project.
+    - **Downhill World Cup Staff (2021)**: Volunteering at Val di Sole (Transponders & Safety).
+
+
 ### [2026-01-08] Enhance Carousel UX
 - **Objective**: Improve the "Some Insight" carousel usability by adding navigation arrows and autoplay.
 - **Changes**:
