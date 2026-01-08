@@ -14,12 +14,28 @@
     <div class="animate-fade-in-up">
       <h1 class="text-6xl md:text-8xl font-bold mb-6 tracking-tight">
         {{ .title | markdownify }}
-        <span class="block text-gradient-animate mt-2">{{ .subtitle | default "Creative Developer" }}</span>
+        <span class="block text-gradient-animate mt-2">{{ .subtitle | default "Mattioli Simone" }}</span>
       </h1>
-      <p
-        class="text-xl md:text-2xl text-text dark:text-darkmode-text opacity-80 mb-10 max-w-2xl mx-auto leading-relaxed">
-        {{ .content | markdownify }}
-      </p>
+
+      <!-- Rotating Keywords Line -->
+      <div class="text-xl md:text-2xl text-text dark:text-darkmode-text mb-10 max-w-3xl mx-auto">
+        <span class="opacity-80">From </span>
+        <span class="rotating-words-container inline-block relative">
+          <span class="rotating-word active font-semibold text-primary dark:text-darkmode-primary">Brazil's
+            favelas</span>
+          <span class="rotating-word font-semibold text-primary dark:text-darkmode-primary">the mountains</span>
+          <span class="rotating-word font-semibold text-primary dark:text-darkmode-primary">lines of code</span>
+          <span class="rotating-word font-semibold text-primary dark:text-darkmode-primary">kindness</span>
+        </span>
+        <span class="opacity-80"> to </span>
+        <span class="rotating-words-container-2 inline-block relative">
+          <span class="rotating-word-2 active font-semibold text-primary dark:text-darkmode-primary">meaningful
+            impact</span>
+          <span class="rotating-word-2 font-semibold text-primary dark:text-darkmode-primary">human connection</span>
+          <span class="rotating-word-2 font-semibold text-primary dark:text-darkmode-primary">personal growth</span>
+          <span class="rotating-word-2 font-semibold text-primary dark:text-darkmode-primary">digital innovation</span>
+        </span>
+      </div>
 
       {{ with .button }}
       {{ if .enable }}
