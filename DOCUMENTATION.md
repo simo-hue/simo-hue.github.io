@@ -36,6 +36,13 @@
   - **Grid System**: Enforced `w-5/12` width for both content and spacers on ALL screens. This preserves exactly 1/6th (16.6%) of width in the center for the axis/icon.
   - **Typography**: Implemented responsive font sizing (`text-[10px]` on mobile, `text-sm` on desktop) to ensure text fits inside the zigzag boxes.
   - **Z-Index**: Fixed layering to ensure text doesn't overlap icons.
+  
+### [2026-01-08] Timeline Animations
+- **Objective**: Add "fade-in on scroll" effect for a premium feel.
+- **Changes**:
+  - **JS**: Added `IntersectionObserver` in `assets/js/main.js` to detect when timeline items enter the viewport.
+  - **CSS**: Added utility classes (`opacity-0`, `translate-y-8`, `transition-all`, `duration-700`) to `layouts/partials/components/timeline.html`.
+  - **Behavior**: Items start hidden and slightly lower; when scrolled to, they smoothly fade in and float up.
 
 
 ### [2026-01-08] Enhance Carousel UX

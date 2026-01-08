@@ -41,4 +41,30 @@
             },
         },
     });
+
+    // Timeline Animation
+    // ----------------------------------------
+    document.addEventListener("DOMContentLoaded", () => {
+        const timelineItems = document.querySelectorAll(".timeline-item");
+        if (timelineItems.length > 0) {
+            const timelineObserver = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.remove("opacity-0", "translate-y-8");
+                            timelineObserver.unobserve(entry.target);
+                        }
+                    });
+                },
+                {
+                    threshold: 0.1,
+                    rootMargin: "0px 0px -50px 0px",
+                }
+            );
+
+            timelineItems.forEach((item) => {
+                timelineObserver.observe(item);
+            });
+        }
+    });
 })();
