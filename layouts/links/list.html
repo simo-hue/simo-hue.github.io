@@ -1,0 +1,60 @@
+{{ define "main" }}
+<section class="section pt-14 pb-16">
+    <div class="container">
+
+        <!-- Link Page Header -->
+        <div class="text-center mb-16 max-w-2xl mx-auto">
+            <h1 class="text-h2 mb-4">{{ site.Data.links.title }}</h1>
+            <p class="text-xl font-medium text-primary dark:text-darkmode-primary mb-2">{{ site.Data.links.subtitle }}
+            </p>
+            <p class="text-text dark:text-darkmode-text opacity-90 leading-relaxed">{{ site.Data.links.description }}
+            </p>
+        </div>
+
+        <!-- SECTIONS GRID -->
+        <div class="space-y-16">
+            {{ range site.Data.links.sections }}
+            <div class="section-block">
+                <h2
+                    class="text-2xl font-bold mb-8 flex items-center gap-3 border-b border-border dark:border-darkmode-border pb-4">
+                    {{ .title }}
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {{ range .items }}
+                    <div
+                        class="group relative rounded-3xl p-8 shadow-sm transition-all duration-300 border border-transparent hover:-translate-y-2 h-full flex flex-col {{ .color }}">
+
+                        <div class="relative z-10 flex flex-col h-full">
+                            <div class="mb-6 flex items-center justify-between">
+                                <div
+                                    class="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl shadow-sm bg-white/90 dark:bg-black/10 backdrop-blur-sm text-current">
+                                    <i class="{{ .icon }}"></i>
+                                </div>
+                                <i
+                                    class="fa-solid fa-arrow-up-right-from-square text-current opacity-70 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                            </div>
+
+                            <h3 class="text-xl font-bold mb-2">{{ .title }}</h3>
+                            <p class="text-sm opacity-80 mb-6 flex-grow leading-relaxed">{{ .description }}</p>
+
+                            <a href="{{ .link }}" target="_blank" rel="noopener noreferrer"
+                                class="btn bg-white/50 hover:bg-white text-current border-none shadow-sm w-full transition-all">
+                                {{ .button_text }}
+                            </a>
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+            {{ end }}
+        </div>
+
+        <!-- Footer Quote -->
+        <div class="mt-20 text-center opacity-70 italic max-w-2xl mx-auto">
+            "{{ site.Data.links.footer_text }}"
+        </div>
+
+    </div>
+</section>
+{{ end }}
