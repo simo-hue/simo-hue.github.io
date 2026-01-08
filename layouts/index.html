@@ -69,50 +69,57 @@
   </div>
 </section>
 
-<!-- Testimonials with Glass Effect -->
-{{ with site.GetPage "sections/testimonial" }}
-{{ if .Params.enable }}
-<section class="section py-20 relative">
-  <!-- Decor -->
-  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent pointer-events-none">
-  </div>
+<!-- Some Insights Section -->
+{{ with .Params.features }}
+<section
+  class="section py-20 bg-gradient-to-b from-transparent via-gray-50/50 dark:via-darkmode-body/50 to-transparent">
+  <div class="container">
+    <h2 class="text-4xl font-bold text-center mb-12 relative inline-block left-1/2 -translate-x-1/2">
+      Some Insights
+      <span
+        class="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full"></span>
+    </h2>
 
-  <div class="container relative">
-    <div class="text-center mb-16">
-      <h2 class="text-4xl font-bold mb-4">{{ .Title | markdownify }}</h2>
-      <p class="text-lg opacity-70 max-w-2xl mx-auto">{{ .Params.description | markdownify }}</p>
-    </div>
-
-    <div class="swiper testimonial-slider pb-12">
-      <div class="swiper-wrapper">
-        {{ range .Params.testimonials }}
-        <div class="swiper-slide h-auto">
-          <div class="glass-card rounded-3xl p-8 h-full flex flex-col hover-lift">
-            <div class="text-primary dark:text-darkmode-primary mb-6">
-              <svg width="40" height="40" viewBox="0 0 33 20" fill="currentColor">
-                <path
-                  d="M1.28375 19.41L0.79375 18.64C1.21375 17.0067 1.75042 15.07 2.40375 12.83C3.05708 10.5433 3.75708 8.28 4.50375 6.04C5.29708 3.75333 6.06708 1.77 6.81375 0.0899959H15.3538C14.9338 2.09666 14.4904 4.26667 14.0238 6.6C13.5571 8.88666 13.1371 11.15 12.7638 13.39C12.4371 15.5833 12.1571 17.59 11.9238 19.41H1.28375ZM31.69 0.0899959L32.18 0.859998C31.76 2.54 31.2233 4.5 30.57 6.74C29.9167 8.98 29.2167 11.2433 28.47 13.53C27.7233 15.77 26.9533 17.73 26.16 19.41H17.69C18.0167 17.9167 18.3433 16.33 18.67 14.65C18.9967 12.9233 19.3 11.22 19.58 9.54C19.9067 7.81333 20.1867 6.15667 20.42 4.57C20.7 2.93666 20.91 1.44333 21.05 0.0899959H31.69Z" />
-              </svg>
-            </div>
-            <blockquote class="text-lg italic mb-8 flex-1 opacity-90">
-              "{{ .content | markdownify }}"
-            </blockquote>
-            <div class="flex items-center gap-4 border-t border-border dark:border-darkmode-border pt-6">
-              {{ $avatarClass := "rounded-full border-2 border-primary/20" }}
-              {{ partial "image" (dict "Src" .avatar "Size" "60x60" "Class" $avatarClass "Alt" .name) }}
-              <div>
-                <h3 class="font-bold text-lg">{{ .name }}</h3>
-                <p class="text-sm opacity-70">{{ .designation | markdownify }}</p>
-              </div>
-            </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {{ range . }}
+      <div class="insight-card group">
+        <!-- Icon Header -->
+        <div class="mb-6 flex items-center gap-4">
+          <div class="insight-icon {{ .icon_class }}">
+            <i class="{{ .icon }} text-2xl"></i>
           </div>
+          <h3 class="text-xl font-bold">{{ .title }}</h3>
         </div>
+
+        <!-- Content -->
+        {{ if .bulletpoints }}
+        <ul class="space-y-3 mb-6">
+          {{ range .bulletpoints }}
+          <li class="flex items-start gap-2 text-sm opacity-80">
+            <span class="text-primary dark:text-darkmode-primary mt-1">•</span>
+            <span>{{ . }}</span>
+          </li>
+          {{ end }}
+        </ul>
+        {{ else if .content }}
+        <p class="text-sm opacity-80 mb-6">{{ .content }}</p>
+        {{ end }}
+
+        <!-- Button -->
+        {{ with .button }}
+        {{ if .enable }}
+        <a href="{{ .link | relURL }}" {{ if .target }} target="{{ .target }}" rel="noopener" {{ end }}
+          class="inline-flex items-center gap-2 text-sm font-medium text-primary dark:text-darkmode-primary hover:gap-3 transition-all group-hover:translate-x-1">
+          {{ .label }}
+          <i class="fa fa-arrow-right text-xs"></i>
+        </a>
+        {{ end }}
         {{ end }}
       </div>
-      <div class="testimonial-slider-pagination mt-12"></div>
+      {{ end }}
     </div>
   </div>
 </section>
 {{ end }}
-{{ end }}
+
 {{ end }}

@@ -337,3 +337,65 @@
     transform: translateY(-20px);
   }
 }
+/* Some Insights Section Styles */
+.insight-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s;
+}
+
+.dark .insight-card {
+  background: var(--darkmode-light, #1f2937);
+  border-color: var(--darkmode-border, #374151);
+}
+
+.insight-card:hover {
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  transform: translateY(-4px);
+}
+
+.insight-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.insight-icon.icon-journey {
+  background: linear-gradient(to bottom right, #3b82f6, #06b6d4);
+}
+
+.insight-icon.icon-certificate {
+  background: linear-gradient(to bottom right, #f59e0b, #ea580c);
+}
+
+.insight-icon.icon-volunteer {
+  background: linear-gradient(to bottom right, #f97316, #ef4444);
+}
+
+.insight-icon.icon-outdoor {
+  background: linear-gradient(to bottom right, #10b981, #059669);
+}
+
+.insight-icon.icon-learning {
+  background: linear-gradient(to bottom right, #3b82f6, #4f46e5);
+}
+
+.insight-icon.icon-tech {
+  background: linear-gradient(to bottom right, #a855f7, #ec4899);
+}
+
+.insight-icon.icon-impact {
+  background: linear-gradient(to bottom right, #ef4444, #ec4899);
+}
+
+.insight-icon.icon-university {
+  background: linear-gradient(to bottom right, #6366f1, #a855f7);
+}
