@@ -1,72 +1,61 @@
 {{ if site.Data.timeline.enable }}
-<section class="section relative overflow-hidden">
-    <div class="container">
-        <div class="row justify-center mb-16">
-            <div class="lg:col-10 text-center">
-                <h2 class="text-h2 mb-4">{{ site.Data.timeline.title }}</h2>
-                <p class="text-lg text-text dark:text-darkmode-text">{{ site.Data.timeline.description }}</p>
-            </div>
+<!-- Container: Add padding to avoid edge clipping -->
+<div class="relative wrap overflow-hidden p-2 md:p-4 h-full">
+
+    <!-- Vertical Line: Always Centered -->
+    <div class="absolute border-opacity-20 border-gray-700 h-full border dark:border-gray-500 left-1/2 transform -translate-x-1/2"
+        style="border-style: solid; border-width: 0 0 0 2px;"></div>
+
+    {{ range $index, $item := site.Data.timeline.items }}
+    <!-- Timeline Item Row -->
+    <!-- Use gap-0 to rely on justify-between and explicit widths -->
+    <div
+        class="timeline-item opacity-0 translate-y-8 transition-all duration-700 ease-out mb-8 flex justify-between items-center w-full {{ if (modBool $index 2) }}flex-row-reverse{{ else }}flex-row{{ end }}">
+
+        <!-- Spacer (Left or Right) -->
+        <div class="order-1 w-5/12"></div>
+
+        <!-- Icon Circle: Absolute Center -->
+        <div
+            class="z-20 flex items-center justify-center order-1 bg-primary dark:bg-darkmode-primary shadow-xl w-10 h-10 md:w-14 md:h-14 rounded-full absolute left-1/2 transform -translate-x-1/2 border-4 border-white dark:border-darkmode-body">
+            <h1 class="mx-auto text-white dark:text-text-dark font-semibold text-sm md:text-lg">
+                <i class="{{ .icon }}"></i>
+            </h1>
         </div>
 
-        <!-- Container: Add padding to avoid edge clipping -->
-        <div class="relative wrap overflow-hidden p-2 md:p-4 h-full">
+        <!-- Content Box -->
+        <!-- w-5/12 ensures there is 2/12 (16.6%) space in the middle for the icon -->
+        <div
+            class="order-1 rounded-lg shadow-md w-5/12 px-3 py-3 md:px-6 md:py-6 bg-white dark:bg-darkmode-light border border-border dark:border-darkmode-border transition-all hover:scale-[1.02] hover:shadow-xl z-10 block">
 
-            <!-- Vertical Line: Always Centered -->
-            <div class="absolute border-opacity-20 border-gray-700 h-full border dark:border-gray-500 left-1/2 transform -translate-x-1/2"
-                style="border-style: solid; border-width: 0 0 0 2px;"></div>
-
-            {{ range $index, $item := site.Data.timeline.items }}
-            <!-- Timeline Item Row -->
-            <!-- Use gap-0 to rely on justify-between and explicit widths -->
-            <div
-                class="timeline-item opacity-0 translate-y-8 transition-all duration-700 ease-out mb-8 flex justify-between items-center w-full {{ if (modBool $index 2) }}flex-row-reverse{{ else }}flex-row{{ end }}">
-
-                <!-- Spacer (Left or Right) -->
-                <div class="order-1 w-5/12"></div>
-
-                <!-- Icon Circle: Absolute Center -->
-                <div
-                    class="z-20 flex items-center justify-center order-1 bg-primary dark:bg-darkmode-primary shadow-xl w-10 h-10 md:w-14 md:h-14 rounded-full absolute left-1/2 transform -translate-x-1/2 border-4 border-white dark:border-darkmode-body">
-                    <h1 class="mx-auto text-white dark:text-text-dark font-semibold text-sm md:text-lg">
-                        <i class="{{ .icon }}"></i>
-                    </h1>
-                </div>
-
-                <!-- Content Box -->
-                <!-- w-5/12 ensures there is 2/12 (16.6%) space in the middle for the icon -->
-                <div
-                    class="order-1 rounded-lg shadow-md w-5/12 px-3 py-3 md:px-6 md:py-6 bg-white dark:bg-darkmode-light border border-border dark:border-darkmode-border transition-all hover:scale-[1.02] hover:shadow-xl z-10 block">
-
-                    <!-- Header: Date and Title -->
-                    <div class="flex flex-col mb-1 md:mb-2">
-                        <span
-                            class="text-primary dark:text-darkmode-primary font-bold text-[10px] md:text-xs uppercase tracking-wider mb-1">{{
-                            .date }}</span>
-                        <h3 class="font-bold text-gray-800 dark:text-white text-xs md:text-xl leading-tight mb-0.5">{{
-                            .title }}</h3>
-                        <h4 class="font-semibold text-gray-500 dark:text-gray-400 text-[10px] md:text-sm">{{
-                            .organization }}</h4>
-                    </div>
-
-                    <!-- Description -->
-                    <p
-                        class="text-[10px] md:text-sm leading-normal text-gray-700 dark:text-gray-200 mb-2 md:mb-4 line-clamp-4 md:line-clamp-none">
-                        {{ .description }}
-                    </p>
-
-                    <!-- Tags -->
-                    <div class="flex flex-wrap gap-1 md:gap-2">
-                        {{ range .tags }}
-                        <span
-                            class="text-[9px] md:text-xs font-medium px-1.5 py-0.5 rounded bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 whitespace-nowrap">
-                            #{{ . }}
-                        </span>
-                        {{ end }}
-                    </div>
-                </div>
+            <!-- Header: Date and Title -->
+            <div class="flex flex-col mb-1 md:mb-2">
+                <span
+                    class="text-primary dark:text-darkmode-primary font-bold text-[10px] md:text-xs uppercase tracking-wider mb-1">{{
+                    .date }}</span>
+                <h3 class="font-bold text-gray-800 dark:text-white text-xs md:text-xl leading-tight mb-0.5">{{
+                    .title }}</h3>
+                <h4 class="font-semibold text-gray-500 dark:text-gray-400 text-[10px] md:text-sm">{{
+                    .organization }}</h4>
             </div>
-            {{ end }}
+
+            <!-- Description -->
+            <p
+                class="text-[10px] md:text-sm leading-normal text-gray-700 dark:text-gray-200 mb-2 md:mb-4 line-clamp-4 md:line-clamp-none">
+                {{ .description }}
+            </p>
+
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-1 md:gap-2">
+                {{ range .tags }}
+                <span
+                    class="text-[9px] md:text-xs font-medium px-1.5 py-0.5 rounded bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 whitespace-nowrap">
+                    #{{ . }}
+                </span>
+                {{ end }}
+            </div>
         </div>
     </div>
-</section>
+    {{ end }}
+</div>
 {{ end }}

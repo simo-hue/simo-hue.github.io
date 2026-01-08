@@ -103,3 +103,55 @@
 .social-links-container .btn-primary {
   @apply border-primary bg-primary dark:border-darkmode-primary dark:text-text-dark text-white dark:bg-darkmode-primary hover:bg-primary/90 dark:hover:bg-darkmode-primary/90 hover:-translate-y-0.5 hover:shadow-md;
 }
+
+/* Home Page WOW Effects */
+.glass-card {
+  @apply bg-white/70 dark:bg-darkmode-body/70 backdrop-blur-md border border-white/20 dark:border-white/10 shadow-xl;
+}
+
+.hero-image-style {
+  @apply mx-auto rounded-xl shadow-2xl transform rotate-x-12 hover:rotate-x-0 transition-transform duration-700 max-w-[90%] md:max-w-[800px] border-4 border-white/20 dark:border-white/5;
+}
+
+.text-gradient-animate {
+  background: linear-gradient(to right, #2563eb, #9333ea, #db2777, #2563eb);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: gradient 5s linear infinite;
+}
+
+.hover-lift {
+  @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.hero-blob {
+  position: absolute;
+  filter: blur(80px);
+  z-index: -1;
+  opacity: 0.6;
+  animation: blob-bounce 10s infinite ease-in-out;
+}
+
+@keyframes blob-bounce {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(20px, -20px) scale(1.1);
+  }
+}
