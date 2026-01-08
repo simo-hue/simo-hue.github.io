@@ -23,6 +23,20 @@
     - **Mountain Fauna Lover (2023)**: Photography/Nature project.
     - **Downhill World Cup Staff (2021)**: Volunteering at Val di Sole (Transponders & Safety).
 
+### [2026-01-08] Fix Mobile Timeline Layout
+- **Objective**: Enforce zigzag layout on mobile screens (instead of linear).
+- **Changes**:
+  - **CSS Layout**: Removed desktop-only logic for flex direction. Now uses `flex-row` / `flex-row-reverse` on all screens.
+  - **Sizing**: Set content and spacers to `w-[45%]` to fit side-by-side on mobile.
+  - **Centering**: Absolute positioning for icons and central line (`left-1/2 -translate-x-1/2`).
+
+### [2026-01-08] Timeline Layout Critical Fix
+- **Objective**: Resolve layout regression where content was overlapping and unreadable on both mobile and desktop.
+- **Changes**:
+  - **Grid System**: Enforced `w-5/12` width for both content and spacers on ALL screens. This preserves exactly 1/6th (16.6%) of width in the center for the axis/icon.
+  - **Typography**: Implemented responsive font sizing (`text-[10px]` on mobile, `text-sm` on desktop) to ensure text fits inside the zigzag boxes.
+  - **Z-Index**: Fixed layering to ensure text doesn't overlap icons.
+
 
 ### [2026-01-08] Enhance Carousel UX
 - **Objective**: Improve the "Some Insight" carousel usability by adding navigation arrows and autoplay.
