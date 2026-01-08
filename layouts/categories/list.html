@@ -1,33 +1,31 @@
 {{ define "main" }}
-  {{ partial "page-header" . }}
+{{ partial "page-header" . }}
 
-  <section class="section">
-    <div class="container">
-      <div class="row gx-5">
-        <!-- posts -->
-        <div class="lg:col-8">
-          <div class="row">
-            {{ $paginator:= .Paginate .RegularPages }}
-            {{ range $paginator.Pages }}
-              <div class="md:col-6 mb-14">
-                {{ partial "components/blog-card" . }}
-              </div>
-            {{ end }}
+<section class="section">
+  <div class="container">
+    <div class="row gx-5">
+      <!-- posts -->
+      <div class="lg:col-8">
+        <div class="row">
+          {{ $paginator:= .Paginate .RegularPages }}
+          {{ range $paginator.Pages }}
+          <div class="md:col-6 mb-14">
+            {{ partial "components/blog-card" . }}
           </div>
-          {{ partial "components/pagination.html" . }}
-        </div>
-        <!-- sidebar -->
-        <div class="lg:col-4">
-          <!-- widget -->
-          {{ if or (eq .Title "tech projects") (eq .Title "publications") }}
-            {{ partial "widgets/tech-categories" . }}
-            {{ partial "widgets/tech-tags" . }}
-          {{ else }}
-            {{ partial "widgets/blog-categories" . }}
-            {{ partial "widgets/blog-tags" . }}
           {{ end }}
         </div>
+        {{ partial "components/pagination.html" . }}
+      </div>
+      <!-- sidebar -->
+      <div class="lg:col-4">
+        <!-- widget -->
+        {{ if or (eq .Title "tech projects") (eq .Title "publications") }}
+        {{ partial "widgets/tech-categories" . }}
+        {{ else }}
+        {{ partial "widgets/blog-categories" . }}
+        {{ end }}
       </div>
     </div>
-  </section>
+  </div>
+</section>
 {{ end }}

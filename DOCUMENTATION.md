@@ -111,8 +111,17 @@
     - `assets/logo/white_logo.png`
   - **Verification**: Ran `npm run build` to ensure no broken references (Build successful).
 
-## Fix: About Page Template Error (Jan 08, 2026)
+### [2026-01-08] Fix: About Page Template Error
 - **Problem**: The server failed to start with `Error: template: about/list.html:28: unterminated quoted string`.
 - **Cause**: A string inside a Go template action `{{ ... }}` was split across two lines, which is not supported in this context.
 - **Solution**: Joined the split string in `layouts/about/list.html` (line 28) into a single line.
 - **Verification**: Ran `npm run dev` and confirmed the server starts successfully.
+
+### [2026-01-08] Eliminate Tags Section
+- **Objective**: Completely remove the "Tags" section from the visible website.
+- **Changes**:
+  - **Templates**:
+    - `layouts/categories/list.html`: Removed `widgets/tech-tags` and `widgets/blog-tags` partial references.
+    - `layouts/blog/single.html`: Removed the HTML block attempting to render tags at the bottom of posts.
+  - **Configuration**:
+    - `config/_default/params.toml`: Set `search.show_tags` to `false` to prevent tags from appearing in search results.
