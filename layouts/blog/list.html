@@ -1,29 +1,44 @@
 {{ define "main" }}
-  {{ partial "page-header" . }}
+<!-- Modern Blog Header -->
+<section class="section pt-14 pb-10">
+  <div class="container">
+    <div class="text-center">
+      <h1 class="text-5xl md:text-6xl font-bold mb-4 relative inline-block">
+        {{ .Title }}
+        <span
+          class="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></span>
+      </h1>
+      {{ if .Params.description }}
+      <p class="text-lg opacity-70 max-w-2xl mx-auto mt-6">
+        {{ .Params.description }}
+      </p>
+      {{ end }}
+    </div>
+  </div>
+</section>
 
-
-  <section class="section">
-    <div class="container">
-      <div class="row gx-5">
-        <!-- blog posts -->
-        <div class="lg:col-8">
-          <div class="row">
-            {{ $paginator:= .Paginate .RegularPages }}
-            {{ range $paginator.Pages }}
-              <div class="md:col-6 mb-14">
-                {{ partial "components/blog-card" . }}
-              </div>
-            {{ end }}
+<section class="section pt-0">
+  <div class="container">
+    <div class="row gx-5">
+      <!-- blog posts -->
+      <div class="lg:col-8">
+        <div class="row">
+          {{ $paginator:= .Paginate .RegularPages }}
+          {{ range $paginator.Pages }}
+          <div class="md:col-6 mb-8">
+            {{ partial "components/blog-card" . }}
           </div>
-          {{ partial "components/pagination.html" . }}
+          {{ end }}
         </div>
-        <!-- sidebar -->
-        <div class="lg:col-4">
-          <!-- widget -->
-          {{ partial "widgets/blog-categories" . }}
-          {{ partial "widgets/blog-tags" . }}
-        </div>
+        {{ partial "components/pagination.html" . }}
+      </div>
+      <!-- sidebar -->
+      <div class="lg:col-4">
+        <!-- widget -->
+        {{ $widget:= site.Params.widgets.sidebar }}
+        {{ partialCached "widgets/widget-wrapper" ( dict "Widgets" $widget "Scope" . ) }}
       </div>
     </div>
-  </section>
+  </div>
+</section>
 {{ end }}

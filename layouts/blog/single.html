@@ -1,90 +1,113 @@
 {{ define "main" }}
-  <section class="section pt-7">
-    <div class="container">
-      <div class="row justify-center">
-        <article class="lg:col-10">
-          {{ $image:= .Params.image }}
-          {{ if $image }}
-            <div class="mb-10">
-              {{ partial "image" (dict "Src" $image "Context" .Page "Alt" .Title "Class" "w-full rounded") }}
-            </div>
-          {{ end }}
-          <h1 class="h2 mb-4">
-            {{ .Title }}
-          </h1>
-          <ul class="mb-4">
-            <li class="mr-4 inline-block">
-              <a
-                href="{{ `authors/` | relLangURL }}{{ .Params.Author | urlize }}/">
-                <i class="fa-regular fa-circle-user mr-2"></i
-                >{{ .Params.author }}
-              </a>
-            </li>
-            {{ $categories:= .Params.categories }}
-            {{ if $categories }}
-              <li class="mr-4 inline-block">
-                <i class="fa-regular fa-folder mr-2"></i>
-                {{ range $i,$p:= $categories }}
-                  <a
-                    href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}/"
-                    class=""
-                    >{{ . | humanize }}{{ if ne $i (sub (len $categories) 1) }}
-                      {{ "," }}
-                    {{ end }}
-                  </a>
-                {{ end }}
-              </li>
-            {{ end }}
-            <li class="mr-4 inline-block">
-              <i class="fa-regular fa-clock mr-2"></i>
-              {{ time.Format ":date_long" .PublishDate }}
-            </li>
-          </ul>
-          <div class="content mb-10">
-            {{ partial "toc.html" (dict "Class" "blog" "Collapsed" false "TableOfContents" .TableOfContents ) }}
-            {{ .Content }}
-          </div>
-          <div class="row items-start justify-between">
-            {{ $tags:= .Params.tags }}
-            {{ if $tags }}
-              <div class="lg:col-6 mb-10 flex items-center lg:mb-0">
-                <h5 class="mr-3">{{ T "tags" }} :</h5>
-                <ul>
-                  {{ range $i,$p:= $tags }}
-                    <li class="inline-block">
-                      <a
-                        class="bg-light hover:bg-primary dark:bg-darkmode-light dark:hover:bg-darkmode-primary dark:hover:text-text-dark m-1 block rounded px-3 py-1 hover:text-white"
-                        href="{{ `tags/` | relLangURL }}{{ . | urlize | lower }}/">
-                        {{ . | humanize }}
-                      </a>
-                    </li>
-                  {{ end }}
-                </ul>
-              </div>
-            {{ end }}
-            <div class="lg:col-6 flex items-center lg:justify-end">
-              <h5>{{ T "share" }} :</h5>
-              {{ partial "social-share" (dict "Context" . "Class" "share-icons" "Title" .Title "Whatsapp" false "Telegram" false "Linkedin" false "Pinterest" false "Tumblr" false "Vk" false "Reddit" false) }}
-            </div>
-          </div>
-        </article>
-      </div>
+<!-- Modern Post Header -->
+<section
+  class="relative overflow-hidden pt-20 pb-12 bg-gradient-to-b from-primary/5 via-transparent to-transparent dark:from-darkmode-primary/5">
+  <!-- Decorative elements -->
+  <div class="hero-blob bg-blue-400/20 w-96 h-96 rounded-full top-0 left-0 mix-blend-multiply dark:mix-blend-overlay">
+  </div>
+  <div
+    class="hero-blob bg-purple-400/20 w-96 h-96 rounded-full bottom-0 right-0 mix-blend-multiply dark:mix-blend-overlay animation-delay-2000">
+  </div>
 
-      <!-- Related posts -->
-      {{ $related := .Site.RegularPages.Related . | first 10 }}
-      {{ $related = $related | shuffle | first 3 }}
-      {{ with $related }}
-        <div class="section pb-0">
-          <h2 class="h3 mb-12">{{ T "related_posts" }}</h2>
-          <div class="row">
-            {{ range . }}
-              <div class="lg:col-4 md:col-6 mb-14">
-                {{ partial "components/blog-card" . }}
+  <div class="container relative z-10">
+    <div class="max-w-4xl mx-auto text-center">
+      <!-- Categories -->
+      {{ if .Params.categories }}
+      <div class="flex flex-wrap gap-2 justify-center mb-6">
+        {{ range .Params.categories }}
+        <span class="category-badge">
+          {{ . }}
+        </span>
+        {{ end }}
+      </div>
+      {{ end }}
+
+      <!-- Title -->
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
+        {{ .Title }}
+      </h1>
+
+      <!-- Description -->
+      {{ if .Params.description }}
+      <p class="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
+        {{ .Params.description }}
+      </p>
+      {{ end }}
+
+      <!-- Meta Info -->
+      <div class="flex flex-wrap items-center justify-center gap-6 text-sm opacity-70">
+        <div class="flex items-center gap-2">
+          <i class="far fa-calendar"></i>
+          <time datetime="{{ .PublishDate }}">
+            {{ .PublishDate.Format "January 02, 2006" }}
+          </time>
+        </div>
+
+        {{ if .Params.author }}
+        <div class="flex items-center gap-2">
+          <i class="far fa-user"></i>
+          <span>{{ .Params.author }}</span>
+        </div>
+        {{ end }}
+
+        <div class="flex items-center gap-2">
+          <i class="far fa-clock"></i>
+          <span>{{ math.Round (div (countwords .Content) 200.0) }} min read</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Post Image -->
+{{ if .Params.image }}
+<section class="section pt-0">
+  <div class="container">
+    <div class="max-w-5xl mx-auto">
+      <div class="rounded-2xl overflow-hidden shadow-2xl">
+        {{ partial "image" (dict "Src" .Params.image "Alt" .Title "Class" "w-full" "Loading" "eager") }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- Post Content -->
+<section class="section">
+  <div class="container">
+    <div class="row justify-center">
+      <div class="lg:col-10">
+        <div class="row gx-5">
+          <!-- Content -->
+          <div class="lg:col-8">
+            <article class="prose prose-lg dark:prose-invert max-w-none">
+              {{ .Content }}
+            </article>
+
+            <!-- Tags -->
+            {{ if .Params.tags }}
+            <div class="mt-12 pt-8 border-t border-border dark:border-darkmode-border">
+              <div class="flex flex-wrap gap-2">
+                <span class="font-semibold text-sm">Tags:</span>
+                {{ range .Params.tags }}
+                <a href="{{ `tags/` | relLangURL }}{{ . | urlize | lower }}/"
+                  class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-darkmode-light hover:bg-primary hover:text-white dark:hover:bg-darkmode-primary transition-colors">
+                  {{ . }}
+                </a>
+                {{ end }}
               </div>
+            </div>
             {{ end }}
+          </div>
+
+          <!-- Sidebar -->
+          <div class="lg:col-4">
+            {{ $widget:= site.Params.widgets.sidebar }}
+            {{ partialCached "widgets/widget-wrapper" ( dict "Widgets" $widget "Scope" . ) }}
           </div>
         </div>
-      {{ end }}
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 {{ end }}

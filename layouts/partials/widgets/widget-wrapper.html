@@ -1,0 +1,7 @@
+{{ $Widgets := .Widgets }}
+{{ $Scope := .Scope }}
+{{ range $Widgets }}
+<div class="sidebar-widget">
+    {{ partial (printf "widgets/%s" .) $Scope }}
+</div>
+{{ end }}

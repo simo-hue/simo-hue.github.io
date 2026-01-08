@@ -483,3 +483,181 @@
     gap: 0.75rem;
   }
 }
+/* Blog Cards Styling */
+.blog-card {
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dark .blog-card {
+  background: rgba(31, 41, 55, 0.95);
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+.blog-card-image {
+  position: relative;
+}
+
+.blog-card-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.blog-card:hover .blog-card-image::after {
+  opacity: 1;
+}
+
+/* Category Badges */
+.category-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-transform: capitalize;
+  transition: transform 0.2s ease;
+}
+
+.category-badge:hover {
+  transform: translateY(-2px);
+}
+
+/* Sidebar Widgets Styling */
+.sidebar-widget {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.dark .sidebar-widget {
+  background: rgba(31, 41, 55, 0.95);
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-widget:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.1);
+}
+
+.sidebar-widget h3 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.sidebar-widget ul li {
+  margin-bottom: 0.75rem;
+}
+
+.sidebar-widget a {
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sidebar-widget a:hover {
+  color: var(--primary);
+  transform: translateX(4px);
+}
+
+/* Pagination Styling */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 3rem;
+}
+
+.pagination a,
+.pagination span {
+  min-width: 2.5rem;
+  height: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dark .pagination a,
+.dark .pagination span {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.pagination a {
+  background: white;
+}
+
+.dark .pagination a {
+  background: rgba(31, 41, 55, 0.95);
+}
+
+.pagination a:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+  border-color: transparent;
+}
+
+.pagination .active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: transparent;
+}
+
+/* Category-specific colors */
+.category-badge.category-experiences {
+  background: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
+}
+
+.category-badge.category-projects {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.category-badge.category-books {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.category-badge.category-tech-project {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+}
+
+.category-badge.category-passions {
+  background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+}
+
+.category-badge.category-thought {
+  background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+}
+
+.category-badge.category-publication {
+  background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%);
+}
+
+/* Default fallback for any other categories */
+.category-badge:not([class*="category-"]) {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Blog card image hover effect */
+.blog-card:hover .blog-card-image img {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
