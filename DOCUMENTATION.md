@@ -38,3 +38,19 @@
   - Added new `.link-icon.icon-coursera` class in `assets/css/custom.css` (Coursera Blue).
   - Added new link card in `content/english/links.md` under "Certificates" section.
   - **Required Action**: User must upload `Coursera_ML.pdf` to `static/docs/`.
+
+### [2026-01-08] Repository Cleanup
+- **Objective**: Remove unused files and backup directories to reduce repository size and improve organization.
+- **Changes**:
+  - **Deleted Directory**: `backup-images-20251015-195634/` (contained ~90 unused files).
+  - **Deleted Unused Images**:
+    - `assets/images/banner_prova.png`
+    - `assets/images/banner_old.png`
+    - `assets/images/service-2.png`
+    - `assets/images/service-3.png`
+    - `assets/images/banner_black.jpg`
+    - `assets/images/banner.jpg`
+    - `assets/images/banner intero.png`
+    - `assets/logo/black_logo.png`
+    - `assets/logo/white_logo.png`
+  - **Verification**: Ran `npm run build` to ensure no broken references (Build successful).
