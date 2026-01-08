@@ -7,7 +7,7 @@ subtitle: Connect with me across all platforms
 title: Links
 ---
 
-<!-- hash: 14777db95d3b -->
+<!-- hash: 268ef37582f1 -->
 <div class="social-links-container">
 
 ## Professional Network
@@ -124,6 +124,7 @@ title: Links
   </div>
 </div>
 
+
 ## Documents
 
 <div class="link-card">
@@ -147,8 +148,10 @@ title: Links
   </div>
 </div>
 
+## Education
+
 <div class="link-card">
-  <div class="link-icon diploma">
+  <div class="link-icon icon-diploma">
     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" />
       <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" />
@@ -167,28 +170,7 @@ title: Links
 </div>
 
 <div class="link-card">
-  <div class="link-icon document">
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M14 3v4a1 1 0 0 0 1 1h4" />
-      <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
-      <circle cx="10" cy="11" r="2" />
-      <path d="M10 15c-2.5 0 -4 1.5 -4 3" />
-      <path d="M15 11h2" />
-      <path d="M15 14h2" />
-      <path d="M15 17h2" />
-    </svg>
-  </div>
-  <div class="link-content">
-    <h3>English Certification</h3>
-    <p>View my ELC English Level Certification Earned In Brighton.</p>
-    <a href="/docs/English.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-      View Certification
-    </a>
-  </div>
-</div>
-
-<div class="link-card">
-  <div class="link-icon diploma">
+  <div class="link-icon icon-bachelor">
     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" />
       <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" />
@@ -198,8 +180,28 @@ title: Links
     </svg>
   </div>
   <div class="link-content">
-    <h3>Itroduction To Fortran For Scientific Computing</h3>
-    <p>Issued By CINENCA.</p>
+    <h3>Bachelor Degree In Computer Science - University Of Verona</h3>
+    <p>View my Bachelor Degree in Computer Science received from University of Verona.</p>
+    <a href="/docs/Bachelor.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+      View Bachelor Degree
+    </a>
+  </div>
+</div>
+
+## Certificates
+
+<div class="link-card">
+  <div class="link-icon icon-fortran">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+      <line x1="10" y1="9" x2="14" y2="9" />
+      <line x1="10" y1="13" x2="14" y2="13" />
+      <line x1="10" y1="17" x2="14" y2="17" />
+    </svg>
+  </div>
+  <div class="link-content">
+    <h3>Introduction To Fortran For Scientific Computing</h3>
+    <p>Issued By CINECA.</p>
     <a href="/docs/Certificate_fortran.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
       View Certification
     </a>
@@ -207,40 +209,29 @@ title: Links
 </div>
 
 <div class="link-card">
-  <div class="link-icon document">
+  <div class="link-icon icon-python">
     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M14 3v4a1 1 0 0 0 1 1h4" />
-      <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
-      <circle cx="10" cy="11" r="2" />
-      <path d="M10 15c-2.5 0 -4 1.5 -4 3" />
-      <path d="M15 11h2" />
-      <path d="M15 14h2" />
-      <path d="M15 17h2" />
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
     </svg>
   </div>
   <div class="link-content">
-    <h3>Itroduction To Python Programming</h3>
-    <p>Issued By CINENCA.</p>
+    <h3>Introduction To Python Programming</h3>
+    <p>Issued By CINECA.</p>
     <a href="/docs/python.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
       View Certification
     </a>
   </div>
 </div>
-</div>
 
 <div class="link-card">
-  <div class="link-icon diploma">
+  <div class="link-icon icon-bioinformatics">
     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" />
-      <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" />
-      <circle cx="12" cy="17" r="1.5" />
-      <path d="M12 18.5v2.5" />
-      <path d="M10 21h4" />
+      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
     </svg>
   </div>
   <div class="link-content">
     <h3>High Performance Bioinformatics</h3>
-    <p>Issued By CINENCA.</p>
+    <p>Issued By CINECA.</p>
     <a href="/docs/certificato_bioinf.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
       View Certification
     </a>
@@ -248,15 +239,10 @@ title: Links
 </div>
 
 <div class="link-card">
-  <div class="link-icon document">
+  <div class="link-icon icon-college">
     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M14 3v4a1 1 0 0 0 1 1h4" />
-      <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
-      <circle cx="10" cy="11" r="2" />
-      <path d="M10 15c-2.5 0 -4 1.5 -4 3" />
-      <path d="M15 11h2" />
-      <path d="M15 14h2" />
-      <path d="M15 17h2" />
+      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
     </svg>
   </div>
   <div class="link-content">
@@ -267,7 +253,25 @@ title: Links
     </a>
   </div>
 </div>
+
+## Language Certificates
+
+<div class="link-card">
+  <div class="link-icon icon-english">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10" />
+      <path d="M2 12h20" />
+      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+    </svg>
+  </div>
+  <div class="link-content">
+    <h3>English Certification</h3>
+    <p>View my ELC English Level Certification Earned In Brighton.</p>
+    <a href="/docs/English.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+      View Certification
+    </a>
+  </div>
 </div>
----
+</div>
 
 *I believe in authentic connections and meaningful conversations. Whether you're interested in photography, technology, personal growth, or just want to chat, I'd love to hear from you!*
