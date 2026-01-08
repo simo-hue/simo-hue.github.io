@@ -169,7 +169,7 @@
 .rotating-word-2 {
   position: absolute;
   opacity: 0;
-  top: 0.45em;
+  top: 0em;
   left: 0;
   white-space: nowrap;
   animation-duration: 8s;
@@ -337,6 +337,7 @@
     transform: translateY(-20px);
   }
 }
+
 /* Some Insights Section Styles */
 .insight-card {
   background: white;
@@ -398,4 +399,87 @@
 
 .insight-icon.icon-university {
   background: linear-gradient(to bottom right, #6366f1, #a855f7);
+}
+
+/* Footer Social Icons with Brand Colors */
+.social-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.social-icon-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.social-icon-link i {
+  font-size: 1.25rem;
+}
+
+/* Instagram - Gradient */
+.social-icon-link[aria-label="instagram"] {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+/* YouTube - Red */
+.social-icon-link[aria-label="youtube"] {
+  background: #FF0000;
+}
+
+/* GitHub - Black/White */
+.social-icon-link[aria-label="github"] {
+  background: #181717;
+}
+
+.dark .social-icon-link[aria-label="github"] {
+  background: #ffffff;
+  color: #181717;
+}
+
+/* LinkedIn - Blue */
+.social-icon-link[aria-label="linkedin"] {
+  background: #0A66C2;
+}
+
+/* Email - Gray */
+.social-icon-link[aria-label="email"] {
+  background: #EA4335;
+}
+
+/* Responsive footer adjustments */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.social-icons li {
+  margin: 0;
+}
+
+/* Ensure consistent spacing on all screen sizes */
+@media (max-width: 1024px) {
+  .social-icons {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .social-icons {
+    gap: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-icons {
+    gap: 0.75rem;
+  }
 }

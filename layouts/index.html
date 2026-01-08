@@ -18,23 +18,32 @@
       </h1>
 
       <!-- Rotating Keywords Line -->
-      <div class="text-xl md:text-2xl text-text dark:text-darkmode-text mb-10 max-w-3xl mx-auto">
-        <span class="opacity-80">From </span>
-        <span class="rotating-words-container inline-block relative">
-          <span class="rotating-word active font-semibold text-primary dark:text-darkmode-primary">Brazil's
-            favelas</span>
-          <span class="rotating-word font-semibold text-primary dark:text-darkmode-primary">the mountains</span>
-          <span class="rotating-word font-semibold text-primary dark:text-darkmode-primary">lines of code</span>
-          <span class="rotating-word font-semibold text-primary dark:text-darkmode-primary">kindness</span>
-        </span>
-        <span class="opacity-80"> to </span>
-        <span class="rotating-words-container-2 inline-block relative">
-          <span class="rotating-word-2 active font-semibold text-primary dark:text-darkmode-primary">meaningful
-            impact</span>
-          <span class="rotating-word-2 font-semibold text-primary dark:text-darkmode-primary">human connection</span>
-          <span class="rotating-word-2 font-semibold text-primary dark:text-darkmode-primary">personal growth</span>
-          <span class="rotating-word-2 font-semibold text-primary dark:text-darkmode-primary">digital innovation</span>
-        </span>
+      <div
+        class="text-xl md:text-2xl text-text dark:text-darkmode-text mb-10 max-w-3xl mx-auto flex flex-col md:flex-row md:flex-wrap md:justify-center gap-2 md:gap-0">
+        <!-- First line on mobile: FROM + word -->
+        <div class="flex items-center justify-center gap-2">
+          <span class="opacity-80">From </span>
+          <span class="rotating-words-container inline-block relative">
+            <span class="rotating-word active font-semibold text-primary dark:text-darkmode-primary">Brazil's
+              favelas</span>
+            <span class="rotating-word font-semibold text-primary dark:text-darkmode-primary">the mountains</span>
+            <span class="rotating-word font-semibold text-primary dark:text-darkmode-primary">lines of code</span>
+            <span class="rotating-word font-semibold text-primary dark:text-darkmode-primary">kindness</span>
+          </span>
+        </div>
+
+        <!-- Second line on mobile: TO + word -->
+        <div class="flex items-center justify-center gap-2">
+          <span class="opacity-80">to </span>
+          <span class="rotating-words-container-2 inline-block relative">
+            <span class="rotating-word-2 active font-semibold text-primary dark:text-darkmode-primary">meaningful
+              impact</span>
+            <span class="rotating-word-2 font-semibold text-primary dark:text-darkmode-primary">human connection</span>
+            <span class="rotating-word-2 font-semibold text-primary dark:text-darkmode-primary">personal growth</span>
+            <span class="rotating-word-2 font-semibold text-primary dark:text-darkmode-primary">digital
+              innovation</span>
+          </span>
+        </div>
       </div>
 
       {{ with .button }}
