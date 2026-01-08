@@ -1,0 +1,72 @@
+enable: true
+profile:
+  image: "/images/simo.png"
+  name: "Simone Mattioli"
+  headline: "Don’t Be Lazy … Explore the beauty of the World"
+
+life:
+  title: "My Life"
+  icon: "fa-solid fa-brain"
+  content: "Is driven by a great curiosity for technology, vehicles, and sports, combined with a desire to explore the world and continually learn."
+  color: "bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-300"
+
+vision:
+  title: "My Vision"
+  icon: "fa-solid fa-eye"
+  content: "I believe in continuous learning. Mixing technical skills with Psychology, Marketing, and soft skills to become a complete innovator."
+  color: "bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-300"
+
+goal:
+  title: "The Goal"
+  icon: "fa-solid fa-bullseye"
+  content: "Not just to be an employee, but to create value, help people, and explore the world freely."
+  color: "bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-300"
+
+stats:
+  - value: "20+"
+    label: "Projects"
+  - value: "1"
+    label: "Start Up Fail"
+  - value: "∞"
+    label: "Curiosity"
+
+education:
+  - title: "Bachelor's Degree in Computer Science"
+    place: "University of Verona"
+    icon: "fa-solid fa-graduation-cap"
+    active: true
+  - title: "Technical Diploma (Computer Science)"
+    place: "ITT Marconi Rovereto"
+    icon: "fa-solid fa-school"
+
+passions:
+  - name: "Travel & Volunteering"
+    icon: "fa-solid fa-plane-departure"
+  - name: "Content Creation"
+    icon: "fa-solid fa-video"
+  - name: "Cars & Bikes"
+    icon: "fa-solid fa-motorcycle"
+  - name: "Tech & AI"
+    icon: "fa-solid fa-microchip"
+  - name: "Mountain Nature"
+    icon: "fa-solid fa-mountain"
+  - name: "Outdoor Sports"
+    icon: "fa-solid fa-person-hiking"
+
+socials:
+  - name: "GitHub"
+    icon: "fa-brands fa-github"
+    link: "https://github.com/simo-hue"
+    color: "hover:text-gray-900 dark:hover:text-white"
+  - name: "LinkedIn"
+    icon: "fa-brands fa-linkedin"
+    link: "https://www.linkedin.com/in/simonemattioli2003/"
+    color: "hover:text-[#0077b5]"
+  - name: "YouTube"
+    icon: "fa-brands fa-youtube"
+    link: "https://youtube.com/@simosdiary2003"
+    color: "hover:text-[#ff0000]"
+  - name: "Instagram"
+    icon: "fa-brands fa-instagram"
+    link: "https://www.instagram.com/simo___one/"
+    color: "hover:text-[#e4405f]"

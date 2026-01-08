@@ -42,8 +42,18 @@
 - **Changes**:
   - **JS**: Added `IntersectionObserver` in `assets/js/main.js` to detect when timeline items enter the viewport.
   - **CSS**: Added utility classes (`opacity-0`, `translate-y-8`, `transition-all`, `duration-700`) to `layouts/partials/components/timeline.html`.
+  - **JS**: Added `IntersectionObserver` in `assets/js/main.js` to detect when timeline items enter the viewport.
+  - **CSS**: Added utility classes (`opacity-0`, `translate-y-8`, `transition-all`, `duration-700`) to `layouts/partials/components/timeline.html`.
   - **Behavior**: Items start hidden and slightly lower; when scrolled to, they smoothly fade in and float up.
 
+### [2026-01-08] About Page - Bento Grid Redesign
+- **Objective**: Transform the About page from text-heavy to a visual, modular layout.
+- **Changes**:
+  - **New Layout**: Created `layouts/about/list.html` implementing a responsive Grid layout (CSS Grid).
+  - **Structured Data**: Migrated content to `data/about.yml` (Vision, Goal, Stats, Passions).
+  - **Visuals**: Added stats, icons, and a large profile card with overlay bio.
+  - **Refinement**: Consolidated content from previous About page (Bio details, Education history, Quote). Modified layout to handle nested quotes correctly in `aria-label`.
+  - **Debugging**: Investigated CORS errors referencing port 53314. Confirmed no hardcoded references in code. Identified cause as stale Service Worker from VS Code Live Server.
 
 ### [2026-01-08] Enhance Carousel UX
 - **Objective**: Improve the "Some Insight" carousel usability by adding navigation arrows and autoplay.
@@ -97,3 +107,9 @@
     - `assets/logo/black_logo.png`
     - `assets/logo/white_logo.png`
   - **Verification**: Ran `npm run build` to ensure no broken references (Build successful).
+
+## Fix: About Page Template Error (Jan 08, 2026)
+- **Problem**: The server failed to start with `Error: template: about/list.html:28: unterminated quoted string`.
+- **Cause**: A string inside a Go template action `{{ ... }}` was split across two lines, which is not supported in this context.
+- **Solution**: Joined the split string in `layouts/about/list.html` (line 28) into a single line.
+- **Verification**: Ran `npm run dev` and confirmed the server starts successfully.

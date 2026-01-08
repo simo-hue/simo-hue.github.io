@@ -1,0 +1,191 @@
+{{ define "main" }}
+<section class="section pt-14 pb-16">
+    <div class="container">
+        {{- /* Header Section */ -}}
+        <div class="text-center mb-16">
+            <h1 class="text-h2 mb-4">{{ .Site.Data.about.profile.name }}</h1>
+            <p class="text-lg text-text dark:text-darkmode-text">{{ .Site.Data.about.profile.headline }}</p>
+        </div>
+
+        {{- /* Main Grid */ -}}
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 auto-rows-[minmax(180px,auto)]">
+
+            {{- /* Profile Image Card */ -}}
+            <div
+                class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-3xl shadow-lg h-full min-h-[400px]">
+                {{ partial "image" (dict "Src" .Site.Data.about.profile.image "Alt" .Site.Data.about.profile.name
+                "Class" "w-full h-full object-cover transition-transform duration-700 group-hover:scale-105") }}
+
+                <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-8">
+                    {{- /* Quote */ -}}
+                    {{- if .Site.Data.about.profile.quote -}}
+                    <p class="text-white/90 italic font-light text-sm mb-4 block">
+                        {{ .Site.Data.about.profile.quote }}
+                    </p>
+                    {{- end -}}
+
+                    <p class="text-white text-lg font-medium leading-relaxed drop-shadow-md">
+                        {{ .Site.Data.about.profile.bio }}
+                    </p>
+
+                    {{- /* Social Links */ -}}
+                    {{- if .Site.Data.about.socials -}}
+                    <div class="flex gap-4 mt-6">
+                        {{- range .Site.Data.about.socials -}}
+                        <a href="{{ .link }}" target="_blank" rel="noopener noreferrer"
+                            aria-label='{{ .name | default "Social link" }}'
+                            class="text-white/80 hover:text-white text-2xl transition-colors {{ .color }}">
+                            <i class="{{ .icon }}" aria-hidden="true"></i>
+                        </a>
+                        {{- end -}}
+                    </div>
+                    {{- end -}}
+                </div>
+            </div>
+
+            {{- /* Education Card (New) */ -}}
+            {{- if .Site.Data.about.education -}}
+            <div
+                class="rounded-3xl bg-white dark:bg-darkmode-light shadow-lg p-6 border border-border dark:border-darkmode-border flex flex-col justify-center">
+                <h3 class="font-bold text-lg mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-user-graduate text-primary dark:text-darkmode-primary" aria-hidden="true"></i>
+                    Education
+                </h3>
+                <div class="space-y-4">
+                    {{- range .Site.Data.about.education -}}
+                    <div class="relative pl-4 border-l-2 border-primary/20 dark:border-darkmode-primary/20">
+                        <h4 class="font-bold text-sm leading-tight">{{ .title }}</h4>
+                        <p class="text-xs opacity-70 mt-1">{{ .place }}</p>
+                    </div>
+                    {{- end -}}
+                </div>
+            </div>
+            {{- end -}}
+
+            {{- /* Vision Card */ -}}
+            {{- with .Site.Data.about.vision -}}
+            <div
+                class="rounded-3xl p-8 {{ .color }} shadow-lg flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
+                <div class="text-4xl mb-4 opacity-80" aria-hidden="true">
+                    <i class="{{ .icon }}"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-xl mb-2">{{ .title }}</h3>
+                    <p class="text-sm opacity-90 leading-relaxed">{{ .content }}</p>
+                </div>
+            </div>
+            {{- end -}}
+
+            {{- /* Life Card */ -}}
+            {{- with .Site.Data.about.life -}}
+            <div
+                class="rounded-3xl p-8 {{ .color }} shadow-lg flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
+                <div class="text-4xl mb-4 opacity-80" aria-hidden="true">
+                    <i class="{{ .icon }}"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-xl mb-2">{{ .title }}</h3>
+                    <p class="text-sm opacity-90 leading-relaxed">{{ .content }}</p>
+                </div>
+            </div>
+            {{- end -}}
+
+            {{- /* Goal Card */ -}}
+            {{- with .Site.Data.about.goal -}}
+            <div
+                class="rounded-3xl p-8 {{ .color }} shadow-lg flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
+                <div class="text-4xl mb-4 opacity-80" aria-hidden="true">
+                    <i class="{{ .icon }}"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-xl mb-2">{{ .title }}</h3>
+                    <p class="text-sm opacity-90 leading-relaxed">{{ .content }}</p>
+                </div>
+            </div>
+            {{- end -}}
+
+            {{- /* Stats Grid */ -}}
+            {{- if .Site.Data.about.stats -}}
+            <div class="md:col-span-3 lg:col-span-2 grid grid-cols-3 gap-4">
+                {{- range .Site.Data.about.stats -}}
+                <div
+                    class="bg-white dark:bg-darkmode-light rounded-2xl shadow-md p-6 flex flex-col items-center justify-center text-center border border-border dark:border-darkmode-border">
+                    <span class="text-3xl font-bold text-primary dark:text-darkmode-primary mb-1">{{ .value }}</span>
+                    <span class="text-xs uppercase tracking-wider text-gray-500">{{ .label }}</span>
+                </div>
+                {{- end -}}
+            </div>
+            {{- end -}}
+
+            {{- /* Passions & Interests */ -}}
+            {{- if .Site.Data.about.passions -}}
+            <div
+                class="md:col-span-3 lg:col-span-2 bg-white dark:bg-darkmode-light rounded-3xl shadow-lg p-8 border border-border dark:border-darkmode-border">
+                <h3 class="font-bold text-xl mb-6 flex items-center gap-2">
+                    <i class="fa-solid fa-heart text-red-500" aria-hidden="true"></i>
+                    <span>Passions & Interests</span>
+                </h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    {{- range .Site.Data.about.passions -}}
+                    <div
+                        class="flex items-center gap-3 p-3 rounded-xl bg-gray-50 dark:bg-darkmode-body hover:bg-primary/5 dark:hover:bg-darkmode-primary/10 transition-colors">
+                        <i class="{{ .icon }} text-primary dark:text-darkmode-primary" aria-hidden="true"></i>
+                        <span class="font-medium text-sm">{{ .name }}</span>
+                    </div>
+                    {{- end -}}
+                </div>
+            </div>
+            {{- end -}}
+
+        </div>
+
+        {{- /* Call-to-Action Cards */ -}}
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <a href="{{ " categories/books/" | relURL }}"
+                class="group block p-8 rounded-3xl bg-orange-50 dark:bg-orange-900/10 hover:bg-orange-100 transition-colors border border-orange-100 dark:border-orange-800/30">
+                <h3
+                    class="text-xl font-bold text-orange-700 dark:text-orange-400 mb-2 group-hover:translate-x-1 transition-transform">
+                    📚 Books that inspired me
+                    <i class="fa-solid fa-arrow-right text-sm ml-2 opacity-0 group-hover:opacity-100 transition-opacity"
+                        aria-hidden="true"></i>
+                </h3>
+                <p class="text-sm opacity-70">Check out my reading list and what I learned.</p>
+            </a>
+
+            <a href="{{ " categories/thoughts/" | relURL }}"
+                class="group block p-8 rounded-3xl bg-purple-50 dark:bg-purple-900/10 hover:bg-purple-100 transition-colors border border-purple-100 dark:border-purple-800/30">
+                <h3
+                    class="text-xl font-bold text-purple-700 dark:text-purple-400 mb-2 group-hover:translate-x-1 transition-transform">
+                    💭 Thoughts
+                    <i class="fa-solid fa-arrow-right text-sm ml-2 opacity-0 group-hover:opacity-100 transition-opacity"
+                        aria-hidden="true"></i>
+                </h3>
+                <p class="text-sm opacity-70">Personal and professional reflections.</p>
+            </a>
+
+            <a href="{{ " categories/experiences/" | relURL }}"
+                class="group block p-8 rounded-3xl bg-green-50 dark:bg-green-900/10 hover:bg-green-100 transition-colors border border-green-100 dark:border-green-800/30">
+                <h3
+                    class="text-xl font-bold text-green-700 dark:text-green-400 mb-2 group-hover:translate-x-1 transition-transform">
+                    🌍 Experiences
+                    <i class="fa-solid fa-arrow-right text-sm ml-2 opacity-0 group-hover:opacity-100 transition-opacity"
+                        aria-hidden="true"></i>
+                </h3>
+                <p class="text-sm opacity-70">Educational and life experiences.</p>
+            </a>
+
+            <a href="{{ " categories/tech-projects/" | relURL }}"
+                class="group block p-8 rounded-3xl bg-indigo-50 dark:bg-indigo-900/10 hover:bg-indigo-100 transition-colors border border-indigo-100 dark:border-indigo-800/30">
+                <h3
+                    class="text-xl font-bold text-indigo-700 dark:text-indigo-400 mb-2 group-hover:translate-x-1 transition-transform">
+                    💻 Tech Projects
+                    <i class="fa-solid fa-arrow-right text-sm ml-2 opacity-0 group-hover:opacity-100 transition-opacity"
+                        aria-hidden="true"></i>
+                </h3>
+                <p class="text-sm opacity-70">Deep dive into my coding experiments.</p>
+            </a>
+        </div>
+
+    </div>
+</section>
+{{ end }}

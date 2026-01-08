@@ -5,3 +5,4 @@
 - [x] **Select & Save**: Choose the best result, save it as `service-1.png` (or a new name like `journey-life.png`).
 - [x] **Upload**: Place the image in `assets/images/` or `static/images/` (replacing the old one or adding the new one).
 - [x] **Update Content**: If you changed the filename, update `content/english/_index.md` to point to the new image file.
+- [ ] Verify the About page works correctly by running `npm run dev` and visiting the local server.
