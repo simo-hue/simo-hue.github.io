@@ -663,268 +663,324 @@
   transition: transform 0.3s ease;
 }
 
-/* Spotlight-Style Search Modal */
+/* Modern Search Modal Styling */
+[data-target="search-modal"] {
+  position: relative;
+  transition: all 0.3s ease;
+}
 
-/* Transparent backdrop blur */
+[data-target="search-modal"]:hover {
+  color: var(--color-primary) !important;
+  transform: scale(1.1);
+}
+
 .search-modal {
-  backdrop-filter: blur(16px) !important;
-  background: rgba(0, 0, 0, 0.4) !important;
+  backdrop-filter: blur(20px) !important;
+  background: rgba(0, 0, 0, 0.7) !important;
 }
 
 .dark .search-modal {
-  background: rgba(0, 0, 0, 0.6) !important;
+  background: rgba(0, 0, 0, 0.85) !important;
 }
 
-/* Spotlight-like container */
 .search-modal>div {
-  background: rgba(255, 255, 255, 0.88) !important;
-  backdrop-filter: blur(40px) saturate(180%) !important;
-  border-radius: 1rem !important;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25), 0 0 0 0.5px rgba(255, 255, 255, 0.4) inset !important;
-  border: 0.5px solid rgba(0, 0, 0, 0.08) !important;
-  overflow: hidden !important;
-  max-width: 44rem !important;
+  background: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(10px);
+  border-radius: 1.5rem !important;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25) !important;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  max-width: 42rem !important;
+  margin: 2rem auto !important;
+  overflow: hidden;
 }
 
 .dark .search-modal>div {
-  background: rgba(45, 55, 72, 0.92) !important;
-  border-color: rgba(255, 255, 255, 0.12) !important;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 0 0.5px rgba(255, 255, 255, 0.1) inset !important;
+  background: rgba(31, 41, 55, 0.98) !important;
+  border-color: rgba(255, 255, 255, 0.05);
 }
 
-/* Search input - Spotlight style */
-.search-modal input[type="search"] {
-  font-size: 1.25rem !important;
-  padding: 1rem 1.5rem !important;
+.search-modal input[type="search"],
+#search-modal-input {
   background: transparent !important;
   border: none !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
-  border-radius: 0 !important;
-  font-weight: 400 !important;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1) !important;
+  padding: 1.25rem 1.5rem !important;
+  font-size: 1.25rem !important;
+  transition: all 0.3s ease;
 }
 
-.search-modal input[type="search"]:focus {
-  outline: none !important;
-  border-bottom-color: rgba(102, 126, 234, 0.3) !important;
-  box-shadow: none !important;
+.search-modal input[type="search"]:focus,
+#search-modal-input:focus {
+  border-bottom-color: #667eea !important;
+  outline: none;
+  background: linear-gradient(to right, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05)) !important;
 }
 
-.dark .search-modal input[type="search"] {
+.dark .search-modal input[type="search"],
+.dark #search-modal-input {
   border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.search-modal .search-result,
+.search-modal li {
+  background: white !important;
+  border-radius: 0.75rem !important;
+  padding: 1rem !important;
+  margin: 0.5rem !important;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dark .search-modal .search-result,
+.dark .search-modal li {
+  background: rgba(55, 65, 81, 0.5) !important;
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+.search-modal .search-result:hover,
+.search-modal li:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.1) !important;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%) !important;
+}
+
+.search-modal button[aria-label="close"],
+.search-modal .close,
+.search-modal [class*="close"] {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
   color: white !important;
+  border-radius: 50% !important;
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.3s ease;
 }
 
-/* Results section header */
-.search-modal h3,
-.search-modal h4,
-.search-modal h5 {
-  font-size: 0.75rem !important;
-  text-transform: uppercase !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.05em !important;
-  padding: 1rem 1.25rem 0.5rem !important;
-  margin: 0 !important;
-  opacity: 0.6 !important;
+.search-modal button[aria-label="close"]:hover,
+.search-modal .close:hover,
+.search-modal [class*="close"]:hover {
+  transform: rotate(90deg) scale(1.1) !important;
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3) !important;
+}
+/* Enhanced Search Modal - Force Modern Styling */
+.search-modal.show {
+  z-index: 9999 !important;
 }
 
-/* Results list */
-.search-modal ul {
+.search-modal > div,
+.search-modal > div > div {
+  background: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(10px) !important;
+  border-radius: 1.5rem !important;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25) !important;
   padding: 0 !important;
-  margin: 0 !important;
-  list-style: none !important;
-  max-height: 65vh !important;
+}
+
+.dark .search-modal > div,
+.dark .search-modal > div > div {
+  background: rgba(31, 41, 55, 0.98) !important;
+}
+
+.search-modal div[class*="bg-"] {
+  background: transparent !important;
+}
+
+.search-modal h5,
+.search-modal h4,
+.search-modal h3 {
+  color: inherit !important;
+  padding: 1.5rem 1.5rem 0.5rem 1.5rem !important;
+  font-size: 1.125rem !important;
+  font-weight: 600 !important;
+}
+
+.search-modal ul {
+  padding: 0 0.5rem 1rem 0.5rem !important;
+  max-height: 60vh !important;
   overflow-y: auto !important;
 }
 
-/* Individual result items - Spotlight cards */
-.search-modal li {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
 .search-modal li a {
-  display: flex !important;
-  align-items: start !important;
-  gap: 1rem !important;
-  padding: 0.875rem 1.25rem !important;
-  margin: 0.25rem 0.5rem !important;
-  background: rgba(255, 255, 255, 0.6) !important;
-  border-radius: 0.5rem !important;
-  border: 1px solid rgba(0, 0, 0, 0.04) !important;
+  display: block !important;
+  background: white !important;
+  border-radius: 0.75rem !important;
+  padding: 0.875rem 1rem !important;
+  margin: 0.5rem !important;
+  transition: all 0.3s ease !important;
+  border: 1px solid rgba(0, 0, 0, 0.05) !important;
   text-decoration: none !important;
-  transition: all 0.15s ease !important;
-  color: inherit !important;
 }
 
 .dark .search-modal li a {
-  background: rgba(55, 65, 81, 0.4) !important;
-  border-color: rgba(255, 255, 255, 0.06) !important;
+  background: rgba(55, 65, 81, 0.6) !important;
+  border-color: rgba(255, 255, 255, 0.05) !important;
 }
 
 .search-modal li a:hover {
-  background: rgba(102, 126, 234, 0.12) !important;
-  border-color: rgba(102, 126, 234, 0.2) !important;
-  transform: translateX(2px) scale(1.005) !important;
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.08) !important;
+  transform: translateY(-2px) scale(1.01) !important;
+  box-shadow: 0 10px 25px -5px rgb(102 126 234 / 0.2) !important;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%) !important;
+  border-color: rgba(102, 126, 234, 0.3) !important;
 }
 
-.dark .search-modal li a:hover {
-  background: rgba(102, 126, 234, 0.15) !important;
+.search-modal img,
+.search-modal svg {
+  display: inline-block !important;
+  margin-right: 0.75rem !important;
 }
-
-/* Result title styling */
-.search-modal li a h3,
-.search-modal li a h4,
-.search-modal li a strong {
-  font-size: 1rem !important;
-  font-weight: 600 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  text-transform: none !important;
-  letter-spacing: normal !important;
-  opacity: 1 !important;
-  line-height: 1.4 !important;
-}
-
-/* Result description/snippet */
-.search-modal li a p,
-.search-modal li a span:not([class]) {
-  font-size: 0.875rem !important;
-  opacity: 0.7 !important;
-  margin: 0.25rem 0 0 0 !important;
-  line-height: 1.5 !important;
-}
-
-/* Category/tag badges in results */
-.search-modal li a [class*="tag"],
-.search-modal li a [class*="category"] {
-  font-size: 0.75rem !important;
-  padding: 0.25rem 0.5rem !important;
-  background: rgba(102, 126, 234, 0.1) !important;
-  border-radius: 0.25rem !important;
-  margin-top: 0.5rem !important;
-}
-
-/* Smooth entry animation */
-.search-modal.show {
-  animation: spotlightFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
-}
-
-.search-modal.show>div {
-  animation: spotlightSlideIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
-}
-
-@keyframes spotlightFadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes spotlightSlideIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px) scale(0.96);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-/* Custom scrollbar for results - macOS style */
-.search-modal ul::-webkit-scrollbar {
-  width: 8px;
-}
-
-.search-modal ul::-webkit-scrollbar-track {
-  background: transparent;
-  margin: 0.5rem 0;
-}
-
-.search-modal ul::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-}
-
-.dark .search-modal ul::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.search-modal ul::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.3);
-}
-
-.dark .search-modal ul::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.3);
-}
-/* Fix backdrop to be fullscreen and search bar to be black */
+/* Complete Search Modal Redesign */
 .search-modal {
   position: fixed !important;
   top: 0 !important;
   left: 0 !important;
   right: 0 !important;
   bottom: 0 !important;
-  width: 100vw !important;
-  height: 100vh !important;
-  margin: 0 !important;
+  backdrop-filter: blur(20px) !important;
+  background: rgba(0, 0, 0, 0.7) !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
   padding: 2rem !important;
+  overflow-y: auto !important;
 }
 
-/* Make search container fully black/dark */
+.dark .search-modal {
+  background: rgba(0, 0, 0, 0.85) !important;
+}
+
+/* Main modal container */
 .search-modal > div {
-  background: rgba(30, 30, 30, 0.95) !important;
-  backdrop-filter: blur(40px) saturate(180%) !important;
-  border: 0.5px solid rgba(255, 255, 255, 0.1) !important;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 0 0.5px rgba(255, 255, 255, 0.05) inset !important;
-  color: white !important;
+  background: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(10px) !important;
+  border-radius: 1.5rem !important;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25) !important;
+  max-width: 42rem !important;
+  width: 100% !important;
+  margin-top: 2rem !important;
+  position: relative !important;
+  border: 1px solid rgba(0, 0, 0, 0.05) !important;
 }
 
 .dark .search-modal > div {
-  background: rgba(20, 20, 20, 0.95) !important;
+  background: rgba(31, 41, 55, 0.98) !important;
+  border-color: rgba(255, 255, 255, 0.05) !important;
 }
 
-/* White text in search input */
-.search-modal input[type="search"] {
+/* Header with search icon and close button */
+.search-modal > div > div:first-child {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 1rem 1.5rem !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+  background: transparent !important;
+}
+
+.dark .search-modal > div > div:first-child {
+  border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Search icon - left side */
+.search-modal svg:first-child,
+.search-modal i:first-child {
+  color: #667eea !important;
+  font-size: 1.25rem !important;
+  margin-right: 0.75rem !important;
+}
+
+/* Close button - right side */
+.search-modal button,
+.search-modal [role="button"] {
+  position: relative !important;
+  right: auto !important;
+  top: auto !important;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
   color: white !important;
-  border-bottom-color: rgba(255, 255, 255, 0.15) !important;
+  border-radius: 50% !important;
+  width: 2rem !important;
+  height: 2rem !important;
+  min-width: 2rem !important;
+  min-height: 2rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  margin-left: auto !important;
 }
 
-.search-modal input[type="search"]::placeholder {
-  color: rgba(255, 255, 255, 0.5) !important;
+.search-modal button:hover {
+  transform: rotate(90deg) scale(1.1) !important;
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3) !important;
 }
 
-/* Update result cards for dark background */
+/* Input field */
+.search-modal input {
+  width: 100% !important;
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1) !important;
+  padding: 1rem 1.5rem !important;
+  font-size: 1.125rem !important;
+  outline: none !important;
+}
+
+.search-modal input:focus {
+  border-bottom-color: #667eea !important;
+  background: linear-gradient(to right, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05)) !important;
+}
+
+.dark .search-modal input {
+  border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Results container */
+.search-modal ul {
+  list-style: none !important;
+  padding: 0.5rem !important;
+  margin: 0 !important;
+  max-height: 60vh !important;
+  overflow-y: auto !important;
+}
+
+/* Individual result items */
+.search-modal li {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 .search-modal li a {
-  background: rgba(255, 255, 255, 0.08) !important;
-  border-color: rgba(255, 255, 255, 0.1) !important;
-  color: white !important;
+  display: block !important;
+  background: white !important;
+  border-radius: 0.75rem !important;
+  padding: 1rem !important;
+  margin: 0.5rem !important;
+  transition: all 0.3s ease !important;
+  border: 1px solid rgba(0, 0, 0, 0.05) !important;
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.dark .search-modal li a {
+  background: rgba(55, 65, 81, 0.6) !important;
+  border-color: rgba(255, 255, 255, 0.05) !important;
 }
 
 .search-modal li a:hover {
-  background: rgba(102, 126, 234, 0.2) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 25px -5px rgb(102 126 234 / 0.2) !important;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%) !important;
   border-color: rgba(102, 126, 234, 0.3) !important;
 }
 
-/* White text for all elements */
-.search-modal h3,
-.search-modal h4,
-.search-modal h5,
-.search-modal p,
-.search-modal span {
-  color: white !important;
-}
-
-/* Hide/fix the overlay tab on the left */
-.search-modal-overlay {
-  display: none !important;
-}
-
-/* Alternative: make it transparent and non-blocking if needed */
-.search-modal[data-target="close-search-modal"] {
+/* Remove any conflicting backgrounds */
+.search-modal div[class*="bg-"] {
   background: transparent !important;
+}
+
+.search-modal .search-result {
+  background: none !important;
 }
