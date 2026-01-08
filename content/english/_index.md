@@ -13,7 +13,7 @@ banner:
 # Features
 features:
   - title: "My Journey Through Life"
-    image: "/images/service-1.png"
+    image: "/images/journey.png"
     bulletpoints:
       - "🌟 Volunteer Work: Education projects in Brazil"
       - "⛰️ Outdoor Passions: Hiking, MTB, Skiing, Motorcycles"
