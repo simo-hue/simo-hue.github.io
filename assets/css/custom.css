@@ -6,14 +6,11 @@
 }
 
 .link-card {
-  @apply flex items-start gap-6 p-6 rounded-lg border border-border bg-body
-         transition-all duration-300 hover:shadow-lg hover:-translate-y-1
-         dark:border-darkmode-border dark:bg-darkmode-body;
+  @apply flex items-start gap-6 p-6 rounded-lg border border-border bg-body transition-all duration-300 hover:shadow-lg hover:-translate-y-1 dark:border-darkmode-border dark:bg-darkmode-body;
 }
 
 .link-icon {
-  @apply flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-lg
-         text-2xl transition-all duration-300;
+  @apply flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-lg text-2xl transition-all duration-300;
 }
 
 .link-icon.linkedin {
@@ -70,12 +67,20 @@
 }
 
 .link-icon.icon-english {
-  @apply bg-gradient-to-br from-blue-700 via-white to-red-600 text-white; /* UK Flag vibes? Or just standard blue */
+  @apply bg-gradient-to-br from-blue-700 via-white to-red-600 text-white;
+  /* UK Flag vibes? Or just standard blue */
 }
+
 /* Overriding English with a more standard clean look or kept gradient but maybe simpler */
 .link-icon.icon-english {
   @apply bg-gradient-to-br from-blue-600 to-blue-400 text-white;
 }
+
+.link-icon.icon-coursera {
+  @apply bg-gradient-to-br from-[#0056D2] to-[#00419e] text-white;
+  /* Coursera Brand Blue */
+}
+
 
 
 .link-content {
@@ -96,6 +101,5 @@
 }
 
 .social-links-container .btn-primary {
-  @apply border-primary bg-primary dark:border-darkmode-primary dark:text-text-dark text-white dark:bg-darkmode-primary
-         hover:bg-primary/90 dark:hover:bg-darkmode-primary/90 hover:-translate-y-0.5 hover:shadow-md;
+  @apply border-primary bg-primary dark:border-darkmode-primary dark:text-text-dark text-white dark:bg-darkmode-primary hover:bg-primary/90 dark:hover:bg-darkmode-primary/90 hover:-translate-y-0.5 hover:shadow-md;
 }

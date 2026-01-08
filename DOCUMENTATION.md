@@ -30,3 +30,11 @@
       - **Bioinformatics**: Emerald/Teal.
       - **College**: Indigo/Blue.
       - **English**: Blue gradient.
+      - **Coursera**: Brand Blue Gradient.
+
+### [2026-01-08] Add Coursera Certificate
+- **Action**: Added "Supervised Machine Learning" certificate to the Links page.
+- **Details**:
+  - Added new `.link-icon.icon-coursera` class in `assets/css/custom.css` (Coursera Blue).
+  - Added new link card in `content/english/links.md` under "Certificates" section.
+  - **Required Action**: User must upload `Coursera_ML.pdf` to `static/docs/`.

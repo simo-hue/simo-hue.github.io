@@ -251,6 +251,21 @@ draft: false
   </div>
 </div>
 
+<div class="link-card">
+  <div class="link-icon icon-coursera">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+    </svg>
+  </div>
+  <div class="link-content">
+    <h3>Supervised Machine Learning: Regression and Classification</h3>
+    <p>Issued By Coursera (DeepLearning.AI).</p>
+    <a href="/docs/Coursera_W10Y9RHJVU8O.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+      View Certification
+    </a>
+  </div>
+</div>
+
 ## Language Certificates
 
 <div class="link-card">
