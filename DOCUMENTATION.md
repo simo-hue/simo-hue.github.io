@@ -55,6 +55,7 @@
   - **Refinement**: Consolidated content from previous About page (Bio details, Education history, Quote). Modified layout to handle nested quotes correctly in `aria-label`.
   - **Debugging**: Investigated CORS errors referencing port 53314. Confirmed no hardcoded references in code. Identified cause as stale Service Worker from VS Code Live Server.
   - **Re-design**: Redesigned the "Links" page to match the "About" page Bento Grid style. Created `data/links.yml` for unified content management and `layouts/links/list.html` for the grid layout.
+  - **Styling**: Diversified color palettes for link categories (Slate, Orange, Rose, Emerald, Violet) to avoid repetition. Refined transparency of buttons (`bg-white/30`) for a cohesive "glass" effect.
 
 ### [2026-01-08] Enhance Carousel UX
 - **Objective**: Improve the "Some Insight" carousel usability by adding navigation arrows and autoplay.
