@@ -125,3 +125,9 @@
     - `layouts/blog/single.html`: Removed the HTML block attempting to render tags at the bottom of posts.
   - **Configuration**:
     - `config/_default/params.toml`: Set `search.show_tags` to `false` to prevent tags from appearing in search results.
+
+### [2026-01-09] Reduce Logo Size
+- **Objective**: Reduce the visual size of the website logo.
+- **Changes**:
+  - **Configuration**:
+    - `config/_default/params.toml`: Reduced `logo_width` from `160px` to `120px` and `logo_height` from `32px` to `24px`.
