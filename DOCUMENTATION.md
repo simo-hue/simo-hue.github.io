@@ -131,3 +131,19 @@
 - **Changes**:
   - **Configuration**:
     - `config/_default/params.toml`: Reduced `logo_width` from `160px` to `120px` and `logo_height` from `32px` to `24px`.
+
+### [2026-01-09] Security Audit & Leak Remediation
+- **Objective**: Remediate a leaked Google API Key associated with a GitHub Secret Scanning alert.
+- **Changes**:
+  - **Configuration**:
+    - `config/_default/params.toml`: Completely removed the `[google_map]` section. Use of Google Maps has been discontinued on the site.
+    - `themes/hugoplate/layouts/contact/list.html`: Removed the map container and associated scripts.
+  - **Scanning**:
+    - Performed a grep scan of the codebase for other potential leaks. Found a false positive in `swiper-bundle.css` (likely base64 noise), confirmed no other active constraints.
+  - **Documentation**:
+    - Updated `TO_SIMO_DO.md` with immediate instructions to revoke the compromised key. Removed instruction to generate a new key.
+
+### [2026-01-09] Workflow Update
+- **Objective**: Simplify GitHub Actions workflow by removing test translation logic.
+- **Changes**:
+  - `github/workflows/translate-deploy.yml`: Removed the `translate` job. The workflow now strictly handles deployment of the existing site content to GitHub Pages.

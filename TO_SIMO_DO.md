@@ -8,3 +8,4 @@
 - [ ] Verify the About page works correctly by running `npm run dev` and visiting the local server.
 - [ ] **Verify Tags Removal**: Check that the "Tags" section is no longer visible on the blog post pages and category list pages.
 - [ ] **Check Search**: Verify if the search functionality still works as expected without tags.
+- [ ] **SECURITY ACTION**: Go to Google Cloud Console > APIs & Services > Credentials. Identify the leaked key (`AIza...`) and **REVOKE** it immediately.
