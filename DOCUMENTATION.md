@@ -143,7 +143,7 @@
   - **Documentation**:
     - Updated `TO_SIMO_DO.md` with immediate instructions to revoke the compromised key. Removed instruction to generate a new key.
 
-### [2026-01-09] Workflow Update
-- **Objective**: Simplify GitHub Actions workflow by removing test translation logic.
+### [2026-01-09] Workflow Cleanup
+- **Objective**: Eliminate redundant and failing workflows.
 - **Changes**:
-  - `github/workflows/translate-deploy.yml`: Removed the `translate` job. The workflow now strictly handles deployment of the existing site content to GitHub Pages.
+  - `github/workflows/translate-deploy.yml`: Deleted this file. The "Auto-translate" logic was experimental and no longer needed. Deployment is now handled exclusively by the standard `hugo.yml` workflow.
