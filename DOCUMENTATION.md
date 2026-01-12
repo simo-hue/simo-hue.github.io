@@ -155,3 +155,12 @@
   - Created `content/italian/blog/thought/live-the-dream/index.md`
   - set `draft: true` initially.
 
+### [2026-01-12] Fix: Mobile Search Bar Responsiveness
+- **Objective**: Adapt the search bar modal for mobile users as it was previously overflowing the screen and unusable.
+- **Changes**:
+  - **CSS**: Added a media query `@media (max-width: 768px)` in `assets/css/custom.css`.
+  - **Layout**: Adjusted `.search-modal > div` to have `width: 95%`, `max-width: 95vw`, and `max-height: 80vh`. 
+  - **Styling**: Tweaked padding and font sizes for better touch usability on smaller screens.
+  - **Verification**: Manually verified that the modal acts as a proper overlay on mobile viewports.
+
+

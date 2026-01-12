@@ -13,3 +13,5 @@
 - [ ] **Populate Content**: Add the actual text content for the new article "Live the dream" in `content/italian/blog/thought/live-the-dream/index.md`.
 - [ ] **Add Images**: Add `image.png` (or update frontmatter) for both new articles.
 - [ ] **Publish**: Set `draft: false` in the frontmatter of both articles when ready.
+- [ ] **Verify Mobile Search**: Check the search bar on your phone to ensure it opens correctly and fits the screen.
+

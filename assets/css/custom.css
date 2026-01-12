@@ -862,6 +862,7 @@
 .dark .search-modal ul::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.3);
 }
+
 /* Fix backdrop to be fullscreen and search bar to be black */
 .search-modal {
   position: fixed !important;
@@ -876,7 +877,7 @@
 }
 
 /* Make search container fully black/dark */
-.search-modal > div {
+.search-modal>div {
   background: rgba(30, 30, 30, 0.95) !important;
   backdrop-filter: blur(40px) saturate(180%) !important;
   border: 0.5px solid rgba(255, 255, 255, 0.1) !important;
@@ -884,7 +885,7 @@
   color: white !important;
 }
 
-.dark .search-modal > div {
+.dark .search-modal>div {
   background: rgba(20, 20, 20, 0.95) !important;
 }
 
@@ -927,4 +928,40 @@
 /* Alternative: make it transparent and non-blocking if needed */
 .search-modal[data-target="close-search-modal"] {
   background: transparent !important;
+}
+
+/* Mobile Responsiveness for Search Bar */
+@media (max-width: 768px) {
+  .search-modal {
+    padding: 1rem !important;
+    align-items: flex-start !important;
+    padding-top: 15vh !important;
+  }
+
+  .search-modal>div {
+    width: 95% !important;
+    max-width: 95vw !important;
+    margin: 0 auto !important;
+    max-height: 80vh !important;
+    border-radius: 0.75rem !important;
+  }
+
+  .search-modal h3,
+  .search-modal h4,
+  .search-modal h5 {
+    padding: 0.75rem 1rem 0.25rem !important;
+  }
+
+  .search-modal ul {
+    max-height: 55vh !important;
+  }
+
+  .search-modal input[type="search"] {
+    font-size: 1rem !important;
+    padding: 0.875rem 1rem !important;
+  }
+
+  .search-modal li a {
+    padding: 0.75rem 1rem !important;
+  }
 }
