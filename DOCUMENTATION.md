@@ -172,3 +172,12 @@
   - **Logic**: Changed the outer `div` to an `a` tag linking to `.RelPermalink`.
   - **Fix**: Replaced nested `<a>` tags with `<span>` elements to maintain valid HTML. Verified syntax of `partial "image"` call.
 - **Result**: Users can click anywhere on the card to navigate to the article.
+
+### [2026-01-12] Add External Links to Blog Cards
+- **Objective**: Display external social/project links directly on the blog card for quick access.
+- **Changes**:
+  - **Template**: `layouts/partials/components/blog-card.html`.
+  - **Logic**: Refactored card to use an absolute link mask (`z-0`) for the article click, and a separate `z-20` layer for external link icons.
+  - **Data source**: Uses the `links` list in frontmatter (title, website).
+  - **Icons**: Auto-assigns FontAwesome icons based on URL keywords (instagram/youtube/tiktok/github).
+  - **Dark Mode**: Fixed visibility issue by enforcing `dark:bg-black/90` and `dark:text-white` for external link buttons.
