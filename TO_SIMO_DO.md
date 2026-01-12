@@ -9,3 +9,7 @@
 - [ ] **Verify Tags Removal**: Check that the "Tags" section is no longer visible on the blog post pages and category list pages.
 - [ ] **Check Search**: Verify if the search functionality still works as expected without tags.
 - [ ] **SECURITY ACTION**: Go to Google Cloud Console > APIs & Services > Credentials. Identify the leaked key (`AIza...`) and **REVOKE** it immediately.
+- [ ] **Populate Content**: Add the actual text content for the new article "The Star Counter" in `content/italian/blog/thought/the-star-counter/index.md`.
+- [ ] **Populate Content**: Add the actual text content for the new article "Live the dream" in `content/italian/blog/thought/live-the-dream/index.md`.
+- [ ] **Add Images**: Add `image.png` (or update frontmatter) for both new articles.
+- [ ] **Publish**: Set `draft: false` in the frontmatter of both articles when ready.

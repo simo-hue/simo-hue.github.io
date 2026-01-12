@@ -147,3 +147,11 @@
 - **Objective**: Eliminate redundant and failing workflows.
 - **Changes**:
   - `github/workflows/translate-deploy.yml`: Deleted this file. The "Auto-translate" logic was experimental and no longer needed. Deployment is now handled exclusively by the standard `hugo.yml` workflow.
+
+### [2026-01-12] Create New Thought Articles
+- **Objective**: Create two new articles in the "thoughts" category.
+- **Changes**:
+  - Created `content/italian/blog/thought/the-star-counter/index.md`
+  - Created `content/italian/blog/thought/live-the-dream/index.md`
+  - set `draft: true` initially.
+
