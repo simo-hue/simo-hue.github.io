@@ -90,13 +90,13 @@
 
           <!-- Sidebar -->
           {{ if $widget }}
-          <div class="lg:col-4">
+          <aside class="lg:col-4">
             {{ partialCached "widgets/widget-wrapper" ( dict "Widgets" $widget "Scope" . ) }}
-          </div>
-          {{ end }}
         </div>
+        {{ end }}
       </div>
     </div>
+  </div>
   </div>
 </section>
 {{ end }}

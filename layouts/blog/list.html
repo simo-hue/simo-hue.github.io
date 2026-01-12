@@ -33,12 +33,12 @@
         {{ partial "components/pagination.html" . }}
       </div>
       <!-- sidebar -->
-      <div class="lg:col-4">
+      <aside class="lg:col-4">
         <!-- widget -->
         {{ $widget:= site.Params.widgets.sidebar }}
         {{ partialCached "widgets/widget-wrapper" ( dict "Widgets" $widget "Scope" . ) }}
-      </div>
     </div>
+  </div>
   </div>
 </section>
 {{ end }}
