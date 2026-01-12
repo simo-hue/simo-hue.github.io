@@ -163,4 +163,12 @@
   - **Styling**: Tweaked padding and font sizes for better touch usability on smaller screens.
   - **Verification**: Manually verified that the modal acts as a proper overlay on mobile viewports.
 
+  - **Verification**: Manually verified that the modal acts as a proper overlay on mobile viewports.
 
+### [2026-01-12] Enhance Blog Card UX
+- **Objective**: Make the entire blog card clickable and fix a template syntax error.
+- **Changes**:
+  - **Template**: Refactored `layouts/partials/components/blog-card.html`.
+  - **Logic**: Changed the outer `div` to an `a` tag linking to `.RelPermalink`.
+  - **Fix**: Replaced nested `<a>` tags with `<span>` elements to maintain valid HTML. Verified syntax of `partial "image"` call.
+- **Result**: Users can click anywhere on the card to navigate to the article.
