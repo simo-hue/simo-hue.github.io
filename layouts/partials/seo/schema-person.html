@@ -1,14 +1,23 @@
 {{- /* Schema.org Person structured data for homepage */ -}}
 {{- if .IsHome -}}
 {{- $social := slice -}}
-{{- range site.Data.social.main -}}
-  {{- $social = $social | append .link -}}
+{{- range site.Data.about.socials -}}
+{{- $social = $social | append .link -}}
 {{- end -}}
+{{- $knowsAbout := slice -}}
+{{- range site.Data.about.passions -}}
+{{- $knowsAbout = $knowsAbout | append .name -}}
+{{- end -}}
+{{- $knowsAbout = $knowsAbout | append "Computer Science" -}}
+{{- $knowsAbout = $knowsAbout | append "Artificial Intelligence" -}}
+{{- $knowsAbout = $knowsAbout | append "Large Language Models" -}}
+{{- $knowsAbout = $knowsAbout | append "High-Performance Computing" -}}
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "Simone Mattioli",
+  "name": "{{ site.Data.about.profile.name }}",
   "url": {{ .Site.BaseURL | jsonify }},
   "image": {{ printf "%s%s" .Site.BaseURL site.Params.metadata.image | jsonify }},
   "jobTitle": "Computer Science Student & AI Researcher",
@@ -21,18 +30,8 @@
     "name": "University of Verona",
     "department": "Computer Science"
   },
-  "description": {{ site.Params.metadata.description | jsonify }},
-  "knowsAbout": [
-    "Artificial Intelligence",
-    "Machine Learning",
-    "High-Performance Computing",
-    "Large Language Models",
-    "Computer Science",
-    "Software Development",
-    "Tourism Analytics",
-    "Volunteer Work",
-    "Education Technology"
-  ],
+  "description": {{ site.Data.about.vision.content | default site.Params.metadata.description | jsonify }},
+  "knowsAbout": {{ $knowsAbout | jsonify }},
   "sameAs": {{ $social | jsonify }},
   "mainEntityOfPage": {
     "@type": "WebPage",

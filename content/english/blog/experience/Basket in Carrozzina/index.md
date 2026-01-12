@@ -13,7 +13,7 @@ links:
     website: https://www.olympicbasketverona.it
   - title: Experience Video
     description: Watch my wheelchair basketball experience
-    website: https://youtu.be/T7m9n7ojHzw?feature=shared
+    website: https://youtu.be/T7m9n7ojHzw
 
 ---
 

@@ -181,3 +181,14 @@
   - **Data source**: Uses the `links` list in frontmatter (title, website).
   - **Icons**: Auto-assigns FontAwesome icons based on URL keywords (instagram/youtube/tiktok/github).
   - **Dark Mode**: Fixed visibility issue by enforcing `dark:bg-black/90` and `dark:text-white` for external link buttons.
+
+### [2026-01-12] SEO & GEO Optimization (Generative Engine Optimization)
+- **Objective**: Optimize the site and data structure for visibility in LLM answers (GEO - Generative Engine Optimization).
+- **Changes**:
+  - **Data Unification**:
+    - **Refactor**: Deprecated `data/social.json`. Migrated all social link rendering logic (e.g., in `footer.html`) to use `data/about.yml` as the Single Source of Truth.
+  - **Schema.org (JSON-LD)**:
+    - **Dynamic Data**: Refactored `layouts/partials/seo/schema-person.html` to pull `passions`, `vision`, and `socials` directly from `about.yml`.
+    - **Entity Enforcement**: Added hardcoded "KnowsAbout" entries for "Computer Science", "Artificial Intelligence", "Large Language Models", and "High-Performance Computing" to reinforce entity expertise.
+  - **Semantics**:
+    - **About Page**: Added `id="profile-bio"` to the main biographical paragraph in `layouts/about/list.html` to assist with semantic anchoring.
