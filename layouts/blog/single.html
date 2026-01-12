@@ -77,9 +77,10 @@
   <div class="container">
     <div class="row justify-center">
       <div class="lg:col-10">
-        <div class="row gx-5">
+        {{ $widget:= site.Params.widgets.sidebar | complement (slice "categories") }}
+        <div class="row gx-5 {{ if not $widget }}justify-center{{ end }}">
           <!-- Content -->
-          <div class="lg:col-8">
+          <div class="{{ if $widget }}lg:col-8{{ else }}lg:col-12{{ end }}">
             <article class="prose prose-lg dark:prose-invert max-w-none">
               {{ .Content }}
             </article>
@@ -88,10 +89,11 @@
           </div>
 
           <!-- Sidebar -->
+          {{ if $widget }}
           <div class="lg:col-4">
-            {{ $widget:= site.Params.widgets.sidebar }}
             {{ partialCached "widgets/widget-wrapper" ( dict "Widgets" $widget "Scope" . ) }}
           </div>
+          {{ end }}
         </div>
       </div>
     </div>
