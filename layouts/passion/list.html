@@ -1,0 +1,68 @@
+{{ define "main" }}
+{{ partial "page-header" . }}
+
+<section class="section">
+  <div class="container">
+    <div class="row gx-5">
+      <!-- Passions Categories Grid -->
+      <div class="col-12">
+        <div class="row">
+          {{ $passionsConfig := slice
+          (dict
+          "title" "Technology"
+          "link" "/passion/technology"
+          "desc" "My technical and programming projects"
+          "color" "indigo"
+          "icon" "💻"
+          )
+          (dict
+          "title" "Sport"
+          "link" "/passion/sport"
+          "desc" "My sporting activities and adventures"
+          "color" "green"
+          "icon" "🏃"
+          )
+          (dict
+          "title" "Personal Growth"
+          "link" "/passion/personal-growth"
+          "desc" "Reflections on life and personal growth"
+          "color" "purple"
+          "icon" "💭"
+          )
+          (dict
+          "title" "Content Creation"
+          "link" "/passion/content-creation"
+          "desc" "My journey in creating content"
+          "color" "pink"
+          "icon" "🎥"
+          )
+          }}
+
+          {{ range $passionsConfig }}
+          {{ $color := .color }}
+          {{ $darkBgClass := printf "dark:bg-%s-900/10" $color }}
+          {{ if eq $color "gray" }}
+          {{ $darkBgClass = "dark:bg-white/5" }}
+          {{ end }}
+
+          <div class="md:col-6 lg:col-4 mb-8 flex">
+            <a href="{{ .link | relURL }}"
+              class="group block p-8 rounded-3xl w-full bg-{{ $color }}-50 {{ $darkBgClass }} hover:bg-{{ $color }}-100 transition-colors border border-{{ $color }}-100 dark:border-{{ $color }}-800/30 flex flex-col justify-between">
+              <div>
+                <h3
+                  class="text-xl font-bold text-{{ $color }}-700 dark:text-{{ $color }}-400 mb-2 group-hover:translate-x-1 transition-transform">
+                  <span class="mr-2 inline-block">{{ .icon }}</span>{{ .title }}
+                  <i class="fa-solid fa-arrow-right text-sm ml-2 opacity-0 group-hover:opacity-100 transition-opacity"
+                    aria-hidden="true"></i>
+                </h3>
+                <p class="text-sm opacity-70 mb-4">{{ .desc }}</p>
+              </div>
+            </a>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

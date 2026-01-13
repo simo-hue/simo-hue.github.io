@@ -30,6 +30,7 @@ ID = 'G-5TJVJY8EZ2' # see https://gohugo.io/templates/internal/#configure-google
 [taxonomies]
 category = "categories"
 tag = "tags"
+passion = "passion"
 
 
 ########################## Pagination ############################
@@ -147,7 +148,7 @@ link = "plugins/cookie.js"
 lazy = false
 [[params.plugins.js]]
 link = "plugins/glightbox/glightbox.js"
-lazy = true
+lazy = false
 [[params.plugins.js]]
 link = "js/gallery-slider.js"
 lazy = true

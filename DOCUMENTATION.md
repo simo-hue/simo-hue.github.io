@@ -1,4 +1,12 @@
-# DOCUMENTATION - Timeline Card Modal Implementation
+# DOCUMENTATION - Timeline Card Implementation
+
+## Passions Page Implementation
+- Created a new section `Passions` with a custom list layout.
+- **Layout File**: `layouts/passions/list.html`
+  - Replicates the "Categories" grid layout but removes the sidebar.
+  - Manually defines the 3 requested passions: Technology, Sport, Personal Growth.
+  - Links them to `/categories/technology`, `/categories/sport`, `/categories/personal-growth` respectively.
+- **Content File**: `content/english/passions/_index.md` created to define the page title and metadata.
 
 **Data:** 13 Gennaio 2026  
 **Funzionalità:** Card Timeline Cliccabili con Modale
