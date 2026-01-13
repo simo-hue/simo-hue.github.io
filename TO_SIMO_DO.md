@@ -1,23 +1,12 @@
 # To Do List
 
-- [ ] **Define Passions**: Update your markdown content files to include the `passion` field in the frontmatter if you want them to appear in the new passion pages.
-  Example:
-  ```yaml
-  categories: ["Sport"]
-  passion: ["Sport"]
-  ```
-  Passion terms needed:
-  - `passion/technology`
-  - `passion/sport`
-  - `passion/personal-growth`
-  - `passion/content-creation`
+## Passions Page - Verification
 
-- [ ] **Create Categories**: Ensure the following categories/tags exist and have content so the Passions cards are not empty when clicked:
+- [ ] **Verify Passions Page Layout**: Open `http://localhost:1313/passions/` in your browser
+  - Check that the page displays 4 cards in a grid layout (Technology, Sport, Personal Growth, Content Creation)
+  - Verify each card has the correct color scheme and emoji icon
+  - Test hover effects (card translation and arrow appearance)
+  - Toggle dark mode and verify styling adapts correctly
+  - Test responsive layout on mobile/tablet
 
-  - `categories/technology`
-  - `categories/sport`
-  - `categories/personal-growth` (You may need to create these or rename existing ones like `tech-projects` or `thoughts`).
-  - `categories/content-creation`
-SIMO DO
-
-- Review translated blog post `content/english/blog/thought/degree/index.md` for any nuances or typos.
+- [ ] **Optional - Create Detail Pages**: If you want to create individual pages for each passion (e.g., `/passion/technology/`), create markdown files in `/content/english/passion/` with the appropriate frontmatter
