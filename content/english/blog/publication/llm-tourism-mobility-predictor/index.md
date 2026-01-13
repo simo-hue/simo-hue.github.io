@@ -1,6 +1,6 @@
 ---
-title: "LLM Tourism Mobility Predictor: An Open-Source HPC-Accelerated Framework for Tourism Flow Prediction"
-description: "Research paper on an innovative open-source framework combining Large Language Models with High-Performance Computing for predicting tourism mobility patterns using A100 GPUs"
+title: "Understanding and Predicting Tourist Behavior through Large Language Models"
+description: "Investigation into the potential of Large Language Models (LLMs) in interpreting and predicting tourist movements using real-world data from Verona, Italy."
 slug: llm-tourism-mobility-predictor
 date: 2024-12-15
 image: cover.jpg
@@ -9,214 +9,99 @@ categories: ["publications"]
 tags:
     - Large Language Models
     - Tourism Prediction
+    - Recommender Systems
     - High-Performance Computing
-    - A100 GPU
-    - Open Source
-    - Machine Learning
-    - Data Science
-    - Tourism Analytics
-    - HPC
-    - CUDA
+    - Next POI Prediction
+    - Verona
+    - Smart Cities
+    - Artificial Intelligence
 
 comments: false
 
 links:
+  - title: Pre-print Paper
+    description: Read the full research paper
+    website: /docs/paper.pdf
   - title: GitHub Repository
     description: Access the complete open-source codebase and documentation
-    website: https://github.com/simo-hue/LLM-Tourism-Mobility-Predictor-HPC-A100.git
-  - title: Pre-print Paper
-    description: Read the full research paper (coming soon)
-    website: #
-  - title: HPC Benchmarks
-    description: View performance benchmarks on A100 GPUs
-    website: #
-  - title: Dataset Documentation
-    description: Explore the datasets used for training and validation
-    website: #
+    website: https://github.com/4nnina/llm_tourist_trajectories
 ---
 
 ## Abstract
 
-Tourism mobility prediction is a critical challenge in modern urban planning and resource management. This paper presents **LLM Tourism Mobility Predictor**, an innovative open-source framework that leverages Large Language Models (LLMs) combined with High-Performance Computing (HPC) infrastructure to predict tourism flow patterns with unprecedented accuracy and scalability.
+Understanding and predicting how tourists move through a city is a challenging task, as it involves a complex interplay of spatial, temporal, and social factors. Traditional recommender systems often rely on structured data, trying to capture the nature of the problem. However, recent advances in Large Language Models (LLMs) open up new possibilities for reasoning over richer, text-based representations of user context.
 
-Our approach utilizes NVIDIA A100 GPUs to accelerate both the training and inference phases, enabling real-time predictions for large-scale tourism datasets. The framework is designed to be fully reproducible, with all code, data preprocessing pipelines, and model configurations available under an open-source license.
+In this study, we investigate the potential of LLMs in interpreting and predicting tourist movements using a real-world application scenario involving tourist visits to Verona, a municipality in Northern Italy, between 2014 and 2023. We propose an incremental prompt engineering approach that gradually enriches the model input, from spatial features alone to richer behavioral information, including visit histories and user-cluster patterns. The approach is evaluated using six open-source models, enabling us to compare their accuracy and efficiency across various levels of contextual enrichment.
+
+Results show that incorporating contextual factors improves predictions, resulting in better overall performance while maintaining computational efficiency. The analysis of the model-generated explanations suggests that LLMs mainly reason through geospatial proximity and the popularity of points of interest. Overall, the study demonstrates the potential of LLMs to integrate multiple contextual dimensions for tourism mobility, highlighting the possibility for a more text-oriented and adaptive recommender system.
 
 ## Introduction
 
-The tourism industry generates massive amounts of mobility data through various sources including:
-- Mobile phone location data
-- Social media check-ins
-- Transportation booking systems
-- Hotel reservation patterns
-- Event attendance records
+Tourist Recommender Systems (T-RSs) have gained increased attention, supported by the availability of User Generated Content (UGC) and advanced analysis tools. Predicting future movements is crucial for producing meaningful suggestions, but it involves complex spatial, temporal, and social factors. Traditional approaches often rely on structured data and models like Recurrent Neural Networks (RNNs) or Transformers.
 
-Traditional machine learning approaches for tourism prediction face significant challenges:
-1. **Scalability**: Processing large-scale spatiotemporal data
-2. **Seasonality**: Capturing complex seasonal and cultural patterns
-3. **Real-time Requirements**: Providing timely predictions for decision-making
-4. **Multi-modal Data**: Integrating diverse data sources effectively
+This paper investigates the potential of LLMs in interpreting and forecasting tourist movements in a Next-PoI prediction task. We compare six open-source LLM models and experiment with an incremental prompt engineering approach. The study uses a real-world dataset of tourist visits to Verona, Italy, from 2014 to 2023.
 
 ## Methodology
 
-### Architecture Overview
+### Pipeline Overview
+The methodology involves:
+1.  **Trajectory Reconstruction**: aggregating historical visits.
+2.  **Filtering**: selecting relevant trajectories.
+3.  **Tourist Preferences**: identifying preferences via k-means clustering.
+4.  **Prompt Construction**: creating prompts with varying context levels (Base, Spatial, Spatio-temporal, +Popularity, +Preference).
+5.  **LLM Prediction**: obtaining suggestions and explanations.
 
-Our framework consists of three main components:
+### Prompt Design
+We defined five incremental prompting strategies:
+-   **(A) Base strategy**: Chronological sequence of visited PoIs.
+-   **(B) Spatial strategy**: Adds coordinates and nearest PoIs.
+-   **(C) Spatio-temporal strategy**: Adds visit duration and current time context.
+-   **(D) Spatio-temporal-popularity strategy**: Integrates cluster-based most popular PoIs.
+-   **(E) Spatio-temporal-preference strategy**: Integrates cluster-based preference lists.
 
-1. **Data Preprocessing Pipeline**
-   - Multi-source data ingestion
-   - Temporal alignment and normalization
-   - Feature engineering for spatiotemporal patterns
-   - Data augmentation techniques
+### Evaluation Metrics
+-   **Acc@1 (Top-1 Accuracy)**: Exact match of the first recommendation.
+-   **HR@5 (Top-5 Hit Rate)**: Correct item appears in the top-5 recommendations.
+-   **MRR (Mean Reciprocal Rank)**: Rank position of the correct item.
 
-2. **LLM-based Prediction Model**
-   - Fine-tuned transformer architecture
-   - Attention mechanisms for spatial relationships
-   - Temporal encoding for seasonal patterns
-   - Multi-task learning for various prediction horizons
+## Experiments
 
-3. **HPC Optimization Layer**
-   - CUDA-accelerated training procedures
-   - Distributed computing across multiple A100 GPUs
-   - Memory optimization for large-scale datasets
-   - Real-time inference optimization
+### Experimental Setup
+Experiments were conducted on the **Leonardo** supercomputer (CINECA), using the Booster module equipped with NVIDIA A100 GPUs.
+-   **Models**: Llama 3.1 8B, Qwen 2.5 (7B, 14B), Mixtral 8x7B, Mistral 7B, DeepSeek Coder 33B.
+-   **Dataset**: VeronaCard dataset (2014-2023), ~2.7M visits, 570K tourists.
 
-### Technical Implementation
+### Results
+The strategy integrating tourist preferences (Strategy E) achieved the best performance.
+-   **Mixtral 8x7B** achieved the highest **Acc@1 (34.27%)** with the middle anchor point.
+-   **Qwen 2.5 14B** achieved the best **HR@5 (73.92%)** and **MRR (49.01%)**.
 
-#### Hardware Requirements
-- **GPU**: NVIDIA A100 (40GB/80GB variants)
-- **CPU**: High-core count processors (>= 16 cores)
-- **Memory**: >= 128GB RAM
-- **Storage**: High-speed SSD for data preprocessing
+All LLM-based models consistently outperformed baselines (Random, Nearest, Popular), particularly in HR@5 and MRR, highlighting their capability to incorporate contextual information.
 
-#### Software Stack
-- **Framework**: PyTorch with CUDA support
-- **Distributed Training**: Horovod/PyTorch Distributed
-- **Data Processing**: Apache Spark, Pandas, NumPy
-- **Visualization**: Matplotlib, Plotly, Folium
-- **Containerization**: Docker, Singularity
+### Computational Performance
+-   Average inference time remains acceptable even with complex prompts.
+-   Larger models (Mixtral 8x7B, DeepSeek Coder 33B) show higher latency but provide better reasoning.
 
-## Experimental Setup
-
-### Datasets
-
-Our evaluation includes multiple real-world tourism datasets:
-
-1. **Regional Tourism Data**
-   - Time period: 2019-2024
-   - Geographic coverage: Multiple European regions
-   - Data points: >10M mobility records
-
-2. **Event-based Tourism**
-   - Major festivals and conferences
-   - Seasonal events and holidays
-   - Cultural and sporting events
-
-3. **Transportation Data**
-   - Flight booking patterns
-   - Train reservations
-   - Car rental statistics
-
-### Performance Metrics
-
-We evaluate our model using standard metrics:
-- **Accuracy**: Mean Absolute Error (MAE), Root Mean Square Error (RMSE)
-- **Temporal Consistency**: Temporal correlation coefficients
-- **Spatial Accuracy**: Geographic prediction precision
-- **Computational Efficiency**: Training time, inference latency
-
-## Results
-
-### Prediction Accuracy
-
-Our LLM-based approach demonstrates significant improvements over baseline methods:
-
-- **Short-term predictions (1-7 days)**: 15-20% improvement in MAE
-- **Medium-term predictions (1-4 weeks)**: 25-30% improvement in RMSE
-- **Long-term predictions (1-3 months)**: 35-40% improvement in seasonal accuracy
-
-### HPC Performance
-
-The A100 GPU acceleration provides substantial performance gains:
-
-- **Training Speed**: 8x faster compared to CPU-only implementations
-- **Memory Efficiency**: 60% reduction in memory usage through optimization
-- **Scalability**: Linear scaling up to 8 A100 GPUs
-- **Inference Latency**: <50ms for real-time predictions
-
-### Computational Benchmarks
-
-| Configuration | Training Time | Memory Usage | Prediction Latency |
-|---------------|---------------|---------------|-------------------|
-| CPU-only      | 48 hours      | 64GB         | 2.3s             |
-| Single A100   | 6 hours       | 32GB         | 0.08s            |
-| 4x A100       | 1.8 hours     | 28GB         | 0.05s            |
-| 8x A100       | 1.1 hours     | 26GB         | 0.03s            |
-
-## Open Source Contribution
-
-### Repository Structure
-
-The complete implementation is available at: [https://github.com/simo-hue/LLM-Tourism-Mobility-Predictor-HPC-A100.git](https://github.com/simo-hue/LLM-Tourism-Mobility-Predictor-HPC-A100.git)
-
-```
-LLM-Tourism-Mobility-Predictor-HPC-A100/
-├── src/                    # Core implementation
-├── data/                   # Data processing scripts
-├── models/                 # Pre-trained models
-├── notebooks/              # Jupyter notebooks for analysis
-├── configs/                # Configuration files
-├── scripts/                # Training and evaluation scripts
-├── docs/                   # Documentation
-├── docker/                 # Container configurations
-└── benchmarks/             # Performance evaluation
-```
-
-### Key Features
-
-- **Reproducible Research**: All experiments can be replicated using provided scripts
-- **Containerized Deployment**: Docker images for easy setup
-- **Comprehensive Documentation**: Step-by-step guides and API documentation
-- **Benchmark Suite**: Standardized evaluation protocols
-- **Community Support**: Issue tracking and contribution guidelines
-
-## Future Work
-
-### Research Directions
-
-1. **Multi-modal Integration**: Incorporating weather, economic, and social media data
-2. **Federated Learning**: Privacy-preserving distributed training
-3. **Real-time Adaptation**: Online learning for dynamic pattern changes
-4. **Explainable AI**: Interpretability tools for prediction explanations
-
-### Technical Improvements
-
-1. **Model Optimization**: Quantization and pruning for edge deployment
-2. **Multi-GPU Scaling**: Support for larger clusters
-3. **Cloud Integration**: AWS, GCP, and Azure deployment options
-4. **AutoML Integration**: Automated hyperparameter optimization
+### Reasoning Analysis
+Analysis of the 'reason' field in model outputs reveals:
+-   **Geospatial reasoning** dominates most models.
+-   **DeepSeek Coder 33B** shows stronger **temporal reasoning**.
+-   **Popularity reasoning** plays a secondary role.
 
 ## Conclusion
 
-The LLM Tourism Mobility Predictor represents a significant advancement in tourism flow prediction, combining the power of Large Language Models with High-Performance Computing. Our open-source approach ensures reproducibility and enables the research community to build upon our work.
-
-The framework's ability to process large-scale spatiotemporal data in real-time, coupled with its superior prediction accuracy, makes it a valuable tool for tourism planners, urban developers, and policy makers.
+This work demonstrates that LLMs can effectively understand and predict tourist movements when provided with enriched contextual prompts. The integration of spatial, temporal, and clustering-based preference information significantly improves accuracy. Future work will explore adding more context sources like weather and real-time crowding.
 
 ## Acknowledgments
-
-We thank the HPC community for providing computational resources and the open-source contributors who have made this work possible. Special recognition goes to the NVIDIA Developer Program for GPU access and the PyTorch team for their excellent framework.
+We acknowledge ISCRA for awarding this project access to the **LEONARDO** supercomputer, owned by the EuroHPC Joint Undertaking, hosted by CINECA (Italy).
 
 ## Citation
 
 ```bibtex
-@article{mattioli2024llm,
-  title={LLM Tourism Mobility Predictor: An Open-Source HPC-Accelerated Framework for Tourism Flow Prediction},
-  author={Mattioli, Simone},
+@article{dallavecchia2024understanding,
+  title={Understanding and Predicting Tourist Behavior through Large Language Models},
+  author={Dalla Vecchia, Anna and Mattioli, Simone and Migliorini, Sara and Quintarelli, Elisa},
   journal={arXiv preprint},
-  year={2024},
-  url={https://github.com/simo-hue/LLM-Tourism-Mobility-Predictor-HPC-A100}
+  year={2024}
 }
 ```
-
----
-
-*This research is conducted as part of ongoing work in computational tourism analytics and represents a commitment to open science and reproducible research.*

@@ -313,3 +313,28 @@ Caratteristiche visuali:
 
 **Implementato da:** Antigravity AI Assistant  
 **Versione Hugo:** Compatible with current setup
+
+# DOCUMENTATION - Update Publication Article
+
+**Data:** 13 Gennaio 2026
+**Funzionalità:** Aggiornamento Articolo Pubblicazione "LLM Tourism Mobility Predictor"
+
+---
+
+## Panoramica
+
+L'articolo "LLM Tourism Mobility Predictor" è stato aggiornato per riflettere fedelmente il contenuto del paper ufficiale "Understanding and Predicting Tourist Behavior through Large Language Models".
+
+## Modifiche Apportate
+
+### `/content/english/blog/publication/llm-tourism-mobility-predictor/index.md`
+
+- **Titolo aggiornato:** "Understanding and Predicting Tourist Behavior through Large Language Models".
+- **Abstract:** Sostituito con l'abstract originale del paper.
+- **Sezioni:** Aggiunte sezioni dettagliate per "Methodology", "Experiments" (con setup e risultati specifici), e "Conclusion", estratte direttamente dal PDF.
+- **Citazione:** Aggiornato il blocco BibTeX con i dettagli corretti del paper.
+- **Autori:** Aggiunta lista autori nel testo (Anna Dalla Vecchia, Simone Mattioli, Sara Migliorini, Elisa Quintarelli).
+
+---
+
+**Implementato da:** Antigravity AI Assistant
