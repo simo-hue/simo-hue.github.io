@@ -57,7 +57,7 @@ Il template `/layouts/passion/list.html` (già esistente) implementa:
 
 **Layout Grid:**
 - Grid responsivo: `col-12` → `md:col-6` → `lg:col-4`
-- 4 card di passione predefinite
+- 6 card di passione predefinite
 
 **Card Design (matching About page):**
 - Form: `rounded-3xl` con bordi arrotondati
@@ -66,7 +66,9 @@ Il template `/layouts/passion/list.html` (già esistente) implementa:
   - Sport: Green (`bg-green-50`, `dark:bg-green-900/10`)
   - Personal Growth: Purple (`bg-purple-50`, `dark:bg-purple-900/10`)
   - Content Creation: Pink (`bg-pink-50`, `dark:bg-pink-900/10`)
-- Icone emoji: 💻, 🏃, 💭, 🎥
+  - Cars: Red (`bg-red-50`, `dark:bg-red-900/10`)
+  - Bikes: Orange (`bg-orange-50`, `dark:bg-orange-900/10`)
+- Icone emoji: 💻, 🏃, 💭, 🎥, 🏎️, 🏍️
 - Hover effects:
   - `hover:bg-{color}-100`: cambio colore sfondo
   - `group-hover:translate-x-1`: slide titolo
