@@ -1,194 +1,189 @@
-# DOCUMENTATION
+# DOCUMENTATION - Timeline Card Modal Implementation
 
-## Implementation Logs
+**Data:** 13 Gennaio 2026  
+**Funzionalità:** Card Timeline Cliccabili con Modale
 
-### [2026-01-08] Interactive Timeline Implementation
-- **Objective**: Replace static features list with a dynamic, responsive vertical timeline.
-- **Changes**:
-  - **New Data File**: Created `data/timeline.yml` to store journey events (Education, Work, Volunteering).
-  - **New Component**: Created `layouts/partials/components/timeline.html` using TailwindCSS.
-    - Features alternating left/right layout on desktop.
-    - Collapses to single column on mobile.
-    - Uses FontAwesome icons and color-coded tags.
-  - **Layout Update**: Modified `layouts/index.html` to replace the "Features" loop with `{{ partial "components/timeline.html" . }}`.
-- **Technical Details**:
-  - Uses Tailwind's `order-1`, `md:flex-row-reverse` for the zigzag effect.
-  - Responsive design with `md:` breakpoints.
+---
 
-### [2026-01-08] Timeline Content Update
-- **Objective**: Add specific content creation milestones to the timeline.
-- **Changes**:
-  - **Added Entries**:
-    - **Simo's Diary (2023)**: YouTube channel for vlogs and memories.
-    - **Mountain Fauna Lover (2023)**: Photography/Nature project.
-    - **Downhill World Cup Staff (2021)**: Volunteering at Val di Sole (Transponders & Safety).
+## Panoramica
 
-### [2026-01-08] Fix Mobile Timeline Layout
-- **Objective**: Enforce zigzag layout on mobile screens (instead of linear).
-- **Changes**:
-  - **CSS Layout**: Removed desktop-only logic for flex direction. Now uses `flex-row` / `flex-row-reverse` on all screens.
-  - **Sizing**: Set content and spacers to `w-[45%]` to fit side-by-side on mobile.
-  - **Centering**: Absolute positioning for icons and central line (`left-1/2 -translate-x-1/2`).
+Implementata una funzionalità che rende le card della timeline della sezione "My Journey" cliccabili su dispositivi mobili, aprendo una modale con effetto glassmorphism per migliorare la leggibilità del contenuto.
 
-### [2026-01-08] Timeline Layout Critical Fix
-- **Objective**: Resolve layout regression where content was overlapping and unreadable on both mobile and desktop.
-- **Changes**:
-  - **Grid System**: Enforced `w-5/12` width for both content and spacers on ALL screens. This preserves exactly 1/6th (16.6%) of width in the center for the axis/icon.
-  - **Typography**: Implemented responsive font sizing (`text-[10px]` on mobile, `text-sm` on desktop) to ensure text fits inside the zigzag boxes.
-  - **Z-Index**: Fixed layering to ensure text doesn't overlap icons.
-  
-### [2026-01-08] Timeline Animations
-- **Objective**: Add "fade-in on scroll" effect for a premium feel.
-- **Changes**:
-  - **JS**: Added `IntersectionObserver` in `assets/js/main.js` to detect when timeline items enter the viewport.
-  - **CSS**: Added utility classes (`opacity-0`, `translate-y-8`, `transition-all`, `duration-700`) to `layouts/partials/components/timeline.html`.
-  - **JS**: Added `IntersectionObserver` in `assets/js/main.js` to detect when timeline items enter the viewport.
-  - **CSS**: Added utility classes (`opacity-0`, `translate-y-8`, `transition-all`, `duration-700`) to `layouts/partials/components/timeline.html`.
-  - **Behavior**: Items start hidden and slightly lower; when scrolled to, they smoothly fade in and float up.
+## Problema Risolto
 
-### [2026-01-08] About Page - Bento Grid Redesign
-- **Objective**: Transform the About page from text-heavy to a visual, modular layout.
-- **Changes**:
-  - **New Layout**: Created `layouts/about/list.html` implementing a responsive Grid layout (CSS Grid).
-  - **Structured Data**: Migrated content to `data/about.yml` (Vision, Goal, Stats, Passions).
-  - **Visuals**: Added stats, icons, and a large profile card with overlay bio.
-  - **Refinement**: Consolidated content from previous About page (Bio details, Education history, Quote). Modified layout to handle nested quotes correctly in `aria-label`.
-  - **Debugging**: Investigated CORS errors referencing port 53314. Confirmed no hardcoded references in code. Identified cause as stale Service Worker from VS Code Live Server.
-  - **Re-design**: Redesigned the "Links" page to match the "About" page Bento Grid style. Created `data/links.yml` for unified content management and `layouts/links/list.html` for the grid layout.
-  - **Styling**: Diversified color palettes for link categories (Slate, Orange, Rose, Emerald, Violet) to avoid repetition. Refined transparency of buttons (`bg-white/30`) for a cohesive "glass" effect.
-  - **Bugfix**: Forced removal of leading spaces in "About" page links using `sed` to resolve persistent 404 errors caused by `%20` encoding.
+Le card della timeline erano troppo piccole su mobile, rendendo difficile la lettura completa del contenuto (testo troncato con `line-clamp-4`). La soluzione implementata permette di visualizzare tutti i dettagli in una modale elegante e moderna.
 
-### [2026-01-08] Enhance Carousel UX
-- **Objective**: Improve the "Some Insight" carousel usability by adding navigation arrows and autoplay.
-- **Changes**:
-  - Created `assets/js/main.js` (overriding theme default) to update Swiper configuration:
-    - Enabled `autoplay` (delay: 5000ms).
-    - Enabled `navigation` (next/prev buttons).
-  - Modified `layouts/index.html` to include the HTML elements for Swiper navigation arrows (`.swiper-button-next`, `.swiper-button-prev`).
-  - **Styles Applied**:
-    - Circular buttons (`!w-12 !h-12 !rounded-full`) with shadow (`shadow-lg`).
-    - Background: White (Light Mode) / Dark Gray (Dark Mode).
-    - Icons: FontAwesome chevron icons (`fa-chevron-right/left`) instead of default text.
-    - Hover Effect: Primary background color with white icon.
+## File Modificati
 
-### [2026-01-08] Refine Links Page Styling
-- **Objective**: Fix spacing issues and enhance icon styling on the Links page.
-- **Changes**:
-  - Refactored `content/english/links.md` (from Education section downwards):
-    - Fixed HTML nesting and removed extra new lines.
-    - Assigned semantic classes to icons (`icon-diploma`, `icon-bachelor`, `icon-fortran`, `icon-python`, `icon-bioinformatics`, `icon-college`, `icon-english`).
-  - Updated `assets/css/custom.css`:
-    - Defined distinct gradient styles for each new icon class to increase visual appeal and professionalism:
-      - **Diploma**: Amber/Orange.
-      - **Bachelor**: Red/Dark Red.
-      - **Fortran**: Purple/Dark Purple.
-      - **Python**: Blue/Yellow.
-      - **Bioinformatics**: Emerald/Teal.
-      - **College**: Indigo/Blue.
-      - **English**: Blue gradient.
-      - **Coursera**: Brand Blue Gradient.
+### 1. `/layouts/partials/components/timeline.html`
 
-### [2026-01-08] Add Coursera Certificate
-- **Action**: Added "Supervised Machine Learning" certificate to the Links page.
-- **Details**:
-  - Added new `.link-icon.icon-coursera` class in `assets/css/custom.css` (Coursera Blue).
-  - Added new link card in `content/english/links.md` under "Certificates" section.
-  - **Required Action**: User must upload `Coursera_ML.pdf` to `static/docs/`.
+#### Modifiche alle Card
+- **Aggiunta classe:** `timeline-card` per la selezione JavaScript
+- **Aggiunto cursore:** `cursor-pointer` per indicare cliccabilità
+- **Aggiunti attributi data:**
+  - `data-date`: data dell'evento
+  - `data-title`: titolo
+  - `data-organization`: organizzazione
+  - `data-description`: descrizione completa
+  - `data-icon`: classe icona FontAwesome
+  - `data-tags`: tags separati da pipe `|`
 
-### [2026-01-08] Repository Cleanup
-- **Objective**: Remove unused files and backup directories to reduce repository size and improve organization.
-- **Changes**:
-  - **Deleted Directory**: `backup-images-20251015-195634/` (contained ~90 unused files).
-  - **Deleted Unused Images**:
-    - `assets/images/banner_prova.png`
-    - `assets/images/banner_old.png`
-    - `assets/images/service-2.png`
-    - `assets/images/service-3.png`
-    - `assets/images/banner_black.jpg`
-    - `assets/images/banner.jpg`
-    - `assets/images/banner intero.png`
-    - `assets/logo/black_logo.png`
-    - `assets/logo/white_logo.png`
-  - **Verification**: Ran `npm run build` to ensure no broken references (Build successful).
+#### Struttura Modale Aggiunta
+- **Container modale:** posizionamento fisso full-screen con `z-50`
+- **Backdrop:** sfondo nero semi-trasparente con `backdrop-blur-lg` (effetto glassmorphism)
+- **Card modale:** 
+  - Layout centrato, responsive (`max-w-2xl`)
+  - Altezza massima `90vh` con scroll verticale
+  - Background bianco/dark mode
+  - Border radius `rounded-2xl`
+  - Shadow elevata
+- **Elementi UI:**
+  - Pulsante chiusura (X) in alto a destra
+  - Icona circolare centrata in alto
+  - Header con data, titolo, organizzazione
+  - Descrizione completa senza troncature
+  - Tags in stile pill centrati
+- **Animazioni:** opacity e scale per apertura/chiusura smooth
 
-### [2026-01-08] Fix: About Page Template Error
-- **Problem**: The server failed to start with `Error: template: about/list.html:28: unterminated quoted string`.
-- **Cause**: A string inside a Go template action `{{ ... }}` was split across two lines, which is not supported in this context.
-- **Solution**: Joined the split string in `layouts/about/list.html` (line 28) into a single line.
-- **Verification**: Ran `npm run dev` and confirmed the server starts successfully.
+### 2. `/assets/js/main.js`
 
-### [2026-01-08] Eliminate Tags Section
-- **Objective**: Completely remove the "Tags" section from the visible website.
-- **Changes**:
-  - **Templates**:
-    - `layouts/categories/list.html`: Removed `widgets/tech-tags` and `widgets/blog-tags` partial references.
-    - `layouts/blog/single.html`: Removed the HTML block attempting to render tags at the bottom of posts.
-  - **Configuration**:
-    - `config/_default/params.toml`: Set `search.show_tags` to `false` to prevent tags from appearing in search results.
+#### Funzionalità JavaScript Aggiunte
 
-### [2026-01-09] Reduce Logo Size
-- **Objective**: Reduce the visual size of the website logo.
-- **Changes**:
-  - **Configuration**:
-    - `config/_default/params.toml`: Reduced `logo_width` from `160px` to `120px` and `logo_height` from `32px` to `24px`.
+**Event Listener per Apertura Modale:**
+- Click su `.timeline-card` apre la modale
+- Estrazione dati dagli attributi `data-*`
+- **Decodifica delle classi icona** con `decodeURIComponent()` per gestire gli spazi URL-encoded
+- Popolamento dinamico degli elementi della modale
+- Rendering dinamico dei tags
+- **Applicazione effetto blur al contenuto di sfondo** (`filter: blur(3px)`) - applicato a tutti i figli diretti del body tranne la modale
+- Animazione di apertura con fade-in e scale
+- Blocco dello scroll del body quando la modale è aperta
 
-### [2026-01-09] Security Audit & Leak Remediation
-- **Objective**: Remediate a leaked Google API Key associated with a GitHub Secret Scanning alert.
-- **Changes**:
-  - **Configuration**:
-    - `config/_default/params.toml`: Completely removed the `[google_map]` section. Use of Google Maps has been discontinued on the site.
-    - `themes/hugoplate/layouts/contact/list.html`: Removed the map container and associated scripts.
-  - **Scanning**:
-    - Performed a grep scan of the codebase for other potential leaks. Found a false positive in `swiper-bundle.css` (likely base64 noise), confirmed no other active constraints.
-  - **Documentation**:
-    - Updated `TO_SIMO_DO.md` with immediate instructions to revoke the compromised key. Removed instruction to generate a new key.
+**Event Listener per Chiusura Modale:**
+- Click sul pulsante X
+- Click sul backdrop (area fuori dalla card)
+- Pressione del tasto ESC
+- **Rimozione effetto blur dal contenuto di sfondo**
+- Animazione di chiusura con fade-out e scale
+- Ripristino dello scroll del body
 
-### [2026-01-09] Workflow Cleanup
-- **Objective**: Eliminate redundant and failing workflows.
-- **Changes**:
-  - `github/workflows/translate-deploy.yml`: Deleted this file. The "Auto-translate" logic was experimental and no longer needed. Deployment is now handled exclusively by the standard `hugo.yml` workflow.
+**Funzione `closeModal()`:**
+- Gestisce l'animazione di chiusura
+- Timeout di 300ms per completare l'animazione CSS
+- Rimuove la classe `flex` e aggiunge `hidden` dopo l'animazione
 
-### [2026-01-12] Create New Thought Articles
-- **Objective**: Create two new articles in the "thoughts" category.
-- **Changes**:
-  - Created `content/italian/blog/thought/the-star-counter/index.md`
-  - Created `content/italian/blog/thought/live-the-dream/index.md`
-  - set `draft: true` initially.
+---
 
-### [2026-01-12] Fix: Mobile Search Bar Responsiveness
-- **Objective**: Adapt the search bar modal for mobile users as it was previously overflowing the screen and unusable.
-- **Changes**:
-  - **CSS**: Added a media query `@media (max-width: 768px)` in `assets/css/custom.css`.
-  - **Layout**: Adjusted `.search-modal > div` to have `width: 95%`, `max-width: 95vw`, and `max-height: 80vh`. 
-  - **Styling**: Tweaked padding and font sizes for better touch usability on smaller screens.
-  - **Verification**: Manually verified that the modal acts as a proper overlay on mobile viewports.
+## Campi Estesi nella Modale (NEW)
 
-  - **Verification**: Manually verified that the modal acts as a proper overlay on mobile viewports.
+### Campi Opzionali Disponibili
 
-### [2026-01-12] Enhance Blog Card UX
-- **Objective**: Make the entire blog card clickable and fix a template syntax error.
-- **Changes**:
-  - **Template**: Refactored `layouts/partials/components/blog-card.html`.
-  - **Logic**: Changed the outer `div` to an `a` tag linking to `.RelPermalink`.
-  - **Fix**: Replaced nested `<a>` tags with `<span>` elements to maintain valid HTML. Verified syntax of `partial "image"` call.
-- **Result**: Users can click anywhere on the card to navigate to the article.
+La modale supporta tre campi aggiuntivi **opzionali** definibili in `data/timeline.yml`:
 
-### [2026-01-12] Add External Links to Blog Cards
-- **Objective**: Display external social/project links directly on the blog card for quick access.
-- **Changes**:
-  - **Template**: `layouts/partials/components/blog-card.html`.
-  - **Logic**: Refactored card to use an absolute link mask (`z-0`) for the article click, and a separate `z-20` layer for external link icons.
-  - **Data source**: Uses the `links` list in frontmatter (title, website).
-  - **Icons**: Auto-assigns FontAwesome icons based on URL keywords (instagram/youtube/tiktok/github).
-  - **Dark Mode**: Fixed visibility issue by enforcing `dark:bg-black/90` and `dark:text-white` for external link buttons.
+#### 1. Extended Description
+```yaml
+extended_description: |
+  Testo multi-paragrafo più dettagliato.
+  Supporta multiple righe e formattazione.
+```
+- Se presente, sostituisce la descrizione breve nella modale
+- Supporta testo multi-paragrafo con `whitespace-pre-line`
+- Ideale per fornire contesto e dettagli aggiuntivi
 
-### [2026-01-12] SEO & GEO Optimization (Generative Engine Optimization)
-- **Objective**: Optimize the site and data structure for visibility in LLM answers (GEO - Generative Engine Optimization).
-- **Changes**:
-  - **Data Unification**:
-    - **Refactor**: Deprecated `data/social.json`. Migrated all social link rendering logic (e.g., in `footer.html`) to use `data/about.yml` as the Single Source of Truth.
-  - **Schema.org (JSON-LD)**:
-    - **Dynamic Data**: Refactored `layouts/partials/seo/schema-person.html` to pull `passions`, `vision`, and `socials` directly from `about.yml`.
-    - **Entity Enforcement**: Added hardcoded "KnowsAbout" entries for "Computer Science", "Artificial Intelligence", "Large Language Models", and "High-Performance Computing" to reinforce entity expertise.
-  - **Semantics**:
-    - **About Page**: Added `id="profile-bio"` to the main biographical paragraph in `layouts/about/list.html` to assist with semantic anchoring.
+#### 2. Achievements
+```yaml
+achievements:
+  - "Primo traguardo raggiunto"
+  - "Secondo risultato importante"
+  - "Terzo achievement"
+```
+- Array di stringhe rappresentanti i traguardi raggiunti
+- Renderizzati come lista con icone checkmark verdi
+- Background grigio chiaro per evidenziare ogni item
+- Sezione con titolo "Key Achievements" e icona trofeo
+
+#### 3. Links
+```yaml
+links:
+  - label: "Nome Link"
+    url: "https://example.com"
+  - label: "Altro Link"
+    url: "https://example2.com"
+```
+- Array di oggetti con `label` e `url`
+- Renderizzati come bottoni styled con icona external link
+- Apertura in nuova tab con `target="_blank"`
+- Hover effects con cambio colore
+- Sezione con titolo "Related Links" e icona link
+
+### Rendering Condizionale
+
+- Le sezioni sono **nascoste di default** con classe `hidden`
+- JavaScript verifica la presenza di dati prima di renderizzare
+- Se un campo non è presente o è vuoto, la sua sezione non viene mostrata
+- Backward compatibility: card senza campi estesi funzionano normalmente
+
+### Styling
+
+- **Achievements**: cards con sfondo `bg-gray-50 dark:bg-darkmode-light`, icone `fa-check-circle` verdi
+- **Links**: bottoni outlined blu con hover fill, icona `fa-arrow-up-right-from-square`
+- **Dark mode**: supporto completo per tutti i nuovi elementi
+
+
+## Design e UX
+
+### Fix Stacking Context (Importante)
+La modale viene automaticamente spostata nel `body` tramite JavaScript all'inizializzazione:
+```javascript
+document.body.appendChild(modal);
+```
+Questo risolve il problema dello stacking context, evitando che la modale rimanga dietro altri elementi della pagina. Senza questo fix, la modale resterebbe dentro il componente timeline con z-index limitato.
+
+### Glassmorphism
+L'effetto glassmorphism è ottenuto con:
+- `backdrop-blur-lg`: sfocatura dello sfondo
+- `bg-black/50`: overlay semi-trasparente
+- Crea un effetto moderno e premium simile a iOS
+
+### Responsive Design
+- **Mobile:** padding ridotto (`p-4`), font size ottimizzato
+- **Desktop:** padding aumentato (`md:p-8`), card più ampia
+
+### Accessibilità
+- Chiusura con tasto ESC
+- Prevenzione scroll del body quando modale aperta
+- Indicatore visivo del cursore pointer sulle card
+- Hover effect sulle card (`hover:scale-[1.02]`)
+
+### Animazioni
+- **Apertura:** fade-in (opacity 0→1) + scale (95%→100%)
+- **Chiusura:** fade-out (opacity 1→0) + scale (100%→95%)
+- **Durata:** 300ms per transizioni fluide
+
+## Dark Mode
+Tutti gli elementi supportano automaticamente il dark mode con classi Tailwind:
+- `dark:bg-darkmode-body`: background modale
+- `dark:bg-darkmode-light`: background pulsante chiusura
+- `dark:text-white`: testi
+- `dark:bg-gray-700`: tags
+- `dark:text-gray-300`: testi secondari
+
+## Testing Raccomandato
+
+1. **Desktop:** Verificare funzionalità su browser desktop (Chrome, Firefox, Safari)
+2. **Mobile:** Testare su dispositivi reali o DevTools con emulazione mobile
+3. **Dark Mode:** Verificare aspetto in entrambe le modalità
+4. **Accessibilità:** Testare chiusura con ESC, click backdrop, scroll bloccato
+
+## Note Tecniche
+
+- Il componente è completamente autonomo e non richiede librerie esterne
+- Utilizza Vanilla JavaScript ES6+
+- Compatibile con Tailwind CSS v3+
+- Supporta FontAwesome per le icone
+- La modale viene renderizzata una sola volta nel DOM e riutilizzata
+
+---
+
+**Implementato da:** Antigravity AI Assistant  
+**Versione Hugo:** Compatible with current setup

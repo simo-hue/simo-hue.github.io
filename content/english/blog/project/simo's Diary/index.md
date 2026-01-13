@@ -3,7 +3,7 @@ title: Simo's Online & Digital Diary
 date: 2023-07-28
 description: What's the aim of this project? 
 categories: [projects]
-slug: home
+slug: simos-diary
 tags:
     - Diary
     - Life film

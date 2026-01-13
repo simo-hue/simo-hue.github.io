@@ -5,61 +5,192 @@ items:
     organization: "University of Verona"
     description: "Deepening my knowledge in algorithms, software engineering, and AI. Building the foundations for my future in tech."
     icon: "fa-solid fa-graduation-cap"
-    tags: ["Education", "Verona"]
+    tags: ["Bachelor Degree"]
     align: "left"
+    extended_description: |
+      At the University of Verona, I specialized in computer science while living at Collegio Don Mazza, a merit-based university residence that fostered academic excellence and personal growth. Meanwhile I developed my deep interest for Artificial Intelligence and High-Performance Computing.
+      
+      My university journey culminated in my thesis project on Leonardo HPC at CINECA, where I developed an LLM-based system to predict the next tourist attraction within the city of Verona. This research combined machine learning with high-performance computing on NVIDIA A100 GPUs, resulting in my first academic publication.
+      
+      The project achieved significant improvements in tourism flow prediction accuracy and demonstrated the potential of combining Large Language Models with HPC infrastructure for real-world applications.
+    achievements:
+      - "Resident at Collegio Don Mazza (merit-based university residence)"
+      - "Specialized in Computer Science"
+      - "Developed thesis project on Leonardo HPC at CINECA"
+      - "Published first academic paper on tourism prediction using LLMs"
+      - "Worked with NVIDIA A100 GPUs for large-scale machine learning"
+    links:
+      - label: "Degree Certificate"
+        url: "/docs/Collegio.pdf"
+      - label: "Publication Article"
+        url: "/blog/publication/llm-tourism-mobility-predictor/"
+      - label: "Research PDF"
+        url: "/docs/paper.pdf"
 
   - date: "2023 - Present"
     title: "Open Source Projects Dev"
     organization: "GitHub"
-    description: "Creating and maintaining open source projects. From 'Mattioli.OS' to web experiments, trying to give back to the community."
+    description: "Creating and maintaining open source projects. From 'Mattioli.OS' To 'Wealth Compass' or other useful tools for daily life."
     icon: "fa-brands fa-github"
-    tags: ["Tech", "Code"]
+    tags: ["Project"]
     align: "right"
+    extended_description: |
+      Here are some of the most useful tools I've created:
+      • 'Mattioli.OS': for daily habits and long term goals
+      • 'Wealth Compass': for tracking at 360° your financial situation
+      • 'YouTube Translator': Translate the title and description in all the languages supported by YouTube.
+
+    links:
+      - label: "Mattioli.OS"
+        url: "https://github.com/simo-hue/habit-tracker"
+      - label: "Wealth Compass"
+        url: "https://github.com/simo-hue/wealth-compass"
+      - label: "YouTube Translator"
+        url: "https://github.com/simo-hue/YouTube-Video-Localization-Script"
 
   - date: "2023"
     title: "Simo's Diary"
     organization: "YouTube"
     description: "My digital memory box. A channel where I collect life moments, adventures, and personal growth thoughts to inspire others and keeping track of my path."
     icon: "fa-brands fa-youtube"
-    tags: ["Content Creation", "Vlog"]
+    tags: ["Content Creation"]
     align: "left"
+    extended_description: |
+      A digital extension of my daily journaling habit on paper. On YouTube, I share:
+      • genuine, unedited moments
+      • no complex storytelling
+      • no elaborate editing
+      • just pure emotions and transparency
+      
+      These vlogs are my way of preserving raw, authentic memories that I can revisit in the future. From life reflections to adventures, every video is a snapshot of real experiences, keeping the same honest spirit of my handwritten journal but in a format I can relive visually years from now.
+    achievements:
+      - "Maintained consistent daily journaling practice (paper + digital)"
+      - "Created authentic video diary documenting personal growth"
+      - "Built genuine connection through transparent storytelling"
+      - "Preserved raw memories for future reflection"
+    links:
+      - label: "Article"
+        url: "/blog/project/simos-diary/"
+      - label: "YouTube Channel"
+        url: "https://youtube.com/@simosdiary2003"
     
   - date: "2023"
     title: "Mountain Fauna Lover"
     organization: "Project"
     description: "A tribute to the alpine wildlife. Exploring and documenting the hidden life of mountain animals to raise awareness and share their beauty."
     icon: "fa-solid fa-camera-retro"
-    tags: ["Photography", "Nature"]
+    tags: ["Content Creation"]
     align: "right"
+    extended_description: |
+      A wildlife photography and videography project focused on alpine fauna. Using professional Swarovski Optik equipment, I capture intimate moments of mountain animals—from ibex and chamois to marmots and eagles—in their natural habitat.
+      
+      The project spans Instagram for photography, YouTube for documentary-style content, and TikTok for short-form wildlife stories. 
+      
+      My goal is simple: share the beauty of these incredible creatures and the mountain landscapes that house them.
+    achievements:
+      - "Partnership with SWAROVSKI OPTIK for wildlife equipment"
+      - "Documented rare alpine species in their natural habitat"
+      - "Built engaged community across Instagram, YouTube, and TikTok"
+      - "Featured in exclusive wildlife events and collaborations"
+    links:
+      - label: "Article"
+        url: "/blog/project/mountain-fauna-lover/"
+      - label: "Instagram"
+        url: "https://instagram.com/mountainfaunalover"
+      - label: "YouTube"
+        url: "https://youtube.com/@mountainfaunalover"
+      - label: "TikTok"
+        url: "https://www.tiktok.com/@mountainfaunalove"
 
   - date: "Summer 2023"
     title: "International Volunteer"
     organization: "Brazil"
     description: "A life-changing experience helping in education projects. Learned the true value of community and empathy."
     icon: "fa-solid fa-hand-holding-heart"
-    tags: ["Volunteering", "Growth"]
+    tags: ["Volunteering"]
     align: "left"
+    extended_description: |
+      Three transformative weeks in Brazil with Collegio Don Mazza, teaching children in favelas and disadvantaged communities across Recife, João Pessoa, and Itapororoca.
+      
+      My favorite project was Beira da Linha, where I assisted teachers and bonded with children from difficult backgrounds. The experience included playing barefoot football on concrete, distributing food to those in need, and visiting communities like Olinda and Alto do Mateus.
+      
+      As Nelson Mandela said: "Education is the most powerful weapon you can use." I returned with a deeper understanding of community, empathy, and the impact one person can make.
+    achievements:
+      - "Taught children in favelas and disadvantaged communities"
+      - "Assisted at Beira da Linha after-school education project"
+      - "Collaborated on social inclusion and literacy programs"
+      - "Developed teamwork, leadership, and cross-cultural skills"
+      - "Held testimonial seminars in Rome, Padua, and Verona"
+    links:
+      - label: "Attendance Certificate"
+        url: "/blog/experience/brazil-volunteer-teaching-experience/attendance.pdf"
+      - label: "Experience Video"
+        url: "https://www.youtube.com/watch?v=ptVTxfSqaCo"
 
   - date: "2022"
     title: "Technical Diploma"
     organization: "ITT Marconi Rovereto"
     description: "Graduated in Computer Science. Where it all started, writing my first lines of code and discovering my passion."
     icon: "fa-solid fa-scroll"
-    tags: ["Education", "Rovereto"]
+    tags: ["High School"]
     align: "right"
+    extended_description: |
+      This is where my journey in computer science truly began. At ITT Marconi in Rovereto, I discovered my passion for programming and technology, writing my first lines of code and learning the fundamentals that would shape my future career.
+      
+      Five years of intensive study in computer science, electronics, and telecommunications provided me with a solid technical foundation. From basic programming concepts to advanced algorithms, from hardware architecture to network systems, every lesson fueled my curiosity and determination to pursue this field.
+      
+      The diploma marked not just the end of high school, but the beginning of a lifelong passion for technology and innovation.
+    achievements:
+      - "Graduated with a specialization in Computer Science"
+      - "Mastered programming fundamentals and multiple languages"
+      - "Developed strong problem-solving and analytical skills"
+      - "Built foundation in electronics and telecommunications"
+      - "Successfully launched career path in technology"
+    links:
+      - label: "Technical Diploma Certificate"
+        url: "/docs/Diploma.pdf"
 
   - date: "2021"
     title: "Downhill World Cup Staff"
     organization: "Val di Sole"
     description: "Trackside operations during the UCI World Cup. Managed athlete transponders at the finish line and ensured spectator safety along the race course."
     icon: "fa-solid fa-person-biking"
-    tags: ["Volunteering", "Sport"]
+    tags: ["Volunteering"]
     align: "left"
+    extended_description: |
+      Combining my love for mountain biking with volunteering, I worked trackside at the UCI Downhill World Cup in Val di Sole. As someone passionate about the adrenaline and technical skills of downhill riding, being so close to world-class athletes was incredible.
+      
+      My role involved managing athlete transponders at the finish line and ensuring spectator safety along the race course—experiencing firsthand the speed, precision, and courage that define this sport I love.
+    achievements:
+      - "Staff member at UCI Downhill World Cup"
+      - "Managed athlete tracking systems at finish line"
+      - "Ensured spectator safety on race course"
+      - "Experienced world-class downhill racing up close"
 
   - date: "Since 2003"
     title: "Outdoor Explorer"
     organization: "Trentino-Alto Adige"
     description: "Born and raised in the mountains. Hiking, skiing, and riding motorcycles are not just hobbies, they are my way to recharge."
     icon: "fa-solid fa-mountain-sun"
-    tags: ["Life", "Passion"]
+    tags: ["Passion"]
     align: "left"
+    extended_description: |
+      **Born and raised in the mountains of Trentino-Alto Adige, the outdoors has always been my sanctuary. Year after year, my passion for hiking, skiing, and exploring mountain landscapes evolved into something bigger: the Mountain & Fauna Lover project.
+      
+      What started almost as a joke became a platform to share my love for alpine wildlife and nature photography. Through Instagram, YouTube, and TikTok, I document wildlife encounters, mountain adventures, and the beauty of the natural world. This passion even led to collaborations with companies like SWAROVSKI OPTIK.
+      
+      The mountains aren't just where I recharge—they're where I discovered my purpose: celebrating and protecting the wild places and creatures that inspire me every day.
+    achievements:
+      - "Created and grew Mountain & Fauna Lover across social platforms"
+      - "Collaborated with SWAROVSKI OPTIK for wildlife content"
+      - "Built community around alpine wildlife photography"
+      - "Documented rare mountain fauna and conservation stories"
+    links:
+      - label: "Article"
+        url: "/blog/project/mountain-fauna-lover/"
+      - label: "Instagram"
+        url: "https://instagram.com/mountainfaunalover"
+      - label: "YouTube"
+        url: "https://youtube.com/@mountainfaunalover"
+      - label: "TikTok"
+        url: "https://www.tiktok.com/@mountainfaunalove"
