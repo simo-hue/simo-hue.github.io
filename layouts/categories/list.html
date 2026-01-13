@@ -14,7 +14,7 @@
         Cyan: bg-cyan-50 dark:bg-cyan-900/10 hover:bg-cyan-100 border-cyan-100 dark:border-cyan-800/30 text-cyan-700 dark:text-cyan-400 text-cyan-600 dark:text-cyan-500
         Pink: bg-pink-50 dark:bg-pink-900/10 hover:bg-pink-100 border-pink-100 dark:border-pink-800/30 text-pink-700 dark:text-pink-400 text-pink-600 dark:text-pink-500
       -->
-      <div class="lg:col-8">
+      <div class="col-12">
         <div class="row">
           {{ $categoryConfig := dict
           "books" (dict "desc" "Recensioni e riflessioni sui libri che ho letto" "color" "orange" "icon" "📚")
@@ -45,7 +45,7 @@
           {{ $darkBgClass = "dark:bg-white/5" }}
           {{ end }}
 
-          <div class="md:col-6 mb-8 flex">
+          <div class="md:col-6 lg:col-4 mb-8 flex">
             <a href="{{ .Page.Permalink }}"
               class="group block p-8 rounded-3xl w-full bg-{{ $color }}-50 {{ $darkBgClass }} hover:bg-{{ $color }}-100 transition-colors border border-{{ $color }}-100 dark:border-{{ $color }}-800/30 flex flex-col justify-between">
               <div>
@@ -79,7 +79,6 @@
         </div>
         {{ partial "components/pagination.html" . }}
       </div>
-      {{ end }}
 
       <!-- sidebar -->
       <div class="lg:col-4">
@@ -90,6 +89,7 @@
         {{ partial "widgets/blog-categories" . }}
         {{ end }}
       </div>
+      {{ end }}
     </div>
   </div>
 </section>
