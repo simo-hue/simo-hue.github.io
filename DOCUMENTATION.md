@@ -388,3 +388,48 @@ const lightbox = GLightbox({
 - `layouts/partials/image.html` (NEW)
 - `layouts/_default/_markup/render-image.html` (NEW)
 - `assets/js/main.js` (MODIFIED)
+
+---
+
+# DOCUMENTATION - General Optimizations
+
+**Data:** 13 Gennaio 2026
+**Funzionalità:** Ottimizzazione Performance e Privacy (Font Locali, Pulizia Header, Minificazione)
+
+---
+
+## Panoramica
+
+Sono state implementate ottimizzazioni "sotto il cofano" per migliorare la velocità di caricamento, la privacy (GDPR) e l'efficienza del sito.
+
+## Descrizione Tecnica
+
+### 1. Self-hosting dei Font (Privacy & Performance)
+I font Google (`Heebo` e `Signika`) sono stati scaricati e serviti localmente.
+- **Rimosso**: Collegamento esterno a `fonts.googleapis.com`.
+- **Aggiunto**: File font in `assets/fonts/`.
+- **CSS**: Creato `assets/css/fonts.css` con le definizioni `@font-face`.
+- **Vantaggi**: Minori lookup DNS, nessun tracciamento Google, conformità GDPR.
+
+### 2. Pulizia `style.html`
+Il file `layouts/partials/essentials/style.html` è stato sovrascritto per:
+- Integrare il caricamento dei font locali.
+- Rimuovere `preconnect` e `dns-prefetch` obsoleti o inutilizzati (es. Facebook, Twitter, LinkedIn platform scripts che non usiamo).
+
+### 3. Minificazione HTML
+Abilitata la minificazione HTML in `hugo.toml`:
+```toml
+[minify.tdewolff.html]
+  keepWhitespace = false
+```
+Questo riduce la dimensione delle pagine HTML rimuovendo spazi bianchi e commenti non necessari.
+
+## File Modificati/Creati
+- `assets/fonts/*` (NEW)
+- `assets/css/fonts.css` (NEW)
+- `layouts/partials/essentials/style.html` (OVERRIDE)
+- `layouts/partials/essentials/style.html` (OVERRIDE)
+- `hugo.toml` (MODIFIED)
+
+### 4. PWA Polish
+Aggiornato `layouts/index.webmanifest` per utilizzare il colore primario `#121212` invece del bianco per `theme_color` e `background_color`. Questo migliora l'integrazione visuale su Android/iOS quando l'app viene installata.
