@@ -123,6 +123,32 @@ Quando Hugo trova `content/passion/_index.md`:
 
 Senza `_index.md`, Hugo interpreta la directory come taxonomy/collection e usa il template di default.
 
+### Pagine Articolo Individuali
+
+Sono state create 6 pagine markdown vuote per permettere all'utente di scrivere contenuti su ogni passione:
+
+| File | Titolo | Descrizione | URL |
+|------|--------|-------------|-----|
+| `technology.md` | Technology | My technical and programming projects | `/passion/technology` |
+| `sport.md` | Sport | My sporting activities and adventures | `/passion/sport` |
+| `personal-growth.md` | Personal Growth | Reflections on life and personal growth | `/passion/personal-growth` |
+| `content-creation.md` | Content Creation | My journey in creating content | `/passion/content-creation` |
+| `cars.md` | Cars | My passion for engines and everything that moves fast | `/passion/cars` |
+| `bikes.md` | Bikes | Adventures on two wheels and mountain trails | `/passion/bikes` |
+
+**Struttura Frontmatter:**
+```yaml
+---
+title: "[Passion Name]"
+description: "[Description]"
+draft: false
+---
+
+<!-- Placeholder comment for content -->
+```
+
+Ogni pagina è pronta per essere popolata con contenuto dall'utente.
+
 ---
 
 **Implementato da:** Antigravity AI Assistant  
