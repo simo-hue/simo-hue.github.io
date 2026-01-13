@@ -4,7 +4,70 @@
 <section class="section">
   <div class="container">
     <div class="row gx-5">
-      <!-- posts -->
+      <!-- Check if this is the main categories page (showing all categories) -->
+      {{ if .Data.Terms }}
+      <!-- This is /categories/ - show all categories -->
+      <!-- Tailwind Class Safelist for Dynamic Colors -->
+      <!-- 
+        Gray: bg-gray-50 dark:bg-white/5 hover:bg-gray-100 border-gray-100 dark:border-gray-800/30 text-gray-700 dark:text-gray-400 text-gray-600 dark:text-gray-500
+        Yellow: bg-yellow-50 dark:bg-yellow-900/10 hover:bg-yellow-100 border-yellow-100 dark:border-yellow-800/30 text-yellow-700 dark:text-yellow-400 text-yellow-600 dark:text-yellow-500
+        Cyan: bg-cyan-50 dark:bg-cyan-900/10 hover:bg-cyan-100 border-cyan-100 dark:border-cyan-800/30 text-cyan-700 dark:text-cyan-400 text-cyan-600 dark:text-cyan-500
+        Pink: bg-pink-50 dark:bg-pink-900/10 hover:bg-pink-100 border-pink-100 dark:border-pink-800/30 text-pink-700 dark:text-pink-400 text-pink-600 dark:text-pink-500
+      -->
+      <div class="lg:col-8">
+        <div class="row">
+          {{ $categoryConfig := dict
+          "books" (dict "desc" "Recensioni e riflessioni sui libri che ho letto" "color" "orange" "icon" "📚")
+          "thoughts" (dict "desc" "Pensieri e riflessioni personali sulla vita e la crescita personale" "color" "purple"
+          "icon" "💭")
+          "passions" (dict "desc" "Le mie passioni: montagna, moto, sci e molto altro" "color" "red" "icon" "❤️")
+          "projects" (dict "desc" "Progetti creativi e personali che ho realizzato" "color" "gray" "icon" "🛠️")
+          "tech-projects" (dict "desc" "Progetti tecnici e di programmazione" "color" "indigo" "icon" "💻")
+          "tech projects" (dict "desc" "Progetti tecnici e di programmazione" "color" "indigo" "icon" "💻")
+          "publications" (dict "desc" "Pubblicazioni scientifiche e articoli accademici" "color" "yellow" "icon" "📄")
+          "experiences" (dict "desc" "Esperienze significative e viaggi memorabili" "color" "green" "icon" "🌍")
+          }}
+
+          {{ range .Data.Terms.ByCount }}
+          {{ $config := index $categoryConfig (lower .Page.Title) }}
+          {{ $desc := "Articoli e contenuti vari" }}
+          {{ $color := "gray" }}
+          {{ $icon := "📂" }}
+
+          {{ if $config }}
+          {{ $desc = $config.desc }}
+          {{ $color = $config.color }}
+          {{ $icon = $config.icon }}
+          {{ end }}
+
+          {{ $darkBgClass := printf "dark:bg-%s-900/10" $color }}
+          {{ if eq $color "gray" }}
+          {{ $darkBgClass = "dark:bg-white/5" }}
+          {{ end }}
+
+          <div class="md:col-6 mb-8 flex">
+            <a href="{{ .Page.Permalink }}"
+              class="group block p-8 rounded-3xl w-full bg-{{ $color }}-50 {{ $darkBgClass }} hover:bg-{{ $color }}-100 transition-colors border border-{{ $color }}-100 dark:border-{{ $color }}-800/30 flex flex-col justify-between">
+              <div>
+                <h3
+                  class="text-xl font-bold text-{{ $color }}-700 dark:text-{{ $color }}-400 mb-2 group-hover:translate-x-1 transition-transform">
+                  <span class="mr-2 inline-block">{{ $icon }}</span>{{ .Page.Title | title }}
+                  <i class="fa-solid fa-arrow-right text-sm ml-2 opacity-0 group-hover:opacity-100 transition-opacity"
+                    aria-hidden="true"></i>
+                </h3>
+                <p class="text-sm opacity-70 mb-4">{{ $desc }}</p>
+              </div>
+              <div
+                class="text-xs font-semibold text-{{ $color }}-600 dark:text-{{ $color }}-500 uppercase tracking-wider">
+                {{ .Count }} {{ if eq .Count 1 }}articolo{{ else }}articoli{{ end }}
+              </div>
+            </a>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+      {{ else }}
+      <!-- This is a specific category page - show posts -->
       <div class="lg:col-8">
         <div class="row">
           {{ $paginator:= .Paginate .RegularPages }}
@@ -16,6 +79,8 @@
         </div>
         {{ partial "components/pagination.html" . }}
       </div>
+      {{ end }}
+
       <!-- sidebar -->
       <div class="lg:col-4">
         <!-- widget -->

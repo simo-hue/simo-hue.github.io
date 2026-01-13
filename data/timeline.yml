@@ -1,5 +1,13 @@
 enable: true
 items:
+  - date: "2025-?"
+    title: "Coming Soon"
+    organization: "Stay Tuned"
+    description: "Something exciting is on the horizon. Check back soon to discover what's next in my journey."
+    icon: "fa-solid fa-question"
+    tags: ["Future"]
+    align: "right"
+
   - date: "2022 - 2025"
     title: "Computer Science Student"
     organization: "University of Verona"

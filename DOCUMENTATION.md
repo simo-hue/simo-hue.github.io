@@ -187,3 +187,118 @@ Tutti gli elementi supportano automaticamente il dark mode con classi Tailwind:
 
 **Implementato da:** Antigravity AI Assistant  
 **Versione Hugo:** Compatible with current setup
+
+---
+
+# DOCUMENTATION - Categories List View Implementation
+
+**Data:** 13 Gennaio 2026  
+**Funzionalità:** Visualizzazione Elenco Categorie
+
+---
+
+## Panoramica
+
+Implementata una pagina di elenco categorie che visualizza tutte le categorie del blog con descrizioni, conteggi dei post e link. La pagina `/categories/` ora mostra un'interfaccia utile invece di essere vuota.
+
+## Problema Risolto
+
+La pagina `/categories/` era completamente vuota perché il template era progettato solo per mostrare i post all'interno di una categoria specifica, non per elencare tutte le categorie disponibili. Ora il template rileva automaticamente il contesto e mostra l'elenco appropriato.
+
+## File Modificati
+
+### `/layouts/categories/list.html`
+
+#### Logica di Rilevamento Contesto
+Il template utilizza la variabile Hugo `.Data.Terms` per rilevare se si sta visualizzando:
+- **Pagina principale categorie** (`/categories/`): mostra tutte le categorie
+- **Pagina categoria specifica** (es. `/categories/books/`): mostra i post di quella categoria
+
+```go
+{{ if .Data.Terms }}
+  <!-- Mostra tutte le categorie -->
+{{ else }}
+  <!-- Mostra post della categoria specifica -->
+{{ end }}
+```
+
+#### Layout Griglia Categorie
+Quando si visualizza `/categories/`, il template genera:
+- **Grid responsive**: 2 colonne su schermi medi+ (`md:col-6`)
+- **Card per categoria** con:
+  - Titolo cliccabile
+  - Descrizione in italiano
+  - Conteggio post (con pluralizzazione corretta: "articolo"/"articoli")
+  - Link "Visualizza tutti →"
+- **Ordinamento**: per conteggio (categorie con più post appaiono prima)
+
+#### Descrizioni Categorie
+Le seguenti descrizioni sono state aggiunte per ogni categoria:
+
+| Categoria | Descrizione |
+|-----------|------------|
+| Books | Recensioni e riflessioni sui libri che ho letto |
+| Thoughts | Pensieri e riflessioni personali sulla vita e la crescita personale |
+| Passions | Le mie passioni: montagna, moto, sci e molto altro |
+| Projects | Progetti creativi e personali che ho realizzato |
+| Tech Projects | Progetti tecnici e di programmazione |
+| Publications | Pubblicazioni scientifiche e articoli accademici |
+| Experiences | Esperienze significative e viaggi memorabili |
+
+#### Styling e UX
+Il design è stato aggiornato per corrispondere allo stile delle card presenti nella pagina "About":
+
+| Categoria | Colore | Icona | Classe Base |
+|-----------|--------|-------|-------------|
+| Books | Orange | 📚 | `bg-orange-50` |
+| Thoughts | Purple | 💭 | `bg-purple-50` |
+| Passions | Red | ❤️ | `bg-red-50` |
+| Projects | Gray | 🛠️ | `bg-gray-50` |
+| Tech Projects | Indigo | 💻 | `bg-indigo-50` |
+| Publications | Yellow | 📄 | `bg-yellow-50` |
+| Experiences | Green | 🌍 | `bg-green-50` |
+
+Caratteristiche visuali:
+- **Forma**: `rounded-3xl` per angoli molto arrotondati
+- **Colori**: Sfondi colorati tenui (`-50`) che diventano più scuri (`-100`) all'hover
+- **Dark Mode**: 
+  - Standard: `dark:bg-{color}-900/10` (colori traslucidi scuri)
+  - Projects (Gray): `dark:bg-white/5` (bianco/grigio molto trasparente per omogeneità)
+- **Animazioni**: `transition-transform` e `translate-x-1` sul titolo all'hover
+- **Icona Freccia**: Appare (`opacity-100`) solo all'hover
+
+## Compatibilità
+
+- **Backward compatible**: le pagine di categoria specifiche funzionano esattamente come prima
+- **Nessuna modifica richiesta** ai file di contenuto esistenti
+- **Responsive**: funziona correttamente su tutti i dispositivi
+- **Multilingua ready**: le descrizioni possono essere facilmente tradotte
+
+## Comportamento
+
+### Pagina `/categories/`
+1. Header "Categories" con breadcrumb
+2. Grid di card categorie nel contenuto principale (col-8)
+3. Widget categorie nella sidebar (col-4)
+4. Ogni card è completamente cliccabile
+
+### Pagina `/categories/[nome-categoria]/`
+1. Header con nome categoria
+2. Lista post in formato card (2 colonne)
+3. Paginazione se necessaria
+4. Widget categorie nella sidebar
+
+## Testing Completato
+
+✅ Pagina principale categorie visualizza tutte le categorie  
+✅ Descrizioni visualizzate correttamente  
+✅ Conteggi post accurati  
+✅ Link funzionanti  
+✅ Pagine categorie specifiche ancora funzionanti  
+✅ Layout responsive  
+✅ Dark mode supportato  
+
+---
+
+**Implementato da:** Antigravity AI Assistant  
+**Versione Hugo:** Compatible with current setup
