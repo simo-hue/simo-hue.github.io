@@ -17,15 +17,15 @@
       <div class="col-12">
         <div class="row">
           {{ $categoryConfig := dict
-          "books" (dict "desc" "Recensioni e riflessioni sui libri che ho letto" "color" "orange" "icon" "📚")
-          "thoughts" (dict "desc" "Pensieri e riflessioni personali sulla vita e la crescita personale" "color" "purple"
+          "books" (dict "desc" "Reviews and reflections on the books I've read" "color" "orange" "icon" "📚")
+          "thoughts" (dict "desc" "Personal thoughts and reflections on life and personal growth" "color" "purple"
           "icon" "💭")
-          "passions" (dict "desc" "Le mie passioni: montagna, moto, sci e molto altro" "color" "red" "icon" "❤️")
-          "projects" (dict "desc" "Progetti creativi e personali che ho realizzato" "color" "gray" "icon" "🛠️")
-          "tech-projects" (dict "desc" "Progetti tecnici e di programmazione" "color" "indigo" "icon" "💻")
-          "tech projects" (dict "desc" "Progetti tecnici e di programmazione" "color" "indigo" "icon" "💻")
-          "publications" (dict "desc" "Pubblicazioni scientifiche e articoli accademici" "color" "yellow" "icon" "📄")
-          "experiences" (dict "desc" "Esperienze significative e viaggi memorabili" "color" "green" "icon" "🌍")
+          "passions" (dict "desc" "My passions: mountain, motorcycle, skiing and much more" "color" "red" "icon" "❤️")
+          "projects" (dict "desc" "Creative and personal projects I've realized" "color" "gray" "icon" "🛠️")
+          "tech-projects" (dict "desc" "Technical and programming projects" "color" "indigo" "icon" "💻")
+          "tech projects" (dict "desc" "Technical and programming projects" "color" "indigo" "icon" "💻")
+          "publications" (dict "desc" "Academic publications and articles" "color" "yellow" "icon" "📄")
+          "experiences" (dict "desc" "Significant experiences and memorable trips" "color" "green" "icon" "🌍")
           }}
 
           {{ range .Data.Terms.ByCount }}

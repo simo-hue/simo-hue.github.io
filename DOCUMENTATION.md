@@ -59,6 +59,17 @@ Le card della timeline erano troppo piccole su mobile, rendendo difficile la let
 - Animazione di apertura con fade-in e scale
 - Blocco dello scroll del body quando la modale è aperta
 
+### Modifiche CSS e HTML
+1.  **Reset HTML/Body:**
+    - Impostati `margin-bottom: 0` e `padding-bottom: 0` su `html` e `body`.
+    - Impostata `min-height: 100vh`.
+2.  **Footer Cleanup (Aggiornato):**
+    - Padding inferiore azzerato: `pb-0`.
+    - Container copyright modificato da `p` a `div` per evitare nesting invalido.
+    - Reset forzato su eventuali paragrafi interni: `[&>p]:mb-0` e `[&>p]:leading-none`.
+3.  **Safe-guard:**
+    - Regola per nascondere div iniettati vuoti.
+
 **Event Listener per Chiusura Modale:**
 - Click sul pulsante X
 - Click sul backdrop (area fuori dalla card)
