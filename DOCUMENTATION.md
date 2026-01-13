@@ -590,27 +590,3 @@ Questo riduce la dimensione delle pagine HTML rimuovendo spazi bianchi e comment
 
 ### 4. PWA Polish
 Aggiornato `layouts/index.webmanifest` per utilizzare il colore primario `#121212` invece del bianco per `theme_color` e `background_color`. Questo migliora l'integrazione visuale su Android/iOS quando l'app viene installata.
-
-# DOCUMENTATION - Translated Blog Post
-
-**Data:** 13 Gennaio 2026
-**Funzionalità:** Traduzione Post Blog "Bachelor Degree...whats'next?"
-
----
-
-## Panoramica
-
-Tradotto il post del blog `content/english/blog/thought/degree/index.md` dall'italiano all'inglese, mantenendo lo stile e il tono originale dell'autore.
-
-## Modifiche Apportate
-
-### `/content/english/blog/thought/degree/index.md`
-- Tradotto l'intero corpo del testo in inglese.
-- Mantenuta la formattazione markdown originale (headers, liste, quote).
-- Preservato il tono personale ("The question of questions...", "Get my hands dirty", "Comfort Zone", ecc.).
-
----
-
-**Implementato da:** Antigravity AI Assistant
-
----
