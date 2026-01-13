@@ -16,7 +16,7 @@ All this doesn't matter to me though because even though I'm 22 and when a beaut
 
 ## Not Just Main Stream Products
 Easy to "adore" supercars like Lamborghini, Ferrari, Maserati, etc. but instead my passion goes much further...much further.
-I don't care about the value of the car, but its characteristics.
+I don't care about the value of the car, but its characteristics. For example admiring brands such as ICH-X, Hyundai, Toyota, Pagani, Konigsegg, etc.
 
 ### Small example: 
 > Last week I was in Maranello, surrounded by ferraris but I saw a hyundai i20n (cost around 20k) and I still stood there looking at it and took a photo of it because in my opinion, like the big sister (hyundai i30n) it's a great car...that sounds really good even if it doesn't have a v12
@@ -38,3 +38,5 @@ And speaking of show-offs, the thing that makes me understand the most how much 
 And this is the healthy attention, that is the sharing between enthusiasts and NOT showing off in front of the bar or in the town center passing by speeding to show off in front of other people.
 
 > I feel a bit like Horacio Pagani (unlike that I haven't done anything extraordinary myself but whatever...) when he says that cars have a soul. When I stand there observing cars it seems to me I perceive it and even while I drive them I feel a sort of bidirectional communication with the vehicle I'm driving and I hope this thing can never ever change.
+
+Now I have to go to work otherwise I'll never have the chance to have one of these cars...read you soon!
