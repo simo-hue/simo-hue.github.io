@@ -338,3 +338,53 @@ L'articolo "LLM Tourism Mobility Predictor" è stato aggiornato per riflettere f
 ---
 
 **Implementato da:** Antigravity AI Assistant
+
+---
+
+# DOCUMENTATION - Image Optimization and Lightbox
+
+**Data:** 13 Gennaio 2026
+**Funzionalità:** Ottimizzazione Immagini e Lightbox Interattivo
+
+---
+
+## Panoramica
+
+È stato implementato un sistema completo per la gestione delle immagini che modernizza l'intera esperienza visiva del sito. Le immagini sono ora caricate in modo più efficiente (WebP, Responsive Sizing) e quelle all'interno degli articoli sono cliccabili e visualizzabili in una lightbox.
+
+## Descrizione Tecnica
+
+### 1. Partial `layouts/partials/image.html`
+Questo file sovrascrive il partial di default del tema e introduce:
+- **Conversione WebP**: Genera automaticamente versioni WebP delle immagini caricate.
+- **Responsive Images (`srcset`)**: Crea varianti a 480px, 800px e 1200px. Il browser scarica solo quella necessaria.
+- **Lazy Loading**: Attributo `loading="lazy"` aggiunto di default.
+- **Supporto Lightbox**: Opzione `Lightbox` (bool) che avvolge l'immagine in un anchor tag compatibile con `glightbox`.
+
+### 2. Markdown Render Hook `layouts/_default/_markup/render-image.html`
+Intercetta tutte le immagini inserite nei file Markdown (es. `![Alt](image.jpg "Title")`) e:
+- Utilizza il nuovo partial `image.html`.
+- Attiva automaticamente la **Lightbox** (`Lightbox: true`).
+- Aggiunge classi CSS per **bordi arrotondati**, **ombreggiature** (`shadow-lg`), e un leggero effetto **zoom on hover**.
+- Renderizza il Titolo dell'immagine come didascalia (`figcaption`).
+
+### 3. Inizializzazione JavaScript (`assets/js/main.js`)
+È stato aggiunto il codice per inizializzare `GLightbox` sulla classe `.glightbox`:
+```javascript
+const lightbox = GLightbox({
+    selector: ".glightbox",
+    touchNavigation: true,
+    loop: true,
+    autoplayVideos: true
+});
+```
+
+## Esperienza Utente (UX)
+
+- **Blog Cards**: Le immagini nelle card rimangono statiche (senza lightbox) per non interferire con il link all'articolo, ma beneficiano dell'ottimizzazione WebP/Srcset.
+- **Articoli**: Le immagini nel contenuto sono presentate come "figure" con design curato. Cliccando su un'immagine, questa si apre a tutto schermo permettendo lo zoom.
+
+## File Modificati/Creati
+- `layouts/partials/image.html` (NEW)
+- `layouts/_default/_markup/render-image.html` (NEW)
+- `assets/js/main.js` (MODIFIED)
