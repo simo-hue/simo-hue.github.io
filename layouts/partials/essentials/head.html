@@ -23,10 +23,10 @@
 
 
 <!-- Schema.org Structured Data for SEO & LLMs -->
-{{/* {{ partial "seo/schema-website.html" . }} */}}
-{{/* {{ partial "seo/schema-person.html" . }} */}}
-{{/* {{ partial "seo/schema-blog.html" . }} */}}
-{{/* {{ partial "seo/schema-breadcrumb.html" . }} */}}
+{{ partialCached "seo/schema-website.html" . }}
+{{ partialCached "seo/schema-person.html" . }}
+{{ partialCached "seo/schema-blog.html" . .Section }}
+{{ partialCached "seo/schema-breadcrumb.html" . .Section }}
 
 
 <!-- custom script -->
