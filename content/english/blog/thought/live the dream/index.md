@@ -2,7 +2,7 @@
 categories:
 - thoughts
 date: 2026-01-12
-description: null
+description: "A memorable trip to the Ferrari museums in Maranello and Modena with my dad, seeing legendary cars like the F40 and living the dream."
 draft: false
 image: cover.png
 slug: live-the-dream

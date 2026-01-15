@@ -11,3 +11,4 @@
 - [ ] SEMrush/Ahrefs (account per rank tracking)
 - [ ] PageSpeed Insights bookmarkato
 - [ ] Schema.org validator nei preferiti
+- [ ] Verificare che il deploy su GitHub Pages sia andato a buon fine (segno di spunta verde su GitHub Actions).
