@@ -1,15 +1,15 @@
 {{- /* Schema.org BreadcrumbList structured data */ -}}
 {{- if not .IsHome -}}
 {{- $items := slice -}}
-{{- $items = $items | append (dict "position" 1 "name" "Home" "item" .Site.BaseURL) -}}
+{{- $items = $items | append (dict "position" 1 "name" "Home" "item" .Site.BaseURL "isLast" false) -}}
 {{- $pos := 2 -}}
 {{- if .Parent -}}
   {{- if ne .Parent.Title .Site.Title -}}
-    {{- $items = $items | append (dict "position" $pos "name" .Parent.Title "item" .Parent.Permalink) -}}
+    {{- $items = $items | append (dict "position" $pos "name" .Parent.Title "item" .Parent.Permalink "isLast" false) -}}
     {{- $pos = add $pos 1 -}}
   {{- end -}}
 {{- end -}}
-{{- $items = $items | append (dict "position" $pos "name" .Title "item" .Permalink) -}}
+{{- $items = $items | append (dict "position" $pos "name" .Title "isLast" true) -}}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -19,9 +19,15 @@
       {{- if $i }},{{ end }}
     {
       "@type": "ListItem",
-      "position": {{ $item.position }},
+      "position": {{ $item.position }}
+      {{- if not $item.isLast -}}
+      ,
       "name": {{ $item.name | jsonify }},
       "item": {{ $item.item | jsonify }}
+      {{- else -}}
+      ,
+      "name": {{ $item.name | jsonify }}
+      {{- end }}
     }
     {{- end }}
   ]
