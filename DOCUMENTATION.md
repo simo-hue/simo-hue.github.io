@@ -1,30 +1,5 @@
 # 📚 DOCUMENTAZIONE SEO & GEO - Strategia Posizionamento "Mattioli" 2026
 
-## 🔧 ULTIMO AGGIORNAMENTO: Fix Hugo Build Recursion (15 Gen 2026)
-
-### Problema Risolto
-**Issue:** `hugo build` falliva su GitHub Actions con errore di timeout/ricorsione infinita in `basic-seo.html`.
-**Causa:** La pagina "Live the dream" mancava di `description` nel frontmatter, costringendo Hugo a generare un summary accedendo al contenuto ricco (con shortcode YouTube) che causava loop/timeout nel rendering parziale.
-
-### Soluzione
-- Aggiunto `description` manuale al frontmatter di `content/english/blog/thought/live the dream/index.md`.
-- Questo bypassa la generazione automatica del summary in `basic-seo.html`.
-
----
-
-## 🔧 AGGIORNAMENTO PRECEDENTE: Creazione Articolo "Stelle" (15 Gen 2026)
-
-### Nuova Contenuto
-Creata una nuova voce nella categoria 'Thought' intitolata "Stelle".
-
-**Dettagli:**
-- **Path:** `content/english/blog/thought/stelle/index.md`
-- **Frontmatter:** Configurati titolo, data, categoria, tag e placeholder immagine.
-- **Contenuto:** Riflessione SEO-friendly su stelle, luce e oscurità.
-- **Azione Richiesta:** L'utente deve caricare `cover.jpg` nella directory dell'articolo.
-
----
-
 ## 🔧 AGGIORNAMENTO PRECEDENTE: Fix Breadcrumb Schema (15 Gen 2026)
 
 ### Problema Risolto
