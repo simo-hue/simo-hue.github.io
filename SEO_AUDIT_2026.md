@@ -1,36 +1,3 @@
-## 🔧 OTTIMIZZAZIONI PRIORITARIE (Quick Wins)
-
-### 🎯 PRIORITÀ 2: Meta Description Personalizzate
-
-**Problema:** Hugo usa description globale per tutte le pagine
-
-**Verifica file:** `config/_default/params.toml` o `hugo.toml`
-
-**IMPLEMENTA:**
-
-1. **Frontend Matter per ogni pagina:**
-```markdown
----
-title: "Titolo Articolo"
-description: "Descrizione SEO personalizzata 130-155 caratteri per questo articolo specifico"
----
-```
-
-2. **Template Head (se non presente):**
-```html
-<!-- In layouts/partials/essentials/head.html -->
-<meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.metadata.description }}{{ end }}">
-```
-
-**Impatto SEO:** ⭐⭐⭐⭐
-- CTR +15-30% con descriptions mirate
-- Featured Snippets più probabili
-- Ogni pagina si posiziona per keyword specifiche
-
-**Tempo:** 5 min setup + 2 min per articolo  
-**Difficoltà:** Facile
-
----
 
 ### 🎯 PRIORITÀ 3: Title Tag con Brand Consistency
 
