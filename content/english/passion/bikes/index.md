@@ -9,17 +9,17 @@ draft: false
 It's always been an outlet for me, I get on the bike and I don't think about anything anymore...I transform and with me the whole world because I no longer have stress but pure happiness.
 
 Of course, many people think I'm crazy for how I ride the bike given my recklessness, which I was already developing when I was little (as you can see from here)
-![Wheelie on bike as a kid](impennata_piccolo.JPG)
+![Wheelie on bike as a kid](impennata_piccolo.webp)
 
 For now I'm still alive and all in one piece...but I get on the bike always with a smile in pursuit of my carefreeness and happiness...just like when I drive (but with a bit more adrenaline)
-![Smile on bike from monte sole summit](cima.jpeg)
+![Smile on bike from monte sole summit](cima.webp)
 
 # Motorcycle
 
 This has always been my dream...to have my own bike.
 
 After so many years spent trying to convince my parents, well yes I managed to get it and after so much care and passion I built it in my own image and likeness...
-![fantic](fantic.jpeg)
+![fantic](fantic.webp)
 
 
 Oh well...I was really so proud of it. I say was because even though I had a lot of fun, and I also risked quite a few times some big damages...but despite everything I never stopped loving it and taking care of it with all my heart.

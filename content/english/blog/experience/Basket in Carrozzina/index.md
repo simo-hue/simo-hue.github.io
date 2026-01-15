@@ -21,7 +21,7 @@ links:
 
 Thanks to the extraordinary collaboration between **Collegio Don Mazza**, **Residenza Ferrari delle Spade di Verona** and **Olympic Basket Verona**, I had the opportunity to live one of the most significant experiences of my life: trying **wheelchair basketball**.
 
-![This is Me having fun trying this new unbelivable sport](me.jpeg)
+![This is Me having fun trying this new unbelivable sport](me.webp)
 
 ## A unique experience
 

@@ -53,7 +53,7 @@ The agenda for Day 1 was as follows:
 
 **Images from Day 1:**
 
-![Theory Part: Introduction to CUDA and GPU Programming](1.jpg)
+![Theory Part: Introduction to CUDA and GPU Programming](1.webp)
 
 ## Day 2: Advanced GPU Optimization and Profiling
 
@@ -107,7 +107,7 @@ Interested in learning more? Check out the links below to access more details on
 
 This hackathon has certainly sparked a deeper interest in exploring the potential of GPUs for high-performance tasks. I’m looking forward to applying these skills in future projects and sharing my insights with the community.
 
-![Me Presenting our results of the Lab sessions of the two days before](3.jpeg)
+![Me Presenting our results of the Lab sessions of the two days before](3.webp)
 
 ## YouTube Vlogs
 I've made some mini vlogs about my experience in Bologna during this event and this is the first of the playlist

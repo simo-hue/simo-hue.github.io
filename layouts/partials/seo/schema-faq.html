@@ -1,0 +1,35 @@
+{{- /* Schema.org FAQPage for homepage */ -}}
+{{- if .IsHome -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Chi è Simone Mattioli?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Simone Mattioli è uno studente di Computer Science presso l'Università di Verona, specializzato in Intelligenza Artificiale e Large Language Models. Appassionato di tecnologia, viaggi e fotografia, combina competenze tecniche con esperienze di volontariato internazionale."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cosa fa Mattioli?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mattioli studia Computer Science con focus su AI e sviluppa progetti innovativi nel campo del machine learning e High-Performance Computing. Sul suo blog condivide riflessioni su tecnologia, esperienze di viaggio e crescita personale, documentando il suo percorso accademico e le sue passioni."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Dove studia Simone Mattioli?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Simone Mattioli studia presso l'Università di Verona, Dipartimento di Computer Science, con specializzazione in Artificial Intelligence e High-Performance Computing. L'università si trova a Verona, Italia."
+      }
+    }
+  ]
+}
+</script>
+{{- end -}}

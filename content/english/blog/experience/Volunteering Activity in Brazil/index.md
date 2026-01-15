@@ -16,7 +16,7 @@ links:
 
 ## Introduction
 
-![Don Mazza Logo](don-mazza-pia.jpg)
+![Don Mazza Logo](don-mazza-pia.webp)
 
 My volunteer experience in Brazil was an unforgettable journey that led me to discover not only a country rich in culture, but also the daily challenges faced by people in vulnerable situations.
 
@@ -30,67 +30,67 @@ During our stay, we had the opportunity to explore different areas of Brazil, fo
 
 It would be impossible to remember them all since the experience was characterized by moments of joy and just as many of emotional difficulty.
 
-![Serving Food in Itapororoca](food.jpeg)
+![Serving Food in Itapororoca](food.webp)
 
 One of the most touching memories was when we distributed food to people in need, an act that made us realize the critical reality in which many communities lived.
 
 We also visited the communities of **Olinda** and **Alto do Mateus**, where we saw up close the precarious living conditions of the local people.
 
-![alto do mateus ( João Pessoa )](1.png)
+![alto do mateus ( João Pessoa )](1.webp)
 
-![Brazil differences ( poor & rich side )](2.png)
+![Brazil differences ( poor & rich side )](2.webp)
 
 ## Itapororoca Vibes
 
-![Visiting the project at Itapororoca ( first day )](escola.JPG)
+![Visiting the project at Itapororoca ( first day )](escola.webp)
 In Itapororoca, we were hosted by an extraordinary family who dedicated their lives to creating a school and providing aid to the local community. 
 
-![Preparation for the Carneval at Itapororoca ( second day )](itapororoca.jpeg)
+![Preparation for the Carneval at Itapororoca ( second day )](itapororoca.webp)
 
 We had the opportunity to meet each member of their family, wonderful people who welcomed us with unprecedented openness and hospitality, which deeply touched me. 
 
 
-![itapororoca host large Family](itapororoca.JPG)
+![itapororoca host large Family](itapororoca.webp)
 
 The moment of saying goodbye was extremely difficult, as the bond that had been created was sincere and deep. 
 
-![itapororoca host family party](itapororocaFamily.jpeg)
+![itapororoca host family party](itapororocaFamily.webp)
 
 Fortunately, thanks to technology, we are still able to stay in touch, sharing moments and memories that unite us despite the distance.
 
-![itapororoca nature walk](triglia.JPG)
+![itapororoca nature walk](triglia.webp)
 
 ## Beira da Linha Project
 
-![Beira da Linha Project with child](beiraTogether.jpeg)
+![Beira da Linha Project with child](beiraTogether.webp)
 
 Without a doubt, my favorite project was **Beira da Linha**. Here we assisted teachers in their lessons and I had the opportunity to interact with children and young people who attended after-school activities. 
 
-![Beira da Linha Project timeout](beihra.jpeg)
+![Beira da Linha Project timeout](beihra.webp)
 
 These young people, coming from difficult backgrounds, aspired to a better future, and my bond with them was extraordinary. The possibility of contributing to their educational journey was one of the most rewarding experiences of my life.
 
-![Beira da Linha Project with organizers](organizers.jpeg)
+![Beira da Linha Project with organizers](organizers.webp)
 
 And my greatest respect goes to these educators who dedicate their lives to improving that of the new generations
 
-![Beira da Linha Project bare foot football](Football.JPG)
+![Beira da Linha Project bare foot football](Football.webp)
 
 During our stay there, as a tradition in Brazil, we played football a lot...but the difference was that we were all playing barefoot on the concrete since they only had one pair of shoes, or sometimes not even those and therefore they couldn't/didn't want to ruin them
 
-![Last photo with my favourite Beira da Linha Project kids](boys.jpeg)
+![Last photo with my favourite Beira da Linha Project kids](boys.webp)
 
 ## A Unique Group
 
-![Group at Beira da Linha Project ](all.jpeg)
+![Group at Beira da Linha Project ](all.webp)
 
 The group with which I shared this adventure was also fantastic. 
 
-![itapororoca host familiy home](house.jpeg)
+![itapororoca host familiy home](house.webp)
 
 We hit it off right away, creating bonds that made the experience even more unique and I really have to thank you Noemi, Federica, Maristella, Andrea, Rachid for the amazing experience that we've made. 
 
-![Beach of jacarè sunset with Alberto](praia.JPG)
+![Beach of jacarè sunset with Alberto](praia.webp)
 
 Back home, I can finally reflect on what I experienced and assimilate the messages and lessons learned. 
 
@@ -98,7 +98,7 @@ Three months have passed since I returned, but the emotions and experiences I li
 
 We shared so much in only three weeks and when it comes to my mind it seems like a film...too good to be true
 
-![Exploring the canyon with Alberto](canyon.jpeg)
+![Exploring the canyon with Alberto](canyon.webp)
 
 
 ## Contribution to Projects / Mazzian Ideals
@@ -123,11 +123,11 @@ This phrase perfectly encapsulates the essence of my journey and the meaning of 
 
 
 # Here are some more photos about our stay
-![itapororoca](visit.jpeg)
-![itapororoca](wow.jpeg)
-![itapororoca](asilo.jpeg)
-![Group](1school.jpeg)
-![itapororoca](school.JPG)
+![itapororoca](visit.webp)
+![itapororoca](wow.webp)
+![itapororoca](asilo.webp)
+![Group](1school.webp)
+![itapororoca](school.webp)
 
 # Here a short recap video about the experience
 

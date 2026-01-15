@@ -22,7 +22,7 @@ And so here is the Saturday of dreams:
 - Once the walk is finished, lunch and then immediately to the Enzo Ferrari Museum in Modena
 
 ## It's more than just a museum
-![Enzo Ferrari Museum](museum.JPG)
+![Enzo Ferrari Museum](museum.webp)
 On paper it seems very exciting, yes but quite classic while what it means for me is much, much more than a simple: "SEEING AN ITALIAN AND WORLD MASTERPIECE".
 
 I am obsessed with engines, for me they are a drug (positive, but they are) and clearly as the sign said before entering the museum: "LIVE THE DREAM!" for me it doesn't want to be just a dream, because for now it is (or rather it is a goal) and probably for a few years it will remain so, but I am certain that I will manage to achieve it.
@@ -35,13 +35,13 @@ Certainly, to be able to afford these "adult toys" it doesn't take little money.
 
 Also because as always, the things I like coincidentally are always the most expensive... and in this case:
 - Ferrari F40
-![Ferrari f40](f40.JPG)
+![Ferrari f40](f40.webp)
 - Ferrari LaFerrari
-![La Ferrari](laferrari.JPG)
+![La Ferrari](laferrari.webp)
 - Ferrari Enzo
-![Enzo Ferrari](enzo.JPG)
+![Enzo Ferrari](enzo.webp)
 - Ferrari SF90
-![Enzo Ferrari Museum](sf90.JPG)
+![Enzo Ferrari Museum](sf90.webp)
 - And I could go on for a long time, really long (believe me)
 
 All this to say what? Well essentially I was there with my dad, who has become passionate about engines but not at my level yet I saw him very happy even if I made him do the museum slowly and made him walk all over Maranello to see EVERYTHING. From the historic entrance of Ferrari to the Fiorano track.
@@ -57,7 +57,7 @@ So dad asks me if I wanted to do it, but I clearly tell him no also because it w
 Dad however insisted and even though I kept telling him "no", "no, seriously" he went to the checkout and bought "the simulator experience".
 Clearly the thing I told him as soon as he arrived with the ticket was: "Come on please you do it". But nothing to do, and I did it.
 
-![Ferrari Museum Driving simulators](simulator.JPG)
+![Ferrari Museum Driving simulators](simulator.webp)
 Obvious is that it was a super beautiful experience, but what I appreciated most was the fact of the spontaneity with which dad made this gesture to "make me happier" or anyway to entertain me and this has no equals and is an unparalleled gesture (you read that right, it far exceeds a test drive in a Ferrari or anything else).
 
 Speaking of test drives, when we left he wanted me to do that too and enter the building next to the museum to understand the rates... something that there yes I refused because obviously it is a unique experience, however certainly it is an absurd waste of money because next to the museum it is certainly a super tourist trap thing.

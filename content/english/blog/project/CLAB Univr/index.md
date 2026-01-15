@@ -34,7 +34,7 @@ In this article, you will find:
 
 I can only thank my extraordinary fellow travelers: each contributed their own ideas, skills, and enthusiasm to making this journey unique. It was a true pleasure working alongside you.
 
-![Photo of our Team](team.JPG)
+![Photo of our Team](team.webp)
 
 ## 🌟 A great shared experience
 
