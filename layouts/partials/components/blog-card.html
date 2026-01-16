@@ -4,9 +4,10 @@
   <a href="{{ .RelPermalink }}" class="absolute inset-0 z-0" aria-label="{{ .Title }}"></a>
 
   {{ $image := .Params.image }}
-  {{ $priority := .Params.Priority | default false }}
+  {{/* Read priority from Scratch set by parent template */}}
+  {{ $priority := .Scratch.Get "IsPriority" | default false }}
   {{ if $image }}
-  <div class="blog-card-image overflow-hidden relative z-0">
+  <div class="blog-card-image overflow-hidden relative z-0 aspect-[16/9]">
     {{ partial "image" (dict "Src" $image "Context" .Page "Alt" .Title "Class" "w-full h-48 object-cover" "Priority"
     $priority) }}
 

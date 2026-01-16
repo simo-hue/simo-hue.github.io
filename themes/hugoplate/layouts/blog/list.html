@@ -10,12 +10,12 @@
         <div class="row">
           {{ $paginator:= .Paginate .RegularPages }}
           {{ range $index, $page := $paginator.Pages }}
+          {{/* Set priority for first 2 cards via Scratch */}}
+          {{ if lt $index 2 }}
+          {{ $page.Scratch.Set "IsPriority" true }}
+          {{ end }}
           <div class="md:col-6 mb-14">
-            {{/* Apply priority to first 2 cards for LCP optimization */}}
-            {{ $isPriority := lt $index 2 }}
-            {{ $.Scratch.Set "Priority" $isPriority }}
-            {{ partial "components/blog-card" (dict "Page" $page "Params" (merge $page.Params (dict "Priority"
-            $isPriority))) }}
+            {{ partial "components/blog-card" $page }}
           </div>
           {{ end }}
         </div>

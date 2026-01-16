@@ -4,9 +4,24 @@
 <link rel="preconnect" href="https://use.fontawesome.com" crossorigin />
 <link rel="dns-prefetch" href="https://use.fontawesome.com" />
 
-<!-- Preload critical fonts -->
-<link rel="preload" href="/fonts/Heebo-Regular.ttf" as="font" type="font/ttf" crossorigin />
-<link rel="preload" href="/fonts/Signika-Medium.ttf" as="font" type="font/ttf" crossorigin />
+<!-- Critical Font CSS inline to prevent blocking -->
+<style>
+    @font-face {
+        font-family: 'Heebo';
+        src: url('/fonts/Heebo-Regular.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Signika';
+        src: url('/fonts/Signika-Medium.ttf') format('truetype');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+    }
+</style>
 
 <!-- main styles -->
 {{ $styles := slice }}
