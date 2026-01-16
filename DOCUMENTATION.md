@@ -158,3 +158,36 @@ Aggiunta cache rule per immagini WebP:
 - Gli script lazy avevano già `defer` e `async` ✅
 - Cache headers erano già ben configurati, aggiunto solo WebP specifico
 - Google Tag Manager partial non esisteva (era referenziato ma mancante)
+
+---
+
+# Phase 2 Optimization - LCP Priority Image Loading
+
+## Data: 2026-01-16
+
+## Problema da Phase 1
+- ❌ LCP: 6.3s → 6.8s (peggiorato)
+- Root Cause: `loading="lazy"` su TUTTE le immagini, incluse quelle LCP
+
+## Modifiche
+
+### 1. Image Partial - Priority Support
+**File**: `layouts/partials/image.html`
+
+Aggiunto parametro `Priority`:
+- `Priority=true` → `loading="eager" fetchpriority="high"`
+- `Priority=false` → `loading="lazy"` (default)
+
+### 2. Blog Cover Images
+**File**: `themes/hugoplate/layouts/blog/single.html`
+
+```html
+{{ partial "image" (dict ... "Priority" true) }}
+```
+
+Cover images ora si caricano immediatamente con massima priorità.
+
+## Build: ✅ 1564 ms
+
+## Target: LCP 6.8s → < 2.5s (-63%)
+

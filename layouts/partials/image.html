@@ -7,6 +7,7 @@ Parameters:
 - Class: String (optional) - CSS classes
 - Lightbox: Boolean (optional) - Enable lightbox wrapper (default false)
 - Resize: String (optional) - Resize command (e.g. "800x") if specific size needed
+- Priority: Boolean (optional) - If true, use eager loading + high fetchpriority for LCP images (default false)
 */}}
 
 {{ $src := .Src }}
@@ -15,6 +16,7 @@ Parameters:
 {{ $title := .Title | default "" }}
 {{ $class := .Class | default "" }}
 {{ $lightbox := .Lightbox | default false }}
+{{ $priority := .Priority | default false }}
 
 {{/* Find the image resource */}}
 {{ $image := "" }}
@@ -46,18 +48,35 @@ Parameters:
     {{ $large := $image.Resize "1200x webp" }}
     {{ $fallback := $image.Resize "1200x jpg" }}
 
-    <img loading="lazy" src="{{ $fallback.RelPermalink }}" srcset="
+    {{ if $priority }}
+    {{/* Priority/LCP image: eager loading + high fetchpriority */}}
+    <img loading="eager" fetchpriority="high" src="{{ $fallback.RelPermalink }}" srcset="
           {{ $small.RelPermalink }} 480w,
           {{ $medium.RelPermalink }} 800w,
           {{ $large.RelPermalink }} 1200w" sizes="(max-width: 480px) 480px, (max-width: 800px) 800px, 1200px"
         alt="{{ $alt }}" title="{{ $title }}" class="{{ $class }}" width="{{ $fallback.Width }}"
         height="{{ $fallback.Height }}">
     {{ else }}
+    {{/* Regular image: lazy loading */}}
+    <img loading="lazy" src="{{ $fallback.RelPermalink }}" srcset="
+          {{ $small.RelPermalink }} 480w,
+          {{ $medium.RelPermalink }} 800w,
+          {{ $large.RelPermalink }} 1200w" sizes="(max-width: 480px) 480px, (max-width: 800px) 800px, 1200px"
+        alt="{{ $alt }}" title="{{ $title }}" class="{{ $class }}" width="{{ $fallback.Width }}"
+        height="{{ $fallback.Height }}">
+    {{ end }}
+    {{ else }}
     {{/* Image is small, just convert to WebP/Resize to original width if needed */}}
     {{ $converted := $image.Resize (printf "%dx webp" $width) }}
+    {{ if $priority }}
+    <img loading="eager" fetchpriority="high" src="{{ $image.RelPermalink }}"
+        srcset="{{ $converted.RelPermalink }} {{ $width }}w" sizes="100vw" alt="{{ $alt }}" title="{{ $title }}"
+        class="{{ $class }}" width="{{ $width }}" height="{{ $image.Height }}">
+    {{ else }}
     <img loading="lazy" src="{{ $image.RelPermalink }}" srcset="{{ $converted.RelPermalink }} {{ $width }}w"
         sizes="100vw" alt="{{ $alt }}" title="{{ $title }}" class="{{ $class }}" width="{{ $width }}"
         height="{{ $image.Height }}">
+    {{ end }}
     {{ end }}
 
     {{ if $lightbox }}
@@ -69,7 +88,12 @@ Parameters:
 {{ if $lightbox }}
 <a href="{{ $src }}" class="glightbox block" data-type="image" data-title="{{ $title }}" data-description="{{ $alt }}">
     {{ end }}
+    {{ if $priority }}
+    <img loading="eager" fetchpriority="high" src="{{ $src }}" alt="{{ $alt }}" title="{{ $title }}"
+        class="{{ $class }}">
+    {{ else }}
     <img loading="lazy" src="{{ $src }}" alt="{{ $alt }}" title="{{ $title }}" class="{{ $class }}">
+    {{ end }}
     {{ if $lightbox }}
 </a>
 {{ end }}
