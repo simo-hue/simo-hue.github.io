@@ -2,18 +2,15 @@
 {{ $scripts := slice }}
 {{ $scriptsLazy := slice }}
 {{ range site.Params.plugins.js }}
-  {{ if findRE "^http" .link }}
-    <script
-      src="{{ .link | relURL }}"
-      type="application/javascript"
-      {{ .attributes | safeHTMLAttr }}></script>
-  {{ else }}
-    {{ if not .lazy }}
-      {{ $scripts = $scripts | append (resources.Get .link) }}
-    {{ else }}
-      {{ $scriptsLazy = $scriptsLazy | append (resources.Get .link) }}
-    {{ end }}
-  {{ end }}
+{{ if findRE "^http" .link }}
+<script defer src="{{ .link | relURL }}" type="application/javascript" {{ .attributes | safeHTMLAttr }}></script>
+{{ else }}
+{{ if not .lazy }}
+{{ $scripts = $scripts | append (resources.Get .link) }}
+{{ else }}
+{{ $scriptsLazy = $scriptsLazy | append (resources.Get .link) }}
+{{ end }}
+{{ end }}
 {{ end }}
 
 
@@ -24,22 +21,16 @@
 {{ $scriptsLazy = $scriptsLazy | resources.Concat "js/script-lazy.js" }}
 
 {{ if hugo.IsProduction }}
-  {{ $scripts = $scripts | minify | fingerprint }}
-  {{ $scriptsLazy = $scriptsLazy | minify | fingerprint }}
+{{ $scripts = $scripts | minify | fingerprint }}
+{{ $scriptsLazy = $scriptsLazy | minify | fingerprint }}
 {{ end }}
 
-{{/* scripts */}}
-<script
-  crossorigin="anonymous"
-  integrity="{{ $scripts.Data.Integrity }}"
+{{/* scripts - with defer for non-blocking */}}
+<script defer crossorigin="anonymous" integrity="{{ $scripts.Data.Integrity }}"
   src="{{ $scripts.RelPermalink }}"></script>
 
 {{/* scripts lazy */}}
-<script
-  defer
-  async
-  crossorigin="anonymous"
-  integrity="{{ $scriptsLazy.Data.Integrity }}"
+<script defer async crossorigin="anonymous" integrity="{{ $scriptsLazy.Data.Integrity }}"
   src="{{ $scriptsLazy.RelPermalink }}"></script>
 
 <!-- progressive web app -->

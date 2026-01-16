@@ -1,6 +1,12 @@
-<!-- DNS preconnect -->
+<!-- DNS preconnect for critical origins -->
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+<link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 <link rel="preconnect" href="https://use.fontawesome.com" crossorigin />
 <link rel="dns-prefetch" href="https://use.fontawesome.com" />
+
+<!-- Preload critical fonts -->
+<link rel="preload" href="/fonts/Heebo-Regular.ttf" as="font" type="font/ttf" crossorigin />
+<link rel="preload" href="/fonts/Signika-Medium.ttf" as="font" type="font/ttf" crossorigin />
 
 <!-- main styles -->
 {{ $styles := slice }}
@@ -40,6 +46,6 @@
 <!-- link main style -->
 <link href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" rel="stylesheet" />
 
-<!-- link lazy style -->
+<!-- link lazy style with media print trick for non-blocking load -->
 <link rel="stylesheet" href="{{ $stylesLazy.RelPermalink }}" integrity="{{ $stylesLazy.Data.Integrity }}" media="print"
     onload="this.media='all'; this.onload=null;" />

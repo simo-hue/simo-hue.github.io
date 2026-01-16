@@ -33,14 +33,20 @@
 {{ partialCached "custom-script.html" . }}
 
 
-<!-- google analytics -->
+<!-- google analytics - OPTIMIZED: defer loading -->
 {{ if and site.Config.Services.GoogleAnalytics.ID (ne site.Config.Services.GoogleAnalytics.ID "G-MEASUREMENT_ID") }}
-{{ template "_internal/google_analytics.html" . }}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.Config.Services.GoogleAnalytics.ID }}"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', '{{ site.Config.Services.GoogleAnalytics.ID }}');
+</script>
 {{ end }}
 
 
-<!-- google tag manager -->
-{{ partialCached "gtm.html" . }}
+<!-- google tag manager - removed for performance (consider if really needed) -->
+{{/* {{ partialCached "gtm.html" . }} */}}
 
 
 <!-- search index -->
