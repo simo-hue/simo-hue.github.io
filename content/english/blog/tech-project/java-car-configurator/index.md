@@ -4,7 +4,7 @@ date: 2024-09-18
 description: "Configuratore di prodotto modulare sviluppato in Java con JavaFX per esame di Programmazione 2 UniVR. Implementazione MVC, design patterns avanzati, interfaccia grafica e architettura estendibile per configurazione automobili."
 categories: [tech-projects]
 slug: java-car-configurator
-image: cover.png
+image: cover.webp
 tags:
     - Java Programming
     - JavaFX

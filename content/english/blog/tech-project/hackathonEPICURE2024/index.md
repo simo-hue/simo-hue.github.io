@@ -3,7 +3,7 @@ title: "EPICURE Hackathon GPU - October 2024"
 description: GPU Programming and High-Performance Computing Hackathon hosted by EPICURE and CINECA
 slug: epicure-hackathon-2024
 date: 2024-10-28
-image: cover.jpg
+image: cover.webp
 draft: false
 categories: ["tech projects"]
 tags:

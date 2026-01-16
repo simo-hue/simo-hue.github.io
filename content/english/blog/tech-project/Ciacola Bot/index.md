@@ -3,7 +3,7 @@ title: "VecioBot - Telegram Bot in Dialetto Trentino"
 description: "Un bot Telegram che conversa in autentico dialetto trentino, simulando un nonno virtuale della montagna usando LLaMA 3 e Ollama"
 slug: ciacola-bot
 date: 2024-11-15
-image: cover.jpg
+image: cover.webp
 draft: false
 categories: ["tech projects"]
 tags:

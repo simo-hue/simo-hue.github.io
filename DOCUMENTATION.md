@@ -191,3 +191,90 @@ Cover images ora si caricano immediatamente con massima priorità.
 
 ## Target: LCP 6.8s → < 2.5s (-63%)
 
+
+---
+
+# WebP Image References Update
+
+## Data: 2026-01-16
+
+## Problema
+Alcuni file index.md contenevano riferimenti a immagini in formati non ottimizzati (.jpg, .JPG, .png, .PNG) invece di usare le versioni .webp già esistenti.
+
+## Soluzione
+Creato script automatico `scripts/convert-images-to-webp.sh` che:
+1. Cerca tutti i riferimenti a immagini non-WebP nei file index.md
+2. Verifica l'esistenza delle versioni .webp
+3. Aggiorna i riferimenti nel frontmatter e contenuto
+
+## Risultati
+- **47 file index.md aggiornati**
+- **49 riferimenti a immagini corretti**
+- Tutte le versioni .webp già esistevano (da conversione precedente)
+- Build: ✅ 5.7s senza errori
+
+## Categorie Aggiornate
+- Blog: thought, books, experience, project
+- Tech-project, publication, passions
+
+## Impatto
+Garantisce che TUTTE le immagini mostrate usino il formato WebP ottimizzato, completando l'ottimizzazione delle immagini.
+
+
+---
+
+# Phase 2.5: Priority Loading for Listing Pages
+
+## Data: 2026-01-16
+
+## Problema Identificato
+Test post-Phase 2 mostrarono:
+- **Categories/Books**: LCP 7.4s (PEGGIORE!)
+- **Homepage**: LCP 6.8s (nessun miglioramento)
+- Root cause: Prime blog card images nelle pagine di listing erano ancora lazy-loaded
+
+## File Modificati
+
+### 1. Blog Card Partial
+**File**: `layouts/partials/components/blog-card.html`
+
+Aggiunto parametro Priority dalla parent page:
+```html
+{{ $priority := .Params.Priority | default false }}
+{{ partial "image" (dict ... "Priority" $priority) }}
+```
+
+### 2. Blog List
+**File**: `themes/hugoplate/layouts/blog/list.html`
+
+First 2 cards con Priority=true:
+```html
+{{ range $index, $page := $paginator.Pages }}
+  {{ $isPriority := lt $index 2 }}
+  {{ partial "components/blog-card" (dict "Page" $page "Params" (merge $page.Params (dict "Priority" $isPriority))) }}
+{{ end }}
+```
+
+### 3. Categories List
+**File**: `layouts/categories/list.html`
+
+Stessa logica per pagine categorie (books, thought, etc.):
+```html
+{{ range $index, $page := $paginator.Pages }}
+  {{ $isPriority := lt $index 2 }}
+  {{ partial "components/blog-card" (dict "Page" $page "Params" (dict "Priority" $isPriority)) }}
+{{ end }}
+```
+
+## Build: ✅ 1.4s (fastest yet!)
+
+## Target LCP
+- Categories/Books: 7.4s → < 2.5s (-66%)
+- Homepage: 6.8s → < 3.0s (-56%)
+- Blog List: simile a categories
+
+## Strategia
+Solo **prime 2 immagini** hanno Priority=high:
+- Optimization mirata (non tutte le immagini)
+- Rispetta best practice fetchpriority
+- Massimo impatto su LCP con minimo overhead

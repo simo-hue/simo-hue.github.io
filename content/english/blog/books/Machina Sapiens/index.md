@@ -2,7 +2,7 @@
 title: "Machina Sapiens | Nello Cristianini"
 description: 
 date: 2024-12-24T19:31:32+01:00
-image: image.png
+image: image.webp
 categories: ["books"]
 tags: []
 draft: false

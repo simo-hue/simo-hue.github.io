@@ -3,7 +3,7 @@ title: "Daniele Cassioli"
 description: 
 date: 2024-11-05
 slug: cassioli
-image: home.png
+image: home.webp
 categories: ["thoughts"]
 tags: [history, personal growth, intelligence]
 draft: false

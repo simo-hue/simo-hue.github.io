@@ -4,7 +4,7 @@ categories:
 date: 2026-01-12
 description: null
 draft: false
-image: cover.png
+image: cover.webp
 tags: []
 title: The Star Counter
 ---

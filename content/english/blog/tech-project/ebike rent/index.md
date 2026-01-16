@@ -18,7 +18,7 @@ tags:
     - Dashboard Analytics
     - Small Business Solution
 
-image: homeScreen.png
+image: homeScreen.webp
 
 links:
   - title: GitHub Repository

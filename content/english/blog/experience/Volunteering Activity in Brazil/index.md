@@ -2,7 +2,7 @@
 title: "Volunteering Activity in Brazil: A Transformative Educational Journey"
 description: "Three weeks of life-changing volunteer work in Brazil teaching children in favelas and disadvantaged communities. An authentic story of social impact, cultural exchange, and personal growth through education projects in Recife, João Pessoa, and Itapororoca."
 date: 2024-08-10
-image: Happy.jpg
+image: Happy.webp
 categories: ["Experiences"]
 draft: false
 slug: brazil-volunteer-teaching-experience
@@ -11,7 +11,7 @@ links:
   - title: Attendance Certification
     description: Official document of participation from Don Mazza Merit College
     website: /docs/attendance.pdf
-    image: resume.png
+    image: resume.webp
 ---
 
 ## Introduction

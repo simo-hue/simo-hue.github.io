@@ -4,9 +4,11 @@
   <a href="{{ .RelPermalink }}" class="absolute inset-0 z-0" aria-label="{{ .Title }}"></a>
 
   {{ $image := .Params.image }}
+  {{ $priority := .Params.Priority | default false }}
   {{ if $image }}
   <div class="blog-card-image overflow-hidden relative z-0">
-    {{ partial "image" (dict "Src" $image "Context" .Page "Alt" .Title "Class" "w-full h-48 object-cover") }}
+    {{ partial "image" (dict "Src" $image "Context" .Page "Alt" .Title "Class" "w-full h-48 object-cover" "Priority"
+    $priority) }}
 
     <!-- External Links Overlay -->
     {{ if .Params.links }}

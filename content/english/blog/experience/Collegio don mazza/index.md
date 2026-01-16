@@ -2,7 +2,7 @@
 title: "Don Mazza College"
 description: "to do"
 date: 2024-11-02
-image: max.png
+image: max.webp
 categories: ["Experiences"]
 tags: [education, college, student life, verona]
 draft: false

@@ -11,7 +11,7 @@ tags:
     - Photography
     - Video Making
 
-image: logo.jpg
+image: logo.webp
 
 links:
   - title: Instagram Account

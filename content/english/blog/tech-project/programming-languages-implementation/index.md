@@ -4,7 +4,7 @@ date: 2024-09-18
 description: "Implementazione da zero di un linguaggio di programmazione interpretato usando Java e ANTLR4. Progetto completo per il corso di Linguaggi di Programmazione UniVR con lexer, parser, interpreter e supporto Brainfuck."
 categories: [tech-projects]
 slug: programming-languages-implementation
-image: cover.png
+image: cover.webp
 tags:
     - Programming Languages
     - Language Implementation

@@ -2,7 +2,7 @@
 title: "Primo Hackathon Lovable Vibe Conding In Italia"
 description: "6 Ore per Costruire l'Impossibile"
 date: 2025-10-18
-image: cover.jpg
+image: cover.webp
 draft: false
 categories: ["tech projects"]
 tags:

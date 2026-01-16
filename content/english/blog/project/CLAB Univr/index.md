@@ -2,7 +2,7 @@
 title: CLab UNIRv
 date: 2023-07-28
 description: 
-image: team.JPG
+image: team.webp
 categories: [projects]
 slug: think
 

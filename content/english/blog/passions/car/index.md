@@ -2,7 +2,7 @@
 title: "Cars"
 description: 
 date: 2024-11-04T19:31:32+01:00
-image: IMG_8411.jpg
+image: IMG_8411.webp
 categories: ["passions"]
 slug: car
 tags: [vehicle, audi, car, speed, adrenaline]

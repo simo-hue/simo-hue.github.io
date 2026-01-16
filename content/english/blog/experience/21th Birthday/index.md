@@ -2,7 +2,7 @@
 title: "21th birth Day in Brazil"
 description: "An awensome experience that changed and teached me a lot"
 date: 2024-07-28
-image: olilnda.JPG
+image: olilnda.webp
 categories: ["Experiences"]
 draft: false
 slug: 21th-birthday

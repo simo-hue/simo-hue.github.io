@@ -4,7 +4,7 @@ date: 2024-09-18
 description: "Applicazione nativa macOS per conversioni testo istantanee con shortcut globali. Zero context switch, <100ms response time, integrazione con 500+ app. Tool di produttività per developers e content creators."
 categories: [tech-projects]
 slug: textconverter-pro
-image: cover.png
+image: cover.webp
 tags:
     - macOS Development
     - Productivity Tools

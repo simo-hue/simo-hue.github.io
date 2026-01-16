@@ -16,11 +16,11 @@ links:
   - title: Instagram Account
     description: You can find there all my wildlife video and also the backstage of it
     website: https://instagram.com/simo___one
-    image: instagram.png
+    image: instagram.webp
   - title: Youtube Account
     description: Watch the thought, experiences, travels and many other stuff that I share.
     website: https://youtube.com/@simosDiary2003
-    image: youtube.png
+    image: youtube.webp
 ---
 
 Welcome to simo's Diary, a place where I love to share....da completare

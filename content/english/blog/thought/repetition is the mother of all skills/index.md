@@ -2,7 +2,7 @@
 title: "repetition is the mother of all skills"
 description: 
 date: 2024-11-05
-image: i.png
+image: i.webp
 slug: repetition
 categories: ["thoughts"]
 tags: [success, humble, intelligence]

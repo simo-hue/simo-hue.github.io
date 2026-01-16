@@ -2,7 +2,7 @@
 title: "Spread Love wherever you go"
 description: 
 date: 2024-11-06
-image: image.png
+image: image.webp
 categories: ["thoughts"]
 tags: [love, altruism]
 slug: love

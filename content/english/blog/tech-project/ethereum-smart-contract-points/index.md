@@ -3,7 +3,7 @@ title: "Smart Contract Ethereum per Sistema Raccolta Punti - DApp Completa"
 date: 2024-09-18
 description: "Implementazione completa di uno smart contract Ethereum per sistema di raccolta punti. Progetto universitario con Solidity, Truffle Framework, React frontend e deployment su blockchain. Studio pratico di DeFi e Web3."
 categories: [tech-projects]
-image: cover.png
+image: cover.webp
 slug: ethereum-smart-contract-points
 tags:
     - Ethereum

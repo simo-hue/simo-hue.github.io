@@ -2,7 +2,7 @@
 title: "Mountain bike"
 description: 
 date: 2024-11-04T19:31:32+01:00
-image: bike.JPG
+image: bike.webp
 categories: ["passions"]
 slug: bike
 tags: [mountain bike, rabbi, nature, mountain, sport, adrenaline, fun, outdoor, summer]

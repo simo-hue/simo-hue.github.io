@@ -4,7 +4,7 @@ draft: false
 description: "A question that has been there for years"
 date: 2026-01-13
 categories: ["thoughts"]
-image: cover.png
+image: cover.webp
 ---
 
 The question of questions... the anxiety of the last 2 years of university and NOT only.

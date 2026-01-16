@@ -2,7 +2,7 @@
 title: "Impostor Syndrome OR Ignorance?"
 description: 
 date: 2025-09-04T19:31:32+01:00
-image: image.png
+image: image.webp
 categories: ["thoughts"]
 slug: trap
 tags: [ignorance, impostor syndrome]

@@ -2,7 +2,7 @@
 title: "The importance of being able to stay alone"
 description: 
 date: 2024-11-06
-image: alone.png
+image: alone.webp
 categories: ["thoughts"]
 slug: alone
 tags: [lonelyness, strength, personal growth]

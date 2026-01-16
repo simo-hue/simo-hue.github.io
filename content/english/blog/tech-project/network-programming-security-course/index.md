@@ -3,7 +3,7 @@ title: "Corso Programmazione e Sicurezza delle Reti - Materiale Didattico Open S
 date: 2024-09-18
 description: "Raccolta completa di materiali didattici per il corso di Programmazione e Sicurezza delle Reti di UniVR. Codice pratico, documentazione e risorse per la comunità studentesca. Risultato: 30 e Lode."
 categories: [tech-projects]
-image: cover.png
+image: cover.webp
 slug: network-programming-security-course
 tags:
     - Network Programming

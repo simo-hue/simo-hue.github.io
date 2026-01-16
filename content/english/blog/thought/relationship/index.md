@@ -2,7 +2,7 @@
 title: "Relationship Importance"
 description: 
 date: 2024-11-27
-image: logo.png
+image: logo.webp
 slug: relationship
 categories: ["thoughts"]
 tags: [social, relationship, intelligence]

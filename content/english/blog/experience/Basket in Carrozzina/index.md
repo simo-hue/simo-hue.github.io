@@ -2,7 +2,7 @@
 title: "Wheelchair Basketball"
 description: "Con Olympic Basket Verona"
 date: 2024-12-17
-image: home.jpg
+image: home.webp
 categories: ["Experiences"]
 draft: false
 tags: [basket, sport, emotional, educational]

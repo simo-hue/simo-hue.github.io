@@ -3,7 +3,7 @@ title: "Automazione Traduzione Contenuti YouTube"
 date: 2024-09-18
 description: "Script Python avanzato per traduzione automatica di video YouTube: titoli, descrizioni e sottotitoli in 130+ lingue. Integrazione YouTube Data API v3 e Google OAuth 2.0 per content creators e aziende."
 categories: [tech-projects]
-image: lo.png
+image: lo.webp
 slug: youtube-video-localization-script
 tags:
     - Python
