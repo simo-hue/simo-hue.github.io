@@ -278,3 +278,179 @@ Solo **prime 2 immagini** hanno Priority=high:
 - Optimization mirata (non tutte le immagini)
 - Rispetta best practice fetchpriority
 - Massimo impatto su LCP con minimo overhead
+
+---
+
+# Google Tag Manager Implementation
+
+## Data: 2026-01-16
+
+## Obiettivo
+Implementare Google Tag Manager (GTM) per centralizzare la gestione di tutti i tag di tracciamento e migliorare le capacità di analytics del sito.
+
+## File Creati
+
+### 1. GTM Script Partial
+**File**: [`layouts/partials/gtm.html`](file:///Users/simo/Downloads/simo-hue.github.io/layouts/partials/gtm.html)
+
+Script GTM inserito nel `<head>`:
+```html
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T3VMWGJP');</script>
+<!-- End Google Tag Manager -->
+```
+
+**Container ID**: `GTM-T3VMWGJP`
+
+### 2. GTM NoScript Partial
+**File**: [`layouts/partials/gtm-noscript.html`](file:///Users/simo/Downloads/simo-hue.github.io/layouts/partials/gtm-noscript.html)
+
+Fallback per browser senza JavaScript, inserito dopo `<body>`:
+```html
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T3VMWGJP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+```
+
+## File Modificati
+
+### 3. Head Template
+**File**: [`layouts/partials/essentials/head.html`](file:///Users/simo/Downloads/simo-hue.github.io/layouts/partials/essentials/head.html)
+
+**Prima** (linee 48-49):
+```html
+<!-- google tag manager - removed for performance (consider if really needed) -->
+{{/* {{ partialCached "gtm.html" . }} */}}
+```
+
+**Dopo**:
+```html
+<!-- google tag manager -->
+{{ partialCached "gtm.html" . }}
+```
+
+Attivato il partial GTM che era commentato.
+
+## Integrazione con Template Esistente
+
+Il template [`baseof.html`](file:///Users/simo/Downloads/simo-hue.github.io/themes/hugoplate/layouts/_default/baseof.html) già includeva il placeholder per `gtm-noscript.html` alla linea 23:
+```html
+{{ partialCached "gtm-noscript.html" . }}
+```
+
+Quindi l'integrazione era già prevista nell'architettura del tema, bastava creare i file corrispondenti.
+
+## Build Status
+
+✅ **Build completato con successo**
+- Tempo di build: 1712 ms
+- Pagine generate: 484
+- Immagini processate: 361
+- Nessun errore o warning
+- Server Hugo funzionante su http://localhost:1313/
+
+## Benefici di Google Tag Manager
+
+### 1. **Gestione Centralizzata**
+- Un'unica interfaccia per gestire tutti i tag (Analytics, Ads, remarketing, ecc.)
+- Non serve più modificare il codice sorgente per ogni modifica
+
+### 2. **Performance**
+- Caricamento asincrono dei tag
+- Riduce il numero di snippet di codice nel source HTML
+- GTM ottimizza automaticamente l'ordine di caricamento
+
+### 3. **Tracciamento Eventi Avanzato**
+Da configurare nell'interfaccia GTM:
+- Click sui bottoni e link esterni
+- Submit dei form
+- Scroll depth tracking
+- Video engagement
+- Download di file
+- Tempo di permanenza sulla pagina
+
+### 4. **A/B Testing e Remarketing**
+- Facile integrazione con Google Optimize
+- Facebook Pixel, LinkedIn Insight Tag
+- Custom audiences per remarketing
+
+### 5. **Tag Assistant e Debug**
+- Preview mode per testare modifiche
+- Debug console integrato
+- Versioning e rollback delle modifiche
+
+## Prossimi Passi Consigliati
+
+### 1. Configurazione Tag di Base in GTM
+Accedere a https://tagmanager.google.com e configurare:
+
+#### a) Google Analytics 4
+- Tag Type: Google Analytics: GA4 Configuration
+- Measurement ID: `G-MEASUREMENT_ID` (già presente in hugo.toml)
+- Trigger: All Pages
+
+#### b) Google Analytics Events
+Tags personalizzati per eventi:
+- **Scroll Tracking**: Trigger al 25%, 50%, 75%, 90% scroll
+- **Outbound Links**: Click su link esterni
+- **File Downloads**: Click su PDF, documenti
+- **Social Shares**: Click sui bottoni social
+
+#### c) Facebook Pixel (se necessario)
+- Tag Type: Custom HTML
+- Pixel ID da Facebook Business Manager
+- Trigger: All Pages
+
+### 2. Enhanced Ecommerce (se applicabile)
+Se il sito venderà prodotti/servizi in futuro:
+- Product impressions
+- Add to cart events
+- Purchase tracking
+
+### 3. Conversion Tracking
+Setup conversioni per obiettivi chiave:
+- Iscrizione newsletter
+- Richieste di contatto
+- Download risorse
+- Tempo di lettura articoli
+
+### 4. User ID Tracking (opzionale)
+Per tracciare utenti registrati cross-device:
+- User ID implementation
+- Cross-domain tracking se necessario
+
+## Verifica Implementazione
+
+### Test Locale
+1. Aprire http://localhost:1313/ con browser DevTools
+2. Aprire **Network tab** → cercare richieste a `googletagmanager.com`
+3. Verificare presenza di:
+   - `gtm.js?id=GTM-T3VMWGJP`
+   - dataLayer inizializzato in console: `window.dataLayer`
+
+### Test su Produzione (dopo deploy)
+1. Installare [Google Tag Assistant](https://chrome.google.com/webstore/detail/tag-assistant-legacy-by-g/kejbdjndbnbjgmefkgdddjlbokphdefk) (Chrome Extension)
+2. Visitare https://simo-hue.github.io
+3. Verificare che GTM container sia rilevato
+4. Usare GTM Preview Mode per debug avanzato
+
+## Note Tecniche
+
+- **Cache**: GTM usa `partialCached` per ottimizzare le performance Hugo
+- **DataLayer**: Disponibile globalmente come `window.dataLayer`
+- **NoScript Fallback**: Assicura tracking basico anche senza JavaScript
+- **Async Loading**: Lo script GTM usa caricamento asincrono per non bloccare rendering
+
+## Compatibilità
+
+✅ Google Analytics 4 (già presente)  
+✅ Facebook Pixel  
+✅ LinkedIn Insight Tag  
+✅ Hotjar/Microsoft Clarity  
+✅ Google Optimize  
+✅ Custom scripts e tracciamenti
