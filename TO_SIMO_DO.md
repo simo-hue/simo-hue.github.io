@@ -180,3 +180,20 @@ Simile a Facebook Pixel, se necessario per B2B marketing
 ### 2. Immagini
 - [ ] Verificare che l'immagine di copertina `cover.webp` sia visualizzata correttamente (assumendo sia già presente nella cartella). Se manca, aggiungerne una.
 
+
+## Verifica Link Passions & Interests
+### Data: 2026-01-19
+
+### 1. Verifica Funzionale
+- [ ] Andare alla pagina About.
+- [ ] Cliccare su ogni card nella sezione "Passions & Interests".
+- [ ] Verificare che ogni card porti all'articolo corretto:
+    - **Travel & Volounteering** -> `/blog/experience/brazil-volunteer-teaching-experience/`
+    - **Content Creation** -> `/blog/project/simos-diary/`
+    - **Cars & Bikes** -> `/blog/passions/car/` (Attenzione: è in bozza/draft, assicurarsi che il server lo mostri o attivarlo)
+    - **Tech & AI** -> `/passion/technology/`
+    - **Mountain Nature** -> `/blog/project/mountain-fauna-lover/`
+    - **Outdoor Sports** -> `/passion/sport/`
+
+### 2. Verifica Visuale
+- [ ] Controllare che l'hover effect sulle card funzioni ancora correttamente ora che sono dei link.

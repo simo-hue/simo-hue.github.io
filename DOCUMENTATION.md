@@ -528,3 +528,31 @@ Il file è stato aggiornato con:
 - Integrata correzione manuale dell'utente riguardante le pagine delle statistiche.
 ✅ **Stato Finale**: Articolo in Inglese.
 
+
+---
+
+# Connect "Passions & Interests" to Blog Articles
+
+## Data: 2026-01-19
+
+## Obiettivo
+Collegare le card della sezione "Passions & Interests" nella pagina About ai rispettivi articoli del blog per migliorare la navigazione e l'interconnessione dei contenuti.
+
+## Modifiche
+
+### 1. Data Update
+**File**: [`data/about.yml`](file:///Users/simo/Downloads/DEV/simo-hue.github.io/data/about.yml)
+- Aggiunta la proprietà `link` per ogni item nella lista `passions`.
+- Mappatura definita:
+    - Travel & Volounteering -> `brazil-volunteer-teaching-experience`
+    - Content Creation -> `simo's diary`
+    - Cars & Bikes -> `/passion/cars/`
+    - Tech & AI -> `technology`
+    - Mountain Nature -> `mountain-fauna-lover`
+    - Outdoor Sports -> `sport`
+
+### 2. Layout Update
+**File**: [`layouts/about/list.html`](file:///Users/simo/Downloads/DEV/simo-hue.github.io/layouts/about/list.html)
+- Modificato il loop delle passioni per rendere le card cliccabili.
+- Avvolto il contenuto della card in un tag `<a>` se la proprietà `link` è presente.
+- Mantenuto lo stile esistente e gli effetti hover.

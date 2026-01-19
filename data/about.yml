@@ -42,16 +42,22 @@ education:
 passions:
   - name: "Travel & Volunteering"
     icon: "fa-solid fa-plane-departure"
+    link: "/blog/experience/brazil-volunteer-teaching-experience/"
   - name: "Content Creation"
     icon: "fa-solid fa-video"
+    link: "/blog/project/simos-diary/"
   - name: "Cars & Bikes"
     icon: "fa-solid fa-motorcycle"
+    link: "/passion/cars/"
   - name: "Tech & AI"
     icon: "fa-solid fa-microchip"
+    link: "/passion/technology/"
   - name: "Mountain Nature"
     icon: "fa-solid fa-mountain"
+    link: "/blog/project/mountain-fauna-lover/"
   - name: "Outdoor Sports"
     icon: "fa-solid fa-person-hiking"
+    link: "/passion/sport/"
 
 socials:
   - name: "instagram"

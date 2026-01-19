@@ -330,6 +330,7 @@
       "group-hover:gap-3",
       "group-hover:opacity-100",
       "group-hover:scale-105",
+      "group-hover:scale-110",
       "group-hover:scale-[1.01]",
       "group-hover:text-primary",
       "group-hover:translate-x-1",
