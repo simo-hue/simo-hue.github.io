@@ -1,5 +1,5 @@
 ---
-title: "Mattioli.OS: How I Built My Digital Second Brain"
+title: "Mattioli.OS"
 description: "A deep dive into how I created 'Mattioli.OS', an advanced Habit Tracker and Personal OS based on React, Supabase, and AI."
 slug: mattioli-os
 date: 2026-01-19
