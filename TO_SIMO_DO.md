@@ -28,11 +28,19 @@ git push origin main
 - Container: **GTM-T3VMWGJP** (già implementato nel codice)
 
 ### 2. Configurare Google Analytics 4 (GA4)
-Se non ancora fatto:
 
-**a) Creare Tag GA4:**
+> [!IMPORTANT]  
+> **AZIONE CRITICA**: Google Analytics diretto è stato disattivato per evitare duplicate tracking.  
+> **DEVI configurare GA4 tramite GTM**, altrimenti perderai il tracciamento analytics!
+
+**Retrieval Measurement ID**:
+1. Aprire file [`hugo.toml`](file:///Users/simo/Downloads/simo-hue.github.io/hugo.toml)
+2. Cercare: `[services.googleAnalytics]`
+3. Copiare il valore di `ID` (es. `G-XXXXXXXXXX`)
+
+**a) Creare Tag GA4 in GTM:**
 - Tags → New → Google Analytics: GA4 Configuration
-- Configuration Tag → inserire Measurement ID (trovalo in `hugo.toml` sotto `googleAnalytics`)
+- Configuration Tag → inserire Measurement ID copiato da `hugo.toml`
 - Triggering: All Pages
 - Save
 
@@ -158,3 +166,17 @@ Simile a Facebook Pixel, se necessario per B2B marketing
 - [ ] Google Analytics traccia visite in real-time
 - [ ] Eventi personalizzati testati in Preview mode
 - [ ] DOCUMENTATION.md aggiornato con dettagli implementazione
+
+---
+
+## 📝 Verifica Blog Post Mattioli.OS
+### Data: 2026-01-19
+
+### 1. Verifica Contenuto
+- [ ] Controllare che l'articolo "Mattioli.OS" sia visibile nella sezione Blog/Tech Projects.
+- [ ] Verificare che i link a GitHub repository e Live Demo funzionino.
+- [ ] Leggere l'articolo per assicurarsi che la formattazione (grassetti, liste, citazioni) sia corretta.
+
+### 2. Immagini
+- [ ] Verificare che l'immagine di copertina `cover.webp` sia visualizzata correttamente (assumendo sia già presente nella cartella). Se manca, aggiungerne una.
+

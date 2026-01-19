@@ -3,6 +3,11 @@
 <!-- responsive meta -->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
 
+
+<!-- google tag manager - MUST BE AS HIGH AS POSSIBLE FOR SEO -->
+{{ partialCached "gtm.html" . }}
+
+
 <!-- theme meta -->
 <meta name="theme-name" content="hugoplate" />
 
@@ -33,7 +38,8 @@
 {{ partialCached "custom-script.html" . }}
 
 
-<!-- google analytics - OPTIMIZED: defer loading -->
+<!-- google analytics - DISABLED: now managed through GTM (see TO_SIMO_DO.md) -->
+{{/*
 {{ if and site.Config.Services.GoogleAnalytics.ID (ne site.Config.Services.GoogleAnalytics.ID "G-MEASUREMENT_ID") }}
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.Config.Services.GoogleAnalytics.ID }}"></script>
 <script>
@@ -43,10 +49,10 @@
     gtag('config', '{{ site.Config.Services.GoogleAnalytics.ID }}');
 </script>
 {{ end }}
+*/}}
 
 
-<!-- google tag manager -->
-{{ partialCached "gtm.html" . }}
+<!-- google tag manager - MOVED TO TOP OF HEAD (after line 7) for SEO -->
 
 
 <!-- search index -->

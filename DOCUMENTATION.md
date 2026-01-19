@@ -319,22 +319,67 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 ## File Modificati
 
-### 3. Head Template
+### 3. Head Template - SEO Optimized Positioning
 **File**: [`layouts/partials/essentials/head.html`](file:///Users/simo/Downloads/simo-hue.github.io/layouts/partials/essentials/head.html)
 
-**Prima** (linee 48-49):
-```html
-<!-- google tag manager - removed for performance (consider if really needed) -->
-{{/* {{ partialCached "gtm.html" . }} */}}
-```
+#### Ottimizzazione 1: GTM Posizionato il Più in Alto Possibile
+**Best Practice Google**: GTM deve essere inserito quanto più in alto possibile nel `<head>`.
 
-**Dopo**:
+**Implementazione** (linee 6-9):
 ```html
-<!-- google tag manager -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+
+<!-- google tag manager - MUST BE AS HIGH AS POSSIBLE FOR SEO -->
 {{ partialCached "gtm.html" . }}
 ```
 
-Attivato il partial GTM che era commentato.
+**Posizione**: Subito dopo i meta tag essenziali (charset e viewport), **prima** di:
+- Favicon
+- Manifest
+- SEO tags
+- Structured data
+- Tutti gli altri script
+
+**Beneficio SEO**: 
+- ✅ Caricamento anticipato del dataLayer
+- ✅ Tracking più accurato di eventi early-page
+- ✅ Riduzione time-to-interactive per analytics
+- ✅ Conformità alle linee guida Google Tag Manager
+
+#### Ottimizzazione 2: Disattivazione Google Analytics Diretto
+**Problema identificato**: Conflitto tra implementazione diretta GA e GTM.
+
+**Prima** (linee 36-45 - rimosso):
+```html
+<!-- google analytics - OPTIMIZED: defer loading -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=..."></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-MEASUREMENT_ID');
+</script>
+```
+
+**Dopo** (linee 41-51 - commentato):
+```html
+<!-- google analytics - DISABLED: now managed through GTM (see TO_SIMO_DO.md) -->
+{{/* ... codice GA commentato ... */}}
+```
+
+**Motivazione**:
+- ⚠️ **Duplicate Tracking**: Avere sia GA diretto che GTM causa tracciamento duplicato
+- ⚠️ **Conflitti dataLayer**: Entrambi usano `window.dataLayer`
+- ⚠️ **Performance**: Due script analytics inutili rallentano il sito
+
+**Best Practice**:
+- ✅ Un solo sistema di tracking attivo
+- ✅ GTM gestisce TUTTI i tag (incluso GA4)
+- ✅ Configurazione centralizzata nel dashboard GTM
+- ✅ Maggiore flessibilità senza modifiche al codice
+
+**Azione Richiesta**: Configurare Google Analytics 4 tramite interfaccia GTM (vedi `TO_SIMO_DO.md`).
 
 ## Integrazione con Template Esistente
 
@@ -454,3 +499,32 @@ Per tracciare utenti registrati cross-device:
 ✅ Hotjar/Microsoft Clarity  
 ✅ Google Optimize  
 ✅ Custom scripts e tracciamenti
+
+---
+
+# Mattioli.OS Blog Post Creation
+
+## Data: 2026-01-19
+
+## Obiettivo
+Creare un articolo blog in italiano per presentare "Mattioli.OS" (Habit Tracker), descrivendone filosofia, feature e stack tecnologico.
+
+## Modifiche
+### 1. Sovrascrittura Articolo Esistente
+**File**: `content/english/blog/tech-project/mattioliOS/index.md`
+
+Il file è stato aggiornato con:
+- **Nuovo Frontmatter**: Titolo "Mattioli.OS: Come ho Costruito il mio Secondo Cervello Digitale", data odierna, tag aggiornati.
+- **Contenuto**: Introduzione al problema (produttività vs complessità), Filosofia (Attrito, Privacy, Estetica), Feature (AI Coach, Gamification, Heatmaps), Tech Stack (React, Supabase, Tailwind) e Link al repo/demo.
+
+## Stato
+## Stato
+✅ **Articolo Creato**: Contenuto in italiano professionale, pronto per la pubblicazione.
+
+### Update (Traduzione)
+**Data**: 2026-01-19
+**Azione**: Tradotto l'articolo da Italiano a Inglese su richiesta dell'utente.
+- Mantenuto tono "professionale ma personale".
+- Integrata correzione manuale dell'utente riguardante le pagine delle statistiche.
+✅ **Stato Finale**: Articolo in Inglese.
+
