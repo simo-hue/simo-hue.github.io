@@ -197,3 +197,7 @@ Simile a Facebook Pixel, se necessario per B2B marketing
 
 ### 2. Verifica Visuale
 - [ ] Controllare che l'hover effect sulle card funzioni ancora correttamente ora che sono dei link.
+
+## Verification
+- [ ] Verify GitHub Actions status for the latest commit (fix: add description...).
+- [ ] Check the live site to ensure the 'Being Humble' post renders correctly.
