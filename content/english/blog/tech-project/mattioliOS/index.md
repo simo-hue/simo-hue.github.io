@@ -20,7 +20,7 @@ links:
     website: https://github.com/simo-hue/habit-tracker
   - title: Web App
     description: Try the Live Demo on the official site
-    website: https://simo-hue.github.io/habit-tracker/
+    website: https://simo-hue.github.io/mattioli.OS/
 ---
 
 > "We don't rise to the level of our goals. We fall to the level of our systems." — James Clear
