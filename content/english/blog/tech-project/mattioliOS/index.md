@@ -17,7 +17,7 @@ comments: false
 links:
   - title: GitHub Repository
     description: Access full source code and documentation
-    website: https://github.com/simo-hue/habit-tracker
+    website: https://github.com/simo-hue/mattioli.OS
   - title: Web App
     description: Try the Live Demo on the official site
     website: https://simo-hue.github.io/mattioli.OS/
@@ -71,7 +71,7 @@ Mattioli.OS is a living project. I am constantly working to improve it. Upcoming
 
 If you are a developer or a productivity enthusiast, I invite you to try the project. It's open-source, so you can fork it, modify it, and adapt it to your needs.
 
-🔗 **[GitHub Repository](https://github.com/simo-hue/habit-tracker)**
-🔗 **[Live Demo](https://simo-hue.github.io/habit-tracker/)**
+🔗 **[GitHub Repository](https://github.com/simo-hue/mattioli.OS)**
+🔗 **[Live Demo](https://simo-hue.github.io/mattioli.OS/)**
 
 Build your system. Raise your standards.
