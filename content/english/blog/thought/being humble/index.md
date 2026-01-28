@@ -1,6 +1,6 @@
 ---
 title: "Don't Brag"
-description: 
+description: "Reflections on the importance of humility without losing self-confidence."
 date: 2024-11-05
 image: image.webp
 slug: humility
