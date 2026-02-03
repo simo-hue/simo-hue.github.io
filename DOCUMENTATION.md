@@ -583,3 +583,22 @@ Questo bypassa la logica di generazione automatica del summary all'interno della
 
 ## Nuova Regola
 Assicurarsi che tutti i nuovi post abbiano un campo `description` compilato nel frontmatter per evitare problemi simili e migliorare la SEO.
+
+---
+
+# CampFlow Blog Post Translation
+
+## Data: 2026-02-03
+
+## Modification
+**File**: `content/english/blog/tech-project/CampFlow/index.md`
+
+- **Action**: Translated the entire blog post from Italian to English.
+- **Details**: 
+    - Preserved all markdown structure and frontmatter keys.
+    - Translated title keys in `links` section.
+    - Maintained the original tone and concepts as requested.
+
+- [2026-02-03T10:24:00+01:00]: Cards Improvements
+  - *Details*: Made the image area of blog cards clickable (linking to the post) by allowing clicks to pass through the image container to the underlying full-card link.
+  - *Tech Notes*: Added `pointer-events-none` to `.blog-card-image` in `layouts/partials/components/blog-card.html`. External links inside the container retain `pointer-events-auto`.
