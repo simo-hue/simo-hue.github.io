@@ -3,7 +3,7 @@ title: "Resvo"
 description: "A modern open-source reservation management system, born to help a friend and grown for the community."
 slug: Resvo
 date: 2026-02-03
-image: home.png
+image: home.webp
 draft: false
 categories: ["tech projects"]
 tags: ["opensource", "nextjs", "reservation-system", "dev-stories"]

@@ -3,7 +3,7 @@ title: "CampFlow"
 description: "A modern management system for campsites, born from friendship and grown for the community."
 slug: campflow
 date: 2026-02-03
-image: home.png
+image: home.webp
 draft: false
 categories: ["tech projects"]
 tags: ["open source", "react", "nextjs", "management"]
