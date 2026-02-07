@@ -1,12 +1,24 @@
 enable: true
 items:
-  - date: "2025-?"
+  - date: "2026-?"
     title: "Coming Soon"
     organization: "Stay Tuned"
     description: "Something exciting is on the horizon. Check back soon to discover what's next in my journey."
     icon: "fa-solid fa-question"
     tags: ["Future"]
+    align: "left"
+  - date: "End 2025"
+    title: "Understanding and Predicting Tourist Behavior through Large Language Models"
+    organization: "Research Publication"
+    description: "Investigation into the potential of LLMs in interpreting and predicting tourist movements. Will be published soon."
+    icon: "fa-solid fa-file-pdf"
+    tags: ["Research", "AI"]
     align: "right"
+    links:
+      - label: "Read Paper"
+        url: "/docs/llm_tourist_trajectories.pdf"
+      - label: "Blog Post"
+        url: "/blog/publication/llm-tourism-mobility-predictor/"
 
   - date: "2022 - 2025"
     title: "Computer Science Student"

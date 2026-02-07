@@ -25,6 +25,9 @@ links:
   - title: GitHub Repository
     description: Access the complete open-source codebase and documentation
     website: https://github.com/4nnina/llm_tourist_trajectories
+  - title: LLM Tourist Trajectories Paper
+    description: Read the full research paper
+    website: /docs/llm_tourist_trajectories.pdf
 ---
 
 ## Abstract
@@ -40,6 +43,8 @@ Results show that incorporating contextual factors improves predictions, resulti
 Tourist Recommender Systems (T-RSs) have gained increased attention, supported by the availability of User Generated Content (UGC) and advanced analysis tools. Predicting future movements is crucial for producing meaningful suggestions, but it involves complex spatial, temporal, and social factors. Traditional approaches often rely on structured data and models like Recurrent Neural Networks (RNNs) or Transformers.
 
 This paper investigates the potential of LLMs in interpreting and forecasting tourist movements in a Next-PoI prediction task. We compare six open-source LLM models and experiment with an incremental prompt engineering approach. The study uses a real-world dataset of tourist visits to Verona, Italy, from 2014 to 2023.
+
+You can download the full paper here: [llm_tourist_trajectories.pdf](/docs/llm_tourist_trajectories.pdf).
 
 ## Methodology
 
