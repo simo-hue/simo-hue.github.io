@@ -20,7 +20,7 @@
 {{ $res = resources.Get $image }}
 {{ end }}
 {{ if $res }}
-{{ $imgURL = $res.RelPermalink }}
+{{ $imgURL = $res.Permalink }}
 {{ else }}
 {{ $imgURL = $image | absURL }}
 {{ end }}
