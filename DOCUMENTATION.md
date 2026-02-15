@@ -671,3 +671,19 @@ Assicurarsi che tutti i nuovi post abbiano un campo `description` compilato nel 
   - *Tech Notes*:
     - Updated `.pointOfView({ altitude: 0.5 })` in `layouts/globe/list.html` to provide a much closer initial view of Italy.
 
+- [2026-02-15 20:25]: Premium Mobile Optimization for Globe Modal
+  - *Details*: Redesigned the country detail modal to provide a professional, responsive experience on mobile. Fixed issues where the modal was covered by the navbar or was not responsive to orientation changes.
+  - *Tech Notes*:
+    - **Stacking Context Fix**: Moved the modal out of the globe viewport container to prevent it from being trapped under the navbar.
+    - **Responsive Layout**: Implemented a vertical layout for mobile (40% map, 60% list) and horizontal for desktop.
+    - **Visual Enhancements**: Added premium glassmorphism (`backdrop-blur-md`), smooth entry animations (`translate-y`), and high-quality shadow effects.
+    - **Dynamic Resizing**: Added a window resize listener to re-render the D3 map automatically, ensuring it fits the new container dimensions (e.g., on orientation change).
+    - **UI Polish**: Refined the close button with hover rotations and better touch targets. Added a pulsing status indicator for the article count.
+
+- [2026-02-15 20:30]: Robust Country Map & Title Layout Fix
+  - *Details*: Resolved overlapping issues between the country name and the D3 map visualization. 
+  - *Tech Notes*:
+    - **Self-Correcting Layout**: Moved the country title from `absolute` to standard flex-col flow, ensuring the map container always starts below the text.
+    - **Smart Projections**: Switched from `fitSize` to `fitExtent` in D3, implementing a 15% dynamic padding that automatically scales based on the available container dimensions.
+    - **Header Protection**: Added responsive right-padding to the title container to prevent collisions with the fixed close button on narrow screens.
+
