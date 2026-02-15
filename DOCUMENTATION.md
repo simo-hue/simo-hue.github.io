@@ -612,4 +612,8 @@ Assicurarsi che tutti i nuovi post abbiano un campo `description` compilato nel 
     - Implemented logic to fetch posts with coordinates and resolve their images correctly.
     - Optimized zoom controls: `minDistance` (120), `maxDistance` (600), slowed `zoomSpeed` (0.6) for smoother navigation.
     - Added event listeners to `globeViz` container to prevent default browser zoom (Ctrl+Wheel / Pinch / Gesture), ensuring only the globe zooms.
+    - Switch to **Vector/Polygon Globe**: Replaced satellite texture with GeoJSON countries (`ne_110m_admin_0_countries.geojson`).
+    - **Hybrid Visualization**: Restored `earth-blue-marble.jpg` (Satellite) as base texture.
+    - **Transparent Polygons**: Styled country polygons to be transparent by default, showing borders and highlighting on hover.
+    - Updated markers to be small, non-interactive red dots.
 

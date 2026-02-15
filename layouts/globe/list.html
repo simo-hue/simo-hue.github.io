@@ -1,162 +1,88 @@
 {{ define "main" }}
 <script src="//unpkg.com/globe.gl"></script>
+<script src="//unpkg.com/d3"></script>
 
 <div class="relative w-full h-screen bg-black overflow-hidden scale-110">
     <div id="globeViz"></div>
-
-    <!-- Card Container -->
-    <div id="card-container"
-        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-0 transition-opacity duration-300 z-10 w-80">
-        <div
-            class="bg-white dark:bg-darkmode-theme-light rounded-lg shadow-2xl overflow-hidden border border-border dark:border-darkmode-border">
-            <div class="relative h-48">
-                <img id="card-image" src="" alt="Blog Cover" class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                <h3 id="card-title"
-                    class="absolute bottom-4 left-4 text-white text-xl font-bold font-primary leading-tight drop-shadow-md">
-                </h3>
-            </div>
-            <div class="p-4">
-                <div class="flex justify-between items-center">
-                    <span id="card-date" class="text-sm text-text-light dark:text-darkmode-text-light"></span>
-                    <a id="card-link" href="#"
-                        class="px-4 py-2 bg-primary text-white text-sm font-medium rounded-md hover:bg-primary/90 transition-colors pointer-events-auto">
-                        Read Article
-                    </a>
-                </div>
-            </div>
-            <!-- Close Button -->
-            <button id="card-close"
-                class="absolute top-2 right-2 p-1 bg-black/50 hover:bg-black/70 rounded-full text-white pointer-events-auto transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd"
-                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                        clip-rule="evenodd" />
-                </svg>
-            </button>
-        </div>
-    </div>
 </div>
 
 {{ $points := slice }}
 {{ range where site.RegularPages "Params.lat" "!=" nil }}
 {{ if .Params.lon }}
-{{ $title := .Title }}
-{{ $permalink := .Permalink }}
-{{ $date := .Date.Format "Jan 02, 2006" }}
-
-{{ $image := .Params.image }}
-{{ $imgURL := "" }}
-{{ if $image }}
-{{ if (urls.Parse $image).Scheme }}
-{{ $imgURL = $image }}
-{{ else }}
-{{ $res := .Resources.GetMatch $image }}
-{{ if not $res }}
-{{/* Try matching with wildcards if exact match fails, common in page bundles */}}
-{{ $res = .Resources.GetMatch (printf "*%s*" $image) }}
-{{ end }}
-{{ if not $res }}
-{{ $res = resources.Get $image }}
-{{ end }}
-{{ if $res }}
-{{ $imgURL = $res.RelPermalink }}
-{{ else }}
-{{ $imgURL = $image | absURL }}
-{{ end }}
-{{ end }}
-{{ end }}
-
-{{ $points = $points | append (dict "lat" .Params.lat "lng" .Params.lon "title" $title "image" $imgURL "date" $date
-"permalink" $permalink) }}
+{{ $points = $points | append (dict "lat" .Params.lat "lng" .Params.lon "title" .Title) }}
 {{ end }}
 {{ end }}
 
 <script>
     const pointsData = {{ $points | jsonify | safeJS }};
-    const cardContainer = document.getElementById('card-container');
-    const cardTitle = document.getElementById('card-title');
-    const cardImage = document.getElementById('card-image');
-    const cardDate = document.getElementById('card-date');
-    const cardLink = document.getElementById('card-link');
-    const cardClose = document.getElementById('card-close');
-    let currentSelection = null;
-
-    const world = Globe()
-        (document.getElementById('globeViz'))
-        .globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
-        .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
-        .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png')
-        .pointsData(pointsData)
-        .pointAltitude(0.1)
-        .pointColor(() => '#ff0000') // Red pins
-        .pointRadius(0.5)
-        .pointLabel('title')
-        .onPointClick((point, event) => {
-            // Update Card Content
-            cardTitle.textContent = point.title;
-            cardImage.src = point.image;
-            cardDate.textContent = point.date;
-            cardLink.href = point.permalink;
-
-            // Show Card
-            cardContainer.classList.remove('opacity-0', 'pointer-events-none');
-            cardContainer.classList.add('opacity-100');
-
-            // Aim at point
-            world.pointOfView({ lat: point.lat, lng: point.lng, altitude: 1.5 }, 1000);
-
-            currentSelection = point;
-        })
-        .onGlobeClick(() => {
-            hideCard();
-        });
-
-    // Controls auto-rotate
-    world.controls().autoRotate = true;
-    world.controls().autoRotateSpeed = 0.5;
-
-    // Zoom limits and sensitivity
-    world.controls().minDistance = 120; // Closest zoom (Earth radius is ~100)
-    world.controls().maxDistance = 600; // Furthest zoom (Allows globe to appear much smaller)
-    world.controls().zoomSpeed = 0.6; // Slower zoom for better control
-
-    // Stop rotation on interaction
-    document.getElementById('globeViz').addEventListener('mousedown', () => {
-        world.controls().autoRotate = false;
-    });
-
-    // Close Card Logic
-    cardClose.addEventListener('click', (e) => {
-        e.stopPropagation(); // Prevent globe click
-        hideCard();
-    });
-
-    function hideCard() {
-        cardContainer.classList.add('opacity-0', 'pointer-events-none');
-        cardContainer.classList.remove('opacity-100');
-        currentSelection = null;
-        world.controls().autoRotate = true;
-    }
-
-    // Responsive sizing
-    window.addEventListener('resize', () => {
-        world.width(window.innerWidth).height(window.innerHeight);
-    });
-
-    // Prevent Browser Zoom (Pinch / Ctrl+Wheel) to allow Globe Zoom
     const globeContainer = document.getElementById('globeViz');
 
-    globeContainer.addEventListener('wheel', (e) => {
-        if (e.ctrlKey) {
-            e.preventDefault();
-        }
-    }, { passive: false });
+    // Fetch Country Data (GeoJSON)
+    fetch('//raw.githubusercontent.com/vasturiano/globe.gl/master/example/datasets/ne_110m_admin_0_countries.geojson')
+        .then(res => res.json())
+        .then(countries => {
 
-    // Prevent Safari Gesture Zoom
-    globeContainer.addEventListener('gesturestart', (e) => e.preventDefault());
-    globeContainer.addEventListener('gesturechange', (e) => e.preventDefault());
-    globeContainer.addEventListener('gestureend', (e) => e.preventDefault());
+            const world = Globe()
+                (globeContainer)
+                .globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg') // Satellite View
+                .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
+                .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png')
+
+                // Polygon (Country) Layer
+                .polygonsData(countries.features.filter(d => d.properties.ISO_A2 !== 'AQ'))
+                .polygonCapColor(() => 'rgba(0, 0, 0, 0)') // Transparent by default to show satellite
+                .polygonSideColor(() => 'rgba(0, 0, 0, 0)') // Transparent sides
+                .polygonStrokeColor(() => 'rgba(255, 255, 255, 0.3)') // Subtle white borders
+                .polygonLabel(({ properties: d }) => `
+                    <div class="px-2 py-1 bg-black/80 text-white text-xs rounded">
+                        ${d.ADMIN}
+                    </div>
+                `)
+                .onPolygonHover(hoverD => {
+                    world
+                        .polygonCapColor(d => d === hoverD ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0)')
+                        .polygonSideColor(d => d === hoverD ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0)')
+                        .polygonStrokeColor(d => d === hoverD ? 'rgba(255, 255, 255, 0.8)' : 'rgba(255, 255, 255, 0.3)');
+                })
+
+                // Points (Visited Places)
+                .pointsData(pointsData)
+                .pointAltitude(0.01) // Close to surface
+                .pointColor(() => '#ff0000') // Red dots
+                .pointRadius(0.2) // Small dots
+                .pointLabel('title') // Still show simple label on hover
+
+                // Zoom Controls
+                .pointOfView({ altitude: 2.5 }); // Initial view
+
+            // Controls settings
+            world.controls().autoRotate = true;
+            world.controls().autoRotateSpeed = 0.5;
+            world.controls().minDistance = 120;
+            world.controls().maxDistance = 600;
+            world.controls().zoomSpeed = 0.6;
+
+            // Stop rotation on interaction
+            globeContainer.addEventListener('mousedown', () => {
+                world.controls().autoRotate = false;
+            });
+
+            // Responsive sizing
+            window.addEventListener('resize', () => {
+                world.width(window.innerWidth).height(window.innerHeight);
+            });
+
+            // Prevent Browser Zoom event listeners
+            globeContainer.addEventListener('wheel', (e) => {
+                if (e.ctrlKey) {
+                    e.preventDefault();
+                }
+            }, { passive: false });
+
+            globeContainer.addEventListener('gesturestart', (e) => e.preventDefault());
+            globeContainer.addEventListener('gesturechange', (e) => e.preventDefault());
+            globeContainer.addEventListener('gestureend', (e) => e.preventDefault());
+        });
 
 </script>
 {{ end }}
