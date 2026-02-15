@@ -5,6 +5,7 @@ date: 2024-11-06
 image: home.webp
 lat: 37.599994
 lon: 14.015356
+country: Italy
 slug: sicily
 categories: ["Experiences"]
 draft: false

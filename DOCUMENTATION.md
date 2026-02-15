@@ -616,4 +616,8 @@ Assicurarsi che tutti i nuovi post abbiano un campo `description` compilato nel 
     - **Hybrid Visualization**: Restored `earth-blue-marble.jpg` (Satellite) as base texture.
     - **Transparent Polygons**: Styled country polygons to be transparent by default, showing borders and highlighting on hover.
     - Updated markers to be small, non-interactive red dots.
+    - **Interaction Fixes**: Switched container to `fixed` positioning to ensuring perfect alignment with mouse coordinates (solving the offset issue). Disabled auto-rotation.
+    - **Country Detail Modal**: Implemented a responsive modal that opens on country click.
+    - **D3.js integration**: Renders a dynamic 2D map of the selected country within the modal.
+    - **Contextual Content**: Filters and displays blog posts related to the selected country (linked via `country: Name` frontmatter).
 

@@ -5,6 +5,7 @@ slug: llm-tourism-mobility-predictor
 date: 2024-12-15
 lat: 45.438384
 lon: 10.991622
+country: Italy
 image: cover.webp
 draft: false
 categories: ["publications"]
