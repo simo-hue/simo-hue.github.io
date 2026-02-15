@@ -116,6 +116,11 @@
     world.controls().autoRotate = true;
     world.controls().autoRotateSpeed = 0.5;
 
+    // Zoom limits and sensitivity
+    world.controls().minDistance = 120; // Closest zoom (Earth radius is ~100)
+    world.controls().maxDistance = 600; // Furthest zoom (Allows globe to appear much smaller)
+    world.controls().zoomSpeed = 0.6; // Slower zoom for better control
+
     // Stop rotation on interaction
     document.getElementById('globeViz').addEventListener('mousedown', () => {
         world.controls().autoRotate = false;
@@ -138,6 +143,20 @@
     window.addEventListener('resize', () => {
         world.width(window.innerWidth).height(window.innerHeight);
     });
+
+    // Prevent Browser Zoom (Pinch / Ctrl+Wheel) to allow Globe Zoom
+    const globeContainer = document.getElementById('globeViz');
+
+    globeContainer.addEventListener('wheel', (e) => {
+        if (e.ctrlKey) {
+            e.preventDefault();
+        }
+    }, { passive: false });
+
+    // Prevent Safari Gesture Zoom
+    globeContainer.addEventListener('gesturestart', (e) => e.preventDefault());
+    globeContainer.addEventListener('gesturechange', (e) => e.preventDefault());
+    globeContainer.addEventListener('gestureend', (e) => e.preventDefault());
 
 </script>
 {{ end }}

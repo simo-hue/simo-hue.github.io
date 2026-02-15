@@ -610,4 +610,6 @@ Assicurarsi che tutti i nuovi post abbiano un campo `description` compilato nel 
     - Created `content/english/globe/_index.md`.
     - Created `layouts/globe/list.html` with `globe.gl` integration.
     - Implemented logic to fetch posts with coordinates and resolve their images correctly.
+    - Optimized zoom controls: `minDistance` (120), `maxDistance` (600), slowed `zoomSpeed` (0.6) for smoother navigation.
+    - Added event listeners to `globeViz` container to prevent default browser zoom (Ctrl+Wheel / Pinch / Gesture), ensuring only the globe zooms.
 
