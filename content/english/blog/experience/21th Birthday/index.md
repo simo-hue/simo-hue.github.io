@@ -2,6 +2,9 @@
 title: "21th birth Day in Brazil"
 description: "An awensome experience that changed and teached me a lot"
 date: 2024-07-28
+lat: -7.1195
+lon: -34.8450
+country: Brazil
 image: olilnda.webp
 categories: ["Experiences"]
 draft: false

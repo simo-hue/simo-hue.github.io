@@ -2,6 +2,9 @@
 title: "Birdwatching Experience with SWAROVSKI OPTIK at Le Ali del Frassino Residence (Lake Frassino)"
 description: "An awesome private event I was invited to, thanks to my long-standing collaboration with SWAROVSKI OPTIK through the Mountain Fauna Lover project."
 date: 2024-11-02
+lat: 45.4385
+lon: 10.6865
+country: Italy
 image: invito.webp
 slug: frassino
 categories: ["Experiences"]

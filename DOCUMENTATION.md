@@ -617,7 +617,20 @@ Assicurarsi che tutti i nuovi post abbiano un campo `description` compilato nel 
     - **Transparent Polygons**: Styled country polygons to be transparent by default, showing borders and highlighting on hover.
     - Updated markers to be small, non-interactive red dots.
     - **Interaction Fixes**: Switched container to `fixed` positioning to ensuring perfect alignment with mouse coordinates (solving the offset issue). Disabled auto-rotation.
-    - **Country Detail Modal**: Implemented a responsive modal that opens on country click.
-    - **D3.js integration**: Renders a dynamic 2D map of the selected country within the modal.
-    - **Contextual Content**: Filters and displays blog posts related to the selected country (linked via `country: Name` frontmatter).
+    - **Modern Modal Redesign**: Implemented a glassmorphic UI (`backdrop-blur`, `z-[100]`) with a responsive vertical layout.
+    - **Header-Aware Layout**: Implemented dynamic header height detection in JS to offset the globe viewport, ensuring both the globe and modal start below the header and fill the remaining screen space.
+    - **Default POV**: Set initial camera to center on Italy with an increased altitude for better framing.
+    - **Data Audit**: Added coordinates to 4 additional blog posts (Brazil, Bologna, Lake Garda).
+
+- [2026-02-15 19:21]: Add Val di Rabbi to Globe & Adjust Zoom
+  - *Details*: Added coordinates for Val di Rabbi to the "Mountain Fauna Lover" project frontmatter. Adjusted the globe's default `pointOfView` altitude from 3.5 to 1.5 to focus more closely on Italy as requested.
+  - *Tech Notes*: Modified `content/english/blog/project/mountainfaunalover/index.md` and `layouts/globe/list.html`.
+
+- [2026-02-15 19:25]: Support Multiple Coordinates per Post
+  - *Details*: Implemented support for multiple geographic locations per blog post. One article can now appear in multiple locations on the interactive globe.
+  - *Tech Notes*:
+    - Created `layouts/partials/globe-point.html` helper partial.
+    - Updated `layouts/globe/list.html` to process the new `locations` frontmatter array.
+    - Updated "Volunteering Activity in Brazil" with 4 distinct locations (Recife, João Pessoa, Olinda, Zumbi).
+    - Refined titles in modal to show the original **Blog Post Title** instead of location labels, ensuring correct grouping and display when multiple pins belong to one post.
 

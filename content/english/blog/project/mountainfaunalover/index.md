@@ -12,6 +12,9 @@ tags:
     - Video Making
 
 image: logo.webp
+lat: 46.38739
+lon: 10.86563
+country: Italy
 
 links:
   - title: Instagram Account

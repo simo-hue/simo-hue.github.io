@@ -1,0 +1,4 @@
+- default zone for the globe: italy
+- writing about polonia
+- writing about brighton experiences
+- add every point on the globe ( watch the app on iphone )

@@ -1,0 +1,40 @@
+{{/* layouts/partials/globe-point.html */}}
+{{ $page := .context }}
+{{ $lat := .lat }}
+{{ $lng := .lng }}
+{{ $title := .title }}
+{{ $country := .country }}
+
+{{/* Resolve Image URL */}}
+{{ $image := $page.Params.image }}
+{{ $imgURL := "" }}
+{{ if $image }}
+{{ if (urls.Parse $image).Scheme }}
+{{ $imgURL = $image }}
+{{ else }}
+{{ $res := $page.Resources.GetMatch $image }}
+{{ if not $res }}
+{{ $res = $page.Resources.GetMatch (printf "*%s*" $image) }}
+{{ end }}
+{{ if not $res }}
+{{ $res = resources.Get $image }}
+{{ end }}
+{{ if $res }}
+{{ $imgURL = $res.RelPermalink }}
+{{ else }}
+{{ $imgURL = $image | absURL }}
+{{ end }}
+{{ end }}
+{{ end }}
+
+{{ return (dict
+"lat" $lat
+"lng" $lng
+"title" $title
+"postTitle" $page.Title
+"country" ($country | default ($page.Params.country | default ""))
+"permalink" $page.Permalink
+"image" $imgURL
+"date" ($page.Date.Format "Jan 02, 2006")
+"summary" ($page.Summary | plainify | truncate 100)
+) }}
