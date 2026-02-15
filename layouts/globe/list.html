@@ -57,14 +57,11 @@
 </div>
 
 {{ $points := slice }}
-{{ range where site.RegularPages "Params.lat" "!=" nil }}
-{{ if .Params.lon }}
+{{ range site.RegularPages }}
+{{ if and .Params.lat .Params.lon }}
 {{ $points = $points | append (partial "globe-point.html" (dict "context" . "lat" .Params.lat "lng" .Params.lon "title"
 .Title "country" .Params.country)) }}
 {{ end }}
-{{ end }}
-
-{{ range site.RegularPages }}
 {{ if .Params.locations }}
 {{ $page := . }}
 {{ range .Params.locations }}
@@ -163,13 +160,19 @@ default $page.Title) "country" .country)) }}
 
             function openModal(countryFeature) {
                 const countryName = countryFeature.properties.ADMIN;
+                const countryNameAlt = countryFeature.properties.NAME;
                 modalCountryName.textContent = countryName;
 
                 // 1. Render Map
                 renderD3Map(countryFeature);
 
                 // 2. Filter & Render Articles
-                const countryArticles = pointsData.filter(p => p.country === countryName || p.country === countryFeature.properties.NAME);
+                const countryArticles = pointsData.filter(p => {
+                    const country = (p.country || "").trim().toLowerCase();
+                    const admin = (countryName || "").trim().toLowerCase();
+                    const name = (countryNameAlt || "").trim().toLowerCase();
+                    return country === admin || country === name;
+                });
 
                 // Group by permalink to ensure unique articles
                 const uniqueArticlesMap = new Map();
@@ -265,7 +268,12 @@ default $page.Title) "country" .country)) }}
                     .attr("class", "transition-all duration-500 ease-in-out");
 
                 // Draw Points
-                const localPoints = pointsData.filter(p => p.country === feature.properties.ADMIN || p.country === feature.properties.NAME);
+                const localPoints = pointsData.filter(p => {
+                    const country = (p.country || "").trim().toLowerCase();
+                    const admin = (feature.properties.ADMIN || "").trim().toLowerCase();
+                    const name = (feature.properties.NAME || "").trim().toLowerCase();
+                    return country === admin || country === name;
+                });
 
                 const points = svg.selectAll("g.point")
                     .data(localPoints)

@@ -2,25 +2,25 @@
 title: "Volunteering Activity in Brazil: A Transformative Educational Journey"
 description: "Three weeks of life-changing volunteer work in Brazil teaching children in favelas and disadvantaged communities. An authentic story of social impact, cultural exchange, and personal growth through education projects in Recife, João Pessoa, and Itapororoca."
 date: 2024-08-10
-image: images/experience/volunteering_brazil/cover.webp
+image: Happy.webp
 locations:
-  - lat: -8.0578
-    lon: -34.8770
+  - lat: -8.1578
+    lon: -34.9570
     country: Brazil
     title: Recife (Arrival)
   - lat: -7.1150
     lon: -34.8631
     country: Brazil
     title: João Pessoa (Volunteering)
-  - lat: -8.0089
-    lon: -34.8553
+  - lat: -7.9089
+    lon: -34.7553
     country: Brazil
     title: Olinda (Trip)
   - lat: -7.1014668
     lon: -35.689679
     country: Brazil
     title: Zumbi (Volunteering)
-categories: [experience]
+categories: [Experiences]
 draft: false
 slug: brazil-volunteer-teaching-experience
 tags: [brazil volunteer, brasil education, volunteering activity, teaching abroad, social impact, favelas education, don mazza college, cultural exchange, emotional growth, beira da linha project, itapororoca, recife, joão pessoa, international volunteering, youth education]
