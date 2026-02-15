@@ -665,3 +665,9 @@ Assicurarsi che tutti i nuovi post abbiano un campo `description` compilato nel 
   - *Details*: Reduced the globe pop-up margins significantly to a "tiny" symmetric gap.
   - *Tech Notes*:
     - Updated `layouts/globe/list.html`: Changed container padding to `p-1 lg:p-2`.
+
+- [2026-02-15 20:10]: Focus Globe on Italy by Default
+  - *Details*: Increased the initial zoom level on the globe page to focus closely on Italy upon loading.
+  - *Tech Notes*:
+    - Updated `.pointOfView({ altitude: 0.5 })` in `layouts/globe/list.html` to provide a much closer initial view of Italy.
+
