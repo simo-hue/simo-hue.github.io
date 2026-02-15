@@ -21,6 +21,11 @@ name = "Passions"
 url = "/passion"
 weight = 4
 
+[[main]]
+name = "Globe"
+url = "/globe"
+weight = 5
+
 #[[main]]
 #name = "Elements"
 #url = "/elements"

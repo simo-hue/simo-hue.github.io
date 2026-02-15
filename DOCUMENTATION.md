@@ -602,3 +602,12 @@ Assicurarsi che tutti i nuovi post abbiano un campo `description` compilato nel 
 - [2026-02-03T10:24:00+01:00]: Cards Improvements
   - *Details*: Made the image area of blog cards clickable (linking to the post) by allowing clicks to pass through the image container to the underlying full-card link.
   - *Tech Notes*: Added `pointer-events-none` to `.blog-card-image` in `layouts/partials/components/blog-card.html`. External links inside the container retain `pointer-events-auto`.
+
+- [2026-02-15]: 3D Globe Feature
+  - *Details*: Implemented a new "Globe" page featuring a 3D interactive globe using `globe.gl`. The globe displays pins for visited locations based on `lat` and `lon` frontmatter in blog posts. Clicking a pin reveals a card with the post's title and image.
+  - *Tech Notes*:
+    - Added `Globe` menu item in `config/_default/menus.en.toml`.
+    - Created `content/english/globe/_index.md`.
+    - Created `layouts/globe/list.html` with `globe.gl` integration.
+    - Implemented logic to fetch posts with coordinates and resolve their images correctly.
+

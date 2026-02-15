@@ -3,6 +3,8 @@ title: "Understanding and Predicting Tourist Behavior through Large Language Mod
 description: "Investigation into the potential of Large Language Models (LLMs) in interpreting and predicting tourist movements using real-world data from Verona, Italy."
 slug: llm-tourism-mobility-predictor
 date: 2024-12-15
+lat: 45.438384
+lon: 10.991622
 image: cover.webp
 draft: false
 categories: ["publications"]
