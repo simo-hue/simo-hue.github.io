@@ -192,6 +192,7 @@ Cover images ora si caricano immediatamente con massima priorità.
 ## Target: LCP 6.8s → < 2.5s (-63%)
 
 
+
 ---
 
 # WebP Image References Update
@@ -634,3 +635,33 @@ Assicurarsi che tutti i nuovi post abbiano un campo `description` compilato nel 
     - Updated "Volunteering Activity in Brazil" with 4 distinct locations (Recife, João Pessoa, Olinda, Zumbi).
     - Refined titles in modal to show the original **Blog Post Title** instead of location labels, ensuring correct grouping and display when multiple pins belong to one post.
 
+
+- [2026-02-15 19:45]: Add Margin to Globe Popup
+  - *Details*: Added a margin between the navigation bar and the country detail popup on the globe page to improve visual spacing.
+  - *Tech Notes*:
+    - Updated `layouts/globe/list.html` with Tailwind padding classes (`pt-8`, `lg:pt-16`) and adjusted flex alignment to `items-start` on mobile to ensure consistent top spacing.
+
+- [2026-02-15 19:48]: Modern Floating Globe Layout
+  - *Details*: Transformed the globe viewport into a modern "floating" element with margins from the navbar and screen edges, rounded corners, and a subtle border.
+  - *Tech Notes*:
+    - Modified `layouts/globe/list.html` to add padding/margins to `#globe-viewport`.
+    - Updated JavaScript `updateLayout` to dynamically calculate top margin based on header height + 24px offset.
+
+- [2026-02-15 19:48]: Symmetrical Margin for Globe Popup
+  - *Details*: Adjusted padding to provide symmetrical top and bottom margins for the country detail popup.
+  - *Tech Notes*: Updated `layouts/globe/list.html` with `py-8` (mobile) and `lg:py-16` (desktop) on the modal container.
+
+- [2026-02-15 19:51]: Symmetrical Spacing for Globe Popup
+  - *Details*: Adjusted the globe popup padding to be symmetrical at the top and bottom.
+  - *Tech Notes*:
+    - Simplified Tailwind classes in `layouts/globe/list.html` to `p-8 lg:p-16` to ensure equal spacing from both the navigation bar and the bottom of the viewport.
+
+- [2026-02-15 19:55]: Symmetric Pop-up Margins on Globe Page
+  - *Details*: Applied symmetric margins (top, bottom, sides) to the country detail popup on the globe page.
+  - *Tech Notes*:
+    - Updated `layouts/globe/list.html`: Changed container to use uniform padding (`p-6` mobile, `p-20` desktop) and set inner modal height to `h-full` to ensure it consistently fills the available space with equal margins.
+
+- [2026-02-15 19:54]: Refined Globe Pop-up Margins
+  - *Details*: Reduced the globe pop-up margins significantly to a "tiny" symmetric gap.
+  - *Tech Notes*:
+    - Updated `layouts/globe/list.html`: Changed container padding to `p-1 lg:p-2`.
