@@ -714,3 +714,7 @@ Assicurarsi che tutti i nuovi post abbiano un campo `description` compilato nel 
 - [2026-02-22]: Add Milan Location to Globe
   - *Details*: Bound Milan to the existing Vibe Coding Hackathon article and translated its title into English.
   - *Tech Notes*: Updated `content/english/blog/tech-project/Lobable-Vibe-Coding/index.md` to include `locations` frontmatter for Milan and changed the title to "First Lovable Vibe Coding Hackathon in Italy".
+
+- [2026-02-22]: Add Venice Location to Globe
+  - *Details*: Added a new point for "Venice" on the interactive globe by creating a new experience article detailing the paradigm shift of Venice.
+  - *Tech Notes*: Created `content/english/blog/experience/Venice Trip/index.md` containing the `locations` frontmatter with latitude and longitude for Venice.
