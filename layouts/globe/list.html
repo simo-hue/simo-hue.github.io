@@ -370,21 +370,19 @@ default $page.Title) "country" .country)) }}
                     card.onclick = () => window.location.href = article.permalink;
 
                     card.addEventListener('mouseenter', () => {
-                        const pointGroup = d3MapContainer.querySelector(`g[data-permalink="${CSS.escape(article.permalink)}"]`);
-                        if (pointGroup) {
+                        d3MapContainer.querySelectorAll(`g[data-permalink="${CSS.escape(article.permalink)}"]`).forEach(pointGroup => {
                             pointGroup.querySelectorAll('.pulse-circle').forEach(c => c.setAttribute('fill', '#22c55e'));
                             const dot = pointGroup.querySelector('.main-dot');
                             if (dot) dot.setAttribute('fill', '#22c55e');
-                        }
+                        });
                     });
 
                     card.addEventListener('mouseleave', () => {
-                        const pointGroup = d3MapContainer.querySelector(`g[data-permalink="${CSS.escape(article.permalink)}"]`);
-                        if (pointGroup) {
+                        d3MapContainer.querySelectorAll(`g[data-permalink="${CSS.escape(article.permalink)}"]`).forEach(pointGroup => {
                             pointGroup.querySelectorAll('.pulse-circle').forEach(c => c.setAttribute('fill', '#ef4444'));
                             const dot = pointGroup.querySelector('.main-dot');
                             if (dot) dot.setAttribute('fill', '#ef4444');
-                        }
+                        });
                     });
 
                     const imgHtml = article.image ?
