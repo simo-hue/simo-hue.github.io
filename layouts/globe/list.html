@@ -299,11 +299,13 @@ default $page.Title) "country" .country)) }}
                     .enter()
                     .append("g")
                     .attr("class", "point cursor-pointer group")
+                    .attr("data-permalink", d => d.permalink)
                     .attr("transform", d => `translate(${projection([d.lng, d.lat])})`)
                     .on("click", (event, d) => window.open(d.permalink, '_blank'));
 
                 // Pulse effect
                 points.append("circle")
+                    .attr("class", "pulse-circle")
                     .attr("r", 10)
                     .attr("fill", "#ef4444")
                     .attr("opacity", 0.2)
@@ -315,6 +317,7 @@ default $page.Title) "country" .country)) }}
                     .attr("repeatCount", "indefinite");
 
                 points.append("circle")
+                    .attr("class", "pulse-circle")
                     .attr("r", 10)
                     .attr("fill", "#ef4444")
                     .attr("opacity", 0.1)
@@ -328,11 +331,12 @@ default $page.Title) "country" .country)) }}
 
                 // Main Dot
                 points.append("circle")
+                    .attr("class", "main-dot")
                     .attr("r", 6)
                     .attr("fill", "#ef4444")
                     .attr("stroke", "#fff")
                     .attr("stroke-width", 2)
-                    .attr("class", "transition-all duration-300 group-hover:r-[8px]");
+                    .style("transition", "fill 0.3s ease, r 0.3s ease");
 
                 // Tooltip Label
                 points.append("text")
@@ -362,7 +366,26 @@ default $page.Title) "country" .country)) }}
                 articles.forEach(article => {
                     const card = document.createElement('div');
                     card.className = "group flex flex-col gap-3 p-4 rounded-xl bg-gray-50 dark:bg-white/5 hover:bg-white dark:hover:bg-white/10 transition-all duration-300 cursor-pointer border border-transparent hover:border-gray-200 dark:hover:border-white/10 shadow-sm hover:shadow-md";
+                    card.dataset.permalink = article.permalink;
                     card.onclick = () => window.location.href = article.permalink;
+
+                    card.addEventListener('mouseenter', () => {
+                        const pointGroup = d3MapContainer.querySelector(`g[data-permalink="${CSS.escape(article.permalink)}"]`);
+                        if (pointGroup) {
+                            pointGroup.querySelectorAll('.pulse-circle').forEach(c => c.setAttribute('fill', '#22c55e'));
+                            const dot = pointGroup.querySelector('.main-dot');
+                            if (dot) dot.setAttribute('fill', '#22c55e');
+                        }
+                    });
+
+                    card.addEventListener('mouseleave', () => {
+                        const pointGroup = d3MapContainer.querySelector(`g[data-permalink="${CSS.escape(article.permalink)}"]`);
+                        if (pointGroup) {
+                            pointGroup.querySelectorAll('.pulse-circle').forEach(c => c.setAttribute('fill', '#ef4444'));
+                            const dot = pointGroup.querySelector('.main-dot');
+                            if (dot) dot.setAttribute('fill', '#ef4444');
+                        }
+                    });
 
                     const imgHtml = article.image ?
                         `<div class="w-full h-32 rounded-lg overflow-hidden relative">
