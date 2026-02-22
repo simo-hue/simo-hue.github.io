@@ -687,3 +687,6 @@ Assicurarsi che tutti i nuovi post abbiano un campo `description` compilato nel 
     - **Smart Projections**: Switched from `fitSize` to `fitExtent` in D3, implementing a 15% dynamic padding that automatically scales based on the available container dimensions.
     - **Header Protection**: Added responsive right-padding to the title container to prevent collisions with the fixed close button on narrow screens.
 
+- [2026-02-22]: Add Poland Locations to Globe
+  - *Details*: Added new points for "Auschwitz Birkenau" and "Kraków" on the interactive globe by creating a new experience article for the Poland trip.
+  - *Tech Notes*: Created `content/english/blog/experience/Poland Trip/index.md` containing the `locations` frontmatter with latitude and longitude for both destinations.
