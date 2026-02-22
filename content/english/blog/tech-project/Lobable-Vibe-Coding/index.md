@@ -1,8 +1,13 @@
 ---
-title: "Primo Hackathon Lovable Vibe Conding In Italia"
+title: "First Lovable Vibe Coding Hackathon in Italy"
 description: "6 Ore per Costruire l'Impossibile"
 date: 2025-10-18
 image: cover.webp
+locations:
+  - lat: 45.4642
+    lon: 9.1900
+    country: Italy
+    title: Milan (Hackathon)
 draft: false
 categories: ["tech projects"]
 tags:

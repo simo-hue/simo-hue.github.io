@@ -690,3 +690,27 @@ Assicurarsi che tutti i nuovi post abbiano un campo `description` compilato nel 
 - [2026-02-22]: Add Poland Locations to Globe
   - *Details*: Added new points for "Auschwitz Birkenau" and "Kraków" on the interactive globe by creating a new experience article for the Poland trip.
   - *Tech Notes*: Created `content/english/blog/experience/Poland Trip/index.md` containing the `locations` frontmatter with latitude and longitude for both destinations.
+
+- [2026-02-22]: Add Germany Locations to Globe
+  - *Details*: Added new points for "Stuttgart", "Tübingen", and "Heidelberg" on the interactive globe by creating a new experience article for the Germany trip.
+  - *Tech Notes*: Created `content/english/blog/experience/Germany Trip/index.md` containing the `locations` frontmatter with latitude and longitude for all three destinations.
+
+- [2026-02-22]: Add UK Locations to Globe
+  - *Details*: Added new points for "London", "Cambridge", "Seven Sisters", "Lewes", and "Brighton" on the interactive globe by creating a new experience article for the UK trip.
+  - *Tech Notes*: Created `content/english/blog/experience/UK Trip/index.md` containing the `locations` frontmatter with latitude and longitude for the five destinations.
+
+- [2026-02-22]: Add Italy Locations to Globe
+  - *Details*: Added a new point for "Rome", the capital, on the interactive globe by creating a new experience article for the Italy trip.
+  - *Tech Notes*: Created `content/english/blog/experience/Italy Trip/index.md` containing the `locations` frontmatter with latitude and longitude for Rome.
+
+- [2026-02-22]: Add Rimini (GISEP) Location to Globe
+  - *Details*: Added a new point for "Rimini (GISEP)" on the interactive globe by creating a new experience article for the GISEP event.
+  - *Tech Notes*: Created `content/english/blog/experience/GISEP Rimini/index.md` containing the `locations` frontmatter with latitude and longitude for Rimini.
+
+- [2026-02-22]: Add Budapest Location to Globe
+  - *Details*: Added a new point for "Budapest" on the interactive globe by creating a new experience article for the trip with Collegio Don Mazza.
+  - *Tech Notes*: Created `content/english/blog/experience/Budapest Trip/index.md` containing the `locations` frontmatter with latitude and longitude for Budapest.
+
+- [2026-02-22]: Add Milan Location to Globe
+  - *Details*: Bound Milan to the existing Vibe Coding Hackathon article and translated its title into English.
+  - *Tech Notes*: Updated `content/english/blog/tech-project/Lobable-Vibe-Coding/index.md` to include `locations` frontmatter for Milan and changed the title to "First Lovable Vibe Coding Hackathon in Italy".
