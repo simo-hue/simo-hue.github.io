@@ -2,7 +2,7 @@
 title: "Italy Trip: Exploring Rome, the Eternal City"
 description: "A deep dive into the historical and cultural wonders of Rome, the capital of Italy."
 date: 2024-08-01
-image: example.webp
+image: cover.webp
 locations:
   - lat: 41.9028
     lon: 12.4964

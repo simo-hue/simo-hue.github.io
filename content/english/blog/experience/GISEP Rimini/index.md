@@ -2,7 +2,7 @@
 title: "GISEP in Rimini"
 description: "Attending the GISEP event in the beautiful coastal city of Rimini."
 date: 2024-09-15
-image: example.webp
+image: cover.webp
 locations:
   - lat: 44.0678
     lon: 12.5695
