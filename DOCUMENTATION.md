@@ -718,3 +718,7 @@ Assicurarsi che tutti i nuovi post abbiano un campo `description` compilato nel 
 - [2026-02-22]: Add Venice Location to Globe
   - *Details*: Added a new point for "Venice" on the interactive globe by creating a new experience article detailing the paradigm shift of Venice.
   - *Tech Notes*: Created `content/english/blog/experience/Venice Trip/index.md` containing the `locations` frontmatter with latitude and longitude for Venice.
+
+- [2026-02-28]: Add "Python for Scientific Computing" Certificate
+  - *Details*: Added the CINECA attendance certificate for the "Python for Scientific Computing" course to the Certificates section of the links page.
+  - *Tech Notes*: PDF already existed at `static/docs/Python for Scientific Computing.pdf`. Added new entry in `data/links.yml` under the "Certificates" section, placed after the "Introduction To Python" entry. Uses teal color scheme and the `fab fa-python` icon.
