@@ -1,0 +1,25 @@
+{{- /* Schema.org VideoObject structured data for pages with YouTube embeds */ -}}
+{{- $content := .RawContent -}}
+{{- $youtubeRegex := `\{\{<\s*youtube\s+([a-zA-Z0-9_-]+)\s*>}}` -}}
+{{- $match := findRE $youtubeRegex $content 1 -}}
+{{- if $match -}}
+  {{- $fullMatch := index $match 0 -}}
+  {{- $videoId := replaceRE `\{\{<\s*youtube\s+` "" $fullMatch -}}
+  {{- $videoId = replaceRE `\s*>}}` "" $videoId -}}
+  {{- $videoId = trim $videoId " " -}}
+  {{- if $videoId -}}
+    {{- $desc := or .Description .Summary | plainify | truncate 200 -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": {{ .Title | jsonify }},
+  "description": {{ $desc | jsonify }},
+  "thumbnailUrl": {{ printf "https://img.youtube.com/vi/%s/maxresdefault.jpg" $videoId | jsonify }},
+  "uploadDate": {{ .Date.Format "2006-01-02" | jsonify }},
+  "contentUrl": {{ printf "https://www.youtube.com/watch?v=%s" $videoId | jsonify }},
+  "embedUrl": {{ printf "https://www.youtube.com/embed/%s" $videoId | jsonify }}
+}
+</script>
+  {{- end -}}
+{{- end -}}

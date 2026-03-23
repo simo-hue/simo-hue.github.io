@@ -774,4 +774,38 @@ Google Search Console mostra "Impossibile recuperare" per 3 sitemap inviate.
 ## Azione Manuale Richiesta
 Rimuovere da GSC le sitemap errate `/mattioli.OS/sitemap.xml` e `/layouts/sitemap.xml`, poi re-inviare `/sitemap.xml`.
 
+---
+
+# Fix Google Search Console Video Indexing Errors
+
+## Data: 2026-03-23
+
+## Problema
+GSC segnala "Video non si trova su una pagina di visualizzazione" per 3 pagine con embed YouTube.
+
+## Causa
+Le pagine avevano iframe YouTube nel HTML ma nessun markup strutturato VideoObject per aiutare Google a identificare e indicizzare i video.
+
+## Soluzione
+### Nuovo file: `layouts/partials/seo/schema-video.html`
+- Rileva automaticamente video YouTube dal contenuto delle pagine (shortcode `{{< youtube ID >}}`)
+- Genera JSON-LD `VideoObject` con: nome, descrizione, thumbnail, uploadDate, contentUrl, embedUrl
+- Integrato in `layouts/partials/essentials/head.html`
+
+### Pagine interessate (12 totali):
+- `blog/tech-project/epicure-hackathon-2024/`
+- `blog/thought/gratitude/`
+- `blog/thought/cassioli/`
+- `blog/project/simo's-diary/`
+- `blog/project/mountainfaunalover/`
+- `blog/thought/live-the-dream/`
+- `blog/passions/car/`
+- `blog/experience/sicily/`
+- `blog/experience/brazil-volunteer-teaching-experience/`
+- `blog/experience/basket-in-carrozzina/`
+- e altre
+
+## Build: ✅ 584 pagine, 0 errori
+
+
 
