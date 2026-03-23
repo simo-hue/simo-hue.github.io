@@ -1,33 +1,31 @@
 {{- /* Schema.org BreadcrumbList structured data */ -}}
 {{- if not .IsHome -}}
-{{- $items := slice -}}
-{{- $items = $items | append (dict "position" 1 "name" "Home" "item" .Site.BaseURL "isLast" false) -}}
-{{- $pos := 2 -}}
-{{- if .Parent -}}
-  {{- if ne .Parent.Title .Site.Title -}}
-    {{- $items = $items | append (dict "position" $pos "name" .Parent.Title "item" .Parent.Permalink "isLast" false) -}}
-    {{- $pos = add $pos 1 -}}
+{{- /* Build ancestor chain by walking up through .Parent */ -}}
+{{- $ancestors := slice -}}
+{{- $current := . -}}
+{{- range seq 10 -}}
+  {{- if $current.Parent -}}
+    {{- $ancestors = $ancestors | append $current -}}
+    {{- $current = $current.Parent -}}
   {{- end -}}
 {{- end -}}
-{{- $items = $items | append (dict "position" $pos "name" .Title "isLast" true) -}}
+{{- /* Reverse to get root-first order and prepend Home */ -}}
+{{- $items := slice (dict "name" "Home" "item" .Site.BaseURL) -}}
+{{- range $ancestors | collections.Reverse -}}
+  {{- $items = $items | append (dict "name" .Title "item" .Permalink) -}}
+{{- end -}}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {{- range $i, $item := $items -}}
+    {{- range $i, $el := $items -}}
       {{- if $i }},{{ end }}
     {
       "@type": "ListItem",
-      "position": {{ $item.position }}
-      {{- if not $item.isLast -}}
-      ,
-      "name": {{ $item.name | jsonify }},
-      "item": {{ $item.item | jsonify }}
-      {{- else -}}
-      ,
-      "name": {{ $item.name | jsonify }}
-      {{- end }}
+      "position": {{ add $i 1 }},
+      "name": {{ $el.name | jsonify }},
+      "item": {{ $el.item | jsonify }}
     }
     {{- end }}
   ]

@@ -722,3 +722,33 @@ Assicurarsi che tutti i nuovi post abbiano un campo `description` compilato nel 
 - [2026-02-28]: Add "Python for Scientific Computing" Certificate
   - *Details*: Added the CINECA attendance certificate for the "Python for Scientific Computing" course to the Certificates section of the links page.
   - *Tech Notes*: PDF already existed at `static/docs/Python for Scientific Computing.pdf`. Added new entry in `data/links.yml` under the "Certificates" section, placed after the "Introduction To Python" entry. Uses teal color scheme and the `fab fa-python` icon.
+
+---
+
+# Fix Google Search Console Breadcrumb Structured Data Errors
+
+## Data: 2026-03-23
+
+## Problema
+Google Search Console segnalava errori multipli: "Dati strutturati Breadcrumb problemi rilevati" con dettaglio "URL non valido nel campo 'id' (in itemListElement.item)" su molte pagine del sito.
+
+## Cause Identificate
+1. **Missing `item` URL** sul ultimo `ListItem` — il template ometteva il campo `item` (URL) sul breadcrumb finale
+2. **`partialCached` con `.Section`** — tutte le pagine della stessa sezione condividevano lo stesso breadcrumb (sbagliato)
+3. **Traversal parent limitato** — il template risaliva solo un livello di parent
+
+## File Modificati
+
+### 1. `layouts/partials/seo/schema-breadcrumb.html`
+- Riscritto completamente il template
+- Traversal completo della catena `.Parent` fino alla root
+- Campo `item` (URL) presente su **tutti** i `ListItem`, incluso l'ultimo
+- JSON-LD valido e conforme allo schema BreadcrumbList
+
+### 2. `layouts/partials/essentials/head.html`
+- Cambiato `partialCached` → `partial` per il breadcrumb (ogni pagina ha breadcrumb unico)
+
+## Verifica
+- ✅ Hugo build: 584 pagine, 0 errori
+- ✅ JSON-LD verificato su 6 pagine (about, tags, passion, globe): tutti i ListItem hanno URL validi
+
