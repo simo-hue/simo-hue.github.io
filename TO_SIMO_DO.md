@@ -201,3 +201,17 @@ Simile a Facebook Pixel, se necessario per B2B marketing
 ## Verification
 - [ ] Verify GitHub Actions status for the latest commit (fix: add description...).
 - [ ] Check the live site to ensure the 'Being Humble' post renders correctly.
+
+---
+
+## 🗺️ Google Search Console - Sitemap Cleanup
+### Data: 2026-03-23
+
+### Azione Richiesta
+1. Aprire Google Search Console → Sitemap
+2. **Rimuovere** le sitemap errate:
+   - `/mattioli.OS/sitemap.xml` (path di un altro progetto)
+   - `/layouts/sitemap.xml` (path sorgente, non URL pubblico)
+3. **Re-inviare** `/sitemap.xml` (l'unica corretta)
+4. Attendere che Google rielabori (qualche giorno)
+

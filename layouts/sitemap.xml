@@ -15,7 +15,7 @@
 
   {{- /* Main pages - Prioritized by content type */ -}}
   {{ range .Site.Pages }}
-    {{- if and (not .Draft) (ne .Section "") }}
+    {{- if and (not .Draft) (ne .Section "") .Permalink }}
   <url>
     <loc>{{ .Permalink }}</loc>
     {{- if not .Lastmod.IsZero }}

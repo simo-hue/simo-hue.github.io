@@ -752,3 +752,26 @@ Google Search Console segnalava errori multipli: "Dati strutturati Breadcrumb pr
 - ✅ Hugo build: 584 pagine, 0 errori
 - ✅ JSON-LD verificato su 6 pagine (about, tags, passion, globe): tutti i ListItem hanno URL validi
 
+---
+
+# Fix Google Search Console Sitemap Fetch Errors
+
+## Data: 2026-03-23
+
+## Problema
+Google Search Console mostra "Impossibile recuperare" per 3 sitemap inviate.
+
+## Analisi
+- `/sitemap.xml` — **funziona**: è accessibile e contiene XML valido
+- `/mattioli.OS/sitemap.xml` — **non esiste**: path errato da un altro progetto
+- `/layouts/sitemap.xml` — **non esiste**: path di directory sorgente, non URL pubblico
+
+## Bug Trovato e Risolto
+### `layouts/sitemap.xml`
+- Una entry aveva `<loc/>` vuoto (pagina senza Permalink)
+- Aggiunto guard `.Permalink` al filtro per escludere pagine invalid
+
+## Azione Manuale Richiesta
+Rimuovere da GSC le sitemap errate `/mattioli.OS/sitemap.xml` e `/layouts/sitemap.xml`, poi re-inviare `/sitemap.xml`.
+
+
