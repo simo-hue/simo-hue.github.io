@@ -54,6 +54,13 @@ As it was the first time for me going away from home I also decide to joing some
 
 Obviously, the old good fashion London ( couple of times ), Cambridge & Oxford ( just a day trip ), and the South Coast ( Brighton, Lewes, Seven Sisters )...but all of this was pure magic to me and I really discovered my core nature -> **TRAVELLER**
 
+
+### Travel in Italy with Hassan
+
+Here you can also find the playlist of our experience together with Hassan in Italy!
+
+{{< youtube_playlist PLK8EFKQQE4ghDuB-jic45fGb51Dmy5yfs >}}
+
 ### Conclusion
 
 Back then, I could have never imagined that one day I would came there another time ( 2026 ) for a similar BUT different reason...but this is another story ( the next one ).
@@ -91,4 +98,3 @@ That's why I really think that money are not spent in travel, but invested in ex
 If you are more curious....Here you can find my day to day vlog during this experience...se you on youtube
 
 {{< youtube_playlist PLK8EFKQQE4ghP5lELZz3PHqqDQtTVDBt5 >}}
-
