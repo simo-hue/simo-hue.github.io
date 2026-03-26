@@ -1,7 +1,9 @@
 {{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  {{- /* Homepage - Highest priority */ -}}
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+  {{- /* ==================== HOMEPAGE ==================== */ -}}
   {{- with .Site.Home }}
   <url>
     <loc>{{ .Permalink }}</loc>
@@ -13,59 +15,102 @@
   </url>
   {{- end }}
 
-  {{- /* Main pages - Prioritized by content type */ -}}
-  {{ range .Site.Pages }}
-    {{- if and (not .Draft) (ne .Section "") .Permalink }}
+  {{- /* ==================== ALL PAGES (unified, no duplicates) ==================== */ -}}
+  {{- range .Site.Pages }}
+    {{- if and (not .Draft) (ne .Kind "home") .Permalink }}
   <url>
     <loc>{{ .Permalink }}</loc>
+    {{- /* --- Lastmod: page date, or latest child date for taxonomy/section pages --- */ -}}
     {{- if not .Lastmod.IsZero }}
     <lastmod>{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" }}</lastmod>
+    {{- else if .Pages }}
+      {{- $sorted := sort .Pages ".Lastmod" "desc" }}
+      {{- with index $sorted 0 }}
+        {{- if not .Lastmod.IsZero }}
+    <lastmod>{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" }}</lastmod>
+        {{- end }}
+      {{- end }}
     {{- end }}
-    {{- /* Highest priority: Experiences */ -}}
+    {{- /* --- Priority & Changefreq by content type --- */ -}}
     {{- if in .Params.categories "Experiences" }}
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
-    {{- /* High priority: Projects (all variants) */ -}}
     {{- else if or (in .Params.categories "projects") (in .Params.categories "tech projects") (in .Params.categories "tech-projects") }}
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
-    {{- /* High priority: Thoughts */ -}}
     {{- else if in .Params.categories "thoughts" }}
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
-    {{- /* Medium-high priority: Publications */ -}}
     {{- else if in .Params.categories "publications" }}
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
-    {{- /* Medium priority: Passions */ -}}
     {{- else if or (in .Params.categories "passion") (in .Params.categories "passions") }}
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
-    {{- /* Medium priority: Books */ -}}
     {{- else if in .Params.categories "books" }}
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
-    {{- /* Default blog content */ -}}
-    {{- else if eq .Section "blog" }}
+    {{- else if eq .Kind "page" }}
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
-    {{- /* Other pages */ -}}
+    {{- else if eq .Kind "section" }}
+    <changefreq>weekly</changefreq>
+    <priority>0.55</priority>
+    {{- else if or (eq .Kind "taxonomy") (eq .Kind "term") }}
+    <changefreq>weekly</changefreq>
+    <priority>0.50</priority>
     {{- else }}
     <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <priority>0.50</priority>
+    {{- end }}
+    {{- /* --- Video Sitemap Metadata (for YouTube embeds) --- */ -}}
+    {{- if eq .Kind "page" }}
+      {{- $content := .Content }}
+      {{- $title := .Title }}
+      {{- $permalink := .Permalink }}
+      {{- $date := .Date }}
+      {{- $rawDesc := .Description | default (.Summary | plainify) | plainify }}
+      {{- $desc := $rawDesc | truncate 2048 "" | htmlEscape }}
+      {{- $pageImage := "" }}
+      {{- with .Params.image }}
+        {{- $pageImage = printf "%s%s" $permalink . }}
+      {{- end }}
+      {{- /* Individual YouTube videos */ -}}
+      {{- $videoURLs := findRE `youtube\.com/embed/[a-zA-Z0-9_-]+` $content | uniq }}
+      {{- range $videoURLs }}
+        {{- $id := replaceRE `.*youtube\.com/embed/` "" . }}
+        {{- if ne $id "videoseries" }}
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/{{ $id }}/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>{{ $title }}</video:title>
+      <video:description>{{ $desc }}</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube.com/embed/{{ $id }}</video:player_loc>
+        {{- if not $date.IsZero }}
+      <video:publication_date>{{ $date.Format "2006-01-02T15:04:05-07:00" }}</video:publication_date>
+        {{- end }}
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+        {{- end }}
+      {{- end }}
+      {{- /* YouTube playlists */ -}}
+      {{- $playlistURLs := findRE `youtube\.com/embed/videoseries\?list=[a-zA-Z0-9_-]+` $content | uniq }}
+      {{- range $playlistURLs }}
+        {{- $id := replaceRE `.*youtube\.com/embed/videoseries\?list=` "" . }}
+        {{- if $pageImage }}
+    <video:video>
+      <video:thumbnail_loc>{{ $pageImage }}</video:thumbnail_loc>
+      <video:title>{{ $title }}</video:title>
+      <video:description>{{ $desc }}</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube.com/embed/videoseries?list={{ $id }}</video:player_loc>
+          {{- if not $date.IsZero }}
+      <video:publication_date>{{ $date.Format "2006-01-02T15:04:05-07:00" }}</video:publication_date>
+          {{- end }}
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+        {{- end }}
+      {{- end }}
     {{- end }}
   </url>
     {{- end }}
-  {{ end }}
-
-  {{- /* Taxonomy pages */ -}}
-  {{ range .Site.Taxonomies }}
-    {{ range . }}
-  <url>
-    <loc>{{ .Page.Permalink }}</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-    {{ end }}
-  {{ end }}
+  {{- end }}
 </urlset>

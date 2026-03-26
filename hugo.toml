@@ -167,7 +167,7 @@ lazy = true
 
 ############################# Minify #############################
 [minify]
-disableXML = false
+disableXML = true
 [minify.tdewolff]
   [minify.tdewolff.html]
     keepConditionalComments = true

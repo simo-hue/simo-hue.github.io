@@ -807,5 +807,27 @@ Le pagine avevano iframe YouTube nel HTML ma nessun markup strutturato VideoObje
 
 ## Build: ✅ 584 pagine, 0 errori
 
+---
+
+# Professional Sitemap Overhaul
+
+## Data: 2026-03-26
+
+## Problema
+La sitemap aveva 3 problemi: (1) URL duplicati dalla sezione tassonomie separata, (2) mancanza di `<lastmod>` sulle pagine tassonomia/sezione, (3) nessun supporto `video:video` per le pagine con embed YouTube — causa degli errori di indicizzazione video in GSC.
+
+## Soluzione
+### File modificato: `layouts/sitemap.xml`
+Riscrittura completa del template:
+- **Loop unificato**: Rimossa la sezione tassonomie separata (righe 61-70 vecchie). Tutte le pagine sono gestite da un unico `range .Site.Pages` con filtro `ne .Kind "home"`.
+- **Lastmod fallback**: Per pagine tassonomia/sezione senza `.Lastmod`, usa la data più recente tra le pagine figlie (`sort .Pages ".Lastmod" "desc"`).
+- **Priorità per Kind**: Aggiunta distinzione tra `section` (0.55), `taxonomy`/`term` (0.50), oltre alle categorie di contenuto esistenti.
+- **Video sitemap (`xmlns:video`)**: Aggiunto namespace `video` e blocchi `<video:video>` per pagine con embed YouTube. Usa `findRE` su `.Content` per rilevare automaticamente video individuali e playlist. Include: `thumbnail_loc`, `title`, `description`, `player_loc`, `publication_date`, `family_friendly`.
+
+## Risultati
+- **316 URL** (da 554 → 238 duplicati rimossi)
+- **13 video** con metadati completi
+- **Tutte le entry** hanno `<lastmod>` o fallback
+- Build: ✅ 1710ms, 0 errori
 
 
