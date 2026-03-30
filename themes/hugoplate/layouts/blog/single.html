@@ -1,0 +1,200 @@
+{{ define "main" }}
+<section class="section pt-7">
+  <div class="container">
+    <div class="row justify-center">
+
+      {{/* === Main Article (+ Sticky TOC layout) === */}}
+      <div class="lg:col-10">
+        <div class="row">
+
+          {{/* === Article Content Column === */}}
+          <article class="lg:col-8">
+            {{ $image:= .Params.image }}
+            {{ if $image }}
+            <div class="mb-10">
+              {{ partial "image" (dict "Src" $image "Context" .Page "Alt" .Title "Class" "w-full rounded" "Priority" true)
+              }}
+            </div>
+            {{ end }}
+            <h1 class="h2 mb-4">
+              {{ .Title }}
+            </h1>
+            <ul class="mb-4">
+              <li class="mr-4 inline-block">
+                <a href="{{ `authors/` | relLangURL }}{{ .Params.Author | urlize }}/">
+                  <i class="fa-regular fa-circle-user mr-2"></i>{{ .Params.author }}
+                </a>
+              </li>
+              {{ $categories:= .Params.categories }}
+              {{ if $categories }}
+              <li class="mr-4 inline-block">
+                <i class="fa-regular fa-folder mr-2"></i>
+                {{ range $i,$p:= $categories }}
+                <a href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}/" class="">{{ . | humanize }}{{ if ne $i
+                  (sub (len $categories) 1) }}
+                  {{ "," }}
+                  {{ end }}
+                </a>
+                {{ end }}
+              </li>
+              {{ end }}
+              <li class="mr-4 inline-block">
+                <i class="fa-regular fa-calendar mr-2"></i>
+                {{ time.Format ":date_long" .PublishDate }}
+              </li>
+              <li class="mr-4 inline-block">
+                <i class="fa-regular fa-clock mr-2"></i>
+                {{ .ReadingTime }} min read
+              </li>
+            </ul>
+            {{/* NOTE: No inline TOC here — it's in the sidebar. This prevents the grey block at the top. */}}
+            <div class="content mb-10 content-with-zoom">
+              {{ .Content }}
+            </div>
+            <div class="row items-start justify-between">
+              {{ $tags:= .Params.tags }}
+              {{ if $tags }}
+              <div class="lg:col-6 mb-10 flex items-center lg:mb-0">
+                <h5 class="mr-3">{{ T "tags" }} :</h5>
+                <ul>
+                  {{ range $i,$p:= $tags }}
+                  <li class="inline-block">
+                    <a class="bg-light hover:bg-primary dark:bg-darkmode-light dark:hover:bg-darkmode-primary dark:hover:text-text-dark m-1 block rounded px-3 py-1 hover:text-white"
+                      href="{{ `tags/` | relLangURL }}{{ . | urlize | lower }}/">
+                      {{ . | humanize }}
+                    </a>
+                  </li>
+                  {{ end }}
+                </ul>
+              </div>
+              {{ end }}
+              <div class="lg:col-6 flex items-center lg:justify-end">
+                <h5>{{ T "share" }} :</h5>
+                {{ partial "social-share" (dict "Context" . "Class" "share-icons" "Title" .Title "Whatsapp" false "Telegram"
+                false "Linkedin" false "Pinterest" false "Tumblr" false "Vk" false "Reddit" false) }}
+              </div>
+            </div>
+            <!-- comments -->
+            {{ if site.Config.Services.Disqus.Shortname }}
+            <div class="mt-20">
+              {{ template "_internal/disqus.html" . }}
+            </div>
+            {{ end }}
+          </article>
+
+          {{/* === Sticky Sidebar TOC Column (desktop only) === */}}
+          {{ if .TableOfContents }}
+          <aside class="lg:col-4 hidden lg:block">
+            <div class="sticky-toc-sidebar">
+              <div class="sticky-toc-header">
+                <i class="fas fa-list-ul mr-2 opacity-70"></i>
+                <span>Table of Contents</span>
+              </div>
+              <!-- Reading Progress Bar -->
+              <div class="reading-progress-container">
+                <div class="reading-progress-bar" id="readingProgressBar"></div>
+              </div>
+              <nav class="sticky-toc-nav" aria-label="Table of contents">
+                {{ .TableOfContents }}
+              </nav>
+            </div>
+          </aside>
+          {{ end }}
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Related posts -->
+    {{ $related := .Site.RegularPages.Related . | first 10 }}
+    {{ $related = $related | shuffle | first 3 }}
+    {{ with $related }}
+    <div class="section pb-0">
+      <h2 class="h3 mb-12">{{ T "related_posts" }}</h2>
+      <div class="row">
+        {{ range . }}
+        <div class="lg:col-4 md:col-6 mb-14">
+          {{ partial "components/blog-card" . }}
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+
+    // ── Reading Progress Bar ──────────────────────────────────────────────
+    (function () {
+      const bar = document.getElementById('readingProgressBar');
+      if (!bar) return;
+      const article = document.querySelector('.content-with-zoom');
+      if (!article) return;
+
+      function updateProgress() {
+        const articleTop = article.getBoundingClientRect().top + window.scrollY;
+        const articleHeight = article.offsetHeight;
+        const windowHeight = window.innerHeight;
+        const scrolled = window.scrollY + windowHeight;
+        const progress = Math.min(Math.max((scrolled - articleTop) / articleHeight * 100, 0), 100);
+        bar.style.width = progress + '%';
+      }
+
+      window.addEventListener('scroll', updateProgress, { passive: true });
+      updateProgress();
+    })();
+
+    // ── Active TOC Link on Scroll ─────────────────────────────────────────
+    (function () {
+      const tocLinks = document.querySelectorAll('.sticky-toc-nav a');
+      const headings = document.querySelectorAll('.content-with-zoom h2, .content-with-zoom h3, .content-with-zoom h4');
+      if (!tocLinks.length || !headings.length) return;
+
+      function updateActiveLink() {
+        const scrollY = window.scrollY + 120;
+        let active = null;
+        headings.forEach(h => {
+          if (h.getBoundingClientRect().top + window.scrollY <= scrollY) active = h;
+        });
+        tocLinks.forEach(l => l.classList.remove('toc-active'));
+        if (active && active.id) {
+          const al = document.querySelector(`.sticky-toc-nav a[href="#${active.id}"]`);
+          if (al) al.classList.add('toc-active');
+        }
+      }
+
+      window.addEventListener('scroll', updateActiveLink, { passive: true });
+      updateActiveLink();
+    })();
+
+    // ── Image Zoom (GLightbox on inline content images) ───────────────────
+    (function () {
+      const content = document.querySelector('.content-with-zoom');
+      if (!content) return;
+      const imgs = content.querySelectorAll('img:not(.no-zoom)');
+      let added = false;
+      imgs.forEach(img => {
+        if (img.closest('a.glightbox')) return;
+        const src = img.getAttribute('src') || img.currentSrc || img.src;
+        const alt = img.alt || '';
+        const wrapper = document.createElement('a');
+        wrapper.href = src;
+        wrapper.className = 'glightbox';
+        wrapper.setAttribute('data-type', 'image');
+        wrapper.setAttribute('data-description', alt);
+        img.parentNode.insertBefore(wrapper, img);
+        wrapper.appendChild(img);
+        img.classList.add('content-zoom-img');
+        added = true;
+      });
+      if (added && typeof GLightbox !== 'undefined') {
+        GLightbox({ selector: '.glightbox', touchNavigation: true, loop: true });
+      }
+    })();
+
+  });
+</script>
+{{ end }}
