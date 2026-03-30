@@ -888,3 +888,22 @@ Riscrittura completa del template:
 **File**: `data/links.yml`
 - Added the IELTS Academic exam (score 7.5) to the "Certificates" section.
 - Configured the link to point to `/docs/IELTS.pdf` which should be placed in the `static/docs/` directory.
+
+---
+
+# Professional Markdown Styling for Blog Posts
+
+## Date: 2026-03-30
+## Modifications
+Implemented a premium, rich styling upgrade for all markdown-rendered elements in blog posts using pure CSS and Vanilla JS.
+- **CSS (`assets/css/custom.css`)**: Added `.blog-prose` rule block. Includes:
+  - Drop cap for the first paragraph.
+  - Gradient headings with left borders.
+  - Redesigned blockquotes with quote icons and subtle backgrounds.
+  - Styled inline code pills and dark-themed code blocks.
+  - Custom gradient bullets and numbered list markers.
+  - Alternating colored tables and gradient horizontal rules.
+- **Layout (`layouts/blog/single.html`)**: Added the `.blog-prose` class to the main `<article>` tag.
+- **JS (`assets/js/main.js`)**:
+  - Implemented an IntersectionObserver to apply scroll-reveal animations (`.blog-prose-reveal`) to headings, quotes, and images.
+  - Added logic to generate a "Copy" button (`.copy-code-btn`) for all `<pre>` code blocks.
