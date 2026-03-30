@@ -1,10 +1,18 @@
 enable: true
 items:
-  - date: "2025-?"
+  - date: "2026-?"
     title: "Coming Soon"
     organization: "Stay Tuned"
     description: "Something exciting is on the horizon. Check back soon to discover what's next in my journey."
     icon: "fa-solid fa-question"
+    tags: ["Future"]
+    align: "left"
+
+  - date: "Early 2026"
+    title: "U.K. Stay + ELC Brighton"
+    organization: "British Council"
+    description: "I have been living in Brighton, UK, to improve my English skills and get my IELTS Academic Certificate."
+    icon: "fa-solid fa-language"
     tags: ["Future"]
     align: "right"
 
