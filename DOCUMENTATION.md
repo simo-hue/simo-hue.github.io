@@ -830,4 +830,12 @@ Riscrittura completa del template:
 - **Tutte le entry** hanno `<lastmod>` o fallback
 - Build: ✅ 1710ms, 0 errori
 
+---
 
+# Add IELTS Certificate to Links Page
+
+## Date: 2026-03-30
+## Modifications
+**File**: `data/links.yml`
+- Added the IELTS Academic exam (score 7.5) to the "Certificates" section.
+- Configured the link to point to `/docs/IELTS.pdf` which should be placed in the `static/docs/` directory.

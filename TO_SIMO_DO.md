@@ -215,3 +215,11 @@ Simile a Facebook Pixel, se necessario per B2B marketing
 3. **Re-inviare** `/sitemap.xml` (l'unica corretta)
 4. Attendere che Google rielabori (qualche giorno)
 
+---
+
+## 📄 Upload IELTS Certificate
+### Date: 2026-03-30
+### Action Required
+1. Place your IELTS certificate PDF file in the `static/docs/` directory.
+2. Ensure the filename matches exactly: `IELTS.pdf` (so the full path is `static/docs/IELTS.pdf`).
+3. View the links page locally to ensure the new certificate card works.
