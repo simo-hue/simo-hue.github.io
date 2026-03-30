@@ -725,7 +725,56 @@ Assicurarsi che tutti i nuovi post abbiano un campo `description` compilato nel 
 
 ---
 
-# Fix Google Search Console Breadcrumb Structured Data Errors
+# UX Polish + PWA Enhancement
+
+## Date: 2026-03-30
+
+## Features Implemented
+
+### 1. Reading Time Indicator
+**Files**: `layouts/partials/components/blog-card.html`, `themes/hugoplate/layouts/blog/single.html`
+- Added `{{ .ReadingTime }} min read` to blog cards (next to date, separated by ·)
+- Added reading time to single post header (uses proper `fa-calendar` for date, `fa-clock` for reading time)
+- Uses Hugo's built-in `.ReadingTime` variable (zero dependencies)
+
+### 2. Sticky Sidebar Table of Contents
+**File**: `themes/hugoplate/layouts/blog/single.html` (complete rewrite)
+- Added 2-column layout: article (lg:col-8) + sticky TOC sidebar (lg:col-4)
+- Glassmorphic TOC sidebar with `backdrop-blur`, `border`, `box-shadow`
+- **Reading Progress Bar** inside the TOC — a gradient bar fills as you scroll through the article
+- **Active Link Highlighting** — TOC link for the current section highlights in primary color on scroll
+- Sidebar is hidden on mobile (visible only lg+)
+- CSS: `.sticky-toc-sidebar`, `.reading-progress-bar`, `.sticky-toc-nav a.toc-active` in `custom.css`
+
+### 3. Image Zoom Enhancements
+**Files**: `themes/hugoplate/layouts/blog/single.html` (JS), `assets/css/custom.css`
+- All inline markdown `<img>` within `.content-with-zoom` are automatically wrapped in GLightbox `<a>` tags on DOMContentLoaded
+- Uses existing GLightbox library (already loaded via hugo plugin system)
+- CSS: `cursor: zoom-in`, hover scale + shadow on content images
+
+### 4. Enhanced PWA Service Worker
+**File**: `static/service-worker.js` (new/override of vendor file)
+- **Images**: `NetworkFirst` — always try network first, cache for 30 days
+- **CSS/JS**: `StaleWhileRevalidate` — instant load from cache, refresh in background
+- **Fonts**: `CacheFirst` — fonts cached for 1 year (they never change)
+- **HTML Pages**: `NetworkFirst` with 5s timeout — graceful offline fallback
+- Uses Workbox 6 (CDN-loaded, same as the module's version)
+
+### 5. Offline Fallback Page
+**Files**: `content/english/offline.md`, `layouts/offline/single.html`
+- Premium offline page with floating animated emoji, clear messaging, and action buttons
+- Service worker serves this page when network is unavailable
+
+### 6. Enhanced Web App Manifest
+**File**: `layouts/index.webmanifest`
+- Added: `description`, `scope`, `orientation`, `lang`, `screenshots[]`
+- Proper icon `purpose: "any maskable"` for Android adaptive icons
+- Makes the site more installable as a PWA on Chrome/Android/iOS
+
+## Build Status
+✅ **Build: 585 pages, 0 errors, 2317ms**
+
+
 
 ## Data: 2026-03-23
 

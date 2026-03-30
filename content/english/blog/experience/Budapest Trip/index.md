@@ -2,7 +2,7 @@
 title: "Budapest Trip with Collegio Don Mazza"
 description: "A trip with Collegio Don Mazza to explore the beautiful city of Budapest, Hungary."
 date: 2024-10-10
-image: example.webp
+image: cover.webp
 locations:
   - lat: 47.4979
     lon: 19.0402

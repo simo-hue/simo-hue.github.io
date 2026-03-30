@@ -2,7 +2,7 @@
 title: "Venice: A Paradigm Shift in Urban Living"
 description: "Exploring Venice, a city built on water, and understanding how it defies the typical structure of classical cities in Italy and the rest of the world."
 date: 2024-11-20
-image: example.webp
+image: cover.webp
 locations:
   - lat: 45.4408
     lon: 12.3155

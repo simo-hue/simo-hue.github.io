@@ -2,7 +2,7 @@
 title: "Poland Trip: A Journey Through History"
 description: "A profound visit to Auschwitz Birkenau and the historical city of Kraków."
 date: 2024-05-15
-image: example.webp
+image: cover.webp
 locations:
   - lat: 50.0275
     lon: 19.1753

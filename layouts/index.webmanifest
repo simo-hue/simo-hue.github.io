@@ -1,15 +1,35 @@
 {
     "name": "{{ site.Title }}",
-    "short_name": "{{ site.Title }}",
-    "start_url": "{{ "" | relURL }}",
+    "short_name": "Simo Portfolio",
+    "description": "Simone Mattioli - Computer Science student at University of Verona. Tech projects, travel, and personal growth.",
+    "start_url": "{{ `` | relURL }}",
+    "scope": "/",
     "display": "standalone",
+    "orientation": "portrait-primary",
     "background_color": "#121212",
     "theme_color": "#121212",
+    "lang": "en-US",
     "icons": [
         {
             "src": "images/favicon.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "images/favicon.png",
             "sizes": "512x512",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "images/og-image.png",
+            "sizes": "1200x630",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "Simone Mattioli Portfolio Homepage"
         }
     ]
 }
