@@ -907,3 +907,12 @@ Implemented a premium, rich styling upgrade for all markdown-rendered elements i
 - **JS (`assets/js/main.js`)**:
   - Implemented an IntersectionObserver to apply scroll-reveal animations (`.blog-prose-reveal`) to headings, quotes, and images.
   - Added logic to generate a "Copy" button (`.copy-code-btn`) for all `<pre>` code blocks.
+
+---
+
+# Bug Fix: Invisible Future-Dated Blog Post
+
+## Date: 2026-04-01
+## Modifications
+- **Fix**: Changed the date of the blog post "Confessions of a 20-Year-Old Tech NEET" from a future time (`2026-04-01T19:36:00+01:00`) to a past/current time (`2026-04-01T09:36:00+02:00`).
+- **Tech Notes**: Hugo by default ignores markdown files with a `date` in the future during local builds unless run with the `--buildFuture` flag. Updating the frontmatter resolved the post invisibility issue.
