@@ -1,4 +1,20 @@
+# Bug Fix - Bachelor Degree PDF 404
+
+## Data: 2026-04-09
+
+## Problema
+Il file `/docs/Bachelor.pdf` restituiva un errore 404 nonostante fosse presente nella cartella `assets/docs/`.
+
+## Causa
+Hugo non serve automaticamente i file presenti nella cartella `assets/` a meno che non siano processati via Hugo Pipes. Per essere serviti come file statici all'indirizzo `/docs/...`, devono trovarsi nella cartella `static/docs/`.
+
+## Soluzione
+Copiato il file `assets/docs/Bachelor.pdf` in `static/docs/Bachelor.pdf`.
+
+---
+
 # Phase 1 Optimization - Render-Blocking Resources  
+
 
 ## Data: 2026-01-16
 

@@ -223,3 +223,12 @@ Simile a Facebook Pixel, se necessario per B2B marketing
 1. Place your IELTS certificate PDF file in the `static/docs/` directory.
 2. Ensure the filename matches exactly: `IELTS.pdf` (so the full path is `static/docs/IELTS.pdf`).
 3. View the links page locally to ensure the new certificate card works.
+
+---
+
+## 🎓 Bachelor Degree PDF Verification
+### Date: 2026-04-09
+### Action Required
+1. Push the manual move of `Bachelor.pdf` to GitHub (I already moved it to `static/docs/Bachelor.pdf` locally).
+2. Verify at https://simo-hue.github.io/docs/Bachelor.pdf after the deployment.
+
