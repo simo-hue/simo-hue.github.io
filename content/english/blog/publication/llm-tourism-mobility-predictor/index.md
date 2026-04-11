@@ -22,8 +22,14 @@ tags:
 comments: false
 
 links:
-  - title: Pre-print Paper
-    description: Read the full research paper
+  - title: Official Publication (BDCC)
+    description: Read the full research paper on Big Data and Cognitive Computing
+    website: https://www.mdpi.com/2504-2289/10/4/117
+  - title: PDF Version (MDPI)
+    description: Download the official PDF version from the journal website
+    website: https://www.mdpi.com/2504-2289/10/4/117/pdf
+  - title: Local PDF Copy
+    description: Read the local static version of the research paper
     website: /docs/paper.pdf
   - title: GitHub Repository
     description: Access the complete open-source codebase and documentation
@@ -101,10 +107,15 @@ We acknowledge ISCRA for awarding this project access to the **LEONARDO** superc
 ## Citation
 
 ```bibtex
-@article{dallavecchia2024understanding,
+@article{2026understanding,
   title={Understanding and Predicting Tourist Behavior through Large Language Models},
-  author={Dalla Vecchia, Anna and Mattioli, Simone and Migliorini, Sara and Quintarelli, Elisa},
-  journal={arXiv preprint},
-  year={2024}
+  author={Anna Dalla Vecchia, Simone Mattioli, Sara Migliorini, Elisa Quintarelli},
+  journal={Big Data and Cognitive Computing},
+  volume={10},
+  year={2026},
+  number={4},
+  article-number={117},
+  url={https://www.mdpi.com/2504-2289/10/4/117},
+  doi={10.3390/bdcc10040117}
 }
 ```
