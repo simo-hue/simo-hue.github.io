@@ -932,3 +932,17 @@ Implemented a premium, rich styling upgrade for all markdown-rendered elements i
 ## Modifications
 - **Fix**: Changed the date of the blog post "Confessions of a 20-Year-Old Tech NEET" from a future time (`2026-04-01T19:36:00+01:00`) to a past/current time (`2026-04-01T09:36:00+02:00`).
 - **Tech Notes**: Hugo by default ignores markdown files with a `date` in the future during local builds unless run with the `--buildFuture` flag. Updating the frontmatter resolved the post invisibility issue.
+
+---
+
+# Git Sync - Remote Override
+## Data: 2026-04-11
+## Problema
+Errore durante il push dovuto alla divergenza tra branch locale e remoto (16 commit mancanti in locale). L'utente desiderava mantenere la versione del repository remoto come "verità".
+
+## Soluzione
+1. Creato branch di backup `backup-before-reset` per preservare l'unico commit locale divergente (`update pubblication`).
+2. Eseguito `git reset --hard origin/master` per allineare perfettamente il branch locale `master` con il remoto.
+
+## Stato
+✅ **Branch sincronizzato**: Il repository locale è ora identico a quello remoto.
