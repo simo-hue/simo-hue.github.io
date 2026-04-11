@@ -6,7 +6,31 @@ items:
     description: "Something exciting is on the horizon. Check back soon to discover what's next in my journey."
     icon: "fa-solid fa-question"
     tags: ["Future"]
+    align: "right"
+  
+  - date: "11 April 2026"
+    title: "Scientific Publication"
+    organization: "MDPI - Big Data and Cognitive Computing"
+    description: "Investigation into the potential of LLMs in interpreting and predicting tourist movements in the city of Verona."
+    icon: "fa-solid fa-book-open"
+    tags: ["Research"]
     align: "left"
+    extended_description: |
+      My first academic publication, titled "Understanding and Predicting Tourist Behavior through Large Language Models", was published in the MDPI journal 'Big Data and Cognitive Computing'. 
+      
+      This study investigates how Large Language Models (LLMs) can be used to interpret and forecast tourist movements using a real-world dataset from Verona, Italy. By employing an incremental prompt engineering approach on the Leonardo HPC supercomputer, the research demonstrates significant capabilities of AI in smart city mobility applications.
+    achievements:
+      - "Published in Big Data and Cognitive Computing (Journal Article 117)"
+      - "Utilized Leonardo HPC at CINECA for large-scale inference"
+      - "Presented a novel incremental prompt engineering methodology"
+      - "Achieved high accuracy in Next-PoI prediction tasks"
+    links:
+      - label: "Online Article"
+        url: "https://www.mdpi.com/2504-2289/10/4/117"
+      - label: "Research PDF"
+        url: "/docs/paper.pdf"
+      - label: "Journal PDF"
+        url: "https://www.mdpi.com/2504-2289/10/4/117/pdf"
 
   - date: "Early 2026"
     title: "U.K. Stay + ELC Brighton"

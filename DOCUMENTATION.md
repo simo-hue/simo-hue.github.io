@@ -946,3 +946,16 @@ Errore durante il push dovuto alla divergenza tra branch locale e remoto (16 com
 
 ## Stato
 ✅ **Branch sincronizzato**: Il repository locale è ora identico a quello remoto.
+
+---
+
+# Timeline Update - Scientific Publication
+## Data: 2026-04-11
+## Modifiche
+1. Aggiornata la card "Scientific Publication" in `data/timeline.yml` con i dettagli reali dell'articolo pubblicato su MDPI.
+2. Aggiunti link all'articolo online, al PDF ufficiale e alla copia locale.
+3. Risolto errore di permessi su `public/service-worker.js` eliminando la cartella `public` e riavviando il server.
+
+## Stato
+✅ **Timeline aggiornata**: La pubblicazione è ora visibile con descrizione estesa e link funzionanti.
+✅ **Server ripristinato**: `npm run dev` funzionante.
