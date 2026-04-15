@@ -959,3 +959,7 @@ Errore durante il push dovuto alla divergenza tra branch locale e remoto (16 com
 ## Stato
 ✅ **Timeline aggiornata**: La pubblicazione è ora visibile con descrizione estesa e link funzionanti.
 ✅ **Server ripristinato**: `npm run dev` funzionante.
+
+- [2026-04-15 12:00]: Grammar Fix: Collegio Don Mazza Blog Post
+  - *Details*: Performed a comprehensive grammar and punctuation check on the "Collegio Don Mazza" experience post (lines 20-105). Fixed spelling errors (e.g., "roommate," "weird," "accommodation"), capitalized proper nouns (Verona, Don Mazza, Val di Rabbi), and improved phrasing while maintaining the author's original voice and meaning.
+  - *Tech Notes*: Modified `content/english/blog/experience/Collegio don mazza/index.md`. No architectural changes.

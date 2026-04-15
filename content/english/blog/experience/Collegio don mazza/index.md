@@ -19,56 +19,87 @@ links:
 
 ## Long Story Short
 
-It's the place where I lived for 3 years during my bachelor computer science degree in verona.
+It's the place where I lived for 3 years during my bachelor's in computer science in Verona.
 
 &nbsp;
 
 # More Details About
 
-## How I find it out?
+## How did I find out?
 
-Well, it's funny as I found it almost for pure randomness as I was rushing into the **university application** and when they confirmed me I started another **RUN**. The one for finding an accomodation in Verona.
+Well, it's funny, as I found it almost by pure chance while I was rushing my **university application**, and when they confirmed my spot, I started another **RUN**—the one for finding accommodation in Verona.
 
-After going to verona couple of times to look for a flat either to rent or to buy we came across the **Collegio Don Mazza**.
+After going to Verona a couple of times to look for a flat, either to rent or to buy, we came across **Collegio Don Mazza**.
 
 ## The First Year
 
-As you will find out ( if you read the full article ) my experience inside the walls of the **merit college Don Mazza** has been very different through the 3 years.
+As you will find out (if you read the full article), my experience inside the walls of the **Don Mazza Merit College** has been very different throughout the 3 years.
 
-Let's start from the beginning...for sure it has been hard. Why?
+Let's start from the beginning... it was certainly hard. Why?
 - I was alone with no friends.
 - First time for me out of home.
 - I'm an introverted guy.
-- I was feeling stupid as the university's courses was really challenging for me.
+- I was feeling stupid because the university courses were really challenging for me.
 
-Isn't it enough? Well for me it was and I still remember **me crying in my room** for this reasons...
+Isn't it enough? Well, for me it was, and I still remember **crying in my room** for these reasons...
 
-And talking about the room I wasn't alone...I had a roomate ( it didn't last long ) that it was not the best one as at first touch it seemed kind and honest but it turned out completely the opposite, but we'll carry on with this story on the second year.
+And talking about the room, I wasn't alone... I had a roommate (it didn't last long) who was not the best. At first glance, he seemed kind and honest, but he turned out to be completely the opposite—but we'll carry on with this story in the second year.
 
-During this year I also started thinking to leave the university as I was trying to learn stuff that I was not interested in such as **calculus 1**, **Physics 1** or also **Logic**.
+During this year, I also started thinking about leaving the university because I was trying to learn things I was not interested in, such as **Calculus 1**, **Physics 1**, or **Logic**.
 
-But comming back to my don mazza stay it was so simple:
-1. going to uni to attend classes
-2. Comming back to the Don Mazza
-3. Have dinner ( the horrible one as always )
-4. study after it
-5. Sleep
-6. Repeat
+But coming back to my Don Mazza stay, it was very simple:
+1. Going to uni to attend classes
+2. Coming back to Don Mazza
+3. Having dinner (the horrible one, as always)
+4. Studying after it
+5. Sleeping
+6. Repeating
 
-And this is why everybody there was looking at me in a wird and skeptical way I was super focues always listen to podcast and talking with very few people ( or sometimes even no one ). This is related to the fact that the guys there had total different core values compared with me:
-- only having fun ( party, drinks and all the stuff that I hate )
-- Studying as a hobby ( it was my job and I was responsable for the fact that my parents were paying for me )
+This is why everybody there was looking at me in a weird and skeptical way; I was super focused, always listening to podcasts and talking to very few people (or sometimes even no one). This was because the guys there had totally different core values compared to mine:
+- only having fun (party, drinks, and all the stuff that I hate)
+- Studying as a hobby (it was my job, and I was responsible because my parents were paying for me).
 
-And for many other reasons it was difficult for me to stay with them on purpose...also because the only thing that I was caring about was both having results in my academic career and having free time when I was comming back home in val di rabbi to stay outside.
+For many other reasons, it was difficult for me to spend time with them... mainly because the only things I cared about were my academic results and having free time when I went back home to Val di Rabbi to be outdoors.
 
-Out of the majority of course I've met two guys that were really brillant that I'm still in touch with them still nowadays:
+Of course, out of the majority, I met two guys who were really brilliant, and I'm still in touch with them today:
 - **Faustino** : From Angola
 - **Giovanni Di Rosa** : From souther Italy
 
 ## The Second Year
 
-Here it's started getting a little bit better as I was living still with the horrible roomate ( that made me ask for a replacement and I'll not go deeper for the reasons but just to let you know he was letting other people sleep in my bed and vaping in the room...I could carry on, unfortunately, but I'll stop here ).
+Here, it started getting a little bit better, even though I was still living with the horrible roommate (who made me ask for a replacement—I won't go into detail, but let's just say he was letting other people sleep in my bed and vaping in the room... I could go on, unfortunately, but I'll stop here).
 
-But the major thing is that my classmate **David Cavada** moved to the Don Mazza and we started having breakfast, daily commuting, dinner and sometimes even study times together. Apart from him there was also a friend of him, his name is **Valerio Basilio Cova** and it sounds so wird to say and think about this as now this two guys here are my best friends...
+But the main thing was that my classmate **David Cavada** moved to Don Mazza, and we started having breakfast, commuting, dining, and sometimes even studying together. Besides him, there was also a friend of his, **Valerio Basilio Cova**—it sounds so weird to think about it now, as these two guys are now my best friends...
 
-But comming back in the past.
+Looking back, I wasn't socializing that much, but it was a starting point for me.
+
+This second year flew by much faster than the previous one (I think also due to the fact that I already knew the place).
+
+## The End Of The Verona Dream Life
+
+And here we are... diving deep into the saddest year.
+
+I say this not only because it was the last (graduation year) but also because it was the year we formed **our group**... but why "**our**"?
+
+Well, we are in four:
+- **Simone Mattioli ( me )**
+- **David Cavada**
+- **Valerio Basilio Cova**
+- **Omar Bodio**
+
+
+This year was a fantastic one—the **BEST**, without any doubt. We were living in the same place (we had two different rooms, one above the other) and started doing everything together.
+
+I remember how fun it was to commute together every single day, exercising in the "gym," walking around Verona after classes, and having dinner together.
+
+I was really sad when the university year ended, realizing I wouldn't see them every day anymore and that I was leaving my three-year-long routines behind forever...
+
+In addition, I had to move back to Rovereto, my hometown, which meant living with my parents again.
+
+## Was it worth it?
+
+It definitely changed my life; I had the chance to have many new experiences (such as the Brazilian volunteering) and meet new people (who are now my best friends).
+
+Of course, it depends... I think generally **YES**, but (a big BUT), and here are the reasons why:
+- Expensive if you have a high ISEE (income)
+- Services like the GYM and FOOD are not the best (and they are NOT improving; on the contrary, they're getting worse at least for what I've seen in 3 years)
