@@ -1,4 +1,22 @@
+# Academic Profiles Links Update
+## Data: 2026-04-16
+## Modifiche
+Aggiunta una nuova sezione "Academic Profiles" nella pagina dei links per includere i profili accademici di ricerca.
+
+### File Modificati
+- [`data/links.yml`](file:///Users/simo/Downloads/DEV/simo-hue.github.io/data/links.yml): Inserita la sezione "Academic Profiles" con i seguenti link:
+    - **Google Scholar**: Profilo per pubblicazioni scientifiche e citazioni.
+    - **ORCID**: Identificativo ufficiale per la ricerca accademica.
+    - **SciProfile**: Profilo accademico su SciProfiles.
+
+## Tech Notes
+- Icone utilizzate: `fas fa-graduation-cap` (Google Scholar), `fab fa-orcid` (ORCID), `fas fa-user-graduate` (SciProfile).
+- Colori armonizzati con il design system esistente (blue, lime, emerald).
+
+---
+
 # Bug Fix - Bachelor Degree PDF 404
+
 
 ## Data: 2026-04-09
 

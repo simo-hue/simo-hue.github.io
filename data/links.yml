@@ -27,6 +27,30 @@ sections:
         button_text: "Follow on GitHub"
         color: "bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100"
 
+  - title: "Academic Profiles"
+    items:
+      - title: "Google Scholar"
+        description: "Explore my scientific publications, citations, and research impact in Computer Science and AI."
+        icon: "fas fa-graduation-cap"
+        link: "https://scholar.google.com/citations?hl=en&user=uLGrDbIAAAAJ"
+        button_text: "View Publications"
+        color: "bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300"
+
+      - title: "ORCID"
+        description: "Open Researcher and Contributor ID. My official record of academic and research activities."
+        icon: "fab fa-orcid"
+        link: "https://orcid.org/0009-0006-5047-8004"
+        button_text: "View Profile"
+        color: "bg-lime-50 dark:bg-lime-900/20 text-lime-700 dark:text-lime-300"
+
+      - title: "SciProfile"
+        description: "Academic profile on SciProfiles, showcasing my research contributions and scientific identity."
+        icon: "fas fa-user-graduate"
+        link: "https://sciprofiles.com/profile/Mattioli-simone"
+        button_text: "View Profile"
+        color: "bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300"
+
+
   - title: "Mountain Fauna Lover Content"
     items:
       - title: "YouTube - Mountain Fauna Lover"
