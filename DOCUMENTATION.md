@@ -1,4 +1,19 @@
+# HPC and Quantum Computing Certificate Update
+## Data: 2026-04-16
+## Modifiche
+Aggiunto il nuovo certificato CINECA riguardante l'HPC e il Quantum Computing alla sezione "Certificates" della pagina dei links.
+
+### File Modificati
+- [`data/links.yml`](file:///Users/simo/Downloads/DEV/simo-hue.github.io/data/links.yml): Aggiunto l'item "HPC and Quantum Computing".
+
+## Tech Notes
+- Icona utilizzata: `fas fa-microchip`.
+- Colore: `bg-sky-50` (Azzurro per distinguersi dagli altri certificati CINECA).
+
+---
+
 # Academic Profiles Links Update
+
 ## Data: 2026-04-16
 ## Modifiche
 Aggiunta una nuova sezione "Academic Profiles" nella pagina dei links per includere i profili accademici di ricerca.
