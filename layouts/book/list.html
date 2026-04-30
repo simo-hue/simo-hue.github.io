@@ -120,7 +120,7 @@
 
 <script>
     const bookingConfig = {{ $bookingData | jsonify | safeJS }};
-    const apiEndpoint = bookingConfig.google_apps_script_url;
+    const apiEndpoint = '{{ getenv "HUGO_GOOGLE_APPS_SCRIPT_URL" }}';
     
     // UI Elements
     const stepTitle = document.getElementById('step-title');

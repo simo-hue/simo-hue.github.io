@@ -34,3 +34,8 @@ pids
 # Cache
 .sass-cache
 
+# Environment variables
+.env
+.env.*
+!.env.example
+

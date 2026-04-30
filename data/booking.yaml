@@ -36,13 +36,8 @@ blocked_dates:
 meeting_duration: 30   # minutes
 timezone: "Europe/Rome"
 
-# ⚠️ IMPORTANT: Paste your Google Apps Script deployment URL here
-# (See TO_SIMO_DO.md for step-by-step setup instructions)
-google_apps_script_url: "REPLACE_WITH_YOUR_APPS_SCRIPT_URL"
-
 # Your public profile info shown on the booking page
 owner_name: "Simone Mattioli"
-owner_email: "REPLACE_WITH_YOUR_GMAIL"
-owner_title: "CS Student & Tech Enthusiast"
-owner_description: "Let's chat! Whether you're curious about tech, AI, science, or just want to connect — I'm always happy to meet new people."
-owner_avatar: "/images/author/author.webp"
+owner_title: "CS Student | AI Enthusiast | Content Creator"
+owner_description: "Let's chat! Whether you're curious about any of my projects or just want to connect. I'm always happy to meet new people."
+owner_avatar: "/images/avatar_calls.png"

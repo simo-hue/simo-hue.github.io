@@ -1009,3 +1009,5 @@ Errore durante il push dovuto alla divergenza tra branch locale e remoto (16 com
 ## Tech Notes
 - File creati: `content/english/book/_index.md`, `layouts/book/list.html`, `data/booking.yaml`, `.env.example`.
 - Modifiche ai menu: Inserita voce "Book" nel file `menus.en.toml`.
+- **Avatar Update**: Impostata l'immagine `avatar_calls.png` come avatar nella pagina di booking. Copiato il file da `assets/images/` a `static/images/` per garantirne la corretta visualizzazione.
+- **Security**: Aggiunto `.env` al file `.gitignore` per prevenire il caricamento accidentale di credenziali sensibili su GitHub.

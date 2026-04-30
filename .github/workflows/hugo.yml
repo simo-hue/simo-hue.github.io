@@ -46,6 +46,8 @@ jobs:
         env:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
+          HUGO_GOOGLE_APPS_SCRIPT_URL: ${{ secrets.GOOGLE_APPS_SCRIPT_URL }}
+          HUGO_OWNER_EMAIL: ${{ secrets.OWNER_EMAIL }}
         run: |
           hugo --gc --minify --baseURL "https://simo-hue.github.io/"
       - name: Setup Pages
