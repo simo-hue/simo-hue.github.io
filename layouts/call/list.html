@@ -1,21 +1,21 @@
 {{ define "main" }}
-{{ $bookingData := site.Data.booking }}
+{{ $callData := site.Data.booking }}
 <div class="container mx-auto px-4 py-12 md:py-20 lg:max-w-5xl">
-    <!-- Main Booking Card -->
+    <!-- Main Call Card -->
     <div class="bg-white dark:bg-neutral-900 rounded-3xl shadow-xl dark:shadow-[0_0_40px_rgba(0,0,0,0.5)] border border-gray-100 dark:border-white/5 overflow-hidden flex flex-col md:flex-row">
         
         <!-- Left: Profile Info -->
         <div class="w-full md:w-2/5 p-8 md:p-10 border-b md:border-b-0 md:border-r border-gray-100 dark:border-white/5 bg-gray-50/50 dark:bg-white/5">
             <div class="mb-8">
-                <img src="{{ $bookingData.owner_avatar }}" alt="{{ $bookingData.owner_name }}" class="w-20 h-20 rounded-full object-cover border-4 border-white dark:border-neutral-800 shadow-md mb-4">
-                <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 tracking-wider uppercase mb-1">{{ $bookingData.owner_title }}</h3>
-                <h1 class="text-2xl font-bold text-gray-900 dark:text-white">{{ $bookingData.owner_name }}</h1>
+                <img src="{{ $callData.owner_avatar }}" alt="{{ $callData.owner_name }}" class="w-20 h-20 rounded-full object-cover border-4 border-white dark:border-neutral-800 shadow-md mb-4">
+                <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 tracking-wider uppercase mb-1">{{ $callData.owner_title }}</h3>
+                <h1 class="text-2xl font-bold text-gray-900 dark:text-white">{{ $callData.owner_name }}</h1>
             </div>
             
             <div class="space-y-4 mb-8">
                 <div class="flex items-center text-gray-600 dark:text-gray-300">
                     <svg class="w-5 h-5 mr-3 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    <span>{{ $bookingData.meeting_duration }} min meeting</span>
+                    <span>{{ $callData.meeting_duration }} min meeting</span>
                 </div>
                 <div class="flex items-center text-gray-600 dark:text-gray-300">
                     <svg class="w-5 h-5 mr-3 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
@@ -24,7 +24,7 @@
             </div>
             
             <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                {{ $bookingData.owner_description }}
+                {{ $callData.owner_description }}
             </p>
         </div>
 
@@ -81,7 +81,7 @@
                     <p id="final-datetime-display" class="font-medium text-blue-800 dark:text-blue-300"></p>
                 </div>
                 
-                <form id="booking-form" class="space-y-4">
+                <form id="call-form" class="space-y-4">
                     <div>
                         <label for="guest-name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Name</label>
                         <input type="text" id="guest-name" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-neutral-800 text-gray-900 dark:text-white outline-none transition-shadow">
@@ -94,7 +94,7 @@
                         <label for="guest-notes" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Anything to add? (Optional)</label>
                         <textarea id="guest-notes" rows="3" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-neutral-800 text-gray-900 dark:text-white outline-none transition-shadow resize-none"></textarea>
                     </div>
-                    <button type="submit" id="submit-booking" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center">
+                    <button type="submit" id="submit-call" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center">
                         <span id="btn-text">Schedule Event</span>
                         <svg id="btn-spinner" class="animate-spin -ml-1 mr-3 h-5 w-5 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
@@ -119,7 +119,7 @@
 </div>
 
 <script>
-    const bookingConfig = {{ $bookingData | jsonify | safeJS }};
+    const callConfig = {{ $callData | jsonify | safeJS }};
     const apiEndpoint = '{{ getenv "HUGO_GOOGLE_APPS_SCRIPT_URL" }}';
     
     // UI Elements
@@ -143,8 +143,8 @@
     // Details Elements
     const finalDatetimeDisplay = document.getElementById('final-datetime-display');
     const backToTimesBtn = document.getElementById('back-to-times');
-    const bookingForm = document.getElementById('booking-form');
-    const submitBtn = document.getElementById('submit-booking');
+    const callForm = document.getElementById('call-form');
+    const submitBtn = document.getElementById('submit-call');
     const btnText = document.getElementById('btn-text');
     const btnSpinner = document.getElementById('btn-spinner');
 
@@ -189,12 +189,12 @@
             btn.className = "aspect-square flex items-center justify-center rounded-full text-sm transition-all relative font-medium w-10 h-10 mx-auto";
             
             let isAvailable = false;
-            let availabilityConfig = bookingConfig.availability[dayOfWeekStr];
+            let availabilityConfig = callConfig.availability[dayOfWeekStr];
             
             if (availabilityConfig && availabilityConfig.enabled && availabilityConfig.slots && availabilityConfig.slots.length > 0) {
                 isAvailable = true;
             }
-            if (bookingConfig.blocked_dates && bookingConfig.blocked_dates.includes(dateStr)) {
+            if (callConfig.blocked_dates && callConfig.blocked_dates.includes(dateStr)) {
                 isAvailable = false;
             }
             if (dateObj < today) {
@@ -232,7 +232,7 @@
         const options = { weekday: 'long', month: 'long', day: 'numeric' };
         selectedDateDisplay.textContent = dateObj.toLocaleDateString('en-US', options);
         
-        const slots = bookingConfig.availability[dayOfWeekStr].slots;
+        const slots = callConfig.availability[dayOfWeekStr].slots;
         timeSlotsContainer.innerHTML = '';
         
         slots.forEach(time => {
@@ -271,7 +271,7 @@
         selectedTime = null;
     });
 
-    bookingForm.addEventListener('submit', async (e) => {
+    callForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         
         const name = document.getElementById('guest-name').value;
@@ -303,7 +303,7 @@
                     notes: notes,
                     date: selectedDate,
                     time: selectedTime,
-                    duration: bookingConfig.meeting_duration
+                    duration: callConfig.meeting_duration
                 })
             });
             
@@ -314,10 +314,10 @@
                 detailsStep.classList.add('hidden');
                 successStep.classList.remove('hidden');
             } else {
-                throw new Error(result.error || "Failed to book");
+                throw new Error(result.error || "Failed to schedule call");
             }
         } catch (error) {
-            console.error("Booking error:", error);
+            console.error("Call error:", error);
             alert("Sorry, there was an error processing your request. Please try again.");
             resetBtn();
         }

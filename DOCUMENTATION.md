@@ -1000,14 +1000,14 @@ Errore durante il push dovuto alla divergenza tra branch locale e remoto (16 com
 
 ---
 
-# Booking System (Calendly-like)
+# Call System (Calendly-like)
 ## Date: 2026-04-30
 ## Features Implemented
-- **Frontend**: Aggiunta la nuova pagina `/book` per prenotare incontri su Google Meet. Interfaccia utente premium con calendario navigabile integrato nel tema esistente.
+- **Frontend**: Aggiunta la nuova pagina `/call` per prenotare incontri su Google Meet. Interfaccia utente premium con calendario navigabile integrato nel tema esistente.
 - **Backend (Serverless)**: Poiché il sito è hostato staticamente su GitHub Pages, è stato predisposto un backend su **Google Apps Script** (da configurare manualmente, vedi `TO_SIMO_DO.md`). Il backend accetta richieste POST, crea l'evento su Google Calendar e invia una mail di conferma tramite GmailApp.
 - **Data Configuration**: Creazione del file `data/booking.yaml` per gestire i giorni della settimana in cui si è disponibili, gli orari, le date bloccate e le informazioni del profilo, senza dover modificare il codice HTML.
 ## Tech Notes
-- File creati: `content/english/book/_index.md`, `layouts/book/list.html`, `data/booking.yaml`, `.env.example`.
-- Modifiche ai menu: Inserita voce "Book" nel file `menus.en.toml`.
+- File creati: `content/english/call/_index.md`, `layouts/call/list.html`, `data/booking.yaml`, `.env.example`.
+- Modifiche ai menu: Inserita voce "Call" nel file `menus.en.toml`.
 - **Avatar Update**: Impostata l'immagine `avatar_calls.png` come avatar nella pagina di booking. Copiato il file da `assets/images/` a `static/images/` per garantirne la corretta visualizzazione.
 - **Security**: Aggiunto `.env` al file `.gitignore` per prevenire il caricamento accidentale di credenziali sensibili su GitHub.

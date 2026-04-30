@@ -85,8 +85,8 @@ url = "/categories/tech-projects/"
 
 
 [[main]]
-name = "Book"
-url = "/book"
+name = "Call"
+url = "/call"
 weight = 6
 
 # footer menu
