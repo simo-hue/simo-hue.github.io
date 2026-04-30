@@ -1,0 +1,48 @@
+# ============================================================
+# BOOKING PAGE — Availability Configuration
+# Edit this file to control your schedule, then git push.
+# ============================================================
+
+# Weekly availability — set enabled: false to block the entire day
+availability:
+  monday:
+    enabled: true
+    slots: ["08:00","9:00","10:00", "11:00"]
+  tuesday:
+    enabled: true
+    slots: ["08:00","9:00","10:00", "11:00", "15:00", "16:00", "17:00", "18:00"]
+  wednesday:
+    enabled: true
+    slots: ["08:00","9:00","10:00", "11:00"]
+  thursday:
+    enabled: true
+    slots: ["08:00","9:00","10:00", "11:00"]
+  friday:
+    enabled: true
+    slots: ["08:00","9:00","10:00"]
+  saturday:
+    enabled: false
+    slots: []
+  sunday:
+    enabled: false
+    slots: []
+
+# Specific dates to block entirely (format: YYYY-MM-DD)
+blocked_dates:
+  - "2026-05-01"
+  - "2026-06-02"
+
+# Meeting settings
+meeting_duration: 30   # minutes
+timezone: "Europe/Rome"
+
+# ⚠️ IMPORTANT: Paste your Google Apps Script deployment URL here
+# (See TO_SIMO_DO.md for step-by-step setup instructions)
+google_apps_script_url: "REPLACE_WITH_YOUR_APPS_SCRIPT_URL"
+
+# Your public profile info shown on the booking page
+owner_name: "Simone Mattioli"
+owner_email: "REPLACE_WITH_YOUR_GMAIL"
+owner_title: "CS Student & Tech Enthusiast"
+owner_description: "Let's chat! Whether you're curious about tech, AI, science, or just want to connect — I'm always happy to meet new people."
+owner_avatar: "/images/author/author.webp"

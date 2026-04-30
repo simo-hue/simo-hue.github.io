@@ -84,6 +84,11 @@ url = "/categories/tech-projects/"
 #url = "/categories"
 
 
+[[main]]
+name = "Book"
+url = "/book"
+weight = 6
+
 # footer menu
 [[footer]]
 name = "Vision without action is just a dream, action without vision is just activity"

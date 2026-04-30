@@ -996,3 +996,16 @@ Errore durante il push dovuto alla divergenza tra branch locale e remoto (16 com
 - [2026-04-15 12:00]: Grammar Fix: Collegio Don Mazza Blog Post
   - *Details*: Performed a comprehensive grammar and punctuation check on the "Collegio Don Mazza" experience post (lines 20-105). Fixed spelling errors (e.g., "roommate," "weird," "accommodation"), capitalized proper nouns (Verona, Don Mazza, Val di Rabbi), and improved phrasing while maintaining the author's original voice and meaning.
   - *Tech Notes*: Modified `content/english/blog/experience/Collegio don mazza/index.md`. No architectural changes.
+
+
+---
+
+# Booking System (Calendly-like)
+## Date: 2026-04-30
+## Features Implemented
+- **Frontend**: Aggiunta la nuova pagina `/book` per prenotare incontri su Google Meet. Interfaccia utente premium con calendario navigabile integrato nel tema esistente.
+- **Backend (Serverless)**: Poiché il sito è hostato staticamente su GitHub Pages, è stato predisposto un backend su **Google Apps Script** (da configurare manualmente, vedi `TO_SIMO_DO.md`). Il backend accetta richieste POST, crea l'evento su Google Calendar e invia una mail di conferma tramite GmailApp.
+- **Data Configuration**: Creazione del file `data/booking.yaml` per gestire i giorni della settimana in cui si è disponibili, gli orari, le date bloccate e le informazioni del profilo, senza dover modificare il codice HTML.
+## Tech Notes
+- File creati: `content/english/book/_index.md`, `layouts/book/list.html`, `data/booking.yaml`, `.env.example`.
+- Modifiche ai menu: Inserita voce "Book" nel file `menus.en.toml`.
