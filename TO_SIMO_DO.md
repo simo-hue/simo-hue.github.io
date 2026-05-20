@@ -1,0 +1,2 @@
+- evitare doppioni delle call che si sovrappongono
+- provare ad implementare metodo immediato
