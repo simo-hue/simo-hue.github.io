@@ -1,2 +1,2 @@
 - evitare doppioni delle call che si sovrappongono
-- provare ad implementare metodo immediato
+- provare ad implementare metodo immediato- Salva l'immagine che hai allegato in chat nel percorso: `static/images/profile_connect.png` per renderla visibile nella pagina Linktree.

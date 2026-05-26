@@ -1011,3 +1011,15 @@ Errore durante il push dovuto alla divergenza tra branch locale e remoto (16 com
 - Modifiche ai menu: Inserita voce "Call" nel file `menus.en.toml`.
 - **Avatar Update**: Impostata l'immagine `avatar_calls.png` come avatar nella pagina di booking. Copiato il file da `assets/images/` a `static/images/` per garantirne la corretta visualizzazione.
 - **Security**: Aggiunto `.env` al file `.gitignore` per prevenire il caricamento accidentale di credenziali sensibili su GitHub.
+
+- [2026-05-26 14:00]: Linktree-style Connect Page
+  - *Details*: Created a mobile-optimized, distraction-free Linktree-style page at `/connect` for sharing social links and contact info when meeting new people.
+  - *Tech Notes*: 
+    - Added new Hugo section `/connect` with `_index.md`.
+    - Created custom `baseof.html` and `list.html` layouts inside `layouts/connect/` to remove standard site navigation/footer while inheriting Tailwind styling.
+    - Implemented a "Save Contact" feature by generating and serving `static/simone-mattioli.vcf`.
+    - Integrated with existing `data/social.json` to dynamically render social buttons using Glassmorphism UI.
+
+- [2026-05-26 14:02]: Update Linktree Profile Image
+  - *Details*: Changed profile image path to `/images/profile_connect.png` per user request.
+  - *Tech Notes*: Manual image save required by user.
