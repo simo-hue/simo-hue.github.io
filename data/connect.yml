@@ -1,0 +1,30 @@
+sections:
+  - title: "Professional"
+    links:
+      - name: "LinkedIn"
+        icon: "fab fa-linkedin"
+        link: "https://www.linkedin.com/in/simonemattioli2003/"
+      - name: "GitHub"
+        icon: "fab fa-github"
+        link: "https://github.com/simo-hue"
+      - name: "Email"
+        icon: "fas fa-envelope"
+        link: "mailto:mattioli.simone.10@gmail.com"
+  
+  - title: "Mountain Fauna Lover"
+    links:
+      - name: "Instagram"
+        icon: "fab fa-instagram"
+        link: "https://instagram.com/mountainfaunalover"
+      - name: "YouTube"
+        icon: "fab fa-youtube"
+        link: "https://youtube.com/@mountainfaunalover"
+
+  - title: "Personal"
+    links:
+      - name: "Instagram"
+        icon: "fab fa-instagram"
+        link: "https://instagram.com/simo___one"
+      - name: "Simo's Diary"
+        icon: "fab fa-youtube"
+        link: "https://youtube.com/@simosdiary2003"

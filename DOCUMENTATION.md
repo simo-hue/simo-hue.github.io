@@ -1023,3 +1023,10 @@ Errore durante il push dovuto alla divergenza tra branch locale e remoto (16 com
 - [2026-05-26 14:02]: Update Linktree Profile Image
   - *Details*: Changed profile image path to `/images/profile_connect.png` per user request.
   - *Tech Notes*: Manual image save required by user.
+
+- [2026-05-26 14:07]: Added Linktree Categories
+  - *Details*: Grouped links into 'Personal & Professional' and 'Mountain Fauna Lover' sections for a more organized view.
+  - *Tech Notes*: Created `data/connect.yml` and updated `layouts/connect/list.html` loop.
+
+- [2026-05-26 14:07]: Reorder Linktree Sections
+  - *Details*: Split Personal and Professional into distinct sections and reordered them as Professional, Mountain Fauna Lover, and Personal per user request.

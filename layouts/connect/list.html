@@ -22,21 +22,28 @@
   </a>
 
   <!-- Social Links Container -->
-  <div class="flex flex-col gap-4">
-    {{ range site.Data.social.main }}
-      <a href="{{ .link }}" target="_blank" rel="noopener noreferrer" class="group flex items-center p-4 bg-theme-light dark:bg-darkmode-theme-light rounded-2xl hover:bg-white dark:hover:bg-darkmode-body border border-transparent hover:border-border dark:hover:border-darkmode-border shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 backdrop-blur-md">
-        <div class="w-12 h-12 flex items-center justify-center rounded-full bg-body dark:bg-darkmode-body text-primary text-xl group-hover:scale-110 transition-transform duration-300 shadow-inner">
-          <i class="{{ .icon }}"></i>
-        </div>
-        <span class="ml-4 font-semibold text-lg text-dark dark:text-darkmode-dark capitalize flex-1 text-left">{{ .name }}</span>
-        <i class="fas fa-chevron-right text-text dark:text-darkmode-text opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
-      </a>
+  <div class="flex flex-col gap-6">
+    {{ range site.Data.connect.sections }}
+      <!-- Section Divider -->
+      <div class="flex items-center gap-4 mt-2 mb-2 opacity-80">
+        <div class="h-px bg-border dark:bg-darkmode-border flex-1"></div>
+        <span class="text-xs font-semibold uppercase tracking-widest text-text dark:text-darkmode-text">{{ .title }}</span>
+        <div class="h-px bg-border dark:bg-darkmode-border flex-1"></div>
+      </div>
+
+      <!-- Links within Section -->
+      <div class="flex flex-col gap-4">
+        {{ range .links }}
+          <a href="{{ .link }}" target="_blank" rel="noopener noreferrer" class="group flex items-center p-4 bg-theme-light dark:bg-darkmode-theme-light rounded-2xl hover:bg-white dark:hover:bg-darkmode-body border border-transparent hover:border-border dark:hover:border-darkmode-border shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 backdrop-blur-md">
+            <div class="w-12 h-12 flex items-center justify-center rounded-full bg-body dark:bg-darkmode-body text-primary text-xl group-hover:scale-110 transition-transform duration-300 shadow-inner">
+              <i class="{{ .icon }}"></i>
+            </div>
+            <span class="ml-4 font-semibold text-lg text-dark dark:text-darkmode-dark capitalize flex-1 text-left">{{ .name }}</span>
+            <i class="fas fa-chevron-right text-text dark:text-darkmode-text opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+          </a>
+        {{ end }}
+      </div>
     {{ end }}
-  </div>
-  
-  <!-- Footer subtle text -->
-  <div class="mt-12 opacity-50 text-sm pb-8">
-    <a href="/" class="hover:text-primary transition-colors">simo-hue.github.io</a>
   </div>
 </section>
 {{ end }}
