@@ -1030,3 +1030,9 @@ Errore durante il push dovuto alla divergenza tra branch locale e remoto (16 com
 
 - [2026-05-26 14:07]: Reorder Linktree Sections
   - *Details*: Split Personal and Professional into distinct sections and reordered them as Professional, Mountain Fauna Lover, and Personal per user request.
+
+- [2026-06-08 23:00]: Globe Map New University Locations
+  - *Details*: Added pins for future articles regarding TalTech in Tallinn, Estonia, KTH Royal Institute of Technology in Stockholm, Sweden, and ELTE University in Budapest. Also updated the Budapest trip pin to point to Gellért Thermal Bath.
+  - *Tech Notes*: 
+    - Created placeholder articles in `content/english/blog/experience/TalTech/index.md`, `content/english/blog/experience/KTH/index.md`, and `content/english/blog/experience/ELTE/index.md`.
+    - Modified `content/english/blog/experience/Budapest Trip/index.md` to point specifically to Gellért Thermal Bath coordinates (47.4837, 19.0550).

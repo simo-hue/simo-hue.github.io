@@ -4,10 +4,10 @@ description: "A trip with Collegio Don Mazza to explore the beautiful city of Bu
 date: 2024-10-10
 image: cover.webp
 locations:
-  - lat: 47.4979
-    lon: 19.0402
+  - lat: 47.4837
+    lon: 19.0550
     country: Hungary
-    title: Budapest
+    title: Gellért Thermal Bath
 categories: [Experiences]
 draft: false
 slug: budapest-collegio-don-mazza
