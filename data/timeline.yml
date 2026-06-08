@@ -1,11 +1,28 @@
 enable: true
 items:
-  - date: "2026-?"
-    title: "Coming Soon"
-    organization: "Stay Tuned"
-    description: "Something exciting is on the horizon. Check back soon to discover what's next in my journey."
-    icon: "fa-solid fa-question"
-    tags: ["Future"]
+
+  - date: "August 2027 - July 2028"
+    title: "Master's Student"
+    organization: "KTH Royal Institute Of Technology"
+    description: "Exit University of the EIT DIGITAL MASTER SCHOOL in the AUSIR Program."
+    icon: "fa-solid fa-graduation-cap"
+    tags: ["University"]
+    align: "right"
+
+  - date: "8-10 October 2026"
+    title: "Master Kick-Off in Tallin, Estonia"
+    organization: "EIT DIGITAL MASTER SCHOOL"
+    description: "The kick-off event organized by EIT DIGITAL MASTER SCHOOL at the TalTech ( Tallin UNI Of Technology ) for the new incomming students."
+    icon: "fa-solid fa-school-flag"
+    tags: ["University"]
+    align: "left"
+  
+  - date: "September 2026 - July 2027"
+    title: "Master's Student"
+    organization: "ELTE University"
+    description: "Entry University of the EIT DIGITAL MASTER SCHOOL in the AUSIR Program."
+    icon: "fa-solid fa-graduation-cap"
+    tags: ["University"]
     align: "right"
   
   - date: "11 April 2026"
