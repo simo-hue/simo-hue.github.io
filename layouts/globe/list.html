@@ -5,18 +5,19 @@
 <div id="globe-viewport" class="fixed left-0 right-0 bottom-0 overflow-hidden bg-black z-0" style="top: 80px;">
   <div id="globeViz" class="h-full w-full"></div>
 
-  <section class="globe-intro" aria-label="Globe summary">
-    <span class="globe-eyebrow">Personal Atlas</span>
-    <h1>{{ .Title }}</h1>
-    <p>{{ .Description }}</p>
-    <div class="globe-stats" aria-label="Mapped story statistics">
-      <div>
+  <section class="globe-spotlight" aria-label="Personal atlas statistics">
+    <div class="globe-stats">
+      <div class="globe-stat">
         <strong id="globe-country-count">0</strong>
-        <span>Countries explored</span>
+        <span>Countries</span>
       </div>
-      <div>
+      <div class="globe-stat">
+        <strong id="globe-continent-count">0</strong>
+        <span>Continents</span>
+      </div>
+      <div class="globe-stat">
         <strong id="globe-story-count">0</strong>
-        <span>Stories mapped</span>
+        <span>Stories</span>
       </div>
     </div>
   </section>
@@ -77,6 +78,7 @@
   const globeViewport = document.getElementById('globe-viewport');
   const loadingBadge = document.getElementById('globe-loading');
   const countryCount = document.getElementById('globe-country-count');
+  const continentCount = document.getElementById('globe-continent-count');
   const storyCount = document.getElementById('globe-story-count');
   const panel = document.getElementById('country-panel');
   const panelClose = document.getElementById('panel-close');
@@ -148,6 +150,18 @@
       }
     });
     return Array.from(articleMap.values());
+  };
+
+  const updateAtlasStats = features => {
+    const exploredFeatures = features.filter(countryHasStories);
+    const exploredContinents = new Set(
+      exploredFeatures
+        .map(feature => normalize(feature.properties.CONTINENT || feature.properties.REGION_UN))
+        .filter(Boolean)
+    );
+
+    countryCount.textContent = exploredFeatures.length;
+    continentCount.textContent = exploredContinents.size;
   };
 
   const findFeatureForPoint = (features, point) => features.find(feature => countryMatchesPoint(feature, point));
@@ -576,6 +590,7 @@
     .then(response => response.json())
     .then(countries => {
       const countryFeatures = countries.features.filter(country => country.properties.ISO_A2 !== 'AQ');
+      updateAtlasStats(countryFeatures);
 
       world = Globe()(globeContainer)
         .globeImageUrl(ASSETS.earth)
@@ -689,19 +704,21 @@
       linear-gradient(0deg, rgba(0, 0, 0, 0.54), transparent 34%);
   }
 
-  .globe-intro {
+  .globe-spotlight {
     position: absolute;
-    left: 24px;
-    top: 24px;
+    left: 50%;
+    bottom: 24px;
     z-index: 4;
-    width: min(380px, calc(100vw - 48px));
-    padding: 20px;
+    width: min(620px, calc(100vw - 36px));
     color: #f8fafc;
-    background: rgba(3, 7, 18, 0.44);
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    border-radius: 8px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.34);
-    backdrop-filter: blur(18px);
+    transform: translateX(-50%);
+    transition: opacity 280ms ease, transform 280ms ease;
+  }
+
+  .globe-panel-open .globe-spotlight {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, 18px);
   }
 
   .globe-eyebrow {
@@ -713,56 +730,64 @@
     text-transform: uppercase;
   }
 
-  .globe-intro h1 {
-    margin: 0;
-    color: #ffffff;
-    font-size: 2.5rem;
-    line-height: 1;
-  }
-
-  .globe-intro p {
-    margin: 10px 0 0;
-    color: rgba(226, 232, 240, 0.86);
-    font-size: 0.98rem;
-    line-height: 1.55;
-  }
-
   .globe-stats {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
-    margin-top: 18px;
-  }
-
-  .globe-stats div {
-    padding: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: center;
+    min-height: 64px;
+    padding: 8px 12px;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.07)),
+      rgba(15, 23, 42, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.24);
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.07);
+    box-shadow:
+      0 24px 70px rgba(0, 0, 0, 0.42),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(22px) saturate(1.32);
+    -webkit-backdrop-filter: blur(22px) saturate(1.32);
   }
 
-  .globe-stats strong,
-  .globe-stats span {
-    display: block;
+  .globe-stat {
+    position: relative;
+    display: flex;
+    height: 100%;
+    min-width: 0;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 12px;
+  }
+
+  .globe-stat + .globe-stat::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 13px;
+    bottom: 13px;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.16);
   }
 
   .globe-stats strong {
     color: #ffffff;
-    font-size: 1.55rem;
+    font-size: 1.28rem;
     line-height: 1;
   }
 
   .globe-stats span {
-    margin-top: 5px;
-    color: rgba(226, 232, 240, 0.72);
-    font-size: 0.78rem;
-    line-height: 1.25;
+    color: rgba(226, 232, 240, 0.76);
+    font-size: 0.76rem;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    white-space: nowrap;
   }
 
   .globe-loading {
     position: absolute;
     right: 24px;
-    bottom: 24px;
+    bottom: 104px;
     z-index: 4;
     display: inline-flex;
     align-items: center;
@@ -1301,40 +1326,35 @@
   }
 
   @media (max-width: 700px) {
-    .globe-intro {
-      left: 14px;
-      top: 14px;
+    .globe-spotlight {
+      bottom: 14px;
       width: calc(100vw - 28px);
-      padding: 16px;
-    }
-
-    .globe-intro h1 {
-      font-size: 2rem;
-    }
-
-    .globe-intro p {
-      font-size: 0.9rem;
     }
 
     .globe-stats {
-      grid-template-columns: 1fr;
-      gap: 8px;
+      min-height: 58px;
+      padding: 7px 8px;
     }
 
-    .globe-stats div {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 12px;
+    .globe-stat {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      padding: 7px 5px;
     }
 
     .globe-stats strong {
-      font-size: 1.25rem;
+      font-size: 1.12rem;
+    }
+
+    .globe-stats span {
+      font-size: 0.62rem;
     }
 
     .globe-loading {
       right: 14px;
-      bottom: 14px;
+      bottom: 86px;
       padding: 10px 12px;
     }
 

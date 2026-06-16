@@ -30,6 +30,18 @@ Aggiunto il nuovo certificato CINECA riguardante l'HPC e il Quantum Computing al
 
 ---
 
+- [2026-06-16 20:14:04 CEST]: Globe Spotlight Statistics Bar
+- *Details*: Replaced the old top-left Personal Atlas statistics card with a centered bottom macOS Spotlight-inspired glass stats bar. The overlay now contains only compact counters for countries, continents, and stories, stays centered on mobile, and fades out when the country story panel opens.
+- *Tech Notes*: Updated `layouts/globe/list.html`. Added the `globe-continent-count` statistic and compute it from the Natural Earth `CONTINENT` metadata in the same fetched country GeoJSON used by the globe polygons. Updated the loading badge offset to avoid overlapping the new bottom bar. Verified with `npm run build`, generated globe script syntax compilation, local `/globe/` HTTP `200`, and `git diff --check`.
+
+---
+
+- [2026-06-16 20:15:25 CEST]: Globe Spotlight Stats Vertical Alignment Fix
+- *Details*: Centered the Spotlight stats text vertically inside the bottom glass bar so the counters and labels sit in the visual middle of the capsule on desktop and mobile.
+- *Tech Notes*: Updated `layouts/globe/list.html`. Replaced baseline alignment with centered flex/grid alignment for `.globe-stats` and `.globe-stat`, tightened label line-height, and prevented label wrapping. Verified with `npm run build`, generated globe script syntax compilation, and `git diff --check`.
+
+---
+
 # Academic Profiles Links Update
 
 ## Data: 2026-04-16
