@@ -12,6 +12,24 @@ Aggiunto il nuovo certificato CINECA riguardante l'HPC e il Quantum Computing al
 
 ---
 
+- [2026-06-16 17:33:01 CEST]: Globe Page Immersive Redesign
+- *Details*: Rebuilt `/globe/` as a cinematic, realistic Earth experience while preserving the existing country-to-article workflow. Countries with mapped articles now render with transparent green fills, the page has a minimal atlas overlay with live story/country stats, and country clicks open a full story panel with a redesigned D3 country map, article imagery, category pills, stats, and polished empty states.
+- *Tech Notes*: Updated `layouts/globe/list.html` and `layouts/partials/globe-point.html`. Globe.gl and D3 are now loaded from pinned jsDelivr URLs. The globe uses realistic Earth, bump, starfield, atmosphere, and delayed non-interactive cloud texture assets from `three-globe`. Article point data now includes categories. Added accessible HTML hit targets over globe markers so direct marker clicks open articles while country clicks open the story panel. Verified with `npm run build` and browser checks for `/globe/`, no-article country panel, populated United Kingdom panel, article cards, D3 pins, direct globe marker navigation, D3 pin article navigation, and mobile panel layout.
+
+---
+
+- [2026-06-16 19:57:02 CEST]: Globe Country Panel Scroll and Marker Density Fix
+- *Details*: Fixed the `/globe/` country panel layout so the left D3 country outline keeps a stable render area and the right story rail scrolls vertically when a country has many articles. Reworked the main globe markers around country-level exploration: country clicks, country markers, and tiny close-range location dots now open the country story panel, while exact article navigation remains available only from the panel cards and panel map pins.
+- *Tech Notes*: Updated `layouts/globe/list.html`. The panel shell now uses fixed viewport-height grid constraints with `min-height: 0`, contained overflow, and an independently scrollable `.story-list`. Country map rendering is deferred/retried after panel open and observed for resize changes. Main globe article-level HTML markers were replaced by compact country markers with hover-only counts; article point dots are hidden until close zoom and no longer navigate directly to article URLs. Verified with `npm run build`, generated inline script syntax compilation, and local `/globe/` HTTP `200` check. In-app browser navigation to localhost was blocked by Browser Use policy during visual verification.
+
+---
+
+- [2026-06-16 20:06:47 CEST]: Globe Visited Country Ping Removal
+- *Details*: Removed the main globe's visited-country ping/marker treatment so explored countries are represented by the green country fill only. Preserved the pulsing pins inside each country's D3 story map, where exact article locations remain interactive.
+- *Tech Notes*: Updated `layouts/globe/list.html`. Removed the Globe.gl country marker HTML layer and ring layer from the main Earth view, while keeping polygon hover/click behavior and tiny close-zoom detail points that open the country panel. Verified with `npm run build`, generated globe script syntax compilation, and `git diff --check`.
+
+---
+
 # Academic Profiles Links Update
 
 ## Data: 2026-04-16

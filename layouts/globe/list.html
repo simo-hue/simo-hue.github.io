@@ -1,439 +1,1378 @@
 {{ define "main" }}
-<script src="//unpkg.com/globe.gl"></script>
-<script src="//unpkg.com/d3"></script>
+<script src="https://cdn.jsdelivr.net/npm/globe.gl@2.46.1"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0"></script>
 
-<div id="globe-viewport" class="fixed left-0 right-0 bottom-0 bg-black overflow-hidden z-0" style="top: 80px;">
-    <div id="globeViz" class="w-full h-full"></div>
-</div>
+<div id="globe-viewport" class="fixed left-0 right-0 bottom-0 overflow-hidden bg-black z-0" style="top: 80px;">
+  <div id="globeViz" class="h-full w-full"></div>
 
-<!-- Country Detail Modal -->
-<div id="country-modal"
-    class="fixed inset-0 z-[1000] flex items-center justify-center bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-500 p-2 md:p-4 lg:p-8">
-    <div
-        class="bg-white/95 dark:bg-neutral-900/98 w-full max-w-7xl h-full max-h-[92vh] md:max-h-[85vh] rounded-[2rem] flex flex-col lg:flex-row overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] border border-white/20 relative transform transition-all duration-500 translate-y-8 opacity-0">
-
-        <!-- Close Button -->
-        <button id="modal-close"
-            class="absolute top-4 right-4 lg:top-8 lg:right-8 z-30 p-3 bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 backdrop-blur-xl rounded-2xl text-gray-800 dark:text-white transition-all group border border-black/5 dark:border-white/5">
-            <svg xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6 transform group-hover:rotate-90 transition-transform duration-300" fill="none"
-                viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-        </button>
-
-        <!-- Left Column: Country Map (D3) -->
-        <div
-            class="w-full h-[45%] lg:h-full lg:w-2/3 bg-gray-50 dark:bg-neutral-800/50 flex flex-col relative overflow-hidden border-b lg:border-b-0 lg:border-r border-gray-100 dark:border-white/5">
-            <!-- Background Decoration -->
-            <div
-                class="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(59,130,246,0.1),transparent)] pointer-events-none">
-            </div>
-
-            <!-- Title Container (Now part of flex flow) -->
-            <div class="p-6 lg:p-12 pb-0 z-10 pr-16 md:pr-24">
-                <h2 id="modal-country-name"
-                    class="text-4xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-br from-gray-900 via-gray-700 to-gray-500 dark:from-white dark:via-gray-200 dark:to-gray-500 font-primary tracking-tighter leading-tight">
-                </h2>
-                <div class="h-1.5 w-24 bg-blue-500 rounded-full mt-2 lg:mt-4"></div>
-            </div>
-
-            <!-- Map Container -->
-            <div id="d3-map-container" class="flex-grow w-full min-h-0 flex items-center justify-center p-4 lg:p-12">
-            </div>
-        </div>
-
-        <!-- Right Column: Article List -->
-        <div class="w-full h-[55%] lg:h-full lg:w-1/3 bg-white dark:bg-neutral-900 flex flex-col">
-            <div class="p-6 lg:p-10 border-b border-gray-100 dark:border-white/5">
-                <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white font-primary tracking-tight">
-                    Travel Journal
-                </h3>
-                <p id="modal-article-count"
-                    class="text-sm font-bold text-blue-600 dark:text-blue-400 mt-2 uppercase tracking-widest flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-                    <span></span>
-                </p>
-            </div>
-            <div id="modal-article-list" class="flex-grow overflow-y-auto p-4 lg:p-8 space-y-6 custom-scrollbar">
-                <!-- Articles will be injected here -->
-            </div>
-        </div>
+  <section class="globe-intro" aria-label="Globe summary">
+    <span class="globe-eyebrow">Personal Atlas</span>
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Description }}</p>
+    <div class="globe-stats" aria-label="Mapped story statistics">
+      <div>
+        <strong id="globe-country-count">0</strong>
+        <span>Countries explored</span>
+      </div>
+      <div>
+        <strong id="globe-story-count">0</strong>
+        <span>Stories mapped</span>
+      </div>
     </div>
+  </section>
+
+  <div id="globe-loading" class="globe-loading" aria-live="polite">
+    <span></span>
+    <strong>Rendering Earth</strong>
+  </div>
 </div>
 
+<section id="country-panel" class="country-panel" aria-hidden="true">
+  <button id="panel-close" class="panel-close" type="button" aria-label="Close country story panel">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M6 6l12 12M18 6L6 18" />
+    </svg>
+  </button>
+
+  <div class="country-panel-shell">
+    <div class="country-map-stage">
+      <div class="country-map-header">
+        <span class="globe-eyebrow">Destination chapter</span>
+        <h2 id="panel-country-name"></h2>
+        <p id="panel-country-stats"></p>
+      </div>
+
+      <div id="d3-map-container" class="country-map-canvas">
+        <div id="map-tooltip" class="map-tooltip" role="status"></div>
+      </div>
+    </div>
+
+    <aside class="country-story-rail" aria-label="Country stories">
+      <div class="story-rail-header">
+        <span class="globe-eyebrow">Travel Journal</span>
+        <h3>Stories from here</h3>
+        <p id="panel-article-count"></p>
+      </div>
+      <div id="panel-article-list" class="story-list custom-scrollbar"></div>
+    </aside>
+  </div>
+</section>
 
 {{ $points := slice }}
 {{ range site.RegularPages }}
-{{ if and .Params.lat .Params.lon }}
-{{ $points = $points | append (partial "globe-point.html" (dict "context" . "lat" .Params.lat "lng" .Params.lon "title"
-.Title "country" .Params.country)) }}
-{{ end }}
-{{ if .Params.locations }}
-{{ $page := . }}
-{{ range .Params.locations }}
-{{ $points = $points | append (partial "globe-point.html" (dict "context" $page "lat" .lat "lng" .lon "title" (.title |
-default $page.Title) "country" .country)) }}
-{{ end }}
-{{ end }}
+  {{ if and .Params.lat .Params.lon }}
+    {{ $points = $points | append (partial "globe-point.html" (dict "context" . "lat" .Params.lat "lng" .Params.lon "title" .Title "country" .Params.country)) }}
+  {{ end }}
+  {{ if .Params.locations }}
+    {{ $page := . }}
+    {{ range .Params.locations }}
+      {{ $points = $points | append (partial "globe-point.html" (dict "context" $page "lat" .lat "lng" .lon "title" (.title | default $page.Title) "country" .country)) }}
+    {{ end }}
+  {{ end }}
 {{ end }}
 
 <script>
-    const pointsData = {{ $points | jsonify | safeJS }};
-    const globeContainer = document.getElementById('globeViz');
+  const pointsData = {{ $points | jsonify | safeJS }};
+  const globeContainer = document.getElementById('globeViz');
+  const globeViewport = document.getElementById('globe-viewport');
+  const loadingBadge = document.getElementById('globe-loading');
+  const countryCount = document.getElementById('globe-country-count');
+  const storyCount = document.getElementById('globe-story-count');
+  const panel = document.getElementById('country-panel');
+  const panelClose = document.getElementById('panel-close');
+  const panelCountryName = document.getElementById('panel-country-name');
+  const panelCountryStats = document.getElementById('panel-country-stats');
+  const d3MapContainer = document.getElementById('d3-map-container');
+  const mapTooltip = document.getElementById('map-tooltip');
+  const panelArticleList = document.getElementById('panel-article-list');
+  const panelArticleCount = document.getElementById('panel-article-count');
 
-    // Modal Elements
-    const modal = document.getElementById('country-modal');
-    const modalClose = document.getElementById('modal-close');
-    const modalCountryName = document.getElementById('modal-country-name');
-    const d3MapContainer = document.getElementById('d3-map-container');
-    const modalArticleList = document.getElementById('modal-article-list');
-    const modalArticleCount = document.getElementById('modal-article-count');
+  const ASSETS = {
+    countries: 'https://raw.githubusercontent.com/vasturiano/globe.gl/master/example/datasets/ne_110m_admin_0_countries.geojson',
+    earth: 'https://cdn.jsdelivr.net/npm/three-globe@2.45.2/example/img/earth-blue-marble.jpg',
+    bump: 'https://cdn.jsdelivr.net/npm/three-globe@2.45.2/example/img/earth-topology.png',
+    sky: 'https://cdn.jsdelivr.net/npm/three-globe@2.45.2/example/img/night-sky.png',
+    clouds: 'https://cdn.jsdelivr.net/npm/three-globe@2.45.2/example/clouds/clouds.png'
+  };
 
-    // Fetch Country Data
-    fetch('//raw.githubusercontent.com/vasturiano/globe.gl/master/example/datasets/ne_110m_admin_0_countries.geojson')
-        .then(res => res.json())
-        .then(countries => {
+  const normalize = value => String(value || '').trim().toLowerCase();
+  const uniquePermalinks = new Set(pointsData.map(point => point.permalink).filter(Boolean));
+  const exploredCountryKeys = new Set(pointsData.map(point => normalize(point.country)).filter(Boolean));
 
-            const world = Globe()
-                (globeContainer)
-                .globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
-                .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
-                .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png')
+  countryCount.textContent = exploredCountryKeys.size;
+  storyCount.textContent = uniquePermalinks.size;
 
-                .polygonsData(countries.features.filter(d => d.properties.ISO_A2 !== 'AQ'))
-                .polygonCapColor(() => 'rgba(0, 0, 0, 0)')
-                .polygonSideColor(() => 'rgba(0, 0, 0, 0)')
-                .polygonStrokeColor(() => 'rgba(255, 255, 255, 0.3)')
-                .polygonLabel(({ properties: d }) => `
-                    <div class="px-2 py-1 bg-black/80 text-white text-xs rounded">
-                        ${d.ADMIN}
-                    </div>
-                `)
-                .onPolygonHover(hoverD => {
-                    world
-                        .polygonCapColor(d => d === hoverD ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0)')
-                        .polygonSideColor(d => d === hoverD ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0)')
-                        .polygonStrokeColor(d => d === hoverD ? 'rgba(255, 255, 255, 0.8)' : 'rgba(255, 255, 255, 0.3)');
-                })
-                .onPolygonClick(d => {
-                    openModal(d);
-                })
+  let world = null;
+  let currentCountryFeature = null;
+  let hoverCountry = null;
+  let autoRotateTimer = null;
 
-                .pointsData(pointsData)
-                .pointAltitude(0.01)
-                .pointColor(() => '#ff0000')
-                .pointRadius(0.2)
-                .pointLabel('title') // Minimal tooltip
-                .pointOfView({ lat: 41.8719, lng: 12.5674, altitude: 0.5 }); // Default focus on Italy, zoomed in
+  const escapeHtml = value => String(value || '').replace(/[&<>"']/g, char => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#039;'
+  })[char]);
 
-            // Controls
-            world.controls().autoRotate = false;
-            world.controls().minDistance = 120;
-            world.controls().maxDistance = 600;
-            world.controls().zoomSpeed = 0.6;
+  const pluralize = (count, singular, plural) => `${count} ${count === 1 ? singular : plural}`;
 
-            // Dynamic Header Adjustment
-            const header = document.querySelector('.header');
-            const viewport = document.getElementById('globe-viewport');
+  const getCountryKeys = feature => {
+    const props = feature?.properties || {};
+    return new Set([
+      props.ADMIN,
+      props.NAME,
+      props.NAME_LONG,
+      props.BRK_NAME,
+      props.SOVEREIGNT
+    ].map(normalize).filter(Boolean));
+  };
 
-            let currentCountryFeature = null;
+  const countryHasStories = feature => {
+    const keys = getCountryKeys(feature);
+    return Array.from(keys).some(key => exploredCountryKeys.has(key));
+  };
 
-            const updateLayout = () => {
-                if (header && viewport) {
-                    const headerHeight = header.offsetHeight;
-                    viewport.style.top = headerHeight + 'px';
-                    world.width(viewport.clientWidth).height(viewport.clientHeight);
-                }
-            };
+  const countryMatchesPoint = (feature, point) => {
+    const keys = getCountryKeys(feature);
+    return keys.has(normalize(point.country));
+  };
 
-            // Handlers
-            globeContainer.addEventListener('mousedown', () => {
-                world.controls().autoRotate = false;
-            });
+  const getLocalPoints = feature => pointsData.filter(point => countryMatchesPoint(feature, point));
 
-            updateLayout();
-            window.addEventListener('resize', () => {
-                updateLayout();
-                if (modal.classList.contains('opacity-100') && currentCountryFeature) {
-                    renderD3Map(currentCountryFeature);
-                }
-            });
+  const getUniqueArticles = points => {
+    const articleMap = new Map();
+    points.forEach(article => {
+      if (article.permalink && !articleMap.has(article.permalink)) {
+        articleMap.set(article.permalink, article);
+      }
+    });
+    return Array.from(articleMap.values());
+  };
 
-            // Prevent Browser Zoom
-            globeContainer.addEventListener('wheel', (e) => {
-                if (e.ctrlKey) e.preventDefault();
-            }, { passive: false });
+  const findFeatureForPoint = (features, point) => features.find(feature => countryMatchesPoint(feature, point));
 
-            globeContainer.addEventListener('gesturestart', (e) => e.preventDefault());
-            globeContainer.addEventListener('gesturechange', (e) => e.preventDefault());
-            globeContainer.addEventListener('gestureend', (e) => e.preventDefault());
+  const getCameraDistance = () => {
+    if (!world) return Number.POSITIVE_INFINITY;
 
+    const camera = typeof world.camera === 'function'
+      ? world.camera()
+      : world.controls?.()?.object;
 
-            // --- MODAL LOGIC ---
+    return camera?.position?.length?.() || Number.POSITIVE_INFINITY;
+  };
 
-            function openModal(countryFeature) {
-                currentCountryFeature = countryFeature;
-                const countryName = countryFeature.properties.ADMIN;
-                const countryNameAlt = countryFeature.properties.NAME;
-                modalCountryName.textContent = countryName;
+  const detailMarkersShouldShow = () => getCameraDistance() <= 190;
+  let detailMarkerFrame = null;
 
-                // 1. Render Map
-                renderD3Map(countryFeature);
+  const updateDetailMarkerVisibility = () => {
+    if (!world) return;
 
-                // 2. Filter & Render Articles
-                const countryArticles = pointsData.filter(p => {
-                    const country = (p.country || "").trim().toLowerCase();
-                    const admin = (countryName || "").trim().toLowerCase();
-                    const name = (countryNameAlt || "").trim().toLowerCase();
-                    return country === admin || country === name;
-                });
+    const isClose = detailMarkersShouldShow();
+    world
+      .pointRadius(() => isClose ? 0.028 : 0)
+      .pointColor(() => isClose ? 'rgba(187, 247, 208, 0.58)' : 'rgba(187, 247, 208, 0)');
+  };
 
-                // Group by permalink to ensure unique articles
-                const uniqueArticlesMap = new Map();
-                countryArticles.forEach(article => {
-                    if (!uniqueArticlesMap.has(article.permalink)) {
-                        uniqueArticlesMap.set(article.permalink, article);
-                    }
-                });
-                const uniqueArticles = Array.from(uniqueArticlesMap.values());
+  const scheduleDetailMarkerVisibility = () => {
+    if (detailMarkerFrame) return;
 
-                renderArticleList(uniqueArticles);
+    detailMarkerFrame = requestAnimationFrame(() => {
+      detailMarkerFrame = null;
+      updateDetailMarkerVisibility();
+    });
+  };
 
-                // Show Modal
-                modal.classList.remove('opacity-0', 'pointer-events-none');
-                modal.classList.add('opacity-100', 'pointer-events-auto');
+  const updateLayout = () => {
+    const header = document.querySelector('.header');
+    if (!globeViewport || !world) return;
 
-                // Animation for content
-                const modalContent = modal.querySelector('div');
-                modalContent.classList.remove('translate-y-8', 'opacity-0');
-                modalContent.classList.add('translate-y-0', 'opacity-100');
-            }
+    const headerHeight = header ? header.offsetHeight : 0;
+    globeViewport.style.top = `${headerHeight}px`;
+    world.width(globeViewport.clientWidth).height(globeViewport.clientHeight);
 
-            function closeModal() {
-                const modalContent = modal.querySelector('div');
-                modalContent.classList.remove('translate-y-0', 'opacity-100');
-                modalContent.classList.add('translate-y-8', 'opacity-0');
+    if (panel.classList.contains('is-open') && currentCountryFeature) {
+      renderCountryMap(currentCountryFeature);
+    }
+  };
 
-                setTimeout(() => {
-                    modal.classList.add('opacity-0', 'pointer-events-none');
-                    modal.classList.remove('opacity-100', 'pointer-events-auto');
-                    d3MapContainer.innerHTML = '';
-                    currentCountryFeature = null;
-                }, 500); // Wait for transition
-            }
+  const scheduleAutoRotate = () => {
+    if (!world) return;
+    clearTimeout(autoRotateTimer);
+    autoRotateTimer = setTimeout(() => {
+      if (!panel.classList.contains('is-open')) {
+        world.controls().autoRotate = true;
+      }
+    }, 6000);
+  };
 
-            modalClose.addEventListener('click', closeModal);
+  const pauseAutoRotate = () => {
+    if (!world) return;
+    world.controls().autoRotate = false;
+    scheduleAutoRotate();
+  };
 
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) closeModal();
-            });
+  const setPolygonColors = () => {
+    if (!world) return;
 
+    world
+      .polygonCapColor(feature => {
+        const hasStories = countryHasStories(feature);
+        const isHover = feature === hoverCountry;
 
-            // --- D3 MAP LOGIC ---
+        if (hasStories && isHover) return 'rgba(34, 197, 94, 0.55)';
+        if (hasStories) return 'rgba(34, 197, 94, 0.34)';
+        if (isHover) return 'rgba(255, 255, 255, 0.12)';
+        return 'rgba(255, 255, 255, 0.015)';
+      })
+      .polygonSideColor(feature => countryHasStories(feature) ? 'rgba(22, 163, 74, 0.18)' : 'rgba(255, 255, 255, 0.02)')
+      .polygonStrokeColor(feature => {
+        const hasStories = countryHasStories(feature);
+        const isHover = feature === hoverCountry;
 
-            function renderD3Map(feature) {
-                d3MapContainer.innerHTML = '';
+        if (hasStories && isHover) return 'rgba(187, 247, 208, 0.95)';
+        if (hasStories) return 'rgba(74, 222, 128, 0.72)';
+        if (isHover) return 'rgba(255, 255, 255, 0.62)';
+        return 'rgba(255, 255, 255, 0.22)';
+      });
+  };
 
-                const width = d3MapContainer.clientWidth;
-                const height = d3MapContainer.clientHeight;
+  const addAtmosphereDetails = globe => {
+    if (!window.THREE) return;
 
-                if (width === 0 || height === 0) return;
+    const scene = globe.scene();
+    const ambientLight = new THREE.AmbientLight(0xd7e4ff, 0.55);
+    const sunLight = new THREE.DirectionalLight(0xffffff, 1.55);
+    sunLight.position.set(-180, 120, 220);
 
-                const svg = d3.select(d3MapContainer)
-                    .append("svg")
-                    .attr("width", "100%")
-                    .attr("height", "100%")
-                    .attr("viewBox", `0 0 ${width} ${height}`)
-                    .style("overflow", "visible");
+    scene.add(ambientLight);
+    scene.add(sunLight);
 
-                // Projection - Robust scaling using fitExtent
-                const padding = Math.min(width, height) * 0.15; // 15% responsive padding
-                const projection = d3.geoMercator()
-                    .fitExtent([[padding, padding], [width - padding, height - padding]], feature);
+    const loadClouds = () => {
+      const radius = typeof globe.getGlobeRadius === 'function' ? globe.getGlobeRadius() : 100;
+      const textureLoader = new THREE.TextureLoader();
+      textureLoader.setCrossOrigin('anonymous');
+      textureLoader.load(ASSETS.clouds, texture => {
+        const clouds = new THREE.Mesh(
+          new THREE.SphereGeometry(radius * 1.006, 80, 80),
+          new THREE.MeshPhongMaterial({
+            map: texture,
+            transparent: true,
+            opacity: 0.28,
+            depthWrite: false
+          })
+        );
+        clouds.raycast = () => {};
+        scene.add(clouds);
 
-                const pathGenerator = d3.geoPath().projection(projection);
+        const rotateClouds = () => {
+          clouds.rotation.y += 0.00016;
+          requestAnimationFrame(rotateClouds);
+        };
+        rotateClouds();
+      });
+    };
 
-                // Drop Shadow Definition
-                const defs = svg.append("defs");
-                const filter = defs.append("filter")
-                    .attr("id", "drop-shadow")
-                    .attr("height", "130%");
+    if ('requestIdleCallback' in window) {
+      window.requestIdleCallback(loadClouds, { timeout: 1800 });
+    } else {
+      window.setTimeout(loadClouds, 1200);
+    }
+  };
 
-                filter.append("feGaussianBlur")
-                    .attr("in", "SourceAlpha")
-                    .attr("stdDeviation", 5)
-                    .attr("result", "blur");
+  const showPanel = feature => {
+    currentCountryFeature = feature;
+    const localPoints = getLocalPoints(feature);
+    const uniqueArticles = getUniqueArticles(localPoints);
+    const countryName = feature.properties.ADMIN || feature.properties.NAME || 'Unknown Country';
 
-                filter.append("feOffset")
-                    .attr("in", "blur")
-                    .attr("dx", 3)
-                    .attr("dy", 3)
-                    .attr("result", "offsetBlur");
+    pauseAutoRotate();
+    panelCountryName.textContent = countryName;
+    panelCountryStats.textContent = `${pluralize(uniqueArticles.length, 'story', 'stories')} · ${pluralize(localPoints.length, 'mapped location', 'mapped locations')}`;
+    panelArticleCount.textContent = `${pluralize(uniqueArticles.length, 'article', 'articles')} available`;
 
-                const feMerge = filter.append("feMerge");
-                feMerge.append("feMergeNode").attr("in", "offsetBlur");
-                feMerge.append("feMergeNode").attr("in", "SourceGraphic");
+    renderArticleList(uniqueArticles);
 
-                // Draw Country (with subtle gradient styling via CSS/Fill)
-                svg.append("path")
-                    .datum(feature)
-                    .attr("d", pathGenerator)
-                    .attr("fill", "#3b82f6") // Blue-500 base
-                    .attr("fill-opacity", 0.1)
-                    .attr("stroke", "#3b82f6")
-                    .attr("stroke-width", 2)
-                    .style("filter", "url(#drop-shadow)")
-                    .attr("class", "transition-all duration-500 ease-in-out");
+    panel.classList.add('is-open');
+    panel.setAttribute('aria-hidden', 'false');
+    document.documentElement.classList.add('globe-panel-open');
+    queueCountryMapRender(feature);
+  };
 
-                // Draw Points
-                const localPoints = pointsData.filter(p => {
-                    const country = (p.country || "").trim().toLowerCase();
-                    const admin = (feature.properties.ADMIN || "").trim().toLowerCase();
-                    const name = (feature.properties.NAME || "").trim().toLowerCase();
-                    return country === admin || country === name;
-                });
+  const closePanel = () => {
+    panel.classList.remove('is-open');
+    panel.setAttribute('aria-hidden', 'true');
+    document.documentElement.classList.remove('globe-panel-open');
+    d3MapContainer.querySelector('svg')?.remove();
+    mapTooltip.classList.remove('is-visible');
+    currentCountryFeature = null;
+    scheduleAutoRotate();
+  };
 
-                const points = svg.selectAll("g.point")
-                    .data(localPoints)
-                    .enter()
-                    .append("g")
-                    .attr("class", "point cursor-pointer group")
-                    .attr("data-permalink", d => d.permalink)
-                    .attr("transform", d => `translate(${projection([d.lng, d.lat])})`)
-                    .on("click", (event, d) => window.open(d.permalink, '_blank'));
+  const queueCountryMapRender = feature => {
+    requestAnimationFrame(() => {
+      renderCountryMap(feature);
 
-                // Pulse effect
-                points.append("circle")
-                    .attr("class", "pulse-circle")
-                    .attr("r", 10)
-                    .attr("fill", "#ef4444")
-                    .attr("opacity", 0.2)
-                    .append("animate")
-                    .attr("attributeName", "r")
-                    .attr("from", "5")
-                    .attr("to", "20")
-                    .attr("dur", "1.5s")
-                    .attr("repeatCount", "indefinite");
+      requestAnimationFrame(() => {
+        if (currentCountryFeature === feature) {
+          renderCountryMap(feature);
+        }
+      });
+    });
+  };
 
-                points.append("circle")
-                    .attr("class", "pulse-circle")
-                    .attr("r", 10)
-                    .attr("fill", "#ef4444")
-                    .attr("opacity", 0.1)
-                    .append("animate")
-                    .attr("attributeName", "r")
-                    .attr("from", "5")
-                    .attr("to", "20")
-                    .attr("dur", "1.5s")
-                    .attr("begin", "0.5s")
-                    .attr("repeatCount", "indefinite");
+  if ('ResizeObserver' in window) {
+    const countryMapResizeObserver = new ResizeObserver(() => {
+      if (panel.classList.contains('is-open') && currentCountryFeature) {
+        queueCountryMapRender(currentCountryFeature);
+      }
+    });
+    countryMapResizeObserver.observe(d3MapContainer);
+  }
 
-                // Main Dot
-                points.append("circle")
-                    .attr("class", "main-dot")
-                    .attr("r", 6)
-                    .attr("fill", "#ef4444")
-                    .attr("stroke", "#fff")
-                    .attr("stroke-width", 2)
-                    .style("transition", "fill 0.3s ease, r 0.3s ease");
+  const renderCountryMap = feature => {
+    d3MapContainer.querySelector('svg')?.remove();
+    mapTooltip.classList.remove('is-visible');
 
-                // Tooltip Label
-                points.append("text")
-                    .text(d => d.title)
-                    .attr("y", -15)
-                    .attr("text-anchor", "middle")
-                    .attr("fill", "#1f2937") // Gray-800
-                    .attr("class", "text-[10px] font-bold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300 dark:fill-white")
-                    .style("pointer-events", "none");
-            }
+    const width = d3MapContainer.clientWidth;
+    const height = d3MapContainer.clientHeight;
+    if (!width || !height) {
+      if (currentCountryFeature === feature) {
+        requestAnimationFrame(() => renderCountryMap(feature));
+      }
+      return;
+    }
 
-            function renderArticleList(articles) {
-                modalArticleList.innerHTML = '';
-                const countSpan = modalArticleCount.querySelector('span:last-child');
-                countSpan.textContent = `${articles.length} Article${articles.length !== 1 ? 's' : ''}`;
+    const localPoints = getLocalPoints(feature);
+    const hasStories = localPoints.length > 0;
+    const svg = d3.select(d3MapContainer)
+      .append('svg')
+      .attr('width', '100%')
+      .attr('height', '100%')
+      .attr('viewBox', `0 0 ${width} ${height}`)
+      .attr('role', 'img')
+      .attr('aria-label', `${feature.properties.ADMIN || feature.properties.NAME} map`);
 
-                if (articles.length === 0) {
-                    modalArticleList.innerHTML = `
-                        <div class="flex flex-col items-center justify-center h-40 text-center opacity-50">
-                            <svg class="w-12 h-12 text-gray-400 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path></svg>
-                            <p class="text-sm">No stories yet.</p>
-                        </div>
-                    `;
-                    return;
-                }
+    const defs = svg.append('defs');
+    const gradient = defs.append('linearGradient')
+      .attr('id', 'country-fill')
+      .attr('x1', '0%')
+      .attr('x2', '100%')
+      .attr('y1', '0%')
+      .attr('y2', '100%');
 
-                articles.forEach(article => {
-                    const card = document.createElement('div');
-                    card.className = "group flex flex-col gap-3 p-4 rounded-xl bg-gray-50 dark:bg-white/5 hover:bg-white dark:hover:bg-white/10 transition-all duration-300 cursor-pointer border border-transparent hover:border-gray-200 dark:hover:border-white/10 shadow-sm hover:shadow-md";
-                    card.dataset.permalink = article.permalink;
-                    card.onclick = () => window.location.href = article.permalink;
+    gradient.append('stop')
+      .attr('offset', '0%')
+      .attr('stop-color', hasStories ? '#bbf7d0' : '#e5e7eb')
+      .attr('stop-opacity', hasStories ? 0.44 : 0.22);
 
-                    card.addEventListener('mouseenter', () => {
-                        d3MapContainer.querySelectorAll(`g[data-permalink="${CSS.escape(article.permalink)}"]`).forEach(pointGroup => {
-                            pointGroup.querySelectorAll('.pulse-circle').forEach(c => c.setAttribute('fill', '#22c55e'));
-                            const dot = pointGroup.querySelector('.main-dot');
-                            if (dot) dot.setAttribute('fill', '#22c55e');
-                        });
-                    });
+    gradient.append('stop')
+      .attr('offset', '100%')
+      .attr('stop-color', hasStories ? '#16a34a' : '#64748b')
+      .attr('stop-opacity', hasStories ? 0.26 : 0.18);
 
-                    card.addEventListener('mouseleave', () => {
-                        d3MapContainer.querySelectorAll(`g[data-permalink="${CSS.escape(article.permalink)}"]`).forEach(pointGroup => {
-                            pointGroup.querySelectorAll('.pulse-circle').forEach(c => c.setAttribute('fill', '#ef4444'));
-                            const dot = pointGroup.querySelector('.main-dot');
-                            if (dot) dot.setAttribute('fill', '#ef4444');
-                        });
-                    });
+    const glow = defs.append('filter')
+      .attr('id', 'country-glow')
+      .attr('x', '-30%')
+      .attr('y', '-30%')
+      .attr('width', '160%')
+      .attr('height', '160%');
 
-                    const imgHtml = article.image ?
-                        `<div class="w-full h-32 rounded-lg overflow-hidden relative">
-                            <img src="${article.image}" alt="${article.title}" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-                        </div>` : '';
+    glow.append('feGaussianBlur')
+      .attr('stdDeviation', hasStories ? 8 : 5)
+      .attr('result', 'coloredBlur');
 
-                    card.innerHTML = `
-                        ${imgHtml}
-                        <div class="flex flex-col">
-                            <span class="text-xs font-semibold text-blue-600 dark:text-blue-400 mb-1 uppercase tracking-wide">${article.date}</span>
-                            <h4 class="text-lg font-bold text-gray-900 dark:text-white leading-tight mb-2 group-hover:text-blue-500 transition-colors">${article.postTitle}</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">${article.summary}</p>
-                        </div>
-                    `;
-                    modalArticleList.appendChild(card);
-                });
-            }
+    const merge = glow.append('feMerge');
+    merge.append('feMergeNode').attr('in', 'coloredBlur');
+    merge.append('feMergeNode').attr('in', 'SourceGraphic');
 
-        });
+    const pinGlow = defs.append('filter')
+      .attr('id', 'pin-glow')
+      .attr('x', '-80%')
+      .attr('y', '-80%')
+      .attr('width', '260%')
+      .attr('height', '260%');
 
+    pinGlow.append('feGaussianBlur')
+      .attr('stdDeviation', 4)
+      .attr('result', 'blur');
+    const pinMerge = pinGlow.append('feMerge');
+    pinMerge.append('feMergeNode').attr('in', 'blur');
+    pinMerge.append('feMergeNode').attr('in', 'SourceGraphic');
+
+    const padding = Math.max(28, Math.min(width, height) * 0.13);
+    const projection = d3.geoMercator()
+      .fitExtent([[padding, padding], [width - padding, height - padding]], feature);
+    const pathGenerator = d3.geoPath().projection(projection);
+
+    const grid = svg.append('g')
+      .attr('class', 'map-grid')
+      .attr('opacity', 0.22);
+
+    for (let x = 0; x <= width; x += 48) {
+      grid.append('line')
+        .attr('x1', x)
+        .attr('x2', x)
+        .attr('y1', 0)
+        .attr('y2', height);
+    }
+
+    for (let y = 0; y <= height; y += 48) {
+      grid.append('line')
+        .attr('x1', 0)
+        .attr('x2', width)
+        .attr('y1', y)
+        .attr('y2', y);
+    }
+
+    svg.append('path')
+      .datum(feature)
+      .attr('d', pathGenerator)
+      .attr('class', 'country-shape')
+      .attr('fill', 'url(#country-fill)')
+      .attr('stroke', hasStories ? '#86efac' : '#cbd5e1')
+      .attr('stroke-width', hasStories ? 2.2 : 1.4)
+      .attr('filter', 'url(#country-glow)');
+
+    const projectedPoints = localPoints
+      .map(point => ({ ...point, xy: projection([point.lng, point.lat]) }))
+      .filter(point => Array.isArray(point.xy) && point.xy.every(Number.isFinite));
+
+    const points = svg.selectAll('g.map-point')
+      .data(projectedPoints)
+      .enter()
+      .append('g')
+      .attr('class', 'map-point')
+      .attr('data-permalink', point => point.permalink)
+      .attr('transform', point => `translate(${point.xy[0]}, ${point.xy[1]})`)
+      .attr('tabindex', 0)
+      .attr('role', 'link')
+      .attr('aria-label', point => point.postTitle)
+      .on('click', (_, point) => {
+        window.location.href = point.permalink;
+      })
+      .on('keydown', (event, point) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          window.location.href = point.permalink;
+        }
+      })
+      .on('mouseenter focus', (event, point) => {
+        showMapTooltip(event, point);
+        highlightMapPins(point.permalink, true);
+      })
+      .on('mousemove', showMapTooltip)
+      .on('mouseleave blur', (_, point) => {
+        mapTooltip.classList.remove('is-visible');
+        highlightMapPins(point.permalink, false);
+      });
+
+    points.append('circle')
+      .attr('class', 'map-pin-pulse')
+      .attr('r', 18);
+
+    points.append('circle')
+      .attr('class', 'map-pin-halo')
+      .attr('r', 11)
+      .attr('filter', 'url(#pin-glow)');
+
+    points.append('circle')
+      .attr('class', 'map-pin-core')
+      .attr('r', 4.8);
+  };
+
+  const showMapTooltip = (event, point) => {
+    const tooltipPoint = point || d3.select(event.currentTarget).datum();
+    if (!tooltipPoint) return;
+
+    const rect = d3MapContainer.getBoundingClientRect();
+    mapTooltip.textContent = tooltipPoint.title || tooltipPoint.postTitle || '';
+    mapTooltip.style.left = `${event.clientX - rect.left}px`;
+    mapTooltip.style.top = `${event.clientY - rect.top}px`;
+    mapTooltip.classList.add('is-visible');
+  };
+
+  const highlightMapPins = (permalink, active) => {
+    d3MapContainer
+      .querySelectorAll(`g[data-permalink="${CSS.escape(permalink)}"]`)
+      .forEach(pointGroup => pointGroup.classList.toggle('is-active', active));
+  };
+
+  const formatCategories = categories => {
+    if (!Array.isArray(categories)) return '';
+
+    return categories.slice(0, 3).map(category => `
+      <span class="article-category">${escapeHtml(category)}</span>
+    `).join('');
+  };
+
+  const articleImage = article => {
+    if (!article.image) {
+      const initial = escapeHtml((article.postTitle || article.title || '?').charAt(0).toUpperCase());
+      return `<div class="article-image article-image-fallback" aria-hidden="true"><span>${initial}</span></div>`;
+    }
+
+    return `
+      <div class="article-image">
+        <img src="${escapeHtml(article.image)}" alt="${escapeHtml(article.postTitle)}" loading="lazy">
+      </div>
+    `;
+  };
+
+  const renderArticleList = articles => {
+    panelArticleList.innerHTML = '';
+    panelArticleList.scrollTop = 0;
+
+    if (!articles.length) {
+      panelArticleList.innerHTML = `
+        <div class="empty-state">
+          <span></span>
+          <h4>No stories here yet.</h4>
+          <p>This country is still an open chapter.</p>
+        </div>
+      `;
+      return;
+    }
+
+    articles.forEach(article => {
+      const card = document.createElement('article');
+      card.className = 'story-card';
+      card.dataset.permalink = article.permalink;
+      card.tabIndex = 0;
+      card.setAttribute('role', 'link');
+      card.setAttribute('aria-label', article.postTitle);
+
+      card.innerHTML = `
+        ${articleImage(article)}
+        <div class="story-card-body">
+          <div class="article-categories">${formatCategories(article.categories)}</div>
+          <time>${escapeHtml(article.date)}</time>
+          <h4>${escapeHtml(article.postTitle)}</h4>
+          <p>${escapeHtml(article.summary)}</p>
+        </div>
+      `;
+
+      card.addEventListener('click', () => {
+        window.location.href = article.permalink;
+      });
+
+      card.addEventListener('keydown', event => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          window.location.href = article.permalink;
+        }
+      });
+
+      card.addEventListener('mouseenter', () => highlightMapPins(article.permalink, true));
+      card.addEventListener('focus', () => highlightMapPins(article.permalink, true));
+      card.addEventListener('mouseleave', () => highlightMapPins(article.permalink, false));
+      card.addEventListener('blur', () => highlightMapPins(article.permalink, false));
+
+      panelArticleList.appendChild(card);
+    });
+  };
+
+  fetch(ASSETS.countries)
+    .then(response => response.json())
+    .then(countries => {
+      const countryFeatures = countries.features.filter(country => country.properties.ISO_A2 !== 'AQ');
+
+      world = Globe()(globeContainer)
+        .globeImageUrl(ASSETS.earth)
+        .bumpImageUrl(ASSETS.bump)
+        .backgroundImageUrl(ASSETS.sky)
+        .showAtmosphere(true)
+        .atmosphereColor('#dbeafe')
+        .atmosphereAltitude(0.16)
+        .polygonsData(countryFeatures)
+        .polygonAltitude(feature => countryHasStories(feature) ? 0.012 : 0.006)
+        .polygonLabel(feature => {
+          const localPoints = getLocalPoints(feature);
+          const uniqueArticles = getUniqueArticles(localPoints);
+
+          return `
+            <div class="globe-tooltip">
+              <strong>${escapeHtml(feature.properties.ADMIN)}</strong>
+              ${localPoints.length ? `<span>${escapeHtml(pluralize(uniqueArticles.length, 'story', 'stories'))}</span>` : ''}
+            </div>
+          `;
+        })
+        .onPolygonHover(feature => {
+          hoverCountry = feature;
+          setPolygonColors();
+        })
+        .onPolygonClick(feature => {
+          pauseAutoRotate();
+          const centroid = d3.geoCentroid(feature);
+          if (Array.isArray(centroid) && centroid.every(Number.isFinite)) {
+            world.pointOfView({ lat: centroid[1], lng: centroid[0], altitude: 1.25 }, 650);
+          }
+          showPanel(feature);
+        })
+        .pointsData(pointsData)
+        .pointsMerge(false)
+        .pointAltitude(0.007)
+        .pointRadius(0)
+        .pointResolution(8)
+        .pointColor(() => 'rgba(187, 247, 208, 0)')
+        .pointLabel(point => `
+          <div class="globe-tooltip globe-tooltip-story">
+            <strong>${escapeHtml(point.title || point.postTitle)}</strong>
+            <span>${escapeHtml(point.country)}</span>
+          </div>
+        `)
+        .onPointClick(point => {
+          const feature = findFeatureForPoint(countryFeatures, point);
+          if (feature) showPanel(feature);
+        })
+        .pointOfView({ lat: 27, lng: 12, altitude: 1.65 }, 0);
+
+      setPolygonColors();
+
+      const controls = world.controls();
+      controls.autoRotate = true;
+      controls.autoRotateSpeed = 0.22;
+      controls.enableDamping = true;
+      controls.dampingFactor = 0.05;
+      controls.minDistance = 145;
+      controls.maxDistance = 520;
+      controls.zoomSpeed = 0.55;
+      if (typeof controls.addEventListener === 'function') {
+        controls.addEventListener('change', scheduleDetailMarkerVisibility);
+      }
+
+      updateLayout();
+      scheduleDetailMarkerVisibility();
+      addAtmosphereDetails(world);
+      loadingBadge.classList.add('is-hidden');
+
+      globeContainer.addEventListener('pointerdown', pauseAutoRotate);
+      globeContainer.addEventListener('wheel', event => {
+        if (event.ctrlKey) event.preventDefault();
+        pauseAutoRotate();
+      }, { passive: false });
+      globeContainer.addEventListener('touchstart', pauseAutoRotate, { passive: true });
+      globeContainer.addEventListener('gesturestart', event => event.preventDefault());
+      globeContainer.addEventListener('gesturechange', event => event.preventDefault());
+      globeContainer.addEventListener('gestureend', event => event.preventDefault());
+    })
+    .catch(() => {
+      loadingBadge.classList.add('is-error');
+      loadingBadge.querySelector('strong').textContent = 'Earth could not load';
+    });
+
+  panelClose.addEventListener('click', closePanel);
+  panel.addEventListener('click', event => {
+    if (event.target === panel) closePanel();
+  });
+
+  window.addEventListener('resize', updateLayout);
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && panel.classList.contains('is-open')) {
+      closePanel();
+    }
+  });
 </script>
 
 <style>
-    .custom-scrollbar::-webkit-scrollbar {
-        width: 6px;
+  .globe-panel-open {
+    overflow: hidden;
+  }
+
+  #globe-viewport::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(90deg, rgba(0, 0, 0, 0.72), transparent 28%, transparent 72%, rgba(0, 0, 0, 0.34)),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.54), transparent 34%);
+  }
+
+  .globe-intro {
+    position: absolute;
+    left: 24px;
+    top: 24px;
+    z-index: 4;
+    width: min(380px, calc(100vw - 48px));
+    padding: 20px;
+    color: #f8fafc;
+    background: rgba(3, 7, 18, 0.44);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.34);
+    backdrop-filter: blur(18px);
+  }
+
+  .globe-eyebrow {
+    display: block;
+    margin-bottom: 8px;
+    color: #86efac;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .globe-intro h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+
+  .globe-intro p {
+    margin: 10px 0 0;
+    color: rgba(226, 232, 240, 0.86);
+    font-size: 0.98rem;
+    line-height: 1.55;
+  }
+
+  .globe-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 18px;
+  }
+
+  .globe-stats div {
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.07);
+  }
+
+  .globe-stats strong,
+  .globe-stats span {
+    display: block;
+  }
+
+  .globe-stats strong {
+    color: #ffffff;
+    font-size: 1.55rem;
+    line-height: 1;
+  }
+
+  .globe-stats span {
+    margin-top: 5px;
+    color: rgba(226, 232, 240, 0.72);
+    font-size: 0.78rem;
+    line-height: 1.25;
+  }
+
+  .globe-loading {
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+    z-index: 4;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    color: #f8fafc;
+    background: rgba(3, 7, 18, 0.64);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 8px;
+    backdrop-filter: blur(14px);
+    transition: opacity 260ms ease, transform 260ms ease;
+  }
+
+  .globe-loading span {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: #22c55e;
+    box-shadow: 0 0 18px rgba(34, 197, 94, 0.86);
+    animation: globe-pulse 1.5s ease-in-out infinite;
+  }
+
+  .globe-loading strong {
+    font-size: 0.86rem;
+  }
+
+  .globe-loading.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(8px);
+  }
+
+  .globe-loading.is-error span {
+    background: #ef4444;
+    box-shadow: 0 0 18px rgba(239, 68, 68, 0.8);
+  }
+
+  .globe-tooltip {
+    max-width: 220px;
+    padding: 10px 12px;
+    color: #f8fafc;
+    background: rgba(3, 7, 18, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 8px;
+    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.36);
+    backdrop-filter: blur(14px);
+  }
+
+  .globe-tooltip strong,
+  .globe-tooltip span {
+    display: block;
+  }
+
+  .globe-tooltip strong {
+    font-size: 0.86rem;
+    line-height: 1.25;
+  }
+
+  .globe-tooltip span {
+    margin-top: 4px;
+    color: #86efac;
+    font-size: 0.72rem;
+  }
+
+  .country-panel {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.74);
+    opacity: 0;
+    pointer-events: none;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    overscroll-behavior: contain;
+    transition: opacity 360ms ease;
+  }
+
+  .country-panel.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .country-panel-shell {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 430px);
+    grid-template-rows: minmax(0, 1fr);
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    max-height: 100dvh;
+    overflow: hidden;
+    color: #f8fafc;
+    background:
+      linear-gradient(90deg, rgba(3, 7, 18, 0.96), rgba(15, 23, 42, 0.88)),
+      #030712;
+    transform: translateY(18px);
+    transition: transform 420ms ease;
+  }
+
+  .country-panel.is-open .country-panel-shell {
+    transform: translateY(0);
+  }
+
+  .panel-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    z-index: 5;
+    display: grid;
+    width: 44px;
+    height: 44px;
+    place-items: center;
+    color: #f8fafc;
+    background: rgba(15, 23, 42, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 8px;
+    cursor: pointer;
+    backdrop-filter: blur(16px);
+    transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
+  }
+
+  .panel-close:hover,
+  .panel-close:focus-visible {
+    border-color: rgba(134, 239, 172, 0.7);
+    background: rgba(20, 83, 45, 0.72);
+    transform: translateY(-1px);
+    outline: none;
+  }
+
+  .panel-close svg {
+    width: 21px;
+    height: 21px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+  }
+
+  .country-map-stage {
+    position: relative;
+    display: flex;
+    min-width: 0;
+    min-height: 0;
+    flex-direction: column;
+    padding: 44px 48px 36px;
+    overflow: hidden;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .country-map-stage::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent 24%),
+      linear-gradient(0deg, rgba(34, 197, 94, 0.08), transparent 48%);
+  }
+
+  .country-map-header {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+    padding-right: 64px;
+  }
+
+  .country-map-header h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 4rem;
+    line-height: 0.94;
+  }
+
+  .country-map-header p {
+    margin: 14px 0 0;
+    color: rgba(226, 232, 240, 0.72);
+    font-size: 1rem;
+  }
+
+  .country-map-canvas {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    min-height: 0;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+
+  .country-map-canvas svg {
+    display: block;
+    overflow: visible;
+  }
+
+  .map-grid line {
+    stroke: rgba(148, 163, 184, 0.28);
+    stroke-width: 1;
+  }
+
+  .country-shape {
+    transition: stroke 180ms ease, fill 180ms ease;
+  }
+
+  .map-point {
+    cursor: pointer;
+    outline: none;
+  }
+
+  .map-pin-pulse {
+    fill: rgba(34, 197, 94, 0.16);
+    stroke: rgba(134, 239, 172, 0.34);
+    stroke-width: 1;
+    animation: map-pin-pulse 1.9s ease-out infinite;
+  }
+
+  .map-pin-halo {
+    fill: rgba(34, 197, 94, 0.42);
+    transition: fill 180ms ease, r 180ms ease;
+  }
+
+  .map-pin-core {
+    fill: #f8fafc;
+    stroke: #22c55e;
+    stroke-width: 2;
+    transition: r 180ms ease, stroke 180ms ease;
+  }
+
+  .map-point.is-active .map-pin-halo,
+  .map-point:hover .map-pin-halo,
+  .map-point:focus-visible .map-pin-halo {
+    fill: rgba(134, 239, 172, 0.68);
+    r: 14;
+  }
+
+  .map-point.is-active .map-pin-core,
+  .map-point:hover .map-pin-core,
+  .map-point:focus-visible .map-pin-core {
+    r: 6;
+    stroke: #bbf7d0;
+  }
+
+  .map-tooltip {
+    position: absolute;
+    z-index: 3;
+    max-width: 240px;
+    padding: 9px 11px;
+    color: #f8fafc;
+    font-size: 0.82rem;
+    line-height: 1.3;
+    background: rgba(3, 7, 18, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 8px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, calc(-100% - 16px));
+    backdrop-filter: blur(12px);
+    transition: opacity 140ms ease;
+  }
+
+  .map-tooltip.is-visible {
+    opacity: 1;
+  }
+
+  .country-story-rail {
+    display: flex;
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    background: rgba(2, 6, 23, 0.9);
+  }
+
+  .story-rail-header {
+    padding: 42px 28px 22px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .story-rail-header h3 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.65rem;
+    line-height: 1.12;
+  }
+
+  .story-rail-header p {
+    margin: 8px 0 0;
+    color: rgba(226, 232, 240, 0.68);
+    font-size: 0.9rem;
+  }
+
+  .story-list {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    padding: 22px;
+  }
+
+  .story-card {
+    display: grid;
+    gap: 14px;
+    margin-bottom: 18px;
+    padding: 12px;
+    color: inherit;
+    background: rgba(255, 255, 255, 0.065);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
+  }
+
+  .story-card:hover,
+  .story-card:focus-visible {
+    border-color: rgba(134, 239, 172, 0.58);
+    background: rgba(255, 255, 255, 0.105);
+    outline: none;
+    transform: translateY(-2px);
+  }
+
+  .article-image {
+    position: relative;
+    height: 170px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(22, 163, 74, 0.32), rgba(15, 23, 42, 0.9));
+  }
+
+  .article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.01);
+    transition: transform 420ms ease;
+  }
+
+  .story-card:hover .article-image img,
+  .story-card:focus-visible .article-image img {
+    transform: scale(1.055);
+  }
+
+  .article-image-fallback {
+    display: grid;
+    place-items: center;
+  }
+
+  .article-image-fallback span {
+    display: grid;
+    width: 64px;
+    height: 64px;
+    place-items: center;
+    color: #f8fafc;
+    font-size: 2rem;
+    font-weight: 800;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 8px;
+  }
+
+  .story-card-body {
+    display: grid;
+    gap: 8px;
+  }
+
+  .article-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .article-category {
+    display: inline-flex;
+    align-items: center;
+    min-height: 24px;
+    padding: 4px 8px;
+    color: #bbf7d0;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: rgba(34, 197, 94, 0.12);
+    border: 1px solid rgba(134, 239, 172, 0.18);
+    border-radius: 8px;
+  }
+
+  .story-card time {
+    color: rgba(226, 232, 240, 0.62);
+    font-size: 0.8rem;
+  }
+
+  .story-card h4 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.08rem;
+    line-height: 1.22;
+  }
+
+  .story-card p {
+    margin: 0;
+    display: -webkit-box;
+    overflow: hidden;
+    color: rgba(226, 232, 240, 0.74);
+    font-size: 0.9rem;
+    line-height: 1.48;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  .empty-state {
+    display: grid;
+    min-height: 320px;
+    place-items: center;
+    padding: 34px 20px;
+    text-align: center;
+    color: rgba(226, 232, 240, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .empty-state span {
+    display: block;
+    width: 54px;
+    height: 54px;
+    border: 1px solid rgba(134, 239, 172, 0.24);
+    border-radius: 999px;
+    background: radial-gradient(circle, rgba(34, 197, 94, 0.32), transparent 68%);
+  }
+
+  .empty-state h4 {
+    margin: 18px 0 0;
+    color: #ffffff;
+    font-size: 1.25rem;
+  }
+
+  .empty-state p {
+    margin: 8px 0 0;
+    font-size: 0.94rem;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(134, 239, 172, 0.26);
+    border-radius: 999px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(134, 239, 172, 0.42);
+  }
+
+  @keyframes globe-pulse {
+    0%,
+    100% {
+      opacity: 0.7;
+      transform: scale(0.85);
     }
 
-    .custom-scrollbar::-webkit-scrollbar-track {
-        background: rgba(0, 0, 0, 0.05);
+    50% {
+      opacity: 1;
+      transform: scale(1.08);
+    }
+  }
+
+  @keyframes map-pin-pulse {
+    0% {
+      opacity: 0.74;
+      transform: scale(0.62);
     }
 
-    .custom-scrollbar::-webkit-scrollbar-thumb {
-        background: rgba(0, 0, 0, 0.2);
-        border-radius: 10px;
+    100% {
+      opacity: 0;
+      transform: scale(1.28);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .country-panel {
+      align-items: flex-end;
+      padding-top: 74px;
     }
 
-    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-        background: rgba(0, 0, 0, 0.4);
+    .country-panel-shell {
+      grid-template-columns: 1fr;
+      grid-template-rows: minmax(340px, 45vh) minmax(0, 1fr);
+      height: 88vh;
+      min-height: 0;
+      max-height: 88vh;
+      overflow: hidden;
     }
 
-    .dark .custom-scrollbar::-webkit-scrollbar-track {
-        background: rgba(255, 255, 255, 0.05);
+    .country-map-stage {
+      padding: 28px 24px 20px;
+      border-right: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    .dark .custom-scrollbar::-webkit-scrollbar-thumb {
-        background: rgba(255, 255, 255, 0.2);
+    .country-map-header {
+      padding-right: 58px;
     }
 
-    .dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-        background: rgba(255, 255, 255, 0.4);
+    .country-map-header h2 {
+      font-size: 2.65rem;
     }
+
+    .country-map-canvas {
+      min-height: 230px;
+      margin-top: 10px;
+    }
+
+    .country-story-rail {
+      min-height: 0;
+    }
+
+    .story-rail-header {
+      padding: 22px 22px 16px;
+    }
+
+    .story-list {
+      padding: 18px;
+    }
+
+    .panel-close {
+      top: 90px;
+      right: 18px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .globe-intro {
+      left: 14px;
+      top: 14px;
+      width: calc(100vw - 28px);
+      padding: 16px;
+    }
+
+    .globe-intro h1 {
+      font-size: 2rem;
+    }
+
+    .globe-intro p {
+      font-size: 0.9rem;
+    }
+
+    .globe-stats {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    .globe-stats div {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .globe-stats strong {
+      font-size: 1.25rem;
+    }
+
+    .globe-loading {
+      right: 14px;
+      bottom: 14px;
+      padding: 10px 12px;
+    }
+
+    .country-panel {
+      padding-top: 64px;
+    }
+
+    .country-panel-shell {
+      grid-template-rows: minmax(300px, 42vh) minmax(0, 1fr);
+      height: 90vh;
+      min-height: 0;
+      max-height: 90vh;
+    }
+
+    .country-map-stage {
+      padding: 22px 18px 14px;
+    }
+
+    .country-map-header h2 {
+      font-size: 2.1rem;
+    }
+
+    .country-map-header p {
+      margin-top: 10px;
+      font-size: 0.86rem;
+    }
+
+    .story-rail-header h3 {
+      font-size: 1.35rem;
+    }
+
+    .article-image {
+      height: 150px;
+    }
+
+    .story-card h4 {
+      font-size: 1rem;
+    }
+  }
 </style>
 {{ end }}

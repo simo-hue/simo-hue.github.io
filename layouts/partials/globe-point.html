@@ -4,6 +4,17 @@
 {{ $lng := .lng }}
 {{ $title := .title }}
 {{ $country := .country }}
+{{ $categories := slice }}
+
+{{ with $page.Params.categories }}
+{{ if reflect.IsSlice . }}
+{{ range . }}
+{{ $categories = $categories | append . }}
+{{ end }}
+{{ else }}
+{{ $categories = $categories | append . }}
+{{ end }}
+{{ end }}
 
 {{/* Resolve Image URL */}}
 {{ $image := $page.Params.image }}
@@ -36,5 +47,6 @@
 "permalink" $page.Permalink
 "image" $imgURL
 "date" ($page.Date.Format "Jan 02, 2006")
+"categories" $categories
 "summary" ($page.Summary | plainify | truncate 100)
 ) }}
