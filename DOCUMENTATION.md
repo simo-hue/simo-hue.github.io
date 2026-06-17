@@ -1066,3 +1066,9 @@ Errore durante il push dovuto alla divergenza tra branch locale e remoto (16 com
   - *Tech Notes*: 
     - Created placeholder articles in `content/english/blog/experience/TalTech/index.md`, `content/english/blog/experience/KTH/index.md`, and `content/english/blog/experience/ELTE/index.md`.
     - Modified `content/english/blog/experience/Budapest Trip/index.md` to point specifically to Gellért Thermal Bath coordinates (47.4837, 19.0550).
+
+- [2026-06-17 17:55]: Added Mountain Fauna Lover Website Link
+  - *Details*: Added the website link for the Mountain Fauna Lover project to the linktree (/connect) page and the main links page.
+  - *Tech Notes*:
+    - Modified `data/connect.yml` to include the website link under the "Mountain Fauna Lover" section.
+    - Modified `data/links.yml` to include the website link under the "Mountain Fauna Lover Content" section.

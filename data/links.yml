@@ -53,6 +53,12 @@ sections:
 
   - title: "Mountain Fauna Lover Content"
     items:
+      - title: "Website - Mountain Fauna Lover"
+        description: "Explore the official website of the Mountain Fauna Lover project."
+        icon: "fas fa-globe"
+        link: "https://mountain-fauna-lover.vercel.app/"
+        button_text: "Visit Website"
+        color: "bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300"
       - title: "YouTube - Mountain Fauna Lover"
         description: "Dive deeper into nature storytelling and wildlife encounters."
         icon: "fab fa-youtube"

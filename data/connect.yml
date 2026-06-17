@@ -13,6 +13,9 @@ sections:
   
   - title: "Mountain Fauna Lover"
     links:
+      - name: "Website"
+        icon: "fas fa-globe"
+        link: "https://mountain-fauna-lover.vercel.app/"
       - name: "Instagram"
         icon: "fab fa-instagram"
         link: "https://instagram.com/mountainfaunalover"
