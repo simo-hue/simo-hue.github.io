@@ -1124,3 +1124,9 @@ Errore durante il push dovuto alla divergenza tra branch locale e remoto (16 com
 - [2026-06-30 17:05 CEST]: About page — add master's to Education box
 - *Details*: Added "AUSIR EIT Digital Master School" (place "ELTE and KTH") as the top entry of the `/about` Education box, above the Bachelor's, per request. Removed the now-incorrect `active: true` from the graduated Bachelor's. This addresses the `data/about.yml` part of the bio-consistency follow-up flagged for SEO-14/25.
 - *Tech Notes*: Edited `data/about.yml` `education` list only — `layouts/about/list.html` renders `.title`+`.place` per entry; `icon`/`active` are unused/cosmetic. Verified `hugo --gc --minify` clean; rendered Education box order = AUSIR (ELTE and KTH) → Bachelor's (Verona) → Diploma (Marconi). Commit `1cf0363d`, branch `seo-meta-profilepage`.
+
+---
+
+- [2026-06-30 17:21:07 CEST]: SEO-19 — polish (hero name order + viewport a11y)
+- *Details*: Fixed the hero rendering "Mattioli Simone" reversed — the H1 subtitle in `layouts/index.html` fell back to a hardcoded reversed default (the homepage banner sets no `subtitle`); changed the default to "Simone Mattioli" to match `<title>`, OG, and the Person schema. Dropped `maximum-scale=5` from the viewport meta in `essentials/head.html` so users can fully pinch-zoom (accessibility). The audit's third SEO-19 item — an "empty `<h2>`" — was verified a FALSE POSITIVE: it is `#modalTitle` in `partials/components/timeline.html`, a JS-populated dialog title inside a `hidden` (display:none) modal, not a content heading; left unchanged.
+- *Tech Notes*: Edited `layouts/index.html` (hero subtitle default) and `layouts/partials/essentials/head.html` (viewport). Verified `hugo --gc --minify` clean; rendered `/` shows `Simone Mattioli` and `viewport content="width=device-width,initial-scale=1"`. The single remaining "Mattioli Simone" on the homepage is the Person schema `alternateName` (intentional). Committed on `master`.
