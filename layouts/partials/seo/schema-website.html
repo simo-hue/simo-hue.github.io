@@ -1,25 +1,21 @@
 {{- /* Schema.org WebSite structured data */ -}}
 {{- if .IsHome -}}
+{{- $schema := dict
+  "@context" "https://schema.org"
+  "@type" "WebSite"
+  "name" site.Title
+  "url" site.BaseURL
+  "description" site.Params.metadata.description
+  "inLanguage" "en-US"
+  "author" (dict "@type" "Person" "@id" (printf "%s#person" site.BaseURL) "name" site.Params.metadata.author)
+  "potentialAction" (dict
+    "@type" "SearchAction"
+    "target" (dict
+      "@type" "EntryPoint"
+      "urlTemplate" (printf "%ssearch/?q={search_term_string}" site.BaseURL))
+    "query-input" "required name=search_term_string")
+-}}
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": {{ .Site.Title | jsonify }},
-  "url": {{ .Site.BaseURL | jsonify }},
-  "description": {{ site.Params.metadata.description | jsonify }},
-  "inLanguage": "en-US",
-  "author": {
-    "@type": "Person",
-    "name": {{ site.Params.metadata.author | jsonify }}
-  },
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": {{ printf "%ssearch/?q={search_term_string}" .Site.BaseURL | jsonify }}
-    },
-    "query-input": "required name=search_term_string"
-  }
-}
+{{ $schema | jsonify | safeJS }}
 </script>
 {{- end -}}

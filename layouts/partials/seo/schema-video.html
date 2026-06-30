@@ -9,17 +9,18 @@
   {{- $videoId = trim $videoId " " -}}
   {{- if $videoId -}}
     {{- $desc := or .Description .Summary | plainify | truncate 200 -}}
+    {{- $schema := dict
+      "@context" "https://schema.org"
+      "@type" "VideoObject"
+      "name" .Title
+      "description" $desc
+      "thumbnailUrl" (printf "https://img.youtube.com/vi/%s/maxresdefault.jpg" $videoId)
+      "uploadDate" (.Date.Format "2006-01-02")
+      "contentUrl" (printf "https://www.youtube.com/watch?v=%s" $videoId)
+      "embedUrl" (printf "https://www.youtube.com/embed/%s" $videoId)
+    -}}
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "VideoObject",
-  "name": {{ .Title | jsonify }},
-  "description": {{ $desc | jsonify }},
-  "thumbnailUrl": {{ printf "https://img.youtube.com/vi/%s/maxresdefault.jpg" $videoId | jsonify }},
-  "uploadDate": {{ .Date.Format "2006-01-02" | jsonify }},
-  "contentUrl": {{ printf "https://www.youtube.com/watch?v=%s" $videoId | jsonify }},
-  "embedUrl": {{ printf "https://www.youtube.com/embed/%s" $videoId | jsonify }}
-}
+{{ $schema | jsonify | safeJS }}
 </script>
   {{- end -}}
 {{- end -}}

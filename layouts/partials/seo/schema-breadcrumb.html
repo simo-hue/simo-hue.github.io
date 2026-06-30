@@ -9,26 +9,17 @@
     {{- $current = $current.Parent -}}
   {{- end -}}
 {{- end -}}
-{{- /* Reverse to get root-first order and prepend Home */ -}}
-{{- $items := slice (dict "name" "Home" "item" .Site.BaseURL) -}}
+{{- /* Reverse to root-first order and prepend Home */ -}}
+{{- $crumbs := slice (dict "name" "Home" "item" site.BaseURL) -}}
 {{- range $ancestors | collections.Reverse -}}
-  {{- $items = $items | append (dict "name" .Title "item" .Permalink) -}}
+  {{- $crumbs = $crumbs | append (dict "name" .Title "item" .Permalink) -}}
 {{- end -}}
+{{- $items := slice -}}
+{{- range $i, $el := $crumbs -}}
+  {{- $items = $items | append (dict "@type" "ListItem" "position" (add $i 1) "name" $el.name "item" $el.item) -}}
+{{- end -}}
+{{- $schema := dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $items -}}
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {{- range $i, $el := $items -}}
-      {{- if $i }},{{ end }}
-    {
-      "@type": "ListItem",
-      "position": {{ add $i 1 }},
-      "name": {{ $el.name | jsonify }},
-      "item": {{ $el.item | jsonify }}
-    }
-    {{- end }}
-  ]
-}
+{{ $schema | jsonify | safeJS }}
 </script>
 {{- end -}}

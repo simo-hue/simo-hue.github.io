@@ -2,91 +2,50 @@
 {{- if .IsHome -}}
 {{- $social := slice -}}
 {{- range site.Data.about.socials -}}
-{{- $social = $social | append .link -}}
+  {{- $social = $social | append .link -}}
 {{- end -}}
 {{- $knowsAbout := slice -}}
 {{- range site.Data.about.passions -}}
-{{- $knowsAbout = $knowsAbout | append .name -}}
+  {{- $knowsAbout = $knowsAbout | append .name -}}
 {{- end -}}
-{{- $knowsAbout = $knowsAbout | append "Computer Science" -}}
-{{- $knowsAbout = $knowsAbout | append "Artificial Intelligence" -}}
-{{- $knowsAbout = $knowsAbout | append "Large Language Models" -}}
-{{- $knowsAbout = $knowsAbout | append "High-Performance Computing" -}}
-
+{{- $knowsAbout = $knowsAbout | append "Computer Science" | append "Artificial Intelligence" | append "Large Language Models" | append "High-Performance Computing" -}}
+{{- $person := dict
+  "@context" "https://schema.org"
+  "@type" "Person"
+  "@id" (printf "%s#person" site.BaseURL)
+  "name" site.Data.about.profile.name
+  "alternateName" "Mattioli Simone"
+  "givenName" "Simone"
+  "familyName" "Mattioli"
+  "url" site.BaseURL
+  "image" (site.Params.metadata.image | absURL)
+  "jobTitle" "Computer Science Student & AI Researcher"
+  "description" (site.Data.about.vision.content | default site.Params.metadata.description)
+  "address" (dict "@type" "PostalAddress" "addressLocality" "Verona" "addressRegion" "Veneto" "addressCountry" "IT")
+  "nationality" (dict "@type" "Country" "name" "Italy")
+  "knowsLanguage" (slice
+    (dict "@type" "Language" "name" "Italian" "alternateName" "it")
+    (dict "@type" "Language" "name" "English" "alternateName" "en"))
+  "worksFor" (dict
+    "@type" "EducationalOrganization"
+    "name" "University of Verona"
+    "department" (dict "@type" "Organization" "name" "Department of Computer Science")
+    "address" (dict "@type" "PostalAddress" "addressLocality" "Verona" "addressCountry" "IT"))
+  "alumniOf" (dict "@type" "EducationalOrganization" "name" "University of Verona" "department" "Computer Science")
+  "hasCredential" (slice (dict
+    "@type" "EducationalOccupationalCredential"
+    "credentialCategory" "degree"
+    "educationalLevel" "Undergraduate"
+    "about" (dict
+      "@type" "EducationalOccupationalProgram"
+      "name" "Computer Science"
+      "description" "Bachelor's degree in Computer Science with specialization in Artificial Intelligence")
+    "recognizedBy" (dict "@type" "Organization" "name" "University of Verona")))
+  "knowsAbout" $knowsAbout
+  "sameAs" $social
+  "mainEntityOfPage" (dict "@type" "WebPage" "@id" site.BaseURL)
+-}}
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "{{ site.Data.about.profile.name }}",
-  "alternateName": "Mattioli Simone",
-  "givenName": "Simone",
-  "familyName": "Mattioli",
-  "url": {{ .Site.BaseURL | jsonify }},
-  "image": {{ printf "%s%s" .Site.BaseURL site.Params.metadata.image | jsonify }},
-  "jobTitle": "Computer Science Student & AI Researcher",
-  "description": {{ site.Data.about.vision.content | default site.Params.metadata.description | jsonify }},
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Verona",
-    "addressRegion": "Veneto",
-    "addressCountry": "IT"
-  },
-  "nationality": {
-    "@type": "Country",
-    "name": "Italy"
-  },
-  "knowsLanguage": [
-    {
-      "@type": "Language",
-      "name": "Italian",
-      "alternateName": "it"
-    },
-    {
-      "@type": "Language",
-      "name": "English",
-      "alternateName": "en"
-    }
-  ],
-  "worksFor": {
-    "@type": "EducationalOrganization",
-    "name": "University of Verona",
-    "department": {
-      "@type": "Organization",
-      "name": "Department of Computer Science"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Verona",
-      "addressCountry": "IT"
-    }
-  },
-  "alumniOf": {
-    "@type": "EducationalOrganization",
-    "name": "University of Verona",
-    "department": "Computer Science"
-  },
-  "hasCredential": [
-    {
-      "@type": "EducationalOccupationalCredential",
-      "credentialCategory": "degree",
-      "educationalLevel": "Undergraduate",
-      "about": {
-        "@type": "EducationalOccupationalProgram",
-        "name": "Computer Science",
-        "description": "Bachelor's degree in Computer Science with specialization in Artificial Intelligence"
-      },
-      "recognizedBy": {
-        "@type": "Organization",
-        "name": "University of Verona"
-      }
-    }
-  ],
-  "knowsAbout": {{ $knowsAbout | jsonify }},
-  "sameAs": {{ $social | jsonify }},
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": {{ .Site.BaseURL | jsonify }}
-  }
-}
+{{ $person | jsonify | safeJS }}
 </script>
 {{- end -}}

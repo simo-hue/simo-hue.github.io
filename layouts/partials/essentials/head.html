@@ -28,9 +28,9 @@
 
 
 <!-- Schema.org Structured Data for SEO & LLMs -->
-{{ partialCached "seo/schema-website.html" . }}
-{{ partialCached "seo/schema-person.html" . }}
-{{ partialCached "seo/schema-blog.html" . .Section }}
+{{ partial "seo/schema-website.html" . }}
+{{ partial "seo/schema-person.html" . }}
+{{ partial "seo/schema-blog.html" . }}
 {{ partial "seo/schema-breadcrumb.html" . }}
 {{ partial "seo/schema-video.html" . }}
 
@@ -76,4 +76,5 @@
 {{/* {{ partialCached "crisp-chat.html" . }} */}}
 
 <!-- Mermaid -->
-{{ partial "mermaid/assets/js" . }}{{ partialCached "seo/schema-faq.html" . }}
+{{ partial "mermaid/assets/js" . }}
+{{ partial "seo/schema-faq.html" . }}

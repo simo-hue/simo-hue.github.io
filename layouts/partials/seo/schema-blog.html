@@ -1,5 +1,5 @@
 {{- /* Schema.org BlogPosting structured data for blog posts */ -}}
-{{- if and .IsPage (in .Site.Params.mainSections .Section) -}}
+{{- if and .IsPage (in site.Params.mainSections .Section) -}}
 {{- $desc := "" -}}
 {{- with .Description -}}
   {{- $desc = . -}}
@@ -10,39 +10,34 @@
 {{- with .Params.author -}}
   {{- $author = . -}}
 {{- end -}}
-{{- $category := "" -}}
+{{- $personID := printf "%s#person" site.BaseURL -}}
+{{- $schema := dict
+  "@context" "https://schema.org"
+  "@type" "BlogPosting"
+  "headline" .Title
+  "description" $desc
+  "author" (dict "@type" "Person" "@id" $personID "name" $author)
+  "datePublished" (.Date.Format "2006-01-02T15:04:05-07:00")
+  "dateModified" (.Lastmod.Format "2006-01-02T15:04:05-07:00")
+  "publisher" (dict "@type" "Person" "@id" $personID "name" site.Params.metadata.author "url" site.BaseURL)
+  "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
+  "wordCount" .WordCount
+  "inLanguage" "en-US"
+-}}
+{{- with .Params.image -}}
+  {{- $imgURL := . | absURL -}}
+  {{- with $.Resources.GetMatch . -}}
+    {{- $imgURL = .Permalink -}}
+  {{- end -}}
+  {{- $schema = merge $schema (dict "image" (dict "@type" "ImageObject" "url" $imgURL)) -}}
+{{- end -}}
 {{- with .Params.categories -}}
-  {{- $category = index . 0 -}}
+  {{- $schema = merge $schema (dict "articleSection" (index . 0)) -}}
+{{- end -}}
+{{- with .Params.tags -}}
+  {{- $schema = merge $schema (dict "keywords" (delimit . ", ")) -}}
 {{- end -}}
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": {{ .Title | jsonify }},
-  "description": {{ $desc | jsonify }},
-  "author": {
-    "@type": "Person",
-    "name": {{ $author | jsonify }}
-  },
-  "datePublished": {{ .Date.Format "2006-01-02T15:04:05-07:00" | jsonify }},
-  "dateModified": {{ .Lastmod.Format "2006-01-02T15:04:05-07:00" | jsonify }},
-  "publisher": {
-    "@type": "Person",
-    "name": {{ site.Params.metadata.author | jsonify }},
-    "url": {{ .Site.BaseURL | jsonify }}
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": {{ .Permalink | jsonify }}
-  }{{ if .Params.image }},
-  "image": {
-    "@type": "ImageObject",
-    "url": {{ .Params.image | absURL | jsonify }}
-  }{{ end }}{{ with .Params.tags }},
-  "keywords": {{ delimit . ", " | jsonify }}{{ end }}{{ if $category }},
-  "articleSection": {{ $category | jsonify }}{{ end }},
-  "wordCount": {{ .WordCount }},
-  "inLanguage": "en-US"
-}
+{{ $schema | jsonify | safeJS }}
 </script>
 {{- end -}}

@@ -1,35 +1,26 @@
-{{- /* Schema.org FAQPage for homepage */ -}}
+{{- /* Schema.org FAQPage for homepage.
+       NOTE: Google retired FAQ rich results for all sites on 2026-05-07; this no
+       longer yields a SERP feature. Kept for AI/LLM citation value (ChatGPT,
+       Perplexity, AI Overviews). Do not add new FAQPage expecting Google rich results. */ -}}
 {{- if .IsHome -}}
+{{- $faq := dict
+  "@context" "https://schema.org"
+  "@type" "FAQPage"
+  "mainEntity" (slice
+    (dict "@type" "Question"
+      "name" "Who is Simone Mattioli?"
+      "acceptedAnswer" (dict "@type" "Answer"
+        "text" "Simone Mattioli is a Computer Science student at the University of Verona, specializing in Artificial Intelligence and Large Language Models. He combines technical skills with international volunteering, travel, and content creation."))
+    (dict "@type" "Question"
+      "name" "What does Simone Mattioli do?"
+      "acceptedAnswer" (dict "@type" "Answer"
+        "text" "Simone studies Computer Science with a focus on AI and builds projects in machine learning and High-Performance Computing. On his blog he shares reflections on technology, travel experiences, and personal growth, documenting his academic journey and passions."))
+    (dict "@type" "Question"
+      "name" "Where does Simone Mattioli study?"
+      "acceptedAnswer" (dict "@type" "Answer"
+        "text" "Simone Mattioli studies at the University of Verona, Department of Computer Science, specializing in Artificial Intelligence and High-Performance Computing. The university is located in Verona, Italy.")))
+-}}
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Chi è Simone Mattioli?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Simone Mattioli è uno studente di Computer Science presso l'Università di Verona, specializzato in Intelligenza Artificiale e Large Language Models. Appassionato di tecnologia, viaggi e fotografia, combina competenze tecniche con esperienze di volontariato internazionale."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Cosa fa Mattioli?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Mattioli studia Computer Science con focus su AI e sviluppa progetti innovativi nel campo del machine learning e High-Performance Computing. Sul suo blog condivide riflessioni su tecnologia, esperienze di viaggio e crescita personale, documentando il suo percorso accademico e le sue passioni."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Dove studia Simone Mattioli?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Simone Mattioli studia presso l'Università di Verona, Dipartimento di Computer Science, con specializzazione in Artificial Intelligence e High-Performance Computing. L'università si trova a Verona, Italia."
-      }
-    }
-  ]
-}
+{{ $faq | jsonify | safeJS }}
 </script>
 {{- end -}}
