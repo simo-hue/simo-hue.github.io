@@ -38,17 +38,15 @@
       <div class="flex flex-wrap items-center justify-center gap-6 text-sm opacity-70">
         <div class="flex items-center gap-2">
           <i class="far fa-calendar"></i>
-          <time datetime="{{ .PublishDate }}">
+          <time datetime="{{ .PublishDate.Format "2006-01-02" }}">
             {{ .PublishDate.Format "January 02, 2006" }}
           </time>
         </div>
 
-        {{ if .Params.author }}
         <div class="flex items-center gap-2">
           <i class="far fa-user"></i>
-          <span>{{ .Params.author }}</span>
+          <a href="/about/" rel="author">{{ .Params.author | default site.Params.metadata.author }}</a>
         </div>
-        {{ end }}
 
         <div class="flex items-center gap-2">
           <i class="far fa-clock"></i>
@@ -65,7 +63,7 @@
   <div class="container">
     <div class="max-w-5xl mx-auto">
       <div class="rounded-2xl overflow-hidden shadow-2xl">
-        {{ partial "image" (dict "Src" .Params.image "Alt" .Title "Class" "w-full" "Loading" "eager") }}
+        {{ partial "image" (dict "Src" .Params.image "Context" . "Alt" .Title "Class" "w-full" "Priority" true) }}
       </div>
     </div>
   </div>
