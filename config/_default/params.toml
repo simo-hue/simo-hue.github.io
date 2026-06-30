@@ -60,7 +60,7 @@ content = ""
 # seo module: https://github.com/gethugothemes/hugo-modules/tree/master/seo-tools/basic-seo
 [metadata]
 keywords = ["Simone Mattioli", "Computer Science University of Verona", "AI researcher Italy", "LLM tourism mobility prediction", "HPC machine learning", "Brazil volunteer experience", "mountain hiking Alps Italy", "personal development technology", "social impact projects", "Italian tech student", "volunteer teaching Brazil", "outdoor sports Italy", "computer science blog", "AI research portfolio", "technology humanities bridge"]
-description = "Simone Mattioli - Computer Science student at University of Verona specializing in AI and HPC. Brazil volunteer educator, mountain enthusiast, and researcher bridging technology with social impact. Explore my journey through tech projects, volunteering experiences, and personal growth adventures."
+description = "Simone Mattioli — CS graduate and EIT Digital Master's student (ELTE, then KTH) in AI and HPC. Explore my tech projects, volunteering and mountains."
 author = "Simone Mattioli"
 image = "/images/og-image.png"
 
