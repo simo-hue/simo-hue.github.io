@@ -1083,3 +1083,11 @@ Errore durante il push dovuto alla divergenza tra branch locale e remoto (16 com
     - **`layouts/partials/basic-seo.html`**: real 1200×630 branded OG card at `static/images/og-image.png` (replaces the Hugoplate demo image that 404'd from `assets/`). OG image resolution made robust: page-bundle resource → global asset via `resources.Get` → absolute path/URL → graceful fallback to the site card. Added `og:locale=en_US`.
     - **Local-build tooling**: `hugo_extended 0.144.0` (modules vendored in `_vendor/`; Tailwind v4 CLI already in `node_modules`). OG card generated with Playwright (`scratchpad/make_og.py`).
   - *Current Status*: Batch 1 done on `seo-fixes`, not yet merged/deployed. **Immediate next step**: review/merge `seo-fixes` → `master` to deploy. Remaining audit tasks (not in this batch): SEO-09/10 (perf/image compression), SEO-11/12/23 (thin content + tag bloat + sitemap noindex), SEO-13/15/16/17/18/26/27/28/29/31.
+
+- [2026-06-30 13:51]: Hugo Deprecation Warnings Fixes
+  - *Details*: Fixed a series of Hugo deprecation warnings that were being printed in the terminal during development.
+  - *Tech Notes*:
+    - Replaced `keepConditionalComments` with `keepSpecialComments` in `hugo.toml`.
+    - Replaced `languageName` with `label` and `languageCode` with `locale` in `config/_default/languages.toml`.
+    - Replaced `site.LanguageCode` with `site.Language.Locale` globally in baseof layouts and overridden the pwa index.webmanifest.
+    - Replaced `site.Data` and `.Site.Data` with `hugo.Data` globally across multiple layout and component files.

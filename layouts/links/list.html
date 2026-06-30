@@ -4,16 +4,16 @@
 
         <!-- Link Page Header -->
         <div class="text-center mb-16 max-w-2xl mx-auto">
-            <h1 class="text-h2 mb-4">{{ site.Data.links.title }}</h1>
-            <p class="text-xl font-medium text-primary dark:text-darkmode-primary mb-2">{{ site.Data.links.subtitle }}
+            <h1 class="text-h2 mb-4">{{ hugo.Data.links.title }}</h1>
+            <p class="text-xl font-medium text-primary dark:text-darkmode-primary mb-2">{{ hugo.Data.links.subtitle }}
             </p>
-            <p class="text-text dark:text-darkmode-text opacity-90 leading-relaxed">{{ site.Data.links.description }}
+            <p class="text-text dark:text-darkmode-text opacity-90 leading-relaxed">{{ hugo.Data.links.description }}
             </p>
         </div>
 
         <!-- SECTIONS GRID -->
         <div class="space-y-16">
-            {{ range site.Data.links.sections }}
+            {{ range hugo.Data.links.sections }}
             <div class="section-block">
                 <h2
                     class="text-2xl font-bold mb-8 flex items-center gap-3 border-b border-border dark:border-darkmode-border pb-4">
@@ -52,7 +52,7 @@
 
         <!-- Footer Quote -->
         <div class="mt-20 text-center opacity-70 italic max-w-2xl mx-auto">
-            "{{ site.Data.links.footer_text }}"
+            "{{ hugo.Data.links.footer_text }}"
         </div>
 
     </div>

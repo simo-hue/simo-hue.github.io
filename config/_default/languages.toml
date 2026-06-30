@@ -1,27 +1,27 @@
 ################ English language ##################
 [en]
-languageName = "English"
-languageCode = "en-us"
+label = "English"
+locale = "en-us"
 contentDir = "content/english"
 weight = 1
 
 ################ Italian language ##################
 [it]
-languageName = "Italiano"
-languageCode = "it-it"
+label = "Italiano"
+locale = "it-it"
 contentDir = "content/italian"
 weight = 2
 
 ################ French language ##################
 [fr]
-languageName = "Français"
-languageCode = "fr-fr"
+label = "Français"
+locale = "fr-fr"
 contentDir = "content/french"
 weight = 3
 
 ################ Spanish language ##################
 [es]
-languageName = "Español"
-languageCode = "es-es"
+label = "Español"
+locale = "es-es"
 contentDir = "content/spanish"
 weight = 4

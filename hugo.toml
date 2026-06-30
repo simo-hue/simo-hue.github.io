@@ -170,7 +170,7 @@ lazy = true
 disableXML = true
 [minify.tdewolff]
   [minify.tdewolff.html]
-    keepConditionalComments = true
+    keepSpecialComments = true
     keepDefaultAttrVals = true
     keepDocumentTags = true
     keepEndTags = true

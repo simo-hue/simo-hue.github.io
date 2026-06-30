@@ -1,11 +1,11 @@
 {{- /* Schema.org Person structured data for homepage */ -}}
 {{- if .IsHome -}}
 {{- $social := slice -}}
-{{- range site.Data.about.socials -}}
+{{- range hugo.Data.about.socials -}}
   {{- $social = $social | append .link -}}
 {{- end -}}
 {{- $knowsAbout := slice -}}
-{{- range site.Data.about.passions -}}
+{{- range hugo.Data.about.passions -}}
   {{- $knowsAbout = $knowsAbout | append .name -}}
 {{- end -}}
 {{- $knowsAbout = $knowsAbout | append "Computer Science" | append "Artificial Intelligence" | append "Large Language Models" | append "High-Performance Computing" -}}
@@ -13,14 +13,14 @@
   "@context" "https://schema.org"
   "@type" "Person"
   "@id" (printf "%s#person" site.BaseURL)
-  "name" site.Data.about.profile.name
+  "name" hugo.Data.about.profile.name
   "alternateName" "Mattioli Simone"
   "givenName" "Simone"
   "familyName" "Mattioli"
   "url" site.BaseURL
   "image" (site.Params.metadata.image | absURL)
   "jobTitle" "Computer Science Student & AI Researcher"
-  "description" (site.Data.about.vision.content | default site.Params.metadata.description)
+  "description" (hugo.Data.about.vision.content | default site.Params.metadata.description)
   "address" (dict "@type" "PostalAddress" "addressLocality" "Verona" "addressRegion" "Veneto" "addressCountry" "IT")
   "nationality" (dict "@type" "Country" "name" "Italy")
   "knowsLanguage" (slice

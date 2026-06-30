@@ -1,4 +1,4 @@
-{{ if site.Data.timeline.enable }}
+{{ if hugo.Data.timeline.enable }}
 <!-- Container: Add padding to avoid edge clipping -->
 <div class="relative wrap overflow-hidden p-2 md:p-4 h-full">
 
@@ -6,7 +6,7 @@
     <div class="absolute border-opacity-20 border-gray-700 h-full border dark:border-gray-500 left-1/2 transform -translate-x-1/2"
         style="border-style: solid; border-width: 0 0 0 2px;"></div>
 
-    {{ range $index, $item := site.Data.timeline.items }}
+    {{ range $index, $item := hugo.Data.timeline.items }}
     <!-- Timeline Item Row -->
     <!-- Use gap-0 to rely on justify-between and explicit widths -->
     <div
