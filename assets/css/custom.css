@@ -112,12 +112,13 @@
 }
 
 .text-gradient-animate {
+  /* Static multi-color gradient on the hero name. The previous
+     `animation: gradient 5s linear infinite` inflated LCP (Chrome keeps
+     re-timing the largest element while it animates forever). */
   background: linear-gradient(to right, #2563eb, #9333ea, #db2777, #2563eb);
-  background-size: 200% auto;
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  animation: gradient 5s linear infinite;
 }
 
 .hover-lift {
