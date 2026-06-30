@@ -5,7 +5,7 @@
 
 ## SEO AUDIT — Manual actions (2026-06-30)
 Full audit run on https://simo-hue.github.io. Health Score: 64/100. Fix top-down.
-
+ 
 ### P0 — Critical (this week)
 1. **Fix malformed JSON-LD (double-encoding).** In `layouts/partials/seo/schema-website.html`, `schema-person.html`, `schema-breadcrumb.html`, every `{{ X | jsonify }}` renders as `"\"value\""` in production (arrays render as strings). Rebuild each schema as a Hugo `dict` and `jsonify` the WHOLE object once. Verify the output of `hugo --gc --minify` locally, then run each URL through Google Rich Results Test + schema.org validator.
 2. **Add `BlogPosting` to posts.** `layouts/partials/essentials/head.html:33` uses `partialCached "seo/schema-blog.html" . .Section` → caches the empty `/blog/` list render and reuses it on every post → posts have NO article schema. Change to plain `{{ partial "seo/schema-blog.html" . }}`.
@@ -32,7 +32,3 @@ Full audit run on https://simo-hue.github.io. Health Score: 64/100. Fix top-down
 - **SEO-24 (P1):** 0/66 posts have a visible author byline (E-E-A-T/GEO) — default it to the site author, linked to `/about`.
 - **SEO-25–28 (P2):** GEO — Person `@id` consolidation + `ProfilePage` on `/about`; related posts; RSS `<link rel=alternate>` in head; richer schema types.
 - **SEO-29–31 (P3):** logo `alt="Hugoplate"` (`logo_text`) + `theme-name` meta; malformed `<time datetime>` + missing `og:locale`; PWA manifest icon polish.
-
-### Notes
-- Live == HEAD (deploy via `.github/workflows/hugo.yml`); no stale-deploy gap.
-- `static/_headers`, `_redirects`, `netlify.toml`, `vercel.json`, `amplify.yml` are IGNORED on GitHub Pages — your CSP/security headers are NOT active.
