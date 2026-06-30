@@ -1091,3 +1091,23 @@ Errore durante il push dovuto alla divergenza tra branch locale e remoto (16 com
     - Replaced `languageName` with `label` and `languageCode` with `locale` in `config/_default/languages.toml`.
     - Replaced `site.LanguageCode` with `site.Language.Locale` globally in baseof layouts and overridden the pwa index.webmanifest.
     - Replaced `site.Data` and `.Site.Data` with `hugo.Data` globally across multiple layout and component files.
+
+- [2026-06-30]: SEO/GEO Remediation — Batch 2 (index hygiene) + CI Hugo bump
+  - *Details*: Cut index bloat and removed demo content per `SEO_AUDIT/README.md` (SEO-11/12/13/23); bumped the deploy Hugo version so CI builds after the 0.163 deprecation migration.
+  - *Tech Notes*:
+    - New `layouts/partials/seo/noindex.html` — single source of truth for "should this page be noindexed?", consumed by both `basic-seo.html` (robots meta) and `sitemap.xml` so they never diverge.
+    - Auto-`noindex` blog posts under 130 words (self-maintaining) and single-post tag pages (redundant with the post); categories/passions and multi-post tags stay indexed.
+    - Deleted the Hugoplate demo `content/english/Author/` section (john-doe); authorship lives on `/about`.
+    - CI: bumped `.github/workflows/hugo.yml` `HUGO_VERSION` 0.144.0 → 0.163.3 (the deprecation migration's `site.Language.Locale` needs newer Hugo; 0.144 built 0 pages).
+    - Verified on hugo 0.163.3: sitemap 343 → 120 URLs; 11 thin posts + 207 single-post tag pages `noindex`ed; `/author/` removed; 0 noindexed URLs in the sitemap.
+
+- [2026-06-30]: SEO/GEO Remediation — Batch 3 (quick wins)
+  - *Details*: Six smaller SEO/GEO improvements (SEO-15/17/26/27/29/31).
+  - *Tech Notes*:
+    - SEO-15: real `/search/` page (theme `search-page.html` partial, `noindex`) + WebSite `SearchAction` pointed at `/search/?s={query}` to match `search.js` (reads the `s` URL param) — the sitelinks searchbox now resolves and runs end-to-end.
+    - SEO-17: `static/llms.txt` (curated site map for AI crawlers).
+    - SEO-26: "Related Posts" (3, via `.Related` on tags/categories) on blog single pages + a `[related]` block in `hugo.toml`.
+    - SEO-27: RSS discovery `<link rel="alternate" type="application/rss+xml">` in `<head>`.
+    - SEO-29: `logo_text` Hugoplate → Simone Mattioli (fixes the sitewide logo `alt`); removed `<meta name="theme-name">`; cleared the demo announcement placeholder.
+    - SEO-31: manifest polish — `display: standalone`, added `description`, dropped the unpadded `maskable` purpose.
+  - *Current Status*: Batches 1–3 + the CI fix are merged to `master` (fast-forward, 9 commits) and verified on hugo 0.163.3; **awaiting `git push` to deploy**. Remaining audit work: SEO-09/10 (performance), SEO-16/18 (fonts / 3rd-party deferral), SEO-20/25/28 (dead-config cleanup, ProfilePage, richer schema types).
