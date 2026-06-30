@@ -1,4 +1,10 @@
-{{- /* Schema.org BlogPosting structured data for blog posts */ -}}
+{{- /* Schema.org structured data for blog posts.
+       SEO-28: pick a more specific @type from the blog subsection (the 2nd URL
+       segment of /blog/<subsection>/<slug>/), overridable per-post via the
+       front-matter field `schema_type`:
+         tech-project -> SoftwareApplication
+         publication  -> ScholarlyArticle
+         everything else (experience, thought, project, books) -> BlogPosting */ -}}
 {{- if and .IsPage (in site.Params.mainSections .Section) -}}
 {{- $desc := "" -}}
 {{- with .Description -}}
@@ -11,19 +17,47 @@
   {{- $author = . -}}
 {{- end -}}
 {{- $personID := printf "%s#person" site.BaseURL -}}
+{{- /* subsection = 2nd path segment of the permalink */ -}}
+{{- $segs := split (strings.Trim .RelPermalink "/") "/" -}}
+{{- $sub := "" -}}
+{{- if ge (len $segs) 2 -}}
+  {{- $sub = index $segs 1 -}}
+{{- end -}}
+{{- $type := "BlogPosting" -}}
+{{- if eq $sub "tech-project" -}}
+  {{- $type = "SoftwareApplication" -}}
+{{- else if eq $sub "publication" -}}
+  {{- $type = "ScholarlyArticle" -}}
+{{- end -}}
+{{- with .Params.schema_type -}}
+  {{- $type = . -}}
+{{- end -}}
+{{- /* properties common to every type */ -}}
 {{- $schema := dict
   "@context" "https://schema.org"
-  "@type" "BlogPosting"
-  "headline" .Title
+  "@type" $type
   "description" $desc
+  "url" .Permalink
   "author" (dict "@type" "Person" "@id" $personID "name" $author)
   "datePublished" (.Date.Format "2006-01-02T15:04:05-07:00")
   "dateModified" (.Lastmod.Format "2006-01-02T15:04:05-07:00")
   "publisher" (dict "@type" "Person" "@id" $personID "name" site.Params.metadata.author "url" site.BaseURL)
   "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
-  "wordCount" .WordCount
   "inLanguage" "en-US"
 -}}
+{{- /* type-specific properties */ -}}
+{{- if eq $type "SoftwareApplication" -}}
+  {{- $schema = merge $schema (dict "name" .Title "applicationCategory" (.Params.app_category | default "DeveloperApplication")) -}}
+  {{- with .Params.operating_system -}}
+    {{- $schema = merge $schema (dict "operatingSystem" .) -}}
+  {{- end -}}
+{{- else -}}
+  {{- $schema = merge $schema (dict "headline" .Title "wordCount" .WordCount) -}}
+  {{- with .Params.categories -}}
+    {{- $schema = merge $schema (dict "articleSection" (index . 0)) -}}
+  {{- end -}}
+{{- end -}}
+{{- /* image (all types) */ -}}
 {{- with .Params.image -}}
   {{- $imgURL := . | absURL -}}
   {{- with $.Resources.GetMatch . -}}
@@ -31,9 +65,7 @@
   {{- end -}}
   {{- $schema = merge $schema (dict "image" (dict "@type" "ImageObject" "url" $imgURL)) -}}
 {{- end -}}
-{{- with .Params.categories -}}
-  {{- $schema = merge $schema (dict "articleSection" (index . 0)) -}}
-{{- end -}}
+{{- /* keywords from tags (all types) */ -}}
 {{- with .Params.tags -}}
   {{- $schema = merge $schema (dict "keywords" (delimit . ", ")) -}}
 {{- end -}}

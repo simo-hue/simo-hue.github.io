@@ -75,3 +75,16 @@ Deleted (GitHub Pages ignores them; all pinned the stale Hugo 0.147.3 while the 
     Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:;
 
 Plus long-cache immutable for `/images/*`, `/css/*`, `/js/*`, `/fonts/*`, `*.webp` (max-age=31536000) — GitHub Pages forces max-age=600 and can't override without a CDN.
+
+---
+
+## SEO-28 DONE (2026-06-30) — richer schema types (on master)
+`tech-project` -> SoftwareApplication (18), `publication` -> ScholarlyArticle (1); experience/thought/project/books stay BlogPosting. `books` -> Review DEFERRED (needs per-book rating + book author — tell me and I'll add `rating`/`book_author` front-matter to the 10 book posts for you to fill in).
+
+### Manual test after deploy
+- Rich Results Test on `/blog/tech-project/campflow/` -> SoftwareApplication, no errors.
+- Rich Results Test on `/blog/publication/llm-tourism-mobility-predictor/` -> ScholarlyArticle.
+
+### Optional per-post overrides (front matter)
+- A few `tech-project` posts aren't really apps (courses: `network-programming-security-course`, `programming-languages-implementation`; hardware: `Ping Pong Counter`; event: `hackathonEPICURE2024`). Add `schema_type: CreativeWork` (or `Article`) to reclassify.
+- `app_category: "WebApplication"` overrides the default "DeveloperApplication"; `operating_system: "Web"` is optional.
