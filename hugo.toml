@@ -32,6 +32,22 @@ category = "categories"
 tag = "tags"
 passion = "passion"
 
+########################## Related ##############################
+# Powers "Related Posts" on blog single pages (.Related)
+[related]
+threshold = 80
+includeNewer = true
+toLower = true
+[[related.indices]]
+name = "tags"
+weight = 100
+[[related.indices]]
+name = "categories"
+weight = 80
+[[related.indices]]
+name = "date"
+weight = 10
+
 
 ########################## Pagination ############################
 [pagination]

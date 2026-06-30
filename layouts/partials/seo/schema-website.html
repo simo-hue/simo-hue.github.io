@@ -12,7 +12,7 @@
     "@type" "SearchAction"
     "target" (dict
       "@type" "EntryPoint"
-      "urlTemplate" (printf "%ssearch/?q={search_term_string}" site.BaseURL))
+      "urlTemplate" (printf "%ssearch/?s={search_term_string}" site.BaseURL))
     "query-input" "required name=search_term_string")
 -}}
 <script type="application/ld+json">

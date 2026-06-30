@@ -1,0 +1,21 @@
+# Simone Mattioli — Adventures in Technology & Humanity
+
+> Personal portfolio and blog of Simone Mattioli — a Computer Science student (University of Verona; Master's at KTH Royal Institute of Technology) specializing in Artificial Intelligence, Large Language Models, and High-Performance Computing. International volunteer (Brazil), mountain and outdoor enthusiast, content creator. The site bridges technology with human-centered values.
+
+## Key pages
+- [About](https://simo-hue.github.io/about/): bio, education, vision, and passions
+- [Blog](https://simo-hue.github.io/blog/): tech projects, experiences, thoughts, and book notes
+- [Tech projects](https://simo-hue.github.io/blog/tech-project/): software and AI/ML projects
+- [Publications](https://simo-hue.github.io/blog/publication/): research (e.g. an LLM tourism-mobility predictor)
+- [Experiences](https://simo-hue.github.io/blog/experience/): travel, academic exchanges (KTH, ELTE, TalTech), and volunteering
+- [Globe](https://simo-hue.github.io/globe/): an interactive map of visited places and their stories
+- [Links](https://simo-hue.github.io/links/): all social and contact links
+
+## Topics
+Computer Science · Artificial Intelligence · Large Language Models · High-Performance Computing · software engineering · international volunteering · mountains and outdoor sports · personal growth.
+
+## Contact
+- GitHub: https://github.com/simo-hue
+- LinkedIn: https://www.linkedin.com/in/simonemattioli2003/
+- YouTube: https://youtube.com/@simosdiary2003
+- Email: mattioli.simone.10@gmail.com

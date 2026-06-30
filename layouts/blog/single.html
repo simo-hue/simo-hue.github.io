@@ -97,4 +97,21 @@
   </div>
   </div>
 </section>
+
+<!-- Related Posts -->
+{{ $related := first 3 ((where site.RegularPages "Section" "blog").Related .) }}
+{{ with $related }}
+<section class="section pt-0">
+  <div class="container">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl font-bold mb-8 text-center">{{ i18n "related_posts" | default "Related Posts" }}</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {{ range . }}
+        {{ partial "components/blog-card.html" . }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
 {{ end }}

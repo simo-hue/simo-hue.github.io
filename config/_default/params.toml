@@ -11,7 +11,7 @@ logo_height = "20px"
 # if logo_webp set false, will not generate WEBP version of logo | default is true
 logo_webp = true
 # logo text will only show when logo is missing.
-logo_text = "Hugoplate"
+logo_text = "Simone Mattioli"
 # navbar fixed to top
 navbar_fixed = true
 # theme-mode
@@ -54,7 +54,7 @@ show_categories = true
 [announcement]
 enable = false
 expire_days = 7
-content = "You must replace the **baseURL** in **hugo.toml** file when deploying, you can manage this announcement from the **params.toml** file."
+content = ""
 
 # seo meta data for OpenGraph / Twitter Card
 # seo module: https://github.com/gethugothemes/hugo-modules/tree/master/seo-tools/basic-seo
