@@ -3,7 +3,8 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url('/fonts/Heebo-Regular.ttf') format('truetype');
+    src: url('/fonts/Heebo-Regular.woff2') format('woff2'),
+         url('/fonts/Heebo-Regular.ttf') format('truetype');
 }
 
 @font-face {
@@ -11,7 +12,8 @@
     font-style: normal;
     font-weight: 600;
     font-display: swap;
-    src: url('/fonts/Heebo-SemiBold.ttf') format('truetype');
+    src: url('/fonts/Heebo-SemiBold.woff2') format('woff2'),
+         url('/fonts/Heebo-SemiBold.ttf') format('truetype');
 }
 
 @font-face {
@@ -19,7 +21,8 @@
     font-style: normal;
     font-weight: 500;
     font-display: swap;
-    src: url('/fonts/Signika-Medium.ttf') format('truetype');
+    src: url('/fonts/Signika-Medium.woff2') format('woff2'),
+         url('/fonts/Signika-Medium.ttf') format('truetype');
 }
 
 @font-face {
@@ -27,5 +30,6 @@
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url('/fonts/Signika-Bold.ttf') format('truetype');
+    src: url('/fonts/Signika-Bold.woff2') format('woff2'),
+         url('/fonts/Signika-Bold.ttf') format('truetype');
 }

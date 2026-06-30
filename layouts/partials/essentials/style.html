@@ -4,11 +4,15 @@
 <link rel="preconnect" href="https://use.fontawesome.com" crossorigin />
 <link rel="dns-prefetch" href="https://use.fontawesome.com" />
 
-<!-- Critical Font CSS inline to prevent blocking -->
+<!-- Preload above-the-fold fonts (hero headline + body) so the LCP text paints without waiting on the CSS bundle -->
+<link rel="preload" href="/fonts/Signika-Bold.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/fonts/Heebo-Regular.woff2" as="font" type="font/woff2" crossorigin />
+
+<!-- Critical font-face inline (WOFF2) to prevent the headline/body fonts from blocking on the CSS bundle -->
 <style>
     @font-face {
         font-family: 'Heebo';
-        src: url('/fonts/Heebo-Regular.ttf') format('truetype');
+        src: url('/fonts/Heebo-Regular.woff2') format('woff2'), url('/fonts/Heebo-Regular.ttf') format('truetype');
         font-weight: 400;
         font-style: normal;
         font-display: swap;
@@ -16,8 +20,8 @@
 
     @font-face {
         font-family: 'Signika';
-        src: url('/fonts/Signika-Medium.ttf') format('truetype');
-        font-weight: 500;
+        src: url('/fonts/Signika-Bold.woff2') format('woff2'), url('/fonts/Signika-Bold.ttf') format('truetype');
+        font-weight: 700;
         font-style: normal;
         font-display: swap;
     }
