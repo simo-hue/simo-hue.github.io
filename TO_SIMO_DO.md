@@ -54,8 +54,8 @@ git checkout master && git merge seo-meta-profilepage && git push
 
 ### ⚠️ Follow-up — bio now inconsistent with the new descriptions (needs your decision)
 The new descriptions say "CS graduate, EIT Digital Master's student (ELTE → KTH)", but these still say current Verona undergrad / omit the master's:
-- `data/about.yml` → `education`: Bachelor's (Verona) still `active: true`; **no master's entry** (add EIT Digital / ELTE / KTH).
-- `content/english/_index.md` → "University Life" feature: "Computer Science student at University of Verona…".
+- ✅ DONE (2026-06-30) — `data/about.yml` → `education`: added "AUSIR EIT Digital Master School" (ELTE and KTH) above the Bachelor's; dropped the graduated Bachelor's `active: true`.
+- ⏳ `content/english/_index.md` → "University Life" feature: "Computer Science student at University of Verona…".
 - `layouts/partials/seo/schema-person.html` → `jobTitle` "Computer Science Student & AI Researcher"; `worksFor` University of Verona; `hasCredential.educationalLevel` "Undergraduate". (`alumniOf` Verona is now correct.)
 Out of scope for SEO-14/25. Say the word and I'll do a follow-up batch to make these consistent.
 - (Optional) Add a `lastmod:` to `/about` front matter if you want the ProfilePage to carry a `dateModified`.
