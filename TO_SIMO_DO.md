@@ -39,10 +39,3 @@ Full audit run on https://simo-hue.github.io. Health Score: 64/100. Fix top-down
 ### Notes
 - Live == HEAD (deploy via `.github/workflows/hugo.yml`); no stale-deploy gap.
 - `static/_headers`, `_redirects`, `netlify.toml`, `vercel.json`, `amplify.yml` are IGNORED on GitHub Pages — your CSP/security headers are NOT active.
-
----
-
-## Globe — Safari pinch-to-zoom (2026-06-30)
-- [ ] **Re-test in Safari:** open `/globe/` and pinch — it should now be much slower & smoother (default sensitivity dropped 2400 → 150 after finding OrbitControls also ×10's pinch wheels). Two-finger scroll should still zoom; Chrome/Firefox unchanged.
-- [ ] **Dial in the feel WITHOUT rebuilding:** in Safari's Web Inspector console, set e.g. `globePinchSensitivity = 120` (lower = gentler/smoother, higher = faster) and pinch until it matches Chrome. Tell me the number you like and I'll bake it into `PINCH_ZOOM_SENSITIVITY` in `layouts/globe/list.html` as the new default (and can drop the `window.globePinchSensitivity` debug knob if you want it gone). *(Safari trackpad pinch can't be tested headlessly — needs your device.)*
-- [ ] **If it's the right speed but still a touch steppy:** tell me — I'll add frame-paced smoothing (rAF easing) on top. Not added now to keep it byte-identical to Chrome's path.
