@@ -667,8 +667,48 @@
         pauseAutoRotate();
       }, { passive: false });
       globeContainer.addEventListener('touchstart', pauseAutoRotate, { passive: true });
-      globeContainer.addEventListener('gesturestart', event => event.preventDefault());
-      globeContainer.addEventListener('gesturechange', event => event.preventDefault());
+      // Safari is the only major browser that reports a trackpad pinch as legacy
+      // gesture* events; Chrome/Firefox instead emit a ctrlKey `wheel`, which is
+      // what the globe's OrbitControls zooms on. Normalize Safari by translating
+      // its pinch into that same synthetic wheel, so zoom routes through the exact
+      // Chrome path (same OrbitControls dolly, zoomSpeed, min/max distance).
+      //
+      // Zoom amount scales with the wheel's deltaY magnitude, AND OrbitControls
+      // internally multiplies ctrlKey ("pinch") wheels by 10 — so deltaY here must
+      // stay small or the zoom is fast and jumpy. PINCH_ZOOM_SENSITIVITY is the one
+      // feel knob; it's read live from window.globePinchSensitivity so you can match
+      // Chrome's feel from the Safari console without a rebuild, e.g.:
+      //   globePinchSensitivity = 120   // lower = gentler & smoother, higher = faster
+      const PINCH_ZOOM_SENSITIVITY = 150; // was 2400 — far too fast/jerky once OrbitControls' x10 is counted
+      if (typeof window.globePinchSensitivity !== 'number') {
+        window.globePinchSensitivity = PINCH_ZOOM_SENSITIVITY;
+      }
+      let lastGestureScale = 1;
+
+      const forwardPinchAsWheel = event => {
+        event.preventDefault();
+        const scaleDelta = event.scale - lastGestureScale;
+        lastGestureScale = event.scale;
+        if (!scaleDelta) return;
+
+        const sensitivity = Number(window.globePinchSensitivity) || PINCH_ZOOM_SENSITIVITY;
+        const canvas = globeContainer.querySelector('canvas') || globeContainer;
+        canvas.dispatchEvent(new WheelEvent('wheel', {
+          deltaY: -scaleDelta * sensitivity, // spreading fingers => zoom in
+          clientX: event.clientX,
+          clientY: event.clientY,
+          ctrlKey: true,
+          bubbles: true,
+          cancelable: true
+        }));
+      };
+
+      globeContainer.addEventListener('gesturestart', event => {
+        event.preventDefault();
+        lastGestureScale = event.scale;
+        pauseAutoRotate();
+      });
+      globeContainer.addEventListener('gesturechange', forwardPinchAsWheel);
       globeContainer.addEventListener('gestureend', event => event.preventDefault());
     })
     .catch(() => {

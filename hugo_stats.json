@@ -58,6 +58,7 @@
       "ul"
     ],
     "classes": [
+      "!px-4",
       "-bottom-2",
       "-ml-1",
       "-translate-x-1/2",
@@ -584,6 +585,7 @@
       "mt-16",
       "mt-2",
       "mt-20",
+      "mt-3",
       "mt-4",
       "mt-6",
       "mt-8",
@@ -676,6 +678,7 @@
       "search-icon",
       "search-modal",
       "search-modal-overlay",
+      "search-page",
       "search-reset",
       "search-result",
       "search-result-empty",
@@ -1244,7 +1247,9 @@
       "scoping-strategy-dynamic-vs-lexical",
       "scopo",
       "scopo-1",
+      "search-input",
       "search-modal-input",
+      "search-result-item-template",
       "security-analysis-and-audit-considerations",
       "security-best-practices-implemented",
       "selected-date-display",
