@@ -31,10 +31,13 @@ stats:
     label: "Curiosity"
 
 education:
+  - title: "AUSIR EIT Digital Master School"
+    place: "ELTE and KTH"
+    icon: "fa-solid fa-graduation-cap"
+    active: true
   - title: "Bachelor's Degree in Computer Science"
     place: "University of Verona"
     icon: "fa-solid fa-graduation-cap"
-    active: true
   - title: "Technical Diploma (Computer Science)"
     place: "ITT Marconi Rovereto"
     icon: "fa-solid fa-school"
