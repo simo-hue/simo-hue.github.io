@@ -59,3 +59,19 @@ The new descriptions say "CS graduate, EIT Digital Master's student (ELTE → KT
 - `layouts/partials/seo/schema-person.html` → `jobTitle` "Computer Science Student & AI Researcher"; `worksFor` University of Verona; `hasCredential.educationalLevel` "Undergraduate". (`alumniOf` Verona is now correct.)
 Out of scope for SEO-14/25. Say the word and I'll do a follow-up batch to make these consistent.
 - (Optional) Add a `lastmod:` to `/about` front matter if you want the ProfilePage to carry a `dateModified`.
+
+---
+
+## SEO-20 DONE (2026-06-30) — removed dead deploy configs (on master)
+Deleted (GitHub Pages ignores them; all pinned the stale Hugo 0.147.3 while the real deploy `.github/workflows/hugo.yml` uses 0.163.3): `netlify.toml`, `vercel.json`, `vercel-build.sh`, `amplify.yml`, `.gitlab-ci.yml`, root `_redirects`, `static/_headers`.
+
+### ⚠️ Security headers are NOT active on GitHub Pages (only HSTS is sent)
+`static/_headers` is gone but its intended policy is preserved below. To actually serve these, put the site behind **Cloudflare** (free, via Transform Rules) OR deliver a partial CSP via a `<meta http-equiv>` tag (test GTM/inline scripts first). Intended headers:
+
+    X-Frame-Options: SAMEORIGIN
+    X-Content-Type-Options: nosniff
+    Referrer-Policy: strict-origin-when-cross-origin
+    Permissions-Policy: interest-cohort=()
+    Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:;
+
+Plus long-cache immutable for `/images/*`, `/css/*`, `/js/*`, `/fonts/*`, `*.webp` (max-age=31536000) — GitHub Pages forces max-age=600 and can't override without a CDN.
