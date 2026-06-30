@@ -1072,3 +1072,14 @@ Errore durante il push dovuto alla divergenza tra branch locale e remoto (16 com
   - *Tech Notes*:
     - Modified `data/connect.yml` to include the website link under the "Mountain Fauna Lover" section.
     - Modified `data/links.yml` to include the website link under the "Mountain Fauna Lover Content" section.
+
+- [2026-06-30]: SEO/GEO Remediation — Batch 1 (structured data, article template, OG share image)
+  - *Details*: Fixed the production structured-data layer, the article-template LCP/E-E-A-T issues, and the broken social-share images per `SEO_AUDIT/README.md` (covers SEO-01..08, 21, 22, 24, 25, 30). Implemented on branch `seo-fixes` (3 commits) and verified with local production builds (`hugo_extended 0.144.0 --gc --minify`): 426 JSON-LD blocks parse with 0 double-encoded, 350/350 pages' og:image resolve.
+  - *Tech Notes*:
+    - **Schema partials** (`layouts/partials/seo/schema-{website,person,blog,breadcrumb,video,faq}.html`): each rebuilt as a single `dict` piped through `jsonify | safeJS`. Root cause of the prior double-encoding (every value a quoted string / array-as-string) was Go `html/template` JS-context escaping inside `<script type="application/ld+json">`; `safeJS` (template.JS) emits the JSON verbatim. `safeHTML` does NOT work here.
+    - **`head.html`**: `partialCached` → `partial` for website/person/blog/faq so the `IsHome`/`IsPage` guards evaluate per page — `BlogPosting` now renders on posts (cache key was `.Section`, which had cached the empty `/blog/` list render for all posts), and WebSite/Person/FAQ no longer leak onto every page.
+    - Person entity consolidated via `@id` (`#person`), referenced by `BlogPosting` author/publisher. Homepage FAQ translated to English.
+    - **`layouts/blog/single.html`**: hero image now passes `Context` + `Priority` to the image partial (was `"Loading" "eager"`, an unsupported key, with no `Context` → the hero rendered unprocessed + `loading="lazy"`). Linked author byline now always renders (defaults to the site author). `<time datetime>` now emits ISO 8601.
+    - **`layouts/partials/basic-seo.html`**: real 1200×630 branded OG card at `static/images/og-image.png` (replaces the Hugoplate demo image that 404'd from `assets/`). OG image resolution made robust: page-bundle resource → global asset via `resources.Get` → absolute path/URL → graceful fallback to the site card. Added `og:locale=en_US`.
+    - **Local-build tooling**: `hugo_extended 0.144.0` (modules vendored in `_vendor/`; Tailwind v4 CLI already in `node_modules`). OG card generated with Playwright (`scratchpad/make_og.py`).
+  - *Current Status*: Batch 1 done on `seo-fixes`, not yet merged/deployed. **Immediate next step**: review/merge `seo-fixes` → `master` to deploy. Remaining audit tasks (not in this batch): SEO-09/10 (perf/image compression), SEO-11/12/23 (thin content + tag bloat + sitemap noindex), SEO-13/15/16/17/18/26/27/28/29/31.
