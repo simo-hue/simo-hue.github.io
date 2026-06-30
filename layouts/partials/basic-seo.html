@@ -18,7 +18,7 @@
 
 <link rel="canonical" href="{{ .Permalink }}">
 
-{{- if or .Params.noindex (eq .Kind "404") -}}
+{{- if partial "seo/noindex.html" . -}}
 <meta name="robots" content="noindex, nofollow">
 {{- else -}}
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">

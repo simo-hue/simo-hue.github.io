@@ -17,7 +17,7 @@
 
   {{- /* ==================== ALL PAGES (unified, no duplicates) ==================== */ -}}
   {{- range .Site.Pages }}
-    {{- if and (not .Draft) (ne .Kind "home") .Permalink }}
+    {{- if and (not .Draft) (ne .Kind "home") (not (partial "seo/noindex.html" .)) .Permalink }}
   <url>
     <loc>{{ .Permalink }}</loc>
     {{- /* --- Lastmod: page date, or latest child date for taxonomy/section pages --- */ -}}

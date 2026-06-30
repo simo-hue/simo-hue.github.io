@@ -1,0 +1,21 @@
+{{- /* Single source of truth for "should this page be noindexed?".
+       Used by basic-seo.html (robots meta) AND sitemap.xml so the two never diverge.
+       Returns a boolean. */ -}}
+{{- $ni := false -}}
+{{- /* explicit opt-out or 404 */ -}}
+{{- if or .Params.noindex (eq .Kind "404") -}}
+  {{- $ni = true -}}
+{{- end -}}
+{{- /* thin/stub blog posts (auto-reindex once expanded past the threshold) */ -}}
+{{- if and .IsPage (in site.Params.mainSections .Section) -}}
+  {{- if lt .WordCount 130 -}}
+    {{- $ni = true -}}
+  {{- end -}}
+{{- end -}}
+{{- /* single-post tag pages (redundant with the post itself); categories/passions unaffected */ -}}
+{{- if eq .Kind "term" -}}
+  {{- if and (eq .Data.Singular "tag") (lt (len .Pages) 2) -}}
+    {{- $ni = true -}}
+  {{- end -}}
+{{- end -}}
+{{- return $ni -}}
