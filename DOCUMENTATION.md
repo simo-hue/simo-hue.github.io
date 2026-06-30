@@ -1111,3 +1111,7 @@ Errore durante il push dovuto alla divergenza tra branch locale e remoto (16 com
     - SEO-29: `logo_text` Hugoplate → Simone Mattioli (fixes the sitewide logo `alt`); removed `<meta name="theme-name">`; cleared the demo announcement placeholder.
     - SEO-31: manifest polish — `display: standalone`, added `description`, dropped the unpadded `maskable` purpose.
   - *Current Status*: Batches 1–3 + the CI fix are merged to `master` (fast-forward, 9 commits) and verified on hugo 0.163.3; **awaiting `git push` to deploy**. Remaining audit work: SEO-09/10 (performance), SEO-16/18 (fonts / 3rd-party deferral), SEO-20/25/28 (dead-config cleanup, ProfilePage, richer schema types).
+
+- [2026-06-30]: GitHub Actions Hugo Build Fix
+  - *Details*: Fixed a build failure on GitHub Actions where Hugo could not execute Tailwind CSS compilation due to an unsupported Node.js option (`--permission`).
+  - *Tech Notes*: Hugo version 0.128.0+ passes the `--permission` flag to Node.js when compiling Tailwind to increase security. However, this flag was only made stable in Node.js v22. The GitHub Actions workflow (`.github/workflows/hugo.yml`) was hardcoded to use `node-version: '18'`, causing the build to fail. Updated `node-version` from `18` to `22` in the workflow to resolve the issue.
