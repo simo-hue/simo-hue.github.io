@@ -36,3 +36,26 @@ Full audit run on https://simo-hue.github.io. Health Score: 64/100. Fix top-down
 ### Notes
 - Live == HEAD (deploy via `.github/workflows/hugo.yml`); no stale-deploy gap.
 - `static/_headers`, `_redirects`, `netlify.toml`, `vercel.json`, `amplify.yml` are IGNORED on GitHub Pages — your CSP/security headers are NOT active.
+
+---
+
+## SEO-14 + SEO-25 batch (2026-06-30) — branch `seo-meta-profilepage`
+
+### Deploy
+```
+git checkout master && git merge seo-meta-profilepage && git push
+```
+
+### Manual test after deploy
+1. View-source `https://simo-hue.github.io/` → `<meta name="description">` is the new 148-char text (no longer 297; no SERP truncation).
+2. View-source `https://simo-hue.github.io/about/` → description is the new 155-char text (NOT "this is meta description").
+3. Google Rich Results Test on `/about/` → detects **ProfilePage** with `mainEntity` Person `@id = …/#person`, no errors. Homepage still shows WebSite + Person + FAQ.
+4. (Optional) Request re-indexing of `/about/` in Search Console so the old placeholder snippet is replaced faster.
+
+### ⚠️ Follow-up — bio now inconsistent with the new descriptions (needs your decision)
+The new descriptions say "CS graduate, EIT Digital Master's student (ELTE → KTH)", but these still say current Verona undergrad / omit the master's:
+- `data/about.yml` → `education`: Bachelor's (Verona) still `active: true`; **no master's entry** (add EIT Digital / ELTE / KTH).
+- `content/english/_index.md` → "University Life" feature: "Computer Science student at University of Verona…".
+- `layouts/partials/seo/schema-person.html` → `jobTitle` "Computer Science Student & AI Researcher"; `worksFor` University of Verona; `hasCredential.educationalLevel` "Undergraduate". (`alumniOf` Verona is now correct.)
+Out of scope for SEO-14/25. Say the word and I'll do a follow-up batch to make these consistent.
+- (Optional) Add a `lastmod:` to `/about` front matter if you want the ProfilePage to carry a `dateModified`.
