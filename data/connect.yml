@@ -1,6 +1,9 @@
 sections:
   - title: "Professional"
     links:
+      - name: "App Store"
+        icon: "fab fa-app-store-ios"
+        link: "https://apps.apple.com/us/developer/simone-mattioli/id1896746638"
       - name: "LinkedIn"
         icon: "fab fa-linkedin"
         link: "https://www.linkedin.com/in/simonemattioli2003/"
