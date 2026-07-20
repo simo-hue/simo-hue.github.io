@@ -45,10 +45,10 @@ education:
 passions:
   - name: "Travel & Volunteering"
     icon: "fa-solid fa-plane-departure"
-    link: "/blog/experience/brazil-volunteer-teaching-experience/"
+    link: "/blog/experiences/brazil-volunteer-teaching-experience/"
   - name: "Content Creation"
     icon: "fa-solid fa-video"
-    link: "/blog/project/simos-diary/"
+    link: "https://youtube.com/@simosdiary2003"
   - name: "Cars & Bikes"
     icon: "fa-solid fa-motorcycle"
     link: "/passion/cars/"

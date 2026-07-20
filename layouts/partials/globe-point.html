@@ -4,16 +4,10 @@
 {{ $lng := .lng }}
 {{ $title := .title }}
 {{ $country := .country }}
+{{/* group label now comes from the Hugo section (the "categories" taxonomy was retired) */}}
 {{ $categories := slice }}
-
-{{ with $page.Params.categories }}
-{{ if reflect.IsSlice . }}
-{{ range . }}
-{{ $categories = $categories | append . }}
-{{ end }}
-{{ else }}
-{{ $categories = $categories | append . }}
-{{ end }}
+{{ with $page.CurrentSection }}
+{{ $categories = $categories | append .Title }}
 {{ end }}
 
 {{/* Resolve Image URL */}}

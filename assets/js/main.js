@@ -99,14 +99,14 @@
                     // Use extended description if available, otherwise use regular description
                     document.getElementById("modalDescription").textContent = extendedDescription || description;
 
-                    document.getElementById("modalIcon").className = icon + " text-white dark:text-text-dark text-2xl md:text-3xl";
+                    document.getElementById("modalIcon").className = icon + " ds-tlmodal-icon";
 
                     // Populate tags
                     const tagsContainer = document.getElementById("modalTags");
                     tagsContainer.innerHTML = "";
                     tags.forEach((tag) => {
                         const tagSpan = document.createElement("span");
-                        tagSpan.className = "text-xs md:text-sm font-medium px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300";
+                        tagSpan.className = "ds-tl-tag";
                         tagSpan.textContent = tag.trim();
                         tagsContainer.appendChild(tagSpan);
                     });
@@ -118,10 +118,10 @@
                         achievementsContainer.innerHTML = "";
                         achievements.forEach((achievement) => {
                             const li = document.createElement("li");
-                            li.className = "flex items-start gap-2 p-3 rounded-lg bg-gray-50 dark:bg-darkmode-light";
+                            li.className = "ds-tl-achv";
                             li.innerHTML = `
-                                <i class="fa-solid fa-check-circle text-green-500 mt-1 flex-shrink-0"></i>
-                                <span class="text-sm md:text-base text-gray-700 dark:text-gray-200">${achievement.trim()}</span>
+                                <i class="fa-solid fa-check"></i>
+                                <span>${achievement.trim()}</span>
                             `;
                             achievementsContainer.appendChild(li);
                         });
@@ -143,7 +143,7 @@
                                     a.href = link.url;
                                     a.target = "_blank";
                                     a.rel = "noopener noreferrer";
-                                    a.className = "inline-flex items-center gap-2 px-4 py-2 rounded-lg border-2 border-blue-500 dark:border-blue-400 text-blue-600 dark:text-blue-400 hover:bg-blue-500 hover:text-white dark:hover:bg-blue-400 dark:hover:text-gray-900 transition-all text-sm md:text-base font-medium";
+                                    a.className = "ds-tl-link";
                                     a.innerHTML = `
                                         ${link.label}
                                         <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>

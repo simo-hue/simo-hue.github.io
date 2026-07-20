@@ -1,0 +1,14 @@
+{{ define "main" }}
+<section class="ds-hero" style="min-height:70vh;display:flex;align-items:center">
+  <div class="ds-hero-grid" aria-hidden="true"></div>
+  <div class="ds-container" style="position:relative;z-index:1">
+    <span class="ds-eyebrow">Error · 404</span>
+    <h1 class="ds-hero-title" style="font-family:var(--font-mono);font-size:clamp(4rem,14vw,9rem);letter-spacing:-0.02em;margin-top:1.25rem">404</h1>
+    <p class="ds-hero-lead">This page took a wrong turn on the trail. It isn't here — but plenty else is.</p>
+    <div class="ds-hero-cta">
+      <a href="{{ "/" | relLangURL }}" class="ds-btn ds-btn-primary">Back home <i class="fa-solid fa-arrow-right arrow text-xs" aria-hidden="true"></i></a>
+      <a href="{{ "/blog" | relLangURL }}" class="ds-btn ds-btn-ghost">Read the blog</a>
+    </div>
+  </div>
+</section>
+{{ end }}

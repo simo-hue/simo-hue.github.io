@@ -53,8 +53,8 @@
   {{- end -}}
 {{- else -}}
   {{- $schema = merge $schema (dict "headline" .Title "wordCount" .WordCount) -}}
-  {{- with .Params.categories -}}
-    {{- $schema = merge $schema (dict "articleSection" (index . 0)) -}}
+  {{- with .CurrentSection -}}
+    {{- $schema = merge $schema (dict "articleSection" .Title) -}}
   {{- end -}}
 {{- end -}}
 {{- /* image (all types) */ -}}

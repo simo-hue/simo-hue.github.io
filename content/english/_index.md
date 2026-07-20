@@ -16,7 +16,7 @@ features:
     button:
       enable: true
       label: "Read My Story"
-      link: "/blog/experience/brazil-volunteer-teaching-experience/"
+      link: "/blog/experiences/brazil-volunteer-teaching-experience/"
   - title: "Outdoor Passions"
     icon: "fa-solid fa-mountain"
     icon_class: "icon-outdoor"
@@ -24,7 +24,7 @@ features:
     button:
       enable: true
       label: "See Adventures"
-      link: "/blog/project/mountain-fauna-lover/"
+      link: "/blog/experiences/mountain-fauna-lover/"
   - title: "Continuous Learning"
     icon: "fa-solid fa-book-open"
     icon_class: "icon-learning"
@@ -40,7 +40,7 @@ features:
     button:
       enable: true
       label: "Learn More"
-      link: "/blog/experience/basket-in-carrozzina/"
+      link: "/blog/experiences/basket-in-carrozzina/"
   - title: "University Life"
     icon: "fa-solid fa-graduation-cap"
     icon_class: "icon-university"
@@ -48,7 +48,7 @@ features:
     button:
       enable: true
       label: "Academic Journey"
-      link: "/blog/thought/degree/"
+      link: "/blog/thoughts/degree/"
   - title: "CLAB Univr"
     icon: "fa-solid fa-certificate"
     icon_class: "icon-certificate"
@@ -56,6 +56,6 @@ features:
     button:
       enable: true
       label: "View Certificate"
-      link: "/blog/project/think/attestati/Mattioli.pdf"
+      link: "/blog/experiences/clab-univr/attestati/Mattioli.pdf"
       target: "_blank"
 ---

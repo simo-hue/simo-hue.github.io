@@ -126,8 +126,6 @@ items:
       - "Built genuine connection through transparent storytelling"
       - "Preserved raw memories for future reflection"
     links:
-      - label: "Article"
-        url: "/blog/project/simos-diary/"
       - label: "YouTube Channel"
         url: "https://youtube.com/@simosdiary2003"
     
@@ -180,7 +178,7 @@ items:
       - "Held testimonial seminars in Rome, Padua, and Verona"
     links:
       - label: "Attendance Certificate"
-        url: "/blog/experience/brazil-volunteer-teaching-experience/attendance.pdf"
+        url: "/blog/experiences/brazil-volunteer-teaching-experience/attendance.pdf"
       - label: "Experience Video"
         url: "https://www.youtube.com/watch?v=ptVTxfSqaCo"
 

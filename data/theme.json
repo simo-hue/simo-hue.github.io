@@ -2,39 +2,43 @@
   "colors": {
     "default": {
       "theme_color": {
-        "primary": "#121212",
-        "body": "#fff",
-        "border": "#eaeaea",
-        "light": "#f6f6f6",
-        "dark": "#040404"
+        "primary": "#0a0a0a",
+        "body": "#fafaf8",
+        "border": "#e6e4df",
+        "light": "#ffffff",
+        "dark": "#0a0a0a",
+        "accent": "#a85a2a"
       },
       "text_color": {
-        "text": "#444444",
-        "text_dark": "#040404",
-        "text_light": "#717171"
+        "text": "#52525b",
+        "text_dark": "#0a0a0a",
+        "text_light": "#78716c"
       }
     },
     "darkmode": {
       "theme_color": {
-        "primary": "#fff",
-        "body": "#1c1c1c",
-        "border": "#3E3E3E",
-        "light": "#222222",
-        "dark": "#fff"
+        "primary": "#fafafa",
+        "body": "#0a0a0a",
+        "border": "#262626",
+        "light": "#141414",
+        "dark": "#fafafa",
+        "accent": "#d9823f"
       },
       "text_color": {
-        "text": "#B4AFB6",
-        "text_dark": "#fff",
-        "text_light": "#B4AFB6"
+        "text": "#a3a3a3",
+        "text_dark": "#fafafa",
+        "text_light": "#6b6b6b"
       }
     }
   },
   "fonts": {
     "font_family": {
-      "primary": "Heebo:wght@400;600",
+      "primary": "Geist",
       "primary_type": "sans-serif",
-      "secondary": "Signika:wght@500;700",
-      "secondary_type": "sans-serif"
+      "secondary": "Geist",
+      "secondary_type": "sans-serif",
+      "mono": "Geist Mono",
+      "mono_type": "monospace"
     },
     "font_size": {
       "base": "16",

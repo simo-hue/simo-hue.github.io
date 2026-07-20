@@ -1,24 +1,34 @@
 {{ define "main" }}
 {{ $callData := hugo.Data.booking }}
-<div class="container mx-auto px-4 py-12 md:py-20 lg:max-w-5xl">
+
+<div class="call-page">
+<section class="ds-hero call-hero" style="padding-bottom:0">
+  <div class="ds-container">
+    <span class="ds-eyebrow">Book a call</span>
+    <h1 class="ds-hero-title call-title">Let's talk</h1>
+    <p class="ds-hero-lead call-lead">Pick a slot that works for you — a {{ $callData.meeting_duration }}-minute Google Meet, no strings attached.</p>
+  </div>
+</section>
+
+<div class="container mx-auto px-4 call-wrap lg:max-w-5xl">
     <!-- Main Call Card -->
-    <div class="bg-white dark:bg-neutral-900 rounded-3xl shadow-xl dark:shadow-[0_0_40px_rgba(0,0,0,0.5)] border border-gray-100 dark:border-white/5 overflow-hidden flex flex-col md:flex-row">
+    <div class="bg-white dark:bg-neutral-900 rounded-md shadow-xl dark:shadow-[0_0_40px_rgba(0,0,0,0.5)] border border-gray-100 dark:border-white/5 overflow-hidden flex flex-col md:flex-row">
         
         <!-- Left: Profile Info -->
-        <div class="w-full md:w-2/5 p-8 md:p-10 border-b md:border-b-0 md:border-r border-gray-100 dark:border-white/5 bg-gray-50/50 dark:bg-white/5">
-            <div class="mb-8">
-                <img src="{{ $callData.owner_avatar }}" alt="{{ $callData.owner_name }}" class="w-20 h-20 rounded-full object-cover border-4 border-white dark:border-neutral-800 shadow-md mb-4">
+        <div class="w-full md:w-2/5 p-6 md:p-8 border-b md:border-b-0 md:border-r border-gray-100 dark:border-white/5 bg-gray-50/50 dark:bg-white/5">
+            <div class="mb-6">
+                <img src="{{ $callData.owner_avatar }}" alt="{{ $callData.owner_name }}" class="w-16 h-16 rounded-full object-cover border-4 border-white dark:border-neutral-800 shadow-md mb-3">
                 <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 tracking-wider uppercase mb-1">{{ $callData.owner_title }}</h3>
                 <h1 class="text-2xl font-bold text-gray-900 dark:text-white">{{ $callData.owner_name }}</h1>
             </div>
-            
-            <div class="space-y-4 mb-8">
+
+            <div class="space-y-3 mb-6">
                 <div class="flex items-center text-gray-600 dark:text-gray-300">
-                    <svg class="w-5 h-5 mr-3 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <svg class="w-5 h-5 mr-3 text-[#d9823f]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     <span>{{ $callData.meeting_duration }} min meeting</span>
                 </div>
                 <div class="flex items-center text-gray-600 dark:text-gray-300">
-                    <svg class="w-5 h-5 mr-3 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                    <svg class="w-5 h-5 mr-3 text-[#d9823f]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
                     <span>Google Meet</span>
                 </div>
             </div>
@@ -29,12 +39,12 @@
         </div>
 
         <!-- Right: Calendar & Time Selection -->
-        <div class="w-full md:w-3/5 p-8 md:p-10 relative">
-            <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-6" id="step-title">Select a Date & Time</h2>
-            
+        <div class="w-full md:w-3/5 p-6 md:p-8 relative">
+            <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4" id="step-title">Select a Date & Time</h2>
+
             <!-- Step 1: Calendar -->
             <div id="calendar-step">
-                <div class="flex justify-between items-center mb-4">
+                <div class="flex justify-between items-center mb-3">
                     <button id="prev-month" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-600 dark:text-gray-300 transition-colors">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                     </button>
@@ -54,14 +64,14 @@
                     <div class="text-xs font-semibold text-gray-400 uppercase">Sun</div>
                 </div>
                 
-                <div id="calendar-grid" class="grid grid-cols-7 gap-2">
+                <div id="calendar-grid" class="grid grid-cols-7 gap-1">
                     <!-- Calendar days will be injected here -->
                 </div>
             </div>
 
             <!-- Step 2: Time Slots (hidden by default) -->
             <div id="time-step" class="hidden">
-                <button id="back-to-calendar" class="mb-4 text-sm font-medium text-blue-600 dark:text-blue-400 flex items-center hover:underline">
+                <button id="back-to-calendar" class="mb-4 text-sm font-medium text-[#c06a2a] dark:text-[#e8945a] flex items-center hover:underline">
                     <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
                     Back to Calendar
                 </button>
@@ -73,28 +83,28 @@
 
             <!-- Step 3: Details Form (hidden by default) -->
             <div id="details-step" class="hidden">
-                <button id="back-to-times" class="mb-4 text-sm font-medium text-blue-600 dark:text-blue-400 flex items-center hover:underline">
+                <button id="back-to-times" class="mb-2 text-sm font-medium text-[#c06a2a] dark:text-[#e8945a] flex items-center hover:underline">
                     <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
                     Back to Time Selection
                 </button>
-                <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 mb-6 border border-blue-100 dark:border-blue-800/30">
-                    <p id="final-datetime-display" class="font-medium text-blue-800 dark:text-blue-300"></p>
+                <div class="bg-[#faf0e8] dark:bg-[#5c3117]/20 rounded-lg p-3 mb-4 border border-[#f5e6da] dark:border-[#8a4a22]/30">
+                    <p id="final-datetime-display" class="font-medium text-[#8a4a22] dark:text-[#e0b48f]"></p>
                 </div>
-                
-                <form id="call-form" class="space-y-4">
+
+                <form id="call-form" class="space-y-3">
                     <div>
                         <label for="guest-name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Name</label>
-                        <input type="text" id="guest-name" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-neutral-800 text-gray-900 dark:text-white outline-none transition-shadow">
+                        <input type="text" id="guest-name" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-[#d9823f] focus:border-[#d9823f] bg-white dark:bg-neutral-800 text-gray-900 dark:text-white outline-none transition-shadow">
                     </div>
                     <div>
                         <label for="guest-email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
-                        <input type="email" id="guest-email" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-neutral-800 text-gray-900 dark:text-white outline-none transition-shadow">
+                        <input type="email" id="guest-email" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-[#d9823f] focus:border-[#d9823f] bg-white dark:bg-neutral-800 text-gray-900 dark:text-white outline-none transition-shadow">
                     </div>
                     <div>
                         <label for="guest-notes" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Anything to add? (Optional)</label>
-                        <textarea id="guest-notes" rows="3" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-neutral-800 text-gray-900 dark:text-white outline-none transition-shadow resize-none"></textarea>
+                        <textarea id="guest-notes" rows="2" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-[#d9823f] focus:border-[#d9823f] bg-white dark:bg-neutral-800 text-gray-900 dark:text-white outline-none transition-shadow resize-none"></textarea>
                     </div>
-                    <button type="submit" id="submit-call" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center">
+                    <button type="submit" id="submit-call" class="w-full bg-[#c06a2a] hover:bg-[#a85a2a] text-white font-bold py-2.5 px-6 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center">
                         <span id="btn-text">Schedule Event</span>
                         <svg id="btn-spinner" class="animate-spin -ml-1 mr-3 h-5 w-5 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
@@ -111,12 +121,13 @@
                 </div>
                 <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">You are scheduled</h2>
                 <p class="text-gray-600 dark:text-gray-400 mb-6">A calendar invitation with the Google Meet link has been sent to your email.</p>
-                <a href="/" class="text-blue-600 dark:text-blue-400 font-medium hover:underline">Return to Home</a>
+                <a href="/" class="text-[#c06a2a] dark:text-[#e8945a] font-medium hover:underline">Return to Home</a>
             </div>
 
         </div>
     </div>
 </div>
+</div><!-- /.call-page -->
 
 <script>
     const callConfig = {{ $callData | jsonify | safeJS }};
@@ -186,7 +197,7 @@
             
             const btn = document.createElement('button');
             btn.textContent = day;
-            btn.className = "aspect-square flex items-center justify-center rounded-full text-sm transition-all relative font-medium w-10 h-10 mx-auto";
+            btn.className = "aspect-square flex items-center justify-center rounded-full text-sm transition-all relative font-medium w-9 h-9 mx-auto";
             
             let isAvailable = false;
             let availabilityConfig = callConfig.availability[dayOfWeekStr];
@@ -202,7 +213,7 @@
             }
             
             if (isAvailable) {
-                btn.classList.add("text-blue-600", "dark:text-blue-400", "bg-blue-50", "dark:bg-blue-900/20", "hover:bg-blue-600", "hover:text-white", "dark:hover:bg-blue-500", "dark:hover:text-white", "cursor-pointer");
+                btn.classList.add("text-[#c06a2a]", "dark:text-[#e8945a]", "bg-[#faf0e8]", "dark:bg-[#5c3117]/20", "hover:bg-[#c06a2a]", "hover:text-white", "dark:hover:bg-[#d9823f]", "dark:hover:text-white", "cursor-pointer");
                 btn.onclick = () => selectDate(dateObj, dateStr, dayOfWeekStr);
             } else {
                 btn.classList.add("text-gray-300", "dark:text-gray-600", "cursor-not-allowed");
@@ -210,7 +221,7 @@
             }
             
             if (dateObj.getTime() === today.getTime()) {
-                btn.classList.add("border", "border-blue-500");
+                btn.classList.add("border", "border-[#d9823f]");
             }
             
             calendarGrid.appendChild(btn);
@@ -238,7 +249,7 @@
         slots.forEach(time => {
             const btn = document.createElement('button');
             btn.textContent = time;
-            btn.className = "py-3 px-4 rounded-xl border border-blue-200 dark:border-blue-800 text-blue-600 dark:text-blue-400 font-medium hover:border-blue-600 dark:hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-all text-center";
+            btn.className = "py-3 px-4 rounded-xl border border-[#ecd3bf] dark:border-[#8a4a22] text-[#c06a2a] dark:text-[#e8945a] font-medium hover:border-[#c06a2a] dark:hover:border-[#e8945a] hover:bg-[#faf0e8] dark:hover:bg-[#5c3117]/30 transition-all text-center";
             btn.onclick = () => selectTime(time);
             timeSlotsContainer.appendChild(btn);
         });
@@ -338,5 +349,14 @@
 .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
 .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(156, 163, 175, 0.5); border-radius: 10px; }
 .dark .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(75, 85, 99, 0.5); }
+
+/* ── Fit the whole booking flow in one viewport (no page scroll) ── */
+.call-hero { padding-top: clamp(0.75rem, 3vh, 1.75rem) !important; }
+.call-title { font-size: clamp(1.6rem, 3.4vw, 2.1rem); margin-top: 0.35rem; }
+.call-lead  { margin-top: 0.5rem; font-size: 0.9rem; }
+.call-wrap  { padding-top: 0.75rem; padding-bottom: 1rem; }
+/* the site footer normally has a 5rem top gap + py-8 — shrink both on this page */
+body:has(.call-page) .ds-footer { margin-top: 0; }
+body:has(.call-page) .ds-footer .ds-container > div { padding-top: 0.85rem; padding-bottom: 0.85rem; }
 </style>
 {{ end }}

@@ -1,115 +1,65 @@
 {{ define "main" }}
-<!-- Modern Post Header -->
-<section
-  class="relative overflow-hidden pt-20 pb-12 bg-gradient-to-b from-primary/5 via-transparent to-transparent dark:from-darkmode-primary/5">
-  <!-- Decorative elements -->
-  <div class="hero-blob bg-blue-400/20 w-96 h-96 rounded-full top-0 left-0 mix-blend-multiply dark:mix-blend-overlay">
-  </div>
-  <div
-    class="hero-blob bg-purple-400/20 w-96 h-96 rounded-full bottom-0 right-0 mix-blend-multiply dark:mix-blend-overlay animation-delay-2000">
-  </div>
+<article>
+  <!-- Post header -->
+  <header class="ds-hero" style="padding-bottom:2.5rem">
+    <div class="ds-container">
+      <div class="ds-read">
+        <a href="{{ "/blog" | relLangURL }}" class="ds-back"><i class="fa-solid fa-arrow-left arrow-back" aria-hidden="true"></i> All writings</a>
 
-  <div class="container relative z-10">
-    <div class="max-w-4xl mx-auto text-center">
-      <!-- Categories -->
-      {{ if .Params.categories }}
-      <div class="flex flex-wrap gap-2 justify-center mb-6">
-        {{ range .Params.categories }}
-        <span class="category-badge">
-          {{ . }}
-        </span>
-        {{ end }}
-      </div>
-      {{ end }}
-
-      <!-- Title -->
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
-        {{ .Title }}
-      </h1>
-
-      <!-- Description -->
-      {{ if .Params.description }}
-      <p class="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-        {{ .Params.description }}
-      </p>
-      {{ end }}
-
-      <!-- Meta Info -->
-      <div class="flex flex-wrap items-center justify-center gap-6 text-sm opacity-70">
-        <div class="flex items-center gap-2">
-          <i class="far fa-calendar"></i>
-          <time datetime="{{ .PublishDate.Format "2006-01-02" }}">
-            {{ .PublishDate.Format "January 02, 2006" }}
-          </time>
+        <div class="ds-eyebrow" style="margin-top:1.75rem">
+          {{ with .CurrentSection }}<a href="{{ .RelPermalink }}" style="color:inherit;text-decoration:none">{{ .Title }}</a>{{ else }}Writing{{ end }}
         </div>
 
-        <div class="flex items-center gap-2">
-          <i class="far fa-user"></i>
-          <a href="/about/" rel="author">{{ .Params.author | default site.Params.metadata.author }}</a>
-        </div>
+        <h1 class="ds-post-title">{{ .Title }}</h1>
 
-        <div class="flex items-center gap-2">
-          <i class="far fa-clock"></i>
-          <span>{{ math.Round (div (countwords .Content) 200.0) }} min read</span>
+        {{ with .Params.description }}<p class="ds-post-lead">{{ . }}</p>{{ end }}
+
+        <div class="ds-post-byline">
+          <span><i class="fa-regular fa-user" aria-hidden="true"></i> <a href="{{ "/about" | relLangURL }}" rel="author">{{ .Params.author | default site.Params.metadata.author }}</a></span>
+          <span class="ds-post-card-dot">·</span>
+          <time datetime="{{ .PublishDate.Format "2006-01-02" }}">{{ .PublishDate.Format "January 02, 2006" }}</time>
+          <span class="ds-post-card-dot">·</span>
+          <span>{{ .ReadingTime }} min read</span>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </header>
 
-<!-- Post Image -->
-{{ if .Params.image }}
-<section class="section pt-0">
-  <div class="container">
-    <div class="max-w-5xl mx-auto">
-      <div class="rounded-2xl overflow-hidden shadow-2xl">
+  <!-- Hero image -->
+  {{ if .Params.image }}
+  <div class="ds-container">
+    <div class="ds-read-wide">
+      <figure class="ds-post-figure">
         {{ partial "image" (dict "Src" .Params.image "Context" . "Alt" .Title "Class" "w-full" "Priority" true) }}
-      </div>
+      </figure>
     </div>
   </div>
-</section>
-{{ end }}
+  {{ end }}
 
-<!-- Post Content -->
-<section class="section">
-  <div class="container">
-    <div class="row justify-center">
-      <div class="lg:col-10">
-        {{ $widget:= site.Params.widgets.sidebar | complement (slice "categories") }}
-        <div class="row gx-5 {{ if not $widget }}justify-center{{ end }}">
-          <!-- Content -->
-          <div class="{{ if $widget }}lg:col-8{{ else }}lg:col-12{{ end }}">
-            <article class="prose prose-lg dark:prose-invert max-w-none blog-prose">
-              {{ .Content }}
-            </article>
-
-
-          </div>
-
-          <!-- Sidebar -->
-          {{ if $widget }}
-          <aside class="lg:col-4">
-            {{ partialCached "widgets/widget-wrapper" ( dict "Widgets" $widget "Scope" . ) }}
+  <!-- Content -->
+  <section class="section" style="padding-top:3.5rem">
+    <div class="ds-container">
+      <div class="ds-read">
+        <div class="prose prose-lg dark:prose-invert max-w-none blog-prose">
+          {{ .Content }}
         </div>
-        {{ end }}
       </div>
     </div>
-  </div>
-  </div>
-</section>
+  </section>
+</article>
 
-<!-- Related Posts -->
+<!-- Related posts -->
 {{ $related := first 3 ((where site.RegularPages "Section" "blog").Related .) }}
 {{ with $related }}
-<section class="section pt-0">
-  <div class="container">
-    <div class="max-w-5xl mx-auto">
-      <h2 class="text-2xl font-bold mb-8 text-center">{{ i18n "related_posts" | default "Related Posts" }}</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {{ range . }}
-        {{ partial "components/blog-card.html" . }}
-        {{ end }}
-      </div>
+<hr class="ds-rule" />
+<section class="section">
+  <div class="ds-container">
+    <div class="ds-section-head">
+      <span class="ds-eyebrow">Related</span>
+      <h2 class="ds-section-title">Keep reading</h2>
+    </div>
+    <div class="ds-post-grid">
+      {{ range . }}{{ partial "components/blog-card.html" . }}{{ end }}
     </div>
   </div>
 </section>

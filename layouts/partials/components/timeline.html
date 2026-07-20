@@ -64,62 +64,49 @@
 
 <!-- Timeline Modal -->
 <div id="timelineModal"
-    class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/50 backdrop-blur-lg transition-all duration-300 opacity-0">
+    class="fixed inset-0 z-50 hidden items-center justify-center p-4 ds-tlmodal-overlay transition-all duration-300 opacity-0">
     <div
-        class="timeline-modal-content relative bg-white dark:bg-darkmode-body rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto transform scale-95 transition-all duration-300">
+        class="timeline-modal-content relative max-w-2xl w-full max-h-[90vh] overflow-y-auto transform scale-95 transition-all duration-300">
         <!-- Close Button -->
-        <button id="closeModal"
-            class="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-darkmode-light hover:bg-gray-200 dark:hover:bg-darkmode-border transition-colors">
-            <svg class="w-6 h-6 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
+        <button id="closeModal" aria-label="Close" class="ds-iconbtn absolute top-4 right-4 z-10">
+            <i class="fa-solid fa-xmark"></i>
         </button>
 
         <!-- Modal Content -->
         <div class="p-6 md:p-8">
-            <!-- Icon Circle -->
-            <div class="flex items-center justify-center mb-6">
-                <div
-                    class="flex items-center justify-center bg-primary dark:bg-darkmode-primary shadow-xl w-16 h-16 md:w-20 md:h-20 rounded-full">
-                    <i id="modalIcon" class="text-white dark:text-text-dark text-2xl md:text-3xl"></i>
-                </div>
+            <!-- Icon -->
+            <div class="ds-tlmodal-iconbox mb-6">
+                <i id="modalIcon"></i>
             </div>
 
-            <!-- Header: Date and Title -->
-            <div class="text-center mb-6">
-                <span id="modalDate"
-                    class="text-primary dark:text-darkmode-primary font-bold text-sm md:text-base uppercase tracking-wider mb-2 block"></span>
-                <h2 id="modalTitle"
-                    class="font-bold text-gray-800 dark:text-white text-2xl md:text-3xl leading-tight mb-2"></h2>
-                <h3 id="modalOrganization" class="font-semibold text-gray-500 dark:text-gray-400 text-base md:text-lg">
-                </h3>
-            </div>
+            <!-- Header: Date, Title, Organization -->
+            <span id="modalDate" class="ds-tlmodal-date block"></span>
+            <h2 id="modalTitle" class="ds-tlmodal-title"></h2>
+            <h3 id="modalOrganization" class="ds-tlmodal-org"></h3>
 
             <!-- Description -->
-            <p id="modalDescription"
-                class="text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-200 mb-6 whitespace-pre-line">
-            </p>
+            <p id="modalDescription" class="ds-tlmodal-desc mt-6 whitespace-pre-line"></p>
 
             <!-- Achievements Section (hidden by default) -->
-            <div id="modalAchievementsSection" class="hidden mb-6">
-                <h4 class="flex items-center gap-2 text-lg font-bold text-gray-800 dark:text-white mb-3">
-                    <i class="fa-solid fa-trophy text-yellow-500"></i>
+            <div id="modalAchievementsSection" class="hidden mt-8">
+                <h4 class="ds-tlmodal-h4 mb-3">
+                    <i class="fa-solid fa-trophy"></i>
                     Key Achievements
                 </h4>
                 <ul id="modalAchievements" class="space-y-2"></ul>
             </div>
 
             <!-- Links Section (hidden by default) -->
-            <div id="modalLinksSection" class="hidden mb-6">
-                <h4 class="flex items-center gap-2 text-lg font-bold text-gray-800 dark:text-white mb-3">
-                    <i class="fa-solid fa-link text-blue-500"></i>
+            <div id="modalLinksSection" class="hidden mt-8">
+                <h4 class="ds-tlmodal-h4 mb-3">
+                    <i class="fa-solid fa-link"></i>
                     Related Links
                 </h4>
                 <div id="modalLinks" class="flex flex-wrap gap-2"></div>
             </div>
 
             <!-- Tags -->
-            <div id="modalTags" class="flex flex-wrap gap-2 justify-center"></div>
+            <div id="modalTags" class="flex flex-wrap gap-2 mt-8"></div>
         </div>
     </div>
 </div>

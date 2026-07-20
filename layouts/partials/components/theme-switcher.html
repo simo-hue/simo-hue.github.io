@@ -1,0 +1,30 @@
+{{ $class := .Class }}
+{{ if site.Params.theme_switcher }}
+  <button type="button" class="ds-iconbtn ds-theme-toggle {{ $class }}" data-theme-switcher aria-label="Toggle color theme">
+    <i class="fa-solid fa-sun ds-theme-sun" aria-hidden="true"></i>
+    <i class="fa-solid fa-moon ds-theme-moon" aria-hidden="true"></i>
+  </button>
+
+  <script>
+    (function () {
+      var stored = localStorage.getItem("theme");
+      var darkMode = stored === "dark";
+      if (stored === null) {
+        darkMode = {{ if eq site.Params.theme_default "dark" }}true{{ else }}false{{ end }};
+        {{ if eq site.Params.theme_default "system" }}
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) { darkMode = true; }
+        {{ end }}
+      }
+      document.documentElement.classList.toggle("dark", darkMode);
+
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll("[data-theme-switcher]").forEach(function (ts) {
+          ts.addEventListener("click", function () {
+            var isDark = document.documentElement.classList.toggle("dark");
+            localStorage.setItem("theme", isDark ? "dark" : "light");
+          });
+        });
+      });
+    })();
+  </script>
+{{ end }}

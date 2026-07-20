@@ -1,35 +1,49 @@
+/* Geist Sans — display + body */
 @font-face {
-    font-family: 'Heebo';
+    font-family: 'Geist';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url('/fonts/Heebo-Regular.woff2') format('woff2'),
-         url('/fonts/Heebo-Regular.ttf') format('truetype');
+    src: url('/fonts/Geist-Regular.woff2') format('woff2');
 }
 
 @font-face {
-    font-family: 'Heebo';
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: url('/fonts/Heebo-SemiBold.woff2') format('woff2'),
-         url('/fonts/Heebo-SemiBold.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Signika';
+    font-family: 'Geist';
     font-style: normal;
     font-weight: 500;
     font-display: swap;
-    src: url('/fonts/Signika-Medium.woff2') format('woff2'),
-         url('/fonts/Signika-Medium.ttf') format('truetype');
+    src: url('/fonts/Geist-Medium.woff2') format('woff2');
 }
 
 @font-face {
-    font-family: 'Signika';
+    font-family: 'Geist';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('/fonts/Geist-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Geist';
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url('/fonts/Signika-Bold.woff2') format('woff2'),
-         url('/fonts/Signika-Bold.ttf') format('truetype');
+    src: url('/fonts/Geist-Bold.woff2') format('woff2');
+}
+
+/* Geist Mono — metadata, labels, code */
+@font-face {
+    font-family: 'Geist Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/GeistMono-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Geist Mono';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('/fonts/GeistMono-Medium.woff2') format('woff2');
 }

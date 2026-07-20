@@ -3,7 +3,6 @@ title: "guida ai bias cognitivi, Capire le Trappole della Mente | Raffaele Gaito
 description: 
 date: 2024-11-04T19:31:32+01:00
 image: image.webp
-categories: ["books"]
 slug: bias-cognitivi
 tags: []
 draft: false

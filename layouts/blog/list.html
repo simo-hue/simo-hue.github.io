@@ -1,44 +1,54 @@
 {{ define "main" }}
-<!-- Modern Blog Header -->
-<section class="section pt-14 pb-10">
-  <div class="container">
-    <div class="text-center">
-      <h1 class="text-5xl md:text-6xl font-bold mb-4 relative inline-block">
-        {{ .Title }}
-        <span
-          class="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></span>
-      </h1>
-      {{ if .Params.description }}
-      <p class="text-lg opacity-70 max-w-2xl mx-auto mt-6">
-        {{ .Params.description }}
-      </p>
+{{/*
+  This template serves TWO page kinds under /blog/:
+    • the hub  (/blog/)            → grid of ALL posts across every section
+    • a section (/blog/<section>/) → grid of that section's posts
+  Grouping is driven by Hugo sections (the "categories" taxonomy was retired).
+*/}}
+{{ $blog := site.GetPage "/blog" }}
+{{ $isHub := eq .RelPermalink $blog.RelPermalink }}
+{{ $posts := cond $isHub .RegularPagesRecursive .RegularPages }}
+
+{{/* explicit section order for the chip row (mirrors the nav) */}}
+{{ $order := slice "experiences" "tech-projects" "thoughts" "books" "publications" }}
+
+<section class="ds-hero" style="padding-bottom:0">
+  <div class="ds-container">
+    {{ if $isHub }}
+      <span class="ds-eyebrow">Writings · {{ len $posts }} posts</span>
+      <h1 class="ds-hero-title" style="font-size:clamp(1.85rem,3.4vw,2.7rem);line-height:1.08;margin-top:1.25rem">{{ .Title }}</h1>
+    {{ else }}
+      <a href="{{ $blog.RelPermalink }}" class="ds-back"><i class="fa-solid fa-arrow-left arrow-back" aria-hidden="true"></i> All writings</a>
+      <span class="ds-eyebrow" style="margin-top:1.5rem">Section · {{ len $posts }} posts</span>
+      <h1 class="ds-hero-title" style="font-size:clamp(1.85rem,3.4vw,2.7rem);line-height:1.08;margin-top:1.25rem">{{ .Title }}</h1>
+    {{ end }}
+    {{ with .Params.description }}<p class="ds-hero-lead" style="margin-top:1.25rem;max-width:none">{{ . }}</p>{{ end }}
+
+    <div class="ds-chiprow">
+      <a href="{{ $blog.RelPermalink }}" class="ds-chip{{ if $isHub }} active{{ end }}">All</a>
+      {{ range $order }}
+        {{ with site.GetPage (printf "/blog/%s" .) }}
+          <a href="{{ .RelPermalink }}" class="ds-chip{{ if eq .RelPermalink $.RelPermalink }} active{{ end }}">{{ .Title }} <span class="ds-chip-n">{{ len .RegularPages }}</span></a>
+        {{ end }}
       {{ end }}
     </div>
   </div>
 </section>
 
-<section class="section pt-0">
-  <div class="container">
-    <div class="row gx-5">
-      <!-- blog posts -->
-      <div class="lg:col-8">
-        <div class="row">
-          {{ $paginator:= .Paginate .RegularPages }}
-          {{ range $paginator.Pages }}
-          <div class="md:col-6 mb-8">
-            {{ partial "components/blog-card" . }}
-          </div>
-          {{ end }}
-        </div>
-        {{ partial "components/pagination.html" . }}
-      </div>
-      <!-- sidebar -->
-      <aside class="lg:col-4">
-        <!-- widget -->
-        {{ $widget:= site.Params.widgets.sidebar }}
-        {{ partialCached "widgets/widget-wrapper" ( dict "Widgets" $widget "Scope" . ) }}
+<hr class="ds-rule" />
+
+<section class="section" style="padding-top:3.5rem">
+  <div class="ds-container">
+    {{ $paginator := .Paginate $posts }}
+    <div class="ds-post-grid">
+      {{ range $index, $page := $paginator.Pages }}
+        {{ if lt $index 3 }}{{ $page.Scratch.Set "IsPriority" true }}{{ end }}
+        {{ partial "components/blog-card" $page }}
+      {{ end }}
     </div>
-  </div>
+    <div class="mt-16">
+      {{ partial "components/pagination.html" . }}
+    </div>
   </div>
 </section>
 {{ end }}

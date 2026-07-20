@@ -2,7 +2,19 @@
 
 - [ ] provare ad implementare metodo immediato- Salva l'immagine che hai allegato in chat nel percorso: `static/images/profile_connect.png` per renderla visibile nella pagina Linktree.
 
-- [ ] /grill-me I would love to enhance the style and graphic quality of my website. I don't want to change   the structure or the visualization methods but only the UI as I think it's quite basic and I want a   more professional and modern one. Before proposing me something I want you to analyze the structure   of the content in my website so you can understand which kind of website it is.
+- [~] /grill-me — UI redesign. Design system agreed + ALL phases (P0–P3) built on branch `new-UI` and verified (prod build clean). Awaiting your review before merge. See `DESIGN_SYSTEM.md` and the "UI v2 redesign" section below.
+
+---
+
+## UI v2 redesign — Manual actions (2026-07-13)
+All work is on the **`new-UI`** branch. Nothing is live: GitHub Pages only deploys on push to `master`.
+
+1. **Preview it locally:** `hugo server` (or `npm run dev`), then open http://localhost:1313 — it opens in dark mode (new default). Toggle light mode with the sun/moon switch. Try ⌘K (search), resize to mobile for the nav sheet.
+2. **Review & approve direction** before I build the remaining phases (P1 blog · P2 about/passions/links · P3 globe/call/connect/search/404). Tell me any tweaks (accent shade, headline copy, spacing).
+3. **Decide the merge** when the whole redesign is approved: merging `new-UI` → `master` will deploy the new UI live. Do NOT merge mid-way (visitors would see a half-migrated site).
+4. **Confirm the nav curation:** the top bar now shows 4 primary items (About · Blog · Passions · Globe). Links, Globe, Call, Tech, Connect are reachable via ⌘K search + the mobile menu + footer. Say if you want a different primary set.
+5. **Note — `theme_default` changed to `dark`** in `config/_default/params.toml`. Change back to `system` if you'd rather respect the visitor's OS setting on first load.
+6. (Bonus) This partially closes SEO audit item #12: Geist fonts are now WOFF2, self-hosted, and preloaded (Heebo/Signika no longer used by the new UI).
 
 ---
 
@@ -39,3 +51,28 @@ Full audit run on https://simo-hue.github.io. Health Score: 64/100. Fix top-down
 ### Notes
 - Live == HEAD (deploy via `.github/workflows/hugo.yml`); no stale-deploy gap.
 - `static/_headers`, `_redirects`, `netlify.toml`, `vercel.json`, `amplify.yml` are IGNORED on GitHub Pages — your CSP/security headers are NOT active.
+---
+
+## Blog IA restructure — Manual actions (2026-07-13)
+Done on branch `new-UI` (nothing live until merged to `master`). The blog is now driven by **Hugo sections** (`/blog/experiences|tech-projects|thoughts|books|publications/`); the `categories` taxonomy is gone and all old URLs redirect. A few things need YOUR judgment (content, not code):
+
+1. **Preview it:** `hugo server` → open http://localhost:1313/blog/ — check the chip row (All + 5 sections), open a section page (was a 404 before), and confirm the "Blog" nav dropdown lists the 5 sections with **no more "Tech" top-level and no duplicate "Projects"**.
+2. **`Simo's Diary` is now `draft: true`** (`content/english/blog/thoughts/simo's Diary/index.md`) because the body is an unfinished stub ("…da completare"). Decide: (a) finish it and remove `draft`, or (b) surface it (with `Mountain Fauna Lover`) on the **Content-Creation passion** page and leave it out of the blog feed. It's a YouTube/IG promo, so (b) may fit better.
+3. **`Mountain Fauna Lover`** was folded into **Experiences** as a pragmatic reversible home. It's really content-creation — say if you'd rather I link it from `/passion/content-creation/` and pull it from the blog.
+4. **`GDG AI Hackathon` still has `description: "aaa"`** and a ~1-word body (it's one of the SEO-audit thin posts). Write a real description + a few paragraphs, or set `draft: true` until you do.
+5. **Two old, ambiguous URLs could NOT be redirected 1:1** because they were slug collisions (each was silently overwriting another post): `/blog/experience/budapest-collegio-don-mazza/` now resolves to **Budapest Trip** (GDG moved to `/blog/experiences/gdg-ai-hackathon/` with no legacy alias); `/blog/thought/trap/` now resolves to **social traps** (Impostor Syndrome moved to `/blog/thoughts/impostor-syndrome/`). If GDG or Impostor had any inbound links, they won't forward — minor.
+6. **After merging to `master`:** resubmit `sitemap.xml` in Google Search Console and expect the old `/categories/*` and singular-folder URLs to show as redirects. The `aliases` are meta-refresh stubs (fine for GitHub Pages, which has no server redirects).
+7. **Italian translations preserved** in `unused_content/blog-it-translations/` (`degree`, `live-the-dream`, `the-star-counter`). If you re-enable Italian later, re-add them inside their bundles as `index.it.md` (the old `it.md` name never worked).
+8. **Supersedes SEO-audit item #8** ("keep /categories/"): `/categories/` is intentionally retired now; the section pages + tags carry grouping. Thin-post items (#7) still stand.
+
+---
+
+## Production-readiness audit — remaining YOUR-judgment items (2026-07-13)
+All code/link/UI bugs found in the audit are already fixed on branch `new-UI` (see DOCUMENTATION.md). These last items are **content decisions**, not bugs — nothing blocks shipping, but they'd raise polish:
+
+1. **Thin "coming soon" stubs publish with `draft: false`.** Several posts are placeholders with ~1 sentence of body: `experiences/{ELTE, KTH, TalTech, GDG AI Hackathon}` ("Future article about…") and `tech-projects/{Evolve, Ping Pong Counter, Warranties Vault}` ("The complete article will be written here"). They render fine (no broken images anymore) but are visibly empty. **Decide per post:** write real content, or set `draft: true` until you do. (Thin content is also an SEO drag — ties into SEO-audit thin-post items.)
+2. **Missing cover images.** I removed the broken `image:` refs from the 4 tech/experience stubs above, so their cards now show as text-only (clean, but less eye-catching than image cards). When you have screenshots/photos, drop a `home.webp`/`cover.webp` into each post's bundle and re-add `image:` — the card + hero will pick it up automatically.
+3. **`CLab UNIRv` title** (`experiences/CLAB Univr/index.md`) reads "UNIRv" — looks like a typo for "UNIVr" (Univ. Verona). Left as-is (your branding call); fix the `title:` if unintended.
+4. **CLAB study-materials zip** is now generated & committed (15 MB). If you'd rather not ship 15 MB in the repo, tell me and I'll instead remove the download line or host the archive externally (Drive/Releases) and link out.
+5. **Optional dead-code cleanup (harmless):** the retired `categories` taxonomy still has orphan references — `layouts/_default/terms.html` (a `/categories/` block that never matches), `partials/widgets/{blog,tech}-categories.html` (guarded, not included anywhere). Safe to leave; say the word to prune.
+6. **External project sites** `simo-hue.github.io/CampFlow/` and `/mattioli.OS/` are linked from project cards and are currently live (HTTP 200). They're separate repos — just keep them deployed so those links don't 404.

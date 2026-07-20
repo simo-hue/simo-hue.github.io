@@ -27,8 +27,10 @@ ID = 'G-5TJVJY8EZ2' # see https://gohugo.io/templates/internal/#configure-google
 "pages" = "/:slug/"
 
 ########################## Taxonomies ############################
+# NOTE: the "category" taxonomy was retired — blog grouping is now driven by
+# Hugo sections (content/english/blog/<section>/). Old /categories/* URLs are
+# redirected via aliases on each section's _index.md.
 [taxonomies]
-category = "categories"
 tag = "tags"
 passion = "passion"
 
@@ -41,9 +43,6 @@ toLower = true
 [[related.indices]]
 name = "tags"
 weight = 100
-[[related.indices]]
-name = "categories"
-weight = 80
 [[related.indices]]
 name = "date"
 weight = 10

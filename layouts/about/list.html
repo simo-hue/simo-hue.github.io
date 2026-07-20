@@ -1,200 +1,113 @@
 {{ define "main" }}
-<section class="section pt-14 pb-16">
-    <div class="container">
-        {{- /* Header Section */ -}}
-        <div class="text-center mb-16">
-            <h1 class="text-h2 mb-4">{{ hugo.Data.about.profile.name }}</h1>
-            <p class="text-lg text-text dark:text-darkmode-text">{{ hugo.Data.about.profile.headline }}</p>
+{{ $a := hugo.Data.about }}
+
+<section class="ds-hero" style="padding-bottom:0">
+  <div class="ds-container">
+    <span class="ds-eyebrow">About</span>
+    <h1 class="ds-hero-title" style="font-size:clamp(2.25rem,6vw,4rem);margin-top:1.25rem">{{ $a.profile.name }}</h1>
+    <p class="ds-hero-lead" style="margin-top:1.25rem">{{ $a.profile.headline }}</p>
+  </div>
+</section>
+
+<hr class="ds-rule" />
+
+<section class="section" style="padding-top:3.5rem">
+  <div class="ds-container">
+    <div class="ds-about-grid">
+
+      <!-- Portrait -->
+      <figure class="ds-about-portrait">
+        {{ partial "image" (dict "Src" $a.profile.image "Alt" $a.profile.name "Class" "w-full h-full object-cover") }}
+        <figcaption>
+          {{ with $a.profile.bio }}<p class="bio">{{ . }}</p>{{ end }}
+          {{ with $a.socials }}
+          <div class="socials">
+            {{ range . }}<a href="{{ .link }}" target="_blank" rel="noopener" aria-label="{{ .name }}"><i class="{{ .icon }}"></i></a>{{ end }}
+          </div>
+          {{ end }}
+        </figcaption>
+      </figure>
+
+      <!-- Principle cards -->
+      {{ range (slice $a.life $a.vision $a.goal) }}
+      {{ with . }}
+      <div class="ds-card">
+        <i class="{{ .icon }} ds-accent text-2xl" aria-hidden="true"></i>
+        <h2 class="ds-card-title" style="margin-top:1.25rem">{{ .title }}</h2>
+        <p class="ds-card-body">{{ .content }}</p>
+      </div>
+      {{ end }}
+      {{ end }}
+
+      <!-- Education -->
+      {{ with $a.education }}
+      <div class="ds-card ds-about-edu">
+        <span class="ds-eyebrow">Education</span>
+        <div class="ds-edu-list">
+          {{ range . }}
+          <div class="ds-edu-item{{ if .active }} active{{ end }}">
+            <h3>{{ .title }}</h3>
+            <p>{{ .place }}</p>
+          </div>
+          {{ end }}
         </div>
-
-        {{- /* Main Grid */ -}}
-        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 auto-rows-[minmax(180px,auto)]">
-
-            {{- /* Profile Image Card */ -}}
-            <div
-                class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-3xl shadow-lg h-full min-h-[400px]">
-                {{ partial "image" (dict "Src" hugo.Data.about.profile.image "Alt" hugo.Data.about.profile.name
-                "Class" "w-full h-full object-cover transition-transform duration-700 group-hover:scale-105") }}
-
-                <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-8">
-                    {{- /* Quote */ -}}
-                    {{- if hugo.Data.about.profile.quote -}}
-                    <p class="text-white/90 italic font-light text-sm mb-4 block">
-                        {{ hugo.Data.about.profile.quote }}
-                    </p>
-                    {{- end -}}
-
-                    <p id="profile-bio" class="text-white text-lg font-medium leading-relaxed drop-shadow-md">
-                        {{ hugo.Data.about.profile.bio }}
-                    </p>
-
-                    {{- /* Social Links */ -}}
-                    {{- if hugo.Data.about.socials -}}
-                    <div class="flex gap-4 mt-6">
-                        {{- range hugo.Data.about.socials -}}
-                        <a href="{{ .link }}" target="_blank" rel="noopener noreferrer"
-                            aria-label='{{ .name | default "Social link" }}'
-                            class="text-white/80 hover:text-white text-2xl transition-colors {{ .color }}">
-                            <i class="{{ .icon }}" aria-hidden="true"></i>
-                        </a>
-                        {{- end -}}
-                    </div>
-                    {{- end -}}
-                </div>
-            </div>
-
-            {{- /* Education Card (New) */ -}}
-            {{- if hugo.Data.about.education -}}
-            <section
-                class="rounded-3xl bg-white dark:bg-darkmode-light shadow-lg p-6 border border-border dark:border-darkmode-border flex flex-col justify-center">
-                <h2 class="font-bold text-lg mb-4 flex items-center gap-2">
-                    <i class="fa-solid fa-user-graduate text-primary dark:text-darkmode-primary" aria-hidden="true"></i>
-                    Education
-                </h2>
-                <div class="space-y-4">
-                    {{- range hugo.Data.about.education -}}
-                    <div class="relative pl-4 border-l-2 border-primary/20 dark:border-darkmode-primary/20">
-                        <h4 class="font-bold text-sm leading-tight">{{ .title }}</h4>
-                        <p class="text-xs opacity-70 mt-1">{{ .place }}</p>
-                    </div>
-                    {{- end -}}
-                </div>
-            </section>
-            {{- end -}}
-
-            {{- /* Vision Card */ -}}
-            {{- with hugo.Data.about.vision -}}
-            <section
-                class="rounded-3xl p-8 {{ .color }} shadow-lg flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
-                <div class="text-4xl mb-4 opacity-80" aria-hidden="true">
-                    <i class="{{ .icon }}"></i>
-                </div>
-                <div>
-                    <h2 class="font-bold text-xl mb-2">{{ .title }}</h2>
-                    <p class="text-sm opacity-90 leading-relaxed">{{ .content }}</p>
-                </div>
-            </section>
-            {{- end -}}
-
-            {{- /* Life Card */ -}}
-            {{- with hugo.Data.about.life -}}
-            <section
-                class="rounded-3xl p-8 {{ .color }} shadow-lg flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
-                <div class="text-4xl mb-4 opacity-80" aria-hidden="true">
-                    <i class="{{ .icon }}"></i>
-                </div>
-                <div>
-                    <h2 class="font-bold text-xl mb-2">{{ .title }}</h2>
-                    <p class="text-sm opacity-90 leading-relaxed">{{ .content }}</p>
-                </div>
-            </section>
-            {{- end -}}
-
-            {{- /* Goal Card */ -}}
-            {{- with hugo.Data.about.goal -}}
-            <section
-                class="rounded-3xl p-8 {{ .color }} shadow-lg flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
-                <div class="text-4xl mb-4 opacity-80" aria-hidden="true">
-                    <i class="{{ .icon }}"></i>
-                </div>
-                <div>
-                    <h2 class="font-bold text-xl mb-2">{{ .title }}</h2>
-                    <p class="text-sm opacity-90 leading-relaxed">{{ .content }}</p>
-                </div>
-            </section>
-            {{- end -}}
-
-            {{- /* Stats Grid */ -}}
-            {{- if hugo.Data.about.stats -}}
-            <div class="md:col-span-3 lg:col-span-2 grid grid-cols-3 gap-4">
-                {{- range hugo.Data.about.stats -}}
-                <div
-                    class="bg-white dark:bg-darkmode-light rounded-2xl shadow-md p-6 flex flex-col items-center justify-center text-center border border-border dark:border-darkmode-border">
-                    <span class="text-3xl font-bold text-primary dark:text-darkmode-primary mb-1">{{ .value }}</span>
-                    <span class="text-xs uppercase tracking-wider text-gray-500">{{ .label }}</span>
-                </div>
-                {{- end -}}
-            </div>
-            {{- end -}}
-
-            {{- /* Passions & Interests */ -}}
-            {{- if hugo.Data.about.passions -}}
-            <section
-                class="md:col-span-3 lg:col-span-2 bg-white dark:bg-darkmode-light rounded-3xl shadow-lg p-8 border border-border dark:border-darkmode-border">
-                <h2 class="font-bold text-xl mb-6 flex items-center gap-2">
-                    <i class="fa-solid fa-heart text-red-500" aria-hidden="true"></i>
-                    <span>Passions & Interests</span>
-                </h2>
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                    {{- range hugo.Data.about.passions -}}
-                    {{- if .link -}}
-                    <a href="{{ .link | relURL }}"
-                        class="flex items-center gap-3 p-3 rounded-xl bg-gray-50 dark:bg-darkmode-body hover:bg-primary/5 dark:hover:bg-darkmode-primary/10 transition-colors group">
-                        <i class="{{ .icon }} text-primary dark:text-darkmode-primary group-hover:scale-110 transition-transform" aria-hidden="true"></i>
-                        <span class="font-medium text-sm">{{ .name }}</span>
-                    </a>
-                    {{- else -}}
-                    <div
-                        class="flex items-center gap-3 p-3 rounded-xl bg-gray-50 dark:bg-darkmode-body hover:bg-primary/5 dark:hover:bg-darkmode-primary/10 transition-colors">
-                        <i class="{{ .icon }} text-primary dark:text-darkmode-primary" aria-hidden="true"></i>
-                        <span class="font-medium text-sm">{{ .name }}</span>
-                    </div>
-                    {{- end -}}
-                    {{- end -}}
-                </div>
-            </section>
-            {{- end -}}
-
-        </div>
-
-        {{- /* Call-to-Action Cards */ -}}
-        <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <h2 class="sr-only">Explore More</h2>
-            <a href="{{ " categories/books/" | relURL }}"
-                class="group block p-8 rounded-3xl bg-orange-50 dark:bg-orange-900/10 hover:bg-orange-100 transition-colors border border-orange-100 dark:border-orange-800/30">
-                <h3
-                    class="text-xl font-bold text-orange-700 dark:text-orange-400 mb-2 group-hover:translate-x-1 transition-transform">
-                    📚 Books that inspired me
-                    <i class="fa-solid fa-arrow-right text-sm ml-2 opacity-0 group-hover:opacity-100 transition-opacity"
-                        aria-hidden="true"></i>
-                </h3>
-                <p class="text-sm opacity-70">Check out my reading list and what I learned.</p>
-            </a>
-
-            <a href="{{ " categories/thoughts/" | relURL }}"
-                class="group block p-8 rounded-3xl bg-purple-50 dark:bg-purple-900/10 hover:bg-purple-100 transition-colors border border-purple-100 dark:border-purple-800/30">
-                <h3
-                    class="text-xl font-bold text-purple-700 dark:text-purple-400 mb-2 group-hover:translate-x-1 transition-transform">
-                    💭 Thoughts
-                    <i class="fa-solid fa-arrow-right text-sm ml-2 opacity-0 group-hover:opacity-100 transition-opacity"
-                        aria-hidden="true"></i>
-                </h3>
-                <p class="text-sm opacity-70">Personal and professional reflections.</p>
-            </a>
-
-            <a href="{{ " categories/experiences/" | relURL }}"
-                class="group block p-8 rounded-3xl bg-green-50 dark:bg-green-900/10 hover:bg-green-100 transition-colors border border-green-100 dark:border-green-800/30">
-                <h3
-                    class="text-xl font-bold text-green-700 dark:text-green-400 mb-2 group-hover:translate-x-1 transition-transform">
-                    🌍 Experiences
-                    <i class="fa-solid fa-arrow-right text-sm ml-2 opacity-0 group-hover:opacity-100 transition-opacity"
-                        aria-hidden="true"></i>
-                </h3>
-                <p class="text-sm opacity-70">Educational and life experiences.</p>
-            </a>
-
-            <a href="{{ " categories/tech-projects/" | relURL }}"
-                class="group block p-8 rounded-3xl bg-indigo-50 dark:bg-indigo-900/10 hover:bg-indigo-100 transition-colors border border-indigo-100 dark:border-indigo-800/30">
-                <h3
-                    class="text-xl font-bold text-indigo-700 dark:text-indigo-400 mb-2 group-hover:translate-x-1 transition-transform">
-                    💻 Tech Projects
-                    <i class="fa-solid fa-arrow-right text-sm ml-2 opacity-0 group-hover:opacity-100 transition-opacity"
-                        aria-hidden="true"></i>
-                </h3>
-                <p class="text-sm opacity-70">Deep dive into my coding experiments.</p>
-            </a>
-        </div>
-
+      </div>
+      {{ end }}
     </div>
+
+    <!-- Stats strip -->
+    {{ with $a.stats }}
+    <div class="ds-metastrip" style="margin-top:1.5rem">
+      {{ range . }}<div class="ds-metacell"><div class="v">{{ .value }}</div><div class="k">{{ .label }}</div></div>{{ end }}
+      <div class="ds-metacell"><div class="v">{{ len (where site.RegularPages "Section" "blog") }}</div><div class="k">Writings</div></div>
+    </div>
+    {{ end }}
+
+    <!-- Passions -->
+    {{ with $a.passions }}
+    <div style="margin-top:4rem">
+      <span class="ds-eyebrow">Passions &amp; interests</span>
+      <div class="ds-passion-grid">
+        {{ range . }}
+        {{ if .link }}
+        <a href="{{ .link | relURL }}" class="ds-passion-item"><i class="{{ .icon }} ds-accent" aria-hidden="true"></i> <span>{{ .name }}</span></a>
+        {{ else }}
+        <div class="ds-passion-item"><i class="{{ .icon }} ds-accent" aria-hidden="true"></i> <span>{{ .name }}</span></div>
+        {{ end }}
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+<hr class="ds-rule" />
+
+<!-- Explore more -->
+<section class="section">
+  <div class="ds-container">
+    <div class="ds-section-head">
+      <span class="ds-eyebrow">Explore</span>
+      <h2 class="ds-section-title">Go deeper</h2>
+    </div>
+    {{ $cta := slice
+      (dict "t" "Books that inspired me" "d" "My reading list and what I learned." "u" "/blog/books/")
+      (dict "t" "Thoughts" "d" "Personal and professional reflections." "u" "/blog/thoughts/")
+      (dict "t" "Experiences" "d" "Educational and life experiences." "u" "/blog/experiences/")
+      (dict "t" "Tech Projects" "d" "A deep dive into my coding experiments." "u" "/blog/tech-projects/")
+    }}
+    <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
+      {{ range $i, $c := $cta }}
+      <a href="{{ $c.u | relLangURL }}" class="ds-card group">
+        <div class="flex items-center justify-between">
+          <span class="ds-card-index">{{ printf "%02d" (add $i 1) }}</span>
+          <i class="fa-solid fa-arrow-right ds-accent text-sm" aria-hidden="true"></i>
+        </div>
+        <h3 class="ds-card-title">{{ $c.t }}</h3>
+        <p class="ds-card-body">{{ $c.d }}</p>
+      </a>
+      {{ end }}
+    </div>
+  </div>
 </section>
 {{ end }}

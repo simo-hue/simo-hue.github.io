@@ -2,7 +2,15 @@
 {{- if .IsHome -}}
 {{- $title = site.Title -}}
 {{- else -}}
-{{- $title = printf "%s | Simone Mattioli" .Title -}}
+{{/* Prefer an explicit SEO meta_title, else the page title. Append the brand
+     only when it isn't already part of the string, so titles that already end
+     in "| Simone Mattioli" don't get it duplicated. */}}
+{{- $base := or .Params.meta_title .Title -}}
+{{- if in $base "Simone Mattioli" -}}
+{{- $title = $base -}}
+{{- else -}}
+{{- $title = printf "%s | Simone Mattioli" $base -}}
+{{- end -}}
 {{- end -}}
 <title>{{ $title }}</title>
 
@@ -53,10 +61,8 @@
 {{- if .Lastmod -}}
 <meta property="article:modified_time" content='{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}'>
 {{- end -}}
-{{- with .Params.categories -}}
-{{- range . -}}
-<meta property="article:section" content="{{ . }}">
-{{- end -}}
+{{- with .CurrentSection -}}
+<meta property="article:section" content="{{ .Title }}">
 {{- end -}}
 {{- with .Params.tags -}}
 {{- range . -}}

@@ -1,138 +1,130 @@
 {{ define "main" }}
 
-<!-- Hero Section -->
-<section class="section relative overflow-hidden flex items-center justify-center pt-[0px] pb-10">
-  <!-- Background Decor -->
-  <div class="hero-blob bg-blue-400/30 w-96 h-96 rounded-full top-0 left-0 mix-blend-multiply dark:mix-blend-overlay">
-  </div>
-  <div
-    class="hero-blob bg-purple-400/30 w-96 h-96 rounded-full bottom-0 right-0 mix-blend-multiply dark:mix-blend-overlay animation-delay-2000">
-  </div>
+<!-- ============================================================ HERO ==== -->
+<section class="ds-hero">
+  <div class="ds-hero-grid" aria-hidden="true"></div>
+  <div class="ds-container">
+    <div class="ds-hero-inner">
+      <span class="ds-eyebrow ds-reveal">CS · AI &amp; HPC · EIT Digital Master's</span>
 
-  <div class="container relative z-10 text-center">
-    {{ with .Params.banner }}
-    <div class="animate-fade-in-up">
-      <h1 class="text-6xl md:text-8xl font-bold mb-6 tracking-tight">
-        {{ .title | markdownify }}
-        <span class="block text-gradient-animate mt-2">{{ .subtitle | default "Simone Mattioli" }}</span>
-      </h1>
+      <h1 class="ds-hero-title ds-reveal ds-delay-1">Simone&nbsp;Mattioli</h1>
 
-      <!-- Rotating Keywords Line -->
-      <div
-        class="text-xl md:text-2xl text-text dark:text-darkmode-text mb-10 max-w-3xl mx-auto flex flex-col md:flex-row md:flex-wrap md:justify-center gap-2 md:gap-0">
-        <!-- First line on mobile: FROM + word -->
-        <div class="flex items-center justify-center gap-2">
-          <span class="opacity-80">From </span>
-          <span class="rotating-words-container inline-block relative">
-            <span class="rotating-word active font-semibold text-primary dark:text-darkmode-primary">Brazil's
-              favelas</span>
-            <span class="rotating-word font-semibold text-primary dark:text-darkmode-primary">the mountains</span>
-            <span class="rotating-word font-semibold text-primary dark:text-darkmode-primary">lines of code</span>
-            <span class="rotating-word font-semibold text-primary dark:text-darkmode-primary">kindness</span>
-            <span class="rotating-word font-semibold text-primary dark:text-darkmode-primary">me</span>
-            <span class="rotating-word font-semibold text-primary dark:text-darkmode-primary">you</span>
-          </span>
-        </div>
+      <p class="ds-hero-lead ds-reveal ds-delay-2">
+        Computer scientist working across AI and high-performance computing —
+        and, off the clock, chasing mountains, volunteering, and telling
+        stories on camera.
+      </p>
 
-        <!-- Second line on mobile: TO + word -->
-        <div class="flex items-center justify-center gap-2">
-          <span class="opacity-80">to </span>
-          <span class="rotating-words-container-2 inline-block relative">
-            <span class="rotating-word-2 active font-semibold text-primary dark:text-darkmode-primary">meaningful
-              impact</span>
-            <span class="rotating-word-2 font-semibold text-primary dark:text-darkmode-primary">human connection</span>
-            <span class="rotating-word-2 font-semibold text-primary dark:text-darkmode-primary">personal growth</span>
-            <span class="rotating-word-2 font-semibold text-primary dark:text-darkmode-primary">digital
-              innovation</span>
-            <span class="rotating-word-2 font-semibold text-primary dark:text-darkmode-primary">you</span>
-            <span class="rotating-word-2 font-semibold text-primary dark:text-darkmode-primary">me</span>
-          </span>
-        </div>
-      </div>
+      <p class="ds-hero-rotator ds-reveal ds-delay-2">
+        <span>from</span>
+        <span class="rot" data-rotate='["kindness","the mountains","lines of code","Brazil’s favelas"]'>kindness</span>
+        <span>&rarr;</span>
+        <span class="rot" data-rotate='["digital innovation","human connection","meaningful impact","personal growth"]'>digital innovation</span>
+      </p>
 
-      {{ with .button }}
-      {{ if .enable }}
-      <a class="inline-flex items-center gap-3 px-8 py-4 bg-primary text-white rounded-full text-lg font-medium transition-all hover:scale-105 hover:shadow-lg hover:shadow-primary/30"
-        href="{{ .link | relURL }}" {{ if .target }} target="{{ .target }}" rel="noopener" {{ else if strings.HasPrefix
-        .link `http` }} target="_blank" rel="noopener" {{ end }}>
-        {{ .label }}
-        <i class="fa fa-arrow-right"></i>
-      </a>
-      {{ end }}
-      {{ end }}
-    </div>
-
-
-    {{ end }}
-  </div>
-</section>
-
-<!-- Bento Grid Features / Timeline -->
-<section class="section pt-0 pb-20">
-  <div class="container">
-    <h2 class="text-4xl font-bold text-center mb-2 relative inline-block left-1/2 -translate-x-1/2">
-      My Journey
-      <span
-        class="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></span>
-    </h2>
-
-    <div class="p-0">
-      {{ partial "components/timeline.html" . }}
-    </div>
-  </div>
-</section>
-
-<!-- Some Insights Section -->
-{{ with .Params.features }}
-<section
-  class="section py-20 bg-gradient-to-b from-transparent via-gray-50/50 dark:via-darkmode-body/50 to-transparent">
-  <div class="container">
-    <h2 class="text-4xl font-bold text-center mb-12 relative inline-block left-1/2 -translate-x-1/2">
-      Some Insights
-      <span
-        class="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full"></span>
-    </h2>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {{ range . }}
-      <div class="insight-card group">
-        <!-- Icon Header -->
-        <div class="mb-6 flex items-center gap-4">
-          <div class="insight-icon {{ .icon_class }}">
-            <i class="{{ .icon }} text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-bold">{{ .title }}</h3>
-        </div>
-
-        <!-- Content -->
-        {{ if .bulletpoints }}
-        <ul class="space-y-3 mb-6">
-          {{ range .bulletpoints }}
-          <li class="flex items-start gap-2 text-sm opacity-80">
-            <span class="text-primary dark:text-darkmode-primary mt-1">•</span>
-            <span>{{ . }}</span>
-          </li>
-          {{ end }}
-        </ul>
-        {{ else if .content }}
-        <p class="text-sm opacity-80 mb-6">{{ .content }}</p>
-        {{ end }}
-
-        <!-- Button -->
-        {{ with .button }}
-        {{ if .enable }}
-        <a href="{{ .link | relURL }}" {{ if .target }} target="{{ .target }}" rel="noopener" {{ end }}
-          class="inline-flex items-center gap-2 text-sm font-medium text-primary dark:text-darkmode-primary hover:gap-3 transition-all group-hover:translate-x-1">
-          {{ .label }}
-          <i class="fa fa-arrow-right text-xs"></i>
+      <div class="ds-hero-cta ds-reveal ds-delay-3">
+        {{ with .Params.banner.button }}{{ if .enable }}
+          <a href="{{ .link | relLangURL }}" class="ds-btn ds-btn-primary"
+             {{ if .target }}target="{{ .target }}" rel="noopener"{{ end }}>
+            <i class="fa-solid fa-arrow-down text-xs" aria-hidden="true"></i> {{ .label }}
+          </a>
+        {{ end }}{{ end }}
+        <a href="{{ "/blog" | relLangURL }}" class="ds-btn ds-btn-ghost">
+          Read the blog <i class="fa-solid fa-arrow-right arrow text-xs" aria-hidden="true"></i>
         </a>
-        {{ end }}
-        {{ end }}
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== META STRIP ==== -->
+{{ with hugo.Data.about.stats }}
+<section class="pb-20">
+  <div class="ds-container">
+    <div class="ds-metastrip">
+      {{ range . }}
+        <div class="ds-metacell">
+          <div class="v">{{ .value }}</div>
+          <div class="k">{{ .label }}</div>
+        </div>
+      {{ end }}
+      <div class="ds-metacell">
+        <div class="v">{{ len (where site.RegularPages "Section" "blog") }}</div>
+        <div class="k">Writings</div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<hr class="ds-rule" />
+
+<!-- ======================================================= JOURNEY ===== -->
+<section class="section">
+  <div class="ds-container">
+    <div class="ds-section-head">
+      <span class="ds-eyebrow">01 / Journey</span>
+      <h2 class="ds-section-title">The path so far</h2>
+      <p class="ds-section-sub">From a technical diploma in Rovereto to an EIT Digital Master's across ELTE and KTH — a timeline of study, work and detours.</p>
+    </div>
+    {{ partial "components/timeline.html" . }}
+  </div>
+</section>
+
+<hr class="ds-rule" />
+
+<!-- ======================================================= EXPLORE ===== -->
+{{ with .Params.features }}
+<section class="section">
+  <div class="ds-container">
+    <div class="ds-section-head">
+      <span class="ds-eyebrow">02 / Explore</span>
+      <h2 class="ds-section-title">Curiosities &amp; commitments</h2>
+      <p class="ds-section-sub">The threads that run through everything I make — technology, the outdoors, learning, and people.</p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+      {{ range $i, $f := . }}
+        <a class="ds-card group"
+           href="{{ with $f.button }}{{ .link | relLangURL }}{{ end }}"
+           {{ with $f.button }}{{ if .target }}target="{{ .target }}" rel="noopener"{{ end }}{{ end }}>
+          <div class="flex items-center justify-between">
+            <span class="ds-card-index">{{ printf "%02d" (add $i 1) }}</span>
+            <i class="{{ $f.icon }} ds-accent" aria-hidden="true"></i>
+          </div>
+          <h3 class="ds-card-title">{{ $f.title }}</h3>
+          {{ if $f.bulletpoints }}
+            <ul class="ds-card-body space-y-1.5">
+              {{ range $f.bulletpoints }}<li>{{ . }}</li>{{ end }}
+            </ul>
+          {{ else }}
+            <p class="ds-card-body">{{ $f.content }}</p>
+          {{ end }}
+          {{ with $f.button }}{{ if .enable }}
+            <span class="ds-card-link">{{ .label }} <i class="fa-solid fa-arrow-right arrow text-[0.65rem]" aria-hidden="true"></i></span>
+          {{ end }}{{ end }}
+        </a>
       {{ end }}
     </div>
   </div>
 </section>
 {{ end }}
+
+<script>
+  // Restrained rotator for the single mono hero line (respects reduced-motion)
+  (function () {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    document.querySelectorAll('.ds-hero-rotator .rot').forEach(function (el, offset) {
+      var words; try { words = JSON.parse(el.getAttribute('data-rotate')); } catch (e) { return; }
+      if (!words || words.length < 2) return;
+      var i = 0;
+      setInterval(function () {
+        i = (i + 1) % words.length;
+        el.style.opacity = '0';
+        setTimeout(function () { el.textContent = words[i]; el.style.opacity = '1'; }, 250);
+      }, 3200 + offset * 400);
+    });
+  })();
+</script>
 
 {{ end }}

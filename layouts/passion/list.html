@@ -1,81 +1,37 @@
 {{ define "main" }}
-{{ partial "page-header" . }}
+{{ $passions := slice
+  (dict "title" "Technology"       "link" "/passion/technology"       "desc" "My technical and programming projects" "icon" "💻")
+  (dict "title" "Sport"            "link" "/passion/sport"            "desc" "My sporting activities and adventures" "icon" "🏃")
+  (dict "title" "Personal Growth"  "link" "/passion/personal-growth"  "desc" "Reflections on life and personal growth" "icon" "💭")
+  (dict "title" "Content Creation" "link" "/passion/content-creation" "desc" "My journey in creating content" "icon" "🎥")
+  (dict "title" "Cars"             "link" "/passion/cars"             "desc" "Engines and everything that moves fast" "icon" "🏎️")
+  (dict "title" "Bikes"            "link" "/passion/bikes"            "desc" "Adventures on two wheels and mountain trails" "icon" "🏍️")
+}}
 
-<section class="section">
-  <div class="container">
-    <div class="row gx-5">
-      <!-- Passions Categories Grid -->
-      <div class="col-12">
-        <div class="row">
-          {{ $passionsConfig := slice
-          (dict
-          "title" "Technology"
-          "link" "/passion/technology"
-          "desc" "My technical and programming projects"
-          "color" "indigo"
-          "icon" "💻"
-          )
-          (dict
-          "title" "Sport"
-          "link" "/passion/sport"
-          "desc" "My sporting activities and adventures"
-          "color" "green"
-          "icon" "🏃"
-          )
-          (dict
-          "title" "Personal Growth"
-          "link" "/passion/personal-growth"
-          "desc" "Reflections on life and personal growth"
-          "color" "purple"
-          "icon" "💭"
-          )
-          (dict
-          "title" "Content Creation"
-          "link" "/passion/content-creation"
-          "desc" "My journey in creating content"
-          "color" "pink"
-          "icon" "🎥"
-          )
-          (dict
-          "title" "Cars"
-          "link" "/passion/cars"
-          "desc" "My passion for engines and everything that moves fast"
-          "color" "red"
-          "icon" "🏎️"
-          )
-          (dict
-          "title" "Bikes"
-          "link" "/passion/bikes"
-          "desc" "Adventures on two wheels and mountain trails"
-          "color" "orange"
-          "icon" "🏍️"
-          )
-          }}
+<section class="ds-hero" style="padding-bottom:0">
+  <div class="ds-container">
+    <span class="ds-eyebrow">Passions · {{ len $passions }} threads</span>
+    <h1 class="ds-hero-title" style="font-size:clamp(2.25rem,6vw,4rem);margin-top:1.25rem">{{ .Title | default "Passions" }}</h1>
+    <p class="ds-hero-lead" style="margin-top:1.25rem">The things I chase when I'm not writing code — on wheels, on trails, on camera.</p>
+  </div>
+</section>
 
-          {{ range $passionsConfig }}
-          {{ $color := .color }}
-          {{ $darkBgClass := printf "dark:bg-%s-900/10" $color }}
-          {{ if eq $color "gray" }}
-          {{ $darkBgClass = "dark:bg-white/5" }}
-          {{ end }}
+<hr class="ds-rule" />
 
-          <div class="md:col-6 lg:col-4 mb-8 flex">
-            <a href="{{ .link | relURL }}"
-              class="group block p-8 rounded-3xl w-full bg-{{ $color }}-50 {{ $darkBgClass }} hover:bg-{{ $color }}-100 transition-colors border border-{{ $color }}-100 dark:border-{{ $color }}-800/30 flex flex-col justify-between">
-              <div>
-                <h3
-                  class="text-xl font-bold text-{{ $color }}-700 dark:text-{{ $color }}-400 mb-2 group-hover:translate-x-1 transition-transform">
-                  <span class="mr-2 inline-block">{{ .icon }}</span>{{ .title }}
-                  <i class="fa-solid fa-arrow-right text-sm ml-2 opacity-0 group-hover:opacity-100 transition-opacity"
-                    aria-hidden="true"></i>
-                </h3>
-                <p class="text-sm opacity-70 mb-4">{{ .desc }}</p>
-              </div>
-            </a>
-          </div>
-          {{ end }}
+<section class="section" style="padding-top:3.5rem">
+  <div class="ds-container">
+    <div class="ds-post-grid">
+      {{ range $i, $p := $passions }}
+      <a href="{{ $p.link | relURL }}" class="ds-card group">
+        <div class="flex items-center justify-between">
+          <span class="text-2xl" aria-hidden="true">{{ $p.icon }}</span>
+          <span class="ds-card-index">{{ printf "%02d" (add $i 1) }}</span>
         </div>
-      </div>
+        <h3 class="ds-card-title">{{ $p.title }}</h3>
+        <p class="ds-card-body">{{ $p.desc }}</p>
+        <span class="ds-card-link">Explore <i class="fa-solid fa-arrow-right arrow text-[0.65rem]" aria-hidden="true"></i></span>
+      </a>
+      {{ end }}
     </div>
   </div>
 </section>

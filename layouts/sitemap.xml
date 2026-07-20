@@ -31,23 +31,24 @@
         {{- end }}
       {{- end }}
     {{- end }}
-    {{- /* --- Priority & Changefreq by content type --- */ -}}
-    {{- if in .Params.categories "Experiences" }}
+    {{- /* --- Priority & Changefreq by content type (driven by Hugo sections) --- */ -}}
+    {{- $sec := "" }}{{- with .CurrentSection }}{{ $sec = .Title }}{{ end }}
+    {{- if and (eq .Kind "page") (eq $sec "Experiences") }}
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
-    {{- else if or (in .Params.categories "projects") (in .Params.categories "tech projects") (in .Params.categories "tech-projects") }}
+    {{- else if and (eq .Kind "page") (eq $sec "Tech Projects") }}
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
-    {{- else if in .Params.categories "thoughts" }}
+    {{- else if and (eq .Kind "page") (eq $sec "Thoughts") }}
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
-    {{- else if in .Params.categories "publications" }}
+    {{- else if and (eq .Kind "page") (eq $sec "Publications") }}
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
-    {{- else if or (in .Params.categories "passion") (in .Params.categories "passions") }}
+    {{- else if and (eq .Kind "page") (eq .Section "passion") }}
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
-    {{- else if in .Params.categories "books" }}
+    {{- else if and (eq .Kind "page") (eq $sec "Books") }}
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
     {{- else if eq .Kind "page" }}

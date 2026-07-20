@@ -21,73 +21,51 @@ name = "Passions"
 url = "/passion"
 weight = 4
 
-[[main]]
-name = "Globe"
-url = "/globe"
-weight = 5
-
-#[[main]]
-#name = "Elements"
-#url = "/elements"
-#weight = 3
-
-#[[main]]
-#weight = 4
-#name = "Pages"
-
+# ── Blog hub + its 5 sections (single unified tree) ──
 [[main]]
 name = "Blog"
 url = "/blog"
 weight = 5
 
+[[main]]
+parent = "Blog"
+name = "Experiences"
+url = "/blog/experiences/"
+weight = 1
 
 [[main]]
 parent = "Blog"
-name = "Books Readed"
-url = "/categories/books/"
+name = "Tech Projects"
+url = "/blog/tech-projects/"
+weight = 2
 
 [[main]]
 parent = "Blog"
-name = "Projects "
-url = "/categories/projects/"
+name = "Thoughts"
+url = "/blog/thoughts/"
+weight = 3
 
 [[main]]
 parent = "Blog"
-name = "Thougths"
-url = "/categories/thoughts/"
+name = "Books"
+url = "/blog/books/"
+weight = 4
 
 [[main]]
 parent = "Blog"
-name = "Expriences"
-url = "/categories/experiences/"
-
-[[main]]
-name = "Tech"
-url = "/categories/tech-projects/"
-
-[[main]]
-parent = "Tech"
 name = "Publications"
-url = "/categories/publications/"
+url = "/blog/publications/"
+weight = 5
 
 [[main]]
-parent = "Tech"
-name = "Projects"
-url = "/categories/tech-projects/"
-
-#[[main]]
-#name = "Contact"
-#url = "/contact"
-
-#[[main]]
-#name = "Categories"
-#url = "/categories"
-
+name = "Globe"
+url = "/globe"
+weight = 6
 
 [[main]]
 name = "Call"
 url = "/call"
-weight = 6
+weight = 7
 
 # footer menu
 [[footer]]

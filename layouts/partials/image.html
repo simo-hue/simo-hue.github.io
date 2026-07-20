@@ -84,7 +84,11 @@ Parameters:
 {{ end }}
 
 {{ else }}
-{{/* Fallback for external or missing images */}}
+{{/* Fallback: only render when $src is a real external URL or an absolute
+     path (e.g. a /static file). A bare relative filename that failed both the
+     page-resource and global-resource lookup is guaranteed to 404, so we skip
+     it instead of emitting a broken <img>. */}}
+{{ if or (urls.Parse $src).Scheme (hasPrefix $src "/") }}
 {{ if $lightbox }}
 <a href="{{ $src }}" class="glightbox block" data-type="image" data-title="{{ $title }}" data-description="{{ $alt }}">
     {{ end }}
@@ -96,5 +100,9 @@ Parameters:
     {{ end }}
     {{ if $lightbox }}
 </a>
+{{ end }}
+{{ else }}
+{{ $ctxUrl := "" }}{{ with $context }}{{ $ctxUrl = .RelPermalink }}{{ end }}
+{{ warnf "image partial: unresolved image resource %q (page: %s)" $src $ctxUrl }}
 {{ end }}
 {{ end }}
