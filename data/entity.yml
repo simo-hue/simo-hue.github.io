@@ -67,8 +67,8 @@ description: >-
   BSc in Computer Science from the University of Verona and begins the EIT Digital
   Master's programme at ELTE in September 2026, continuing at KTH Royal Institute
   of Technology in August 2027. Alongside his research he publishes iOS
-  applications on the App Store and founded DeepSafe, a cybersecurity-gamification
-  startup.
+  applications on the App Store — six of them, two paid — and founded DeepSafe, a
+  cybersecurity-gamification startup.
 
 # --- Education ---------------------------------------------------------------
 # `completed: false` entries are future and MUST be rendered as such.
@@ -289,10 +289,14 @@ apps:
     store: "https://apps.apple.com/app/ping-pong-counter/id6771022440"
   - name: "Warranties Vault"
     store: "https://apps.apple.com/app/warranties-vault/id6771369236"
+    price: "3.99"
   - name: "Local File Diet"
     site: "https://simo-hue.github.io/Local-File-Diet/"
+    store: "https://apps.apple.com/app/local-file-diet/id6773253471"
+    price: "2.99"
   - name: "SafeSpotter"
     site: "https://simo-hue.github.io/SafeSpotter/"
+    store: "https://apps.apple.com/us/app/safespotter/id6775203521"
 
 projects:
   - name: "CampFlow"
