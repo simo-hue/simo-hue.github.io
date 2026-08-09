@@ -186,13 +186,13 @@ profiles:
     url: "https://scholar.google.com/citations?user=uLGrDbIAAAAJ"
     icon: "fas fa-graduation-cap"
     display: true
-    same_as: false
-    blocked_by: >-
-      ENT-04 — the profile lists "An AI-driven framework for continuous tourist
-      sentiment scoring (RoBERTa-CSS)", Tourism Review 81(1), which is by T Yang
-      and CHC Hsu. Linking it via sameAs would make that false authorship claim
-      machine-resolvable. Set same_as: true once the paper is deleted and
-      auto-update is switched off.
+    # UNGATED 2026-08-08. The profile previously listed "An AI-driven framework for
+    # continuous tourist sentiment scoring (RoBERTa-CSS)", Tourism Review 81(1), by
+    # T Yang and CHC Hsu — not his. Verified removed: the profile now lists only the
+    # BDCC paper, and neither "RoBERTa-CSS" nor the "T Yang" byline appears.
+    # Keep article auto-update switched OFF, or Scholar will re-add papers by
+    # topic similarity and this has to be re-gated.
+    same_as: true
   - name: "Semantic Scholar"
     url: "https://www.semanticscholar.org/author/2429558651"
     icon: "fas fa-flask"
