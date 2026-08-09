@@ -4,7 +4,22 @@ aliases:
 title: "Understanding and Predicting Tourist Behavior through Large Language Models"
 description: "Investigation into the potential of Large Language Models (LLMs) in interpreting and predicting tourist movements using real-world data from Verona, Italy."
 slug: llm-tourism-mobility-predictor
-date: 2024-12-15
+# Actual publication date of the journal article (BDCC 10(4) 117, MDPI).
+# This previously read 2024-12-15, which predated the paper by sixteen months and
+# made the site's own record disagree with Crossref, MDPI and ORCID.
+date: 2026-04-11
+doi: "10.3390/bdcc10040117"
+journal: "Big Data and Cognitive Computing"
+publisher: "MDPI"
+volume: "10"
+issue: "4"
+article_number: "117"
+# Second of four. Never present this as sole-authored.
+authors:
+  - "Anna Dalla Vecchia"
+  - "Simone Mattioli"
+  - "Sara Migliorini"
+  - "Elisa Quintarelli"
 lat: 45.438384
 lon: 10.991622
 country: Italy
@@ -35,7 +50,17 @@ links:
   - title: GitHub Repository
     description: Access the complete open-source codebase and documentation
     website: https://github.com/4nnina/llm_tourist_trajectories
+  - title: DOI — 10.3390/bdcc10040117
+    description: Persistent identifier for the published article
+    website: https://doi.org/10.3390/bdcc10040117
 ---
+
+## Citation
+
+Dalla Vecchia, A., **Mattioli, S.**, Migliorini, S., & Quintarelli, E. (2026).
+*Understanding and Predicting Tourist Behavior Through Large Language Models.*
+**Big Data and Cognitive Computing**, 10(4), 117. MDPI.
+DOI: [10.3390/bdcc10040117](https://doi.org/10.3390/bdcc10040117)
 
 ## Abstract
 

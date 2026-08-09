@@ -23,10 +23,15 @@
 {{- if ge (len $segs) 2 -}}
   {{- $sub = index $segs 1 -}}
 {{- end -}}
+{{- /* Match BOTH plural and singular. The real sections are plural
+       (/blog/publications/, /blog/tech-projects/) while this only tested the
+       singular forms, so the mapping never fired and every post — including the
+       peer-reviewed article — fell back to BlogPosting. The singular forms are
+       kept because each post also carries a singular alias. */ -}}
 {{- $type := "BlogPosting" -}}
-{{- if eq $sub "tech-project" -}}
+{{- if in (slice "tech-projects" "tech-project") $sub -}}
   {{- $type = "SoftwareApplication" -}}
-{{- else if eq $sub "publication" -}}
+{{- else if in (slice "publications" "publication") $sub -}}
   {{- $type = "ScholarlyArticle" -}}
 {{- end -}}
 {{- with .Params.schema_type -}}
@@ -55,6 +60,36 @@
   {{- $schema = merge $schema (dict "headline" .Title "wordCount" .WordCount) -}}
   {{- with .CurrentSection -}}
     {{- $schema = merge $schema (dict "articleSection" .Title) -}}
+  {{- end -}}
+{{- end -}}
+{{- /* Bibliographic detail for real journal articles. Driven by front matter, so
+       only posts that actually carry a DOI get these — the DOI is what lets
+       Crossref, OpenAlex and Google Scholar reconcile this page with the
+       published record rather than treating it as an unrelated blog post. */ -}}
+{{- if eq $type "ScholarlyArticle" -}}
+  {{- with .Params.doi -}}
+    {{- $schema = merge $schema (dict
+        "@id" (printf "https://doi.org/%s" .)
+        "identifier" (dict "@type" "PropertyValue" "propertyID" "DOI" "value" .)
+        "sameAs" (printf "https://doi.org/%s" .)) -}}
+  {{- end -}}
+  {{- with .Params.authors -}}
+    {{- $authors := slice -}}
+    {{- range . -}}
+      {{- $authors = $authors | append (dict "@type" "Person" "name" .) -}}
+    {{- end -}}
+    {{- /* Author order is meaningful: he is second of four, never sole author. */ -}}
+    {{- $schema = merge $schema (dict "author" $authors) -}}
+  {{- end -}}
+  {{- with .Params.journal -}}
+    {{- $periodical := dict "@type" "Periodical" "name" . -}}
+    {{- with $.Params.publisher -}}
+      {{- $periodical = merge $periodical (dict "publisher" (dict "@type" "Organization" "name" .)) -}}
+    {{- end -}}
+    {{- $schema = merge $schema (dict "isPartOf" $periodical) -}}
+  {{- end -}}
+  {{- with .Params.article_number -}}
+    {{- $schema = merge $schema (dict "pagination" .) -}}
   {{- end -}}
 {{- end -}}
 {{- /* image (all types) */ -}}
