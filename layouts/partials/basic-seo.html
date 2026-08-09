@@ -26,8 +26,12 @@
 
 <link rel="canonical" href="{{ .Permalink }}">
 
+{{- /* `follow`, not `nofollow`. These pages are kept out of the index, but tag
+       archives exist precisely to link through to the posts, and nofollow tells
+       crawlers to ignore exactly those links. Noindex removes the page from
+       results; it should not sever the internal link graph underneath it. */ -}}
 {{- if partial "seo/noindex.html" . -}}
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="noindex, follow">
 {{- else -}}
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 {{- end -}}

@@ -523,3 +523,25 @@ Both come from your own documentation, read closely. I have not independently ve
 - Warranties Vault's GitHub link pointed at `simo-hue/Warranties-Vault`, which **404s**. Corrected
   to `simo-hue/Mobl`. Consider renaming that repo to `warranties-vault` (GitHub auto-redirects) —
   the opaque slug is also its App Store support URL.
+
+## [2026-08-08] Your published site is large — one decision left
+
+The site is now 553 MB (down from 750 MB). GitHub Pages' published-site limit is **1 GB**, so you
+have headroom, but the remaining bulk is all in one post and it is yours to judge:
+
+`content/english/blog/experiences/CLAB Univr/` carries roughly 70 MB of course material —
+
+- `materiali-di-study.zip` — 14 MB, **linked from the post**
+- `materiali-di-studio.zip` — 14 MB, **not linked from anywhere**
+- `Business Plan.pdf` (5 MB), `Business Plan.docx` (9 MB), two `.pptx` files (10 MB each)
+
+The two ZIPs have **different checksums**, so they are not identical copies — one may contain
+material the other does not. I did not delete either. Worth checking which is current: if
+`materiali-di-studio.zip` is a superseded rename, that is 14 MB for nothing.
+
+Longer term, hosting the large binaries outside the repo (GitHub Releases, or Drive) and linking
+out would take ~70 MB off every clone and every deploy.
+
+**Note on the images:** I removed 124 image originals that each had a `.webp` twin and were
+referenced by nothing. They are still in git history — `git show HEAD~1:<path> > <path>` restores
+any of them.

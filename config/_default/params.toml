@@ -62,7 +62,10 @@ content = ""
 keywords = ["Simone Mattioli", "Computer Science University of Verona", "AI researcher Italy", "LLM tourism mobility prediction", "HPC machine learning", "Brazil volunteer experience", "mountain hiking Alps Italy", "personal development technology", "social impact projects", "Italian tech student", "volunteer teaching Brazil", "outdoor sports Italy", "computer science blog", "AI research portfolio", "technology humanities bridge"]
 description = "Simone Mattioli — CS graduate and EIT Digital Master's student (ELTE, then KTH) in AI and HPC. Explore my tech projects, volunteering and mountains."
 author = "Simone Mattioli"
-image = "/images/og-image.png"
+# JPEG, not PNG: this is a photographic social card with no transparency, and the
+# PNG was 495 KB where q90 JPEG is 125 KB at identical 1200x630 dimensions. WebP is
+# deliberately avoided here — several social platforms still fail to render it.
+image = "/images/og-image.jpg"
 
 
 # site verifications

@@ -12,10 +12,33 @@
     {{- $ni = true -}}
   {{- end -}}
 {{- end -}}
-{{- /* single-post tag pages (redundant with the post itself); categories/passions unaffected */ -}}
-{{- if eq .Kind "term" -}}
-  {{- if and (eq .Data.Singular "tag") (lt (len .Pages) 2) -}}
-    {{- $ni = true -}}
-  {{- end -}}
+{{- /* ALL tag pages — both the individual terms and the /tags/ index.
+
+       This used to noindex only single-post tags. The measurement that changed it:
+       166 distinct tags across ~60 posts, of which 146 have exactly one post, 14
+       have two, 6 have three or four, and NONE has five or more. The largest tag
+       aggregates 4 posts. So no tag page holds enough to rank for anything, while
+       they were a third of the sitemap — crawl budget spent on near-duplicates of
+       pages that are already in it.
+
+       The pages stay live and navigable for humans; they just leave the index and
+       the sitemap. `passion` is a curated navigation taxonomy and is unaffected. */ -}}
+{{- if and (eq .Kind "term") (eq .Data.Singular "tag") -}}
+  {{- $ni = true -}}
+{{- end -}}
+{{- if and (eq .Kind "taxonomy") (eq .Data.Singular "tag") -}}
+  {{- $ni = true -}}
+{{- end -}}
+
+{{- /* /sections/ is an internal Hugo container, not a page anyone should land on. */ -}}
+{{- if eq .Section "sections" -}}
+  {{- $ni = true -}}
+{{- end -}}
+
+{{- /* The offline fallback is a service-worker shell with no standalone content.
+       Matched on RelPermalink: it renders as Kind=page with an EMPTY .Section, so a
+       Section test silently never fires. */ -}}
+{{- if eq .RelPermalink "/offline/" -}}
+  {{- $ni = true -}}
 {{- end -}}
 {{- return $ni -}}
