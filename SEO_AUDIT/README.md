@@ -169,7 +169,7 @@ Verified-live only. `mailto:` belongs in `email`, not `sameAs`. Self-URL belongs
 | Phase | Tasks | Done |
 |---|---|---|
 | 🚨 P0 | 8 | **4 code fixes done (awaiting deploy)** · 4 owner-actions open |
-| Phase 1 — Entity | 17 | ☐ |
+| Phase 1 — Entity | 17 | **10 shipped** · 7 are owner-actions |
 | Phase 2 — Content | 13 | ☐ |
 | Phase 3 — Italian | 8 | ☐ |
 | Phase 4 — Satellites | 10 | ☐ |
@@ -193,7 +193,19 @@ Also fixed in passing on `CampFlow` `main`: `metadataBase` no longer falls back 
 
 **Correction to §4 of the evidence doc:** DeepSafe's fabricated rating *is* present in the served bytes, as an escaped RSC flight payload (`\"aggregateRating\"`), not absent as first reported. A plain-text grep misses it. Net effect is unchanged for non-rendering AI crawlers, but Googlebot renders JS and would have seen `4.8 / 1250` — so the manual-action exposure was real, not theoretical.
 
-**Still open in P0** — all owner-actions: ENT-04 (Scholar), ENT-15 (Semantic Scholar), ENT-18 (SciProfiles), SAT-05 (LinkedIn). ENT-21a is **resolved**: the publications entry and DOI `10.3390/bdcc10040117` are the same artefact, so the page's Dec-2024 date is stale and must become 2026-04-11. **ENT-22 (Wikidata) is unblocked.**
+**Still open in P0** — all owner-actions: ENT-04 (Scholar), ENT-15 (Semantic Scholar), ENT-18 (SciProfiles), SAT-05 (LinkedIn). ENT-21a is **resolved** and ENT-21 is **shipped** (date corrected to 2026-04-11, DOI added). **ENT-22 (Wikidata) is unblocked.**
+
+### Phase 1 shipped 2026-08-08 — `c08f6997` + `f8cee5dd`, deployed
+
+`CON-03` `data/entity.yml` single source of truth · `ENT-05` Person node rebuilt (canonical `@id`, ORCID identifier, 8 `sameAs`, `worksFor` removed) · `ENT-20` one University of Verona node with Wikidata `sameAs`, replacing three anonymous duplicates · `CON-01` FAQ rewritten, 6 answers · `ENT-13` Person reference on every page (was 2 of 5), `ProfilePage` on `/links/`, `Blog` on `/blog/`, `CollectionPage` on sub-sections · `ENT-08` `llms.txt` generated from entity.yml, all 17 site URLs 200 · `ENT-07` robots.txt with ClaudeBot + 11 more agents and all 8 sitemaps · `ENT-06` TikTok handle · `ENT-21` publication date + DOI.
+
+**Corrections to this audit found while executing:**
+- **The biggest fact in the plan was wrong.** `data/timeline.yml` shows ELTE starts **September 2026** and KTH **August 2027** — he had started neither. Every surface (and this document's own positioning sentence) placed him at KTH already. All copy is now forward-dated; the LinkedIn/ORCID text in `TO_SIMO_DO.md` needs the same correction before it is pasted.
+- **§2.4 named the wrong file.** The bad TikTok handle was in `data/timeline.yml`, twice — `links.yml` was always correct.
+- **§8.10 was a false alarm.** The research repo's homepage link to the singular `/blog/publication/…` resolves 200; the post carries an alias.
+- **A dead schema mapping nobody had spotted.** `schema-blog.html` tested for singular `"publication"`/`"tech-project"` while the sections are plural, so it never fired: the peer-reviewed article and all 19 tech-project posts were rendering as plain `BlogPosting`. Same singular/plural error class as the `llms.txt` 404s.
+
+**Remaining Phase 1 is entirely owner-actions:** ENT-03/19 (ORCID), ENT-04, ENT-14 (GitHub name), ENT-15, ENT-18, ENT-22 (Wikidata), SAT-09 (Search Console + Bing).
 
 **Ordering constraints that must not be violated:**
 `ENT-04` → `ENT-05` (don't consolidate onto a contaminated Scholar profile) · `ENT-12` → `SAT-02` (don't attach `founder` to a policy violation) · `ENT-02` → `SAT-01` · `ENT-21a` → `ENT-22` (don't seed Wikidata from a mismatched title) · `ENT-15` → adding S2 to `sameAs` · `ITA-01` → all other ITA tasks.
