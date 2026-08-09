@@ -486,3 +486,40 @@ was orphaned dead code. Rotate only if you mind junk events.
    *"BSc Computer Science, University of Verona (2022–2025). Incoming EIT Digital Master's student (AUSIR) — ELTE from September 2026, KTH Royal Institute of Technology from August 2027."*
 
 Once you finish ENT-04 (Scholar) and ENT-15 (Semantic Scholar), set `same_as: true` on those two entries in `data/entity.yml` and rebuild — that is the whole change.
+
+## [2026-08-08] Three build stories are drafted and waiting on you
+
+`content/english/blog/tech-projects/{Evolve, Ping Pong Counter, Warranties Vault}/index.md` each
+hold a ~1,000-word engineering case study, `draft: true`, with **7 `[SIMONE: ...]` markers** apiece.
+
+Each marker is a question the repo genuinely cannot answer — it documents WHAT you built, almost
+never WHY. Answer them inline, delete the marker, set `draft: false`. **Do not publish with the
+markers still in the text.**
+
+The questions worth thinking about before you write:
+- Why Flutter for Evolve but native SwiftUI for Ping Pong Counter?
+- Why a full parallel local store in private mode, rather than an offline cache over Supabase?
+- Was iCloud the only multi-device option you considered for private mode?
+- Are the `ICLOUD_SYNC_PLAN.md` documents history or spec? The mobile plan lists seven synced
+  tables where the code has nine, and specifies a `keycheck` record that was never built.
+- Why no Xcode on the dev machine — deliberate, or just how it ended up?
+
+### Two things I noticed in your code, unrelated to SEO
+
+Both come from your own documentation, read closely. I have not independently verified either.
+
+1. **`is_pro` is in the synced column set.** A pulled `is_pro = 1` would be an in-app-purchase
+   bypass. `ICLOUD_SYNC_STATE.md` notes the guarantee holds only because every *current* sender
+   strips it — which is a property of today's clients, not of the protocol.
+2. **HealthKit measurements (`goal_logs.value`) sync** rather than sitting in `localOnlyColumns`.
+   Your notes record this as an accepted risk against App Store guideline **5.1.3(ii)** and mark
+   it an owner decision.
+
+### Also fixed
+
+- ELTE, KTH and TalTech unpublished until those events actually happen.
+- All three app posts had the same copy-pasted description ("A premium Flutter application…"),
+  wrong for the two Swift apps. Rewritten per app.
+- Warranties Vault's GitHub link pointed at `simo-hue/Warranties-Vault`, which **404s**. Corrected
+  to `simo-hue/Mobl`. Consider renaming that repo to `warranties-vault` (GitHub auto-redirects) —
+  the opaque slug is also its App Store support URL.
