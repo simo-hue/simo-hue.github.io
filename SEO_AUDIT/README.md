@@ -1,928 +1,199 @@
-# SEO Audit & Remediation Plan — simo-hue.github.io
+# Personal Entity / GEO / SEO Programme — Simone Mattioli
 
-> **Generated:** 2026-06-30 · **Site:** Personal portfolio & blog (Hugo `0.144.0` + `hugoplate`, GitHub Pages)
-> **Current SEO Health Score:** **64 / 100**
-> **Purpose:** This is an execution-ready task list for a coding agent. Work **top-down** (P0 → P3). Each task is self-contained: it states the file(s), the root cause, the exact **before/after** code, and how to **verify**. Check the box when a task is done *and verified*.
-
----
-
-## How to use this document
-
-- **Order matters.** P0 tasks unblock the biggest wins (structured data + social previews). Do them first.
-- Every code block marked **BEFORE** is the *current* content; **AFTER** is the replacement. Match whitespace; Hugo templates are whitespace-sensitive (`{{- -}}` trims).
-- After each task, run the **Verify** step. Do not mark a task complete on an unverified edit.
-- A **global verification** pass (build + validate all schema + re-run Lighthouse) is at the bottom. Run it once all P0/P1 are done.
-- The live site `== HEAD` of `master` (deploy is automatic via `.github/workflows/hugo.yml`). There is **no** stale-deploy gap; what you fix in source is what ships.
-
-### Project facts the agent needs
-- **Content language:** English only (`en-us`). `it`, `fr`, `es` are disabled in `hugo.toml`.
-- **Main section:** `blog` only (`config/_default/params.toml` → `mainSections = ["blog"]`).
-- **Build command (production, mirrors CI):**
-  ```bash
-  npm ci
-  hugo --gc --minify --baseURL "https://simo-hue.github.io/"
-  ```
-  Output goes to `./public`. **You must build with `--minify`** to reproduce/validate the structured-data bugs — they only manifest in the minified production output.
-- **Local preview:** `npm run dev` (or `hugo server`).
-- **Schema validation:** after building, paste the rendered `<script type="application/ld+json">` blocks into:
-  - Google Rich Results Test → https://search.google.com/test/rich-results
-  - Schema.org validator → https://validator.schema.org/
-
-### Progress tracker
-
-| ID | Severity | Task | Done |
-|----|----------|------|------|
-| SEO-01 | 🔴 P0 | Fix double-encoded JSON-LD (WebSite) | ☐ |
-| SEO-02 | 🔴 P0 | Fix double-encoded JSON-LD (Person) | ☐ |
-| SEO-03 | 🔴 P0 | Fix double-encoded JSON-LD (Breadcrumb) | ☐ |
-| SEO-04 | 🔴 P0 | Fix double-encoded JSON-LD (Video) | ☐ |
-| SEO-05 | 🔴 P0 | Render `BlogPosting` on posts + fix encoding | ☐ |
-| SEO-06 | 🔴 P0 | Stop `partialCached` schema leaking sitewide | ☐ |
-| SEO-07 | 🔴 P0 | Fix `og:image` 404 (move to `static/`, 1200×630) | ☐ |
-| SEO-08 | 🟠 P1 | Translate homepage FAQ to English | ☐ |
-| SEO-09 | 🟠 P1 | Fix homepage LCP (fonts/render-blocking) | ☐ |
-| SEO-10 | 🟠 P1 | Compress oversized images (4.3 MB profile, etc.) | ☐ |
-| SEO-11 | 🟠 P1 | Fix/expand thin & stub posts | ☐ |
-| SEO-12 | 🟠 P1 | Reduce tag-page index bloat | ☐ |
-| SEO-13 | 🟠 P1 | Remove/replace `john-doe` author page | ☐ |
-| SEO-14 | 🟡 P2 | Fix meta-description lengths | ☐ |
-| SEO-15 | 🟡 P2 | Fix or remove broken `SearchAction` (`/search/`) | ☐ |
-| SEO-16 | 🟡 P2 | Convert fonts to WOFF2 + preload | ☐ |
-| SEO-17 | 🟡 P2 | Add `/llms.txt` | ☐ |
-| SEO-18 | 🟡 P2 | Defer GTM / lazy-load FontAwesome | ☐ |
-| SEO-19 | ⚪ P3 | Name consistency + empty `<h2>` + viewport | ☐ |
-| SEO-20 | ⚪ P3 | Decide on dead deploy-config files | ☐ |
-| SEO-21 | 🟠 P1 | Article hero: fix `Context`+`Priority` (LCP) | ☐ |
-| SEO-22 | 🟠 P1 | Broken `/images/` refs (og-image, simo, simo_lovable) | ☐ |
-| SEO-23 | 🟠 P1 | Sitemap must exclude `noindex` (blocks SEO-11/12) | ☐ |
-| SEO-24 | 🟠 P1 | Add author byline + link (E-E-A-T/GEO) | ☐ |
-| SEO-25 | 🟡 P2 | GEO: Person `@id` consolidation + `ProfilePage` | ☐ |
-| SEO-26 | 🟡 P2 | Related posts / internal linking | ☐ |
-| SEO-27 | 🟡 P2 | RSS `<link rel="alternate">` in head | ☐ |
-| SEO-28 | 🟡 P2 | GEO: richer schema types (optional) | ☐ |
-| SEO-29 | ⚪ P3 | Theme-demo leftovers (logo alt, theme-name) | ☐ |
-| SEO-30 | ⚪ P3 | Malformed `<time datetime>` + `og:locale` | ☐ |
-| SEO-31 | ⚪ P3 | PWA manifest icon/screenshot polish | ☐ |
-
-> Tasks **SEO-21 → SEO-31** are the round-2 (source-code) findings — full detail in the **Addendum** section near the end.
+> **Generated:** 2026-08-08 · **Method:** live crawl of 10 web properties + 3 off-site surface clusters (14 parallel agents, 276 fetches)
+> **Evidence:** [`2026-08-08-entity-audit-evidence.md`](./2026-08-08-entity-audit-evidence.md) — every claim below traces to a verified fetch there
+> **Supersedes:** [`2026-06-30-audit-archived.md`](./2026-06-30-audit-archived.md) (largely executed; checkboxes never ticked)
 
 ---
 
-## Background: the structured-data bug (read before SEO-01–05)
+## The goal
 
-In production (`hugo --minify`), **every JSON-LD value produced by `{{ X | jsonify }}` is double-encoded** — the value is wrapped in literal quotes, and arrays/objects become JSON *strings*. Plain string literals in the same blocks render correctly. Verified on the live homepage:
+When Google, ChatGPT, Perplexity or Copilot is asked **"who is Simone Mattioli?"**, return *him* — with correct facts.
+
+**Canonical positioning sentence.** Every surface in this programme must agree with this string:
+
+> Italian CS engineer and AI researcher who ships. Co-author of a BDCC/MDPI paper on LLMs for tourist-mobility prediction; EIT Digital Master's at KTH & ELTE; six iOS apps on the App Store; founder-track, building toward his own company.
+
+**Locked decisions** (settled 2026-08-08; do not re-litigate):
+
+| Branch | Decision |
+|---|---|
+| Domain | Stay on `simo-hue.github.io`. **No domain will be purchased.** |
+| Entity model | One canonical Person `@id`; ventures as `Organization` with `founder →` him; apps as `SoftwareApplication` |
+| DeepSafe | Is the failed startup — name it, don't hide it |
+| Language | Full EN + IT parity; professional pages first |
+| Content | Claude drafts from Simone's facts, Simone edits; all thin posts → 600+ words |
+| Wikidata | Scholarly-article item first, then author item (WikiCite route) |
+| Authorship | **Second author of four.** Never state or imply sole authorship. |
+
+**The canonical Person URI — memorise it, it must be byte-identical everywhere:**
+
+```
+https://simo-hue.github.io/#person
+```
+
+---
+
+## Situation in one paragraph
+
+The entity is fragmented into roughly **24 nodes where there should be 1**. The canonical `@id` appears on **2 of 10 properties**. Meanwhile three surfaces publish *false facts* about him — Google Scholar credits him with a paper by two other researchers, Semantic Scholar has fused him with the author of a 2015 Bitcoin study, and SciProfiles calls him "Dr." He has no doctorate. Two properties canonicalise to domains he does not own, two publish fabricated star ratings, and two are blank pages to every AI crawler this programme targets. Separately, his social surfaces contain **zero** occurrences of `AI researcher`, `KTH`, `ELTE`, `EIT Digital`, `LLM` or `founder` — so an LLM crawling them reconstructs an Italian mountain-wildlife vlogger.
+
+---
+
+## 🚨 P0 — do these first, in this order
+
+These are not optimisations. Three are false facts about a real person; two are policy violations; one hands a domain squatter his link equity.
+
+| # | ID | What | Why it is P0 | Owner |
+|---|----|------|--------------|-------|
+| 1 | **ENT-04** | Delete the RoBERTa-CSS paper from Google Scholar, then set updates to *"Don't automatically update"* | **Verified:** his profile lists *"An AI-driven framework for continuous tourist sentiment scoring (RoBERTa-CSS)"*, Tourism Review 81(1) 167-187, bylined **T Yang, CHC Hsu**. He is not an author. It supplies **all 3 of his citations and his entire h-index**. Real metrics are 0/0/0. Adding this profile to `sameAs` before cleaning would make a false authorship claim *more* machine-resolvable. | Simone |
+| 2 | **ENT-15** | Claim Semantic Scholar author `2429558651` **via ORCID**, then remove the 2015 paper | **Verified:** `externalIds: {}` (no ORCID), 2 papers — the second *"Consumatori, fiducia e Bitcoin"* (2015). He was ~12. S2 feeds many LLM retrieval corpora; this merge is a live, direct cause of the confusion this programme exists to fix. | Simone |
+| 3 | **ENT-18** | Remove the `Dr.` honorific from SciProfiles | **Verified:** `"Dr. Simone Mattioli"` is the `schema.org Person.name` value, not page chrome. Highest qualification is a BSc (2025-10-17). The single most quotable wrong fact in his footprint, and it is machine-readable. | Simone |
+| 4 | **ENT-01** | CampFlow `metadataBase` → `https://simo-hue.github.io/CampFlow/` | **Verified:** `<link rel="canonical" href="https://campflow.app/w"/>` — a GoDaddy parking lander. He is instructing Google to treat a squatter's page as authoritative and consolidate all link equity there. | Claude |
+| 5 | **ENT-12** | Strip `aggregateRating` from DeepSafe and CampFlow | **Verified:** CampFlow publishes `ratingValue 5 / ratingCount 12`; DeepSafe `4.8 / 1250` — neither backed by any review. Breaches Google's review-snippet policy, a documented cause of **site-wide** manual actions. Must land **before** `founder → #person` ties either property to the canonical entity. | Claude |
+| 6 | **ENT-02** | Set the Vercel production site-URL env var for Mountain Fauna Lover | **Verified: 76 occurrences of `localhost:3000`** on `/en` alone, zero of the real host — canonical, hreflang, og:url, og:image, every `@id`, robots `Host`/`Sitemap`, 18 sitemap `<loc>`, 10 llms.txt links. Also the default IRI any misconfigured Next.js app mints, so it risks *merging unrelated sites* onto one bogus node. | Simone (Vercel) + Claude (code) |
+| 7 | **SAT-05** | Read the LinkedIn headline while logged in | **UNVERIFIED — needs him.** Two independent searches returned the result title `"simone mattioli - TikTok | LinkedIn"`. LinkedIn titles follow `Name - Company`, so the indexed employer may read **TikTok**. Page is HTTP-999 walled; never read. If real, his highest-authority profile tells Google his employer is TikTok. | Simone |
+| 8 | **ENT-21a** | Reconcile the publications page against the DOI | `/blog/publications/` lists the paper **dated Dec 15 2024, no DOI**; the real record is BDCC 10(4) 117, **published 2026-04-11**. **Blocks ENT-22** — seeding Wikidata from a mismatched title propagates a bad item. | Simone + Claude |
+
+---
+
+## Phase 1 — Entity consolidation
+
+Mechanical, high-leverage, no writing required. This phase delivers the goal; everything after it corroborates.
+
+| ID | Surface | Change | Verify |
+|----|---------|--------|--------|
+| ENT-03 | ORCID → Names | `simone` → **`Simone`**; set `credit-name` = `Simone Mattioli`. **Blocks later tasks.** | API: `given-names == "Simone"` |
+| ENT-05 | Hub Person `@graph` | Rebuild canonical node: full `sameAs` union; ORCID `identifier` PropertyValue; **remove `worksFor`** (asserts *employment* by UniVR — false); `alumniOf` = UniVR + ELTE + KTH; `@id` on the `WebSite` node | `worksFor` absent; `#website` present |
+| ENT-06 | Hub `/links/` | TikTok `@mountainfaunalove` → **`@mountainfaunalover`**. Both handles are live; the hub is the only source pointing at the first, and 3 self-controlled sources corroborate the second. A resolving wrong link is worse than a 404 — it asserts a false identity about a stranger's account. | Only the with-*r* form |
+| ENT-07 | `static/robots.txt` | Add **`ClaudeBot`** (currently absent — only the retired `Claude-Web`), `Claude-User`, `Claude-SearchBot`, `OAI-SearchBot`, `Applebot-Extended`, `meta-externalagent`, `Amazonbot`, `Bytespider`, `cohere-ai`, `Perplexity-User`. Delete the misplaced `Crawl-delay`. Narrow `Disallow: /*.json$` (it blocks the PWA manifest). Add 7 more `Sitemap:` lines. | `grep -c '^Sitemap:'` → 8 |
+| ENT-08 | `static/llms.txt` | **Fix 3 of 7 links that 404** (`tech-project`→`tech-projects`, `publication`→`publications`, `experience`→`experiences`). Add `## Apps`, `## Projects`, `## Research`. State the canonical Person URI. Add CI that curls every URL and fails on non-200. | CI green |
+| ENT-09 | Evolve | `#simone-mattioli` → canonical `@id` (4 refs). **Merge Evolve's 7 `sameAs` up into the hub — don't delete.** | 0 hits for `#simone-mattioli` |
+| ENT-10 | Ping-Pong-Counter | `#author` → canonical `@id`; `url` → his site, not GitHub | grep deployed HTML |
+| ENT-11 | Local-File-Diet (8 pages), SafeSpotter, CampFlow | Add the canonical `@id` to anonymous author nodes. **Byte-identical — no trailing slash, no locale prefix, no `#author` variant.** | grep all 10 pages |
+| ENT-13 | Hugo `baseof.html` | Person stub on **every** page. `/links/` → `ProfilePage`; `/blog/` → `Blog` node. Currently `/links/`, `/blog/` and `/blog/publications/` carry only a BreadcrumbList. | `#person` on all pages |
+| ENT-14 | GitHub `simo-hue` | Name `Mattioli Simone` → **`Simone Mattioli`**. Add a crawlable `# Simone Mattioli` H1 + bio sentence to the profile README (name currently appears only inside a badge image URL). | API `"name"` |
+| ENT-16 | mattioli.OS, DeepSafe | Emit **static, server-rendered** `@graph`. Not `next/script`, not React-injected. | `grep` raw HTML ≥ 1 |
+| ENT-17 | mattioli.OS | Per-route canonicals — all 7 routes emit the homepage canonical, deindexing `/creator/`, the only page carrying his identity | `/creator/` self-canonical |
+| ENT-19 | ORCID | 60–100 word bio; 8–10 specific keywords (replacing `LLM`, `AI`); fix `University of verona` **via typeahead** so ROR attaches; add ELTE/KTH; date the employment entry; add researcher-urls | API reflects all |
+| ENT-20 | Hub `@graph` | Give University of Verona **one** `@id` + Wikidata `sameAs`; replace the other 3 anonymous occurrences with references | 1 UniVR node, not 3 |
+| ENT-21 | `/blog/publications/` | `ScholarlyArticle` with DOI, correct 4-author order, `author → #person`. Rewrite the 39-char meta description. **After ENT-21a.** | Rich Results Test |
+| ENT-22 | Wikidata | Article item first (DOI `10.3390/bdcc10040117`), then author item with P496/P2037/P1960/P10283. **Second of four.** | Both resolve |
+| SAT-09 | GSC + Bing Webmaster | Verify; submit all 8 sitemaps. **Promoted into Phase 1** — GitHub Pages has no sitemap ping, so this is the only discovery lever for ~54 orphaned URLs, and Bing's index feeds Copilot. | Sitemaps "Success" |
+
+### The consolidated `sameAs` set
+
+Verified-live only. `mailto:` belongs in `email`, not `sameAs`. Self-URL belongs in `url`.
 
 ```json
-"name":"\"Simone Mattioli - Adventures in Technology \\u0026 Humanity\""   ← string wrapped in quotes
-"url":"\"https://simo-hue.github.io/\""                                     ← double-quoted
-"knowsAbout":"[\"Travel \\u0026 Volunteering\",\"Tech \\u0026 AI\"]"        ← whole ARRAY is a string
-"sameAs":"[\"https://instagram.com/...\",\"https://github.com/...\"]"        ← social links unparseable
-"image":"\"https://simo-hue.github.io//images/og-image.png\""               ← quotes + double slash
+"@id": "https://simo-hue.github.io/#person",
+"url": "https://simo-hue.github.io/",
+"identifier": {
+  "@type": "PropertyValue",
+  "propertyID": "ORCID",
+  "value": "https://orcid.org/0009-0006-5047-8004"
+},
+"sameAs": [
+  "https://orcid.org/0009-0006-5047-8004",
+  "https://scholar.google.com/citations?user=uLGrDbIAAAAJ",
+  "https://openalex.org/A5133501663",
+  "https://sciprofiles.com/profile/Mattioli-simone",
+  "https://github.com/simo-hue",
+  "https://www.linkedin.com/in/simonemattioli2003/",
+  "https://apps.apple.com/us/developer/simone-mattioli/id1896746638",
+  "https://www.youtube.com/@SimosDiary2003",
+  "https://www.youtube.com/@mountainfaunalover",
+  "https://www.youtube.com/@Deep-Safe",
+  "https://www.instagram.com/simo___one/",
+  "https://www.instagram.com/mountainfaunalover/",
+  "https://www.instagram.com/deepsafe_/",
+  "https://www.tiktok.com/@mountainfaunalover",
+  "https://mountain-fauna-lover.vercel.app/",
+  "https://deep-safe.github.io/DeepSafe/"
+]
 ```
 
-**Root cause / the fix pattern:** hand-writing JSON and interpolating per-value `jsonify` is fragile under the minify pipeline. The robust, idiomatic Hugo fix is to **build the whole schema as a `dict` and `jsonify` the entire object exactly once.** This is applied in SEO-01 through SEO-05.
+**Normalisation rules** (the estate currently violates all four): one Instagram form (`www.` + trailing slash); one SciProfiles host; strip tracking params (`?si=`, `?_t=`); drop `hl=en` from Scholar.
 
-> **Note on `&`:** Hugo's `jsonify` escapes `&`, `<`, `>` to `&`, `<`, `>`. **This is valid JSON, parsed correctly by Google, and *desirable*** inside `<script>` (prevents tag-breakout). Do **not** try to "fix" the `&` — only the wrapping-quotes/array-as-string problem is the bug.
-> **Note on key order:** `jsonify` of a `dict` emits keys **alphabetically**. That is semantically irrelevant for JSON-LD — do not be alarmed that `@context` is no longer first.
-
----
-
-## 🔴 SEO-01 — Fix WebSite JSON-LD (double-encoding)
-
-**File:** `layouts/partials/seo/schema-website.html`
-**Effort:** S
-
-**BEFORE** (entire file):
-```go-html-template
-{{- /* Schema.org WebSite structured data */ -}}
-{{- if .IsHome -}}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": {{ .Site.Title | jsonify }},
-  "url": {{ .Site.BaseURL | jsonify }},
-  "description": {{ site.Params.metadata.description | jsonify }},
-  "inLanguage": "en-US",
-  "author": {
-    "@type": "Person",
-    "name": {{ site.Params.metadata.author | jsonify }}
-  },
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": {{ printf "%ssearch/?q={search_term_string}" .Site.BaseURL | jsonify }}
-    },
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
-{{- end -}}
-```
-
-**AFTER** (entire file):
-```go-html-template
-{{- /* Schema.org WebSite structured data */ -}}
-{{- if .IsHome -}}
-{{- $schema := dict
-  "@context" "https://schema.org"
-  "@type" "WebSite"
-  "name" site.Title
-  "url" site.BaseURL
-  "description" site.Params.metadata.description
-  "inLanguage" "en-US"
-  "author" (dict "@type" "Person" "name" site.Params.metadata.author)
-  "potentialAction" (dict
-    "@type" "SearchAction"
-    "target" (dict
-      "@type" "EntryPoint"
-      "urlTemplate" (printf "%ssearch/?q={search_term_string}" site.BaseURL))
-    "query-input" "required name=search_term_string")
--}}
-<script type="application/ld+json">
-{{ $schema | jsonify }}
-</script>
-{{- end -}}
-```
-
-> The `potentialAction` points at `/search/`, which currently 404s — that's handled separately in **SEO-15**. Leaving it here is harmless for now.
-
-**Verify:** `hugo --minify` → open `public/index.html` → the WebSite block's `"name"` must be `"Simone Mattioli - Adventures in Technology & Humanity"` (one set of quotes), **not** `"\"...\""`.
+**Held back pending action:** Semantic Scholar (until ENT-15), `tiktok.com/@deepsafe` (ownership unverified), `github.com/deep-safe` (a *User* account, not an org; nothing names him), `mountainfaunalover.github.io` (purpose unclear).
 
 ---
 
-## 🔴 SEO-02 — Fix Person JSON-LD (double-encoding + double-slash image)
+## Phase 2 — Content depth
 
-**File:** `layouts/partials/seo/schema-person.html`
-**Effort:** M
-
-This is the most complex schema. It also has a **double-slash bug** in `image` (`printf "%s%s" .Site.BaseURL ...` produces `https://...//images/...` because `BaseURL` ends in `/`). The fix uses `absURL`.
-
-**AFTER** (entire file — replaces the whole file):
-```go-html-template
-{{- /* Schema.org Person structured data for homepage */ -}}
-{{- if .IsHome -}}
-{{- $social := slice -}}
-{{- range site.Data.about.socials -}}
-  {{- $social = $social | append .link -}}
-{{- end -}}
-{{- $knowsAbout := slice -}}
-{{- range site.Data.about.passions -}}
-  {{- $knowsAbout = $knowsAbout | append .name -}}
-{{- end -}}
-{{- $knowsAbout = $knowsAbout | append "Computer Science" | append "Artificial Intelligence" | append "Large Language Models" | append "High-Performance Computing" -}}
-{{- $person := dict
-  "@context" "https://schema.org"
-  "@type" "Person"
-  "name" site.Data.about.profile.name
-  "alternateName" "Mattioli Simone"
-  "givenName" "Simone"
-  "familyName" "Mattioli"
-  "url" site.BaseURL
-  "image" (site.Params.metadata.image | absURL)
-  "jobTitle" "Computer Science Student & AI Researcher"
-  "description" (site.Data.about.vision.content | default site.Params.metadata.description)
-  "address" (dict "@type" "PostalAddress" "addressLocality" "Verona" "addressRegion" "Veneto" "addressCountry" "IT")
-  "nationality" (dict "@type" "Country" "name" "Italy")
-  "knowsLanguage" (slice
-    (dict "@type" "Language" "name" "Italian" "alternateName" "it")
-    (dict "@type" "Language" "name" "English" "alternateName" "en"))
-  "worksFor" (dict
-    "@type" "EducationalOrganization"
-    "name" "University of Verona"
-    "department" (dict "@type" "Organization" "name" "Department of Computer Science")
-    "address" (dict "@type" "PostalAddress" "addressLocality" "Verona" "addressCountry" "IT"))
-  "alumniOf" (dict "@type" "EducationalOrganization" "name" "University of Verona" "department" "Computer Science")
-  "hasCredential" (slice (dict
-    "@type" "EducationalOccupationalCredential"
-    "credentialCategory" "degree"
-    "educationalLevel" "Undergraduate"
-    "about" (dict
-      "@type" "EducationalOccupationalProgram"
-      "name" "Computer Science"
-      "description" "Bachelor's degree in Computer Science with specialization in Artificial Intelligence")
-    "recognizedBy" (dict "@type" "Organization" "name" "University of Verona")))
-  "knowsAbout" $knowsAbout
-  "sameAs" $social
-  "mainEntityOfPage" (dict "@type" "WebPage" "@id" site.BaseURL)
--}}
-<script type="application/ld+json">
-{{ $person | jsonify }}
-</script>
-{{- end -}}
-```
-
-**Verify:** in `public/index.html` the Person block must show `"sameAs":["https://instagram.com/...","https://github.com/..."]` (a real **array**, not a quoted string) and `"image":"https://simo-hue.github.io/images/og-image.png"` (single slash, single quotes).
+| ID | Surface | Change |
+|----|---------|--------|
+| CON-01 | Hub FAQPage | **Rewrite all 3 answers.** They say *"Simone Mattioli is a Computer Science student at the University of Verona"* while the same page's meta description says *"CS graduate and EIT Digital Master's student."* FAQPage is the most extractable structure on the site and it is serving the wrong answer. Highest leverage-per-minute item in the audit. |
+| CON-03 | `data/entity.yaml` (new) | **One source of truth.** Render Person JSON-LD, FAQ answers, meta descriptions and llms.txt from one file so they can never drift again. Structural fix behind CON-01 and ENT-08. |
+| CON-04 | 16 thin posts → 600+ words | KTH (55w), ELTE (47w), TalTech (43w), GDG AI Hackathon (45w), Warranties Vault (53w), Evolve (66w), Ping Pong Counter (67w), 3 book notes (23–27w), Budapest, GISEP, Sicily, Poland, MFL, Italy Trip. **Professional posts first.** Bullets from Simone → draft from Claude. |
+| CON-05 | Taxonomy template | `noindex` on `/tags/` + drop from sitemap. **41 of 118 sitemap URLs (35%) are tag archives** while ~54 real URLs sit outside every discoverable sitemap. 20-minute change, reclaims a third of crawl allocation. |
+| CON-06 | mattioli.OS | **Prerender.** 7 routes serve a byte-identical 2,304-byte `<div id="root"></div>` shell. |
+| CON-07 | 4 App Store descriptions | Append `Made by Simone Mattioli — https://simo-hue.github.io/`. The only author-editable part of that surface; **none currently contains "Simone" or "Mattioli"**. |
+| CON-08/09 | 59 GitHub repos | **0 of 59 link to the App Store.** 26 have no `homepage`, 3 no description. |
+| CON-10 | 7 properties | Ship `llms.txt` — **clone Evolve's `tools/llms.js` generator** rather than writing from scratch (see "copy inward" below). |
+| CON-11 | Evolve H1 | Contains no brand, no category keyword. Reseat entity + category. |
+| CON-12 | App nodes | Add `image`, `screenshot`, `installUrl`, `softwareVersion`, App Store `identifier`. LFD needs `offers` — currently ineligible for app rich results. **Never synthesise `aggregateRating`.** |
+| CON-13 | Assets | Hub `og-image.png` 507 KB → <200 KB; mattioli.OS `logo.png` **4.38 MB / 2560×1440** → 1200×630; favicon 692 KB → <10 KB. |
 
 ---
 
-## 🔴 SEO-03 — Fix Breadcrumb JSON-LD (double-encoding)
+## Phase 3 — Italian parity
 
-**File:** `layouts/partials/seo/schema-breadcrumb.html`
-**Effort:** S
-
-**AFTER** (entire file):
-```go-html-template
-{{- /* Schema.org BreadcrumbList structured data */ -}}
-{{- if not .IsHome -}}
-{{- /* Build ancestor chain by walking up through .Parent */ -}}
-{{- $ancestors := slice -}}
-{{- $current := . -}}
-{{- range seq 10 -}}
-  {{- if $current.Parent -}}
-    {{- $ancestors = $ancestors | append $current -}}
-    {{- $current = $current.Parent -}}
-  {{- end -}}
-{{- end -}}
-{{- /* Reverse to root-first order and prepend Home */ -}}
-{{- $crumbs := slice (dict "name" "Home" "item" site.BaseURL) -}}
-{{- range $ancestors | collections.Reverse -}}
-  {{- $crumbs = $crumbs | append (dict "name" .Title "item" .Permalink) -}}
-{{- end -}}
-{{- $items := slice -}}
-{{- range $i, $el := $crumbs -}}
-  {{- $items = $items | append (dict "@type" "ListItem" "position" (add $i 1) "name" $el.name "item" $el.item) -}}
-{{- end -}}
-{{- $schema := dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $items -}}
-<script type="application/ld+json">
-{{ $schema | jsonify }}
-</script>
-{{- end -}}
-```
-
-**Verify:** on `public/blog/tech-project/deepsafe/index.html`, breadcrumb `"name"` values are plain strings (`"DeepSafe"`, not `"\"DeepSafe\""`).
+| ID | Change |
+|----|--------|
+| ITA-01 | Switch Hugo to **native multilingual** (`languages` block) so `.Translations` drives hreflang. **Abandon the `_it` filename-suffix pattern** — it orphaned `/passion/technology_it/`. Prerequisite, not optional. |
+| ITA-02 | Self-referential + reciprocal hreflang (`en`, `it`, `x-default`) on every translated page. **No hreflang exists anywhere today.** Copy the Local-File-Diet head pattern. |
+| ITA-03 | Pilot on the existing orphaned `/passion/technology_it/` pair before scaling. |
+| **ITA-04** | **`@id` values stay language-neutral.** `https://simo-hue.github.io/#person` on Italian pages too — never `/it/#person`. Getting this wrong re-fragments the entity Phase 1 just consolidated. Evolve already does this right across 5 locales. |
+| ITA-05 | `/about/`, `/blog/publications/`, `/blog/tech-projects/` translated **before** lifestyle content. |
+| ITA-06 | Fix Local-File-Diet `og:locale` bare codes → `en_US`/`it_IT`/`de_DE`/`es_ES`. **It is the i18n template — fix it before copying it.** |
 
 ---
 
-## 🔴 SEO-04 — Fix Video JSON-LD (double-encoding)
+## Phase 4 — Satellites
 
-**File:** `layouts/partials/seo/schema-video.html`
-**Effort:** S
-The YouTube-ID extraction logic is correct; only the JSON output needs the dict pattern.
-
-**AFTER** (entire file):
-```go-html-template
-{{- /* Schema.org VideoObject structured data for pages with YouTube embeds */ -}}
-{{- $content := .RawContent -}}
-{{- $youtubeRegex := `\{\{<\s*youtube\s+([a-zA-Z0-9_-]+)\s*>}}` -}}
-{{- $match := findRE $youtubeRegex $content 1 -}}
-{{- if $match -}}
-  {{- $fullMatch := index $match 0 -}}
-  {{- $videoId := replaceRE `\{\{<\s*youtube\s+` "" $fullMatch -}}
-  {{- $videoId = replaceRE `\s*>}}` "" $videoId -}}
-  {{- $videoId = trim $videoId " " -}}
-  {{- if $videoId -}}
-    {{- $desc := or .Description .Summary | plainify | truncate 200 -}}
-    {{- $schema := dict
-      "@context" "https://schema.org"
-      "@type" "VideoObject"
-      "name" .Title
-      "description" $desc
-      "thumbnailUrl" (printf "https://img.youtube.com/vi/%s/maxresdefault.jpg" $videoId)
-      "uploadDate" (.Date.Format "2006-01-02")
-      "contentUrl" (printf "https://www.youtube.com/watch?v=%s" $videoId)
-      "embedUrl" (printf "https://www.youtube.com/embed/%s" $videoId)
-    -}}
-<script type="application/ld+json">
-{{ $schema | jsonify }}
-</script>
-  {{- end -}}
-{{- end -}}
-```
-
-**Verify:** find a post with a `{{</* youtube ID */>}}` shortcode (there are ~12 in the sitemap's video entries) and confirm its VideoObject `"contentUrl"` is a clean URL string.
+`SAT-01` MFL entity repoint (post-ENT-02) · `SAT-02` DeepSafe author credit + `lang="it"` + canonical (post-ENT-12/16) · `SAT-03` three YouTube Abouts — **highest leverage on `@mountainfaunalover`**, the 12K-follower persona and the only channel with no JSON-LD, so its About text is the sole machine-readable signal · `SAT-04` Instagram display names (`Simone mattioli` → `Simone Mattioli`; `Magic Mountain` → `Mountain & Fauna Lover`) · `SAT-06` interview video description · `SAT-07` DeepSafe repo split across two accounts with a wrong clone URL · `SAT-08` rename `Mobl` → `warranties-vault`; fix "Warranty"/"Warranties" drift · `SAT-10` **hub links out to zero of its own apps** while Evolve links back twice — the link graph runs one-directional in the wrong direction.
 
 ---
 
-## 🔴 SEO-05 — Render `BlogPosting` on blog posts (currently missing) + fix encoding
+## Two findings that change how the work should be done
 
-**Files:** `layouts/partials/seo/schema-blog.html` **and** `layouts/partials/essentials/head.html`
-**Effort:** M
+**Copy inward, don't write from scratch.** The estate's best assets are on its weakest properties. The best AI-crawler robots.txt (15 agents incl. `ClaudeBot`) is on Mountain Fauna Lover, whose sitemap points at localhost. The best `llms.txt` — 15 KB, spec-shaped, *build-generated so it cannot drift* — is on Evolve, absent from every discoverable sitemap. Ping-Pong-Counter ships an `llms-full.txt` with a "What it does not do" section, which is rare and highly citable. The hub's own is 1.5 KB with 43% dead links. This materially reduces the effort on ENT-08 and CON-10.
 
-**Problem (two bugs):**
-1. **It never renders.** `head.html:33` calls `partialCached "seo/schema-blog.html" . .Section`. The `/blog/` *list* page (where `.IsPage` is false → empty output) gets cached under the `blog` section key and reused for **every** post → no post has `BlogPosting`. Fix is the `partial` change in **SEO-06**.
-2. **It's double-encoded.** Same `jsonify`-per-value issue. Fix the template below.
-
-**`schema-blog.html` AFTER** (entire file):
-```go-html-template
-{{- /* Schema.org BlogPosting structured data for blog posts */ -}}
-{{- if and .IsPage (in site.Params.mainSections .Section) -}}
-{{- $desc := "" -}}
-{{- with .Description -}}
-  {{- $desc = . -}}
-{{- else -}}
-  {{- $desc = .Summary | plainify | truncate 160 -}}
-{{- end -}}
-{{- $author := site.Params.metadata.author -}}
-{{- with .Params.author -}}
-  {{- $author = . -}}
-{{- end -}}
-{{- $schema := dict
-  "@context" "https://schema.org"
-  "@type" "BlogPosting"
-  "headline" .Title
-  "description" $desc
-  "author" (dict "@type" "Person" "name" $author)
-  "datePublished" (.Date.Format "2006-01-02T15:04:05-07:00")
-  "dateModified" (.Lastmod.Format "2006-01-02T15:04:05-07:00")
-  "publisher" (dict "@type" "Person" "name" site.Params.metadata.author "url" site.BaseURL)
-  "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
-  "wordCount" .WordCount
-  "inLanguage" "en-US"
--}}
-{{- with .Params.image -}}
-  {{- $schema = merge $schema (dict "image" (dict "@type" "ImageObject" "url" (. | absURL))) -}}
-{{- end -}}
-{{- with .Params.categories -}}
-  {{- $schema = merge $schema (dict "articleSection" (index . 0)) -}}
-{{- end -}}
-{{- with .Params.tags -}}
-  {{- $schema = merge $schema (dict "keywords" (delimit . ", ")) -}}
-{{- end -}}
-<script type="application/ld+json">
-{{ $schema | jsonify }}
-</script>
-{{- end -}}
-```
-
-The `head.html` half of this fix is in **SEO-06** (change `partialCached … .Section` → `partial`).
-
-**Verify:** after SEO-06, `public/blog/tech-project/deepsafe/index.html` must contain a `BlogPosting` block whose `"headline"` is `"DeepSafe"` and `"wordCount"` matches that post (not some other post's data).
+**He cannot win the name contest on the name alone.** Against `SimoneMattioli98` (Bologna, computer vision) he wins every volume metric — 59 repos vs 24, 20 stars vs 5, daily vs dormant since Aug 2024 — and loses **both** string-matching signals: that account's name field reads `Simone Mattioli` while his reads `Mattioli Simone`, and it has a name-matching domain. Fixing the name field contests the string but cannot resolve it, since both accounts would then hold the same one. **The differentiator must be attributes — institution (Verona/KTH/ELTE vs Bologna) and domain (AI/LLM/HPC/iOS vs computer vision) — written explicitly into the bio, not implied.**
 
 ---
 
-## 🔴 SEO-06 — Stop home-only schema leaking onto every page
+## Progress tracker
 
-**File:** `layouts/partials/essentials/head.html`
-**Effort:** S
-
-`partialCached` caches a partial's output across pages keyed only by the variant args. With no per-page variant, the homepage's `WebSite`/`Person`/`FAQPage` output is cached and re-emitted on **all 343 URLs**; and `schema-blog` keyed on `.Section` breaks as described in SEO-05. The schemas already guard themselves with `if .IsHome` / `if .IsPage`, so plain `partial` is correct and the perf cost is negligible.
-
-**Lines 30–35 — BEFORE:**
-```go-html-template
-<!-- Schema.org Structured Data for SEO & LLMs -->
-{{ partialCached "seo/schema-website.html" . }}
-{{ partialCached "seo/schema-person.html" . }}
-{{ partialCached "seo/schema-blog.html" . .Section }}
-{{ partial "seo/schema-breadcrumb.html" . }}
-{{ partial "seo/schema-video.html" . }}
-```
-**Lines 30–35 — AFTER:**
-```go-html-template
-<!-- Schema.org Structured Data for SEO & LLMs -->
-{{ partial "seo/schema-website.html" . }}
-{{ partial "seo/schema-person.html" . }}
-{{ partial "seo/schema-blog.html" . }}
-{{ partial "seo/schema-breadcrumb.html" . }}
-{{ partial "seo/schema-video.html" . }}
-```
-
-**Line 79 — BEFORE** (FAQ is jammed onto the Mermaid line with `partialCached`):
-```go-html-template
-{{ partial "mermaid/assets/js" . }}{{ partialCached "seo/schema-faq.html" . }}
-```
-**Line 79 — AFTER:**
-```go-html-template
-{{ partial "mermaid/assets/js" . }}
-{{ partial "seo/schema-faq.html" . }}
-```
-
-**Verify:** build, then confirm `WebSite`, `Person`, and `FAQPage` appear **only** in `public/index.html` and are **absent** from `public/blog/tech-project/deepsafe/index.html`. `BreadcrumbList` + `BlogPosting` should now appear on the post.
-
----
-
-## 🔴 SEO-07 — Fix `og:image` 404 (broken social previews sitewide)
-
-**Files:** add `static/images/og-image.png`; optionally `layouts/partials/basic-seo.html`
-**Effort:** S
-
-> **See also SEO-22** — `og-image.png` is one of **three** images broken this way (`og-image.png`, `simo.png`, `simo_lovable.png` all live in `assets/images/` but are referenced as literal `/images/…` URLs). Fix them together.
-
-**Problem:** `config/_default/params.toml` sets `[metadata].image = "/images/og-image.png"`, but the file lives in `assets/images/og-image.png` (Hugo Pipes) and is **never emitted to `/images/`** → `https://simo-hue.github.io/images/og-image.png` returns **HTTP 404**. The homepage OG/Twitter card and the Person `image` are broken. (Individual posts set their own `image:` and are unaffected.)
-
-**Extra bug:** the existing file is **900×630… actually 900×600**, but `basic-seo.html` hardcodes `og:image:width=1200` / `og:image:height=630`. Produce a real **1200×630** asset so the declared dimensions are truthful.
-
-**Fix (pick one):**
-
-```bash
-# Preferred: generate a correctly-sized 1200x630 OG image into static/
-# Using ImageMagick:
-magick assets/images/og-image.png -resize 1200x630^ -gravity center -extent 1200x630 -strip static/images/og-image.png
-
-# …or with macOS sips (no crop control; pads/stretches to 1200x630):
-# sips -z 630 1200 assets/images/og-image.png --out static/images/og-image.png
-```
-
-If you keep the existing 900×600 image instead, edit `layouts/partials/basic-seo.html` and change the two lines:
-```html
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-```
-to `900` / `600` so they match. **Preferred path is the 1200×630 image.**
-
-**Verify:** `curl -I https://simo-hue.github.io/images/og-image.png` returns `200` after deploy; locally confirm `public/images/og-image.png` exists. Then test with the [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/) / [Twitter Card Validator] or LinkedIn Post Inspector.
-
----
-
-## 🟠 SEO-08 — Translate the homepage FAQ to English
-
-**File:** `layouts/partials/seo/schema-faq.html`
-**Effort:** S
-
-The FAQ is **entirely in Italian** on an `en-us` page (language-mismatch signal). This block uses plain string literals (no `jsonify`), so it is **not** double-encoded — only the language needs fixing.
-
-> **Important context:** Google **retired FAQ rich results for all sites on 2026-05-07.** This markup no longer produces a SERP feature. **Keep it anyway** — it remains valuable for AI/LLM citation (ChatGPT/Perplexity/AI Overviews). Do **not** delete it, and do **not** add new `FAQPage` expecting Google rich results.
-
-**AFTER** (entire file):
-```go-html-template
-{{- /* Schema.org FAQPage for homepage (LLM/AI citation value; Google FAQ rich results retired 2026-05) */ -}}
-{{- if .IsHome -}}
-{{- $faq := dict
-  "@context" "https://schema.org"
-  "@type" "FAQPage"
-  "mainEntity" (slice
-    (dict "@type" "Question"
-      "name" "Who is Simone Mattioli?"
-      "acceptedAnswer" (dict "@type" "Answer"
-        "text" "Simone Mattioli is a Computer Science student at the University of Verona, specializing in Artificial Intelligence and Large Language Models. He combines technical skills with international volunteering, travel, and content creation."))
-    (dict "@type" "Question"
-      "name" "What does Simone Mattioli do?"
-      "acceptedAnswer" (dict "@type" "Answer"
-        "text" "Simone studies Computer Science with a focus on AI and builds projects in machine learning and High-Performance Computing. On his blog he shares reflections on technology, travel experiences, and personal growth, documenting his academic journey and passions."))
-    (dict "@type" "Question"
-      "name" "Where does Simone Mattioli study?"
-      "acceptedAnswer" (dict "@type" "Answer"
-        "text" "Simone Mattioli studies at the University of Verona, Department of Computer Science, specializing in Artificial Intelligence and High-Performance Computing. The university is located in Verona, Italy.")))
--}}
-<script type="application/ld+json">
-{{ $faq | jsonify }}
-</script>
-{{- end -}}
-```
-
-**Verify:** `public/index.html` FAQ block is English and valid JSON.
-
----
-
-## 🟠 SEO-09 — Fix homepage LCP (9.0s)
-
-**Effort:** M · **Measured:** homepage LCP **9.0s** (mobile, Lighthouse 13), FCP 4.8s, CLS 0.001 ✅, TBT 0ms ✅, TTFB ~20ms ✅.
-
-**Diagnosis:** The homepage hero has **no `<img>`** — it's CSS blobs + an animated SVG + a large gradient headline ("Mattioli Simone") rendered in the **Signika** display font. So the LCP element is **text gated behind render-blocking CSS + a late-loading web font**, not an image. (Lighthouse's "largest image" hint of `favicon.png` is a red herring here.)
-
-**Actions (in order of impact):**
-1. **Confirm the LCP element first:** run `npx lighthouse https://simo-hue.github.io/ --only-categories=performance --view` and read the "Largest Contentful Paint element". Optimize *that* element specifically.
-2. **Preload + WOFF2 the display font** (see **SEO-16**). Signika (the headline font) is a 106 KB TTF with `font-display:swap` and **no preload** → the hero headline can't paint final text until it loads. Preloading + WOFF2 is the single biggest LCP lever here.
-3. **Reduce render-blocking CSS:** the head loads `style.<hash>.css` (259 KB raw / 33 KB gzip) render-blocking. Consider inlining critical CSS for the hero or ensuring Tailwind purging is on (`hugo_stats.json` cachebuster is configured — verify unused utilities are purged in production).
-4. **Lighten the animated SVG hero** (the yellow spiral) if it is the LCP/paint bottleneck — it has many vector elements; simplify or defer its animation until after first paint.
-5. Re-measure; target LCP < 2.5s.
-
-**Verify:** Lighthouse homepage LCP < 2.5s (good) or at least < 4s; PageSpeed Insights field/CrUX "good LCP" share trends up over the following weeks.
-
----
-
-## 🟠 SEO-10 — Compress oversized images
-
-**Effort:** M
-
-Concrete offenders found in the repo / live:
-
-| File | Size | Issue | Target |
-|------|------|-------|--------|
-| `static/images/simo_lovable.png` | **4.3 MB** | Profile image (`/about`, `data/about.yml`→`profile.image`); 4.3 MB PNG | Resize ≤ 800px, WebP, **< 100 KB** |
-| `static/images/favicon.png` | 235 KB, 1024×1024 | Favicon **source** is fine at 1024, but don't serve it raw anywhere | Keep as source only; serve generated sizes |
-| article `home.webp` (DeepSafe hero) | **609 KB** | Drives the article LCP (5.9s) | Re-encode WebP/AVIF **< 120 KB** |
-| `static/images/avatar_calls.png` / `profile_connect.png` | 355 KB each | Heavy PNGs | WebP, < 80 KB |
-
-Prefer routing display images through Hugo image processing (`.Resize`/`.Process`) so they're auto-sized and WebP'd, and always emit explicit `width`/`height` to protect CLS.
-
-**Verify:** none of these exceed the targets; `npx lighthouse` "Properly size images" / "Efficiently encode images" audits pass; article LCP < 2.5s.
-
----
-
-## 🟠 SEO-11 — Fix or de-index thin & stub posts
-
-**Effort:** M · 15 posts are < 150 words; ~10 are near-empty stubs. They dilute quality/E-E-A-T signals and are all indexed.
-
-**Worst offenders (expand to 150+ words, or set `draft: true` / `noindex`):**
-```
-1 word    content/english/blog/experience/GDG AI Hackathon/index.md
-4 words   content/english/blog/books/Pensieri lenti pensieri veloci/index.md
-4 words   content/english/blog/books/guadagna con la mente/index.md
-4 words   content/english/blog/books/insegna al cuore a vedere/index.md
-5 words   content/english/blog/experience/TalTech/index.md
-6 words   content/english/blog/experience/ELTE/index.md
-9 words   content/english/blog/experience/KTH/index.md
-10 words  content/english/blog/tech-project/Warranties Vault/index.md
-23 words  content/english/blog/tech-project/Ping Pong Counter/index.md
-25 words  content/english/blog/tech-project/Evolve/index.md
-```
-For any post you choose **not** to expand now, add to its front matter:
-```yaml
-noindex: true   # honored by layouts/partials/basic-seo.html → <meta name="robots" content="noindex, nofollow">
-```
-(The `basic-seo.html` partial already supports `.Params.noindex`.)
-
-**Also:** 4 posts are written in **Italian** on the `en-us` site (`experience/Sicily/index.md`, and the `it.md` variants under `thought/The Star Counter`, `thought/degree`, `thought/live the dream`). Either translate to English, or set `noindex`. The `*_it.md` / `it.md` files target the disabled `it` language — confirm they aren't producing orphan URLs (`hugo --printPathWarnings`).
-
-> ⚠️ **Depends on SEO-23:** the custom sitemap does **not** currently exclude `noindex` pages, so de-indexed stubs will stay in `sitemap.xml` (mixed signal) until SEO-23 is applied. Do them together.
-
-**Verify:** `hugo` build + check the sitemap no longer lists de-indexed stubs; or the posts now exceed 150 words.
-
----
-
-## 🟠 SEO-12 — Reduce tag-page index bloat
-
-**Effort:** S–M · **250 indexable `/tags/` pages vs 69 posts** (73% of the sitemap). Many tag pages list only 2–3 posts → thin taxonomy pages competing for crawl budget.
-
-**Options (choose one):**
-- **A (recommended): `noindex` thin tag pages.** Create `layouts/_default/terms.html` / `taxonomy.html` override (or set in the existing one) to emit `noindex` when the term has few entries, e.g.:
-  ```go-html-template
-  {{ if and (eq .Kind "term") (lt (len .Pages) 3) }}<meta name="robots" content="noindex, follow">{{ end }}
-  ```
-  Keep `/categories/` indexable (only 7, useful).
-- **B: consolidate tags.** 256 distinct tags is high-cardinality; merge near-duplicates (e.g. `intelligence`/`AI`, `university`/`UniVR`) down to a curated set and let fewer, richer tag pages remain indexable.
-
-> ⚠️ **Depends on SEO-23:** noindexed tag pages must also be removed from `sitemap.xml` (the template currently includes them). Apply SEO-23 in the same change.
-
-**Verify:** rebuilt sitemap shows materially fewer indexable `/tags/` URLs; Search Console "Indexed, not submitted in sitemap" / crawl stats improve over time.
-
----
-
-## 🟠 SEO-13 — Remove or replace the `john-doe` author page
-
-**Files:** `content/english/Author/john-doe.md`, `content/english/Author/_index.md`
-**Effort:** S
-
-`https://simo-hue.github.io/author/john-doe/` is an indexed theme leftover (slug literally `john-doe`, ~70 words, in the sitemap). Either:
-- **Rename/replace** with a real author at `content/english/Author/simone-mattioli.md` (set `title`, bio, `image`, socials), and update any author references; **or**
-- **Remove** `john-doe.md` and add `noindex` to the author taxonomy if you don't want author archive pages.
-
-**Verify:** `/author/john-doe/` returns 404 (or 301 to the real author) after deploy and is gone from the sitemap.
-
----
-
-## 🟡 SEO-14 — Fix meta-description lengths
-
-**Files:** `config/_default/params.toml`; per-page front matter
-**Effort:** S
-
-- **Homepage description is 297 chars** (truncates ~155–160 in SERPs). Trim `[metadata].description` to ~150–155 chars, front-loading the key phrase. Current value is keyword-rich but too long — tighten, don't gut.
-- **`/about/` description is 24 chars** (effectively missing). Add a real `description:` to `content/english/about/_index.md` front matter (~140 chars).
-- Spot-check other section index pages (`/passion/`, `/links/`, `/globe/`, `/call/`, `/connect/`) for missing/short descriptions.
-
-**Verify:** rendered `<meta name="description">` on `/` and `/about/` is 140–160 chars and unique.
-
----
-
-## 🟡 SEO-15 — Fix or remove the broken `SearchAction` target
-
-**Effort:** S · The `WebSite` schema's `potentialAction` (SEO-01) points to `/search/?q=…`, but **`/search/` returns 404** — search is a JS overlay, not a page. A `SearchAction` pointing at a 404 is an invalid sitelinks-searchbox reference.
-
-**Pick one:**
-- **Remove** the `potentialAction` block from `schema-website.html` (simplest), **or**
-- **Render a real `/search/` page.** Add `content/english/search.md` (with a layout that hosts the existing search UI) so `/search/?q=` resolves, then keep the `SearchAction`.
-
-**Verify:** either the schema no longer references `/search/`, or `curl -I https://simo-hue.github.io/search/` returns 200.
-
----
-
-## 🟡 SEO-16 — Convert fonts to WOFF2 + preload
-
-**Files:** `static/fonts/*`, `layouts/partials/essentials/style.html` (or wherever `@font-face` is defined)
-**Effort:** M · Fonts are self-hosted **TTF**: `Signika-Medium.ttf` (~106 KB transfer) and `Heebo-Regular.ttf` (~26 KB), `font-display:swap`, **no preload**.
-
-1. Convert TTF → **WOFF2** (`woff2_compress`, or `fonttools`/`glyphhanger` for subsetting). Expected: Signika ~106 KB → ~50–60 KB.
-2. Update `@font-face` `src` to load `.woff2` first (keep `.ttf` fallback if desired).
-3. **Preload** the headline font (Signika — the LCP-critical one) and Heebo in `<head>`:
-   ```html
-   <link rel="preload" href="/fonts/Signika-Medium.woff2" as="font" type="font/woff2" crossorigin>
-   <link rel="preload" href="/fonts/Heebo-Regular.woff2" as="font" type="font/woff2" crossorigin>
-   ```
-4. Consider subsetting to Latin to cut size further.
-
-**Verify:** network panel shows `.woff2` served; Lighthouse "Ensure text remains visible during webfont load" passes; homepage LCP improves (ties into SEO-09).
-
----
-
-## 🟡 SEO-17 — Add `/llms.txt`
-
-**Files:** `static/llms.txt` (or generate via a template + output format)
-**Effort:** S · No `/llms.txt` exists (`/llms.txt` → 404). The repo's `AI.md` is a **CLAUDE.md dev doc**, not an llms.txt — don't reuse it. Your robots.txt already welcomes AI crawlers; an `llms.txt` gives them a curated map.
-
-Create `static/llms.txt`:
-```markdown
-# Simone Mattioli — Adventures in Technology & Humanity
-> Personal portfolio & blog of Simone Mattioli, Computer Science student (University of Verona) specializing in AI, LLMs and HPC; international volunteer; mountain & outdoor enthusiast.
-
-## Key pages
-- [About](https://simo-hue.github.io/about/): bio, education, vision
-- [Blog](https://simo-hue.github.io/blog/): projects, experiences, thoughts, book notes
-- [Tech projects](https://simo-hue.github.io/blog/tech-project/): software & AI projects
-- [Publications](https://simo-hue.github.io/blog/publication/): research (e.g. LLM tourism mobility predictor)
-- [Links](https://simo-hue.github.io/links/): all social & contact links
-
-## Contact
-- GitHub: https://github.com/simo-hue
-- LinkedIn: https://www.linkedin.com/in/simonemattioli2003/
-```
-
-**Verify:** `curl -I https://simo-hue.github.io/llms.txt` → 200 after deploy.
-
----
-
-## 🟡 SEO-18 — Defer GTM / lazy-load FontAwesome
-
-**Effort:** M · GTM + `gtag/js` ≈ **283 KB / 161 ms** main-thread; FontAwesome icon webfonts ≈ **271 KB**, loaded from `use.fontawesome.com`.
-
-- Keep GTM but ensure it loads **async** (the snippet already should — verify it's not blocking). Move heavy tags inside GTM to fire on interaction/`window.load` where possible.
-- FontAwesome icons aren't LCP-critical: self-host a **subset** of only the icons used, or lazy-load the icon CSS (`media="print" onload="this.media='all'"` trick, already used for `style-lazy.css`).
-
-**Verify:** Lighthouse "Reduce unused JavaScript" / "Reduce the impact of third-party code" improve; TBT stays low.
-
----
-
-## ⚪ SEO-19 — Polish: name consistency, empty heading, viewport
-
-**Effort:** S
-- **Name order:** the hero H1 renders "**Mattioli Simone**" while `<title>`, OG, and schema use "**Simone Mattioli**". Pick one canonical form (recommend "Simone Mattioli") in the hero template/`_index.md`.
-- **Empty `<h2></h2>`** exists on the homepage — remove it or give it content (don't ship empty headings).
-- **Viewport:** `maximum-scale=5` is acceptable, but for accessibility consider dropping `maximum-scale`/`user-scalable` restrictions so users can fully zoom.
-
----
-
-## ⚪ SEO-20 — Decide on dead deploy-config files
-
-**Effort:** S · The repo ships `static/_headers`, `_redirects`, `netlify.toml`, `vercel.json`, `amplify.yml` — **GitHub Pages ignores all of them.** Consequences:
-- Your intended **security headers** (CSP, `X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`) are **not active** (only `HSTS` is sent by GitHub/Fastly).
-- Content-hashed assets get `cache-control: max-age=600` (no long cache), which you can't override on GitHub Pages.
-
-**Choose:**
-- **A:** Accept the limitation, and **delete** the misleading multi-host config files (or move them to a `deploy-configs/` folder with a README noting they're inactive).
-- **B:** Put the site behind **Cloudflare** (free) to inject security headers + long-cache immutable assets via Transform Rules / `_headers` equivalents. This also unlocks Brotli and edge caching.
-
-> This is a decision task — surface it to the site owner rather than silently deleting files.
-
----
-
-## 🔬 Addendum — deeper source-code findings (round 2)
-
-> These were found by reading the **templates, data files, and front matter** — they are **not visible from a single rendered URL**. Several interact with the P0–P3 tasks above (cross-references noted). Re-verify these during implementation.
-
-### 🟠 SEO-21 — Article hero image is unprocessed **and** lazy-loaded (wrong partial params) → article LCP
-
-**File:** `layouts/blog/single.html` (line ~68) · **Effort:** S · **Impact:** article LCP (measured 5.9s)
-
-The hero passes **two wrong/missing params** to the image partial:
-1. `"Loading" "eager"` — but `layouts/partials/image.html` has **no `Loading` param**; it uses `Priority`. So the hint is ignored and the hero renders `loading="lazy"` (bad for the LCP element).
-2. **No `Context`** — so `$context.Resources.GetMatch` can't find the post's bundled image; it falls through to the "external/missing" branch and emits the **raw, unprocessed** `<img src>` (no WebP, no responsive `srcset`, **no `width`/`height`**). This is why the DeepSafe hero ships as a 609 KB raw `home.webp`.
-
-**BEFORE:**
-```go-html-template
-        {{ partial "image" (dict "Src" .Params.image "Alt" .Title "Class" "w-full" "Loading" "eager") }}
-```
-**AFTER:**
-```go-html-template
-        {{ partial "image" (dict "Src" .Params.image "Context" . "Alt" .Title "Class" "w-full" "Priority" true) }}
-```
-
-**Verify:** rebuilt article hero is `<img ... fetchpriority="high" srcset="… 480w, … 800w, … 1200w" width=… height=…>` (WebP, dimensions present, **not** `loading="lazy"`). Article LCP drops materially. (The same `image` partial is already called correctly with `"Priority"` in `layouts/partials/components/blog-card.html`.)
-
----
-
-### 🟠 SEO-22 — Broken `/images/` references (generalizes SEO-07)
-
-**Effort:** S · The `og:image` 404 (SEO-07) is **not the only one**. Audit of every `/images/*` literal reference vs what actually ships:
-
-| Reference | Lives in | Served at `/images/…`? |
+| Phase | Tasks | Done |
 |---|---|---|
-| `/images/avatar_calls.png` | `static/images/` | ✅ 200 |
-| `/images/og-image.png` | `assets/images/` | ❌ **404** (og:image + Person schema) |
-| `/images/simo.png` | `assets/images/` | ❌ **404** |
-| `/images/simo_lovable.png` | `assets/images/` | ❌ **404** at the literal URL (the `/about` profile **does** render because `about/list.html` runs it through the `image` partial / Hugo Pipes, which resolves `assets/`; but any literal-URL use 404s) |
+| 🚨 P0 | 8 | **4 code fixes done (awaiting deploy)** · 4 owner-actions open |
+| Phase 1 — Entity | 17 | ☐ |
+| Phase 2 — Content | 13 | ☐ |
+| Phase 3 — Italian | 8 | ☐ |
+| Phase 4 — Satellites | 10 | ☐ |
 
-**Rule going forward:**
-- Images referenced as **literal URLs** in meta tags / schema / `srcset` (OG images, social cards) **must** live in `static/images/` → handled for OG by **SEO-07**; do the same for `simo.png` if it's used in any meta/schema.
-- Images consumed through the **`image` partial** can stay in `assets/images/` (Hugo Pipes processes them) — but **optimize the 4.3 MB `simo_lovable.png` source** (see SEO-10) since it's resized at build from a huge original.
+### Completed 2026-08-08
 
-**Verify:** `for f in og-image simo simo_lovable; do curl -s -o /dev/null -w "%{http_code} $f\n" https://simo-hue.github.io/images/$f.png; done` — none should be 404 if referenced as a literal URL anywhere.
+**DeepSafe is committed and pushed** (`simo-hue/DeepSafe` @ `4dbf289`, 85 commits) and deploying via GitHub Actions.
+**CampFlow and Mountain Fauna Lover are written and verified but NOT committed** — they sit in the working tree for review.
 
----
+| ID | Repo / branch | Change | Verification |
+|----|---------------|--------|--------------|
+| ENT-01 | `CampFlow` @ `website-only` + `main` | canonical `campflow.app/w` (GoDaddy parking lander) → `https://simo-hue.github.io/CampFlow/` | built `out/index.html` emits the correct canonical |
+| ENT-12a | `CampFlow` @ `website-only` + `main` | removed fabricated `aggregateRating` 5.0/12 | 0 occurrences in build output |
+| ENT-11a | `CampFlow` @ `website-only` + `main` | author `Person` given canonical `@id` (folded in — same JSON-LD block, same deploy) | canonical `@id` present in build output |
+| ENT-12b | `DeepSafe` @ `main` | removed fabricated `aggregateRating` 4.8/1250 | 0 occurrences in `out/index.html` |
+| SAT-02 | `DeepSafe` @ `main` | fast-forwarded the fork 84 commits; canonical home → `https://simo-hue.github.io/DeepSafe`; **added the missing canonical** (there was none); `og:url`/`og:image` off the dead `deepsafe.app`; `html lang` en→it; author `DeepSafe Team` → `Simone Mattioli`; `Organization` with `founder` → canonical Person | canonical + og on the live host; 0 `deepsafe.app` refs; graph parses, `founder` → `#person` |
+| ENT-16 | `DeepSafe` @ `main` | JSON-LD moved from `next/script` (client-injected) to a plain server-rendered `<script>` — it was invisible to every non-JS AI crawler | raw `application/ld+json` tags in static HTML: **1** (was 0) |
+| ENT-02 | `Mountain-Fauna-Lover` @ `main` | production builds now refuse a loopback origin; wrong fallback host corrected | prod build with the bad env var **still set**: 0 `localhost`, 84 correct-host refs |
 
-### 🟠 SEO-23 — Custom sitemap does **not** exclude `noindex` pages (blocks SEO-11 & SEO-12)
+Also fixed in passing on `CampFlow` `main`: `metadataBase` no longer falls back to localhost in production; `robots.ts`/`sitemap.ts` no longer emit the parked `campflow.app`.
 
-**File:** `layouts/sitemap.xml` (line ~20) · **Effort:** S
+**Correction to §4 of the evidence doc:** DeepSafe's fabricated rating *is* present in the served bytes, as an escaped RSC flight payload (`\"aggregateRating\"`), not absent as first reported. A plain-text grep misses it. Net effect is unchanged for non-rendering AI crawlers, but Googlebot renders JS and would have seen `4.8 / 1250` — so the manual-action exposure was real, not theoretical.
 
-The sitemap ranges all pages filtering only `.Draft` and `home`. So any page you `noindex` in **SEO-11** (thin posts) or **SEO-12** (thin tag pages) **stays in the sitemap** → a contradictory "noindex but submitted" signal. Fix the filter:
+**Still open in P0** — all owner-actions: ENT-04 (Scholar), ENT-15 (Semantic Scholar), ENT-18 (SciProfiles), SAT-05 (LinkedIn). ENT-21a is **resolved**: the publications entry and DOI `10.3390/bdcc10040117` are the same artefact, so the page's Dec-2024 date is stale and must become 2026-04-11. **ENT-22 (Wikidata) is unblocked.**
 
-**BEFORE:**
-```go-html-template
-    {{- if and (not .Draft) (ne .Kind "home") .Permalink }}
-```
-**AFTER:**
-```go-html-template
-    {{- if and (not .Draft) (not .Params.noindex) (ne .Kind "home") .Permalink }}
-```
-
-> Also note: `<priority>` and `<changefreq>` in this sitemap are **ignored by Google** (kept is harmless — no action needed). The video-sitemap block is a nice touch and is fine.
-
-**Verify:** after SEO-11/12, build and confirm `noindex` URLs are absent from `public/sitemap.xml`. **Do SEO-23 together with SEO-11 and SEO-12.**
-
----
-
-### 🟠 SEO-24 — No author byline on any article (E-E-A-T / GEO authorship gap)
-
-**File:** `layouts/blog/single.html` (lines ~46–51) · **Effort:** S
-
-**0 of 66 posts** set an `author` front-matter field, and the byline is gated `{{ if .Params.author }}` → **no article ever shows an author**. For E-E-A-T and AI/LLM attribution, a visible, linked author is a core signal. Default it to the site author and link it.
-
-**BEFORE:**
-```go-html-template
-        {{ if .Params.author }}
-        <div class="flex items-center gap-2">
-          <i class="far fa-user"></i>
-          <span>{{ .Params.author }}</span>
-        </div>
-        {{ end }}
-```
-**AFTER:**
-```go-html-template
-        <div class="flex items-center gap-2">
-          <i class="far fa-user"></i>
-          <a href="/about/" rel="author">{{ .Params.author | default site.Params.metadata.author }}</a>
-        </div>
-```
-
-**Verify:** every post shows "Simone Mattioli" as a linked byline; the visible author matches the `BlogPosting.author` in schema.
-
----
-
-### 🟡 SEO-25 — GEO: consolidate the Person entity (`@id`) + `ProfilePage` on `/about`
-
-**Effort:** M · **Why:** Google and LLMs build a stronger person/creator entity when every page references **one** Person via a stable `@id`, and when `/about` is explicitly a `ProfilePage`. Two related issues:
-
-1. **After SEO-06, only the homepage has `Person`.** `/about` — the natural home of the person entity — will have none. Add a `Person` (wrapped in `ProfilePage`) to the about page.
-2. **`BlogPosting.author` is a bare name**, not linked to the entity.
-
-**Do:**
-- In `schema-person.html`, add a stable id: `"@id" (printf "%s#person" site.BaseURL)` (alongside `url`).
-- In `schema-blog.html` (SEO-05), set `"author" (dict "@id" (printf "%s#person" site.BaseURL))` and the same for `publisher`, so articles point at the one Person entity.
-- Add a `ProfilePage` + `mainEntity` Person on `/about` (new `layouts/partials/seo/schema-profilepage.html`, gated to the about page), e.g.:
-  ```go-html-template
-  {{- if eq .RelPermalink "/about/" -}}
-  {{- $schema := dict
-    "@context" "https://schema.org" "@type" "ProfilePage"
-    "dateModified" (.Lastmod.Format "2006-01-02T15:04:05-07:00")
-    "mainEntity" (dict "@type" "Person" "@id" (printf "%s#person" site.BaseURL) "name" site.Data.about.profile.name)
-  -}}
-  <script type="application/ld+json">{{ $schema | jsonify }}</script>
-  {{- end -}}
-  ```
-
-**Verify:** Rich Results Test on `/about/` shows `ProfilePage`; articles' `author`/`publisher` reference `…#person`.
-
----
-
-### 🟡 SEO-26 — Add related posts / internal linking on articles
-
-**File:** `layouts/blog/single.html` · **Effort:** S–M
-
-The custom single template has **no related-posts section** (the theme even ships an i18n string `related_posts: "Related Posts"` that's unused). Related posts deepen internal linking, spread crawl equity to the thin/buried posts, and improve dwell time. Add a block using Hugo's `site.RegularPages.Related .` (configure a `[related]` block in `hugo.toml` keyed on `tags`/`categories`), rendering 3–4 `blog-card.html` items before the footer.
-
-**Verify:** each post links to 3–4 related posts; orphan posts now receive inbound internal links.
-
----
-
-### 🟡 SEO-27 — RSS feeds aren't discoverable (no `<link rel="alternate">`)
-
-**Files:** `layouts/partials/basic-seo.html` (or a new head partial) · **Effort:** S
-
-Feeds exist (`/index.xml`, per-section RSS) but **no `<link rel="alternate" type="application/rss+xml">`** is in `<head>`, so feed readers and some crawlers can't find them. Add:
-```go-html-template
-{{ with .OutputFormats.Get "RSS" -}}
-<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ $.Site.Title }}">
-{{- end }}
-```
-
-**Verify:** `<head>` on home + section pages contains the RSS alternate link; feed validators discover it.
-
----
-
-### 🟡 SEO-28 — GEO (optional/advanced): richer schema types per content type
-
-**Effort:** L · Currently every post is a generic `BlogPosting`. More specific types help AI engines classify and cite content. Optional, do post-by-post or via category mapping in `schema-blog.html`:
-
-| Section / category | Better `@type` |
-|---|---|
-| `tech-project` | `SoftwareApplication` (or `CreativeWork`) + `applicationCategory` |
-| `publication` | `ScholarlyArticle` / `Article` |
-| `books` (reviews) | `Review` with `itemReviewed` = `Book` |
-| `experience`, `thought` | keep `BlogPosting` |
-
-**Verify:** Rich Results Test shows the specialized type with no errors. Mark done when at least `tech-project` and `publication` are mapped.
-
----
-
-### ⚪ SEO-29 — Theme-demo leftovers (brand & a11y)
-
-**Files:** `config/_default/params.toml`, `layouts/partials/essentials/head.html` · **Effort:** S
-- `logo_text = "Hugoplate"` → the navbar logo renders **`alt="Hugoplate"`** on every page (via theme `partials/logo`). Change to `logo_text = "Simone Mattioli"` (and confirm the rendered logo `alt`).
-- `head.html:12` ships `<meta name="theme-name" content="hugoplate" />` — unnecessary; remove it (don't advertise the theme).
-- `params.toml` still contains the theme's placeholder `announcement.content` ("You must replace the **baseURL**…") — it's disabled (`enable = false`) but delete the demo text.
-
-**Verify:** no "hugoplate"/"Hugoplate" strings in rendered `public/**/*.html` (`grep -ri hugoplate public | grep -v 'theme-name'`).
-
----
-
-### ⚪ SEO-30 — Malformed `<time datetime>` + missing `og:locale`
-
-**Files:** `layouts/blog/single.html` (line ~41), `layouts/partials/basic-seo.html` · **Effort:** S
-- `datetime="{{ .PublishDate }}"` emits a Go time string (`2026-01-19 00:00:00 +0000 UTC`) — **not a valid `datetime` value**. Use `datetime="{{ .PublishDate.Format "2006-01-02" }}"`.
-- Add `<meta property="og:locale" content="en_US">` to `basic-seo.html` for OG completeness. (`twitter:site`/`creator` are **N/A** — no X/Twitter account in `data/about.yml`; skip.)
-
----
-
-### ⚪ SEO-31 — PWA manifest polish
-
-**Effort:** S · The generated `manifest.webmanifest`:
-- Uses the single **1024×1024 `favicon.png`** for both the `192×192` and `512×512` icons (browser downscales; not ideal). Provide correctly-sized 192/512 PNGs (and a properly-padded `maskable` icon).
-- Lists `images/og-image.png` as its `screenshots` source — currently **404** (resolved once **SEO-07** ships the file to `static/images/`).
-
-**Verify:** Lighthouse PWA / "Installable" audit passes; manifest icons + screenshot load (200).
-
----
-
-### ✔️ Verified **not** a problem (don't waste time "fixing" these)
-
-- **`layouts/partials/image.html`** is well-built: responsive WebP `srcset`, `width`/`height` (CLS-safe), and `Priority` (eager + `fetchpriority`) support. The bugs are in *callers* (SEO-21), not the partial.
-- **No GA double-tracking** — Hugo's internal GA template is disabled; analytics flow only through GTM (`GTM-T3VMWGJP`).
-- **`unused_content/` is a top-level folder** (not under `content/`) → Hugo ignores it; it does not build.
-- **PDFs are not in the sitemap** (0 found); the 57 repo PDFs aren't a sitemap-bloat issue.
-- **All 66 posts have `description`**, none are `draft`, none use `aliases`, all have `date`.
-- **`/connect`'s custom `baseof.html` includes the SEO `<head>`** (meta + schema are present; it just omits nav/footer by design).
-- **UI strings are English** (`i18n/en.yaml`); the 404 page is `noindex` + has nav/search.
-
----
-
-## ✅ Global verification (run after P0 + P1)
-
-```bash
-# 1) Clean production build (must succeed with no template errors)
-npm ci
-hugo --gc --minify --baseURL "https://simo-hue.github.io/"
-
-# 2) Validate every JSON-LD block parses as valid JSON (catches the encoding regressions)
-python3 - <<'PY'
-import glob, re, json, sys
-bad = 0
-for f in glob.glob("public/**/*.html", recursive=True):
-    html = open(f, encoding="utf-8", errors="ignore").read()
-    for b in re.findall(r'<script type="application/ld\+json">(.*?)</script>', html, re.S):
-        try:
-            d = json.loads(b)
-            # fail if any value is a quoted-string-wrapped scalar or an array-as-string
-            def smell(v):
-                return isinstance(v, str) and (v.startswith('"') or v.startswith('['))
-            bads = [k for k, v in d.items() if smell(v)]
-            if bads:
-                print(f"[DOUBLE-ENCODED] {f}: {bads}"); bad += 1
-        except Exception as e:
-            print(f"[INVALID JSON] {f}: {e}"); bad += 1
-print("RESULT:", "FAIL" if bad else "PASS — all JSON-LD valid & not double-encoded")
-sys.exit(1 if bad else 0)
-PY
-```
-
-Then manually:
-- [ ] Homepage in Google **Rich Results Test** → `WebSite`, `Person`, `FAQPage` detected, no errors.
-- [ ] A blog post in Rich Results Test → `BlogPosting` + `BreadcrumbList` detected with **that post's** data.
-- [ ] `WebSite`/`Person`/`FAQPage` are **absent** from blog posts (no sitewide leak).
-- [ ] `curl -I https://simo-hue.github.io/images/og-image.png` → 200; social card renders in FB/LinkedIn debuggers.
-- [ ] `npx lighthouse` homepage + article: LCP < 2.5s, CLS < 0.1, no new regressions.
-- [ ] Re-submit `sitemap.xml` in Google Search Console; watch "Enhancements" (Breadcrumbs, Merchant/Person) populate.
-
----
-
-## Reference — measured baseline (2026-06-30)
-
-| Metric | Homepage | Article (DeepSafe) |
-|---|---|---|
-| Lighthouse Perf (mobile) | 63 | 76 |
-| **LCP** | **9.0s** 🔴 | 5.9s 🟠 |
-| CLS | 0.001 🟢 | 0.098 🟢 |
-| TBT | 0ms 🟢 | 70ms 🟢 |
-| FCP | 4.8s 🔴 | 1.2s 🟢 |
-| TTFB | ~20ms 🟢 | ~20ms 🟢 |
-| Page weight | 1,201 KB | 1,805 KB |
-
-| Category | Score | | Category | Score |
-|---|---|---|---|---|
-| Technical SEO | 72 | | Schema / Structured Data | **35** |
-| Content / E-E-A-T | 68 | | Performance (CWV) | 62 |
-| On-Page SEO | 70 | | AI Search Readiness | 62 |
-| Images | 62 | | **Overall** | **64 / 100** |
-
-**Tooling:** [Rich Results Test](https://search.google.com/test/rich-results) · [Schema validator](https://validator.schema.org/) · [PageSpeed Insights](https://pagespeed.web.dev/) · [Search Console](https://search.google.com/search-console)
-
-*Most-severe-first. Re-run a full audit after P0+P1 land to refresh the score (expected: Schema 35 → ~85, Performance 62 → ~80, Overall 64 → ~80+).*
+**Ordering constraints that must not be violated:**
+`ENT-04` → `ENT-05` (don't consolidate onto a contaminated Scholar profile) · `ENT-12` → `SAT-02` (don't attach `founder` to a policy violation) · `ENT-02` → `SAT-01` · `ENT-21a` → `ENT-22` (don't seed Wikidata from a mismatched title) · `ENT-15` → adding S2 to `sameAs` · `ITA-01` → all other ITA tasks.

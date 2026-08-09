@@ -1,0 +1,308 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# CANONICAL ENTITY FACTS — the single source of truth for who Simone Mattioli is.
+#
+# Everything machine-readable renders FROM this file: the Person JSON-LD, the
+# FAQPage, llms.txt, the meta description, and the About page's education box.
+# Before this existed, those six surfaces each held their own copy and three had
+# already drifted apart — the homepage FAQ said "is a Computer Science student at
+# the University of Verona" while the meta description on the same page said
+# "CS graduate and EIT Digital Master's student".
+#
+# RULES
+#   1. Facts live here. Presentation (colours, ordering, icons, prose copy) stays
+#      in about.yml. If you find yourself adding a CSS class here, stop.
+#   2. `id` MUST stay byte-identical everywhere and MUST stay language-neutral.
+#      On the Italian pages it is still https://simo-hue.github.io/#person —
+#      never /it/#person, or the entity splits in two.
+#   3. Never state a credential earlier than it is true. See `status` below.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# --- Identity ----------------------------------------------------------------
+id: "https://simo-hue.github.io/#person"
+website_id: "https://simo-hue.github.io/#website"
+
+name: "Simone Mattioli"
+given_name: "Simone"
+family_name: "Mattioli"
+# Surname-first is the Italian convention and appears on several of his profiles.
+alternate_names:
+  - "Mattioli Simone"
+
+job_title: "Computer Science Engineer & AI Researcher"
+email: "mattioli.simone.10@gmail.com"
+
+nationality: "Italy"
+locality: "Verona"
+region: "Veneto"
+country: "IT"
+
+languages:
+  - name: "Italian"
+    code: "it"
+  - name: "English"
+    code: "en"
+
+# --- Status ------------------------------------------------------------------
+# CAREFUL. As of August 2026 he has GRADUATED from Verona and has NOT yet started
+# the master's: ELTE begins September 2026, KTH August 2027. Several surfaces used
+# to claim he was already at KTH. Claiming a credential before it is true is the
+# same failure mode as the "Dr." that SciProfiles wrongly asserts — and on a
+# profile whose whole value is academic credibility it is the most damaging kind
+# of error. Update the wording when each date actually arrives.
+status: >-
+  BSc Computer Science, University of Verona (2022–2025). Incoming EIT Digital
+  Master's student (AUSIR) — ELTE from September 2026, KTH Royal Institute of
+  Technology from August 2027.
+
+positioning: >-
+  Italian CS engineer and AI researcher who ships. Co-author of a BDCC/MDPI paper
+  on LLMs for tourist-mobility prediction; incoming EIT Digital Master's student
+  at ELTE then KTH; six iOS apps on the App Store; founder of DeepSafe.
+
+description: >-
+  Simone Mattioli is an Italian computer science engineer and AI researcher. He
+  co-authored "Understanding and Predicting Tourist Behavior Through Large
+  Language Models" (Big Data and Cognitive Computing, 2026), which uses large
+  language models to interpret and predict tourist movement in Verona. He holds a
+  BSc in Computer Science from the University of Verona and begins the EIT Digital
+  Master's programme at ELTE in September 2026, continuing at KTH Royal Institute
+  of Technology in August 2027. Alongside his research he publishes iOS
+  applications on the App Store and founded DeepSafe, a cybersecurity-gamification
+  startup.
+
+# --- Education ---------------------------------------------------------------
+# `completed: false` entries are future and MUST be rendered as such.
+education:
+  - institution: "University of Verona"
+    institution_id: "https://www.univr.it/#organization"
+    department: "Department of Computer Science"
+    qualification: "Bachelor of Science in Computer Science"
+    level: "Undergraduate"
+    start: "2022"
+    end: "2025"
+    completed: true
+  - institution: "ELTE Eötvös Loránd University"
+    programme: "EIT Digital Master School — AUSIR"
+    start: "2026-09"
+    end: "2027-07"
+    completed: false
+  - institution: "KTH Royal Institute of Technology"
+    programme: "EIT Digital Master School — AUSIR"
+    start: "2027-08"
+    end: "2028-07"
+    completed: false
+  - institution: "ITT Marconi Rovereto"
+    qualification: "Technical Diploma in Computer Science"
+    end: "2022"
+    completed: true
+
+knows_about:
+  - "Large Language Models"
+  - "Human Mobility Prediction"
+  - "Spatio-Temporal Reasoning"
+  - "Next-POI Recommendation"
+  - "Artificial Intelligence"
+  - "High-Performance Computing"
+  - "Natural Language Processing"
+  - "iOS Development"
+  - "Software Engineering"
+
+# --- Publication -------------------------------------------------------------
+# He is the SECOND of four authors. Never imply sole authorship.
+publications:
+  - title: "Understanding and Predicting Tourist Behavior Through Large Language Models"
+    doi: "10.3390/bdcc10040117"
+    url: "https://www.mdpi.com/2504-2289/10/4/117"
+    journal: "Big Data and Cognitive Computing"
+    publisher: "MDPI"
+    volume: "10"
+    issue: "4"
+    article_number: "117"
+    date: "2026-04-11"
+    author_position: 2
+    authors:
+      - "Anna Dalla Vecchia"
+      - "Simone Mattioli"
+      - "Sara Migliorini"
+      - "Elisa Quintarelli"
+    code: "https://github.com/4nnina/llm_tourist_trajectories"
+
+# --- Profiles ----------------------------------------------------------------
+# ONE list drives both the visible icon row and the schema `sameAs`, so a profile
+# can never be linked in the UI while missing from the graph — which is exactly
+# the bug that left ORCID on /links/ but absent from the Person node.
+#
+#   display: show in the About page icon row
+#   same_as: emit into the Person `sameAs` array
+#   blocked_by: do NOT emit yet; the reason and the unblocking task
+profiles:
+  - name: "ORCID"
+    url: "https://orcid.org/0009-0006-5047-8004"
+    icon: "fab fa-orcid"
+    display: true
+    same_as: true
+  - name: "GitHub"
+    url: "https://github.com/simo-hue"
+    icon: "fab fa-github"
+    display: true
+    same_as: true
+  - name: "LinkedIn"
+    url: "https://www.linkedin.com/in/simonemattioli2003/"
+    icon: "fab fa-linkedin"
+    display: true
+    same_as: true
+  - name: "Apple Developer"
+    url: "https://apps.apple.com/us/developer/simone-mattioli/id1896746638"
+    icon: "fab fa-app-store-ios"
+    display: true
+    same_as: true
+  - name: "OpenAlex"
+    url: "https://openalex.org/A5133501663"
+    icon: "fas fa-database"
+    display: false
+    same_as: true
+  - name: "SciProfiles"
+    url: "https://sciprofiles.com/profile/Mattioli-simone"
+    icon: "fas fa-user-graduate"
+    display: true
+    same_as: true
+  - name: "YouTube — Simo's Diary"
+    url: "https://www.youtube.com/@SimosDiary2003"
+    icon: "fab fa-youtube"
+    display: true
+    same_as: true
+  - name: "Instagram"
+    # 1,052 followers but zero posts. Kept because it carries his real name and is
+    # already asserted from /links/ and from the Simo's Diary channel — dropping it
+    # here would make the schema disagree with his other properties. Revisit if he
+    # abandons rather than populates it.
+    url: "https://www.instagram.com/simo___one/"
+    icon: "fab fa-instagram"
+    display: true
+    same_as: true
+
+  # --- Gated: real profiles, currently publishing false facts ---
+  - name: "Google Scholar"
+    url: "https://scholar.google.com/citations?user=uLGrDbIAAAAJ"
+    icon: "fas fa-graduation-cap"
+    display: true
+    same_as: false
+    blocked_by: >-
+      ENT-04 — the profile lists "An AI-driven framework for continuous tourist
+      sentiment scoring (RoBERTa-CSS)", Tourism Review 81(1), which is by T Yang
+      and CHC Hsu. Linking it via sameAs would make that false authorship claim
+      machine-resolvable. Set same_as: true once the paper is deleted and
+      auto-update is switched off.
+  - name: "Semantic Scholar"
+    url: "https://www.semanticscholar.org/author/2429558651"
+    icon: "fas fa-flask"
+    display: false
+    same_as: false
+    blocked_by: >-
+      ENT-15 — the author record has no ORCID and is merged with the author of a
+      2015 Italian study on Bitcoin and consumer trust, published when he was
+      about twelve. Claim the page via ORCID and remove that paper first.
+
+# --- Ventures ----------------------------------------------------------------
+# Modelled as Organizations he founded, not as personal profiles: a brand's
+# Instagram is the brand's, not his. Each links back with founder -> the Person id,
+# which is what encodes the founder claim in the graph rather than only in prose.
+ventures:
+  - name: "Mountain Fauna Lover"
+    id: "https://mountain-fauna-lover.vercel.app/#organization"
+    url: "https://mountain-fauna-lover.vercel.app/"
+    description: "Alpine wildlife observation, digiscoping and nature storytelling."
+    same_as:
+      - "https://www.youtube.com/@mountainfaunalover"
+      - "https://www.instagram.com/mountainfaunalover/"
+      - "https://www.tiktok.com/@mountainfaunalover"
+  - name: "DeepSafe"
+    id: "https://simo-hue.github.io/DeepSafe/#organization"
+    url: "https://simo-hue.github.io/DeepSafe/"
+    description: >-
+      Cybersecurity-gamification startup teaching digital safety through play.
+      No longer active.
+    same_as:
+      - "https://www.youtube.com/@Deep-Safe"
+      - "https://www.instagram.com/deepsafe_/"
+      - "https://www.tiktok.com/@deepsafe"
+
+# --- FAQ ---------------------------------------------------------------------
+# Google retired FAQ rich results on 2026-05-07, so this block exists purely to be
+# quoted by LLMs. That makes specificity the whole point: name the DOI, the apps,
+# the institutions and the dates, because a vague answer is not worth citing.
+faq:
+  - q: "Who is Simone Mattioli?"
+    a: >-
+      Simone Mattioli is an Italian computer science engineer and AI researcher.
+      He co-authored "Understanding and Predicting Tourist Behavior Through Large
+      Language Models" (Big Data and Cognitive Computing, MDPI, 2026), holds a BSc
+      in Computer Science from the University of Verona, and publishes iOS
+      applications on the App Store. He founded DeepSafe, a
+      cybersecurity-gamification startup.
+  - q: "What does Simone Mattioli research?"
+    a: >-
+      His research applies large language models to spatio-temporal reasoning and
+      human-mobility prediction. In "Understanding and Predicting Tourist Behavior
+      Through Large Language Models" (DOI 10.3390/bdcc10040117), he and his
+      co-authors use LLMs to interpret and predict the movement of tourists in
+      Verona, translating trajectory data into natural language and back. He also
+      works with high-performance computing, holding CINECA certifications in HPC,
+      quantum computing and scientific Python.
+  - q: "Where does Simone Mattioli study?"
+    a: >-
+      He completed a BSc in Computer Science at the University of Verona between
+      2022 and 2025. He begins the EIT Digital Master School programme (AUSIR) at
+      ELTE Eötvös Loránd University in September 2026, continuing at KTH Royal
+      Institute of Technology from August 2027.
+  - q: "What has Simone Mattioli built?"
+    a: >-
+      He has published six iOS applications on the App Store, including Evolve
+      (habit and goal tracking), Wealth Compass (personal finance), Ping Pong
+      Counter and Warranties Vault. He also maintains open-source projects on
+      GitHub, among them CampFlow, a free campsite-management system, and
+      mattioli.OS, a personal productivity system.
+  - q: "What is DeepSafe?"
+    a: >-
+      DeepSafe is a cybersecurity-gamification startup founded by Simone Mattioli
+      that taught digital safety and online security through short, game-like
+      lessons in Italian. The project is no longer active, but the platform
+      remains online.
+  - q: "How can I contact Simone Mattioli?"
+    a: >-
+      By email at mattioli.simone.10@gmail.com, or through LinkedIn at
+      linkedin.com/in/simonemattioli2003. His work is on GitHub at github.com/simo-hue
+      and his research record is at orcid.org/0009-0006-5047-8004.
+
+# --- Shipped work ------------------------------------------------------------
+# Feeds llms.txt and gives AI agents concrete, checkable artefacts to cite.
+# Six App Store apps; the audit found 0 of 59 GitHub repos linked to the store.
+apps:
+  - name: "Evolve — Habits & Goal Tracker"
+    site: "https://simo-hue.github.io/evolve/"
+    store: "https://apps.apple.com/app/evolve-habits-goal-tracker/id6770482363"
+  - name: "Wealth Compass — Finance Tracker"
+    site: "https://simo-hue.github.io/wealth-compass/"
+    store: "https://apps.apple.com/us/app/wealth-compass-tracker/id6777399748"
+  - name: "Ping Pong Counter"
+    site: "https://simo-hue.github.io/Ping-Pong-Counter/"
+    store: "https://apps.apple.com/app/ping-pong-counter/id6771022440"
+  - name: "Warranties Vault"
+    store: "https://apps.apple.com/app/warranties-vault/id6771369236"
+  - name: "Local File Diet"
+    site: "https://simo-hue.github.io/Local-File-Diet/"
+  - name: "SafeSpotter"
+    site: "https://simo-hue.github.io/SafeSpotter/"
+
+projects:
+  - name: "CampFlow"
+    description: "Free, open-source campsite management system."
+    site: "https://simo-hue.github.io/CampFlow/"
+    repo: "https://github.com/simo-hue/CampFlow"
+  - name: "mattioli.OS"
+    description: "Personal productivity and habit system."
+    site: "https://simo-hue.github.io/mattioli.OS/"
+    repo: "https://github.com/simo-hue/mattioli.OS"
+  - name: "LLM Tourist Trajectories"
+    description: "Research code for the BDCC tourist-mobility paper."
+    repo: "https://github.com/4nnina/llm_tourist_trajectories"

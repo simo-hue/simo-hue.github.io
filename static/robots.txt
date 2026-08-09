@@ -1,27 +1,31 @@
 # Robots.txt for simo-hue.github.io
-# Optimized for search engines and AI crawlers
+#
+# NOTE: this single file governs the user site AND every project site published
+# under it (/evolve/, /wealth-compass/, /Ping-Pong-Counter/, /Local-File-Diet/,
+# /SafeSpotter/, /mattioli.OS/, /CampFlow/, /DeepSafe/). Per RFC 9309 a robots.txt
+# is only ever fetched from the domain root, so any robots.txt committed inside a
+# project subdirectory is dead weight and is never read.
 
 User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /private/
-Disallow: /*.json$
 Disallow: /searchindex.json
 
-# Sitemaps
-Sitemap: https://simo-hue.github.io/sitemap.xml
+# ─── AI crawlers ─────────────────────────────────────────────────────────────
+# Everything is allowed by the wildcard group above; these are explicit so the
+# intent is unambiguous and survives any future tightening of the wildcard.
 
-# AI Crawlers - Specific instructions
-User-agent: GPTBot
+# Anthropic. ClaudeBot is the current production crawler — it was missing here,
+# while the two tokens that were listed (anthropic-ai, Claude-Web) are both
+# retired. Keeping the legacy names costs nothing.
+User-agent: ClaudeBot
 Allow: /
 
-User-agent: ChatGPT-User
+User-agent: Claude-User
 Allow: /
 
-User-agent: Google-Extended
-Allow: /
-
-User-agent: CCBot
+User-agent: Claude-SearchBot
 Allow: /
 
 User-agent: anthropic-ai
@@ -30,20 +34,73 @@ Allow: /
 User-agent: Claude-Web
 Allow: /
 
-# Bing AI
-User-agent: Bingbot
+# OpenAI. GPTBot trains; OAI-SearchBot is separate and feeds ChatGPT search.
+User-agent: GPTBot
 Allow: /
 
-# Google Gemini
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Google
 User-agent: Googlebot
 Allow: /
 
-# Allow all AI training bots for maximum LLM visibility
+User-agent: Google-Extended
+Allow: /
+
+# Microsoft — Bing's index is what feeds Copilot citations.
+User-agent: Bingbot
+Allow: /
+
+# Apple — relevant here given six App Store apps.
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Perplexity
 User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Others
+User-agent: CCBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: DuckDuckBot
 Allow: /
 
 User-agent: YouBot
 Allow: /
 
-# Crawl delay to prevent server overload
-Crawl-delay: 1
+# ─── Sitemaps ────────────────────────────────────────────────────────────────
+# GitHub Pages offers no sitemap-ping mechanism, so these lines plus manual
+# submission in Search Console and Bing Webmaster Tools are the only discovery
+# levers for the project sites, which are otherwise orphaned from every sitemap.
+
+Sitemap: https://simo-hue.github.io/sitemap.xml
+Sitemap: https://simo-hue.github.io/evolve/sitemap.xml
+Sitemap: https://simo-hue.github.io/wealth-compass/sitemap.xml
+Sitemap: https://simo-hue.github.io/Ping-Pong-Counter/sitemap.xml
+Sitemap: https://simo-hue.github.io/Local-File-Diet/sitemap.xml
+Sitemap: https://simo-hue.github.io/SafeSpotter/sitemap.xml
+Sitemap: https://simo-hue.github.io/CampFlow/sitemap.xml
+Sitemap: https://simo-hue.github.io/DeepSafe/sitemap.xml

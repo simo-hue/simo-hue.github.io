@@ -1,24 +1,27 @@
-{{- /* Schema.org FAQPage for homepage.
-       NOTE: Google retired FAQ rich results for all sites on 2026-05-07; this no
-       longer yields a SERP feature. Kept for AI/LLM citation value (ChatGPT,
-       Perplexity, AI Overviews). Do not add new FAQPage expecting Google rich results. */ -}}
+{{- /* Schema.org FAQPage for the homepage.
+
+       Google retired FAQ rich results for all sites on 2026-05-07, so this yields
+       no SERP feature. It is kept purely for AI/LLM citation value (ChatGPT,
+       Perplexity, AI Overviews) — which is precisely why the answers must be
+       specific and correct: a vague answer is not worth quoting, and a wrong one
+       gets quoted anyway. These previously claimed he was a student at the
+       University of Verona, years after he graduated.
+
+       Content lives in data/entity.yml under `faq`. Do not write answers here. */ -}}
 {{- if .IsHome -}}
+{{- $e := hugo.Data.entity -}}
+{{- $questions := slice -}}
+{{- range $e.faq -}}
+  {{- $questions = $questions | append (dict
+      "@type" "Question"
+      "name" .q
+      "acceptedAnswer" (dict "@type" "Answer" "text" .a)) -}}
+{{- end -}}
 {{- $faq := dict
   "@context" "https://schema.org"
   "@type" "FAQPage"
-  "mainEntity" (slice
-    (dict "@type" "Question"
-      "name" "Who is Simone Mattioli?"
-      "acceptedAnswer" (dict "@type" "Answer"
-        "text" "Simone Mattioli is a Computer Science student at the University of Verona, specializing in Artificial Intelligence and Large Language Models. He combines technical skills with international volunteering, travel, and content creation."))
-    (dict "@type" "Question"
-      "name" "What does Simone Mattioli do?"
-      "acceptedAnswer" (dict "@type" "Answer"
-        "text" "Simone studies Computer Science with a focus on AI and builds projects in machine learning and High-Performance Computing. On his blog he shares reflections on technology, travel experiences, and personal growth, documenting his academic journey and passions."))
-    (dict "@type" "Question"
-      "name" "Where does Simone Mattioli study?"
-      "acceptedAnswer" (dict "@type" "Answer"
-        "text" "Simone Mattioli studies at the University of Verona, Department of Computer Science, specializing in Artificial Intelligence and High-Performance Computing. The university is located in Verona, Italy.")))
+  "about" (dict "@id" $e.id)
+  "mainEntity" $questions
 -}}
 <script type="application/ld+json">
 {{ $faq | jsonify | safeJS }}

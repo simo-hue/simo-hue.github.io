@@ -9,6 +9,11 @@ theme = "hugoplate"
 timeZone = "America/New_York"
 # post excerpt
 summaryLength = 25 # see https://gohugo.io/content-management/excerpts/ - Increased for better SEO snippets
+# Per-page render timeout. The default (60s) is not enough for this site on a cold
+# cache: image-heavy posts such as the Brazil volunteering one process dozens of
+# large source images and time out. Warm builds are far quicker; this only needs to
+# be generous enough for the first run after `--gc` or a clean checkout.
+timeout = "300s"
 # disable language
 disableLanguages = ["it", "fr", "es"] # disable italian, french, spanish languages
 hasCJKLanguage = false #  If hasCJKLanguage true, auto-detect Chinese/Japanese/Korean Languages in the content. see: https://gohugo.io/getting-started/configuration/#hascjklanguage
@@ -76,7 +81,7 @@ target = 'assets/notwatching/hugo_stats.json'
 
 ############################# Outputs ############################
 [outputs]
-home = ["HTML", "RSS", "WebAppManifest", "SearchIndex"]
+home = ["HTML", "RSS", "WebAppManifest", "SearchIndex", "LLMS"]
 section = ["HTML", "RSS"]
 page = ["HTML"]
 
@@ -124,6 +129,16 @@ suffixes = ["webmanifest"]
 [outputFormats.WebAppManifest]
 mediaType = "application/manifest+json"
 rel = "manifest"
+
+# /llms.txt — the orientation file AI agents read first. Generated from
+# data/entity.yml rather than hand-maintained in static/, because the hand-written
+# version drifted: 3 of its 7 curated links 404'd (singular /blog/publication/ etc.
+# against the real plural routes) and its bio contradicted the Person schema.
+[outputFormats.LLMS]
+mediaType = "text/plain"
+baseName = "llms"
+isPlainText = true
+notAlternative = true
 
 [outputFormats.SearchIndex]
 mediaType = "application/json"

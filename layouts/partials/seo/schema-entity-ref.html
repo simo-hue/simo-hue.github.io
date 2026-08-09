@@ -1,0 +1,77 @@
+{{- /* Entity reference for NON-home pages.
+
+       The full Person is defined once on the homepage (schema-person.html). Every
+       other page emits this small reference graph instead, so a crawler landing
+       directly on /links/, /blog/ or any post still learns whose site it is and
+       can attach the page to the canonical entity.
+
+       Before this existed, /links/, /blog/ and /blog/publications/ carried only a
+       BreadcrumbList — the social-identity hub and the academic-credibility page
+       said nothing at all about whose links or whose publications they were.
+
+       Reference-only by design: it restates no facts, so it cannot drift from the
+       homepage definition. Consumers merge nodes that share an @id. */ -}}
+{{- if not .IsHome -}}
+{{- $e := hugo.Data.entity -}}
+{{- $nodes := slice
+  (dict "@type" "Person" "@id" $e.id "name" $e.name "url" (printf "%s/" (strings.TrimSuffix "/" site.BaseURL)))
+  (dict "@type" "WebSite" "@id" $e.website_id "name" site.Title "url" site.BaseURL "publisher" (dict "@id" $e.id))
+-}}
+
+{{- /* The current page, tied to both the site and the person. */ -}}
+{{- $webPage := dict
+  "@type" "WebPage"
+  "@id" (printf "%s#webpage" .Permalink)
+  "url" .Permalink
+  "name" .Title
+  "isPartOf" (dict "@id" $e.website_id)
+  "about" (dict "@id" $e.id)
+-}}
+{{- with .Description -}}
+  {{- $webPage = merge $webPage (dict "description" .) -}}
+{{- end -}}
+{{- $nodes = $nodes | append $webPage -}}
+
+{{- /* /links/ is the social-identity hub: mark it as the profile page for the
+       entity so the outbound profile links are read as belonging to him.
+       Matched on .Type, not .Section — /links/ renders as Kind=page with an
+       empty .Section, so a Section test silently never fires. */ -}}
+{{- if eq .Type "links" -}}
+  {{- $nodes = $nodes | append (dict
+      "@type" "ProfilePage"
+      "@id" (printf "%s#profilepage" .Permalink)
+      "url" .Permalink
+      "mainEntity" (dict "@id" $e.id)
+      "isPartOf" (dict "@id" $e.website_id)) -}}
+{{- end -}}
+
+{{- /* The blog itself is one Blog node, on /blog/ only. Sub-sections such as
+       /blog/publications/ share .Section "blog", so testing Section alone would
+       mint a second, competing Blog node on each of them; they get a
+       CollectionPage that belongs to the one Blog instead. */ -}}
+{{- $blogID := printf "%s/blog/#blog" (strings.TrimSuffix "/" site.BaseURL) -}}
+{{- if and (eq .Kind "section") (eq .Section "blog") -}}
+  {{- if eq .RelPermalink "/blog/" -}}
+    {{- $nodes = $nodes | append (dict
+        "@type" "Blog"
+        "@id" $blogID
+        "url" .Permalink
+        "name" .Title
+        "author" (dict "@id" $e.id)
+        "publisher" (dict "@id" $e.id)
+        "isPartOf" (dict "@id" $e.website_id)) -}}
+  {{- else -}}
+    {{- $nodes = $nodes | append (dict
+        "@type" "CollectionPage"
+        "@id" (printf "%s#collection" .Permalink)
+        "url" .Permalink
+        "name" .Title
+        "isPartOf" (dict "@id" $blogID)
+        "about" (dict "@id" $e.id)) -}}
+  {{- end -}}
+{{- end -}}
+
+<script type="application/ld+json">
+{{ (dict "@context" "https://schema.org" "@graph" $nodes) | jsonify | safeJS }}
+</script>
+{{- end -}}

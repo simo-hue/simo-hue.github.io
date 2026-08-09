@@ -1,13 +1,21 @@
-{{- /* Schema.org WebSite structured data */ -}}
+{{- /* Schema.org WebSite structured data.
+
+       The @id matters: without it, satellite properties have no stable target to
+       point `isPartOf` at, and the site itself is an anonymous node in the graph.
+       Both this and the Person id come from data/entity.yml so they cannot drift
+       from the values every other property references. */ -}}
 {{- if .IsHome -}}
+{{- $e := hugo.Data.entity -}}
 {{- $schema := dict
   "@context" "https://schema.org"
   "@type" "WebSite"
+  "@id" $e.website_id
   "name" site.Title
   "url" site.BaseURL
   "description" site.Params.metadata.description
   "inLanguage" "en-US"
-  "author" (dict "@type" "Person" "@id" (printf "%s#person" site.BaseURL) "name" site.Params.metadata.author)
+  "publisher" (dict "@id" $e.id)
+  "author" (dict "@id" $e.id)
   "potentialAction" (dict
     "@type" "SearchAction"
     "target" (dict
