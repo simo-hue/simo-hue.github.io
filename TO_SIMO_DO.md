@@ -545,3 +545,60 @@ out would take ~70 MB off every clone and every deploy.
 **Note on the images:** I removed 124 image originals that each had a `.webp` twin and were
 referenced by nothing. They are still in git history — `git show HEAD~1:<path> > <path>` restores
 any of them.
+
+---
+
+## [2026-08-08] Thin posts — what I did, and the five that need you
+
+### Unpublished (nothing there to expand)
+
+Four more posts were live while advertising themselves as unwritten:
+
+- `experiences/GDG AI Hackathon` — body was a bare `## Introduction`, zero words of prose
+- `books/Pensieri lenti pensieri veloci`, `books/guadagna con la mente`,
+  `books/insegna al cuore a vedere` — all three read **"COMMING SOON, Still Reading"** (sic),
+  dated **November 2024**. Live for about 21 months.
+
+All now `draft: true` with a comment saying why. Write them and flip the flag.
+
+### Fixed
+
+- **`mountainfaunalover` expanded, 138 → 471 words**, and it stays live. Everything added is
+  verifiable — the locations, what digiscoping is, the four channels — nothing invented about
+  your experience. Description was the placeholder "A brief description of Mountain Fauna Lover
+  presence on Social media Platforms"; tags gained digiscoping/trentino/stelvio; the website
+  link was missing entirely.
+- **Another wrong TikTok handle.** This post linked `@mountainfaunalove` (no *r*) — the
+  stranger's account again. It was rendering on **9+ pages** through post cards.
+
+### Four questions that would make the MFL post yours
+
+I stripped these out rather than publishing a live page with markers in it. Answer them and
+I will work them in:
+
+- What scope and camera do you actually shoot with, and why that combination?
+- Which channel works best, and did that match what you expected?
+- Is there a specific encounter that changed how you approach not disturbing the animals?
+  A concrete story lands far harder than the principle.
+- The embedded YouTube video has no context — what is it, and why that one?
+
+### The five I am not going to write
+
+`Budapest Trip` (105 words of prose) · `GISEP Rimini` (125) · `Sicily` (137) ·
+`Poland Trip` (143) · `Italy Trip` (210)
+
+These are not stubs — they are **finished, just short**. The reason I have stopped rather than
+padding them: the only honest way to reach 600 words is your memories, and the alternative is
+filling them with generic travel-guide copy about the Danube or the Colosseum. That would make
+them *worse*. Undifferentiated encyclopedia content is exactly what search engines and LLMs
+discard, and the entire value of these posts is that they are first-hand.
+
+For each, three or four sentences from you is enough for me to draft:
+
+| Post | What I need |
+|---|---|
+| Budapest Trip | Which year, who went, one thing that surprised you, one thing that went wrong |
+| GISEP Rimini | What GISEP is, why you attended, one session or conversation worth recounting |
+| Sicily | You have **7 photos** in this post and reference the mafia in the tags — what was the trip actually about? |
+| Poland Trip | Auschwitz-Birkenau is in the description. What you want to say about it, in your words |
+| Italy Trip | Where exactly, when, and what made it worth a post |

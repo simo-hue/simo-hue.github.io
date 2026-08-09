@@ -7,7 +7,11 @@ locations:
     lon: 19.0402
     country: Hungary
     title: Budapest
-draft: false
+draft: true
+# UNPUBLISHED 2026-08-08. This post was live and indexed while being
+# an empty stub: the body is a bare "## Introduction" with no prose at all.
+# Nothing here can be expanded without the author's own material, so it is
+# withdrawn rather than padded. Write it, then set draft: false.
 slug: gdg-ai-hackathon
 tags: [hungary, budapest, collegio don mazza, travel, europe]
 ---
