@@ -1,3 +1,21 @@
+# Globe Pin: Esztergom / Štúrovo Border Crossing
+## Data: 2026-09-14
+## Modifiche
+Created a new blog post "Crossing a country's border walking" (dated 2026-09-13) under `experiences/`. The post has two globe `locations` entries — Esztergom (Hungary) and Štúrovo (Slovakia) — representing a walking border crossing via the Mária Valéria bridge. The post body is intentionally left empty for the user to fill in later. Cleaned up the dead `content/english/blog/experience/` directory (singular), which contained only macOS `.DS_Store` files and no actual content.
+
+### File Modificati
+- [`content/english/blog/experiences/Crossing a countrys border walking/index.md`](file:///Users/simo/Developer/simo-hue.github.io/content/english/blog/experiences/Crossing%20a%20countrys%20border%20walking/index.md): **[NEW]** Blog post with two globe location pins.
+- `content/english/blog/experience/`: **[DELETED]** Dead directory with empty subfolders.
+
+## Tech Notes
+- Globe pins: Esztergom (47.7856, 18.7403, country: Hungary) and Štúrovo (47.7950, 18.7210, country: Slovakia).
+- Slug: `crossing-a-countrys-border-walking`
+- Tags: `travel, slovakia, hungary, esztergom, europe`
+- Draft: `false` (published immediately)
+- Hugo build verified: exit code 0, 616 pages.
+
+---
+
 # HPC and Quantum Computing Certificate Update
 ## Data: 2026-04-16
 ## Modifiche
@@ -1294,3 +1312,10 @@ NEXT: review the remaining content-judgment items in TO_SIMO_DO.md (thin "Future
 - [2026-08-08]: Thin posts — four more placeholders withdrawn, Mountain Fauna Lover rewritten
   - *Details*: Auditing the 16 sub-300-word posts by *prose* rather than total word count split them cleanly. Four were placeholders with essentially no body: `experiences/GDG AI Hackathon` (a bare `## Introduction`, zero words of prose) and three book notes reading **"COMMING SOON, Still Reading"** (sic), dated November 2024 and live for roughly 21 months. Five more are short but genuinely finished pieces of writing (Budapest 105 words of prose, GISEP Rimini 125, Sicily 137, Poland 143, Italy Trip 210). One, `mountainfaunalover`, is a project post whose facts are externally verifiable.
   - *Tech Notes*: The four placeholders are now `draft: true`, each with a comment recording why and what unblocks it — withdrawn rather than padded, since none can be expanded without the author's own material. `mountainfaunalover` expanded 138 → 471 words in source (382 rendered) and kept live: everything added is checkable (Val di Rabbi / Stelvio / Trentino locations, what digiscoping is, the four channels, the website that was missing from its links), with nothing invented about his experience. Its `description` was the placeholder "A brief description of Mountain Fauna Lover presence on Social media Platforms"; tags gained digiscoping/trentino/stelvio and `wild life` was corrected to `wildlife`. **Third instance of the wrong TikTok handle**: this post linked `@mountainfaunalove` (no *r*, a stranger's account), which was rendering on 9+ pages through post cards — after `data/timeline.yml` earlier and the audit's mistaken report that it was in `links.yml`. The four `[SIMONE: ...]` questions drafted for this post were stripped to `TO_SIMO_DO.md` rather than published, because unlike the app-post placeholders this page is live and taking it down to await answers would be a regression. The five short-but-written posts are deliberately left alone: the only honest route to 600 words is his memories, and padding them with generic travel-guide copy about the Danube or the Colosseum would make them worse — undifferentiated content is what retrieval systems discard, and their whole value is being first-hand. **Verified** with a clean build: 583 pages, no errors, all four withdrawn posts absent from the output, and zero occurrences site-wide of placeholder text, the wrong TikTok handle, or `[SIMONE:` markers.
+
+---
+
+- [2026-07-20]: Merge `new-UI` to `master`
+  - *Details*: Finalized the UI v2 updates by squashing and merging the `new-UI` branch into `master`.
+  - *Tech Notes*: `new-UI` branch has been deleted locally and remotely. All v2 UI features are now on `master`.
+
