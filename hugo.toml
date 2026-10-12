@@ -206,3 +206,9 @@ disableXML = true
     keepEndTags = true
     keepQuotes = true
     keepWhitespace = false
+
+############################# Security ############################
+[security]
+  [security.exec]
+    allow = ['^(dart-)?sass$', '^go$', '^git$', '^node$', '^postcss$', '^tailwindcss$']
+

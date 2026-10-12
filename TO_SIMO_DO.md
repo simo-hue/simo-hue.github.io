@@ -602,3 +602,14 @@ For each, three or four sentences from you is enough for me to draft:
 | Sicily | You have **7 photos** in this post and reference the mafia in the tags — what was the trip actually about? |
 | Poland Trip | Auschwitz-Birkenau is in the description. What you want to say about it, in your words |
 | Italy Trip | Where exactly, when, and what made it worth a post |
+
+---
+
+## [2026-10-12] 📝 Populate 28 Digital Master School Kick-Off Article (Tallinn)
+
+The scaffolding and Globe pins for the **28 Digital Master School Kick-Off in Tallinn** (October 7–11, 2026) are created and live at [content/english/blog/experiences/28-digital-master-school-kick-off-tallinn/index.md](file:///Users/simo/Developer/simo-hue.github.io/content/english/blog/experiences/28-digital-master-school-kick-off-tallinn/index.md).
+
+When ready to populate:
+1. **Write the article body**: Expand the sections (`## Introduction`, `## Event Highlights`, `## Conclusion`) with your personal experience, TalTech sessions, and Tallinn exploration.
+2. **Add event photos**: Add a `cover.webp` (and any inline gallery images) to `content/english/blog/experiences/28-digital-master-school-kick-off-tallinn/` and uncomment/add `image: cover.webp` in the frontmatter.
+

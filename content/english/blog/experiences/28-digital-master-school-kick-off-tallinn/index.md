@@ -1,24 +1,36 @@
 ---
 aliases:
   - "/blog/experience/taltech-tallinn/"
-title: "TalTech, Tallinn"
-description: "Future article about TalTech in Tallinn, Estonia."
-date: 2026-06-08
+  - "/blog/experience/28-digital-master-school-kick-off-tallinn/"
+title: "28 Digital Master School: Kick-Off in Tallinn"
+description: "Attending the 28 Digital Master School (formerly EIT Digital Master School) Kick-Off event in Tallinn, Estonia from October 7 to 11, 2026."
+date: 2026-10-11
 locations:
   - lat: 59.3950
     lon: 24.6719
     country: Estonia
-    title: TalTech
-draft: true
-# UNPUBLISHED 2026-08-08. This was a live placeholder reading "Future article
-# about ...", indexed under his name on one of his flagship credentials. The
-# event has not happened yet: ELTE starts September 2026, the Tallinn kick-off
-# is October 2026, KTH is August 2027. Set draft: false and write it properly
-# once there is something real to say.
-slug: taltech-tallinn
-tags: [estonia, tallinn, taltech, university]
+    title: "TalTech Campus"
+  - lat: 59.4370
+    lon: 24.7535
+    country: Estonia
+    title: "Tallinn City Center"
+draft: false
+slug: 28-digital-master-school-kick-off-tallinn
+tags: [estonia, tallinn, taltech, 28 digital, digital master school, kick-off, university]
 ---
 
 ## Introduction
 
-Future article about TalTech.
+Attending the official Kick-Off event for the **28 Digital Master School** (the new name following the rebranding of the *EIT Digital Master School*) held in Tallinn, Estonia from October 7 to 11, 2026.
+
+## Event Highlights
+
+<!-- Placeholder: Add event highlights, TalTech campus sessions, workshops, networking, and Tallinn Old Town exploration. -->
+
+- **TalTech Campus & Sessions**: Keynotes, innovation challenges, and getting acquainted with partner universities.
+- **Tallinn & Culture**: Experiencing Tallinn's tech ecosystem and historic Old Town.
+- **Cohort Community**: Meeting peers from across Europe before commencing academic specializations.
+
+## Conclusion
+
+<!-- Placeholder: Add personal takeaways, memorable moments, and outlook on the upcoming semesters. -->
