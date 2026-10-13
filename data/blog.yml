@@ -1,0 +1,9 @@
+# Curated introductions shown only on the first page of the Blog hub.
+# These remain in the chronological archive as well.
+start_here:
+  - page: "/blog/experiences/Volunteering Activity in Brazil"
+    label: "An experience"
+  - page: "/blog/thoughts/being humble"
+    label: "A reflection"
+  - page: "/blog/tech-projects/CampFlow"
+    label: "A build story"

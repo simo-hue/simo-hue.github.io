@@ -1,46 +1,80 @@
 {{ define "main" }}
-{{ $l := hugo.Data.links }}
-
-<section class="ds-hero" style="padding-bottom:0">
+{{ $l := site.Data.links }}
+<div class="ds-links-page">
+<section class="ds-hero ds-links-hero">
   <div class="ds-container">
-    <span class="ds-eyebrow">{{ with $l.subtitle }}{{ . }}{{ else }}Links{{ end }}</span>
-    <h1 class="ds-hero-title" style="font-size:clamp(2.25rem,6vw,4rem);margin-top:1.25rem">{{ $l.title }}</h1>
-    {{ with $l.description }}<p class="ds-hero-lead" style="margin-top:1.25rem">{{ . }}</p>{{ end }}
-  </div>
-</section>
-
-<hr class="ds-rule" />
-
-<section class="section" style="padding-top:3.5rem">
-  <div class="ds-container">
-    <div class="space-y-16">
-      {{ range $si, $section := $l.sections }}
-      <div>
-        <div class="ds-linkgroup-head">
-          <span class="ds-eyebrow">{{ printf "%02d" (add $si 1) }} / Section</span>
-          <h2 class="ds-linkgroup-title">{{ $section.title }}</h2>
-        </div>
-
-        <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {{ range $section.items }}
-          <a href="{{ .link }}" target="_blank" rel="noopener noreferrer" class="ds-card group">
-            <div class="flex items-center justify-between">
-              <i class="{{ .icon }} ds-accent text-2xl" aria-hidden="true"></i>
-              <i class="fa-solid fa-arrow-up-right-from-square ds-linkout" aria-hidden="true"></i>
-            </div>
-            <h3 class="ds-card-title">{{ .title }}</h3>
-            {{ with .description }}<p class="ds-card-body">{{ . }}</p>{{ end }}
-            <span class="ds-card-link">{{ .button_text | default "Open" }} <i class="fa-solid fa-arrow-right arrow text-[0.65rem]" aria-hidden="true"></i></span>
-          </a>
-          {{ end }}
-        </div>
-      </div>
+    <span class="ds-eyebrow">{{ $l.subtitle }}</span>
+    <h1 class="ds-hero-title">{{ $l.title }}</h1>
+    <p class="ds-hero-lead">{{ $l.description }}</p>
+    {{ range where $l.sections "kind" "primary" }}
+    <div class="ds-contact-grid" aria-label="{{ .title }}">
+      {{ range sort .items "order" }}
+      <a href="{{ .link }}"{{ if hasPrefix .link "https://" }} target="_blank" rel="noopener noreferrer"{{ end }} class="ds-card ds-contact-card{{ if .primary }} ds-contact-primary{{ end }}">
+        <i class="{{ .icon }} ds-accent" aria-hidden="true"></i>
+        <h2 class="ds-card-title">{{ .title }}</h2>
+        <p class="ds-card-body">{{ .description }}</p>
+        <span class="ds-card-link">{{ .button_text }} <span aria-hidden="true">{{ if .primary }}→{{ else }}↗{{ end }}</span></span>
+      </a>
       {{ end }}
     </div>
-
-    {{ with $l.footer_text }}
-    <p class="ds-mono" style="text-align:center;margin-top:5rem">“{{ . }}”</p>
     {{ end }}
+    <nav class="ds-links-shortcuts" aria-label="On this page">
+      <a class="ds-text-link" href="#channels">Explore my channels <span aria-hidden="true">↓</span></a>
+      <a class="ds-text-link" href="#documents">Résumé & documents <span aria-hidden="true">↓</span></a>
+    </nav>
   </div>
 </section>
+<hr class="ds-rule" />
+<section class="ds-links-section" id="channels" aria-labelledby="channels-title">
+  <div class="ds-container">
+    <div class="ds-section-head">
+      <span class="ds-eyebrow">Follow along</span>
+      <h2 class="ds-section-title" id="channels-title">Different sides of my world.</h2>
+      <p class="ds-section-sub">Life and travel, wildlife, and research. Pick what interests you.</p>
+    </div>
+    <div class="ds-channel-grid">
+      {{ range sort (where $l.sections "kind" "channels") "order" }}
+      <section class="ds-channel-group" aria-labelledby="{{ .title | urlize }}">
+        <h3 id="{{ .title | urlize }}">{{ .title }}</h3>
+        <ul>
+          {{ range .items }}
+          <li><a class="ds-channel-link" href="{{ .link }}" target="_blank" rel="noopener noreferrer">
+            <i class="{{ .icon }} ds-accent" aria-hidden="true"></i>
+            <span><strong>{{ .title }}</strong><span class="ds-channel-description">{{ .description }}</span></span>
+            <span class="ds-linkout" aria-hidden="true">↗</span>
+          </a></li>
+          {{ end }}
+        </ul>
+      </section>
+      {{ end }}
+    </div>
+  </div>
+</section>
+<hr class="ds-rule" />
+<section class="ds-links-section" id="documents" aria-labelledby="documents-title">
+  <div class="ds-container">
+    <div class="ds-section-head">
+      <span class="ds-eyebrow">The background</span>
+      <h2 class="ds-section-title" id="documents-title">Documents & credentials.</h2>
+      <p class="ds-section-sub">My résumé, education, and course certificates, all in one place.</p>
+    </div>
+    <div class="ds-documents">
+      {{ range where $l.sections "kind" "documents" }}
+      <details class="ds-document-group">
+        <summary><span>{{ .title }} <span class="ds-document-count">{{ len .items }} PDFs</span></span><span class="ds-document-toggle" aria-hidden="true">+</span></summary>
+        <ul class="ds-document-list">
+          {{ range .items }}
+          <li><a href="{{ .link | relURL }}" target="_blank" rel="noopener noreferrer" class="ds-document-link">
+            <i class="{{ .icon }} ds-accent" aria-hidden="true"></i>
+            <span><strong>{{ .title }}</strong><span class="ds-channel-description">{{ .description }}</span></span>
+            <span class="ds-document-format">PDF <span aria-hidden="true">↗</span></span>
+          </a></li>
+          {{ end }}
+        </ul>
+      </details>
+      {{ end }}
+    </div>
+  </div>
+</section>
+</div>
 {{ end }}

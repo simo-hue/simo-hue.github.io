@@ -1364,3 +1364,25 @@ NEXT: review the remaining content-judgment items in TO_SIMO_DO.md (thin "Future
 - Completed: requested project selection, consistent contact background, responsive and image checks, clean production build, and documentation.
 - Local preview remains available at `http://localhost:1313/`; changes are uncommitted and unpublished.
 - Immediate next step: optional user review. No required manual actions remain.
+
+- [2026-10-13 08:40 CEST]: Blog discovery and archive navigation
+- *Details*: Added a curated “Start here” section featuring Brazil volunteering, “Don't Brag,” and CampFlow, only on the first main Blog page. Kept the existing large-card chronological archive and category grids. Added a shortcut to latest posts, visible post ranges, and clearer Newer/Older navigation with numbered pages. Featured cards align within each row and stack naturally on phones.
+- *Tech Notes*: Selections live in `data/blog.yml`; presentation is in `layouts/blog/list.html`, `layouts/partials/components/blog-pagination.html`, and scoped additions to `assets/css/hub.css`. Featured posts remain in the complete archive. Pagination links target `#posts`, and only the current page number receives `aria-current`. No dependencies, endpoints, or manual setup actions added.
+- *Validation*: Clean production build passed (601 pages), as did whitespace checks. All 58 unique posts appear across six archive pages in descending date order; all five category pages omit the featured section; 737 local links, images, and anchors resolve. Browser checks covered 320/390/768/1024/1440px, light/dark presentation, loaded featured images, the latest-post shortcut, category navigation, and first/intermediate/last archive pages. No horizontal page overflow; final featured cards have equal height per row. Existing Hugo imaging-quality deprecation warning remains.
+
+### Current Status — Blog UI (complete)
+
+- Completed: agreed featured selections, preserved card grids, pagination, responsive/browser verification, clean build, and documentation.
+- Local preview: `http://localhost:1313/blog/`; changes are uncommitted and unpublished.
+- Immediate next step: optional user review of the Blog. No required manual actions remain.
+
+- [2026-10-13, Europe/Budapest]: Find me online — clearer contact hierarchy
+- *Details*: Rebuilt the Links page around Email, LinkedIn, and GitHub, with Email subtly emphasized. Grouped personal channels, Mountain Fauna Lover, and research profiles into compact lists. Moved résumé/education and certificates into two collapsed native disclosures, retaining all 24 destinations and placing the résumé first. Added section shortcuts and concise introductory/channel copy; updated the page title and description.
+- *Tech Notes*: Updated `data/links.yml` with section kinds and display ordering, `layouts/links/list.html`, `content/english/links.md`, and scoped styles in `assets/css/hub.css`. Email uses its existing mailto destination without opening a blank browser tab. Documents show PDF labels; native details/summary supports keyboard interaction without new JavaScript. No new dependencies, endpoints, or manual setup actions.
+- *Validation*: Clean production build passed (601 pages), with the existing Hugo imaging-quality deprecation warning. Whitespace checks passed. All 24 original destinations are retained and all 12 local PDFs resolve. Browser checks at 320/390/768/1024/1440px found no horizontal overflow; visually reviewed desktop and mobile, dark and light themes, expanded certificates, and keyboard Enter/Space disclosure behavior.
+
+### Current Status — contact directory (complete)
+
+- Completed: page hierarchy, channel grouping, document disclosures, responsive and keyboard verification, production build, and documentation.
+- Preview: `http://localhost:1313/links/`. Changes remain local and unpublished; no manual actions required.
+- Immediate next step: optional user review of Find me online.

@@ -1,0 +1,31 @@
+{{ $paginator := . }}
+{{ if gt $paginator.TotalPages 1 }}
+<nav class="ds-blog-pagination" aria-label="Pagination">
+  <div class="ds-pagination-directions">
+    {{ if $paginator.HasPrev }}
+      <a class="ds-btn ds-btn-ghost" href="{{ $paginator.Prev.URL }}#posts" rel="prev"><span aria-hidden="true">←</span> Newer posts</a>
+    {{ else }}<span></span>{{ end }}
+    <span class="ds-mono">Page {{ $paginator.PageNumber }} of {{ $paginator.TotalPages }}</span>
+    {{ if $paginator.HasNext }}
+      <a class="ds-btn ds-btn-ghost" href="{{ $paginator.Next.URL }}#posts" rel="next">Older posts <span aria-hidden="true">→</span></a>
+    {{ else }}<span></span>{{ end }}
+  </div>
+  <div class="ds-pagination-pages">
+    {{ $gap := false }}
+    {{ range $paginator.Pagers }}
+      {{ $near := and (ge .PageNumber (sub $paginator.PageNumber 1)) (le .PageNumber (add $paginator.PageNumber 1)) }}
+      {{ if or (le $paginator.TotalPages 7) (eq .PageNumber 1) (eq .PageNumber $paginator.TotalPages) $near }}
+        {{ if eq .PageNumber $paginator.PageNumber }}
+          <span class="ds-page-number current" aria-current="page" aria-label="Page {{ .PageNumber }}">{{ .PageNumber }}</span>
+        {{ else }}
+          <a class="ds-page-number" href="{{ .URL }}#posts" aria-label="Page {{ .PageNumber }}">{{ .PageNumber }}</a>
+        {{ end }}
+        {{ $gap = false }}
+      {{ else if not $gap }}
+        <span class="ds-page-gap" aria-hidden="true">…</span>
+        {{ $gap = true }}
+      {{ end }}
+    {{ end }}
+  </div>
+</nav>
+{{ end }}

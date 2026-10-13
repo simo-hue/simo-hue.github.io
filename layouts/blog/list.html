@@ -8,11 +8,13 @@
 {{ $blog := site.GetPage "/blog" }}
 {{ $isHub := eq .RelPermalink $blog.RelPermalink }}
 {{ $posts := cond $isHub .RegularPagesRecursive .RegularPages }}
+{{ $paginator := .Paginate $posts.ByDate.Reverse }}
+{{ $showFeatured := and $isHub (eq $paginator.PageNumber 1) }}
 
 {{/* explicit section order for the chip row (mirrors the nav) */}}
 {{ $order := slice "experiences" "tech-projects" "thoughts" "books" "publications" }}
 
-<section class="ds-hero" style="padding-bottom:0">
+<section class="ds-hero ds-blog-hero" style="padding-bottom:0">
   <div class="ds-container">
     {{ if $isHub }}
       <span class="ds-eyebrow">Writings · {{ len $posts }} posts</span>
@@ -37,18 +39,56 @@
 
 <hr class="ds-rule" />
 
-<section class="section" style="padding-top:3.5rem">
+{{ if $showFeatured }}
+<section class="ds-blog-featured" aria-labelledby="start-here-title">
   <div class="ds-container">
-    {{ $paginator := .Paginate $posts }}
-    <div class="ds-post-grid">
-      {{ range $index, $page := $paginator.Pages }}
-        {{ if lt $index 3 }}{{ $page.Scratch.Set "IsPriority" true }}{{ end }}
-        {{ partial "components/blog-card" $page }}
+    <div class="ds-section-heading-row">
+      <div>
+        <span class="ds-eyebrow">New around here?</span>
+        <h2 class="ds-section-title" id="start-here-title">Start here.</h2>
+        <p class="ds-section-sub">Three stories to get to know me — an experience, a reflection, and something I built.</p>
+      </div>
+      <a class="ds-text-link" href="#posts">Jump to latest posts <span aria-hidden="true">↓</span></a>
+    </div>
+    <div class="ds-post-grid ds-blog-picks">
+      {{ range site.Data.blog.start_here }}
+        {{ $label := .label }}
+        {{ with site.GetPage .page }}
+          <div class="ds-blog-pick">
+            <p class="ds-blog-pick-label">{{ $label }}</p>
+            {{ .Scratch.Set "IsPriority" true }}
+            {{ partial "components/blog-card.html" . }}
+            {{ .Scratch.Delete "IsPriority" }}
+          </div>
+        {{ else }}
+          {{ errorf "Start here article not found: %s" .page }}
+        {{ end }}
       {{ end }}
     </div>
-    <div class="mt-16">
-      {{ partial "components/pagination.html" . }}
+  </div>
+</section>
+<hr class="ds-rule" />
+{{ end }}
+
+<section class="ds-blog-feed" id="posts" aria-labelledby="posts-title">
+  <div class="ds-container">
+    <div class="ds-blog-feed-head">
+      <h2 id="posts-title">{{ if $isHub }}{{ if eq $paginator.PageNumber 1 }}Latest posts{{ else }}More writings{{ end }}{{ else }}All posts{{ end }}</h2>
+      {{ if $paginator.TotalNumberOfElements }}
+        {{ $first := 1 }}
+        {{ range $paginator.Pagers }}{{ if lt .PageNumber $paginator.PageNumber }}{{ $first = add $first (len .Pages) }}{{ end }}{{ end }}
+        {{ $last := add (sub $first 1) (len $paginator.Pages) }}
+        <p class="ds-mono">{{ $first }}–{{ $last }} of {{ $paginator.TotalNumberOfElements }} posts <span aria-hidden="true">·</span> Newest first</p>
+      {{ end }}
     </div>
+    <div class="ds-post-grid">
+      {{ range $index, $page := $paginator.Pages }}
+        {{ if and (not $showFeatured) (lt $index 3) }}{{ $page.Scratch.Set "IsPriority" true }}{{ end }}
+        {{ partial "components/blog-card" $page }}
+        {{ $page.Scratch.Delete "IsPriority" }}
+      {{ end }}
+    </div>
+    {{ partial "components/blog-pagination.html" $paginator }}
   </div>
 </section>
 {{ end }}
