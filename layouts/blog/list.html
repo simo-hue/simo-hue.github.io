@@ -22,16 +22,16 @@
       <span class="ds-eyebrow" style="margin-top:1.5rem">Section · {{ len $posts }} posts</span>
       <h1 class="ds-hero-title" style="font-size:clamp(1.85rem,3.4vw,2.7rem);line-height:1.08;margin-top:1.25rem">{{ .Title }}</h1>
     {{ end }}
-    {{ with .Params.description }}<p class="ds-hero-lead" style="margin-top:1.25rem;max-width:none">{{ . }}</p>{{ end }}
+    {{ if $isHub }}<p class="ds-hero-lead ds-blog-intro">Projects, field notes, and reflections. Pick a thread and follow your curiosity.</p>{{ else }}{{ with .Params.description }}<p class="ds-hero-lead" style="margin-top:1.25rem;max-width:none">{{ . }}</p>{{ end }}{{ end }}
 
-    <div class="ds-chiprow">
-      <a href="{{ $blog.RelPermalink }}" class="ds-chip{{ if $isHub }} active{{ end }}">All</a>
+    <nav class="ds-chiprow" aria-label="Writing categories">
+      <a href="{{ $blog.RelPermalink }}" class="ds-chip{{ if $isHub }} active{{ end }}"{{ if $isHub }} aria-current="page"{{ end }}>All</a>
       {{ range $order }}
         {{ with site.GetPage (printf "/blog/%s" .) }}
-          <a href="{{ .RelPermalink }}" class="ds-chip{{ if eq .RelPermalink $.RelPermalink }} active{{ end }}">{{ .Title }} <span class="ds-chip-n">{{ len .RegularPages }}</span></a>
+          <a href="{{ .RelPermalink }}" class="ds-chip{{ if eq .RelPermalink $.RelPermalink }} active{{ end }}"{{ if eq .RelPermalink $.RelPermalink }} aria-current="page"{{ end }}>{{ .Title }} <span class="ds-chip-n">{{ len .RegularPages }}</span></a>
         {{ end }}
       {{ end }}
-    </div>
+    </nav>
   </div>
 </section>
 

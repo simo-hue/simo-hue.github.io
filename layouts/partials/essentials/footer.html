@@ -1,7 +1,10 @@
 <footer class="ds-footer">
-  <div class="ds-container">
-    <div class="py-8 text-center">
-      <p class="ds-mono">© {{ now.Format "2006" }} Simone Mattioli</p>
-    </div>
+  <div class="ds-container ds-footer-inner">
+    <p class="ds-mono">© {{ now.Format "2006" }} Simone Mattioli</p>
+    <nav class="ds-footer-links" aria-label="Footer">
+      <a href="{{ "/about/" | relLangURL }}">About</a>
+      <a href="{{ "/blog/" | relLangURL }}">Writings</a>
+      <a href="{{ "/links/" | relLangURL }}">Find me online <span aria-hidden="true">↗</span></a>
+    </nav>
   </div>
 </footer>

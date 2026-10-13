@@ -646,7 +646,8 @@ a.ds-link:hover {
   overflow: hidden;
 }
 .dark .ds-post-figure { border-color: var(--color-darkmode-border); }
-.ds-post-figure img { display: block; width: 100%; }
+.ds-post-figure { width: fit-content; max-width: 100%; margin-inline: auto; }
+.ds-post-figure img { display: block; width: auto; max-width: 100%; height: auto; max-height: 32rem; }
 
 /* Post grid */
 .ds-post-grid {
@@ -1430,3 +1431,53 @@ a.ds-link:hover {
 .ds-theme-toggle .ds-theme-moon { display: none; }
 .dark .ds-theme-toggle .ds-theme-sun { display: none; }
 .dark .ds-theme-toggle .ds-theme-moon { display: inline-block; }
+
+/* Editorial Markdown figures. Placement is opt-in with #left / #right. */
+.blog-prose { display: flow-root; }
+.article-image {
+  display: block;
+  clear: both;
+  margin: 2rem 0;
+}
+.article-image > a {
+  display: block;
+  border: 0;
+  padding: 0;
+  background: none;
+}
+.article-image .article-image__img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 36rem;
+  margin: 0 auto;
+  box-shadow: none;
+}
+.article-image--dark-background .article-image__img { background: #111; }
+.article-image__caption {
+  display: block;
+  margin-top: 0.65rem;
+  color: var(--color-text-light);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  text-align: center;
+}
+.dark .article-image__caption { color: var(--color-darkmode-text-light); }
+.article-image--small { max-width: 20rem; margin-inline: auto; }
+.blog-prose :is(h1, h2, h3, h4, h5, h6, hr, pre, table, blockquote),
+.blog-prose > :is(ul, ol, .highlight, .video-container) { clear: both; }
+@media (min-width: 768px) {
+  .article-image--left,
+  .article-image--right {
+    width: 40%;
+    max-width: none;
+    margin-top: 0.4rem;
+    margin-bottom: 1.25rem;
+  }
+  .article-image--left { float: left; margin-right: 2rem; margin-left: 0; }
+  .article-image--right { float: right; margin-left: 2rem; margin-right: 0; }
+  .article-image--small { width: 30%; }
+  .article-image--left .article-image__img,
+  .article-image--right .article-image__img { width: 100%; max-height: none; }
+}

@@ -1,130 +1,84 @@
 {{ define "main" }}
-
-<!-- ============================================================ HERO ==== -->
-<section class="ds-hero">
+<section class="ds-hero ds-home-hero">
   <div class="ds-hero-grid" aria-hidden="true"></div>
-  <div class="ds-container">
+  <div class="ds-container ds-home-intro">
     <div class="ds-hero-inner">
-      <span class="ds-eyebrow ds-reveal">CS · AI &amp; HPC · EIT Digital Master's</span>
+      <span class="ds-eyebrow">Technology &amp; humanity</span>
+      <h1 class="ds-hero-title">Simone<br> Mattioli<span class="ds-accent">.</span></h1>
+      <p class="ds-hero-lead">Computer scientist, builder, and curious human. Exploring AI and high-performance computing — and life beyond the screen.</p>
+      <div class="ds-hero-cta">
+        <a href="#work" class="ds-btn ds-btn-primary">Explore my work <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+        <a href="#stories" class="ds-btn ds-btn-ghost">Read my stories <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+      </div>
+      <p class="ds-home-note">From the mountains of Trentino to wherever curiosity leads.</p>
+    </div>
+    <figure class="ds-home-portrait">
+      {{ partial "image" (dict "Src" "images/simo_lovable.png" "Context" . "Alt" "Simone Mattioli at a hackathon" "Priority" true "Sizes" "(min-width: 1024px) 360px, (min-width: 768px) 32vw, 96px") }}
+      <figcaption><span>Code. Explore. Connect.</span><a href="{{ "/about/" | relLangURL }}">A little about me <span aria-hidden="true">↗</span></a></figcaption>
+    </figure>
+  </div>
+</section>
 
-      <h1 class="ds-hero-title ds-reveal ds-delay-1">Simone&nbsp;Mattioli</h1>
+<section class="ds-home-section" id="work" aria-labelledby="work-title">
+  <div class="ds-container">
+    <div class="ds-section-heading-row">
+      <div><span class="ds-eyebrow">01 / Selected work</span><h2 class="ds-section-title" id="work-title">Ideas put into practice.</h2><p class="ds-section-sub">Apps for everyday life, tools for the community, and stories from the wild.</p></div>
+      <a class="ds-text-link" href="{{ "/blog/tech-projects/" | relLangURL }}">More projects <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="ds-post-grid ds-selected-work">
+      {{ range site.Data.selected_work }}
+        {{ partial "components/project-card.html" (dict "Project" . "Context" $) }}
+      {{ end }}
+    </div>
+  </div>
+</section>
 
-      <p class="ds-hero-lead ds-reveal ds-delay-2">
-        Computer scientist working across AI and high-performance computing —
-        and, off the clock, chasing mountains, volunteering, and telling
-        stories on camera.
-      </p>
-
-      <p class="ds-hero-rotator ds-reveal ds-delay-2">
-        <span>from</span>
-        <span class="rot" data-rotate='["kindness","the mountains","lines of code","Brazil’s favelas"]'>kindness</span>
-        <span>&rarr;</span>
-        <span class="rot" data-rotate='["digital innovation","human connection","meaningful impact","personal growth"]'>digital innovation</span>
-      </p>
-
-      <div class="ds-hero-cta ds-reveal ds-delay-3">
-        {{ with .Params.banner.button }}{{ if .enable }}
-          <a href="{{ .link | relLangURL }}" class="ds-btn ds-btn-primary"
-             {{ if .target }}target="{{ .target }}" rel="noopener"{{ end }}>
-            <i class="fa-solid fa-arrow-down text-xs" aria-hidden="true"></i> {{ .label }}
-          </a>
-        {{ end }}{{ end }}
-        <a href="{{ "/blog" | relLangURL }}" class="ds-btn ds-btn-ghost">
-          Read the blog <i class="fa-solid fa-arrow-right arrow text-xs" aria-hidden="true"></i>
-        </a>
+<section class="ds-home-section ds-section-tinted" id="stories" aria-labelledby="stories-title">
+  <div class="ds-container">
+    <div class="ds-section-heading-row">
+      <div><span class="ds-eyebrow">02 / Beyond the screen</span><h2 class="ds-section-title" id="stories-title">Stories from along the way.</h2><p class="ds-section-sub">Travel, volunteering, and the thoughts that stay with me.</p></div>
+      <a class="ds-text-link" href="{{ "/blog/" | relLangURL }}">All writings <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="ds-story-grid">
+      {{ with site.GetPage "/blog/experiences/Volunteering Activity in Brazil" }}
+      <a class="ds-featured-story" href="{{ .RelPermalink }}">
+        {{ partial "image" (dict "Src" .Params.image "Context" . "Alt" "" "Sizes" "(min-width: 768px) 560px, 100vw") }}
+        <div><span class="ds-eyebrow">A story to start with</span><h3>Three weeks in Brazil.</h3><p>Teaching, learning, and finding community through volunteer work in Brazil.</p><span class="ds-text-link">Read the story <span aria-hidden="true">↗</span></span></div>
+      </a>
+      {{ end }}
+      <div class="ds-story-list">
+        <span class="ds-eyebrow">Recent notes</span>
+        {{ $stories := where (where site.RegularPages "Section" "blog") "CurrentSection.Title" "in" (slice "Experiences" "Thoughts" "Books") }}
+        {{ range first 3 $stories.ByDate.Reverse }}
+        <a class="ds-story-row" href="{{ .RelPermalink }}"><span class="ds-mono">{{ .CurrentSection.Title }} · {{ .Date.Format "Jan 02, 2006" }}</span><h3>{{ .Title }}</h3><span class="ds-story-arrow" aria-hidden="true">↗</span></a>
+        {{ end }}
+        <a class="ds-text-link" href="{{ "/passion/" | relLangURL }}">Explore my passions <span aria-hidden="true">↗</span></a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===================================================== META STRIP ==== -->
-{{ with hugo.Data.about.stats }}
-<section class="pb-20">
+<section class="ds-home-section" aria-labelledby="journey-title">
   <div class="ds-container">
-    <div class="ds-metastrip">
-      {{ range . }}
-        <div class="ds-metacell">
-          <div class="v">{{ .value }}</div>
-          <div class="k">{{ .label }}</div>
-        </div>
-      {{ end }}
-      <div class="ds-metacell">
-        <div class="v">{{ len (where site.RegularPages "Section" "blog") }}</div>
-        <div class="k">Writings</div>
-      </div>
+    <div class="ds-section-heading-row">
+      <div><span class="ds-eyebrow">03 / A few milestones</span><h2 class="ds-section-title" id="journey-title">The path so far.</h2></div>
+      <a class="ds-text-link" href="{{ "/about/#journey" | relLangURL }}">My full journey <span aria-hidden="true">↗</span></a>
     </div>
-  </div>
-</section>
-{{ end }}
-
-<hr class="ds-rule" />
-
-<!-- ======================================================= JOURNEY ===== -->
-<section class="section">
-  <div class="ds-container">
-    <div class="ds-section-head">
-      <span class="ds-eyebrow">01 / Journey</span>
-      <h2 class="ds-section-title">The path so far</h2>
-      <p class="ds-section-sub">From a technical diploma in Rovereto to an EIT Digital Master's across ELTE and KTH — a timeline of study, work and detours.</p>
-    </div>
-    {{ partial "components/timeline.html" . }}
-  </div>
-</section>
-
-<hr class="ds-rule" />
-
-<!-- ======================================================= EXPLORE ===== -->
-{{ with .Params.features }}
-<section class="section">
-  <div class="ds-container">
-    <div class="ds-section-head">
-      <span class="ds-eyebrow">02 / Explore</span>
-      <h2 class="ds-section-title">Curiosities &amp; commitments</h2>
-      <p class="ds-section-sub">The threads that run through everything I make — technology, the outdoors, learning, and people.</p>
-    </div>
-
-    <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-      {{ range $i, $f := . }}
-        <a class="ds-card group"
-           href="{{ with $f.button }}{{ .link | relLangURL }}{{ end }}"
-           {{ with $f.button }}{{ if .target }}target="{{ .target }}" rel="noopener"{{ end }}{{ end }}>
-          <div class="flex items-center justify-between">
-            <span class="ds-card-index">{{ printf "%02d" (add $i 1) }}</span>
-            <i class="{{ $f.icon }} ds-accent" aria-hidden="true"></i>
-          </div>
-          <h3 class="ds-card-title">{{ $f.title }}</h3>
-          {{ if $f.bulletpoints }}
-            <ul class="ds-card-body space-y-1.5">
-              {{ range $f.bulletpoints }}<li>{{ . }}</li>{{ end }}
-            </ul>
-          {{ else }}
-            <p class="ds-card-body">{{ $f.content }}</p>
-          {{ end }}
-          {{ with $f.button }}{{ if .enable }}
-            <span class="ds-card-link">{{ .label }} <i class="fa-solid fa-arrow-right arrow text-[0.65rem]" aria-hidden="true"></i></span>
-          {{ end }}{{ end }}
-        </a>
+    <div class="ds-milestones">
+      {{ range where hugo.Data.timeline.items "homepage" true }}
+      <a class="ds-milestone" href="{{ "/about/#journey" | relLangURL }}">
+        <span class="ds-mono">{{ .date }}</span><h3>{{ .title }}</h3><p>{{ .organization }}</p><span class="ds-text-link">Explore the journey <span aria-hidden="true">↗</span></span>
+      </a>
       {{ end }}
     </div>
   </div>
 </section>
-{{ end }}
 
-<script>
-  // Restrained rotator for the single mono hero line (respects reduced-motion)
-  (function () {
-    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    document.querySelectorAll('.ds-hero-rotator .rot').forEach(function (el, offset) {
-      var words; try { words = JSON.parse(el.getAttribute('data-rotate')); } catch (e) { return; }
-      if (!words || words.length < 2) return;
-      var i = 0;
-      setInterval(function () {
-        i = (i + 1) % words.length;
-        el.style.opacity = '0';
-        setTimeout(function () { el.textContent = words[i]; el.style.opacity = '1'; }, 250);
-      }, 3200 + offset * 400);
-    });
-  })();
-</script>
-
+<section class="ds-home-section ds-home-connect" aria-labelledby="connect-title">
+  <div class="ds-container">
+    <span class="ds-eyebrow">Let's connect</span><h2 class="ds-section-title" id="connect-title">Good things start<br>with a conversation.</h2>
+    <p class="ds-section-sub">An idea to explore, something to build, or a story to share. I’d love to hear from you.</p>
+    <div class="ds-hero-cta"><a class="ds-btn ds-btn-ghost" href="{{ "/call/" | relLangURL }}">Book a conversation <span aria-hidden="true">↗</span></a><a class="ds-btn ds-btn-primary" href="{{ "/links/" | relLangURL }}">Find me online <span aria-hidden="true">↗</span></a></div>
+  </div>
+</section>
 {{ end }}

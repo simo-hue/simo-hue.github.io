@@ -1,19 +1,38 @@
 {{- $dest := .Destination -}}
-{{- $text := .Text -}}
-{{- $title := .Title -}}
-
-<figure class="my-8">
-    {{ partial "image.html" (dict
+{{- $layout := (urls.Parse $dest).Fragment -}}
+{{- $aligned := in (slice "left" "right" "left-small" "right-small") $layout -}}
+{{- $class := "article-image" -}}
+{{- $sizes := "(max-width: 767px) calc(100vw - 3rem), 720px" -}}
+{{- if $aligned -}}
+  {{- $dest = strings.TrimSuffix (printf "#%s" $layout) $dest -}}
+  {{- $side := index (split $layout "-") 0 -}}
+  {{- $class = printf "%s article-image--%s" $class $side -}}
+  {{- $sizes = "(max-width: 767px) calc(100vw - 3rem), 288px" -}}
+  {{- if strings.HasSuffix $layout "-small" -}}
+    {{- $class = printf "%s article-image--small" $class -}}
+    {{- $sizes = "(max-width: 767px) min(320px, calc(100vw - 3rem)), 216px" -}}
+  {{- end -}}
+{{- end -}}
+{{- with .Page.Resources.GetMatch $dest -}}
+  {{- if eq .Params.background "dark" -}}
+    {{- $class = printf "%s article-image--dark-background" $class -}}
+  {{- end -}}
+{{- end -}}
+{{- /* Inline images use a span so legacy paragraphs never contain invalid figures. */ -}}
+{{- if .IsBlock -}}<figure class="{{ $class }}">
+{{- else -}}<span class="{{ $class }}" role="figure">
+{{- end -}}
+  {{- partial "image.html" (dict
     "Src" $dest
     "Context" .Page
-    "Alt" $text
-    "Title" $title
-    "Class" "w-full h-auto rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-[1.01]"
-    "Lightbox" true)
-    }}
-    {{ with $title }}
-    <figcaption class="text-center text-sm text-gray-500 dark:text-gray-400 mt-3 italic">
-        {{ . | markdownify }}
-    </figcaption>
-    {{ end }}
-</figure>
+    "Alt" (.Text | plainify)
+    "Title" .Title
+    "Class" "article-image__img"
+    "Sizes" $sizes
+    "Lightbox" true) -}}
+  {{- with .Title -}}
+    {{- if $.IsBlock -}}<figcaption class="article-image__caption">{{ . | markdownify }}</figcaption>
+    {{- else -}}<span class="article-image__caption">{{ . | markdownify }}</span>
+    {{- end -}}
+  {{- end -}}
+{{- if .IsBlock -}}</figure>{{- else -}}</span>{{- end -}}

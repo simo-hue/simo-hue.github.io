@@ -14,6 +14,7 @@
         {{ range site.Menus.main }}
           {{ $u := .URL | relLangURL }}
           {{ $active := cond (eq .URL "/") $currentPage.IsHome (hasPrefix $cur $u) }}
+          {{ if and (eq .URL "/blog") (hasPrefix $cur ("/blog/tech-projects/" | relLangURL)) }}{{ $active = false }}{{ end }}
           {{ if .HasChildren }}
             <div class="ds-navdrop">
               <a href="{{ $u }}" class="ds-nav-link ds-navdrop-trigger{{ if $active }} active{{ end }}">
@@ -62,20 +63,25 @@
         {{ end }}
 
         <!-- mobile menu -->
-        <button type="button" class="ds-iconbtn ds-hide-desktop-lg" data-sheet-toggle aria-label="Menu" aria-expanded="false">
+        <button type="button" class="ds-iconbtn ds-hide-desktop-lg" data-sheet-toggle aria-label="Menu" aria-expanded="false" aria-controls="mobile-navigation">
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
     </div>
 
     <!-- mobile sheet -->
-    <div class="ds-sheet lg:hidden" data-sheet>
+    <div class="ds-sheet lg:hidden" id="mobile-navigation" data-sheet>
       <div class="py-2">
         {{ range $i, $item := site.Menus.main }}
           <a href="{{ $item.URL | relLangURL }}">
             <span>{{ $item.Name }}</span>
             <span class="idx">{{ printf "%02d" (add $i 1) }}</span>
           </a>
+          {{ if $item.HasChildren }}
+          <div class="ds-sheet-children">
+            {{ range $item.Children }}<a href="{{ .URL | relLangURL }}">{{ .Name }}</a>{{ end }}
+          </div>
+          {{ end }}
         {{ end }}
         {{ if site.Params.navigation_button.enable }}
           <a href="{{ site.Params.navigation_button.link | relLangURL }}" {{ if site.Params.navigation_button.download }}download{{ end }}>
@@ -92,11 +98,25 @@
   (function () {
     // Mobile nav sheet toggle
     var sheet = document.querySelector('[data-sheet]');
-    if (sheet) document.querySelectorAll('[data-sheet-toggle]').forEach(function (b) {
-      b.addEventListener('click', function () {
-        var isOpen = sheet.classList.toggle('open');
-        b.setAttribute('aria-expanded', isOpen);
-      });
+    var toggle = document.querySelector('[data-sheet-toggle]');
+    if (!sheet || !toggle) return;
+    function closeMenu() {
+      sheet.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+    toggle.addEventListener('click', function () {
+      var isOpen = sheet.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
     });
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && sheet.classList.contains('open')) {
+        closeMenu();
+        toggle.focus();
+      }
+    });
+    document.addEventListener('click', function (event) {
+      if (!sheet.contains(event.target) && !toggle.contains(event.target)) closeMenu();
+    });
+    window.matchMedia('(min-width: 1024px)').addEventListener('change', closeMenu);
   })();
 </script>

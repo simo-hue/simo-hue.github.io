@@ -8,6 +8,7 @@ items:
     icon: "fa-solid fa-graduation-cap"
     tags: ["University"]
     align: "right"
+    upcoming: true
 
   - date: "8-10 October 2026"
     title: "Master Kick-Off in Tallin, Estonia"
@@ -20,6 +21,7 @@ items:
   - date: "September 2026 - July 2027"
     title: "Master's Student"
     organization: "ELTE University"
+    homepage: true
     description: "Entry University of the EIT DIGITAL MASTER SCHOOL in the AUSIR Program."
     icon: "fa-solid fa-graduation-cap"
     tags: ["University"]
@@ -28,6 +30,7 @@ items:
   - date: "11 April 2026"
     title: "Scientific Publication"
     organization: "MDPI - Big Data and Cognitive Computing"
+    homepage: true
     description: "Investigation into the potential of LLMs in interpreting and predicting tourist movements in the city of Verona."
     icon: "fa-solid fa-book-open"
     tags: ["Research"]
@@ -80,7 +83,7 @@ items:
       - label: "Degree Certificate"
         url: "/docs/Collegio.pdf"
       - label: "Publication Article"
-        url: "/blog/publication/llm-tourism-mobility-predictor/"
+        url: "/blog/publications/llm-tourism-mobility-predictor/"
       - label: "Research PDF"
         url: "/docs/paper.pdf"
 
@@ -149,7 +152,7 @@ items:
       - "Featured in exclusive wildlife events and collaborations"
     links:
       - label: "Article"
-        url: "/blog/project/mountain-fauna-lover/"
+        url: "/blog/experiences/mountain-fauna-lover/"
       - label: "Instagram"
         url: "https://instagram.com/mountainfaunalover"
       - label: "YouTube"
@@ -160,6 +163,7 @@ items:
   - date: "Summer 2023"
     title: "International Volunteer"
     organization: "Brazil"
+    homepage: true
     description: "A life-changing experience helping in education projects. Learned the true value of community and empathy."
     icon: "fa-solid fa-hand-holding-heart"
     tags: ["Volunteering"]
@@ -242,7 +246,7 @@ items:
       - "Documented rare mountain fauna and conservation stories"
     links:
       - label: "Article"
-        url: "/blog/project/mountain-fauna-lover/"
+        url: "/blog/experiences/mountain-fauna-lover/"
       - label: "Instagram"
         url: "https://instagram.com/mountainfaunalover"
       - label: "YouTube"

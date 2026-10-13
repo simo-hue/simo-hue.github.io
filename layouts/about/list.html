@@ -17,7 +17,7 @@
 
       <!-- Portrait -->
       <figure class="ds-about-portrait">
-        {{ partial "image" (dict "Src" $a.profile.image "Alt" $a.profile.name "Class" "w-full h-full object-cover") }}
+        {{ partial "image" (dict "Context" . "Src" (strings.TrimPrefix "/" $a.profile.image) "Alt" $a.profile.name "Class" "w-full h-full object-cover") }}
         <figcaption>
           {{ with $a.profile.bio }}<p class="bio">{{ . }}</p>{{ end }}
           {{ with $a.socials }}
@@ -81,6 +81,18 @@
   </div>
 </section>
 
+<hr class="ds-rule" />
+
+<section class="ds-home-section" id="journey" aria-labelledby="journey-title">
+  <div class="ds-container">
+    <div class="ds-section-head">
+      <span class="ds-eyebrow">My journey</span>
+      <h2 class="ds-section-title" id="journey-title">Study, work, and a few detours.</h2>
+      <p class="ds-section-sub">The experiences that shaped me. Expand an entry for the story, achievements, and related links.</p>
+    </div>
+    {{ partial "components/timeline.html" . }}
+  </div>
+</section>
 <hr class="ds-rule" />
 
 <!-- Explore more -->

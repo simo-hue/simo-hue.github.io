@@ -19,7 +19,7 @@
           <span class="ds-post-card-dot">·</span>
           <time datetime="{{ .PublishDate.Format "2006-01-02" }}">{{ .PublishDate.Format "January 02, 2006" }}</time>
           <span class="ds-post-card-dot">·</span>
-          <span>{{ .ReadingTime }} min read</span>
+          <span>{{ math.Max 1 .ReadingTime }} min read</span>
         </div>
       </div>
     </div>
@@ -40,6 +40,12 @@
   <section class="section" style="padding-top:3.5rem">
     <div class="ds-container">
       <div class="ds-read">
+        {{ with .Params.links }}
+        <nav class="ds-article-resources" aria-label="Project and article resources">
+          <span class="ds-eyebrow">Explore further</span>
+          <div>{{ range . }}<a class="ds-btn ds-btn-ghost" href="{{ .website }}" target="_blank" rel="noopener noreferrer">{{ .title }} <span aria-hidden="true">↗</span></a>{{ end }}</div>
+        </nav>
+        {{ end }}
         <div class="prose prose-lg dark:prose-invert max-w-none blog-prose">
           {{ .Content }}
         </div>

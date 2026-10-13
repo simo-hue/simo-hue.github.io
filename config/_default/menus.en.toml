@@ -12,8 +12,8 @@ url = "/about"
 weight = 2
 
 [[main]]
-name = "Links"
-url = "/links"
+name = "Projects"
+url = "/blog/tech-projects/"
 weight = 3
 
 [[main]]
@@ -63,7 +63,7 @@ url = "/globe"
 weight = 6
 
 [[main]]
-name = "Call"
+name = "Connect"
 url = "/call"
 weight = 7
 

@@ -26,8 +26,7 @@ links:
 
 ### 80 out of 500+. That's the number I still can't believe.
 
-![Hackathon Entrance](hackathon-entry.webp)
-*Arrival at Caravaggio 37, Milan - October 18, 2025*
+![Hackathon Entrance](hackathon-entry.webp#right "Arrival at Caravaggio 37, Milan — October 18, 2025")
 
 When I received the confirmation email to participate in the first Italian Vibe Coding hackathon, organized by **Yellow Tech** with the **Lovable** platform, I had to read it twice to believe it was true.
 
@@ -52,8 +51,8 @@ Lovable is one of the world's leading platforms in this sector. And it has chose
 ## The Location: Caravaggio 37, the Heart of Milan's Innovation
 
 ![The spaces of Caravaggio 37](hackathon-space1.webp)
-![The spaces of Caravaggio 37](hackathon-space2.webp)
-*The open spaces where the hackathon took place*
+
+![The spaces of Caravaggio 37](hackathon-space2.webp "The open spaces where the hackathon took place")
 
 The event was held at **Caravaggio 37**, in Milan's Certosa district. A modern, bright space, perfect for hosting a community of innovators.
 
@@ -64,7 +63,9 @@ Startup founders, university students, AI professionals, hackers, curious develo
 ---
 
 ## The Challenge: Cloning Tech Giants in 6 Hours
-![timer](timer.webp)
+
+![timer](timer.webp#right-small)
+
 **10:00 AM** - Official opening of the hackathon.
 
 **Sophia Gustafsson**, Community & Growth Lead at Lovable, takes the stage with Antonio Pisante. They explain the challenge:
@@ -99,8 +100,7 @@ And I built it without writing a single line of code.
 
 ## Moments of Fun: Networking Between Features
 
-![Ping pong during the break](hackathon-pingpong.webp)
-*Informal networking during breaks - who says you can't network while playing ping pong?*
+![Ping pong during the break](hackathon-pingpong.webp#left "Informal networking during breaks — who says you can't network while playing ping pong?")
 
 One of the best things about this hackathon was the **atmosphere**.
 
@@ -162,7 +162,7 @@ The code is generated. **You drive the vision**.
 
 ### Sophia Gustafsson - Lovable
 
-![Sophia](Sophia.webp)
+![Sophia](Sophia.webp#right-small)
 
 Sophia was there all day, not only as a judge but as an **active community member**.
 

@@ -105,6 +105,8 @@ maxAge = "720h"
 
 ############################ Markup ##############################
 [markup]
+[markup.goldmark.parser]
+wrapStandAloneImageWithinParagraph = false
 [markup.goldmark.renderer]
 unsafe = true
 

@@ -1,0 +1,22 @@
+{{ $project := .Project }}
+{{ $context := .Context }}
+{{ $url := $project.url }}
+{{ with $project.page }}
+  {{ with site.GetPage . }}
+    {{ $context = . }}
+    {{ $url = .RelPermalink }}
+  {{ else }}
+    {{ errorf "Selected work page not found: %s" . }}
+  {{ end }}
+{{ end }}
+<article class="ds-post-card ds-project-card">
+  <div class="ds-post-card-media{{ if $project.logo }} ds-project-logo{{ end }}">
+    {{ partial "image" (dict "Src" $project.image "Context" $context "Alt" "" "Sizes" (cond ($project.logo | default false) "104px" "(min-width: 1200px) 262px, (min-width: 1024px) 360px, (min-width: 640px) 45vw, 100vw")) }}
+  </div>
+  <div class="ds-post-card-body">
+    <div class="ds-post-card-meta"><span class="ds-accent">{{ $project.category }}</span></div>
+    <h3 class="ds-post-card-title"><a href="{{ $url }}">{{ $project.title }}</a></h3>
+    <p class="ds-post-card-excerpt">{{ $project.description }}</p>
+    <span class="ds-post-card-cta" aria-hidden="true">{{ $project.action }} <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+  </div>
+</article>

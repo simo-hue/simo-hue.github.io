@@ -5,6 +5,7 @@ Parameters:
 - Alt: String (optional) - Alt text
 - Title: String (optional) - Title attribute (and caption for lightbox)
 - Class: String (optional) - CSS classes
+- Sizes: String (optional) - Responsive image slot sizes for the rendered layout
 - Lightbox: Boolean (optional) - Enable lightbox wrapper (default false)
 - Resize: String (optional) - Resize command (e.g. "800x") if specific size needed
 - Priority: Boolean (optional) - If true, use eager loading + high fetchpriority for LCP images (default false)
@@ -15,6 +16,7 @@ Parameters:
 {{ $alt := .Alt | default "" }}
 {{ $title := .Title | default "" }}
 {{ $class := .Class | default "" }}
+{{ $sizes := .Sizes | default "(max-width: 480px) 480px, (max-width: 800px) 800px, 1200px" }}
 {{ $lightbox := .Lightbox | default false }}
 {{ $priority := .Priority | default false }}
 
@@ -32,6 +34,10 @@ Parameters:
 {{ end }}
 
 {{ if $image }}
+{{/* Optional resource metadata corrects sideways source photos without editing originals. */}}
+{{ with $image.Params.rotation }}
+{{ $image = $image.Process (printf "r%d" (int .)) }}
+{{ end }}
 {{/* Lightbox Wrapper */}}
 {{ if $lightbox }}
 <a href="{{ $image.RelPermalink }}" class="glightbox block" data-type="image" data-desc-position="bottom"
@@ -53,7 +59,7 @@ Parameters:
     <img loading="eager" fetchpriority="high" src="{{ $fallback.RelPermalink }}" srcset="
           {{ $small.RelPermalink }} 480w,
           {{ $medium.RelPermalink }} 800w,
-          {{ $large.RelPermalink }} 1200w" sizes="(max-width: 480px) 480px, (max-width: 800px) 800px, 1200px"
+          {{ $large.RelPermalink }} 1200w" sizes="{{ $sizes }}"
         alt="{{ $alt }}" title="{{ $title }}" class="{{ $class }}" width="{{ $fallback.Width }}"
         height="{{ $fallback.Height }}">
     {{ else }}
@@ -61,7 +67,7 @@ Parameters:
     <img loading="lazy" src="{{ $fallback.RelPermalink }}" srcset="
           {{ $small.RelPermalink }} 480w,
           {{ $medium.RelPermalink }} 800w,
-          {{ $large.RelPermalink }} 1200w" sizes="(max-width: 480px) 480px, (max-width: 800px) 800px, 1200px"
+          {{ $large.RelPermalink }} 1200w" sizes="{{ $sizes }}"
         alt="{{ $alt }}" title="{{ $title }}" class="{{ $class }}" width="{{ $fallback.Width }}"
         height="{{ $fallback.Height }}">
     {{ end }}
@@ -70,11 +76,11 @@ Parameters:
     {{ $converted := $image.Resize (printf "%dx webp" $width) }}
     {{ if $priority }}
     <img loading="eager" fetchpriority="high" src="{{ $image.RelPermalink }}"
-        srcset="{{ $converted.RelPermalink }} {{ $width }}w" sizes="100vw" alt="{{ $alt }}" title="{{ $title }}"
+        srcset="{{ $converted.RelPermalink }} {{ $width }}w" sizes="{{ .Sizes | default "100vw" }}" alt="{{ $alt }}" title="{{ $title }}"
         class="{{ $class }}" width="{{ $width }}" height="{{ $image.Height }}">
     {{ else }}
     <img loading="lazy" src="{{ $image.RelPermalink }}" srcset="{{ $converted.RelPermalink }} {{ $width }}w"
-        sizes="100vw" alt="{{ $alt }}" title="{{ $title }}" class="{{ $class }}" width="{{ $width }}"
+        sizes="{{ .Sizes | default "100vw" }}" alt="{{ $alt }}" title="{{ $title }}" class="{{ $class }}" width="{{ $width }}"
         height="{{ $image.Height }}">
     {{ end }}
     {{ end }}

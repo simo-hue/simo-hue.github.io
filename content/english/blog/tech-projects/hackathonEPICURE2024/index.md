@@ -94,6 +94,8 @@ This hackathon was more than just a technical event; it was a community-building
 
 ## Final Thoughts
 
+![Me Presenting our results of the Lab sessions of the two days before](3.webp#right)
+
 Reflecting on these four days, I feel a renewed enthusiasm for **GPU computing** and **HPC**. The skills I gained, combined with the amazing people I met, made this hackathon an unforgettable experience.
 
 Interested in learning more? Check out the links below to access more details on EPICURE events, a recap video, and the GitHub repository with sample codes used during the hackathon.
@@ -110,8 +112,6 @@ Interested in learning more? Check out the links below to access more details on
 ---
 
 This hackathon has certainly sparked a deeper interest in exploring the potential of GPUs for high-performance tasks. I’m looking forward to applying these skills in future projects and sharing my insights with the community.
-
-![Me Presenting our results of the Lab sessions of the two days before](3.webp)
 
 ## YouTube Vlogs
 I've made some mini vlogs about my experience in Bologna during this event and this is the first of the playlist

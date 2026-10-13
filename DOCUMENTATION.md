@@ -1312,3 +1312,55 @@ NEXT: review the remaining content-judgment items in TO_SIMO_DO.md (thin "Future
 - [2026-08-08]: Thin posts — four more placeholders withdrawn, Mountain Fauna Lover rewritten
   - *Details*: Auditing the 16 sub-300-word posts by *prose* rather than total word count split them cleanly. Four were placeholders with essentially no body: `experiences/GDG AI Hackathon` (a bare `## Introduction`, zero words of prose) and three book notes reading **"COMMING SOON, Still Reading"** (sic), dated November 2024 and live for roughly 21 months. Five more are short but genuinely finished pieces of writing (Budapest 105 words of prose, GISEP Rimini 125, Sicily 137, Poland 143, Italy Trip 210). One, `mountainfaunalover`, is a project post whose facts are externally verifiable.
   - *Tech Notes*: The four placeholders are now `draft: true`, each with a comment recording why and what unblocks it — withdrawn rather than padded, since none can be expanded without the author's own material. `mountainfaunalover` expanded 138 → 471 words in source (382 rendered) and kept live: everything added is checkable (Val di Rabbi / Stelvio / Trentino locations, what digiscoping is, the four channels, the website that was missing from its links), with nothing invented about his experience. Its `description` was the placeholder "A brief description of Mountain Fauna Lover presence on Social media Platforms"; tags gained digiscoping/trentino/stelvio and `wild life` was corrected to `wildlife`. **Third instance of the wrong TikTok handle**: this post linked `@mountainfaunalove` (no *r*, a stranger's account), which was rendering on 9+ pages through post cards — after `data/timeline.yml` earlier and the audit's mistaken report that it was in `links.yml`. The four `[SIMONE: ...]` questions drafted for this post were stripped to `TO_SIMO_DO.md` rather than published, because unlike the app-post placeholders this page is live and taking it down to await answers would be a regression. The five short-but-written posts are deliberately left alone: the only honest route to 600 words is his memories, and padding them with generic travel-guide copy about the Danube or the Colosseum would make them worse — undifferentiated content is what retrieval systems discard, and their whole value is being first-hand. **Verified** with a clean build: 583 pages, no errors, all four withdrawn posts absent from the output, and zero occurrences site-wide of placeholder text, the wrong TikTok handle, or `[SIMONE:` markers.
+
+---
+
+- [2026-10-12, Europe/Budapest]: Editorial article images — implementation and review in progress
+- *Details*: Added optional left/right image wrapping and two size presets while preserving Markdown authoring. Trialed on “Live the dream” before selectively applying layouts to the other illustrated articles. Covers now retain their proportions at a bounded height; detailed diagrams and group photos remain centered.
+- *Tech Notes*: Updated the Markdown image render hook, enabled standalone image blocks, added scoped figure styles and responsive `sizes`, and added render-time page-resource rotation for five sideways pilot photographs. No runtime dependency added. Authoring instructions are in `docs/ARTICLE_IMAGES.md`.
+
+### Current Status — article images
+
+- Completed: pilot desktop/mobile visual check; production build; first browser pass over all 67 articles (58 published, 9 drafts), with zero broken article images or horizontal overflow at 1440px and 390px.
+- Completed: selective article migrations, caption conversion, diagram alternative text, bounded cover heights, and source-preserving orientation correction.
+- Immediate next step: complete the final per-article visual review after the migrations, verify all layout presets and lightbox behavior, and record final results in `docs/ARTICLE_IMAGE_REVIEW.md`.
+
+---
+
+- [2026-10-12 11:31 CEST]: Editorial article images — rollout and visual verification complete
+- *Details*: Completed visual review of all 67 articles (58 published, 9 drafts). Selectively wrapped 16 images across seven articles; retained centered layouts where detail or photo sequences benefit from width. Limited oversized covers without cropping, corrected five sideways photos through resource metadata, and gave four transparent diagrams a dark backing for readability in either theme.
+- *Tech Notes*: All 134 desktop/mobile page checks passed, plus all four presets at six viewport widths, narrow/tablet dark-mode checks on the 10 illustrated articles, and lightbox interaction. Final production build passed (601 pages); only the existing Hugo imaging-quality deprecation warning remains. No new runtime dependencies or manual setup actions. Per-article evidence: `docs/ARTICLE_IMAGE_REVIEW.md`; authoring guide: `docs/ARTICLE_IMAGES.md`.
+
+### Current Status — article images (complete)
+
+- Completed: implementation, pilot, selective rollout, review of every article, focused behavior tests, final production build, and documentation.
+- Temporary verification article removed; original source photographs unchanged; no deployment or Git commit performed.
+- Immediate next step: optional user review of the local “Live the dream” preview and the authoring guide. No implementation work or manual setup remains.
+
+---
+
+- [2026-10-12 17:38 CEST]: Balanced personal hub — UI refresh
+- *Details*: Rebuilt the homepage around a portrait introduction, two clear routes into work and stories, three selected projects/research articles, a featured Brazil story with recent notes, three journey milestones, and a connection invitation. Moved all 13 timeline entries to About; native expandable details replace the modal, with full-width readable mobile entries and an Upcoming label for KTH. Shortened the visible blog introduction without changing its SEO description; improved text-only cards, metadata contrast, touch targets, and footer navigation. Projects now has a top-level link, and mobile navigation includes all five blog subsections and Escape-to-close. Article resource links now have visible labels on the article page instead of icon stacks over card images.
+- *Tech Notes*: Added `assets/css/hub.css`, imported after the existing design system. Added `homepage` and `upcoming` flags to `data/timeline.yml`; existing extended timeline content is retained. Removed obsolete timeline animation/modal JavaScript. Corrected About's portrait resource lookup and timeline links to their canonical article routes. Existing article image work and unrelated content edits were preserved. No new dependencies, endpoints, deployment, or manual setup actions.
+- *Validation*: `npm run build` passed (601 pages); `node --check assets/js/main.js` and `git diff --check` passed. Checked homepage, About, blog, project listing, and publication article at 320/390/768/1024/1440px in light mode and 390/1440px in dark mode (35 page/viewport checks, no document horizontal overflow). Visually reviewed desktop/mobile homepage, stories, blog, About portrait, menu, and journey. Verified keyboard disclosure activation, menu Escape behavior, theme switching, homepage anchor navigation, and search returning CampFlow. All 285 local link/image references on these five generated pages resolve; homepage has three selected work cards and three milestones; About retains all 13 entries. Existing Hugo imaging-quality deprecation warning remains.
+
+### Current Status — personal hub UI (complete)
+
+- Completed: implementation, production build, responsive and interaction verification, link checks, and documentation.
+- Local preview: `http://localhost:1313/`. Changes remain uncommitted and unpublished for review.
+- Immediate next step: optional visual review of the homepage, mobile navigation, and About journey. No required manual setup remains.
+
+- [2026-10-12 17:46 CEST]: Homepage CTA priority and one-row selected work
+- *Details*: Highlighted “Find me online” as the primary connection button; “Book a conversation” is secondary. The homepage selected-work section stays on a single row: one project below 640px, two from 640–1023px, and three from 1024px. All projects remain available through the section link. Other page grids retain their existing behavior.
+- *Tech Notes*: Scoped visibility rules to the new `ds-selected-work` class in `assets/css/hub.css`; swapped CTA classes in `layouts/index.html`. No new dependencies or manual actions. Production build passed (601 pages), whitespace check passed, and browser checks at 320/390/639/640/768/1023/1024/1440px confirmed expected visible-card counts, matching row positions, no horizontal overflow, and the correct primary button.
+
+- [2026-10-13, Europe/Budapest]: Curated project selection and consistent contact background
+- *Details*: Removed the copper tint from “Let's connect” so its background exactly matches the page in light and dark themes. Selected work now features Wealth Compass Tracker, Evolve, Mountain Fauna Lover, and CampFlow, in that order. Preserved a single visible row: one card below 640px, two at 640–1023px, three at 1024–1199px, and four from 1200px. “Find me online” remains the primary contact action.
+- *Tech Notes*: Added `data/selected_work.yml` and a dedicated `components/project-card.html` partial so product cards are independent of blog publication status. Wealth Compass and Evolve link to their live product sites; Evolve's unfinished article remains a draft. Added local copies of the two apps' official logo assets; existing images are reused for Mountain Fauna Lover and CampFlow. No dependencies or manual setup required. The previously supplied rollback patch is a historical snapshot of the earlier refresh, not these later refinements.
+- *Validation*: Production build and clean build into an isolated destination both passed (601 pages); whitespace checks passed. Browser verification at 320/390/639/640/768/1023/1024/1199/1200/1440px confirmed 1/2/3/4 visible cards on one row and no horizontal page overflow. All four card images loaded. Computed contact/body backgrounds match exactly in both themes (dark: rgb(10,10,10); light: rgb(250,250,248)). Fresh-output checks confirmed four project cards, resolving homepage images and local project destinations, and exclusion of the Evolve draft. A check against the old public folder initially found a stale Evolve page; the isolated clean output confirmed it is not emitted by the current build. Existing Hugo imaging-quality deprecation warning remains.
+
+### Current Status — selected project refinements (complete)
+
+- Completed: requested project selection, consistent contact background, responsive and image checks, clean production build, and documentation.
+- Local preview remains available at `http://localhost:1313/`; changes are uncommitted and unpublished.
+- Immediate next step: optional user review. No required manual actions remain.

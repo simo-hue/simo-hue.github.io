@@ -1,0 +1,30 @@
+# Homepage order. Smaller screens show the first cards that fit one row.
+- title: "Wealth Compass Tracker"
+  category: "Personal finance"
+  description: "Track what you own, owe, earn, and spend in one personal finance app."
+  url: "https://simo-hue.github.io/wealth-compass/"
+  image: "images/projects/wealth-compass.png"
+  logo: true
+  action: "Explore the app"
+
+- title: "Evolve"
+  category: "Habits & goals"
+  description: "The app evolution of Mattioli.OS — habits, goals, and a clearer view of your progress."
+  url: "https://simo-hue.github.io/evolve/"
+  image: "images/projects/evolve.png"
+  logo: true
+  action: "Explore the app"
+
+- title: "Mountain Fauna Lover"
+  category: "Wildlife & film"
+  description: "Alpine wildlife, digiscoping, and nature films from the mountains of Trentino."
+  page: "/blog/experiences/mountainfaunalover"
+  image: "logo.webp"
+  action: "Explore the project"
+
+- title: "CampFlow"
+  category: "Campsite management"
+  description: "A campsite management system built for a friend and shared with the community."
+  page: "/blog/tech-projects/CampFlow"
+  image: "home.webp"
+  action: "Explore the project"

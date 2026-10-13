@@ -1,39 +1,19 @@
-<article class="ds-post-card group">
-  <a href="{{ .RelPermalink }}" class="ds-post-card-mask" aria-label="{{ .Title }}"></a>
-
-  {{ $image := .Params.image }}
-  {{ $priority := .Scratch.Get "IsPriority" | default false }}
-  {{ if $image }}
-  <div class="ds-post-card-media">
-    {{ partial "image" (dict "Src" $image "Context" .Page "Alt" .Title "Class" "w-full h-full object-cover" "Priority" $priority) }}
-    {{ if .Params.links }}
-    <div class="ds-post-card-links">
-      {{ range .Params.links }}
-      <a href="{{ .website }}" target="_blank" rel="noopener noreferrer" class="ds-post-card-linkicon" title="{{ .title }}" aria-label="{{ .title }}">
-        {{ if in (lower .website) "instagram" }}<i class="fab fa-instagram"></i>
-        {{ else if in (lower .website) "youtube" }}<i class="fab fa-youtube"></i>
-        {{ else if in (lower .website) "tiktok" }}<i class="fab fa-tiktok"></i>
-        {{ else if in (lower .website) "github" }}<i class="fab fa-github"></i>
-        {{ else }}<i class="fas fa-external-link-alt"></i>{{ end }}
-      </a>
-      {{ end }}
-    </div>
-    {{ end }}
-  </div>
+<article class="ds-post-card{{ if not .Params.image }} ds-post-card-text{{ end }}">
+  {{ with .Params.image }}
+  <a href="{{ $.RelPermalink }}" class="ds-post-card-media" tabindex="-1" aria-hidden="true">
+    {{ partial "image" (dict "Src" . "Context" $ "Alt" "" "Class" "w-full h-full object-cover" "Priority" ($.Scratch.Get "IsPriority" | default false) "Sizes" "(min-width: 1024px) 360px, (min-width: 640px) 45vw, 100vw") }}
+  </a>
+  {{ else }}
+  <div class="ds-post-card-note" aria-hidden="true"><span>FIELD NOTES</span><span>↗</span></div>
   {{ end }}
-
   <div class="ds-post-card-body">
     <div class="ds-post-card-meta">
       {{ with .CurrentSection }}<span class="ds-accent">{{ .Title }}</span><span class="ds-post-card-dot">·</span>{{ end }}
       <time datetime="{{ .PublishDate.Format "2006-01-02" }}">{{ .PublishDate.Format "Jan 02, 2006" }}</time>
-      <span class="ds-post-card-dot">·</span>
-      <span>{{ .ReadingTime }} min</span>
+      <span class="ds-post-card-dot">·</span><span>{{ math.Max 1 .ReadingTime }} min</span>
     </div>
-
-    <h3 class="ds-post-card-title">{{ .Title }}</h3>
-
+    <h3 class="ds-post-card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
     {{ with .Params.description }}<p class="ds-post-card-excerpt">{{ . }}</p>{{ end }}
-
-    <span class="ds-post-card-cta">Read <i class="fa-solid fa-arrow-right arrow" aria-hidden="true"></i></span>
+    <span class="ds-post-card-cta" aria-hidden="true">{{ if eq .CurrentSection.Title "Tech Projects" }}Explore project{{ else if eq .CurrentSection.Title "Publications" }}Read research{{ else }}Read the story{{ end }} <i class="fa-solid fa-arrow-right arrow" aria-hidden="true"></i></span>
   </div>
 </article>

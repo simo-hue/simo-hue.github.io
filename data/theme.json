@@ -12,7 +12,7 @@
       "text_color": {
         "text": "#52525b",
         "text_dark": "#0a0a0a",
-        "text_light": "#78716c"
+        "text_light": "#69635e"
       }
     },
     "darkmode": {
@@ -27,7 +27,7 @@
       "text_color": {
         "text": "#a3a3a3",
         "text_dark": "#fafafa",
-        "text_light": "#6b6b6b"
+        "text_light": "#97938f"
       }
     }
   },

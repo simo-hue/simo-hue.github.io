@@ -34,7 +34,7 @@ links:
 
 ## Introduction
 
-![Don Mazza Logo](don-mazza-pia.webp)
+![Don Mazza Logo](don-mazza-pia.webp#right-small)
 
 My volunteer experience in Brazil was an unforgettable journey that led me to discover not only a country rich in culture, but also the daily challenges faced by people in vulnerable situations.
 
@@ -48,7 +48,7 @@ During our stay, we had the opportunity to explore different areas of Brazil, fo
 
 It would be impossible to remember them all since the experience was characterized by moments of joy and just as many of emotional difficulty.
 
-![Serving Food in Itapororoca](food.webp)
+![Serving Food in Itapororoca](food.webp#right)
 
 One of the most touching memories was when we distributed food to people in need, an act that made us realize the critical reality in which many communities lived.
 
@@ -61,6 +61,7 @@ We also visited the communities of **Olinda** and **Alto do Mateus**, where we s
 ## Itapororoca Vibes
 
 ![Visiting the project at Itapororoca ( first day )](escola.webp)
+
 In Itapororoca, we were hosted by an extraordinary family who dedicated their lives to creating a school and providing aid to the local community. 
 
 ![Preparation for the Carneval at Itapororoca ( second day )](itapororoca.webp)
@@ -92,7 +93,7 @@ These young people, coming from difficult backgrounds, aspired to a better futur
 
 And my greatest respect goes to these educators who dedicate their lives to improving that of the new generations
 
-![Beira da Linha Project bare foot football](Football.webp)
+![Beira da Linha Project bare foot football](Football.webp#right)
 
 During our stay there, as a tradition in Brazil, we played football a lot...but the difference was that we were all playing barefoot on the concrete since they only had one pair of shoes, or sometimes not even those and therefore they couldn't/didn't want to ruin them
 
@@ -141,10 +142,15 @@ This phrase perfectly encapsulates the essence of my journey and the meaning of 
 
 
 # Here are some more photos about our stay
+
 ![itapororoca](visit.webp)
+
 ![itapororoca](wow.webp)
+
 ![itapororoca](asilo.webp)
+
 ![Group](1school.webp)
+
 ![itapororoca](school.webp)
 
 # Here a short recap video about the experience
