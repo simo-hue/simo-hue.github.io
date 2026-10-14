@@ -1,0 +1,21 @@
+{{ $project := .Project }}
+{{ $context := .Context }}
+{{ with $project.page }}
+  {{ with site.GetPage . }}{{ $context = . }}{{ else }}{{ errorf "Portfolio image page missing: %s" . }}{{ end }}
+{{ end }}
+<article class="ds-portfolio-card">
+  <div class="ds-portfolio-media{{ if $project.logo }} ds-portfolio-logo{{ end }}">
+    {{ partial "image" (dict "Src" $project.image "Context" $context "Alt" "" "Sizes" (cond ($project.logo | default false) "144px" "(min-width: 1200px) 544px, (min-width: 768px) 46vw, 94vw") "Priority" .Priority) }}
+  </div>
+  <div class="ds-portfolio-body">
+    <span class="ds-eyebrow">{{ $project.category }}</span>
+    <h2>{{ $project.title }}</h2>
+    <p>{{ $project.description }}</p>
+    <div class="ds-portfolio-actions">
+      <a class="ds-btn ds-btn-primary" href="{{ $project.portfolio.url | default $project.url }}" target="_blank" rel="noopener noreferrer">{{ $project.portfolio.action | default $project.action }} <span aria-hidden="true">↗</span><span class="sr-only"> — {{ $project.title }}</span></a>
+      {{ with site.GetPage $project.portfolio.story }}
+        {{ if not .Draft }}<a class="ds-text-link" href="{{ .RelPermalink }}">{{ $project.portfolio.story_label }} <span aria-hidden="true">→</span></a>{{ end }}
+      {{ else }}{{ errorf "Portfolio story missing: %s" $project.portfolio.story }}{{ end }}
+    </div>
+  </div>
+</article>

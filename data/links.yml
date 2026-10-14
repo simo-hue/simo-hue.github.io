@@ -9,7 +9,8 @@ sections:
     kind: primary
     items:
       - title: "LinkedIn"
-        order: 2
+        order: 1
+        primary: true
         description: "Professional updates, new connections, and opportunities to work together."
         icon: "fab fa-linkedin"
         link: "https://www.linkedin.com/in/simonemattioli2003/"
@@ -17,8 +18,7 @@ sections:
         color: "bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300" 
 
       - title: "Email"
-        order: 1
-        primary: true
+        order: 2
         description: "For a project, a collaboration, or a simple hello. Send me a message directly."
         icon: "fas fa-envelope"
         link: "mailto:mattioli.simone.10@gmail.com"

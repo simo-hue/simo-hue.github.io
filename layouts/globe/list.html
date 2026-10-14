@@ -198,7 +198,7 @@
   };
 
   const updateLayout = () => {
-    const header = document.querySelector('.header');
+    const header = document.querySelector('.ds-header');
     if (!globeViewport || !world) return;
 
     const headerHeight = header ? header.offsetHeight : 0;
@@ -1436,6 +1436,20 @@
     .story-card h4 {
       font-size: 1rem;
     }
+  }
+  /* Short landscape screens need scrolling rather than a collapsed story rail. */
+  @media (max-width: 1024px) and (max-height: 600px) {
+    .country-panel { padding-top: 0; align-items: stretch; }
+    .country-panel-shell {
+      height: 100dvh;
+      max-height: 100dvh;
+      grid-template-rows: minmax(400px, auto) minmax(300px, auto);
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+    .country-story-rail { height: auto; overflow: visible; }
+    .story-list { overflow: visible; }
+    .panel-close { position: fixed; top: 12px; right: 12px; }
   }
 </style>
 {{ end }}

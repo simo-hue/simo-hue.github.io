@@ -33,7 +33,7 @@ No manual configuration, credentials, or migration is required.
 
 ## Follow-up adjustments
 
-“Find me online” is the primary connection action. Homepage selected work is constrained to one visible row: one card below 640px, two cards from 640–1023px, and three from 1024–1199px, and four at 1200px or wider. Other grids are unchanged. Each visible project links to its app site or article, with “More projects” linking to the technical project collection. Verified at both sides of each breakpoint and on 320px/390px phones, 768px tablets, and 1440px desktops.
+“Find me online” is the primary connection action. Homepage selected work is constrained to one visible row: one card below 640px, two cards from 640–1023px, and three from 1024–1199px, and four at 1200px or wider. Other grids are unchanged. Each visible project links to its app site or article, with “More projects” linking to the dedicated portfolio. Verified at both sides of each breakpoint and on 320px/390px phones, 768px tablets, and 1440px desktops.
 
 ## Project selection and background refinement — October 13
 
@@ -54,3 +54,17 @@ Verification: clean 601-page production build; all 58 unique archive posts prese
 The `/links/` page now prioritizes Email, LinkedIn, and GitHub. Email has a copper border and appears first. Personal channels, Mountain Fauna Lover, and research profiles follow as grouped lists; all destinations remain available. Résumé/education and certificates use native collapsed disclosures with PDF counts and labels. The résumé is first within its group, and in-page shortcuts lead to channels or documents.
 
 `data/links.yml` remains the directory source: section `kind` selects `primary`, `channels`, or `documents`; `order` controls primary destinations and channel groups. Document order follows the data. No JavaScript or setup is needed for disclosures. Verified 24 retained destinations, 12 resolving PDFs, keyboard interaction, light/dark layouts, and no horizontal overflow at five widths from 320px to 1440px.
+
+## Projects portfolio — October 13
+
+Projects now points to `/projects/`, a dedicated portfolio. The homepage “More projects” link follows it. `/blog/tech-projects/` remains the complete chronological technical-writing archive, accessible from Blog and “All build stories.” The portfolio shows all four chosen projects in a two-column grid, stacking below 768px; homepage single-row visibility remains unchanged.
+
+Featured project names, descriptions, and images remain shared through `data/selected_work.yml`. Each entry's `portfolio` fields provide its external product destination and published story. Evolve uses the published Mattioli.OS origin article, not the Evolve draft. Wealth Compass labels its article as the web-app story. Four other apps come from `data/entity.yml`, followed by the latest three published technical posts.
+
+Validation: clean 602-page build, 50 resolving local link/image/anchor references, preserved homepage cards and archive pagination, Evolve draft exclusion, loaded images, responsive checks at five widths from 320px to 1440px, both themes, and desktop/mobile navigation. No manual setup required.
+
+## Article reading — October 13
+
+Articles with at least 600 words and three rendered TOC entries receive a native “On this page” disclosure before the body. It starts collapsed, works without JavaScript, and links to existing heading anchors. Eighteen currently published articles qualify; short reflections remain simple. Category and back-to-top links close each article.
+
+“Keep reading” now consistently offers three distinct published articles: related matches first, then recent posts from the same section, then other recent writing. The current article is always excluded. All 58 published articles have three resolving suggestions; all generated guide anchors were checked. Verified keyboard behavior, header clearance, light/dark styling, and mobile/desktop layouts. Content and article-image layouts were preserved; no manual setup is needed.

@@ -1,7 +1,7 @@
 {{ define "main" }}
 <article>
   <!-- Post header -->
-  <header class="ds-hero" style="padding-bottom:2.5rem">
+  <header class="ds-hero ds-article-top" id="article-top" style="padding-bottom:2.5rem">
     <div class="ds-container">
       <div class="ds-read">
         <a href="{{ "/blog" | relLangURL }}" class="ds-back"><i class="fa-solid fa-arrow-left arrow-back" aria-hidden="true"></i> All writings</a>
@@ -46,22 +46,38 @@
           <div>{{ range . }}<a class="ds-btn ds-btn-ghost" href="{{ .website }}" target="_blank" rel="noopener noreferrer">{{ .title }} <span aria-hidden="true">↗</span></a>{{ end }}</div>
         </nav>
         {{ end }}
+        {{/* Keep short reflections uncluttered; use the actual rendered TOC links. */}}
+        {{ $toc := .TableOfContents }}
+        {{ if and (ge .WordCount 600) (ge (len (findRE "<a " $toc)) 3) }}
+        <details class="ds-article-toc">
+          <summary><span>On this page <span class="ds-toc-hint">Jump to a section</span></span><span class="ds-toc-toggle" aria-hidden="true">+</span></summary>
+          {{ replace $toc "id=\"TableOfContents\"" "aria-label=\"Article sections\"" | safeHTML }}
+        </details>
+        {{ end }}
         <div class="prose prose-lg dark:prose-invert max-w-none blog-prose">
           {{ .Content }}
         </div>
+        <nav class="ds-article-end" aria-label="After this article">
+          {{ with .CurrentSection }}<a class="ds-text-link" href="{{ .RelPermalink }}">More {{ .Title | lower }} <span aria-hidden="true">→</span></a>{{ end }}
+          <a class="ds-text-link" href="#article-top">Back to top <span aria-hidden="true">↑</span></a>
+        </nav>
       </div>
     </div>
   </section>
 </article>
 
-<!-- Related posts -->
-{{ $related := first 3 ((where site.RegularPages "Section" "blog").Related .) }}
-{{ with $related }}
+{{/* Prefer related posts, then recent posts in the same section, then the archive.
+     Union keeps suggestions unique; exclude this article from every candidate set. */}}
+{{ $all := where (where site.RegularPages "Section" "blog") "RelPermalink" "ne" .RelPermalink }}
+{{ $related := $all.Related . }}
+{{ $siblings := where .CurrentSection.RegularPages "RelPermalink" "ne" .RelPermalink }}
+{{ $reading := first 3 (union (union $related $siblings.ByDate.Reverse) $all.ByDate.Reverse) }}
+{{ with $reading }}
 <hr class="ds-rule" />
 <section class="section">
   <div class="ds-container">
     <div class="ds-section-head">
-      <span class="ds-eyebrow">Related</span>
+      <span class="ds-eyebrow">More to explore</span>
       <h2 class="ds-section-title">Keep reading</h2>
     </div>
     <div class="ds-post-grid">

@@ -1,6 +1,6 @@
 ---
 title: "Bikes"
-description: "Adventures on two wheels and mountain trails"
+description: "Adventures on two wheels"
 draft: false
 ---
 

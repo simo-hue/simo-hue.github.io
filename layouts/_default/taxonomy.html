@@ -1,0 +1,20 @@
+{{ define "main" }}
+  {{ partial "page-header" . }}
+
+  <section class="section">
+    <div class="container">
+      {{/* The outer row must fit the container; gx-5's negative margins overflow small viewports. */}}
+      <div class="row gx-0">
+        <div class="lg:col-8">
+          <div class="row">
+            {{ range .Data.Pages }}
+              <div class="md:col-6 mb-14">
+                {{ partial "components/blog-card" . }}
+              </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}

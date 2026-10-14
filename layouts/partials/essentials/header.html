@@ -14,7 +14,6 @@
         {{ range site.Menus.main }}
           {{ $u := .URL | relLangURL }}
           {{ $active := cond (eq .URL "/") $currentPage.IsHome (hasPrefix $cur $u) }}
-          {{ if and (eq .URL "/blog") (hasPrefix $cur ("/blog/tech-projects/" | relLangURL)) }}{{ $active = false }}{{ end }}
           {{ if .HasChildren }}
             <div class="ds-navdrop">
               <a href="{{ $u }}" class="ds-nav-link ds-navdrop-trigger{{ if $active }} active{{ end }}">

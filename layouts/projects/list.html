@@ -1,0 +1,60 @@
+{{ define "main" }}
+<section class="ds-hero ds-portfolio-hero">
+  <div class="ds-container">
+    <span class="ds-eyebrow">Selected work</span>
+    <h1 class="ds-hero-title">Ideas put into practice.</h1>
+    <p class="ds-hero-lead">Apps for everyday life, tools built for real people, and stories from the mountains. Here’s what I’ve been making.</p>
+    <nav class="ds-links-shortcuts" aria-label="Project sections">
+      <a class="ds-text-link" href="#selected-projects">Explore the projects <span aria-hidden="true">↓</span></a>
+      <a class="ds-text-link" href="#build-stories">Behind the builds <span aria-hidden="true">↓</span></a>
+    </nav>
+  </div>
+</section>
+<section class="ds-portfolio-section ds-portfolio-selected" id="selected-projects" aria-label="Selected projects">
+  <div class="ds-container ds-portfolio-grid">
+    {{ range $index, $project := site.Data.selected_work }}
+      {{ partial "components/portfolio-card.html" (dict "Project" $project "Context" $ "Priority" (lt $index 2)) }}
+    {{ end }}
+  </div>
+</section>
+<hr class="ds-rule" />
+<section class="ds-portfolio-section" aria-labelledby="more-apps-title">
+  <div class="ds-container">
+    <div class="ds-section-heading-row">
+      <div>
+        <span class="ds-eyebrow">Smaller tools</span>
+        <h2 class="ds-section-title" id="more-apps-title">More apps to explore.</h2>
+        <p class="ds-section-sub">A few more apps from my collection.</p>
+      </div>
+    </div>
+    <div class="ds-more-apps">
+      {{ range site.Data.entity.apps }}
+        {{ if not (or (hasPrefix .name "Evolve") (hasPrefix .name "Wealth Compass")) }}
+        <a href="{{ .site | default .store }}" class="ds-app-link" target="_blank" rel="noopener noreferrer">
+          <span>{{ .name }}<span class="ds-mono">{{ if .site }}Visit the product page{{ else }}View on the App Store{{ end }}</span></span>
+          <span aria-hidden="true">↗</span>
+        </a>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+<hr class="ds-rule" />
+{{ with site.GetPage "/blog/tech-projects" }}
+<section class="ds-portfolio-section" id="build-stories" aria-labelledby="build-stories-title">
+  <div class="ds-container">
+    <div class="ds-section-heading-row">
+      <div>
+        <span class="ds-eyebrow">Behind the builds</span>
+        <h2 class="ds-section-title" id="build-stories-title">The stories behind the projects.</h2>
+        <p class="ds-section-sub">Build stories, experiments, and lessons from {{ len .RegularPages }} technical posts.</p>
+      </div>
+      <a class="ds-text-link" href="{{ .RelPermalink }}">All build stories <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="ds-post-grid">
+      {{ range first 3 .RegularPages.ByDate.Reverse }}{{ partial "components/blog-card.html" . }}{{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}

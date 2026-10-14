@@ -1,4 +1,5 @@
-# Homepage order. Smaller screens show the first cards that fit one row.
+# Shared featured projects. Homepage order also determines the portfolio order.
+# Homepage cards keep one row; portfolio cards show every project.
 - title: "Wealth Compass Tracker"
   category: "Personal finance"
   description: "Track what you own, owe, earn, and spend in one personal finance app."
@@ -6,6 +7,9 @@
   image: "images/projects/wealth-compass.png"
   logo: true
   action: "Explore the app"
+  portfolio:
+    story: "/blog/tech-projects/wealth-compass"
+    story_label: "Read the web app story"
 
 - title: "Evolve"
   category: "Habits & goals"
@@ -14,6 +18,9 @@
   image: "images/projects/evolve.png"
   logo: true
   action: "Explore the app"
+  portfolio:
+    story: "/blog/tech-projects/mattioliOS"
+    story_label: "How it started: Mattioli.OS"
 
 - title: "Mountain Fauna Lover"
   category: "Wildlife & film"
@@ -21,6 +28,11 @@
   page: "/blog/experiences/mountainfaunalover"
   image: "logo.webp"
   action: "Explore the project"
+  portfolio:
+    url: "https://mountain-fauna-lover.vercel.app/"
+    action: "Visit the website"
+    story: "/blog/experiences/mountainfaunalover"
+    story_label: "Read the story"
 
 - title: "CampFlow"
   category: "Campsite management"
@@ -28,3 +40,8 @@
   page: "/blog/tech-projects/CampFlow"
   image: "home.webp"
   action: "Explore the project"
+  portfolio:
+    url: "https://simo-hue.github.io/CampFlow/"
+    action: "Explore CampFlow"
+    story: "/blog/tech-projects/CampFlow"
+    story_label: "Read the build story"

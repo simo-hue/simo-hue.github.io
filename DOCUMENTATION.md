@@ -1386,3 +1386,46 @@ NEXT: review the remaining content-judgment items in TO_SIMO_DO.md (thin "Future
 - Completed: page hierarchy, channel grouping, document disclosures, responsive and keyboard verification, production build, and documentation.
 - Preview: `http://localhost:1313/links/`. Changes remain local and unpublished; no manual actions required.
 - Immediate next step: optional user review of Find me online.
+
+- [2026-10-13, Europe/Budapest]: Dedicated Projects portfolio
+- *Details*: Added `/projects/` as a portfolio led by Wealth Compass Tracker, Evolve, Mountain Fauna Lover, and CampFlow. Each card has separate product and published-story links. Evolve links to the published Mattioli.OS origin story; Wealth Compass explicitly labels its web-app story. Added four other apps from the existing app directory and three recent technical posts, with access to the full archive. Desktop/mobile Projects navigation and the homepage “More projects” link now lead to the portfolio.
+- *Tech Notes*: Added `content/english/projects.md`, `layouts/projects/list.html`, and `components/portfolio-card.html`. Extended shared `data/selected_work.yml` with portfolio-only destinations while preserving homepage card behavior. Reused local images, existing entity app data, and published articles. Scoped responsive styling lives in `assets/css/hub.css`; no new JavaScript, dependencies, or manual setup. Removed the old header exception so technical blog articles correctly highlight Blog while the portfolio highlights Projects.
+- *Validation*: Clean production build passed (602 pages) and whitespace checks passed. Generated-output checks confirmed four portfolio cards, four other-app links, three build-story cards, 50 resolving local links/images/anchors, intact homepage cards, retained technical archive pagination, and exclusion of the Evolve draft. Browser checks passed at 320/390/768/1024/1440px with no horizontal overflow; all four images load. Reviewed desktop/mobile and light/dark layouts; verified archive navigation and the mobile Projects link. Restarted the stale local preview process and confirmed `/projects/` now renders correctly. Existing Hugo imaging-quality deprecation warning remains.
+
+### Current Status — Projects portfolio (complete)
+
+- Completed: portfolio, product/story navigation, shared project data, responsive verification, clean build, and documentation.
+- Local preview: `http://localhost:1313/projects/`. Changes are uncommitted and unpublished.
+- Immediate next step: optional user review. No required manual actions remain.
+
+- [2026-10-13, Europe/Budapest]: Article navigation and next-reading suggestions
+- *Details*: Added a collapsed “On this page” guide to longer structured articles (at least 600 words and three rendered section links); 18 published articles qualify. Added end-of-article category and back-to-top links. Every article now offers up to three unique next-reading suggestions, prioritizing related matches, then recent posts in its own section, then the wider archive. Short reflections retain their simple reading layout.
+- *Tech Notes*: Updated `layouts/blog/single.html` and scoped styles in `assets/css/hub.css`. Guides use Hugo-generated anchors inside native details/summary with a named navigation landmark; replaced the legacy TOC ID to avoid inherited module styling. Suggestion candidates exclude the current article and use ordered unions to avoid duplicates. Existing content and image layouts are unchanged. No new JavaScript, dependencies, or manual actions.
+- *Validation*: Clean production build passed (602 pages), whitespace checks passed. Checked all 58 published articles: each has three unique resolving suggestions without self-links, and every guide anchor resolves. Verified the short “Don't Brag” reflection has no guide. Browser checks covered keyboard disclosure, section navigation below the fixed header, back-to-top, narrow/desktop layouts (320/390/768/1440px), both themes, and short-article recommendations, with no horizontal overflow. Existing Hugo imaging-quality deprecation warning remains.
+
+### Current Status — article reading enhancements (complete)
+
+- Completed: optional article navigation, consistent next-reading suggestions, end links, build/output checks, browser verification, and documentation.
+- Preview example: `http://localhost:1313/blog/experiences/brazil-volunteer-teaching-experience/`. Changes remain local and unpublished.
+- Immediate next step: optional visual review. No required manual actions remain.
+
+- [2026-10-14 13:45 CEST]: About portrait framing fix
+- *Details*: Corrected the About photo crop that hid Simone's face when the portrait expanded across the tablet grid. Anchored the image at the top and gave the full-width frame a 4:3 aspect ratio, retaining the existing minimum height and desktop layout. Explicit width constraints keep the frame inside narrow phone screens.
+- *Tech Notes*: Scoped CSS changes in `assets/css/ds.css`; original image, homepage portrait, and social overlay retained. No dependencies, endpoints, or manual setup actions.
+- *Validation*: Reproduced the user's screenshot in the local preview; visually checked the corrected portrait on phone, tablet, and desktop. At 320/390/768/1023/1024/1440px, the source photo's face region remains inside the image frame with no horizontal page overflow. Production build passed (602 pages), and `git diff --check` passed. Existing Hugo deprecation warnings remain. Changes are local and unpublished.
+
+- [2026-10-14 19:01 CEST]: Complete-site responsive audit and layout fixes
+- *Details*: Checked every one of the 340 rendered HTML pages across phone, tablet and desktop widths with both global theme preferences. Fixed negative outer gutters affecting 247 tag archive pages, corrected the globe's header offset, and made short landscape country panels scroll with a reachable close control. Retained the verified About portrait framing fix.
+- *Tech Notes*: Added local overrides in `layouts/_default/taxonomy.html` and `layouts/partials/essentials/script.html`; the latter preserves deferred bundle order to fix the observed GLightbox initialization race. Updated `layouts/globe/list.html`. No dependencies, endpoints, or required manual actions. Added `docs/RESPONSIVE_AUDIT.md` and a 340-route CSV with per-width results.
+- *Validation*: 3,400 page/width checks at 320/390/768/1024/1440px and 160 additional breakpoint checks passed without page overflow or uncontained content. `/connect/` retains its standalone light theme. Verified expanded navigation, timeline, document groups, search, booking steps without submission, article gallery and globe landscape scrolling. All 2,058 local asset references and 63 redirect destinations resolve. Production build passed (602 Hugo pages), shared/globe JavaScript syntax checks passed, and whitespace checks passed. Existing Hugo deprecation warnings remain; browser and scope limits are recorded in the audit report.
+
+### Current Status — responsive audit (complete)
+
+- Completed: About photo correction, full rendered-page inventory and width checks, targeted layout fixes, interaction checks, production build and audit documentation.
+- Preview: `http://localhost:1313/`. Changes remain local, uncommitted and unpublished. No required manual actions remain.
+- Immediate next step: optional user review of the updated site and audit report.
+
+- [2026-10-14 21:28 CEST]: LinkedIn-first contact cards
+- *Details*: Swapped LinkedIn and Email on Find me online. LinkedIn now appears first with the highlighted primary-card styling; Email appears second and GitHub remains third.
+- *Tech Notes*: Updated ordering and primary flags in `data/links.yml`; existing destinations and descriptions retained. No dependencies or manual actions.
+- *Validation*: Production build passed. Browser checks at 1440px and 320px confirmed LinkedIn/Email/GitHub order without horizontal overflow; desktop appearance verified. Changes remain local and unpublished.
