@@ -1,26 +1,16 @@
-{{- /* Schema.org VideoObject structured data for pages with YouTube embeds */ -}}
-{{- $content := .RawContent -}}
-{{- $youtubeRegex := `\{\{<\s*youtube\s+([a-zA-Z0-9_-]+)\s*>}}` -}}
-{{- $match := findRE $youtubeRegex $content 1 -}}
-{{- if $match -}}
-  {{- $fullMatch := index $match 0 -}}
-  {{- $videoId := replaceRE `\{\{<\s*youtube\s+` "" $fullMatch -}}
-  {{- $videoId = replaceRE `\s*>}}` "" $videoId -}}
-  {{- $videoId = trim $videoId " " -}}
-  {{- if $videoId -}}
-    {{- $desc := or .Description .Summary | plainify | truncate 200 -}}
-    {{- $schema := dict
-      "@context" "https://schema.org"
-      "@type" "VideoObject"
-      "name" .Title
-      "description" $desc
-      "thumbnailUrl" (printf "https://img.youtube.com/vi/%s/maxresdefault.jpg" $videoId)
-      "uploadDate" (.Date.Format "2006-01-02")
-      "contentUrl" (printf "https://www.youtube.com/watch?v=%s" $videoId)
-      "embedUrl" (printf "https://www.youtube.com/embed/%s" $videoId)
-    -}}
-<script type="application/ld+json">
-{{ $schema | jsonify | safeJS }}
-</script>
-  {{- end -}}
+{{- /* Metadata belongs to the embedded video, not its surrounding blog post.
+       YouTube watch pages are not raw media files: use embedUrl, not contentUrl. */ -}}
+{{- range partial "seo/videos.html" . -}}
+  {{- $schema := dict
+    "@context" "https://schema.org"
+    "@type" "VideoObject"
+    "@id" (printf "%s#video" .url)
+    "url" .url
+    "name" .name
+    "description" .description
+    "thumbnailUrl" .thumbnail
+    "uploadDate" .upload_date
+    "embedUrl" .embed_url
+  -}}
+<script type="application/ld+json">{{ $schema | jsonify | safeJS }}</script>
 {{- end -}}

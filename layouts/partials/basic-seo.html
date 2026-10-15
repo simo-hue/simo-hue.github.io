@@ -1,11 +1,12 @@
 {{- $meta := partial "seo/metadata.html" . -}}
 {{- $title := $meta.title -}}
 {{- $description := $meta.description -}}
+{{- $pageURL := partial "seo/page-url.html" . -}}
 {{- $isArticle := and .IsPage (eq .Section "blog") -}}
 <title>{{ $title }}</title>
 <meta name="description" content="{{ $description }}">
 
-<link rel="canonical" href="{{ .Permalink }}">
+<link rel="canonical" href="{{ $pageURL }}">
 
 {{- /* `follow`, not `nofollow`. These pages are kept out of the index, but tag
        archives exist precisely to link through to the posts, and nofollow tells
@@ -20,7 +21,7 @@
 <meta property="og:title" content="{{ $title }}">
 <meta property="og:description" content="{{ $description }}">
 <meta property="og:type" content="{{ if $isArticle }}article{{ else }}website{{ end }}">
-<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:url" content="{{ $pageURL }}">
 <meta property="og:site_name" content="{{ site.Title }}">
 <meta property="og:locale" content="en_US">
 

@@ -1476,3 +1476,15 @@ NEXT: review the remaining content-judgment items in TO_SIMO_DO.md (thin "Future
 - Changes are local, uncommitted and unpublished. Preserved builds: `.tmp/seo-before` and `.tmp/seo-final`.
 - Manual follow-up: use the already-accessible Google/Bing dashboards for baseline export, post-publication sitemap submission and measurement; instructions appended to `TO_SIMO_DO.md`.
 - Immediate next step: review and publish the implementation, then perform the documented search-dashboard checks.
+
+- [2026-10-15, Europe/Budapest]: Archive canonical URLs and verified video discovery
+- *Details*: Fixed eight later blog archive pages that canonicalized to page one. Their canonical/social URLs, structured page identities and numbered head titles now identify the current archive page. Corrected video discovery to include actual individual iframe embeds: removed three playlist entries and a code-example `VIDEO_ID` from the video sitemap, and replaced article-derived video dates/titles with metadata verified directly with YouTube. Visible articles and players are unchanged.
+- *Tech Notes*: Added shared `blog-paginator.html`, `seo/page-url.html` and `seo/videos.html` helpers; saved nine verified video records with source links in `data/videos.json`. JSON-LD and sitemap now share the same video records, and watch URLs are no longer presented as direct-media `contentUrl` values. No runtime external fetches, new dependencies, credentials or manual setup. Added an explicit `tags/cineca` taxonomy title to preserve the existing visible label despite Hugo's render-order-dependent case choice. Expanded `tests/seo_build.py` with pagination and video consistency checks; audit appended in `SEO_AUDIT/2026-10-15-metadata-optimization.md`.
+- *Validation*: Production Hugo build passed (602 output pages); all 11 SEO checks and 18 Spotlight tests passed; whitespace checks passed. All 340 non-redirect bodies match the baseline after normalizing only existing image-loading priority attributes; stylesheet fingerprints and Spotlight JSON are unchanged. Eight later archives self-canonicalize, root sitemap remains 78 URLs, and video entries are 8 verified individual embeds instead of 12 mixed entries. Existing Hugo deprecation warnings remain.
+
+### Current Status — additional SEO discovery improvements (complete)
+
+- Completed: deeper audit, archive canonical correction, primary-source video verification, shared metadata generation, regression tests, visible-content comparison and documentation.
+- Follow-up changes are local, uncommitted and unpublished. Before/after builds are in `.tmp/seo-followup-before` and `.tmp/seo-followup-after`.
+- No additional manual actions; `TO_SIMO_DO.md` remains unchanged. Previously recorded publication/search-dashboard measurement steps still apply.
+- Immediate next step: review and publish this follow-up, then measure using the existing Google/Bing dashboards.

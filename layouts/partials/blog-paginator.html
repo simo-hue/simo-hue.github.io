@@ -1,0 +1,7 @@
+{{- /* Head and body must initialize Hugo's cached paginator with the same
+       collection and ordering. Never call .Paginator first in the head. */ -}}
+{{- $posts := .RegularPages -}}
+{{- if eq .RelPermalink (site.GetPage "/blog").RelPermalink -}}
+  {{- $posts = .RegularPagesRecursive -}}
+{{- end -}}
+{{- return (.Paginate $posts.ByDate.Reverse) -}}

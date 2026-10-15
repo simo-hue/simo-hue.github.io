@@ -1,0 +1,6 @@
+{{- $url := .Permalink -}}
+{{- if and (eq .Kind "section") (eq .Section "blog") -}}
+  {{- $pager := partial "blog-paginator.html" . -}}
+  {{- $url = $pager.URL | absURL -}}
+{{- end -}}
+{{- return $url -}}

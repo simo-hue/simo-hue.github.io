@@ -13,6 +13,7 @@
        homepage definition. Consumers merge nodes that share an @id. */ -}}
 {{- if not .IsHome -}}
 {{- $e := hugo.Data.entity -}}
+{{- $pageURL := partial "seo/page-url.html" . -}}
 {{- $nodes := slice
   (dict "@type" "Person" "@id" $e.id "name" $e.name "url" (printf "%s/" (strings.TrimSuffix "/" site.BaseURL)))
   (dict "@type" "WebSite" "@id" $e.website_id "name" site.Title "url" site.BaseURL "publisher" (dict "@id" $e.id))
@@ -21,9 +22,9 @@
 {{- /* The current page, tied to both the site and the person. */ -}}
 {{- $webPage := dict
   "@type" "WebPage"
-  "@id" (printf "%s#webpage" .Permalink)
-  "url" .Permalink
-  "name" .Title
+  "@id" (printf "%s#webpage" $pageURL)
+  "url" $pageURL
+  "name" (partial "seo/metadata.html" .).title
   "isPartOf" (dict "@id" $e.website_id)
   "author" (dict "@id" $e.id)
 -}}
@@ -66,8 +67,8 @@
   {{- else -}}
     {{- $nodes = $nodes | append (dict
         "@type" "CollectionPage"
-        "@id" (printf "%s#collection" .Permalink)
-        "url" .Permalink
+        "@id" (printf "%s#collection" $pageURL)
+        "url" $pageURL
         "name" .Title
         "isPartOf" (dict "@id" $blogID)
         "about" (dict "@id" $e.id)) -}}

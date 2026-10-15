@@ -8,7 +8,7 @@
 {{ $blog := site.GetPage "/blog" }}
 {{ $isHub := eq .RelPermalink $blog.RelPermalink }}
 {{ $posts := cond $isHub .RegularPagesRecursive .RegularPages }}
-{{ $paginator := .Paginate $posts.ByDate.Reverse }}
+{{ $paginator := partial "blog-paginator.html" . }}
 {{ $showFeatured := and $isHub (eq $paginator.PageNumber 1) }}
 
 {{/* explicit section order for the chip row (mirrors the nav) */}}

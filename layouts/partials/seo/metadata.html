@@ -10,4 +10,10 @@
 {{- else if not (in $title hugo.Data.entity.name) -}}
   {{- $title = printf "%s | %s" $title hugo.Data.entity.name -}}
 {{- end -}}
+{{- if and (eq .Kind "section") (eq .Section "blog") -}}
+  {{- $pager := partial "blog-paginator.html" . -}}
+  {{- if gt $pager.PageNumber 1 -}}
+    {{- $title = printf "%s — Page %d" $title $pager.PageNumber -}}
+  {{- end -}}
+{{- end -}}
 {{- return (dict "title" $title "description" ($description | plainify)) -}}

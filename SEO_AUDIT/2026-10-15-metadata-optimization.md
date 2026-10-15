@@ -82,3 +82,24 @@ The website changes improve accuracy, eligibility and machine-readable connectio
 ## Current status
 
 Implementation and local validation are complete. Changes are uncommitted and unpublished. Immediate next step: review and publish the changes, then use the existing search dashboards for re-crawl and measurement. No visible-page rewrite is required.
+
+## Follow-up: archive discovery and verified video metadata
+
+A second pass found eight paginated archives whose canonical URL and WebPage identity pointed to their first page. They now use their own `/page/N/` URLs in canonical links, social metadata and WebPage/CollectionPage identities. Head titles include the page number. The existing `/page/1/` aliases continue to resolve to the first page. A shared paginator initializer keeps the exact existing post selection, sorting and page size when Hugo renders the head before the body.
+
+The video sitemap previously advertised **12 entries**, including **three playlists** as individual videos and **one `VIDEO_ID` code example**. It now contains the **eight actual individual embeds on indexable pages**. The site's nine embedded videos (including the excluded Sicily page) have verified titles, uploaders, thumbnails and upload timestamps saved in `data/videos.json`, with source links and a review date. Metadata was checked against YouTube's oEmbed responses and the corresponding watch-page player metadata on 2026-10-15. Builds do not contact YouTube.
+
+A shared helper supplies both video JSON-LD and the sitemap from real rendered iframe embeds. It does not mistake prose, code examples or playlist URLs for individual videos. Video titles and dates now refer to the videos themselves; article publication dates are no longer substituted. JSON-LD uses `embedUrl`, and no longer incorrectly uses a YouTube watch page as a direct-media `contentUrl`. Descriptions identify the video, uploader and surrounding article without inventing a synopsis. Unverified new embeds are omitted from video metadata until their record is added; their visible player still works normally. Inclusion in a video sitemap does not itself establish eligibility for a Google video result.
+
+During the comparison, Hugo's implicit CINECA tag title changed case depending on render order. An explicit taxonomy title now preserves the existing visible **Cineca** label. No article prose, display labels, layout, navigation, stylesheets or Spotlight results changed relative to the baseline.
+
+Validation: production Hugo build passed (602 output pages); **11 SEO checks and 18 Spotlight tests passed**. The comparison covers all 340 non-redirect HTML bodies, with only the previously documented image scheduling attributes normalized; stylesheet fingerprints and the internal-search JSON match. Eight later archive pages now self-canonicalize, while the root sitemap retains 78 page URLs. The new checks cover paginated canonical/schema identity and agreement between the video sitemap, JSON-LD, verified records and real embeds.
+
+Preserved output: `.tmp/seo-followup-before` and `.tmp/seo-followup-after`. Changes from this follow-up are local and uncommitted. No additional manual setup is required; the existing publication and dashboard measurement instructions still apply.
+
+References:
+
+- [Google pagination guidance](https://developers.google.com/search/docs/specialty/ecommerce/pagination-and-incremental-page-loading): pages in a sequence should have their own canonical URLs.
+- [Hugo pagination](https://gohugo.io/templates/pagination/): the first pagination invocation is cached, so head and body must use the same collection.
+- [Google video sitemap reference](https://developers.google.com/search/docs/crawling-indexing/sitemaps/video-sitemaps): metadata describes individual videos, and publication dates refer to their first publication.
+- [Google VideoObject guidance](https://developers.google.com/search/docs/appearance/structured-data/video): video-specific name, thumbnail, upload date and player URL; a watch page is not a raw-media content URL.

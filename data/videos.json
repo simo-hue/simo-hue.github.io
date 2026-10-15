@@ -1,0 +1,78 @@
+{
+  "reviewed_on": "2026-10-15",
+  "source_notes": "Titles, uploaders and thumbnails verified through YouTube oEmbed; upload dates from the corresponding watch-page player metadata. No remote requests during site builds.",
+  "items": {
+    "7Yx9_MLF5vE": {
+      "title": "Inaugurazione dell'Anno Accademico | Collegio Mazza Verona",
+      "uploader": "Collegio Universitario Don Nicola Mazza",
+      "thumbnail_url": "https://i.ytimg.com/vi/7Yx9_MLF5vE/hqdefault.jpg",
+      "upload_date": "2024-10-16T23:29:30-07:00",
+      "source": "https://www.youtube.com/watch?v=7Yx9_MLF5vE",
+      "metadata_source": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=7Yx9_MLF5vE&format=json"
+    },
+    "ONGaGgr795k": {
+      "title": "Lasciati stupire dalle meraviglie della Val di Rabbi",
+      "uploader": "Mountain & Fauna Lover",
+      "thumbnail_url": "https://i.ytimg.com/vi/ONGaGgr795k/hqdefault.jpg",
+      "upload_date": "2024-05-30T03:58:43-07:00",
+      "source": "https://www.youtube.com/watch?v=ONGaGgr795k",
+      "metadata_source": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=ONGaGgr795k&format=json"
+    },
+    "RdgWMgmqqHk": {
+      "title": "SiciLIA",
+      "uploader": "Simo's Diary",
+      "thumbnail_url": "https://i.ytimg.com/vi/RdgWMgmqqHk/hqdefault.jpg",
+      "upload_date": "2024-12-03T04:01:54-08:00",
+      "source": "https://www.youtube.com/watch?v=RdgWMgmqqHk",
+      "metadata_source": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=RdgWMgmqqHk&format=json"
+    },
+    "T7m9n7ojHzw": {
+      "title": "Provo il Basket in Carrozzina grazie a Olympic Basket Verona ed il Collegio Don Mazza",
+      "uploader": "Simo's Diary",
+      "thumbnail_url": "https://i.ytimg.com/vi/T7m9n7ojHzw/hqdefault.jpg",
+      "upload_date": "2024-12-19T10:10:18-08:00",
+      "source": "https://www.youtube.com/watch?v=T7m9n7ojHzw",
+      "metadata_source": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=T7m9n7ojHzw&format=json"
+    },
+    "U9V8CkewXEY": {
+      "title": "Intervisto @SimosDiary2003 in un bivacco",
+      "uploader": "Valerio Basilio",
+      "thumbnail_url": "https://i.ytimg.com/vi/U9V8CkewXEY/hqdefault.jpg",
+      "upload_date": "2024-12-22T03:00:26-08:00",
+      "source": "https://www.youtube.com/watch?v=U9V8CkewXEY",
+      "metadata_source": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=U9V8CkewXEY&format=json"
+    },
+    "_k0GSxqopv4": {
+      "title": "Una GIORNATA da segnare sul CALENDARIO",
+      "uploader": "Simo's Diary",
+      "thumbnail_url": "https://i.ytimg.com/vi/_k0GSxqopv4/hqdefault.jpg",
+      "upload_date": "2026-09-04T15:00:39-07:00",
+      "source": "https://www.youtube.com/watch?v=_k0GSxqopv4",
+      "metadata_source": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=_k0GSxqopv4&format=json"
+    },
+    "fnzTTCAioHk": {
+      "title": "Prima giornata a Bologna | GPU Hackathon EPICURE CINECA",
+      "uploader": "Simo's Diary",
+      "thumbnail_url": "https://i.ytimg.com/vi/fnzTTCAioHk/hqdefault.jpg",
+      "upload_date": "2024-11-21T01:20:52-08:00",
+      "source": "https://www.youtube.com/watch?v=fnzTTCAioHk",
+      "metadata_source": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=fnzTTCAioHk&format=json"
+    },
+    "g-3IHnZm4G8": {
+      "title": "Ma quanto sei fortunato?",
+      "uploader": "Simo's Diary",
+      "thumbnail_url": "https://i.ytimg.com/vi/g-3IHnZm4G8/hqdefault.jpg",
+      "upload_date": "2024-09-19T03:00:45-07:00",
+      "source": "https://www.youtube.com/watch?v=g-3IHnZm4G8",
+      "metadata_source": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=g-3IHnZm4G8&format=json"
+    },
+    "ptVTxfSqaCo": {
+      "title": "Brasil Experience 2024 Vibes Recap By Fede",
+      "uploader": "Simo's Diary",
+      "thumbnail_url": "https://i.ytimg.com/vi/ptVTxfSqaCo/hqdefault.jpg",
+      "upload_date": "2024-11-23T12:48:58-08:00",
+      "source": "https://www.youtube.com/watch?v=ptVTxfSqaCo",
+      "metadata_source": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=ptVTxfSqaCo&format=json"
+    }
+  }
+}

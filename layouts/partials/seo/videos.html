@@ -1,0 +1,26 @@
+{{- /* Only actual rendered iframe embeds with verified video metadata qualify.
+       A URL in prose/code or a playlist is not an individual embedded video.
+       This shared list drives JSON-LD and the video sitemap. */ -}}
+{{- $videos := slice -}}
+{{- $page := . -}}
+{{- $pattern := `<iframe\b[^>]*\bsrc=["']https://(?:www\.)?youtube(?:-nocookie)?\.com/embed/([A-Za-z0-9_-]{11})(?:[?"'])` -}}
+{{- $ids := slice -}}
+{{- if .IsPage -}}
+  {{- range findRE $pattern .Content -}}
+    {{- $id := replaceRE $pattern "${1}" . -}}
+    {{- if not (in $ids $id) -}}
+      {{- $ids = $ids | append $id -}}
+      {{- with index hugo.Data.videos.items $id -}}
+        {{- $videos = $videos | append (dict
+          "id" $id
+          "name" .title
+          "description" (printf "%s. Video by %s, embedded in %s." .title .uploader $page.Title)
+          "thumbnail" .thumbnail_url
+          "upload_date" .upload_date
+          "url" .source
+          "embed_url" (printf "https://www.youtube.com/embed/%s" $id)) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $videos -}}

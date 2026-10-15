@@ -203,6 +203,61 @@ class SEOOutput(unittest.TestCase):
                 self.assertTrue(robots.can_fetch(agent, BASE + route), f"{agent}: {route}")
         self.assertIn(BASE + "sitemap.xml", robots.site_maps())
 
+    def test_paginated_archives_have_their_own_canonical_and_schema_urls(self):
+        count = 0
+        for page in self.pages:
+            relative = page.path.relative_to(OUTPUT).as_posix()
+            match = re.search(r"/page/(\d+)/index.html$", relative)
+            if not match:
+                continue
+            count += 1
+            expected = BASE + relative.removesuffix("index.html")
+            self.assertEqual(page.canonical, [expected])
+            self.assertEqual(page.meta["og:url"], expected)
+            self.assertIn("Page " + match[1], page.meta["og:title"])
+            web_pages = page.of_type("WebPage")
+            self.assertEqual(len(web_pages), 1)
+            self.assertEqual(web_pages[0]["@id"], expected + "#webpage")
+            self.assertEqual(web_pages[0]["url"], expected)
+            self.assertTrue(local_file(expected).exists())
+        self.assertGreater(count, 0)
+        self.assertEqual(self.page("blog").canonical, [BASE + "blog/"])
+        self.assertEqual(self.page("blog/page/1").canonical, [BASE + "blog/"])
+
+    def test_video_sitemap_and_schema_describe_real_embeds_consistently(self):
+        records = json.loads(Path("data/videos.json").read_text())["items"]
+        ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9", "v": "http://www.google.com/schemas/sitemap-video/1.1"}
+        count = 0
+        for url in self.sitemap.findall("s:url", ns):
+            page = Page(local_file(url.findtext("s:loc", namespaces=ns)))
+            schemas = {v["embedUrl"]: v for v in page.of_type("VideoObject")}
+            sitemap_videos = url.findall("v:video", ns)
+            self.assertEqual(len(sitemap_videos), len(schemas), str(page.path))
+            for video in sitemap_videos:
+                count += 1
+                embed = video.findtext("v:player_loc", namespaces=ns)
+                self.assertRegex(embed, r"^https://www\.youtube\.com/embed/[A-Za-z0-9_-]{11}$")
+                self.assertIn(embed, page.html)
+                record = records[embed.rsplit("/", 1)[1]]
+                schema = schemas[embed]
+                self.assertEqual(schema["name"], record["title"])
+                self.assertEqual(schema["uploadDate"], record["upload_date"])
+                self.assertEqual(video.findtext("v:title", namespaces=ns), schema["name"])
+                self.assertEqual(video.findtext("v:description", namespaces=ns), schema["description"])
+                self.assertEqual(video.findtext("v:publication_date", namespaces=ns), schema["uploadDate"])
+                self.assertEqual(video.findtext("v:thumbnail_loc", namespaces=ns), schema["thumbnailUrl"])
+                self.assertNotIn("contentUrl", schema)
+        self.assertGreater(count, 0)
+        for page in self.pages:
+            for video in page.of_type("VideoObject"):
+                self.assertIn(video["embedUrl"], page.html)
+                self.assertNotIn("VIDEO_ID", video["embedUrl"])
+                self.assertNotIn("videoseries", video["embedUrl"])
+        # This article contains a code example, not a real embedded video.
+        self.assertFalse(self.page("blog/tech-projects/youtube-video-localization-script").of_type("VideoObject"))
+        # A playlist remains visible but is not represented as one video.
+        self.assertFalse(self.page("blog/thoughts/the-star-counter").of_type("VideoObject"))
+
     @unittest.skipUnless(os.environ.get("SEO_BASELINE_DIR"), "Set SEO_BASELINE_DIR for before/after presentation checks")
     def test_visible_pages_styles_and_search_index_are_unchanged(self):
         baseline = Path(os.environ["SEO_BASELINE_DIR"])

@@ -64,52 +64,15 @@
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
     {{- end }}
-    {{- /* --- Video Sitemap Metadata (for YouTube embeds) --- */ -}}
-    {{- if eq .Kind "page" }}
-      {{- $content := .Content }}
-      {{- $title := .Title }}
-      {{- $permalink := .Permalink }}
-      {{- $date := .Date }}
-      {{- $rawDesc := .Description | default (.Summary | plainify) | plainify }}
-      {{- $desc := $rawDesc | truncate 2048 "" | htmlEscape }}
-      {{- $pageImage := "" }}
-      {{- with .Params.image }}
-        {{- $pageImage = printf "%s%s" $permalink . }}
-      {{- end }}
-      {{- /* Individual YouTube videos */ -}}
-      {{- $videoURLs := findRE `youtube\.com/embed/[a-zA-Z0-9_-]+` $content | uniq }}
-      {{- range $videoURLs }}
-        {{- $id := replaceRE `.*youtube\.com/embed/` "" . }}
-        {{- if ne $id "videoseries" }}
+    {{- /* Only actual individual embeds, shared with VideoObject JSON-LD. */ -}}
+    {{- range partial "seo/videos.html" . }}
     <video:video>
-      <video:thumbnail_loc>https://img.youtube.com/vi/{{ $id }}/maxresdefault.jpg</video:thumbnail_loc>
-      <video:title>{{ $title }}</video:title>
-      <video:description>{{ $desc }}</video:description>
-      <video:player_loc allow_embed="yes">https://www.youtube.com/embed/{{ $id }}</video:player_loc>
-        {{- if not $date.IsZero }}
-      <video:publication_date>{{ $date.Format "2006-01-02T15:04:05-07:00" }}</video:publication_date>
-        {{- end }}
-      <video:family_friendly>yes</video:family_friendly>
+      <video:thumbnail_loc>{{ .thumbnail }}</video:thumbnail_loc>
+      <video:title>{{ .name }}</video:title>
+      <video:description>{{ .description }}</video:description>
+      <video:player_loc>{{ .embed_url }}</video:player_loc>
+      <video:publication_date>{{ .upload_date }}</video:publication_date>
     </video:video>
-        {{- end }}
-      {{- end }}
-      {{- /* YouTube playlists */ -}}
-      {{- $playlistURLs := findRE `youtube\.com/embed/videoseries\?list=[a-zA-Z0-9_-]+` $content | uniq }}
-      {{- range $playlistURLs }}
-        {{- $id := replaceRE `.*youtube\.com/embed/videoseries\?list=` "" . }}
-        {{- if $pageImage }}
-    <video:video>
-      <video:thumbnail_loc>{{ $pageImage }}</video:thumbnail_loc>
-      <video:title>{{ $title }}</video:title>
-      <video:description>{{ $desc }}</video:description>
-      <video:player_loc allow_embed="yes">https://www.youtube.com/embed/videoseries?list={{ $id }}</video:player_loc>
-          {{- if not $date.IsZero }}
-      <video:publication_date>{{ $date.Format "2006-01-02T15:04:05-07:00" }}</video:publication_date>
-          {{- end }}
-      <video:family_friendly>yes</video:family_friendly>
-    </video:video>
-        {{- end }}
-      {{- end }}
     {{- end }}
   </url>
     {{- end }}
