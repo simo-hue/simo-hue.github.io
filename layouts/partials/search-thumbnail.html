@@ -1,0 +1,15 @@
+{{- /* Small, local-only previews. Remote images never trigger build-time fetches. */ -}}
+{{- $thumbnail := "" -}}
+{{- with .Params.image -}}
+  {{- if not (or (urls.Parse .).Scheme (strings.HasPrefix . "//")) -}}
+    {{- $image := $.Resources.GetMatch . -}}
+    {{- if not $image -}}{{- $image = resources.Get . -}}{{- end -}}
+    {{- with $image -}}
+      {{- if in (slice "jpeg" "png" "webp") .MediaType.SubType -}}
+        {{- with .Params.rotation -}}{{- $image = $image.Process (printf "r%d" (int .)) -}}{{- end -}}
+        {{- $thumbnail = ($image.Fit "240x160 webp q75").RelPermalink -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $thumbnail -}}

@@ -613,3 +613,15 @@ When ready to populate:
 1. **Write the article body**: Expand the sections (`## Introduction`, `## Event Highlights`, `## Conclusion`) with your personal experience, TalTech sessions, and Tallinn exploration.
 2. **Add event photos**: Add a `cover.webp` (and any inline gallery images) to `content/english/blog/experiences/28-digital-master-school-kick-off-tallinn/` and uncomment/add `image: cover.webp` in the frontmatter.
 
+---
+
+## [2026-10-15] Spotlight — remaining device/accessibility verification
+
+Implementation, production build, 18 regression tests and browser viewport/accessibility-tree checks passed. Native Safari automation could not run because computer-use permissions were unavailable; no physical phone or audible VoiceOver test was completed.
+
+1. **Safari on Mac:** open the updated preview, use ⌘K and the header search button, search `AI projects` and `latest articles`, navigate with arrows/Enter, then Escape. Confirm focus returns to the search button when it opened the dialog.
+2. **Physical phone:** use an updated preview reachable from the phone. Open search with the on-screen keyboard, type `CampFlow`, rotate the phone, scroll the results and close the panel. Confirm input/close controls remain reachable and there is no sideways scrolling.
+3. **VoiceOver:** confirm the input is named, result titles/category/date/read time are announced clearly, only the selected expanded result has a preview description, query counts are announced without competing background updates, and activation/closing leaves focus in a predictable place.
+
+Record any device/browser version and failing step before claiming complete device or screen-reader verification. No deployment or configuration change is required for the implementation itself.
+

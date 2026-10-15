@@ -6,7 +6,11 @@
 <script defer src="{{ .link | relURL }}" type="application/javascript" {{ .attributes | safeHTMLAttr }}></script>
 {{ else }}
 {{ if not .lazy }}
+{{ if eq .link "js/search.js" }}
+{{ $scripts = $scripts | append (resources.Get .link | js.Build (dict "targetPath" "js/spotlight.js" "target" "es2018")) }}
+{{ else }}
 {{ $scripts = $scripts | append (resources.Get .link) }}
+{{ end }}
 {{ else }}
 {{ $scriptsLazy = $scriptsLazy | append (resources.Get .link) }}
 {{ end }}

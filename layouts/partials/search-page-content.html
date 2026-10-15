@@ -1,0 +1,34 @@
+{{- /* Custom pages render shared data, which .Plain does not include. */ -}}
+{{- $text := slice -}}
+{{- if or .IsHome (eq .Type "projects") -}}
+  {{- range hugo.Data.selected_work -}}
+    {{- $text = $text | append .title .category .description -}}
+  {{- end -}}
+  {{- range hugo.Data.entity.apps -}}{{- $text = $text | append .name -}}{{- end -}}
+{{- end -}}
+{{- if eq .Type "about" -}}
+  {{- range slice hugo.Data.about.life hugo.Data.about.vision hugo.Data.about.goal -}}
+    {{- $text = $text | append .title .content -}}
+  {{- end -}}
+  {{- range hugo.Data.about.education -}}{{- $text = $text | append .title .place -}}{{- end -}}
+  {{- range hugo.Data.timeline.items -}}
+    {{- $text = $text | append .title .organization .description (.extended_description | default "") -}}
+  {{- end -}}
+{{- end -}}
+{{- if eq .Type "links" -}}
+  {{- range hugo.Data.links.sections -}}
+    {{- $text = $text | append .title -}}
+    {{- range .items -}}{{- $text = $text | append .title (.description | default "") -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if eq .Section "connect" -}}
+  {{- range hugo.Data.connect.sections -}}
+    {{- range .links -}}{{- $text = $text | append .name -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if eq .Section "globe" -}}
+  {{- range site.RegularPages -}}
+    {{- if and .Params.lat .Params.lon -}}{{- $text = $text | append .Title (.Params.country | default "") -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return (delimit $text " ") -}}

@@ -1,6 +1,6 @@
 ---
 title: "Search"
-description: "Search the blog — tech projects, experiences, thoughts, and book notes."
+description: "Find pages, projects, and writing, or take a quick action anywhere on the site."
 layout: "search"
 noindex: true
 ---

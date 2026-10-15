@@ -1,0 +1,37 @@
+{{ $id := .ID }}
+<div class="spotlight-panel{{ if not .Modal }} spotlight-inline{{ end }}" data-command-panel="{{ $id }}">
+  <div class="spotlight-searchbar">
+    <svg class="spotlight-search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10.75" cy="10.75" r="6.75"/><path d="m16 16 4.5 4.5" stroke-linecap="round"/></svg>
+    <input id="{{ $id }}-input" class="spotlight-input" type="text" role="combobox"
+      aria-label="Search pages, writing, and actions" aria-autocomplete="list"
+      aria-expanded="false" aria-controls="{{ $id }}-results" aria-describedby="{{ $id }}-help"
+      placeholder="Search anything…" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="go" maxlength="200" />
+    <button class="spotlight-icon-button" type="button" data-command-clear aria-label="Clear search" hidden>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m7 7 10 10M17 7 7 17" stroke-linecap="round"/></svg>
+    </button>
+    {{ if .Modal }}<button class="spotlight-close" type="button" data-command-close aria-label="Close search"><span class="spotlight-escape">esc</span><span class="spotlight-mobile-close">Close</span></button>{{ end }}
+  </div>
+  <div class="spotlight-filters" role="group" aria-label="Filter results">
+    {{ range $i, $filter := slice "All" "Pages" "Writing" "Actions" }}
+    <button type="button" class="spotlight-filter" data-command-filter="{{ lower $filter }}" aria-pressed="{{ if eq $i 0 }}true{{ else }}false{{ end }}" aria-controls="{{ $id }}-results">
+      {{ $filter }}<kbd data-filter-key="{{ add $i 1 }}" aria-hidden="true">Alt {{ add $i 1 }}</kbd>
+    </button>
+    {{ end }}
+  </div>
+  <div class="spotlight-scroll" tabindex="-1">
+    <div class="spotlight-notice" data-command-notice hidden>
+      <span data-command-notice-text></span><button type="button" data-command-retry>Retry</button>
+    </div>
+    <div id="{{ $id }}-results" class="spotlight-results" role="listbox" aria-label="Search results" aria-busy="false"></div>
+    <div class="spotlight-empty" data-command-empty hidden></div>
+    <button type="button" class="spotlight-more" data-command-more hidden>Show more results</button>
+  </div>
+  <div class="spotlight-feedback" role="status" aria-live="polite" aria-atomic="true" data-command-feedback hidden></div>
+  <div class="spotlight-footer">
+    <span class="spotlight-key-help" aria-hidden="true"><kbd>↑</kbd><kbd>↓</kbd> navigate <kbd>↵</kbd> open <span class="spotlight-shortcut-help">Hold <kbd data-command-modifier>Alt</kbd> for shortcuts</span></span>
+    <span class="spotlight-touch-help">Tap a result to open</span>
+    <span class="spotlight-count" data-command-count></span>
+  </div>
+  <p id="{{ $id }}-help" class="sr-only">Use up and down arrows to choose and preview a result, Enter to open it, and Escape to close search. Hold Alt or Option to reveal shortcuts; use Alt and 1 through 4 to change filters. Short commands include cv for résumé, th for theme, gh for GitHub, and li for LinkedIn.</p>
+  <p class="sr-only" role="status" aria-live="polite" aria-atomic="true" data-command-announcement></p>
+</div>

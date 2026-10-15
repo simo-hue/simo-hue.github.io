@@ -39,15 +39,9 @@ link = "docs/Resume.pdf"
 download = true
 
 # search
-# search module: https://github.com/gethugothemes/hugo-modules/tree/master/search
+# Local Spotlight overrides the module's templates and scripts; indexes all published content pages.
 [search]
 enable = true
-primary_color = "#121212"
-include_sections = ["blog"]
-show_image = true
-show_description = true
-show_tags = false
-show_categories = true
 
 # announcement
 # announcement module: https://github.com/gethugothemes/hugo-modules/tree/master/components/announcement

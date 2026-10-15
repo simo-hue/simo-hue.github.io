@@ -5,6 +5,7 @@
   "license": "MIT",
   "author": "zeon.studio",
   "scripts": {
+    "test:search": "node --test tests/spotlight-*.test.mjs",
     "dev": "dotenv -- hugo server",
     "build": "dotenv -- hugo --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic",
     "preview": "dotenv -- hugo server --disableFastRender --navigateToChanged --templateMetrics --templateMetricsHints --watch --forceSyncStatic -e production --minify",

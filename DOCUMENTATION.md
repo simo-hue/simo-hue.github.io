@@ -1429,3 +1429,38 @@ NEXT: review the remaining content-judgment items in TO_SIMO_DO.md (thin "Future
 - *Details*: Swapped LinkedIn and Email on Find me online. LinkedIn now appears first with the highlighted primary-card styling; Email appears second and GitHub remains third.
 - *Tech Notes*: Updated ordering and primary flags in `data/links.yml`; existing destinations and descriptions retained. No dependencies or manual actions.
 - *Validation*: Production build passed. Browser checks at 1440px and 320px confirmed LinkedIn/Email/GitHub order without horizontal overflow; desktop appearance verified. Changes remain local and unpublished.
+
+- [2026-10-14 21:50 CEST]: Spotlight command center — full first version
+- *Details*: Replaced the blog-only ⌘K search with a compact Spotlight-inspired command center in the existing Geist/copper design language. Added whole-site ranked search, All/Pages/Writing/Actions filters, selected-result previews, typo tolerance, short action commands, curated suggestions, browser-local recent selections, mobile viewport handling, and all eight agreed actions: résumé, theme, copy page link, copy email, email draft, GitHub, LinkedIn, and clear history. The standalone Search page shares the component and supports safely encoded, shareable queries.
+- *Tech Notes*: Added local Hugo overrides for the modal, Search page, configuration, and structured JSON index (80 destinations: 22 pages and 58 writings), including shared-data content for custom pages. Added `assets/js/spotlight-engine.mjs`, bundled through Hugo's existing deferred script pipeline, and `assets/css/spotlight.css`; removed obsolete search styles and settings. Native dialog semantics, explicit focus wrapping, safe text rendering, load/retry handling, and clipboard/storage fallbacks improve robustness. Existing theme storage access now tolerates browser denial. Added `npm run test:search` and `docs/SPOTLIGHT.md`. No new dependencies, external services, credentials, or manual setup actions.
+- *Validation*: Production build passed (602 Hugo pages); all 13 search/index regression tests passed; JavaScript syntax and whitespace checks passed. Browser checks covered desktop light/dark, 320/390/600/768/1024/1440px layouts, 844×390 landscape and 390×360 available-height simulation, keyboard opening/filtering/selection/navigation, focus containment/restoration, recent-history persistence/clearing, pagination, safe punctuation input, and independent modal/Search-page state. Verified all action destinations in an isolated fixture without sending email; index failure/retry, blocked storage, and denied-clipboard fallback passed. Normal preview showed no browser errors. Existing Hugo deprecation warnings remain; physical-device keyboard and full screen-reader audit limits are documented.
+
+### Current Status — Spotlight command center (complete)
+
+- Completed: agreed interface and features, all eight actions, full-site index, regression tests, responsive and failure-state verification, production build, and documentation.
+- Local preview: `http://localhost:1313/` — use ⌘K/Ctrl+K or the header search control. The Search page is at `http://localhost:1313/search/`.
+- Changes remain local and unpublished. No required manual actions; `TO_SIMO_DO.md` was not modified.
+- Immediate next step: optional user review of the finished command center.
+
+- [2026-10-15, Europe/Budapest]: Spotlight opening interface refinement
+- *Details*: Refined the command center into a lighter launcher with compact uniform rows, unboxed icons, quieter selection styling, tighter filters, and a simpler footer. Selected previews now appear after typing or arrow navigation; hovering only changes the background. Filter shortcut hints appear while Alt/Option is held, with reserved space preventing movement. All existing search features and eight actions remain available.
+- *Tech Notes*: Updated the shared command-panel partial, `assets/css/spotlight.css`, and `assets/js/search.js`. Added explicit preview state and modifier-key visibility handling, reset on clear/reopen/blur as appropriate. Removed redundant page/action metadata and the footer identity/slogan. Updated `docs/SPOTLIGHT.md`. No dependencies, endpoints, or manual setup actions.
+- *Validation*: Production build passed (602 Hugo pages), all 13 regression tests passed, and JavaScript syntax/whitespace checks passed. Verified typed/keyboard previews, compact reset, modifier hints without layout shift, shared Search-page query previews, all eight action results, theme switching, and recent-history clearing. Checked desktop and mobile light/dark appearance, including 390×844 and 320×568 without horizontal overflow. Four-suggestion desktop panel height reduced from about 532px to 393px. No browser warnings/errors were observed; existing Hugo deprecation warnings remain.
+
+### Current Status — Spotlight interface refinement (complete)
+
+- Completed: agreed visual refinements, interaction behavior, responsive checks, production build, regression tests, and documentation.
+- Local preview: `http://localhost:1313/` — use ⌘K/Ctrl+K or the header search control. Preview screenshots are saved in `.tmp/spotlight-refined-desktop.jpg` and `.tmp/spotlight-refined-mobile.jpg`.
+- Changes remain local, uncommitted and unpublished. No required manual actions; `TO_SIMO_DO.md` was not modified.
+- Immediate next step: optional user review of the refined interface.
+
+- [2026-10-15, Europe/Budapest]: Spotlight discovery, imagery and accessibility polish
+- *Details*: Added everyday search intent for contact, project discovery and newest writing, including date ordering and AI/artificial-intelligence equivalence. Short-word matching no longer picks up incidental letters. Expanded results now show small existing local thumbnails, with concise descriptions for exact-title queries and compact wrapping on mobile. Improved accessible publication labels, selected-preview descriptions, query announcements, composition handling and focus restoration after pointer activation.
+- *Tech Notes*: Updated the ranking engine, shared UI and generated index; added `search-thumbnail.html`, `topics` and `thumbnail` fields, index schema query `v=2`, and HTTP cache revalidation after observing outdated index metadata in the preview. Generated 57 local WebP thumbnails within 240×160px (largest 12,792 bytes), loaded only for expanded selected results. Added five regression tests, for 18 total. No dependencies, remote image fetching, external search services, credentials or deployment changes.
+- *Validation*: Production build, all 18 tests, JavaScript syntax and whitespace checks passed. Verified natural queries, standalone Search-page links, thumbnail loading, result accessibility-tree labels/descriptions, ten-step Tab containment, arrow focus, Escape restoration, light/dark desktop previews, 390×844 mobile and 320×360 constrained-height layouts with no overflow. No browser warnings/errors observed. Existing Hugo deprecation warnings remain.
+
+### Current Status — Spotlight discovery and accessibility
+
+- Completed: implementation, automated checks, browser verification, and documentation. Local preview remains `http://localhost:1313/`; changes are uncommitted and unpublished.
+- Remaining verification: physical-phone keyboard behavior and audible VoiceOver/native Safari checks. Native Safari automation was blocked by unavailable computer-use permissions. Steps are appended to `TO_SIMO_DO.md`; these checks have not been claimed as passed.
+- Immediate next step: review the local changes and complete the recorded device checks when device access is available.

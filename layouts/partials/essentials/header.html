@@ -35,15 +35,15 @@
 
       <div class="ds-header-actions">
         {{ with site.Params.search }}{{ if .enable }}
-          <!-- ⌘K search trigger (opens the theme's full-text search modal) -->
-          <button type="button" class="ds-cmdk" data-target="search-modal" aria-label="Search (Command-K)">
+          <!-- Global command center; shortcut label adapts to the visitor's platform. -->
+          <button type="button" class="ds-cmdk" data-target="search-modal" aria-label="Search and commands" aria-haspopup="dialog" aria-controls="spotlight">
             <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
             <span>Search…</span>
-            <span class="ds-kbd">⌘K</span>
+            <span class="ds-kbd" data-command-shortcut>⌘K</span>
           </button>
 
           <!-- search icon (shown below xl, where the pill collapses) -->
-          <button aria-label="Search" class="ds-iconbtn ds-search-icon" data-target="search-modal">
+          <button type="button" aria-label="Search and commands" class="ds-iconbtn ds-search-icon" data-target="search-modal" aria-haspopup="dialog" aria-controls="spotlight">
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         {{ end }}{{ end }}

@@ -1,0 +1,16 @@
+{{- if site.Params.search.enable -}}
+  {{- $profiles := dict -}}
+  {{- range hugo.Data.social.main -}}
+    {{- if in (slice "github" "linkedin") .name -}}
+      {{- $profiles = merge $profiles (dict .name .link) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $config := dict
+    "indexURL" (printf "%s?v=2" ("searchindex.json" | relLangURL))
+    "email" hugo.Data.entity.email
+    "resume" (site.Params.navigation_button.link | relURL)
+    "profiles" $profiles
+    "suggestions" (slice ("projects/" | relLangURL) ("about/" | relLangURL) ("blog/" | relLangURL) "action:resume")
+  -}}
+  <script id="site-search-config" type="application/json">{{ $config | jsonify | safeJS }}</script>
+{{- end -}}

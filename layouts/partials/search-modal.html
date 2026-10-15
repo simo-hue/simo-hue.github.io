@@ -1,0 +1,5 @@
+{{ if site.Params.search.enable }}
+<dialog id="spotlight" class="spotlight-dialog" aria-label="Search and commands">
+  {{ partial "components/command-panel.html" (dict "ID" "spotlight" "Modal" true) }}
+</dialog>
+{{ end }}

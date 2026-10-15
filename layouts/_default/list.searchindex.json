@@ -1,0 +1,46 @@
+{{- /* Build structured JSON rather than interpolating strings or comma positions. */ -}}
+{{- $entries := slice -}}
+{{- range site.Pages -}}
+  {{- $contentPage := or (in (slice "home" "section" "page") .Kind) (and (eq .Kind "taxonomy") (eq .Type "passion")) -}}
+  {{- if and $contentPage (ne .Section "sections") (not .Draft) (not .Params.ignoreSearch) (not .Params.noindex) (ne .RelPermalink ("offline/" | relLangURL)) -}}
+    {{- $title := .Title -}}
+    {{- $kind := "pages" -}}
+    {{- $icon := "page" -}}
+    {{- $category := "Page" -}}
+    {{- $date := "" -}}
+    {{- $readingTime := 0 -}}
+    {{- $topics := slice -}}
+    {{- if or (eq .Type "projects") (strings.HasPrefix .RelPermalink ("blog/tech-projects/" | relLangURL)) -}}
+      {{- $topics = $topics | append "projects" -}}
+    {{- end -}}
+    {{- $aliases := slice .Title (.Params.meta_title | default "") -}}
+    {{- if .IsHome -}}{{- $title = "Home" -}}{{- $icon = "home" -}}{{- end -}}
+    {{- if eq .Type "about" -}}{{- $title = "About" -}}{{- $icon = "person" -}}{{- end -}}
+    {{- if eq .Type "projects" -}}{{- $icon = "projects" -}}{{- end -}}
+    {{- if eq .Section "globe" -}}{{- $icon = "globe" -}}{{- end -}}
+    {{- if eq .Section "call" -}}{{- $title = "Book a conversation" -}}{{- $aliases = $aliases | append "connect call meeting chat" -}}{{- $icon = "calendar" -}}{{- end -}}
+    {{- if eq .Type "links" -}}{{- $aliases = $aliases | append "contact connect social profiles email" "contact Simone" "contact Simone Mattioli" "get in touch" -}}{{- $icon = "link" -}}{{- end -}}
+    {{- if and .IsPage (eq .Section "blog") -}}
+      {{- $kind = "writing" -}}
+      {{- $icon = "writing" -}}
+      {{- $category = .CurrentSection.Title -}}
+      {{- $date = .PublishDate.Format "Jan 2, 2006" -}}
+      {{- $readingTime = .ReadingTime -}}
+    {{- else if eq .Section "blog" -}}
+      {{- $icon = "writing" -}}{{- $category = "Collection" -}}
+    {{- end -}}
+    {{- $extra := partial "search-page-content.html" . -}}
+    {{- $content := printf "%s %s" .Plain $extra | plainify | htmlUnescape | replaceRE `\s+` " " -}}
+    {{- $description := .Description | default (.Summary | plainify) | default $extra | plainify | htmlUnescape | replaceRE `\s+` " " -}}
+    {{- if .IsHome -}}{{- $description = site.Params.metadata.description -}}{{- end -}}
+    {{- $aliases = $aliases | append (.Params.search_keyword | default "") -}}
+    {{- $entries = $entries | append (dict
+      "id" .RelPermalink "href" .RelPermalink "title" ($title | plainify | htmlUnescape)
+      "kind" $kind "icon" $icon "category" $category "description" $description
+      "content" $content "aliases" $aliases "date" $date "timestamp" .PublishDate.Unix
+      "readingTime" $readingTime "tags" (.Params.tags | default slice)
+      "topics" $topics "thumbnail" (partial "search-thumbnail.html" .)
+    ) -}}
+  {{- end -}}
+{{- end -}}
+{{- $entries | jsonify -}}

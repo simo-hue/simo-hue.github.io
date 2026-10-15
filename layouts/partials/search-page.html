@@ -1,0 +1,4 @@
+{{ if site.Params.search.enable }}
+  {{ partial "components/command-panel.html" (dict "ID" "site-search" "Modal" false) }}
+  <noscript><p class="mt-6">Search needs JavaScript. You can still explore <a href="{{ "projects/" | relLangURL }}">Projects</a>, <a href="{{ "blog/" | relLangURL }}">the Blog</a>, and <a href="{{ "links/" | relLangURL }}">contact details</a>.</p></noscript>
+{{ end }}
