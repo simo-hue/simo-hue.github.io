@@ -8,10 +8,11 @@
   "@id" (printf "%s#profilepage" .Permalink)
   "url" .Permalink
   "name" (printf "About %s" hugo.Data.about.profile.name)
-  "inLanguage" "en"
+  "inLanguage" site.Language.Locale
+  "description" (partial "seo/metadata.html" .).description
   "mainEntity" (dict
     "@type" "Person"
-    "@id" (printf "%s#person" site.BaseURL)
+    "@id" hugo.Data.entity.id
     "name" hugo.Data.about.profile.name)
 -}}
 {{- /* only emit dateModified when the page actually has a real date */ -}}

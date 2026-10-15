@@ -1,27 +1,8 @@
-{{- $title := "" -}}
-{{- if .IsHome -}}
-{{- $title = site.Title -}}
-{{- else -}}
-{{/* Prefer an explicit SEO meta_title, else the page title. Append the brand
-     only when it isn't already part of the string, so titles that already end
-     in "| Simone Mattioli" don't get it duplicated. */}}
-{{- $base := or .Params.meta_title .Title -}}
-{{- if in $base "Simone Mattioli" -}}
-{{- $title = $base -}}
-{{- else -}}
-{{- $title = printf "%s | Simone Mattioli" $base -}}
-{{- end -}}
-{{- end -}}
+{{- $meta := partial "seo/metadata.html" . -}}
+{{- $title := $meta.title -}}
+{{- $description := $meta.description -}}
+{{- $isArticle := and .IsPage (eq .Section "blog") -}}
 <title>{{ $title }}</title>
-
-{{- $description := "" -}}
-{{- if .Description -}}
-{{- $description = .Description -}}
-{{- else if .Summary -}}
-{{- $description = .Summary | plainify | truncate 155 -}}
-{{- else -}}
-{{- $description = site.Params.metadata.description | default "Personal blog of Simone Mattioli" -}}
-{{- end -}}
 <meta name="description" content="{{ $description }}">
 
 <link rel="canonical" href="{{ .Permalink }}">
@@ -36,33 +17,44 @@
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 {{- end -}}
 
-<meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta property="og:title" content="{{ $title }}">
 <meta property="og:description" content="{{ $description }}">
-<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:type" content="{{ if $isArticle }}article{{ else }}website{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:site_name" content="{{ site.Title }}">
 <meta property="og:locale" content="en_US">
 
 {{- $ogImage := "" -}}
+{{- $ogWidth := 0 -}}
+{{- $ogHeight := 0 -}}
 {{- with site.Params.metadata.image -}}{{- $ogImage = . | absURL -}}{{- end -}}
 {{- with .Params.image -}}
 {{- $r := $.Resources.GetMatch . -}}
 {{- if not $r -}}{{- $r = resources.Get (strings.TrimPrefix "/" .) -}}{{- end -}}
 {{- if $r -}}
 {{- $ogImage = $r.Permalink -}}
+{{- if ne $r.MediaType.SubType "svg" -}}
+{{- $ogWidth = $r.Width -}}
+{{- $ogHeight = $r.Height -}}
+{{- end -}}
 {{- else if or (hasPrefix . "/") (hasPrefix . "http") -}}
 {{- $ogImage = . | absURL -}}
 {{- end -}}
 {{- end -}}
 {{- if $ogImage -}}
 <meta property="og:image" content="{{ $ogImage }}">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+{{- if and $ogWidth $ogHeight -}}
+<meta property="og:image:width" content="{{ $ogWidth }}">
+<meta property="og:image:height" content="{{ $ogHeight }}">
+{{- end -}}
 {{- end -}}
 
-{{- if .IsPage -}}
+{{- if $isArticle -}}
+<meta property="article:author" content="{{ "about/" | absURL }}">
+{{- if not .Date.IsZero -}}
 <meta property="article:published_time" content='{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}'>
-{{- if .Lastmod -}}
+{{- end -}}
+{{- if not .Lastmod.IsZero -}}
 <meta property="article:modified_time" content='{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}'>
 {{- end -}}
 {{- with .CurrentSection -}}
@@ -76,7 +68,7 @@
 {{- end -}}
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta name="twitter:title" content="{{ $title }}">
 <meta name="twitter:description" content="{{ $description }}">
 {{- if $ogImage -}}
 <meta name="twitter:image" content="{{ $ogImage }}">

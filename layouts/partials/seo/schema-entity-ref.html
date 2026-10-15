@@ -25,10 +25,13 @@
   "url" .Permalink
   "name" .Title
   "isPartOf" (dict "@id" $e.website_id)
-  "about" (dict "@id" $e.id)
+  "author" (dict "@id" $e.id)
 -}}
-{{- with .Description -}}
+{{- with (partial "seo/metadata.html" .).description -}}
   {{- $webPage = merge $webPage (dict "description" .) -}}
+{{- end -}}
+{{- if in (slice "about" "links" "projects") .Type -}}
+  {{- $webPage = merge $webPage (dict "about" (dict "@id" $e.id)) -}}
 {{- end -}}
 {{- $nodes = $nodes | append $webPage -}}
 

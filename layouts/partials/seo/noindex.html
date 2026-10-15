@@ -3,15 +3,12 @@
        Returns a boolean. */ -}}
 {{- $ni := false -}}
 {{- /* explicit opt-out or 404 */ -}}
-{{- if or .Params.noindex (eq .Kind "404") -}}
+{{- /* seo_noindex affects external engines only; local search remains useful. */ -}}
+{{- if or .Params.noindex .Params.seo_noindex (eq .Kind "404") -}}
   {{- $ni = true -}}
 {{- end -}}
-{{- /* thin/stub blog posts (auto-reindex once expanded past the threshold) */ -}}
-{{- if and .IsPage (in site.Params.mainSections .Section) -}}
-  {{- if lt .WordCount 130 -}}
-    {{- $ni = true -}}
-  {{- end -}}
-{{- end -}}
+{{- /* Editorial exclusions belong in front matter. Word count alone is not
+       evidence of low quality; short first-hand accounts can be useful. */ -}}
 {{- /* ALL tag pages — both the individual terms and the /tags/ index.
 
        This used to noindex only single-post tags. The measurement that changed it:

@@ -1,21 +1,6 @@
-{{- /*
-  Canonical Person node. Rendered ONLY on the homepage; every other page and
-  every other property references it by @id rather than restating it.
-
-  All facts come from data/entity.yml — do not hardcode identity here, or the
-  drift this file was rewritten to fix comes straight back.
-
-  Two deliberate choices:
-   - `worksFor` is NOT emitted. It previously named the University of Verona,
-     but schema.org/worksFor means *employed by* and the relationship was
-     enrolment. It asserted a false fact on the one node the whole estate
-     consolidates onto.
-   - The University of Verona is emitted once, with a stable @id and a Wikidata
-     sameAs, and referenced by @id everywhere else. It used to appear three
-     times as separate anonymous nodes, resolving as three different
-     organisations.
-*/ -}}
-{{- if .IsHome -}}
+{{- /* Full identity on the homepage and biography; both share one stable @id.
+       Facts come from entity.yml. Current studies are not completed degrees. */ -}}
+{{- if or .IsHome (eq .Type "about") -}}
 {{- $e := hugo.Data.entity -}}
 
 {{- /* sameAs: only profiles explicitly cleared. Anything carrying `blocked_by`
@@ -23,17 +8,17 @@
        it would make that claim machine-resolvable. */ -}}
 {{- $sameAs := slice -}}
 {{- range $e.profiles -}}
-  {{- if .same_as -}}{{- $sameAs = $sameAs | append .url -}}{{- end -}}
+  {{- if and .same_as (not .blocked_by) -}}{{- $sameAs = $sameAs | append .url -}}{{- end -}}
 {{- end -}}
 
-{{- /* alumniOf: completed education only. ELTE and KTH are future and are stated
+{{- /* alumniOf: completed education only. ELTE is ongoing and KTH is planned; both are stated
        in `description` instead, so the graph never claims a credential early. */ -}}
 {{- $alumniOf := slice -}}
 {{- range $e.education -}}
   {{- if .completed -}}
     {{- $org := dict "@type" "EducationalOrganization" "name" .institution -}}
     {{- with .institution_id -}}{{- $org = merge $org (dict "@id" .) -}}{{- end -}}
-    {{- with .department -}}{{- $org = merge $org (dict "department" .) -}}{{- end -}}
+    {{- with .department -}}{{- $org = merge $org (dict "department" (dict "@type" "Organization" "name" .)) -}}{{- end -}}
     {{- $alumniOf = $alumniOf | append $org -}}
   {{- end -}}
 {{- end -}}
@@ -65,7 +50,7 @@
   "familyName" $e.family_name
   "alternateName" $e.alternate_names
   "url" site.BaseURL
-  "image" (site.Params.metadata.image | absURL)
+  "image" ((resources.Get (strings.TrimPrefix "/" hugo.Data.about.profile.image)).Permalink)
   "email" (printf "mailto:%s" $e.email)
   "jobTitle" $e.job_title
   "description" $e.description
@@ -73,13 +58,12 @@
     "@type" "PropertyValue"
     "propertyID" "ORCID"
     "value" "https://orcid.org/0009-0006-5047-8004")
-  "address" (dict "@type" "PostalAddress" "addressLocality" $e.locality "addressRegion" $e.region "addressCountry" $e.country)
   "nationality" (dict "@type" "Country" "name" $e.nationality)
   "knowsLanguage" $langs
   "knowsAbout" $e.knows_about
   "alumniOf" $alumniOf
   "sameAs" $sameAs
-  "mainEntityOfPage" (dict "@id" $e.website_id)
+  "mainEntityOfPage" (dict "@id" (printf "%sabout/#profilepage" site.BaseURL))
 -}}
 
 {{- /* The single University of Verona node the alumniOf/credential entries point at. */ -}}
@@ -95,28 +79,6 @@
 
 {{- $graph := slice $person $univr -}}
 {{- range $orgs -}}{{- $graph = $graph | append . -}}{{- end -}}
-
-{{- /* His publications, authored by the canonical Person. Second of four — the
-       author list is emitted in order so position is unambiguous. */ -}}
-{{- range $e.publications -}}
-  {{- $authors := slice -}}
-  {{- range .authors -}}
-    {{- $authors = $authors | append (dict "@type" "Person" "name" .) -}}
-  {{- end -}}
-  {{- $graph = $graph | append (dict
-      "@type" "ScholarlyArticle"
-      "@id" (printf "https://doi.org/%s" .doi)
-      "headline" .title
-      "name" .title
-      "datePublished" .date
-      "author" $authors
-      "identifier" (dict "@type" "PropertyValue" "propertyID" "DOI" "value" .doi)
-      "sameAs" (slice .url (printf "https://doi.org/%s" .doi))
-      "isPartOf" (dict
-        "@type" "Periodical"
-        "name" .journal
-        "publisher" (dict "@type" "Organization" "name" .publisher))) -}}
-{{- end -}}
 
 <script type="application/ld+json">
 {{ (dict "@context" "https://schema.org" "@graph" $graph) | jsonify | safeJS }}

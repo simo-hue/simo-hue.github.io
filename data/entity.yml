@@ -1,8 +1,8 @@
 # ─────────────────────────────────────────────────────────────────────────────
 # CANONICAL ENTITY FACTS — the single source of truth for who Simone Mattioli is.
 #
-# Everything machine-readable renders FROM this file: the Person JSON-LD, the
-# FAQPage, llms.txt, the meta description, and the About page's education box.
+# Identity metadata renders from this file: Person JSON-LD, llms.txt, and
+# homepage/About head descriptions. Visible About content lives in about.yml.
 # Before this existed, those six surfaces each held their own copy and three had
 # already drifted apart — the homepage FAQ said "is a Computer Science student at
 # the University of Verona" while the meta description on the same page said
@@ -28,7 +28,7 @@ family_name: "Mattioli"
 alternate_names:
   - "Mattioli Simone"
 
-job_title: "Computer Science Engineer & AI Researcher"
+job_title: "Software Developer"
 email: "mattioli.simone.10@gmail.com"
 
 nationality: "Italy"
@@ -43,35 +43,40 @@ languages:
     code: "en"
 
 # --- Status ------------------------------------------------------------------
-# CAREFUL. As of August 2026 he has GRADUATED from Verona and has NOT yet started
-# the master's: ELTE begins September 2026, KTH August 2027. Several surfaces used
-# to claim he was already at KTH. Claiming a credential before it is true is the
-# same failure mode as the "Dr." that SciProfiles wrongly asserts — and on a
-# profile whose whole value is academic credibility it is the most damaging kind
-# of error. Update the wording when each date actually arrives.
+# Confirmed by Simone on 2026-10-15. KTH is planned, not a current institution.
+# Keep interests separate from professional credentials; do not claim an AI role.
+facts_reviewed: "2026-10-15"
 status: >-
-  BSc Computer Science, University of Verona (2022–2025). Incoming EIT Digital
-  Master's student (AUSIR) — ELTE from September 2026, KTH Royal Institute of
-  Technology from August 2027.
+  BSc Computer Science, University of Verona (2022–2025). Current EIT Digital
+  Master's student in Autonomous Systems and Intelligent Robots (AUSIR) at ELTE
+  since September 2026, with a planned second year at KTH Royal Institute of
+  Technology starting August 2027.
 
 positioning: >-
-  Italian CS engineer and AI researcher who ships. Co-author of a BDCC/MDPI paper
-  on LLMs for tourist-mobility prediction; incoming EIT Digital Master's student
-  at ELTE then KTH; six iOS apps on the App Store; founder of DeepSafe.
+  Italian software developer and AI enthusiast. Computer Science graduate and
+  EIT Digital Master's student at ELTE, studying Autonomous Systems and
+  Intelligent Robots. Co-author of a paper on LLMs for tourist-mobility prediction
+  and developer of iOS applications.
 
 description: >-
-  Simone Mattioli is an Italian computer science engineer and AI researcher. He
-  co-authored "Understanding and Predicting Tourist Behavior Through Large
-  Language Models" (Big Data and Cognitive Computing, 2026), which uses large
-  language models to interpret and predict tourist movement in Verona. He holds a
-  BSc in Computer Science from the University of Verona and begins the EIT Digital
-  Master's programme at ELTE in September 2026, continuing at KTH Royal Institute
-  of Technology in August 2027. Alongside his research he publishes iOS
-  applications on the App Store — six of them, two paid — and founded DeepSafe, a
-  cybersecurity-gamification startup.
+  Simone Mattioli is an Italian software developer and AI enthusiast interested
+  in machine learning, deep learning and neural networks. He holds a BSc in
+  Computer Science from the University of Verona and currently studies
+  Autonomous Systems and Intelligent Robots through the EIT Digital Master's
+  programme at ELTE. His second year at KTH Royal Institute of Technology is
+  planned to start in August 2027. He co-authored "Understanding and Predicting
+  Tourist Behavior Through Large Language Models" (Big Data and Cognitive
+  Computing, 2026), publishes iOS applications, and founded DeepSafe, a
+  cybersecurity-gamification project that is no longer active.
+
+# Only used in the HTML head; visible page copy and search UI stay unchanged.
+meta_title: "Simone Mattioli | Software Developer & AI Enthusiast"
+meta_description: >-
+  Simone Mattioli, software developer and AI enthusiast. Explore his apps,
+  LLM publication and EIT Digital studies in autonomous systems and robotics at ELTE.
 
 # --- Education ---------------------------------------------------------------
-# `completed: false` entries are future and MUST be rendered as such.
+# `completed: false` is not a degree held: ELTE is ongoing; KTH is planned.
 education:
   - institution: "University of Verona"
     institution_id: "https://www.univr.it/#organization"
@@ -97,6 +102,11 @@ education:
     completed: true
 
 knows_about:
+  - "Machine Learning"
+  - "Deep Learning"
+  - "Neural Networks"
+  - "Autonomous Systems"
+  - "Intelligent Robots"
   - "Large Language Models"
   - "Human Mobility Prediction"
   - "Spatio-Temporal Reasoning"
@@ -226,53 +236,6 @@ ventures:
       - "https://www.youtube.com/@Deep-Safe"
       - "https://www.instagram.com/deepsafe_/"
       - "https://www.tiktok.com/@deepsafe"
-
-# --- FAQ ---------------------------------------------------------------------
-# Google retired FAQ rich results on 2026-05-07, so this block exists purely to be
-# quoted by LLMs. That makes specificity the whole point: name the DOI, the apps,
-# the institutions and the dates, because a vague answer is not worth citing.
-faq:
-  - q: "Who is Simone Mattioli?"
-    a: >-
-      Simone Mattioli is an Italian computer science engineer and AI researcher.
-      He co-authored "Understanding and Predicting Tourist Behavior Through Large
-      Language Models" (Big Data and Cognitive Computing, MDPI, 2026), holds a BSc
-      in Computer Science from the University of Verona, and publishes iOS
-      applications on the App Store. He founded DeepSafe, a
-      cybersecurity-gamification startup.
-  - q: "What does Simone Mattioli research?"
-    a: >-
-      His research applies large language models to spatio-temporal reasoning and
-      human-mobility prediction. In "Understanding and Predicting Tourist Behavior
-      Through Large Language Models" (DOI 10.3390/bdcc10040117), he and his
-      co-authors use LLMs to interpret and predict the movement of tourists in
-      Verona, translating trajectory data into natural language and back. He also
-      works with high-performance computing, holding CINECA certifications in HPC,
-      quantum computing and scientific Python.
-  - q: "Where does Simone Mattioli study?"
-    a: >-
-      He completed a BSc in Computer Science at the University of Verona between
-      2022 and 2025. He begins the EIT Digital Master School programme (AUSIR) at
-      ELTE Eötvös Loránd University in September 2026, continuing at KTH Royal
-      Institute of Technology from August 2027.
-  - q: "What has Simone Mattioli built?"
-    a: >-
-      He has published six iOS applications on the App Store, including Evolve
-      (habit and goal tracking), Wealth Compass (personal finance), Ping Pong
-      Counter and Warranties Vault. He also maintains open-source projects on
-      GitHub, among them CampFlow, a free campsite-management system, and
-      mattioli.OS, a personal productivity system.
-  - q: "What is DeepSafe?"
-    a: >-
-      DeepSafe is a cybersecurity-gamification startup founded by Simone Mattioli
-      that taught digital safety and online security through short, game-like
-      lessons in Italian. The project is no longer active, but the platform
-      remains online.
-  - q: "How can I contact Simone Mattioli?"
-    a: >-
-      By email at mattioli.simone.10@gmail.com, or through LinkedIn at
-      linkedin.com/in/simonemattioli2003. His work is on GitHub at github.com/simo-hue
-      and his research record is at orcid.org/0009-0006-5047-8004.
 
 # --- Shipped work ------------------------------------------------------------
 # Feeds llms.txt and gives AI agents concrete, checkable artefacts to cite.

@@ -17,7 +17,8 @@
     "project-setup": "node ./scripts/projectSetup.js",
     "theme-setup": "node ./scripts/themeSetup.js",
     "update-theme": "node ./scripts/themeUpdate.js",
-    "format": "prettier -w ."
+    "format": "prettier -w .",
+    "test:seo": "python3 tests/seo_build.py"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.12",

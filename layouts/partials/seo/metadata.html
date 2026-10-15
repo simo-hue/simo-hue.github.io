@@ -1,0 +1,13 @@
+{{- /* Head-only metadata. Never changes headings, cards or search previews. */ -}}
+{{- $title := .Params.meta_title | default .Title -}}
+{{- $description := .Description | default (.Summary | plainify | truncate 155) | default site.Params.metadata.description -}}
+{{- if .IsHome -}}
+  {{- $title = hugo.Data.entity.meta_title -}}
+  {{- $description = hugo.Data.entity.meta_description -}}
+{{- else if eq .Type "about" -}}
+  {{- $title = printf "About %s | Software Developer & AI Enthusiast" hugo.Data.entity.name -}}
+  {{- $description = hugo.Data.entity.meta_description -}}
+{{- else if not (in $title hugo.Data.entity.name) -}}
+  {{- $title = printf "%s | %s" $title hugo.Data.entity.name -}}
+{{- end -}}
+{{- return (dict "title" $title "description" ($description | plainify)) -}}

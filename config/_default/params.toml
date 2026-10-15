@@ -53,7 +53,7 @@ content = ""
 # seo meta data for OpenGraph / Twitter Card
 # seo module: https://github.com/gethugothemes/hugo-modules/tree/master/seo-tools/basic-seo
 [metadata]
-keywords = ["Simone Mattioli", "Computer Science University of Verona", "AI researcher Italy", "LLM tourism mobility prediction", "HPC machine learning", "Brazil volunteer experience", "mountain hiking Alps Italy", "personal development technology", "social impact projects", "Italian tech student", "volunteer teaching Brazil", "outdoor sports Italy", "computer science blog", "AI research portfolio", "technology humanities bridge"]
+keywords = ["Simone Mattioli", "Computer Science University of Verona", "AI enthusiast", "LLM tourism mobility prediction", "HPC machine learning", "Brazil volunteer experience", "mountain hiking Alps Italy", "personal development technology", "social impact projects", "Italian tech student", "volunteer teaching Brazil", "outdoor sports Italy", "computer science blog", "software development portfolio", "technology humanities bridge"]
 description = "Simone Mattioli — CS graduate and EIT Digital Master's student (ELTE, then KTH) in AI and HPC. Explore my tech projects, volunteering and mountains."
 author = "Simone Mattioli"
 # JPEG, not PNG: this is a photographic social card with no transparency, and the

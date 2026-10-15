@@ -1,0 +1,25 @@
+{{- /* Describe the portfolio's existing visible lists, without inventing app
+       prices, ratings, platforms or employment claims. */ -}}
+{{- if eq .Type "projects" -}}
+{{- $items := slice -}}
+{{- range hugo.Data.selected_work -}}
+  {{- $url := .portfolio.url | default .url -}}
+  {{- $items = $items | append (dict "@type" "ListItem" "position" (add (len $items) 1) "name" .title "url" $url) -}}
+{{- end -}}
+{{- range hugo.Data.entity.apps -}}
+  {{- if not (or (hasPrefix .name "Evolve") (hasPrefix .name "Wealth Compass")) -}}
+    {{- $items = $items | append (dict "@type" "ListItem" "position" (add (len $items) 1) "name" .name "url" (.site | default .store)) -}}
+  {{- end -}}
+{{- end -}}
+{{- $schema := dict
+  "@context" "https://schema.org"
+  "@type" "CollectionPage"
+  "@id" (printf "%s#webpage" .Permalink)
+  "url" .Permalink
+  "name" .Title
+  "author" (dict "@id" hugo.Data.entity.id)
+  "isPartOf" (dict "@id" hugo.Data.entity.website_id)
+  "mainEntity" (dict "@type" "ItemList" "numberOfItems" (len $items) "itemListElement" $items)
+-}}
+<script type="application/ld+json">{{ $schema | jsonify | safeJS }}</script>
+{{- end -}}
