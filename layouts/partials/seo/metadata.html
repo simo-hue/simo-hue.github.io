@@ -1,6 +1,6 @@
 {{- /* Head-only metadata. Never changes headings, cards or search previews. */ -}}
-{{- $title := .Params.meta_title | default .Title -}}
-{{- $description := .Description | default (.Summary | plainify | truncate 155) | default site.Params.metadata.description -}}
+{{- $title := .Params.seo_title | default .Params.meta_title | default .Title -}}
+{{- $description := .Params.seo_description | default .Description | default (.Summary | plainify | truncate 155) | default site.Params.metadata.description -}}
 {{- if .IsHome -}}
   {{- $title = hugo.Data.entity.meta_title -}}
   {{- $description = hugo.Data.entity.meta_description -}}

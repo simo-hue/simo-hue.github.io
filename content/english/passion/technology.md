@@ -2,6 +2,9 @@
 title: "Technology"
 description: "My technical and programming projects"
 draft: false
+content_language: "en"
+translation_peer: "/passion/technology_it"
+seo_description: "Simone Mattioli on technology, digital habits and finding balance between screen time, creativity and life beyond the screen."
 ---
 
 # The legendary technology

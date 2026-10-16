@@ -1,0 +1,60 @@
+{{- /* Keep existing feed URLs, but publish real, indexable documents only.
+     The blog uses nested sections, so direct RegularPages would be empty. */ -}}
+{{- $candidates := .RegularPages -}}
+{{- if .IsHome -}}
+  {{- $candidates = site.RegularPages -}}
+{{- else if .IsSection -}}
+  {{- $candidates = .RegularPagesRecursive -}}
+{{- else if eq .Kind "taxonomy" -}}
+  {{- $candidates = slice -}}
+  {{- range .Pages -}}
+    {{- range .RegularPages -}}
+      {{- $candidates = $candidates | append . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $candidates = $candidates | uniq -}}
+{{- end -}}
+{{- $pages := slice -}}
+{{- range $candidates -}}
+  {{- if and .Permalink (not .Draft) (not .Params.headless) (not (partial "seo/noindex.html" .)) -}}
+    {{- $pages = $pages | append . -}}
+  {{- end -}}
+{{- end -}}
+{{- $pages = sort $pages "Date" "desc" -}}
+{{- $limit := site.Config.Services.RSS.Limit -}}
+{{- if ge $limit 1 -}}{{- $pages = $pages | first $limit -}}{{- end -}}
+{{- $latest := time.AsTime "0001-01-01T00:00:00Z" -}}
+{{- range $pages -}}
+  {{- if .Lastmod.After $latest -}}{{- $latest = .Lastmod -}}{{- end -}}
+{{- end -}}
+{{- /* The HTML metadata helper initializes pagination; feeds must not do that. */ -}}
+{{- $description := .Params.seo_description | default .Description | default (printf "Recent content from %s on %s" .Title site.Title) -}}
+{{- if .IsHome -}}{{- $description = hugo.Data.entity.meta_description -}}{{- end -}}
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>{{ if .IsHome }}{{ site.Title | transform.XMLEscape | safeHTML }}{{ else }}{{ .Title | transform.XMLEscape | safeHTML }} on {{ site.Title | transform.XMLEscape | safeHTML }}{{ end }}</title>
+    <link>{{ .Permalink | transform.XMLEscape | safeHTML }}</link>
+    <description>{{ $description | plainify | transform.XMLEscape | safeHTML }}</description>
+    <generator>Hugo</generator>
+    <language>{{ site.Language.Locale | default site.Language.Lang }}</language>
+    {{- if not $latest.IsZero }}
+    <lastBuildDate>{{ $latest.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</lastBuildDate>
+    {{- end }}
+    {{- with .OutputFormats.Get "RSS" }}
+    <atom:link href="{{ .Permalink }}" rel="self" type="application/rss+xml" />
+    {{- end }}
+    {{- range $pages }}
+    <item>
+      <title>{{ .Title | transform.XMLEscape | safeHTML }}</title>
+      <link>{{ .Permalink | transform.XMLEscape | safeHTML }}</link>
+      <guid isPermaLink="true">{{ .Permalink | transform.XMLEscape | safeHTML }}</guid>
+      {{- if not .PublishDate.IsZero }}
+      <pubDate>{{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+      {{- end }}
+      <dc:creator>{{ site.Params.metadata.author | transform.XMLEscape | safeHTML }}</dc:creator>
+      <description>{{ .Summary | transform.XMLEscape | safeHTML }}</description>
+    </item>
+    {{- end }}
+  </channel>
+</rss>

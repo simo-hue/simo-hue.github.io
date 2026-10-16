@@ -2,6 +2,9 @@
 title: "Content Creation"
 description: "My journey in creating content"
 draft: false
+content_language: "en"
+translation_peer: "/passion/content-creation_it"
+seo_description: "How Simone Mattioli creates wildlife films for Mountain & Fauna Lover and personal vlogs for Simo’s Diary."
 ---
 
 # The Birth

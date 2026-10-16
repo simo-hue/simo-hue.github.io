@@ -56,9 +56,7 @@
         {{ with site.GetPage .page }}
           <div class="ds-blog-pick">
             <p class="ds-blog-pick-label">{{ $label }}</p>
-            {{ .Scratch.Set "IsPriority" true }}
-            {{ partial "components/blog-card.html" . }}
-            {{ .Scratch.Delete "IsPriority" }}
+            {{ partial "components/blog-card.html" (dict "Page" . "Priority" true) }}
           </div>
         {{ else }}
           {{ errorf "Start here article not found: %s" .page }}
@@ -83,9 +81,7 @@
     </div>
     <div class="ds-post-grid">
       {{ range $index, $page := $paginator.Pages }}
-        {{ if and (not $showFeatured) (lt $index 3) }}{{ $page.Scratch.Set "IsPriority" true }}{{ end }}
-        {{ partial "components/blog-card" $page }}
-        {{ $page.Scratch.Delete "IsPriority" }}
+        {{ partial "components/blog-card" (dict "Page" $page "Priority" (and (not $showFeatured) (lt $index 3))) }}
       {{ end }}
     </div>
     {{ partial "components/blog-pagination.html" $paginator }}

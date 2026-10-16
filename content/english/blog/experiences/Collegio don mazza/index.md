@@ -3,6 +3,7 @@ aliases:
   - "/blog/experience/mazza/"
 title: "Don Mazza College"
 description: "to do"
+seo_description: "Simone Mattioli reflects on three years at Collegio Don Mazza in Verona, from student-life challenges to friendships and his Computer Science degree."
 date: 2024-11-02
 image: max.webp
 tags: [education, college, student life, verona]

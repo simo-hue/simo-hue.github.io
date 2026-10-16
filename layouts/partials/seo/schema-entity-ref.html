@@ -25,6 +25,7 @@
   "@id" (printf "%s#webpage" $pageURL)
   "url" $pageURL
   "name" (partial "seo/metadata.html" .).title
+  "inLanguage" (partial "seo/language.html" .).tag
   "isPartOf" (dict "@id" $e.website_id)
   "author" (dict "@id" $e.id)
 -}}

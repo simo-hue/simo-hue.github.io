@@ -1,0 +1,20 @@
+{{- $alternates := slice -}}
+{{- $page := . -}}
+{{- with .Params.translation_peer -}}
+  {{- $peer := site.GetPage . -}}
+  {{- if not $peer -}}{{- errorf "Missing translation peer %s for %s" . $page.RelPermalink -}}{{- end -}}
+  {{- with $peer -}}
+    {{- $back := site.GetPage (.Params.translation_peer | default "__missing_translation__") -}}
+    {{- if or (not $back) (ne $back.RelPermalink $page.RelPermalink) -}}
+      {{- errorf "Translation pair must be reciprocal: %s and %s" $page.RelPermalink .RelPermalink -}}
+    {{- end -}}
+    {{- if or .Draft (partial "seo/noindex.html" .) (partial "seo/noindex.html" $page) -}}
+      {{- errorf "Translation pairs must contain published indexable pages: %s" .RelPermalink -}}
+    {{- end -}}
+    {{- range slice $page $peer -}}
+      {{- $language := partial "seo/language.html" . -}}
+      {{- $alternates = $alternates | append (dict "code" $language.code "locale" $language.locale "url" .Permalink) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return (sort $alternates "code") -}}

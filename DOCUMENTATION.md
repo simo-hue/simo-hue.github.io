@@ -1488,3 +1488,22 @@ NEXT: review the remaining content-judgment items in TO_SIMO_DO.md (thin "Future
 - Follow-up changes are local, uncommitted and unpublished. Before/after builds are in `.tmp/seo-followup-before` and `.tmp/seo-followup-after`.
 - No additional manual actions; `TO_SIMO_DO.md` remains unchanged. Previously recorded publication/search-dashboard measurement steps still apply.
 - Immediate next step: review and publish this follow-up, then measure using the existing Google/Bing dashboards.
+
+### Current Status — deeper SEO/GEO audit (in progress, 2026-10-16)
+
+- Implemented pending validation: reciprocal English/Italian language metadata for two existing translation pairs, metadata-only preview image sizing, and deterministic blog image loading priorities. Visible copy, styling, routes and Spotlight results remain unchanged.
+- Completed preliminary validation: production build and the existing 11 SEO checks against `.tmp/seo-third-before`; current output is `.tmp/seo-third-after`.
+- Immediate next step: finish new regression checks, measure preview image savings, integrate the requested independent agent audits (crawl/feed access, identity/schema, performance/language), then rebuild and document verified results.
+- Changes remain local and unpublished. No new manual actions identified.
+
+- [2026-10-16 17:00 CEST]: Deeper SEO/GEO discovery and metadata optimization
+- *Details*: Integrated three requested agent audits. Connected two existing English/Italian translation pairs; corrected head-only descriptions including the completed Don Mazza article's placeholder; reduced crawler/social preview image payloads; repaired empty/invalid RSS feeds; unified crawler exclusions; refined publication metadata; and removed shared-state blog image scheduling and unused FontAwesome connection hints. Visible website content, styling, navigation and Spotlight remain unchanged.
+- *Tech Notes*: Added `seo/language.html`, `seo/translations.html`, `seo/preview-image.html`, local `baseof.html` and `rss.xml` overrides. Explicit `content_language`, reciprocal `translation_peer`, and head-only `seo_title`/`seo_description` preserve display/search content. JPEG previews fit within 1200×1200 without cropping/upscaling; schema and sharing metadata use matching actual dimensions. RSS uses recursive section articles, filters nonindexable/headless/draft/empty destinations and omits unknown dates; it avoids HTML pagination initialization. Existing crawler tokens now share one robots group. DOI schema identifies issue/volume/journal and omits the summary word count. No new dependencies, services, credentials or manual setup. Rejected a CSS-minification experiment after browser checks detected an invalid transformed declaration; the original CSS pipeline remains.
+- *Validation*: Combined production build passed (602 Hugo output pages); 16 SEO checks and 18 Spotlight tests passed. All 340 nonredirect bodies match the baseline after normalizing only intentional image loading/priority attributes, which have separate checks; stylesheet fingerprints and search JSON match exactly. All 261 feed routes preserved, 523 item references resolve to indexable pages, and blog feed increases from 0 to 56 articles. All 63 aliases resolve without chains. 57 unique sized sharing previews total 15,645,932 → 7,445,871 bytes (52.4% less); structured-data portrait 836,233 → 69,616 bytes (91.7% less). No visitor-speed, ranking or citation gain claimed. Existing Hugo deprecation warnings remain. Full report: `SEO_AUDIT/2026-10-16-deeper-optimization.md`.
+
+### Current Status — deeper SEO/GEO audit (complete)
+
+- Completed: all three requested agent audits, integrated fixes, production build, SEO/search regression checks, presentation-preservation checks and documentation.
+- Output: `.tmp/seo-combined-final`; baseline: `.tmp/seo-third-before`; metrics: `.tmp/seo-combined-metrics.json`.
+- Changes remain local, uncommitted and unpublished. No new manual actions; `TO_SIMO_DO.md` was left unchanged.
+- Immediate next step: review and publish these changes, then follow the already-recorded Google/Bing recrawl and measurement steps.

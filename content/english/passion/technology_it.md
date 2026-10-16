@@ -2,6 +2,10 @@
 title: "Technology"
 description: "My technical and programming projects"
 draft: false
+content_language: "it"
+translation_peer: "/passion/technology"
+seo_description: "Simone Mattioli racconta la sua passione per la tecnologia e il percorso verso un uso più consapevole degli schermi e dei social."
+seo_title: "Tecnologia"
 ---
 
 # La mitica tecnologia

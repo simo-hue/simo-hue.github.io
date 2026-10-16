@@ -1,7 +1,14 @@
+{{- $page := . -}}
+{{- $priority := false -}}
+{{- if reflect.IsMap . -}}
+  {{- $page = .Page -}}
+  {{- $priority = .Priority | default false -}}
+{{- end -}}
+{{- with $page -}}
 <article class="ds-post-card{{ if not .Params.image }} ds-post-card-text{{ end }}">
   {{ with .Params.image }}
-  <a href="{{ $.RelPermalink }}" class="ds-post-card-media" tabindex="-1" aria-hidden="true">
-    {{ partial "image" (dict "Src" . "Context" $ "Alt" "" "Class" "w-full h-full object-cover" "Priority" ($.Scratch.Get "IsPriority" | default false) "Sizes" "(min-width: 1024px) 360px, (min-width: 640px) 45vw, 100vw") }}
+  <a href="{{ $page.RelPermalink }}" class="ds-post-card-media" tabindex="-1" aria-hidden="true">
+    {{ partial "image" (dict "Src" . "Context" $page "Alt" "" "Class" "w-full h-full object-cover" "Priority" $priority "Sizes" "(min-width: 1024px) 360px, (min-width: 640px) 45vw, 100vw") }}
   </a>
   {{ else }}
   <div class="ds-post-card-note" aria-hidden="true"><span>FIELD NOTES</span><span>↗</span></div>
@@ -17,3 +24,5 @@
     <span class="ds-post-card-cta" aria-hidden="true">{{ if eq .CurrentSection.Title "Tech Projects" }}Explore project{{ else if eq .CurrentSection.Title "Publications" }}Read research{{ else }}Read the story{{ end }} <i class="fa-solid fa-arrow-right arrow" aria-hidden="true"></i></span>
   </div>
 </article>
+
+{{- end -}}

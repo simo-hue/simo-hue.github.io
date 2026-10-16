@@ -1,12 +1,7 @@
 {{- /* Project write-ups are articles. Only explicit scholarly records use
        ScholarlyArticle; do not infer SoftwareApplication from a blog section. */ -}}
 {{- if and .IsPage (in site.Params.mainSections .Section) -}}
-{{- $desc := "" -}}
-{{- with .Description -}}
-  {{- $desc = . -}}
-{{- else -}}
-  {{- $desc = .Summary | plainify | truncate 160 -}}
-{{- end -}}
+{{- $desc := (partial "seo/metadata.html" .).description | htmlUnescape -}}
 {{- $author := site.Params.metadata.author -}}
 {{- with .Params.author -}}
   {{- $author = . -}}
@@ -50,7 +45,7 @@
   "publisher" $publisher
   "@id" (printf "%s#article" .Permalink)
   "mainEntityOfPage" (dict "@type" "WebPage" "@id" (printf "%s#webpage" .Permalink))
-  "inLanguage" "en-US"
+  "inLanguage" (partial "seo/language.html" .).tag
 -}}
 {{- if not .Date.IsZero -}}
   {{- $schema = merge $schema (dict "datePublished" (.Date.Format "2006-01-02T15:04:05-07:00")) -}}
@@ -65,7 +60,11 @@
     {{- $schema = merge $schema (dict "operatingSystem" .) -}}
   {{- end -}}
 {{- else -}}
-  {{- $schema = merge $schema (dict "headline" .Title "wordCount" .WordCount) -}}
+  {{- $schema = merge $schema (dict "headline" .Title) -}}
+  {{- /* The DOI identifies the full paper, not this site's shorter summary. */ -}}
+  {{- if ne $type "ScholarlyArticle" -}}
+    {{- $schema = merge $schema (dict "wordCount" .WordCount) -}}
+  {{- end -}}
   {{- with .CurrentSection -}}
     {{- $schema = merge $schema (dict "articleSection" .Title) -}}
   {{- end -}}
@@ -98,7 +97,14 @@
     {{- with $.Params.publisher -}}
       {{- $periodical = merge $periodical (dict "publisher" (dict "@type" "Organization" "name" .)) -}}
     {{- end -}}
-    {{- $schema = merge $schema (dict "isPartOf" $periodical) -}}
+    {{- $container := $periodical -}}
+    {{- with $.Params.volume -}}
+      {{- $container = dict "@type" "PublicationVolume" "volumeNumber" . "isPartOf" $container -}}
+    {{- end -}}
+    {{- with $.Params.issue -}}
+      {{- $container = dict "@type" "PublicationIssue" "issueNumber" . "isPartOf" $container -}}
+    {{- end -}}
+    {{- $schema = merge $schema (dict "isPartOf" $container) -}}
   {{- end -}}
   {{- with .Params.article_number -}}
     {{- $schema = merge $schema (dict "pagination" .) -}}
@@ -107,10 +113,17 @@
 {{- /* image (all types) */ -}}
 {{- with .Params.image -}}
   {{- $imgURL := . | absURL -}}
+  {{- $image := dict "@type" "ImageObject" "url" $imgURL -}}
   {{- $resource := $.Resources.GetMatch . -}}
   {{- if not $resource -}}{{- $resource = resources.Get (strings.TrimPrefix "/" .) -}}{{- end -}}
-  {{- with $resource -}}{{- $imgURL = .Permalink -}}{{- end -}}
-  {{- $schema = merge $schema (dict "image" (dict "@type" "ImageObject" "url" $imgURL)) -}}
+  {{- with $resource -}}
+    {{- $preview := partialCached "seo/preview-image.html" . .Key -}}
+    {{- $image = dict "@type" "ImageObject" "url" $preview.Permalink -}}
+    {{- if ne $preview.MediaType.SubType "svg" -}}
+      {{- $image = merge $image (dict "width" $preview.Width "height" $preview.Height) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $schema = merge $schema (dict "image" $image) -}}
 {{- end -}}
 {{- /* keywords from tags (all types) */ -}}
 {{- with .Params.tags -}}

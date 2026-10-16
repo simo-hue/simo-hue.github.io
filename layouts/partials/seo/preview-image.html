@@ -1,0 +1,12 @@
+{{- /* Metadata-only renditions. Never change the visible article image or crop.
+       Cache by source resource at the call site when sharing across outputs. */ -}}
+{{- $image := . -}}
+{{- if and (eq $image.MediaType.MainType "image") (not (in (slice "svg" "gif") $image.MediaType.SubType)) -}}
+  {{- with $image.Params.rotation -}}{{- $image = $image.Process (printf "r%d" (int .)) -}}{{- end -}}
+  {{- if or (gt $image.Width 1200) (gt $image.Height 1200) -}}
+    {{- $image = $image.Fit "1200x1200 jpg q82" -}}
+  {{- else -}}
+    {{- $image = $image.Process "jpg q82" -}}
+  {{- end -}}
+{{- end -}}
+{{- return $image -}}

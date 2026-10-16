@@ -42,6 +42,8 @@
       "sameAs" .same_as) -}}
 {{- end -}}
 
+{{- $portrait := resources.Get (strings.TrimPrefix "/" hugo.Data.about.profile.image) -}}
+{{- $portrait = partialCached "seo/preview-image.html" $portrait $portrait.Key -}}
 {{- $person := dict
   "@type" "Person"
   "@id" $e.id
@@ -50,7 +52,7 @@
   "familyName" $e.family_name
   "alternateName" $e.alternate_names
   "url" site.BaseURL
-  "image" ((resources.Get (strings.TrimPrefix "/" hugo.Data.about.profile.image)).Permalink)
+  "image" $portrait.Permalink
   "email" (printf "mailto:%s" $e.email)
   "jobTitle" $e.job_title
   "description" $e.description

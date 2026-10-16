@@ -1,0 +1,6 @@
+{{- /* These legacy translations retain their existing URLs. Language metadata
+       is explicit; a filename suffix alone is not proof of a translation. */ -}}
+{{- $code := .Params.content_language | default site.Language.Lang -}}
+{{- $locales := dict "en" "en_US" "it" "it_IT" -}}
+{{- $locale := index $locales $code | default (replace site.Language.Locale "-" "_") -}}
+{{- return (dict "code" $code "locale" $locale "tag" (replace $locale "_" "-")) -}}

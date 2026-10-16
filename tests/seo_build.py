@@ -7,7 +7,9 @@ import json
 import os
 from pathlib import Path
 import re
+import struct
 import unittest
+from email.utils import parsedate_to_datetime
 from html.parser import HTMLParser
 from urllib.parse import unquote, urlsplit
 from urllib.robotparser import RobotFileParser
@@ -27,6 +29,10 @@ class Page(HTMLParser):
         self.canonical = []
         self.styles = []
         self.schemas = []
+        self.lang = ""
+        self.alternates = {}
+        self.card_images = []
+        self.in_card = False
         self.json_buffer = None
         self.feed(self.html)
         self.nodes = []
@@ -35,6 +41,15 @@ class Page(HTMLParser):
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        if tag == "html":
+            self.lang = attrs.get("lang", "")
+        if tag == "article" and "ds-post-card" in attrs.get("class", "").split():
+            self.in_card = True
+            self.card_images.append([])
+        if tag == "img" and self.in_card:
+            self.card_images[-1].append(attrs)
+        if tag == "link" and attrs.get("hreflang"):
+            self.alternates[attrs["hreflang"]] = attrs["href"]
         if tag == "meta":
             self.meta[attrs.get("name", attrs.get("property", attrs.get("http-equiv")))] = attrs.get("content", "")
         if tag == "link" and attrs.get("rel") == "canonical":
@@ -49,6 +64,8 @@ class Page(HTMLParser):
             self.json_buffer += data
 
     def handle_endtag(self, tag):
+        if tag == "article":
+            self.in_card = False
         if tag == "script" and self.json_buffer is not None:
             self.schemas.append(json.loads(self.json_buffer))
             self.json_buffer = None
@@ -77,10 +94,28 @@ def body(html):
     match = re.search(r"<body\b[^>]*>.*?</body>", html, re.S)
     if not match:
         return None
-    # The existing shared image-priority store is render-order-dependent.
-    # Ignore scheduling attributes only; all text, images, links, classes,
+    # Older baselines used a render-order-dependent shared priority store.
+    # Check scheduling separately; all text, images, links, classes,
     # controls and inline scripts must still match exactly.
     return re.sub(r'\s(?:loading|fetchpriority)="[^"]*"', "", match[0])
+
+
+def jpeg_size(path):
+    """Read SOF dimensions so metadata is checked against the encoded file."""
+    with path.open("rb") as stream:
+        if stream.read(2) != b"\xff\xd8":
+            raise ValueError(f"Not a JPEG: {path}")
+        while True:
+            if stream.read(1) != b"\xff":
+                raise ValueError(f"Invalid JPEG marker: {path}")
+            marker = stream.read(1)
+            while marker == b"\xff":
+                marker = stream.read(1)
+            length = struct.unpack(">H", stream.read(2))[0]
+            if marker in [b"\xc0", b"\xc1", b"\xc2"]:
+                _, height, width = struct.unpack(">BHH", stream.read(5))
+                return width, height
+            stream.seek(length - 2, 1)
 
 
 class SEOOutput(unittest.TestCase):
@@ -102,7 +137,11 @@ class SEOOutput(unittest.TestCase):
                 self.assertEqual(len(page.canonical), 1)
                 self.assertTrue(page.canonical[0].startswith(BASE))
                 self.assertTrue(page.meta.get("description", "").strip())
+                if "noindex" not in page.meta.get("robots", ""):
+                    self.assertNotIn(page.meta["description"].strip().lower(), ["to do", "todo", "tbd"])
                 self.assertEqual(page.meta["description"], page.meta["og:description"])
+                for article in page.of_type("BlogPosting") + page.of_type("ScholarlyArticle"):
+                    self.assertEqual(article["description"], page.meta["description"])
                 self.assertNotIn("0001-", json.dumps(page.meta))
                 self.assertNotIn("0001-", json.dumps(page.schemas))
                 self.assertFalse(page.of_type("FAQPage"))
@@ -135,6 +174,12 @@ class SEOOutput(unittest.TestCase):
         self.assertEqual(paper["author"][1]["@id"], PERSON)
         self.assertEqual(paper["publisher"], {"@type": "Organization", "name": "MDPI"})
         self.assertTrue(paper["datePublished"].startswith("2026-04-11"))
+        self.assertNotIn("wordCount", paper)
+        issue = paper["isPartOf"]
+        self.assertEqual((issue["@type"], str(issue["issueNumber"])), ("PublicationIssue", "4"))
+        volume = issue["isPartOf"]
+        self.assertEqual((volume["@type"], str(volume["volumeNumber"])), ("PublicationVolume", "10"))
+        self.assertEqual(volume["isPartOf"]["name"], "Big Data and Cognitive Computing")
 
     def test_project_stories_are_articles_and_portfolio_matches_visible_links(self):
         for page in self.pages:
@@ -201,7 +246,90 @@ class SEOOutput(unittest.TestCase):
         for agent in ["Googlebot", "Bingbot", "OAI-SearchBot", "Claude-SearchBot", "PerplexityBot"]:
             for route in ["", "about/", "projects/", "blog/publications/", "links/"]:
                 self.assertTrue(robots.can_fetch(agent, BASE + route), f"{agent}: {route}")
+        for agent in ["Googlebot", "Bingbot", "OAI-SearchBot", "Claude-SearchBot", "PerplexityBot", "UnlistedCrawler"]:
+            for route in ["admin/", "private/example", "searchindex.json"]:
+                self.assertFalse(robots.can_fetch(agent, BASE + route), f"{agent}: {route}")
         self.assertIn(BASE + "sitemap.xml", robots.site_maps())
+
+    def test_translations_have_reciprocal_languages_without_duplicate_canonicals(self):
+        expected_pages = set()
+        for stem in ["technology", "content-creation"]:
+            expected = {"en": BASE + f"passion/{stem}/", "it": BASE + f"passion/{stem}_it/"}
+            for code, url in expected.items():
+                page = Page(local_file(url))
+                expected_pages.add(page.path)
+                self.assertEqual(page.alternates, expected)
+                self.assertEqual(page.canonical, [url])
+                self.assertEqual(page.lang, "it-IT" if code == "it" else "en-US")
+                self.assertEqual(page.meta["og:locale"], page.lang.replace("-", "_"))
+                self.assertEqual(page.meta["og:locale:alternate"], "en_US" if code == "it" else "it_IT")
+                self.assertEqual(page.of_type("WebPage")[0]["inLanguage"], page.lang)
+                self.assertNotIn("noindex", page.meta["robots"])
+        self.assertEqual({p.path for p in self.pages if p.alternates}, expected_pages)
+
+    def test_preview_metadata_uses_bounded_real_image_dimensions(self):
+        checked = set()
+        for page in self.pages:
+            if "og:image:width" not in page.meta:
+                continue
+            url = page.meta["og:image"]
+            path = local_file(url)
+            expected = (int(page.meta["og:image:width"]), int(page.meta["og:image:height"]))
+            self.assertEqual(jpeg_size(path), expected, str(page.path))
+            self.assertLessEqual(max(expected), 1200)
+            self.assertEqual(page.meta["twitter:image"], url)
+            self.assertTrue(page.meta["og:image:alt"])
+            for node in page.of_type("BlogPosting") + page.of_type("ScholarlyArticle"):
+                self.assertEqual(node["image"]["url"], url)
+                self.assertEqual((node["image"]["width"], node["image"]["height"]), expected)
+            checked.add(url)
+        self.assertGreater(len(checked), 40)
+
+    def test_blog_card_loading_priority_is_local_to_each_render(self):
+        for page in self.pages:
+            if not page.card_images:
+                continue
+            route = page.path.relative_to(OUTPUT).as_posix()
+            is_archive = route.startswith("blog/") and bool(page.of_type("CollectionPage") or page.of_type("Blog"))
+            for index, images in enumerate(page.card_images):
+                priority = is_archive and index < 3
+                for attrs in images:
+                    self.assertEqual(attrs.get("loading"), "eager" if priority else "lazy", f"{route} card {index}")
+                    self.assertEqual(attrs.get("fetchpriority"), "high" if priority else None, f"{route} card {index}")
+
+    def test_feeds_only_link_to_indexable_pages_and_have_valid_dates(self):
+        feeds = list(OUTPUT.rglob("index.xml"))
+        self.assertGreater(len(feeds), 200)
+        for path in feeds:
+            channel = ET.parse(path).find("channel")
+            self.assertIsNotNone(channel, str(path))
+            urls = []
+            for item in channel.findall("item"):
+                url = item.findtext("link")
+                self.assertTrue(url and url.startswith(BASE), str(path))
+                self.assertEqual(item.findtext("guid"), url)
+                target = local_file(url)
+                self.assertTrue(target.is_file(), f"{path}: {url}")
+                self.assertNotIn("noindex", Page(target).meta["robots"], f"{path}: {url}")
+                urls.append(url)
+            self.assertEqual(len(urls), len(set(urls)), str(path))
+            for node in channel.iter():
+                if node.tag in ["pubDate", "lastBuildDate"]:
+                    self.assertGreaterEqual(parsedate_to_datetime(node.text).year, 2000, str(path))
+        blog_items = ET.parse(OUTPUT / "blog/index.xml").findall("channel/item")
+        self.assertGreater(len(blog_items), 40)
+        self.assertTrue(all("/blog/" in item.findtext("link") for item in blog_items))
+
+    def test_aliases_resolve_directly_to_real_canonical_pages(self):
+        redirects = [p for p in self.all_pages if "refresh" in p.meta]
+        self.assertGreater(len(redirects), 0)
+        for page in redirects:
+            self.assertEqual(len(page.canonical), 1)
+            target = local_file(page.canonical[0])
+            self.assertTrue(target.is_file(), str(page.path))
+            destination = Page(target)
+            self.assertNotIn("refresh", destination.meta)
+            self.assertEqual(destination.canonical, page.canonical)
 
     def test_paginated_archives_have_their_own_canonical_and_schema_urls(self):
         count = 0
