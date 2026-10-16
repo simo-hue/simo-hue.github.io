@@ -1,6 +1,6 @@
 {{- /* Head-only metadata. Never changes headings, cards or search previews. */ -}}
 {{- $title := .Params.seo_title | default .Params.meta_title | default .Title -}}
-{{- $description := .Params.seo_description | default .Description | default (.Summary | plainify | truncate 155) | default site.Params.metadata.description -}}
+{{- $description := .Params.seo_description | default .Description | default (.Summary | plainify | truncate 155) | default hugo.Data.entity.meta_description -}}
 {{- if .IsHome -}}
   {{- $title = hugo.Data.entity.meta_title -}}
   {{- $description = hugo.Data.entity.meta_description -}}
@@ -16,4 +16,6 @@
     {{- $title = printf "%s — Page %d" $title $pager.PageNumber -}}
   {{- end -}}
 {{- end -}}
-{{- return (dict "title" $title "description" ($description | plainify)) -}}
+{{- /* JSON-LD strings do not decode HTML character references. Normalize once
+       so head attributes and every structured-data consumer use the same text. */ -}}
+{{- return (dict "title" ($title | htmlUnescape) "description" ($description | plainify | htmlUnescape)) -}}

@@ -1,0 +1,50 @@
+{{/* Cache by feature flags, never by the first page rendered. Core stays shared
+     so navigating to a gallery does not download Spotlight/navigation again. */}}
+{{ $features := . }}
+{{ $core := slice }}
+{{ $plugins := slice }}
+{{ $lazy := slice }}
+{{ range site.Params.plugins.js }}
+  {{ if not (findRE "^http" .link) }}
+    {{ $include := true }}
+    {{ $optional := false }}
+    {{ if eq .link "plugins/swiper/swiper-bundle.js" }}
+      {{ $include = $features.swiper }}{{ $optional = true }}
+    {{ else if eq .link "plugins/glightbox/glightbox.js" }}
+      {{ $include = $features.lightbox }}{{ $optional = true }}
+    {{ else if eq .link "js/gallery-slider.js" }}
+      {{ $include = $features.gallery }}
+    {{ else if eq .link "plugins/youtube-lite.js" }}
+      {{ $include = $features.youtube }}
+    {{ end }}
+    {{ if $include }}
+      {{ $resource := resources.Get .link }}
+      {{ if eq .link "js/search.js" }}
+        {{ $resource = $resource | js.Build (dict "targetPath" "js/spotlight.js" "target" "es2018") }}
+      {{ end }}
+      {{ if $optional }}
+        {{ $plugins = $plugins | append $resource }}
+      {{ else if .lazy }}
+        {{ $lazy = $lazy | append $resource }}
+      {{ else }}
+        {{ $core = $core | append $resource }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ $core = $core | append (resources.Get "js/main.js") }}
+{{ $bundles := slice }}
+{{ if $plugins }}
+  {{ $bundles = $bundles | append ($plugins | resources.Concat (printf "js/script-features-%t-%t.js" .swiper .lightbox)) }}
+{{ end }}
+{{ $bundles = $bundles | append ($core | resources.Concat "js/script.js") }}
+{{ if $lazy }}
+  {{ $bundles = $bundles | append ($lazy | resources.Concat (printf "js/script-lazy-%t-%t.js" .gallery .youtube)) }}
+{{ end }}
+{{ $result := slice }}
+{{ range $bundles }}
+  {{ $bundle := . }}
+  {{ if hugo.IsProduction }}{{ $bundle = $bundle | minify | fingerprint }}{{ end }}
+  {{ $result = $result | append $bundle }}
+{{ end }}
+{{ return $result }}

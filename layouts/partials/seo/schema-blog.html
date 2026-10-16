@@ -1,7 +1,7 @@
 {{- /* Project write-ups are articles. Only explicit scholarly records use
        ScholarlyArticle; do not infer SoftwareApplication from a blog section. */ -}}
 {{- if and .IsPage (in site.Params.mainSections .Section) -}}
-{{- $desc := (partial "seo/metadata.html" .).description | htmlUnescape -}}
+{{- $desc := (partial "seo/metadata.html" .).description -}}
 {{- $author := site.Params.metadata.author -}}
 {{- with .Params.author -}}
   {{- $author = . -}}
@@ -60,7 +60,7 @@
     {{- $schema = merge $schema (dict "operatingSystem" .) -}}
   {{- end -}}
 {{- else -}}
-  {{- $schema = merge $schema (dict "headline" .Title) -}}
+  {{- $schema = merge $schema (dict "headline" (.Params.seo_title | default .Title | htmlUnescape)) -}}
   {{- /* The DOI identifies the full paper, not this site's shorter summary. */ -}}
   {{- if ne $type "ScholarlyArticle" -}}
     {{- $schema = merge $schema (dict "wordCount" .WordCount) -}}

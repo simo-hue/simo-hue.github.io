@@ -16,40 +16,44 @@
 
     // Testimonial Slider
     // ----------------------------------------
-    new Swiper(".testimonial-slider", {
-        spaceBetween: 24,
-        loop: true,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        },
-        navigation: {
-            nextEl: ".testimonial-slider-next",
-            prevEl: ".testimonial-slider-prev",
-        },
-        pagination: {
-            el: ".testimonial-slider-pagination",
-            type: "bullets",
-            clickable: true,
-        },
-        breakpoints: {
-            768: {
-                slidesPerView: 2,
+    if (typeof Swiper === "function" && document.querySelector(".testimonial-slider")) {
+        new Swiper(".testimonial-slider", {
+            spaceBetween: 24,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
             },
-            992: {
-                slidesPerView: 3,
+            navigation: {
+                nextEl: ".testimonial-slider-next",
+                prevEl: ".testimonial-slider-prev",
             },
-        },
-    });
+            pagination: {
+                el: ".testimonial-slider-pagination",
+                type: "bullets",
+                clickable: true,
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                992: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+    }
 
     // Glightbox Init
     // ----------------------------------------
-    const lightbox = GLightbox({
-        selector: ".glightbox",
-        touchNavigation: true,
-        loop: true,
-        autoplayVideos: true
-    });
+    if (typeof GLightbox === "function" && document.querySelector(".glightbox")) {
+        GLightbox({
+            selector: ".glightbox",
+            touchNavigation: true,
+            loop: true,
+            autoplayVideos: true
+        });
+    }
 
     // Blog Prose Scroll Reveal Animation
     // ----------------------------------------

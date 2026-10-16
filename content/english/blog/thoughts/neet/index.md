@@ -3,6 +3,8 @@ aliases:
   - "/blog/thought/neet/"
 title: "Confessions of a 20-Year-Old Tech NEET: Figuring Out the Next Step"
 description: "I'm 20, I love tech, but I'm currently a NEET. Here's my honest reflection on where I'm at and what I'm planning for the future."
+seo_title: "Life After a Computer Science Degree: Finding the Next Step"
+seo_description: "An April 2026 reflection by Simone Mattioli on life after his Computer Science degree, learning AI, building tools and planning his next step."
 date: 2026-04-01T09:36:00+02:00
 image: cover.webp
 slug: neet

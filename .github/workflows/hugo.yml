@@ -52,6 +52,10 @@ jobs:
           hugo --gc --minify --baseURL "https://simo-hue.github.io/"
       - name: Validate generated SEO metadata
         run: npm run test:seo
+      - name: Validate search and page script behavior
+        run: |
+          npm run test:search
+          npm run test:scripts
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

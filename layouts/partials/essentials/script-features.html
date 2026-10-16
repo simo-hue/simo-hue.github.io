@@ -1,0 +1,17 @@
+{{/* Inspect rendered shortcodes as well as Markdown HTML. Template-only widgets
+     can opt in through script_features: [swiper, lightbox, gallery, youtube]. */}}
+{{ $content := string .Content }}
+{{ $classes := slice }}
+{{ range findRE `<[a-zA-Z][^>]*>` $content }}
+  {{ range findRE `(?i)\sclass\s*=\s*("[^"]*"|'[^']*'|[^\s>]+)` . }}
+    {{ $value := replaceRE `(?i)^\sclass\s*=\s*` "" . }}
+    {{ $value = strings.Trim $value "\"'" }}
+    {{ $classes = union $classes (findRE `\S+` $value) }}
+  {{ end }}
+{{ end }}
+{{ $explicit := .Params.script_features | default slice }}
+{{ $gallery := or (in $classes "gallery") (in $classes "gallery-slider") (in $explicit "gallery") }}
+{{ $swiper := or (in $classes "testimonial-slider") (in $classes "gallery-slider") (in $explicit "swiper") }}
+{{ $lightbox := or (in $classes "glightbox") (in $explicit "lightbox") }}
+{{ $youtube := or (gt (len (findRE `<lite-youtube[\s>]` $content)) 0) (in $explicit "youtube") }}
+{{ return (dict "swiper" $swiper "lightbox" $lightbox "gallery" $gallery "youtube" $youtube) }}

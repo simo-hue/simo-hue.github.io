@@ -1507,3 +1507,22 @@ NEXT: review the remaining content-judgment items in TO_SIMO_DO.md (thin "Future
 - Output: `.tmp/seo-combined-final`; baseline: `.tmp/seo-third-before`; metrics: `.tmp/seo-combined-metrics.json`.
 - Changes remain local, uncommitted and unpublished. No new manual actions; `TO_SIMO_DO.md` was left unchanged.
 - Immediate next step: review and publish these changes, then follow the already-recorded Google/Bing recrawl and measurement steps.
+
+### Current Status — further metadata and script optimization (in progress, 2026-10-16)
+
+- Completed audit: feed/canonical/resource checks remain healthy. Found HTML entities leaking into six WebPage descriptions, stale generic study descriptions, and a historical reflection's misleading current-status metadata.
+- Implemented pending final validation: shared decoded metadata, canonical identity fallback, historically contextual head-only reflection metadata. Visible copy/search remain unchanged.
+- Immediate next step: finish per-page script bundling with guarded initializers, verify interactive behavior and strict presentation preservation, test against deployment's Hugo version, then record measured savings and final validation.
+- Changes remain local and unpublished. No new manual actions identified.
+
+- [2026-10-16 22:36 CEST]: Page-specific scripts and metadata consistency
+- *Details*: Reduced shared site JavaScript from 233,892 to 26,249 bytes on 329 pages (88.8%) and to 82,500 bytes on 11 lightbox pages (64.7%). Optional gallery/slider/YouTube libraries now load only where needed; shared Spotlight/navigation behavior remains cached across pages. Corrected escaped punctuation in WebPage descriptions, replaced stale generic study metadata with the canonical identity description, and contextualized the existing NEET reflection as an April 2026 historical article in head/schema only. Visible copy, styling and Spotlight are preserved.
+- *Tech Notes*: Added `essentials/script-features.html` and `script-bundles.html`; both base layouts now call a per-page wrapper that caches bundles by feature flags. Guarded optional initializers in `assets/js/main.js`, added a local gallery initializer without duplicate lightbox creation, and retained deferred ordered execution/SRI/fingerprints. `script_features` supports future template-only controls. Added seven tests under `tests/scripts-*.test.mjs`, `npm run test:scripts`, and CI search/script checks. Expanded SEO checks to shared metadata consistency, historical framing and actual bundle integrity. No dependencies, services, credentials or manual setup changes.
+- *Validation*: Builds passed on Hugo 0.167.0 and deployment-pinned 0.163.3. All 18 SEO, 18 Spotlight and 7 script tests passed. Same-version before/after checks cover all 340 nonredirect bodies, preserving stylesheets/search JSON and normalizing only intended scheduling attributes and site-bundle tags; bundle behavior is checked separately. Isolated Chrome verified Spotlight/search/Escape, theme switching, mobile navigation and all 11 lightbox pages with no page errors. External video playback and field speed/ranking gains are not claimed. Renewed feed/resource audit found no further substantive defects. Full report: `SEO_AUDIT/2026-10-16-script-and-metadata-optimization.md`.
+
+### Current Status — further metadata and script optimization (complete)
+
+- Completed: additional audits, metadata corrections, script splitting, runtime/browser checks, build compatibility, presentation preservation, CI gates and documentation.
+- Local output: `.tmp/seo-deep-local-final`; deployment-version output: `.tmp/seo-deep-final`. Same-version baselines: `.tmp/seo-combined-final` and `.tmp/seo-ci-compatible`.
+- Changes remain local, uncommitted and unpublished. No new manual actions; `TO_SIMO_DO.md` was not changed.
+- Immediate next step: review and publish, then measure through the existing Google/Bing dashboards. Additional speculative metadata is not required for this implementation.

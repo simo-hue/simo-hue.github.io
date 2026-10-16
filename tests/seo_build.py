@@ -4,6 +4,8 @@ SEO_BUILD_DIR selects output (default public). SEO_BASELINE_DIR optionally
 checks the visible page contract against a previous build.
 """
 import json
+import base64
+import hashlib
 import os
 from pathlib import Path
 import re
@@ -29,6 +31,7 @@ class Page(HTMLParser):
         self.canonical = []
         self.styles = []
         self.schemas = []
+        self.scripts = []
         self.lang = ""
         self.alternates = {}
         self.card_images = []
@@ -58,6 +61,8 @@ class Page(HTMLParser):
             self.styles.append(attrs["href"])
         if tag == "script" and attrs.get("type") == "application/ld+json":
             self.json_buffer = ""
+        if tag == "script" and attrs.get("src"):
+            self.scripts.append(attrs)
 
     def handle_data(self, data):
         if self.json_buffer is not None:
@@ -96,8 +101,26 @@ def body(html):
         return None
     # Older baselines used a render-order-dependent shared priority store.
     # Check scheduling separately; all text, images, links, classes,
-    # controls and inline scripts must still match exactly.
-    return re.sub(r'\s(?:loading|fetchpriority)="[^"]*"', "", match[0])
+    # controls and inline scripts must still match exactly. Site bundle tags
+    # may split by feature; their integrity/loading/runtime are checked separately.
+    value = re.sub(r'\s(?:loading|fetchpriority)="[^"]*"', "", match[0])
+    def strip_bundle(match):
+        parser = ScriptTag()
+        parser.feed(match[0])
+        return "" if is_site_bundle(parser.attrs.get("src", "")) else match[0]
+    return re.sub(r'<script\b[^>]*>\s*</script>', strip_bundle, value)
+
+
+def is_site_bundle(url):
+    return bool(re.fullmatch(r"/js/script(?:[-.][a-zA-Z0-9-]+)*\.js", url))
+
+
+class ScriptTag(HTMLParser):
+    attrs = {}
+
+    def handle_starttag(self, tag, attrs):
+        if tag == "script":
+            self.attrs = dict(attrs)
 
 
 def jpeg_size(path):
@@ -140,11 +163,33 @@ class SEOOutput(unittest.TestCase):
                 if "noindex" not in page.meta.get("robots", ""):
                     self.assertNotIn(page.meta["description"].strip().lower(), ["to do", "todo", "tbd"])
                 self.assertEqual(page.meta["description"], page.meta["og:description"])
-                for article in page.of_type("BlogPosting") + page.of_type("ScholarlyArticle"):
-                    self.assertEqual(article["description"], page.meta["description"])
+                for node in page.of_type("WebPage") + page.of_type("BlogPosting") + page.of_type("ScholarlyArticle"):
+                    self.assertEqual(node["description"], page.meta["description"])
                 self.assertNotIn("0001-", json.dumps(page.meta))
                 self.assertNotIn("0001-", json.dumps(page.schemas))
                 self.assertFalse(page.of_type("FAQPage"))
+
+    def test_historical_reflection_does_not_advertise_an_outdated_current_status(self):
+        page = self.page("blog/thoughts/neet")
+        self.assertIn("April 2026 reflection", page.meta["description"])
+        self.assertNotIn("20-Year-Old", page.meta["og:title"])
+        self.assertEqual(page.of_type("BlogPosting")[0]["headline"], "Life After a Computer Science Degree: Finding the Next Step")
+        self.assertIn("Confessions of a 20-Year-Old Tech NEET", body(page.html))
+
+    def test_site_bundles_resolve_with_matching_integrity_and_deferred_execution(self):
+        checked = {}
+        for page in self.pages:
+            bundles = [s for s in page.scripts if is_site_bundle(s["src"])]
+            self.assertTrue(bundles, str(page.path))
+            self.assertEqual(len(bundles), len({s["src"] for s in bundles}), str(page.path))
+            for script in bundles:
+                self.assertIn("defer", script)
+                self.assertNotIn("async", script)
+                path = local_file(script["src"])
+                self.assertTrue(path.is_file(), str(path))
+                if path not in checked:
+                    checked[path] = "sha256-" + base64.b64encode(hashlib.sha256(path.read_bytes()).digest()).decode()
+                self.assertEqual(script["integrity"], checked[path])
 
     def test_identity_is_consistent_on_home_and_biography(self):
         for path in ["", "about"]:

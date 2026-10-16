@@ -28,7 +28,7 @@
       {{ block "main" . }}{{ end }}
     </main>
 
-    <!-- script (always cache it) -->
-    {{ partialCached "essentials/script.html" . }}
+    <!-- Per-page features select a cached script bundle. -->
+    {{ partial "essentials/script.html" . }}
   </body>
 </html>
