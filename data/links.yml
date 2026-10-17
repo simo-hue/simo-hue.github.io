@@ -115,6 +115,13 @@ sections:
         button_text: "View CV / Resume"
         color: "bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300"
 
+      - title: "Failure CV"
+        description: "A transparent log of rejections, pivots, and lessons learned along the way."
+        icon: "fas fa-file-alt"
+        link: "/docs/Failure_CV.pdf"
+        button_text: "View Failure CV"
+        color: "bg-rose-50 dark:bg-rose-900/20 text-rose-700 dark:text-rose-300"
+
       - title: "High school diploma — ITT Marconi Rovereto"
         description: "View my high school diploma received from ITT Marconi of Rovereto."
         icon: "fas fa-graduation-cap"

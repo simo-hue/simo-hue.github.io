@@ -112,6 +112,24 @@ import {
         },
       ),
       action(
+        "failure-cv",
+        "Download Failure CV",
+        "Save Simone’s failure CV as a PDF.",
+        "fcv",
+        "download",
+        {
+          href: config.failure_cv,
+          download: true,
+          aliases: [
+            "failure cv",
+            "failures",
+            "rejections",
+            "failure resume",
+            "cv of failures",
+          ],
+        },
+      ),
+      action(
         "theme",
         `Switch to ${dark ? "light" : "dark"} mode`,
         "Change the site’s appearance. Your preference stays in this browser.",
@@ -175,9 +193,12 @@ import {
       ),
     ].filter(
       (entry) =>
-        !["action:resume", "action:github", "action:linkedin"].includes(
-          entry.id,
-        ) || entry.href,
+        ![
+          "action:resume",
+          "action:failure-cv",
+          "action:github",
+          "action:linkedin",
+        ].includes(entry.id) || entry.href,
     );
   }
   function allEntries() {

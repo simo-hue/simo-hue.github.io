@@ -309,6 +309,67 @@ a.ds-link:hover {
 }
 .dark .ds-btn-ghost:hover { border-color: var(--color-darkmode-accent); color: var(--color-darkmode-text-dark); }
 
+/* CV actions container (side-by-side) */
+.ds-cv-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Compact segmented pill button for Résumé / Failure CV */
+.ds-btn-group {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  background: transparent;
+  padding: 0.2rem 0.25rem;
+  transition: border-color 0.18s ease;
+}
+.dark .ds-btn-group {
+  border-color: var(--color-darkmode-border);
+}
+.ds-btn-group:hover {
+  border-color: var(--color-accent);
+}
+.dark .ds-btn-group:hover {
+  border-color: var(--color-darkmode-accent);
+}
+
+.ds-btn-group-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text);
+  padding: 0.35rem 0.65rem;
+  border-radius: 2px;
+  transition: color 0.18s ease, background 0.18s ease;
+  white-space: nowrap;
+}
+.dark .ds-btn-group-item {
+  color: var(--color-darkmode-text);
+}
+.ds-btn-group-item:hover {
+  color: var(--color-text-dark);
+  background: rgba(0, 0, 0, 0.05);
+}
+.dark .ds-btn-group-item:hover {
+  color: var(--color-darkmode-text-dark);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.ds-btn-group-divider {
+  width: 1px;
+  height: 1.15rem;
+  background: var(--color-border);
+  margin: 0 0.1rem;
+}
+.dark .ds-btn-group-divider {
+  background: var(--color-darkmode-border);
+}
+
 /* ------------------------------------------------------------------ hero -- */
 .ds-hero {
   position: relative;

@@ -38,6 +38,16 @@ label = "Download my Personal Resume"
 link = "docs/Resume.pdf"
 download = true
 
+# Failure CV button
+[failure_cv_button]
+enable = true
+label = "Download my Failure CV"
+link = "docs/Failure_CV.pdf"
+download = true
+
+# CV header presentation style: "split" (two separate ghost buttons) or "segmented" (compact pill)
+cv_header_style = "split"
+
 # search
 # Local Spotlight overrides the module's templates and scripts; indexes all published content pages.
 [search]

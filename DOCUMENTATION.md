@@ -1,3 +1,25 @@
+# Failure CV Integration
+## Data: 2026-10-17
+## Modifiche
+Integrated Simone's "Failure CV" across the portfolio to mirror the exact behavior of the professional Résumé. Placed the genuine FlowCV PDF document into `static/docs/Failure_CV.pdf`, added direct download behavior in the header navigation (matching Résumé with `download = true` and `fa-arrow-down` icon), supported both split individual ghost buttons and a compact segmented pill button, wired the document into the "Résumé & education" accordion on `/links`, and registered a fast ⌘K Spotlight download action with aliases ("failure cv", "failures", "rejections", "cv of failures", "failure resume").
+
+### File Modificati
+- [`static/docs/Failure_CV.pdf`](file:///Users/simo/Developer/simo-hue.github.io/static/docs/Failure_CV.pdf): **[NEW]** Vector PDF of Simone's Failure CV.
+- [`config/_default/params.toml`](file:///Users/simo/Developer/simo-hue.github.io/config/_default/params.toml): Added `[failure_cv_button]` config and `cv_header_style` toggle ("split" / "segmented").
+- [`layouts/partials/essentials/header.html`](file:///Users/simo/Developer/simo-hue.github.io/layouts/partials/essentials/header.html): Added desktop CV action buttons (split & segmented styles) and mobile navigation sheet link.
+- [`data/links.yml`](file:///Users/simo/Developer/simo-hue.github.io/data/links.yml): Added Failure CV item to the "Résumé & education" documents group.
+- [`layouts/partials/search-index.html`](file:///Users/simo/Developer/simo-hue.github.io/layouts/partials/search-index.html): Injected `failure_cv` into client search configuration.
+- [`assets/js/search.js`](file:///Users/simo/Developer/simo-hue.github.io/assets/js/search.js): Added Spotlight command action `action:failure-cv` with query aliases and external PDF viewing behavior.
+- [`assets/css/ds.css`](file:///Users/simo/Developer/simo-hue.github.io/assets/css/ds.css): Added `.ds-cv-actions`, `.ds-btn-group`, and `.ds-btn-group-item` styling with light/dark mode support.
+- [`tests/spotlight-engine.test.mjs`](file:///Users/simo/Developer/simo-hue.github.io/tests/spotlight-engine.test.mjs): Added unit test coverage for Failure CV search resolution.
+
+## Tech Notes
+- Toggle header style in `config/_default/params.toml` via `cv_header_style = "split"` or `cv_header_style = "segmented"`.
+- Verified production Hugo build (`npm run build`, exit code 0) and Spotlight test suite (`npm run test:search`, 18/18 passing).
+- Verified visually in Chrome across dark and light modes.
+
+---
+
 # Globe Pin: Esztergom / Štúrovo Border Crossing
 ## Data: 2026-09-14
 ## Modifiche

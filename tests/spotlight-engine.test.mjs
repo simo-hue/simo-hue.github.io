@@ -39,6 +39,18 @@ const entries = [
     aliases: ["cv", "resume", "curriculum vitae"],
   },
   {
+    id: "failure-cv",
+    title: "Download Failure CV",
+    kind: "actions",
+    aliases: [
+      "failure cv",
+      "failures",
+      "rejections",
+      "failure resume",
+      "cv of failures",
+    ],
+  },
+  {
     id: "about",
     title: "About",
     kind: "pages",
@@ -58,6 +70,9 @@ test("exact titles outrank incidental body and category matches", () => {
 test("aliases, accents and case resolve the intended action", () => {
   for (const query of ["CV", "résumé", "resume", "curriculum vitae"]) {
     assert.equal(rankEntries(entries, query)[0].id, "resume");
+  }
+  for (const query of ["failure cv", "failures", "rejections", "cv of failures"]) {
+    assert.equal(rankEntries(entries, query)[0].id, "failure-cv");
   }
   assert.equal(normalize("  Héllo—WORLD!  "), "hello world");
 });

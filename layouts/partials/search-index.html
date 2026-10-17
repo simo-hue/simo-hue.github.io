@@ -9,6 +9,7 @@
     "indexURL" (printf "%s?v=2" ("searchindex.json" | relLangURL))
     "email" hugo.Data.entity.email
     "resume" (site.Params.navigation_button.link | relURL)
+    "failure_cv" (site.Params.failure_cv_button.link | relURL)
     "profiles" $profiles
     "suggestions" (slice ("projects/" | relLangURL) ("about/" | relLangURL) ("blog/" | relLangURL) "action:resume")
   -}}

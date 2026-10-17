@@ -51,14 +51,46 @@
         <!-- theme -->
         {{ partial "components/theme-switcher" (dict "Class" "") }}
 
-        <!-- résumé -->
+        <!-- CV & Failure CV buttons -->
         {{ if site.Params.navigation_button.enable }}
-          <a href="{{ site.Params.navigation_button.link | relLangURL }}"
-             class="ds-btn ds-btn-ghost ds-show-desktop-lg"
-             {{ if site.Params.navigation_button.download }}download{{ end }}>
-            <i class="fa-solid fa-arrow-down text-xs" aria-hidden="true"></i>
-            Résumé
-          </a>
+          {{ if eq site.Params.cv_header_style "segmented" }}
+            <div class="ds-btn-group ds-show-desktop-lg" role="group" aria-label="Curriculum Vitae downloads">
+              <a href="{{ site.Params.navigation_button.link | relLangURL }}"
+                 class="ds-btn-group-item"
+                 {{ if site.Params.navigation_button.download }}download{{ end }}
+                 title="Download Personal Résumé">
+                <i class="fa-solid fa-arrow-down text-xs" aria-hidden="true"></i>
+                <span>Résumé</span>
+              </a>
+              {{ if site.Params.failure_cv_button.enable }}
+                <span class="ds-btn-group-divider" aria-hidden="true"></span>
+                <a href="{{ site.Params.failure_cv_button.link | relLangURL }}"
+                   class="ds-btn-group-item"
+                   {{ if site.Params.failure_cv_button.download }}download{{ end }}
+                   title="Download Failure CV">
+                  <i class="fa-solid fa-arrow-down text-xs" aria-hidden="true"></i>
+                  <span>Failure CV</span>
+                </a>
+              {{ end }}
+            </div>
+          {{ else }}
+            <div class="ds-cv-actions ds-show-desktop-lg">
+              <a href="{{ site.Params.navigation_button.link | relLangURL }}"
+                 class="ds-btn ds-btn-ghost"
+                 {{ if site.Params.navigation_button.download }}download{{ end }}>
+                <i class="fa-solid fa-arrow-down text-xs" aria-hidden="true"></i>
+                Résumé
+              </a>
+              {{ if site.Params.failure_cv_button.enable }}
+                <a href="{{ site.Params.failure_cv_button.link | relLangURL }}"
+                   class="ds-btn ds-btn-ghost"
+                   {{ if site.Params.failure_cv_button.download }}download{{ end }}>
+                  <i class="fa-solid fa-arrow-down text-xs" aria-hidden="true"></i>
+                  Failure CV
+                </a>
+              {{ end }}
+            </div>
+          {{ end }}
         {{ end }}
 
         <!-- mobile menu -->
@@ -85,6 +117,12 @@
         {{ if site.Params.navigation_button.enable }}
           <a href="{{ site.Params.navigation_button.link | relLangURL }}" {{ if site.Params.navigation_button.download }}download{{ end }}>
             <span>{{ site.Params.navigation_button.label }}</span>
+            <span class="idx">↓</span>
+          </a>
+        {{ end }}
+        {{ if site.Params.failure_cv_button.enable }}
+          <a href="{{ site.Params.failure_cv_button.link | relLangURL }}" {{ if site.Params.failure_cv_button.download }}download{{ end }}>
+            <span>{{ site.Params.failure_cv_button.label }}</span>
             <span class="idx">↓</span>
           </a>
         {{ end }}
