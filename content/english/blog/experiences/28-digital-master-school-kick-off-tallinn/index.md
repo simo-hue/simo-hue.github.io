@@ -15,8 +15,13 @@ locations:
     country: Estonia
     title: "Tallinn City Center"
 draft: false
+image: "cover.JPG"
 slug: 28-digital-master-school-kick-off-tallinn
 tags: [estonia, tallinn, taltech, 28 digital, digital master school, kick-off, university]
+links:
+  - title: Weekly Vlog
+    description: Watch the weekly vlog documenting the 28 Digital Master School Kick-Off
+    website: https://youtu.be/IdHbaPrVm4Q
 ---
 
 ## Introduction
@@ -34,3 +39,9 @@ Attending the official Kick-Off event for the **28 Digital Master School** (the 
 ## Conclusion
 
 <!-- Placeholder: Add personal takeaways, memorable moments, and outlook on the upcoming semesters. -->
+
+## Weekly Vlog
+
+You can watch the weekly vlog covering this experience on YouTube: [Weekly Vlog – Tallinn Kick-Off](https://youtu.be/IdHbaPrVm4Q).
+
+{{< youtube IdHbaPrVm4Q >}}
