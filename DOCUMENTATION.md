@@ -1555,3 +1555,9 @@ NEXT: review the remaining content-judgment items in TO_SIMO_DO.md (thin "Future
 - *Details*: Created a structured article draft and scaffolding for a new personal reflection on "The Power of Online Connection" located at `content/english/blog/thoughts/power of online connection/index.md`. The scaffolding is organized into 5 thematic sections covering digital serendipity, escaping the geographic lottery, proof of work/building in public as a beacon, anatomy of high-resonance connections, and debunking the myth of online friendships. Included a starter geometric dark/copper cover image asset (`cover.webp`) to ensure clean builds.
 - *Tech Notes*: Added leaf bundle under `content/english/blog/thoughts/power of online connection/` with slug `online-connection`, aliases, and tags (`connection`, `serendipity`, `community`, `digital-relationships`, `personal-growth`). Verified full Hugo build (exit code 0, 611 pages) and Spotlight search suite (18/18 passing).
 
+
+---
+
+- [2026-11-10]: Added Globe Pins for Visegrád, Hungary
+  - *Details*: Created a new blog article scaffold at `content/english/blog/experiences/Visegrad Hungary/index.md` with 3 globe map pins: Visegrád Village (47.7842, 18.9775), Visegrád Castle (47.7870, 18.9780), and Predikálószék Lookout (47.7635, 18.9890). All pins are set to `country: Hungary` so they appear on the globe's Hungary panel. Article is set to `draft: true`.
+  - *Tech Notes*: Uses the existing `locations` array front matter pattern (same as Germany Trip, Budapest Trip, etc.). No new dependencies or layout changes needed — the globe reads pins automatically from any page with `locations` in its front matter.
