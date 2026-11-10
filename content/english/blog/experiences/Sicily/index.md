@@ -10,7 +10,7 @@ lon: 14.015356
 country: Italy
 slug: sicily
 draft: false
-seo_noindex: false
+seo_noindex: true
 tags: [mafia, sicily, emotional, educational]
 
 links:

@@ -5,7 +5,6 @@ date: 2026-11-10
 draft: false
 slug: visegrad-hungary-castle-danube-bend
 tags: [hungary, visegrad, travel, europe, danube-bend, castle, hiking]
-image: "cover.webp"
 locations:
   - lat: 47.7842
     lon: 18.9775

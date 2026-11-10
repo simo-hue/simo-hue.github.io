@@ -1559,5 +1559,11 @@ NEXT: review the remaining content-judgment items in TO_SIMO_DO.md (thin "Future
 ---
 
 - [2026-11-10]: Added Globe Pins for Visegrád, Hungary
-  - *Details*: Created a new blog article scaffold at `content/english/blog/experiences/Visegrad Hungary/index.md` with 3 globe map pins: Visegrád Village (47.7842, 18.9775), Visegrád Castle (47.7870, 18.9780), and Predikálószék Lookout (47.7635, 18.9890). All pins are set to `country: Hungary` so they appear on the globe's Hungary panel. Article is set to `draft: true`.
+  - *Details*: Created a new blog article scaffold at `content/english/blog/experiences/Visegrad Hungary/index.md` with 3 globe map pins: Visegrád Village (47.7842, 18.9775), Visegrád Castle (47.7870, 18.9780), and Predikálószék Lookout (47.7635, 18.9890). All pins are set to `country: Hungary` so they appear on the globe's Hungary panel.
   - *Tech Notes*: Uses the existing `locations` array front matter pattern (same as Germany Trip, Budapest Trip, etc.). No new dependencies or layout changes needed — the globe reads pins automatically from any page with `locations` in its front matter.
+
+---
+
+- [2026-11-10 12:15 CET]: Fix SEO Workflow Failures (Missing Cover Image & Sitemap Exclusions)
+  - *Details*: Resolved two SEO test failures in GitHub Actions: (1) In `Visegrad Hungary/index.md`, removed `image: "cover.webp"` until a real image asset is placed in the folder, preventing metadata fallback to a non-existent root cover image. (2) In `Sicily/index.md` and `Crossing a countrys border walking/index.md`, restored `seo_noindex: true` for unfinished drafts to ensure they are excluded from the sitemap.
+  - *Tech Notes*: Full suite verified locally against production build (`rm -rf public && hugo --gc --minify --baseURL "https://simo-hue.github.io/"`): `test:seo` (18/18 passed), `test:search` (18/18 passed), and `test:scripts` (7/7 passed).
