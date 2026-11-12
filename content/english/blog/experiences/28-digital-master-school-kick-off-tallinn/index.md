@@ -24,6 +24,8 @@ links:
     website: https://youtu.be/IdHbaPrVm4Q
 ---
 
+**I’m still writing this article.**
+
 ## Introduction
 
 Attending the official Kick-Off event for the **28 Digital Master School** (the new name following the rebranding of the *EIT Digital Master School*) held in Tallinn, Estonia from October 7 to 11, 2026.

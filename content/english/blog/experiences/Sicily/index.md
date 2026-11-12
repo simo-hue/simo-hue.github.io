@@ -10,7 +10,6 @@ lon: 14.015356
 country: Italy
 slug: sicily
 draft: false
-seo_noindex: true
 tags: [mafia, sicily, emotional, educational]
 
 links:
@@ -20,6 +19,9 @@ links:
 
 ---
 
+**I’m still writing this article.**
+
+<!--
 tour sicilia, da implementare
 
 TO DO:
@@ -35,6 +37,6 @@ TO DO:
 - testimonianza del fotografo ( magari nei thought  mettere che siamo una generazione che si smagnetizzerà -> problema del digitale )
 - Come vogliono rappresentare la loro terra ( senso di appartenenza / eliminazione degli stereotipi)
 - La differenza tra una guida "normale" del 99% ed il top 1% ( come in ogni settore si può eccellere e non)
-
+-->
 
 {{< youtube RdgWMgmqqHk >}}

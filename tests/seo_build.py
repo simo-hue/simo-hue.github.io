@@ -256,7 +256,17 @@ class SEOOutput(unittest.TestCase):
                 self.assertEqual(page.canonical, [url])
         for route in ["blog/experiences/budapest-collegio-don-mazza/", "blog/experiences/28-digital-master-school-kick-off-tallinn/"]:
             self.assertIn(BASE + route, self.urls)
-        for route in ["blog/experiences/sicily/", "blog/experiences/crossing-a-countrys-border-walking/", "search/", "offline/"]:
+        for route in [
+            "blog/experiences/sicily/",
+            "blog/experiences/crossing-a-countrys-border-walking/",
+            "blog/experiences/visegrad-hungary-castle-danube-bend/",
+            "blog/experiences/28-digital-master-school-kick-off-tallinn/",
+            "blog/thoughts/online-connection/",
+        ]:
+            with self.subTest(route=route):
+                self.assertIn(BASE + route, self.urls)
+                self.assertIn("<strong>I’m still writing this article.</strong>", body(self.page(route).html))
+        for route in ["search/", "offline/"]:
             self.assertNotIn(BASE + route, self.urls)
             self.assertIn("noindex", self.page(route).meta["robots"])
 

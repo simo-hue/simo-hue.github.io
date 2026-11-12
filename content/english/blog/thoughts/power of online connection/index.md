@@ -11,6 +11,8 @@ tags: [connection, serendipity, community, digital-relationships, personal-growt
 draft: false
 ---
 
+**I’m still writing this article.**
+
 # Beyond the Screen: The Serendipity Machine
 
 > "The internet is the greatest serendipity engine ever built, but only if you choose to broadcast your frequency instead of silently absorbing the noise."

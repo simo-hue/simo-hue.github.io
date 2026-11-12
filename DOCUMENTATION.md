@@ -1567,3 +1567,7 @@ NEXT: review the remaining content-judgment items in TO_SIMO_DO.md (thin "Future
 - [2026-11-10 12:15 CET]: Fix SEO Workflow Failures (Missing Cover Image & Sitemap Exclusions)
   - *Details*: Resolved two SEO test failures in GitHub Actions: (1) In `Visegrad Hungary/index.md`, removed `image: "cover.webp"` until a real image asset is placed in the folder, preventing metadata fallback to a non-existent root cover image. (2) In `Sicily/index.md` and `Crossing a countrys border walking/index.md`, restored `seo_noindex: true` for unfinished drafts to ensure they are excluded from the sitemap.
   - *Tech Notes*: Full suite verified locally against production build (`rm -rf public && hugo --gc --minify --baseURL "https://simo-hue.github.io/"`): `test:seo` (18/18 passed), `test:search` (18/18 passed), and `test:scripts` (7/7 passed).
+
+- [2026-11-12 16:11 CET]: Publish and index articles in progress
+  - *Details*: Added a first-person writing notice to the published Sicily, border crossing, Visegrád, Tallinn and online connection articles. Kept Sicily’s working notes in the source alongside the public video.
+  - *Tech Notes*: Removed the search-engine exclusion from Sicily and the border crossing. Updated the SEO checks to verify all five sitemap entries and visible notices. Extended the Pages deploy action’s wait from 10 to 20 minutes after the previous deployment timed out during file sync. No new dependencies.

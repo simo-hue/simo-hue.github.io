@@ -3,7 +3,6 @@ title: "Crossing a country's border walking"
 description: "Walking across the Mária Valéria bridge from Esztergom, Hungary to Štúrovo, Slovakia — crossing a country's border on foot."
 date: 2026-09-13
 draft: false
-seo_noindex: true
 slug: crossing-a-countrys-border-walking
 tags: [travel, slovakia, hungary, esztergom, europe]
 image: "cover.png"
@@ -17,3 +16,5 @@ locations:
     country: Slovakia
     title: Štúrovo
 ---
+
+**I’m still writing this article.**

@@ -20,5 +20,4 @@ locations:
     title: Predikálószék Lookout
 ---
 
-🚧 *This article is currently being written. Stay tuned!* 🚧
-
+**I’m still writing this article.**
