@@ -1570,4 +1570,4 @@ NEXT: review the remaining content-judgment items in TO_SIMO_DO.md (thin "Future
 
 - [2026-11-12 16:11 CET]: Publish and index articles in progress
   - *Details*: Added a first-person writing notice to the published Sicily, border crossing, Visegrád, Tallinn and online connection articles. Kept Sicily’s working notes in the source alongside the public video.
-  - *Tech Notes*: Removed the search-engine exclusion from Sicily and the border crossing. Updated the SEO checks to verify all five sitemap entries and visible notices. Extended the Pages deploy action’s wait from 10 to 20 minutes after the previous deployment timed out during file sync. No new dependencies.
+  - *Tech Notes*: Removed the search-engine exclusion from Sicily and the border crossing. Updated the SEO checks to verify all five sitemap entries and visible notices. GitHub caps each Pages deployment attempt at 10 minutes. After a file-sync timeout, the workflow now retries a failed deployment once using the validated artifact and reports the final result. No new dependencies.

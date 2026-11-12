@@ -22,7 +22,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.retry.outputs.page_url }}
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.163.3
@@ -64,6 +64,9 @@ jobs:
           path: ./public
       - name: Deploy to GitHub Pages
         id: deployment
+        continue-on-error: true
         uses: actions/deploy-pages@v4
-        with:
-          timeout: 1200000
+      - name: Retry failed Pages deployment
+        if: ${{ !cancelled() && steps.deployment.outcome == 'failure' }}
+        id: retry
+        uses: actions/deploy-pages@v4
