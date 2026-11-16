@@ -48,7 +48,7 @@
       {{- $entries = $entries | append (merge $pageFields (dict
         "id" $sectionURL "href" $sectionURL "title" "Awards & Honors"
         "aliases" (slice "awards" "honors" "honours" "competitions")
-        "description" "Hackathon wins, a scholarship, and recognition for Mountain Fauna Lover."
+        "description" "Hackathon wins, academic honors, and recognition for Mountain Fauna Lover."
       )) -}}
       {{- range hugo.Data.about.awards -}}
         {{- $url := printf "%s#award-%s" $aboutURL (.title | anchorize) -}}

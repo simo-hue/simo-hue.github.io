@@ -74,7 +74,7 @@ test("data-backed portfolio and biography content is searchable", () => {
 test("awards and features resolve to their About page entries", () => {
   const entries = index.map(prepareEntry);
   assert.equal(rankEntries(entries, "awards")[0].href, "/about/#awards");
-  for (const query of ["FridgeMate", "SPECTRO", "PreventivAI", "EPICURE GPU", "SWAROVSKI OPTIK"]) {
+  for (const query of ["FridgeMate", "SPECTRO", "PreventivAI", "Diploma di Collegio di Merito", "EPICURE GPU", "SWAROVSKI OPTIK"]) {
     assert.ok(rankEntries(entries, query).some(entry => entry.href.startsWith("/about/#award-")), query);
   }
   assert.ok(rankEntries(entries, "30/30 e lode").some(entry => entry.href === "/about/"));

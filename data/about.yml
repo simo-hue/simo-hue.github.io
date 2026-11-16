@@ -61,6 +61,11 @@ awards:
     description: "After connecting on LinkedIn, Lorenzo Cavallini and I met in person for the first time at the hackathon. We won with Italians Quote It Better, a tool that turns client requests into itemized software estimates."
     links:
       - { label: "PreventivAI on GitHub", url: "https://github.com/simo-hue/PreventivAI" }
+  - year: 2025
+    title: "Diploma di Collegio di Merito"
+    description: "Collegio Universitario Don Nicola Mazza awarded me this diploma on 15 December 2025. I was admitted through a competitive selection process and spent three years in the college community in Verona."
+    links:
+      - { label: "My experience at Don Mazza", url: "/blog/experiences/mazza/" }
   - year: 2024
     title: "EPICURE GPU Hackathon · Bologna"
     description: "David and I received a prize for our work with CUDA at CINECA while we were computer science undergraduates at the University of Verona."

@@ -1603,3 +1603,7 @@ NEXT: review the remaining content-judgment items in TO_SIMO_DO.md (thin "Future
 - [2026-11-16 19:39 CET]: Awards in Spotlight search
   - *Details*: Spotlight now links to the Awards & Honors section and each award or feature. Course honors are searchable through About.
   - *Tech Notes*: Hugo generates results and fragment destinations from the shared About data. Verified the production build, 19 search tests, and navigation from a FridgeMate result in Chrome.
+
+- [2026-11-16 19:43 CET]: Don Mazza merit diploma
+  - *Details*: Added the 15 December 2025 diploma to Awards & Honors with a link to the Verona college story.
+  - *Tech Notes*: Verified the production build, all 19 Spotlight tests, and navigation from a mobile-width Spotlight result to the diploma.
