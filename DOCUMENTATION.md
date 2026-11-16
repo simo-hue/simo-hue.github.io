@@ -1587,3 +1587,7 @@ NEXT: review the remaining content-judgment items in TO_SIMO_DO.md (thin "Future
 - [2026-11-16 18:50 CET]: Lessons Along The Way
   - *Details*: Renamed the reflection document in desktop and mobile navigation, the Contact page, and site search. The download now includes the updated FlowCV content.
   - *Tech Notes*: Printed the public FlowCV document to a single-page A4 PDF at /docs/Lessons_Along_The_Way.pdf. Preserved the previous PDF URL and legacy search terms for existing links and queries.
+
+- [2026-11-16 19:04 CET]: Header theme switcher position
+  - *Details*: Moved the theme switcher to the far right on desktop and mobile.
+  - *Tech Notes*: The shared header renders the switcher after the downloads and mobile menu button so keyboard and visual order agree.

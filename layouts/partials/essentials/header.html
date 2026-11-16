@@ -48,9 +48,6 @@
           </button>
         {{ end }}{{ end }}
 
-        <!-- theme -->
-        {{ partial "components/theme-switcher" (dict "Class" "") }}
-
         <!-- CV & Lessons Along The Way buttons -->
         {{ if site.Params.navigation_button.enable }}
           {{ if eq site.Params.cv_header_style "segmented" }}
@@ -97,6 +94,9 @@
         <button type="button" class="ds-iconbtn ds-hide-desktop-lg" data-sheet-toggle aria-label="Menu" aria-expanded="false" aria-controls="mobile-navigation">
           <i class="fa-solid fa-bars"></i>
         </button>
+
+        <!-- theme -->
+        {{ partial "components/theme-switcher" (dict "Class" "") }}
       </div>
     </div>
 
