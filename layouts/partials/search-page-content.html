@@ -10,7 +10,7 @@
   {{- range slice hugo.Data.about.life hugo.Data.about.vision hugo.Data.about.goal -}}
     {{- $text = $text | append .title .content -}}
   {{- end -}}
-  {{- range hugo.Data.about.education -}}{{- $text = $text | append .title .place -}}{{- end -}}
+  {{- range hugo.Data.about.education -}}{{- $text = $text | append .title .place (.honors | default "") -}}{{- end -}}
   {{- range hugo.Data.timeline.items -}}
     {{- $text = $text | append .title .organization .description (.extended_description | default "") -}}
   {{- end -}}

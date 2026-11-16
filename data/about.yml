@@ -37,10 +37,41 @@ education:
     active: true
   - title: "Bachelor's Degree in Computer Science"
     place: "University of Verona"
+    honors: "Earned 30/30 e lode (highest grade with honors) in Programming in C, Computer Architecture, and Network Programming and Security."
     icon: "fa-solid fa-graduation-cap"
   - title: "Technical Diploma (Computer Science)"
     place: "ITT Marconi Rovereto"
     icon: "fa-solid fa-school"
+
+awards:
+  - year: 2026
+    title: "First place · EIT Food Challenge Labs Hungary"
+    description: "Our team won in Budapest with FridgeMate, a clip-on camera prototype designed to help households keep track of food in their fridge and waste less."
+    links:
+      - { label: "FridgeMate landing page", url: "https://simo-hue.github.io/EIT-Food-Challenge-Hackathon-2026/" }
+      - { label: "Pitch deck", url: "https://canva.link/lr0zkipg547op9a" }
+      - { label: "FridgeMate on GitHub", url: "https://github.com/simo-hue/EIT-Food-Challenge-Hackathon-2026" }
+  - year: 2026
+    title: "SPECTRO Scholarship of Excellence"
+    description: "A full tuition waiver and monthly living allowance support my 28DIGITAL double-degree master’s in Autonomous Systems and Intelligent Robots. I’m spending my first year at ELTE in Budapest and my second at KTH in Stockholm."
+    links:
+      - { label: "SPECTRO scholarship programme", url: "https://28digital.eu/eu-collaborations/spectro/" }
+  - year: 2026
+    title: "Hackathon winner · Italians Code It Better"
+    description: "After connecting on LinkedIn, Lorenzo Cavallini and I met in person for the first time at the hackathon. We won with Italians Quote It Better, a tool that turns client requests into itemized software estimates."
+    links:
+      - { label: "PreventivAI on GitHub", url: "https://github.com/simo-hue/PreventivAI" }
+  - year: 2024
+    title: "EPICURE GPU Hackathon · Bologna"
+    description: "David and I received a prize for our work with CUDA at CINECA while we were computer science undergraduates at the University of Verona."
+    links:
+      - { label: "My Bologna write-up", url: "/blog/tech-projects/epicure-hackathon-2024/" }
+
+  - label: "Feature"
+    title: "Mountain Fauna Lover · SWAROVSKI OPTIK"
+    description: "Through my Mountain Fauna Lover collaboration, SWAROVSKI OPTIK featured my field impressions in the Expert Insights section of its ATX spotting scope page."
+    links:
+      - { label: "My testimonial on SWAROVSKI OPTIK", url: "https://www.swarovskioptik.com/int/en/hunting/products/spotting-scopes/atx-stx-btx/atx-stx-btx-set/atx-spotting-scope-system/5006351-B1#:~:text=Simone%20Mattioli" }
 
 passions:
   - name: "Travel & Volunteering"

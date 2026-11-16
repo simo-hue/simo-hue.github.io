@@ -129,7 +129,7 @@ a.ds-text-link:hover { text-decoration: underline; text-underline-offset: 0.3em;
 .ds-about-portrait img { opacity: 1; }
 
 @media (max-width: 1100px) and (min-width: 1024px) {
-  .ds-header-inner { gap: 0.75rem; }
+  .ds-header-inner { gap: 0.5rem; }
   .ds-nav-link { padding-inline: 0.35rem; }
   .ds-header-actions { gap: 0.4rem; }
 }

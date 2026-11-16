@@ -48,6 +48,7 @@
           <div class="ds-edu-item{{ if .active }} active{{ end }}">
             <h3>{{ .title }}</h3>
             <p>{{ .place }}</p>
+            {{ with .honors }}<p>{{ . }}</p>{{ end }}
           </div>
           {{ end }}
         </div>
@@ -94,6 +95,31 @@
   </div>
 </section>
 <hr class="ds-rule" />
+
+{{ with $a.awards }}
+<section class="ds-home-section" id="awards" aria-labelledby="awards-title">
+  <div class="ds-container">
+    <div class="ds-section-head">
+      <h2 class="ds-section-title" id="awards-title">Awards &amp; Honors</h2>
+    </div>
+    <ol class="grid gap-8" role="list">
+      {{ range . }}
+      <li class="ds-award" id="award-{{ .title | anchorize }}">
+        <span class="ds-eyebrow">{{ .year | default .label }}</span>
+        <div>
+          <h3 class="ds-card-title">{{ .title }}</h3>
+          <p class="ds-card-body max-w-prose">{{ .description }}</p>
+          <div class="ds-award-links">
+            {{ range .links }}<a class="ds-accent underline" href="{{ .url | relURL }}">{{ .label }}</a>{{ end }}
+          </div>
+        </div>
+      </li>
+      {{ end }}
+    </ol>
+  </div>
+</section>
+<hr class="ds-rule" />
+{{ end }}
 
 <!-- Explore more -->
 <section class="section">

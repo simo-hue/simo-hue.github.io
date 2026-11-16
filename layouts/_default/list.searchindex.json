@@ -41,6 +41,23 @@
       "readingTime" $readingTime "tags" (.Params.tags | default slice)
       "topics" $topics "thumbnail" (partial "search-thumbnail.html" .)
     ) -}}
+    {{- if and (eq .Type "about") hugo.Data.about.awards -}}
+      {{- $aboutURL := .RelPermalink -}}
+      {{- $sectionURL := printf "%s#awards" .RelPermalink -}}
+      {{- $pageFields := dict "kind" "pages" "icon" "person" "category" "Awards & Honors" "tags" (slice "recognition") -}}
+      {{- $entries = $entries | append (merge $pageFields (dict
+        "id" $sectionURL "href" $sectionURL "title" "Awards & Honors"
+        "aliases" (slice "awards" "honors" "honours" "competitions")
+        "description" "Hackathon wins, a scholarship, and recognition for Mountain Fauna Lover."
+      )) -}}
+      {{- range hugo.Data.about.awards -}}
+        {{- $url := printf "%s#award-%s" $aboutURL (.title | anchorize) -}}
+        {{- $entries = $entries | append (merge $pageFields (dict
+          "id" $url "href" $url "title" .title "aliases" (slice)
+          "description" .description "content" (printf "%v %s" (.year | default .label) (delimit (collections.Apply .links "index" "." "label") " "))
+        )) -}}
+      {{- end -}}
+    {{- end -}}
   {{- end -}}
 {{- end -}}
 {{- $entries | jsonify -}}

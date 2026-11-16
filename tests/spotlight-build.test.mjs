@@ -17,12 +17,13 @@ test("every search entry has a unique, generated destination and structured text
     assert.ok(["pages", "writing"].includes(entry.kind));
     assert.ok(Array.isArray(entry.aliases));
     assert.ok(Array.isArray(entry.tags));
-    assert.ok(
-      fs.existsSync(
-        path.join(output, decodeURIComponent(entry.href), "index.html"),
-      ),
-      entry.href,
-    );
+    const url = new URL(entry.href, "https://example.test");
+    const file = path.join(output, decodeURIComponent(url.pathname), "index.html");
+    assert.ok(fs.existsSync(file), entry.href);
+    if (url.hash) {
+      const ids = [...fs.readFileSync(file, "utf8").matchAll(/\bid=["']?([^"' >]+)/g)];
+      assert.ok(ids.some((match) => match[1] === decodeURIComponent(url.hash.slice(1))), entry.href);
+    }
   }
 });
 test("all primary destinations are indexed; shells, taxonomy noise and drafts are excluded", () => {
@@ -70,6 +71,15 @@ test("data-backed portfolio and biography content is searchable", () => {
     ),
   );
 });
+test("awards and features resolve to their About page entries", () => {
+  const entries = index.map(prepareEntry);
+  assert.equal(rankEntries(entries, "awards")[0].href, "/about/#awards");
+  for (const query of ["FridgeMate", "SPECTRO", "PreventivAI", "EPICURE GPU", "SWAROVSKI OPTIK"]) {
+    assert.ok(rankEntries(entries, query).some(entry => entry.href.startsWith("/about/#award-")), query);
+  }
+  assert.ok(rankEntries(entries, "30/30 e lode").some(entry => entry.href === "/about/"));
+});
+
 test("the search page keeps both command instances with unique accessible IDs", () => {
   const html = fs.readFileSync(path.join(output, "search/index.html"), "utf8");
   for (const id of [

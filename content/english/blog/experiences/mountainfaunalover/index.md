@@ -3,7 +3,7 @@ aliases:
   - "/blog/project/mountain-fauna-lover/"
 title: Mountain Fauna Lover
 date: 2023-07-28
-lastmod: 2026-08-08
+lastmod: 2026-11-16
 description: "Mountain Fauna Lover is my alpine wildlife project — digiscoping and nature films from Val di Rabbi, the Stelvio National Park and Trentino-Alto Adige, published across a website, YouTube, Instagram and TikTok."
 slug: mountain-fauna-lover
 tags:
@@ -53,6 +53,8 @@ Most of the work is **digiscoping**: shooting through a spotting scope rather th
 telephoto lens. It reaches much further than a camera lens at a fraction of the weight,
 which matters when the equipment has to be carried uphill before first light. It is also
 unforgiving — the depth of field is thin and the whole rig moves if you breathe wrong.
+
+Through Mountain Fauna Lover, I collaborated with SWAROVSKI OPTIK and shared my impressions of its optics. On its ATX spotting scope page, the company credits me as “Simone Mattioli, Student / Content Creator” under **Expert Insights**. [Read my testimonial on SWAROVSKI OPTIK](https://www.swarovskioptik.com/int/en/hunting/products/spotting-scopes/atx-stx-btx/atx-stx-btx-set/atx-spotting-scope-system/5006351-B1#:~:text=Simone%20Mattioli).
 
 ## Where it lives
 

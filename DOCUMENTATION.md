@@ -1591,3 +1591,15 @@ NEXT: review the remaining content-judgment items in TO_SIMO_DO.md (thin "Future
 - [2026-11-16 19:04 CET]: Header theme switcher position
   - *Details*: Moved the theme switcher to the far right on desktop and mobile.
   - *Tech Notes*: The shared header renders the switcher after the downloads and mobile menu button so keyboard and visual order agree.
+
+- [2026-11-16 19:26 CET]: Awards and course honors on About
+  - *Details*: Added four awards below the journey timeline and grouped the three course honors under the University of Verona degree.
+  - *Tech Notes*: Entries and project links are maintained in data/about.yml. Award years stack above the titles below 640px. Links wrap and have 44px touch targets. Reduced the shared header gap at 1024–1100px to resolve overflow. Verified the production About page in Chrome at seven widths from 320px to 1440px.
+
+- [2026-11-16 19:37 CET]: SWAROVSKI OPTIK testimonial
+  - *Details*: Added the Mountain Fauna Lover collaboration to About and linked the project story to Simone’s credited testimonial under Expert Insights on the ATX spotting scope page.
+  - *Tech Notes*: Undated features can use a text label in the About list. Verified the source link in both generated pages.
+
+- [2026-11-16 19:39 CET]: Awards in Spotlight search
+  - *Details*: Spotlight now links to the Awards & Honors section and each award or feature. Course honors are searchable through About.
+  - *Tech Notes*: Hugo generates results and fragment destinations from the shared About data. Verified the production build, 19 search tests, and navigation from a FridgeMate result in Chrome.
