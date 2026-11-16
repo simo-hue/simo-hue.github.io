@@ -38,11 +38,11 @@ label = "Download my Personal Resume"
 link = "docs/Resume.pdf"
 download = true
 
-# Failure CV button
+# Lessons Along The Way button
 [failure_cv_button]
 enable = true
-label = "Download my Failure CV"
-link = "docs/Failure_CV.pdf"
+label = "Download Lessons Along The Way"
+link = "docs/Lessons_Along_The_Way.pdf"
 download = true
 
 # CV header presentation style: "split" (two separate ghost buttons) or "segmented" (compact pill)

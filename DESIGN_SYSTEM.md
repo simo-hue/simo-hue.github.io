@@ -38,7 +38,7 @@ Accent usage: links, active nav, focus ring, one key mark per view. Nowhere else
 1px hairline borders · radius ~3px · flat (no shadows). Ghost/outline buttons; accent-fill on primary hover.
 
 ## 7. Navigation
-Fixed top bar, hairline underline, mono wordmark · ~4 primary items · **⌘K command palette** (jump to any section / latest post) · theme toggle · ghost Résumé. Mobile → sheet.
+Fixed top bar, hairline underline, mono wordmark · ~4 primary items · **⌘K command palette** (jump to any section / latest post) · theme toggle · ghost Resume. Mobile → sheet.
 
 ## 8. Hero
 Mono eyebrow → restrained ink/white Geist headline (no gradient) → one sentence → two ghost CTAs, on a hairline grid. Optional single-line mono "kindness → digital innovation" nod.
@@ -58,4 +58,4 @@ Natural color against monochrome chrome — photos are the only color; framed in
   - **P3** — globe + call + connect + search + 404.
 
 ## 12. Guardrails
-Preserve SEO/schema/sitemap · keep light+dark · keep every feature (search, theme toggle, résumé, Globe, booking) · keep perf (self-hosted fonts, no external font calls, minimal JS, reduced-motion).
+Preserve SEO/schema/sitemap · keep light+dark · keep every feature (search, theme toggle, resume, Globe, booking) · keep perf (self-hosted fonts, no external font calls, minimal JS, reduced-motion).

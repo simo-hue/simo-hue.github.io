@@ -51,7 +51,7 @@ Verification: clean 601-page production build; all 58 unique archive posts prese
 
 ## Find me online — October 13
 
-The `/links/` page now prioritizes Email, LinkedIn, and GitHub. Email has a copper border and appears first. Personal channels, Mountain Fauna Lover, and research profiles follow as grouped lists; all destinations remain available. Résumé/education and certificates use native collapsed disclosures with PDF counts and labels. The résumé is first within its group, and in-page shortcuts lead to channels or documents.
+The `/links/` page now prioritizes Email, LinkedIn, and GitHub. Email has a copper border and appears first. Personal channels, Mountain Fauna Lover, and research profiles follow as grouped lists; all destinations remain available. Resume/education and certificates use native collapsed disclosures with PDF counts and labels. The resume is first within its group, and in-page shortcuts lead to channels or documents.
 
 `data/links.yml` remains the directory source: section `kind` selects `primary`, `channels`, or `documents`; `order` controls primary destinations and channel groups. Document order follows the data. No JavaScript or setup is needed for disclosures. Verified 24 retained destinations, 12 resolving PDFs, keyboard interaction, light/dark layouts, and no horizontal overflow at five widths from 320px to 1440px.
 

@@ -51,25 +51,25 @@
         <!-- theme -->
         {{ partial "components/theme-switcher" (dict "Class" "") }}
 
-        <!-- CV & Failure CV buttons -->
+        <!-- CV & Lessons Along The Way buttons -->
         {{ if site.Params.navigation_button.enable }}
           {{ if eq site.Params.cv_header_style "segmented" }}
             <div class="ds-btn-group ds-show-desktop-lg" role="group" aria-label="Curriculum Vitae downloads">
               <a href="{{ site.Params.navigation_button.link | relLangURL }}"
                  class="ds-btn-group-item"
                  {{ if site.Params.navigation_button.download }}download{{ end }}
-                 title="Download Personal Résumé">
+                 title="Download Personal Resume">
                 <i class="fa-solid fa-arrow-down text-xs" aria-hidden="true"></i>
-                <span>Résumé</span>
+                <span>Resume</span>
               </a>
               {{ if site.Params.failure_cv_button.enable }}
                 <span class="ds-btn-group-divider" aria-hidden="true"></span>
                 <a href="{{ site.Params.failure_cv_button.link | relLangURL }}"
                    class="ds-btn-group-item"
                    {{ if site.Params.failure_cv_button.download }}download{{ end }}
-                   title="Download Failure CV">
+                   title="Download Lessons Along The Way">
                   <i class="fa-solid fa-arrow-down text-xs" aria-hidden="true"></i>
-                  <span>Failure CV</span>
+                  <span>Lessons Along The Way</span>
                 </a>
               {{ end }}
             </div>
@@ -79,14 +79,14 @@
                  class="ds-btn ds-btn-ghost"
                  {{ if site.Params.navigation_button.download }}download{{ end }}>
                 <i class="fa-solid fa-arrow-down text-xs" aria-hidden="true"></i>
-                Résumé
+                Resume
               </a>
               {{ if site.Params.failure_cv_button.enable }}
                 <a href="{{ site.Params.failure_cv_button.link | relLangURL }}"
                    class="ds-btn ds-btn-ghost"
                    {{ if site.Params.failure_cv_button.download }}download{{ end }}>
                   <i class="fa-solid fa-arrow-down text-xs" aria-hidden="true"></i>
-                  Failure CV
+                  Lessons Along The Way
                 </a>
               {{ end }}
             </div>

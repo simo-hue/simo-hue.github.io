@@ -17,26 +17,26 @@ url = "/links"
 weight = 3
 
 [[main]]
-name = "Blog"
+name = "Blogs"
 url = "/blog"
 
 [[main]]
-parent = "Blog"
+parent = "Blogs"
 name = "Libri Letti"
 url = "/categories/books/"
 
 [[main]]
-parent = "Blog"
+parent = "Blogs"
 name = "Progetti"
 url = "/categories/projects/"
 
 [[main]]
-parent = "Blog"
+parent = "Blogs"
 name = "Pensieri"
 url = "/categories/thoughts/"
 
 [[main]]
-parent = "Blog"
+parent = "Blogs"
 name = "Esperienze"
 url = "/categories/experiences/"
 

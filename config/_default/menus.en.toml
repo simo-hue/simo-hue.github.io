@@ -21,38 +21,38 @@ name = "Passions"
 url = "/passion"
 weight = 4
 
-# ── Blog hub + its 5 sections (single unified tree) ──
+# ── Blogs hub + its 5 sections (single unified tree) ──
 [[main]]
-name = "Blog"
+name = "Blogs"
 url = "/blog"
 weight = 5
 
 [[main]]
-parent = "Blog"
+parent = "Blogs"
 name = "Experiences"
 url = "/blog/experiences/"
 weight = 1
 
 [[main]]
-parent = "Blog"
+parent = "Blogs"
 name = "Tech Projects"
 url = "/blog/tech-projects/"
 weight = 2
 
 [[main]]
-parent = "Blog"
+parent = "Blogs"
 name = "Thoughts"
 url = "/blog/thoughts/"
 weight = 3
 
 [[main]]
-parent = "Blog"
+parent = "Blogs"
 name = "Books"
 url = "/blog/books/"
 weight = 4
 
 [[main]]
-parent = "Blog"
+parent = "Blogs"
 name = "Publications"
 url = "/blog/publications/"
 weight = 5
@@ -63,8 +63,8 @@ url = "/globe"
 weight = 6
 
 [[main]]
-name = "Connect"
-url = "/call"
+name = "Contact"
+url = "/links/"
 weight = 7
 
 # footer menu

@@ -5,7 +5,7 @@ Implemented October 14, 2026. Replaces the legacy blog-only search modal with a 
 ## Experience
 
 - Open with the header search button, **⌘K** on Mac, or **Ctrl+K** elsewhere. The shortcut also toggles the panel closed.
-- The opening view shows Projects, About, Blog, and Download résumé. Up to three recent selections appear above remaining suggestions, without duplicates.
+- The opening view shows Projects, About, Blogs, and Download resume. Up to three recent selections appear above remaining suggestions, without duplicates.
 - **All, Pages, Writing, Actions** filters are available by click/tap or **Alt+1–4** (shown as ⌥ on Mac). Hold Alt/Option to reveal the shortcut hints without shifting the layout. These avoid the browser's reserved numbered-tab shortcuts.
 - Up/down arrows select results; Enter activates; Escape closes and restores the original focus. Tab and Shift+Tab stay within the modal. Filter buttons also support left/right arrows and Home/End.
 - Opening suggestions use compact, uniform rows and unboxed icons. Inline excerpts appear after typing a query or navigating with up/down arrows. Pointer hover only highlights a row, keeping its position stable. Clearing the query or reopening the modal restores the compact opening state.
@@ -22,7 +22,7 @@ Type a short command and press Enter, or select an action from the Actions filte
 
 | Command | Action | Behavior |
 | --- | --- | --- |
-| `cv` | Download résumé | Downloads the configured résumé PDF |
+| `cv` | Download resume | Downloads the configured resume PDF |
 | `th` | Switch theme | Uses the existing theme control and browser preference |
 | `cl` | Copy page link | Copies the current URL, including query and fragment |
 | `ce` | Copy email address | Uses the address in `data/entity.yml` |
@@ -31,7 +31,7 @@ Type a short command and press Enter, or select an action from the Actions filte
 | `li` | Open LinkedIn | Opens the existing profile in a new tab |
 | `ch` | Clear recent selections | Clears only this command center's history |
 
-The résumé destination comes from `navigation_button.link`; social destinations come from `data/social.json`. Missing résumé/profile destinations are omitted instead of producing broken commands.
+The resume destination comes from `navigation_button.link`; social destinations come from `data/social.json`. Missing resume/profile destinations are omitted instead of producing broken commands.
 
 ## Content and maintenance
 
@@ -70,7 +70,7 @@ Browser checks on October 14, 2026 covered:
 - ⌘K/Ctrl+K, Alt+4, arrow selection, Enter navigation, Escape focus restoration, and twelve consecutive Tab steps staying inside the dialog after tightening the focus loop.
 - Typo query `campflwo`, empty/no-match states, literal punctuation, Writing pagination from twelve to twenty-four rows, persisted recent selections, and clearing history.
 - Independent modal and Search-page queries, including safe URL encoding and preserving an unrelated parameter and fragment.
-- Successful theme and clipboard actions; exact résumé, GitHub, LinkedIn, and email destinations verified by intercepting navigation in an isolated local test fixture. No email was sent or social account modified.
+- Successful theme and clipboard actions; exact resume, GitHub, LinkedIn, and email destinations verified by intercepting navigation in an isolated local test fixture. No email was sent or social account modified.
 - Simulated index failure followed by a successful retry; blocked local storage; denied clipboard with selectable fallback.
 - Production build passed (602 Hugo pages), JavaScript syntax and whitespace checks passed, and the normal preview reported no browser warnings/errors. Existing Hugo deprecation warnings remain.
 

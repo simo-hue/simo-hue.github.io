@@ -1,13 +1,13 @@
 # Failure CV Integration
 ## Data: 2026-10-17
 ## Modifiche
-Integrated Simone's "Failure CV" across the portfolio to mirror the exact behavior of the professional Résumé. Placed the genuine FlowCV PDF document into `static/docs/Failure_CV.pdf`, added direct download behavior in the header navigation (matching Résumé with `download = true` and `fa-arrow-down` icon), supported both split individual ghost buttons and a compact segmented pill button, wired the document into the "Résumé & education" accordion on `/links`, and registered a fast ⌘K Spotlight download action with aliases ("failure cv", "failures", "rejections", "cv of failures", "failure resume").
+Integrated Simone's "Failure CV" across the portfolio to mirror the exact behavior of the professional Resume. Placed the genuine FlowCV PDF document into `static/docs/Failure_CV.pdf`, added direct download behavior in the header navigation (matching Resume with `download = true` and `fa-arrow-down` icon), supported both split individual ghost buttons and a compact segmented pill button, wired the document into the "Resume & education" accordion on `/links`, and registered a fast ⌘K Spotlight download action with aliases ("failure cv", "failures", "rejections", "cv of failures", "failure resume").
 
 ### File Modificati
 - [`static/docs/Failure_CV.pdf`](file:///Users/simo/Developer/simo-hue.github.io/static/docs/Failure_CV.pdf): **[NEW]** Vector PDF of Simone's Failure CV.
 - [`config/_default/params.toml`](file:///Users/simo/Developer/simo-hue.github.io/config/_default/params.toml): Added `[failure_cv_button]` config and `cv_header_style` toggle ("split" / "segmented").
 - [`layouts/partials/essentials/header.html`](file:///Users/simo/Developer/simo-hue.github.io/layouts/partials/essentials/header.html): Added desktop CV action buttons (split & segmented styles) and mobile navigation sheet link.
-- [`data/links.yml`](file:///Users/simo/Developer/simo-hue.github.io/data/links.yml): Added Failure CV item to the "Résumé & education" documents group.
+- [`data/links.yml`](file:///Users/simo/Developer/simo-hue.github.io/data/links.yml): Added Failure CV item to the "Resume & education" documents group.
 - [`layouts/partials/search-index.html`](file:///Users/simo/Developer/simo-hue.github.io/layouts/partials/search-index.html): Injected `failure_cv` into client search configuration.
 - [`assets/js/search.js`](file:///Users/simo/Developer/simo-hue.github.io/assets/js/search.js): Added Spotlight command action `action:failure-cv` with query aliases and external PDF viewing behavior.
 - [`assets/css/ds.css`](file:///Users/simo/Developer/simo-hue.github.io/assets/css/ds.css): Added `.ds-cv-actions`, `.ds-btn-group`, and `.ds-btn-group-item` styling with light/dark mode support.
@@ -1253,11 +1253,11 @@ Errore durante il push dovuto alla divergenza tra branch locale e remoto (16 com
     - Verified: fits with no overflow at 1280 (pill) and 1024 (icon); Blog/Tech dropdowns open on hover + keyboard focus; mobile sheet lists all 8 in order; production build clean; dropdown CSS + all children present in the fingerprinted bundle.
 
 - [2026-07-13]: UI v2 — Unified header actions (branch `new-UI`)
-  - *Details*: The three controls in the header's right cluster had mismatched heights/shapes (search pill 36px, theme toggle ~16px rounded switch, Résumé ~48px). Unified them to one clean 36px height with consistent spacing.
+  - *Details*: The three controls in the header's right cluster had mismatched heights/shapes (search pill 36px, theme toggle ~16px rounded switch, Resume ~48px). Unified them to one clean 36px height with consistent spacing.
   - *Tech Notes*:
     - Replaced the theme switcher: new local override `layouts/partials/components/theme-switcher.html` renders a `.ds-iconbtn` (36×36) sun/moon icon button (instead of the theme's rounded toggle-track), preserving the init + click-to-toggle JS (`[data-theme-switcher]`, localStorage).
-    - `assets/css/ds.css`: `.ds-header-actions .ds-btn { height: 2.25rem; padding: 0 0.9rem; font-size: 0.85rem }` shrinks the Résumé button to match the ⌘K pill; `.ds-theme-sun/.ds-theme-moon` visibility toggles by `.dark`. Note: FontAwesome ships in the *lazy* CSS bundle (loads after ds.css), so `.fa-solid{display:inline-block}` out-ordered the plain `.ds-theme-moon{display:none}` — fixed by scoping the rules under `.ds-theme-toggle` to raise specificity above `.fa-solid`.
-    - Verified: search pill / theme toggle / Résumé all render at exactly 36px, top-aligned, 8px gap; toggle flips sun↔moon and persists; production build clean.
+    - `assets/css/ds.css`: `.ds-header-actions .ds-btn { height: 2.25rem; padding: 0 0.9rem; font-size: 0.85rem }` shrinks the Resume button to match the ⌘K pill; `.ds-theme-sun/.ds-theme-moon` visibility toggles by `.dark`. Note: FontAwesome ships in the *lazy* CSS bundle (loads after ds.css), so `.fa-solid{display:inline-block}` out-ordered the plain `.ds-theme-moon{display:none}` — fixed by scoping the rules under `.ds-theme-toggle` to raise specificity above `.fa-solid`.
+    - Verified: search pill / theme toggle / Resume all render at exactly 36px, top-aligned, 8px gap; toggle flips sun↔moon and persists; production build clean.
 
 - [2026-07-13]: UI v2 — Minimal footer (branch `new-UI`)
   - *Details*: Simplified the site footer on every page to just a horizontally-centered "© <year> Simone Mattioli" (mono, with the existing top hairline). Removed the colophon eyebrow, vision quote, social-icon row, "Verona → Stockholm", and "Hugo · Geist · hosted on GitHub Pages".
@@ -1399,7 +1399,7 @@ NEXT: review the remaining content-judgment items in TO_SIMO_DO.md (thin "Future
 - Immediate next step: optional user review of the Blog. No required manual actions remain.
 
 - [2026-10-13, Europe/Budapest]: Find me online — clearer contact hierarchy
-- *Details*: Rebuilt the Links page around Email, LinkedIn, and GitHub, with Email subtly emphasized. Grouped personal channels, Mountain Fauna Lover, and research profiles into compact lists. Moved résumé/education and certificates into two collapsed native disclosures, retaining all 24 destinations and placing the résumé first. Added section shortcuts and concise introductory/channel copy; updated the page title and description.
+- *Details*: Rebuilt the Links page around Email, LinkedIn, and GitHub, with Email subtly emphasized. Grouped personal channels, Mountain Fauna Lover, and research profiles into compact lists. Moved resume/education and certificates into two collapsed native disclosures, retaining all 24 destinations and placing the resume first. Added section shortcuts and concise introductory/channel copy; updated the page title and description.
 - *Tech Notes*: Updated `data/links.yml` with section kinds and display ordering, `layouts/links/list.html`, `content/english/links.md`, and scoped styles in `assets/css/hub.css`. Email uses its existing mailto destination without opening a blank browser tab. Documents show PDF labels; native details/summary supports keyboard interaction without new JavaScript. No new dependencies, endpoints, or manual setup actions.
 - *Validation*: Clean production build passed (601 pages), with the existing Hugo imaging-quality deprecation warning. Whitespace checks passed. All 24 original destinations are retained and all 12 local PDFs resolve. Browser checks at 320/390/768/1024/1440px found no horizontal overflow; visually reviewed desktop and mobile, dark and light themes, expanded certificates, and keyboard Enter/Space disclosure behavior.
 
@@ -1453,7 +1453,7 @@ NEXT: review the remaining content-judgment items in TO_SIMO_DO.md (thin "Future
 - *Validation*: Production build passed. Browser checks at 1440px and 320px confirmed LinkedIn/Email/GitHub order without horizontal overflow; desktop appearance verified. Changes remain local and unpublished.
 
 - [2026-10-14 21:50 CEST]: Spotlight command center — full first version
-- *Details*: Replaced the blog-only ⌘K search with a compact Spotlight-inspired command center in the existing Geist/copper design language. Added whole-site ranked search, All/Pages/Writing/Actions filters, selected-result previews, typo tolerance, short action commands, curated suggestions, browser-local recent selections, mobile viewport handling, and all eight agreed actions: résumé, theme, copy page link, copy email, email draft, GitHub, LinkedIn, and clear history. The standalone Search page shares the component and supports safely encoded, shareable queries.
+- *Details*: Replaced the blog-only ⌘K search with a compact Spotlight-inspired command center in the existing Geist/copper design language. Added whole-site ranked search, All/Pages/Writing/Actions filters, selected-result previews, typo tolerance, short action commands, curated suggestions, browser-local recent selections, mobile viewport handling, and all eight agreed actions: resume, theme, copy page link, copy email, email draft, GitHub, LinkedIn, and clear history. The standalone Search page shares the component and supports safely encoded, shareable queries.
 - *Tech Notes*: Added local Hugo overrides for the modal, Search page, configuration, and structured JSON index (80 destinations: 22 pages and 58 writings), including shared-data content for custom pages. Added `assets/js/spotlight-engine.mjs`, bundled through Hugo's existing deferred script pipeline, and `assets/css/spotlight.css`; removed obsolete search styles and settings. Native dialog semantics, explicit focus wrapping, safe text rendering, load/retry handling, and clipboard/storage fallbacks improve robustness. Existing theme storage access now tolerates browser denial. Added `npm run test:search` and `docs/SPOTLIGHT.md`. No new dependencies, external services, credentials, or manual setup actions.
 - *Validation*: Production build passed (602 Hugo pages); all 13 search/index regression tests passed; JavaScript syntax and whitespace checks passed. Browser checks covered desktop light/dark, 320/390/600/768/1024/1440px layouts, 844×390 landscape and 390×360 available-height simulation, keyboard opening/filtering/selection/navigation, focus containment/restoration, recent-history persistence/clearing, pagination, safe punctuation input, and independent modal/Search-page state. Verified all action destinations in an isolated fixture without sending email; index failure/retry, blocked storage, and denied-clipboard fallback passed. Normal preview showed no browser errors. Existing Hugo deprecation warnings remain; physical-device keyboard and full screen-reader audit limits are documented.
 
@@ -1571,3 +1571,19 @@ NEXT: review the remaining content-judgment items in TO_SIMO_DO.md (thin "Future
 - [2026-11-12 16:11 CET]: Publish and index articles in progress
   - *Details*: Added a first-person writing notice to the published Sicily, border crossing, Visegrád, Tallinn and online connection articles. Kept Sicily’s working notes in the source alongside the public video.
   - *Tech Notes*: Removed the search-engine exclusion from Sicily and the border crossing. Updated the SEO checks to verify all five sitemap entries and visible notices. GitHub caps each Pages deployment attempt at 10 minutes. After a file-sync timeout, the workflow now retries a failed deployment once using the validated artifact and reports the final result. No new dependencies.
+
+- [2026-11-16 18:40 CET]: Contact navigation and call booking
+  - *Details*: The English Contact menu opens the links page. A shortcut leads to the booking form after documents and credentials.
+  - *Tech Notes*: Both /links/ and /call/ render the same Hugo booking partial with the existing scheduling service. The homepage booking link opens /links/#book-a-call. Verified the production build and generated booking markup.
+
+- [2026-11-16 18:42 CET]: Resume spelling
+  - *Details*: Updated the header, contact page, search commands, accessibility text, and project documentation to use the unaccented spelling.
+  - *Tech Notes*: The download continues to use the existing Resume.pdf file.
+
+- [2026-11-16 18:44 CET]: Blogs navigation label
+  - *Details*: Renamed the menu item and archive title to Blogs, including the search fallback.
+  - *Tech Notes*: Updated the submenu parent references and retained the /blog/ URLs.
+
+- [2026-11-16 18:50 CET]: Lessons Along The Way
+  - *Details*: Renamed the reflection document in desktop and mobile navigation, the Contact page, and site search. The download now includes the updated FlowCV content.
+  - *Tech Notes*: Printed the public FlowCV document to a single-page A4 PDF at /docs/Lessons_Along_The_Way.pdf. Preserved the previous PDF URL and legacy search terms for existing links and queries.

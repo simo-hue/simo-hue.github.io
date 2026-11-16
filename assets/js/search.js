@@ -101,8 +101,8 @@ import {
     return [
       action(
         "resume",
-        "Download résumé",
-        "Save Simone’s résumé as a PDF.",
+        "Download resume",
+        "Save Simone’s resume as a PDF.",
         "cv",
         "download",
         {
@@ -113,14 +113,15 @@ import {
       ),
       action(
         "failure-cv",
-        "Download Failure CV",
-        "Save Simone’s failure CV as a PDF.",
-        "fcv",
+        "Download Lessons Along The Way",
+        "Download Simone’s reflections on projects, applications, and what he learned.",
+        "lessons",
         "download",
         {
           href: config.failure_cv,
           download: true,
           aliases: [
+            "lessons along the way",
             "failure cv",
             "failures",
             "rejections",
