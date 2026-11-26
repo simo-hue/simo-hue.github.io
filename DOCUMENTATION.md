@@ -1607,3 +1607,8 @@ NEXT: review the remaining content-judgment items in TO_SIMO_DO.md (thin "Future
 - [2026-11-16 19:43 CET]: Don Mazza merit diploma
   - *Details*: Added the 15 December 2025 diploma to Awards & Honors with a link to the Verona college story.
   - *Tech Notes*: Verified the production build, all 19 Spotlight tests, and navigation from a mobile-width Spotlight result to the diploma.
+
+- [2026-11-26 10:34 CET]: Retry Pages deployment with backoff
+  - *Details*: GitHub Actions run 45628393942 built and validated the site successfully, then both deployment attempts failed to discover the uploaded `github-pages` artifact. The artifact exists in the run's API response; the timing and error match the intermittent visibility issue reported at https://github.com/actions/deploy-pages/issues/451. Replaced the immediate retry with a 30-second wait and added a final attempt after another 60 seconds.
+  - *Tech Notes*: Only deployment is retried, using the existing uploaded artifact. Retries stop after success or cancellation; the final attempt propagates persistent failures. The environment URL includes the final attempt's output. No dependency, content, secret, or manual setup changes.
+  - *Validation*: Production build passed using CI-pinned Hugo 0.163.3 (621 pages); SEO checks passed (17 passed, optional baseline comparison skipped), all 19 search tests and all 7 script tests passed against the fresh build. Actionlint 1.7.7 and `git diff --check` passed. GitHub's transient artifact service behavior cannot be reproduced deterministically locally; the next pushed workflow run provides end-to-end deployment verification.

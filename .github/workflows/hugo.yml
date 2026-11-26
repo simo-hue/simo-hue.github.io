@@ -22,7 +22,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url || steps.retry.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.retry.outputs.page_url || steps.final_retry.outputs.page_url }}
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.163.3
@@ -66,7 +66,21 @@ jobs:
         id: deployment
         continue-on-error: true
         uses: actions/deploy-pages@v4
+      # GitHub can briefly fail to list a successfully uploaded artifact.
+      # Retry deployment itself: REST API visibility does not guarantee readiness.
+      # https://github.com/actions/deploy-pages/issues/451
+      - name: Wait before retrying Pages deployment
+        if: ${{ !cancelled() && steps.deployment.outcome == 'failure' }}
+        run: sleep 30
       - name: Retry failed Pages deployment
         if: ${{ !cancelled() && steps.deployment.outcome == 'failure' }}
         id: retry
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+      - name: Wait before final Pages deployment attempt
+        if: ${{ !cancelled() && steps.retry.outcome == 'failure' }}
+        run: sleep 60
+      - name: Final Pages deployment attempt
+        if: ${{ !cancelled() && steps.retry.outcome == 'failure' }}
+        id: final_retry
         uses: actions/deploy-pages@v4
